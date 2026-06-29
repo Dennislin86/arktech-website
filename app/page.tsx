@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { seoImageAlt, seoImageForSlug } from "@/lib/images";
 import { caseStudyPages } from "@/lib/page-data";
 
@@ -172,85 +173,117 @@ const toolingCategories = [
   {
     title: "Insert Molding Tools",
     description: "Precision tooling for molded components with threaded inserts, terminals, bushings, pins, and other integrated metal features.",
-    image: "/images/capabilities/injection-mold-manufacturing.jpg"
+    image: "/images/mold-types/insert-molding-tools.png",
+    alt: "Insert molding tools for plastic components with integrated metal inserts"
   },
   {
     title: "Unscrewing Molds",
     description: "Mechanically driven tooling for plastic parts with internal or external threads, engineered for reliable release and production cycling.",
-    image: "/images/seo/injection-mold-manufacturing.png"
+    image: "/images/mold-types/unscrewing-molds.png",
+    alt: "Unscrewing injection molds for plastic parts with internal and external threads"
   },
   {
     title: "Gas-Assisted Injection Molds",
     description: "Gas-assisted tooling solutions for large or thick-wall components requiring reduced sink marks, lower weight, and controlled filling.",
-    image: "/images/seo/plastic-injection-molding.png"
+    image: "/images/mold-types/gas-assisted-injection-molds.png",
+    alt: "Gas-assisted injection molds for large and thick-wall plastic components"
   },
   {
     title: "Multi-Cavity Injection Molds",
     description: "Balanced multi-cavity mold systems designed for repeatable dimensions, consistent filling, efficient cooling, and high-volume output.",
-    image: "/images/capabilities/plastic-injection-molding.jpg"
+    image: "/images/mold-types/multi-cavity-injection-molds.png",
+    alt: "Multi-cavity injection molds for consistent high-volume plastic production"
   },
   {
     title: "Large Component Molds",
     description: "Robust tooling for large industrial housings and structural plastic parts with controlled cooling, movement, and dimensional stability.",
-    image: "/images/capabilities/injection-mold-manufacturing.jpg"
+    image: "/images/mold-types/large-component-molds.png",
+    alt: "Large component injection molds for industrial housings and structural plastic parts"
   },
   {
     title: "Two-Shot (2K / Bi-Injection) Molds",
     description: "Multi-material mold systems for integrated colors, soft-touch features, seals, grips, and functional two-component assemblies.",
-    image: "/images/capabilities/plastic-injection-molding-v2.png"
+    image: "/images/mold-types/two-shot-2k-bi-injection-molds.png",
+    alt: "Two-shot 2K bi-injection molds for multi-material plastic components"
   },
   {
     title: "Thermoset Molds",
     description: "Specialized tooling for heat-resistant thermoset materials used in electrical, industrial, and demanding performance applications.",
-    image: "/images/seo/injection-mold-manufacturing.png"
+    image: "/images/mold-types/thermoset-molds.png",
+    alt: "Thermoset molds for heat-resistant electrical and industrial components"
   },
   {
     title: "Die Casting Tooling",
     description: "Production tooling for aluminum and zinc components with coordinated slides, cooling, venting, trimming, and machining allowances.",
-    image: "/images/capabilities/die-casting.jpg"
+    image: "/images/mold-types/die-casting-tooling.png",
+    alt: "Die casting tooling for aluminum and zinc production components"
   }
 ];
 
 const industryCategories = [
   {
     title: "Automotive & Electric Vehicles",
-    description: "Tooling, plastic housings, die cast parts, and precision components for vehicle electronics, charging, sensing, and mobility systems.",
-    image: "/images/capabilities/die-casting.jpg"
+    description: "Injection molds and precision components for automotive interiors, EV charging products, battery-related housings, connectors, brackets, and functional plastic and metal parts.",
+    tags: ["EV Charging", "Interior Components", "Battery Housings", "Connectors"],
+    image: "/images/industries/automotive-ev-components.jpg",
+    alt: "Injection molds and precision components for automotive and electric vehicle products",
+    href: "/industries/new-energy"
   },
   {
     title: "Home Appliances & Smart Home Products",
-    description: "Cosmetic housings, internal mechanisms, molded components, and assemblies for connected appliances and smart home devices.",
-    image: "/images/capabilities/plastic-injection-molding.webp"
+    description: "Plastic injection molded housings, structural parts, knobs, panels, covers, and assembled components for home appliances, coffee machines, kitchen devices, and smart home products.",
+    tags: ["Coffee Machines", "Kitchen Devices", "Smart Home", "Plastic Housings"],
+    image: "/images/industries/home-appliance-smart-home-components.jpg",
+    alt: "Plastic injection molded housings and components for home appliances and smart home products",
+    href: "/industries/smart-home"
   },
   {
     title: "Consumer Electronics & Electrical Devices",
-    description: "Production-ready plastic and metal enclosures, brackets, inserts, and assembled components for electrical and electronic products.",
-    image: "/images/capabilities/assembly-secondary-operations.webp"
+    description: "Custom plastic enclosures, electronic housings, cable management parts, precision inserts, and assembled components for consumer electronics and electrical product manufacturing.",
+    tags: ["Electronic Housings", "Plastic Enclosures", "Insert Molding", "Assembly"],
+    image: "/images/industries/consumer-electronics-enclosures.jpg",
+    alt: "Custom plastic enclosures and electronic housings for consumer electronics and electrical devices",
+    href: "/industries"
   },
   {
     title: "Smart Devices & IoT Products",
-    description: "Engineering and manufacturing support for connected sensors, controllers, gateways, wearable devices, and intelligent product platforms.",
-    image: "/images/capabilities/rd-product-development.webp"
+    description: "Prototype and production support for smart devices, IoT sensors, wearable housings, connected product enclosures, and precision plastic components.",
+    tags: ["IoT Sensors", "Wearables", "Connected Devices", "Prototypes"],
+    image: "/images/industries/smart-iot-device-housings.jpg",
+    alt: "Smart device housings, IoT sensor enclosures, and precision plastic components",
+    href: "/industries/smart-home"
   },
   {
     title: "Medical & Healthcare Devices",
-    description: "DFM, tooling, controlled molding, and precision component support for diagnostic equipment, device housings, and healthcare products.",
-    image: "/images/seo/plastic-injection-molding.png"
+    description: "Precision plastic parts, medical device housings, diagnostic product components, and clean assembly support for healthcare and laboratory equipment applications.",
+    tags: ["Medical Housings", "Diagnostic Devices", "Clean Assembly", "Precision Parts"],
+    image: "/images/industries/medical-healthcare-device-parts.jpg",
+    alt: "Precision plastic parts and medical device housings for healthcare equipment",
+    href: "/industries/medical-devices"
   },
   {
     title: "Aerospace & Defense",
-    description: "Precision-machined components, engineered materials, fixtures, and controlled manufacturing support for demanding technical programs.",
-    image: "/images/capabilities/cnc-machining.jpg"
+    description: "Precision machined parts, high-performance plastic components, metal brackets, housings, and engineering support for aerospace, defense, and demanding industrial applications.",
+    tags: ["High-Performance Plastics", "CNC Parts", "Metal Brackets", "Engineering Support"],
+    image: "/images/industries/aerospace-defense-precision-components.jpg",
+    alt: "Precision machined parts and high-performance components for aerospace and defense applications",
+    href: "/industries"
   },
   {
     title: "Industrial Equipment & Automation",
-    description: "Durable housings, control enclosures, brackets, sensor components, and assemblies for machinery and factory automation systems.",
-    image: "/images/capabilities/sheet-metal-fabrication.jpg"
+    description: "Durable plastic and metal components for industrial equipment, automation systems, robotics, sensors, control housings, fixtures, and mechanical assemblies.",
+    tags: ["Robotics", "Control Housings", "Automation Parts", "Mechanical Assemblies"],
+    image: "/images/industries/industrial-automation-components.jpg",
+    alt: "Plastic and metal components for industrial equipment, robotics, and automation systems",
+    href: "/industries/industrial-automation"
   },
   {
     title: "Pet & Lifestyle Products",
-    description: "Consumer-facing housings, mechanisms, molded parts, and assemblies for pet devices, dispensers, accessories, and lifestyle products.",
-    image: "/images/seo/oem-industry-components.png"
+    description: "Custom plastic molded parts, consumer product housings, lifestyle accessories, pet product components, and assembled parts for durable daily-use products.",
+    tags: ["Pet Products", "Lifestyle Accessories", "Consumer Parts", "Plastic Components"],
+    image: "/images/industries/pet-lifestyle-product-parts.jpg",
+    alt: "Custom plastic molded parts and assembled components for pet and lifestyle products",
+    href: "/industries/pet-tech"
   }
 ];
 
@@ -301,10 +334,70 @@ const qualitySignals = [
   "Tooling validation and sampling before shipment"
 ];
 
+const deliverySteps = [
+  { title: "CAD & Requirement Confirmation", description: "Confirm drawings, materials, tolerances, volumes, and project targets.", icon: "cad" },
+  { title: "DFM Review & Risk Alignment", description: "Review manufacturability, tooling risks, and recommended design actions.", icon: "review" },
+  { title: "Mold Design & Manufacturing", description: "Complete mold engineering, tool design approval, and manufacturing.", icon: "tooling" },
+  { title: "Trial, Sampling & Customer Approval", description: "Run tool trials, inspect samples, and close customer feedback.", icon: "approval" },
+  { title: "Production Readiness Setup", description: "Validate process settings, quality controls, and production capacity.", icon: "production" },
+  { title: "Final Inspection & Export Delivery", description: "Complete final inspection, documentation, packing, and shipment.", icon: "delivery" }
+];
+
+function DeliveryIcon({ type }: { type: string }) {
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    strokeWidth: 1.7
+  };
+
+  return (
+    <svg aria-hidden="true" className="size-9" viewBox="0 0 32 32">
+      {type === "cad" && <><path {...common} d="M8 3.5h11l5 5V28H8z" /><path {...common} d="M19 3.5V9h5M11.5 22l4-8 4 8M13 19h5" /></>}
+      {type === "review" && <><rect {...common} height="25" rx="2" width="20" x="6" y="4" /><path {...common} d="M11 10l1.5 1.5L15 9M18 10h4M11 16l1.5 1.5L15 15M18 16h4M11 22l1.5 1.5L15 21M18 22h4" /></>}
+      {type === "tooling" && <><path {...common} d="M7 9h18v16H7zM11 5h10v4M11 14h10v7H11z" /><path {...common} d="M16 12v2M16 21v2M9 17h2M21 17h2" /></>}
+      {type === "approval" && <><path {...common} d="M6 6h14v18H6zM10 11h6M10 15h6" /><circle {...common} cx="22" cy="21" r="6" /><path {...common} d="M19.5 21l1.7 1.7 3.5-4" /></>}
+      {type === "production" && <><path {...common} d="M4 27V14l7 4v-5l7 5v-6l10 5v10zM8 23h3M15 23h3M22 23h3" /><path {...common} d="M23 12V5h3v9" /></>}
+      {type === "delivery" && <><path {...common} d="M3 8h16v14H3zM19 13h5l5 5v4H19z" /><circle {...common} cx="9" cy="24" r="2.5" /><circle {...common} cx="24" cy="24" r="2.5" /><path {...common} d="M7 13l2 2 4-4" /></>}
+    </svg>
+  );
+}
+
+const chooseArktechReasons = [
+  { title: "Engineering-Led DFM Review", description: "Early feasibility review, DFM analysis, and manufacturability validation before tooling release.", icon: "engineering" },
+  { title: "Integrated Manufacturing Coordination", description: "Tooling, injection molding, CNC machining, die casting, finishing, and assembly under one workflow.", icon: "workflow" },
+  { title: "ISO-Controlled Quality System", description: "Structured inspection and validation process for stable OEM manufacturing programs.", icon: "quality" },
+  { title: "Export Tooling Experience", description: "15+ years supporting tooling and component projects for Europe and North America.", icon: "export" },
+  { title: "Secure CAD & NDA Protection", description: "Confidential project handling for CAD files, drawings, and customer technical data.", icon: "security" },
+  { title: "Sampling & Spare Parts Support", description: "Trial, sampling, approval, export documentation, and spare parts support after delivery.", icon: "support" }
+];
+
+function TrustIcon({ type }: { type: string }) {
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    strokeWidth: 1.7
+  };
+
+  return (
+    <svg aria-hidden="true" className="size-8" viewBox="0 0 32 32">
+      {type === "engineering" && <><path {...common} d="M7 4h13l5 5v19H7zM20 4v5h5" /><path {...common} d="M11 21l4-8 4 8M12.5 18h5" /></>}
+      {type === "workflow" && <><rect {...common} height="8" rx="1.5" width="8" x="3" y="4" /><rect {...common} height="8" rx="1.5" width="8" x="21" y="4" /><rect {...common} height="8" rx="1.5" width="8" x="12" y="20" /><path {...common} d="M11 8h10M7 12v4h9v4M25 12v4h-9" /></>}
+      {type === "quality" && <><path {...common} d="M9 4h14v20H9zM13 9h6M13 13h6" /><circle {...common} cx="21.5" cy="22.5" r="5.5" /><path {...common} d="M19 22.5l1.6 1.6 3.4-3.7" /></>}
+      {type === "export" && <><circle {...common} cx="14" cy="15" r="10" /><path {...common} d="M4 15h20M14 5c3 3 4.5 6.3 4.5 10S17 22 14 25M14 5c-3 3-4.5 6.3-4.5 10S11 22 14 25M21 25h8M26 21l4 4-4 4" /></>}
+      {type === "security" && <><path {...common} d="M16 3l10 4v7c0 7-4.2 12-10 15C10.2 26 6 21 6 14V7z" /><rect {...common} height="8" rx="1.5" width="10" x="11" y="14" /><path {...common} d="M13 14v-2a3 3 0 016 0v2" /></>}
+      {type === "support" && <><path {...common} d="M5 5h14v18H5zM9 10h6M9 14h6" /><circle {...common} cx="21" cy="21" r="6" /><path {...common} d="M18.5 21l1.7 1.7 3.5-4M24 7h4v7" /></>}
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
-    <>
-      <section className="relative min-h-[74vh] overflow-hidden bg-[var(--brand-dark)]">
+    <div className="flex flex-col">
+      <section className="order-1 relative min-h-[74vh] overflow-hidden bg-[var(--brand-dark)]">
         <Image
           src="/images/seo/arktech-tooling-manufacturing-hero.png"
           alt="Completed steel injection mold with plastic housings, die cast components, precision metal parts and product assembly components"
@@ -325,7 +418,7 @@ export default function Home() {
             </p>
             <p className="mt-4 text-sm font-bold uppercase tracking-[0.1em] text-[#f1c5c5]">DFM Engineering → Tooling Development → Validated Mass Production</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white shadow-sm transition hover:brightness-90 sm:w-auto" href="/request-a-quote">
+              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white shadow-sm transition hover:bg-[var(--brand-hover)] sm:w-auto" href="/request-a-quote">
                 Request Manufacturing Quote
               </Link>
               <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm border border-white/80 bg-white/10 px-6 font-bold text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--brand-dark)] sm:w-auto" href="/request-a-quote">
@@ -366,14 +459,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
+      <section className="order-2 bg-white py-16 sm:py-20">
         <div className="container-page">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Industries We Serve</p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">WHO WE SUPPORT</p>
           <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.01em] text-[var(--brand-dark)] sm:text-[2.5rem]">
             Manufacturing Support for OEM Brands and Injection Molding Companies
           </h2>
           <p className="mt-5 max-w-3xl leading-7 text-[var(--muted)]">
-            We provide integrated engineering and manufacturing support tailored to product companies and injection molders, covering design validation, tooling development, and production execution.
+            We support OEM product companies and injection molding partners with engineering, tooling, plastic components, metal parts, validation, and production-ready manufacturing solutions.
           </p>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {whoWeServe.map((buyer) => (
@@ -394,7 +487,7 @@ export default function Home() {
                 <p className="mt-4 leading-7 text-[var(--muted)]">{buyer.body}</p>
                 <ul className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3" aria-label={`${buyer.title} capabilities`}>
                   {(buyer.title === "OEM & Product Companies" ? oemCapabilities : buyer.badges).map((item) => (
-                    <li className="flex min-h-16 items-center rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-bold leading-5 text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:bg-red-50" key={item}>
+                    <li className="flex min-h-16 items-center rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-bold leading-5 text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:bg-[var(--accent-soft)]" key={item}>
                       {item}
                     </li>
                   ))}
@@ -413,7 +506,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="manufacturing-capabilities" className="scroll-mt-24 py-14" aria-labelledby="manufacturing-capabilities-heading">
+      <section id="trust-system" className="order-8 scroll-mt-24 bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="why-arktech-heading">
+        <div className="container-page">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Why Arktech</p>
+          <h2 id="why-arktech-heading" className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Why Global OEMs Choose Arktech</h2>
+          <p className="mt-4 max-w-4xl leading-7 text-[var(--muted)]">
+            We support OEM brands and injection molding companies with engineering-led project review, ISO-controlled quality systems, validated tooling processes, and export-ready manufacturing support.
+          </p>
+          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {chooseArktechReasons.map((item) => (
+              <article className="rounded-sm border border-[var(--line)] bg-white p-5 shadow-sm" key={item.title}>
+                <div className="text-[var(--brand)]"><TrustIcon type={item.icon} /></div>
+                <h3 className="mt-3 text-lg font-bold text-[var(--brand-dark)]">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="manufacturing-capabilities" className="order-3 scroll-mt-24 py-14" aria-labelledby="manufacturing-capabilities-heading">
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Manufacturing Capabilities</p>
           <h2 id="manufacturing-capabilities-heading" className="mt-3 max-w-4xl text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">
@@ -457,10 +569,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[var(--brand-dark)] py-14 text-white">
+      <section className="hidden bg-[var(--brand-dark)] py-14 text-white">
         <div className="container-page">
           <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-wide text-[#f4c7ca]">DFM & RFQ Process</p>
+            <p className="text-sm font-bold uppercase tracking-wide text-[#f4c7ca]">How to Start an RFQ</p>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">From CAD Upload to Manufacturable Injection Molds and Precision Components</h2>
             <p className="mt-4 leading-7 text-[#e6e9f2]">
               Upload your RFQ files for engineering review, manufacturability analysis, and export tooling quotation from our China manufacturing team.
@@ -508,7 +620,7 @@ export default function Home() {
                   Target country
                   <input className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal" name="target-country" placeholder="Country" />
                 </label>
-                <button className="min-h-12 rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:brightness-90 sm:col-span-2 lg:col-span-3 lg:self-end" type="submit">
+                <button className="min-h-12 rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)] sm:col-span-2 lg:col-span-3 lg:self-end" type="submit">
                   Get Engineering Feedback in 24 Hours
                 </button>
               </form>
@@ -517,18 +629,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-14">
+      <section className="order-5 bg-white py-14">
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Tooling Examples</p>
           <h2 className="mt-3 max-w-4xl text-3xl font-bold sm:text-4xl">Injection Mold Types & Engineering Solutions</h2>
           <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Specialized mold engineering for complex geometries, multiple materials, production scale, and demanding industrial applications.</p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {toolingCategories.map((category) => (
-              <article key={category.title} className="flex h-full flex-col overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--surface)] shadow-sm lg:h-[500px]">
+              <article key={category.title} className="group flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md lg:h-[420px]">
                 <div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)] lg:h-3/4 lg:shrink-0 lg:aspect-auto">
-                  <Image src={category.image} alt={`${category.title} tooling and engineering solution`} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+                  <Image src={category.image} alt={category.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-[1.035]" />
                 </div>
-                <div className="flex flex-1 items-center p-5 lg:h-1/4 lg:min-h-0 lg:p-4">
+                <div className="flex flex-1 items-center p-4 lg:h-1/4 lg:min-h-0">
                   <h3 className="text-lg font-bold text-[var(--brand-dark)]">{category.title}</h3>
                 </div>
               </article>
@@ -537,20 +649,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="order-4 py-14">
         <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Industries Served</p>
-          <h2 className="mt-3 max-w-4xl text-3xl font-bold sm:text-4xl">Manufacturing Support Across Demanding Product Industries</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Plastic and metal component manufacturing aligned with the engineering, quality, cosmetic, and production requirements of each product category.</p>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">INDUSTRIES SERVED</p>
+          <h2 className="mt-3 max-w-4xl text-3xl font-bold sm:text-4xl">Plastic and Metal Components for Demanding OEM Product Categories</h2>
+          <p className="mt-4 max-w-4xl leading-7 text-[var(--muted)]">We support OEM brands and manufacturing companies across automotive, appliances, electronics, medical, industrial, aerospace, smart devices, and lifestyle product categories with injection molds, plastic components, metal parts, prototypes, and production-ready manufacturing solutions.</p>
+          <div className="mt-8 grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {industryCategories.map((industry) => (
-              <article key={industry.title} className="flex h-full flex-col overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md">
-                <div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)]">
-                  <Image src={industry.image} alt={`${industry.title} manufacturing components and applications`} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition duration-500 hover:scale-[1.04]" />
+              <article key={industry.title} className="group flex flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md">
+                <div className="relative aspect-[5/4] overflow-hidden bg-[var(--surface-soft)]">
+                  <Image src={industry.image} alt={industry.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-contain transition duration-500 group-hover:scale-[1.025]" />
                 </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-lg font-bold text-[var(--brand-dark)]">{industry.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{industry.description}</p>
+                <div className="flex flex-col p-3">
+                  <h3 className="text-sm font-bold leading-5 text-[var(--brand-dark)]">{industry.title}</h3>
+                  <ul className="mt-2 grid grid-cols-2 gap-1.5" aria-label={`${industry.title} applications`}>
+                    {industry.tags.map((tag) => (
+                      <li key={tag} className="flex min-h-7 items-center rounded-sm bg-[var(--surface-soft)] px-2 py-1 text-[10px] font-semibold leading-3 text-[var(--brand-dark)]">{tag}</li>
+                    ))}
+                  </ul>
                 </div>
               </article>
             ))}
@@ -558,141 +674,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="trust-system" className="trust-section scroll-mt-24 bg-white py-16 sm:py-20">
+      <section className="order-6 bg-[var(--surface-soft)] py-16" aria-labelledby="testimonials-heading">
         <div className="container-page">
-          <header className="max-w-4xl">
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Trust System & Delivery Proof</p>
-            <h2 className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">
-              Trusted Injection Molding & Tooling Partner for OEM Manufacturing
-            </h2>
-            <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">
-              We integrate DFM engineering, mold tooling development, precision manufacturing, and validated production processes to support OEM brands with reliable global delivery.
-            </p>
-          </header>
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Customer Proof</p>
+          <h2 id="testimonials-heading" className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Proven Results From Global OEM Customers</h2>
+          <TestimonialsCarousel />
+        </div>
+      </section>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Manufacturing trust metrics">
-            {[
-              ["🛡", "ISO 9001 Certified Manufacturing System"],
-              ["⚙", "15+ Years Injection Molding Experience"],
-              ["🏭", "300+ Export Tooling Projects Delivered"],
-              ["🌍", "Europe & North America Delivery Coverage"]
-            ].map(([icon, text]) => (
-              <div className="flex min-h-24 items-center gap-3 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5 font-bold leading-6 text-[var(--brand-dark)]" key={text}>
-                <span aria-hidden="true" className="text-2xl">{icon}</span>
-                <span>{text}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["DFM Engineering & Mold Optimization", ["Manufacturability review", "Mold flow & design optimization", "Early-stage risk reduction"]],
-              ["Injection Molding & Precision Tooling", ["Multi-cavity & complex molds", "Plastic & metal components", "CNC machining & die casting integration"]],
-              ["ISO-Controlled Quality & Validation System", ["First article inspection (FAI)", "Tooling validation & sample approval", "Production consistency control"]],
-              ["Export Manufacturing & OEM Supply Chain", ["EU & North America export experience", "OEM supply chain coordination", "Stable mass production support"]]
-            ].map(([title, items]) => (
-              <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm" key={title as string}>
-                <h3 className="text-xl font-bold text-[var(--brand-dark)]">{title as string}</h3>
-                <ul className="mt-4 grid gap-3 text-sm leading-6 text-[var(--muted)]">
-                  {(items as string[]).map((item) => (
-                    <li className="flex gap-2" key={item}><span aria-hidden="true" className="text-[var(--brand)]">●</span><span>{item}</span></li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-14 border-t border-[var(--line)] pt-12">
-            <h2 className="text-3xl font-bold text-[var(--brand-dark)]">Proven Results From Global OEM Customers</h2>
-            <div className="mt-7 grid gap-5 lg:grid-cols-3">
-              <article className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6">
-                <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Customer Feedback</p>
-                <blockquote className="mt-4 text-lg leading-8 text-[var(--brand-dark)]">
-                  “Reliable tooling partner with strong engineering support. Helped us reduce mold risk during development.”
-                </blockquote>
-                <p className="mt-4 text-sm font-semibold text-[var(--muted)]">— OEM Engineering Manager, Germany</p>
-              </article>
-              <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[var(--brand-dark)]">Project Experience</h3>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["Automotive interior components tooling", "Medical device plastic housings", "Smart home product molds", "Industrial automation enclosures", "Consumer electronics components"].map((item) => (
-                    <span className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-bold text-[var(--brand-dark)]" key={item}>{item}</span>
-                  ))}
-                </div>
-              </article>
-              <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[var(--brand-dark)]">Performance Metrics</h3>
-                <dl className="mt-4 grid gap-3">
-                  {["First-pass sample approval rate", "On-time delivery rate", "Repeat customer ratio"].map((item) => (
-                    <div className="rounded-sm bg-[var(--surface-soft)] p-4" key={item}>
-                      <dt className="font-bold text-[var(--brand-dark)]">{item}</dt>
-                      <dd className="mt-1 text-sm text-[var(--muted)]">Tracked by project and customer program</dd>
-                    </div>
-                  ))}
-                </dl>
-              </article>
-            </div>
-          </div>
-
-          <div className="mt-14 border-t border-[var(--line)] pt-12">
-            <h2 className="text-3xl font-bold text-[var(--brand-dark)]">Structured Engineering-to-Production Delivery Process</h2>
-            <ol className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
-              {["DFM Engineering Review", "Mold Design & Tooling Development", "Prototype / Sample Validation", "Tool Optimization & Trial Run", "Mass Production Setup", "Final Inspection & Export Delivery"].map((step, index) => (
-                <li className="relative rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5" key={step}>
+      <section className="order-7 bg-white py-16" aria-labelledby="delivery-process-heading">
+        <div className="container-page">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Delivery</p>
+          <h2 id="delivery-process-heading" className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Structured Engineering-to-Production Delivery Process</h2>
+          <ol className="relative mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            {deliverySteps.map((step, index) => (
+              <li className="relative ml-4 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5 before:absolute before:-left-4 before:top-0 before:h-full before:w-px before:bg-[var(--line)] sm:ml-0 sm:before:hidden" key={step.title}>
+                <div className="flex items-start justify-between gap-3">
                   <span className="text-sm font-bold text-[var(--brand)]">0{index + 1}</span>
-                  <p className="mt-3 text-sm font-bold leading-6 text-[var(--brand-dark)]">{step}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="mt-12 flex flex-col gap-3 rounded-sm bg-[var(--brand-dark)] p-6 sm:flex-row sm:flex-wrap sm:items-center sm:p-8">
-            <Link className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:brightness-90" href="/request-a-quote">Upload CAD for DFM Review</Link>
-            <Link className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/70 px-6 font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">Request Tooling Quote</Link>
-            <Link className="inline-flex min-h-12 items-center justify-center px-5 font-bold text-white underline decoration-white/40 underline-offset-8" href="/contact">Start OEM Project Discussion</Link>
-          </div>
-
-          <p className="mt-6 text-sm leading-6 text-[var(--muted)]">
-            Arktech combines injection molding tooling, OEM manufacturing in China, DFM engineering services, plastic & metal components manufacturing, export mold supplier experience, and precision tooling solutions within one controlled delivery system.
+                  <span className="text-[var(--industrial-blue)]"><DeliveryIcon type={step.icon} /></span>
+                </div>
+                <h3 className="mt-4 text-sm font-bold leading-6 text-[var(--brand-dark)]">{step.title}</h3>
+                <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 max-w-4xl text-sm leading-6 text-[var(--muted)]">
+            This validation process connects DFM engineering services, injection molding tooling, precision manufacturing, and export mold supplier documentation for OEM manufacturing in China.
           </p>
         </div>
       </section>
 
-      <section className="bg-[var(--surface-soft)] py-14">
-        <div className="container-page grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Why Arktech</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">A practical manufacturing partner for export programs.</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">
-              Arktech focuses on the engineering, communication, and production details that help overseas buyers reduce sourcing risk.
-            </p>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {whyArktech.map((item) => (
-              <div key={item} className="rounded-sm border border-[var(--line)] bg-white p-5 font-medium leading-7 text-[var(--foreground)] shadow-sm">
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14">
-        <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">OEM Buyer Confidence</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-bold sm:text-4xl">Built around the questions engineering and sourcing teams ask before choosing a supplier.</h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {oemConfidence.map((item) => (
-              <article key={item.title} className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-3 leading-7 text-[var(--muted)]">{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-14">
+      <section className="order-10 bg-white py-14">
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Case Studies</p>
           <h2 className="mt-3 max-w-3xl text-3xl font-bold sm:text-4xl">Selected export tooling and manufacturing outcomes.</h2>
@@ -716,7 +728,9 @@ export default function Home() {
         </div>
       </section>
 
-      <CTA />
-    </>
+      <div className="order-11">
+        <CTA />
+      </div>
+    </div>
   );
 }

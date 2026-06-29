@@ -39,7 +39,7 @@ export default function RequestQuotePage() {
               <p className="mt-3 leading-7 text-[var(--muted)]">Add your CAD files and the project information our engineers need to provide useful feedback and an accurate quotation.</p>
             </div>
 
-            <label className="mt-7 flex min-h-52 cursor-pointer flex-col items-center justify-center rounded-sm border-2 border-dashed border-[var(--brand)] bg-red-50/40 px-5 text-center transition hover:bg-red-50">
+            <label className="mt-7 flex min-h-52 cursor-pointer flex-col items-center justify-center rounded-sm border-2 border-dashed border-[var(--brand)] bg-[var(--accent-soft)] px-5 text-center transition hover:border-[var(--brand-hover)]">
               <span className="text-lg font-bold text-[var(--brand-dark)]">Drag and drop CAD or RFQ files here</span>
               <span className="mt-2 text-sm leading-6 text-[var(--muted)]">or click to browse — multiple files supported</span>
               <span className="mt-4 rounded-sm bg-[var(--brand-dark)] px-4 py-2 text-sm font-bold text-white">Choose Files</span>
