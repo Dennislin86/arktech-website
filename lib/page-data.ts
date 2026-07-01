@@ -175,6 +175,26 @@ export const servicePages: DetailPageData[] = [
 
 export const solutionPages: DetailPageData[] = [
   {
+    slug: "product-companies",
+    title: "Solutions for Product Companies",
+    description:
+      "DFM engineering, export tooling, plastic injection molding, CNC machining, die casting, assembly, and quality documentation for product companies.",
+    eyebrow: "Solution",
+    heroTitle: "Manufacturing support for product companies from DFM to production.",
+    heroBody:
+      "Arktech supports OEMs, EMS manufacturers, hardware brands, and product development teams with coordinated tooling, plastic and metal components, inspection, assembly, and export delivery.",
+    sections: [
+      {
+        title: "Common Needs",
+        items: ["Early manufacturability feedback for new product designs", "Coordinated plastic and metal component production", "Reliable quality documentation and production-ready delivery"]
+      },
+      {
+        title: "Arktech Support",
+        items: ["DFM engineering and export tooling", "Plastic injection molding, CNC machining, and die casting", "Secondary operations, assembly, inspection, and export support"]
+      }
+    ]
+  },
+  {
     slug: "injection-molding-companies",
     title: "Solutions for Injection Molding Companies",
     description:

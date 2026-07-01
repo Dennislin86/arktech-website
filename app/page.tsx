@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
-import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { seoImageAlt, seoImageForSlug } from "@/lib/images";
 import { caseStudyPages } from "@/lib/page-data";
 
@@ -22,19 +21,19 @@ export const metadata: Metadata = {
 
 const whoWeServe = [
   {
-    title: "OEM & Product Companies",
-    href: "/solutions",
-    body: "End-to-end support for product companies from DFM engineering to plastic and metal component production.",
+    title: "Product Companies",
+    href: "/solutions/product-companies",
+    body: "For OEMs, EMS manufacturers, hardware brands and product development teams that need one reliable manufacturing partner from DFM to production.",
     badges: ["DFM Engineering", "Export Tooling", "Plastic Components", "Metal Components", "Assembly"],
     projects: ["Robot Controller Housing", "Industrial Electronics Enclosure", "Medical Device Housing", "Power Module Components"],
-    cta: "Explore OEM & EMS Solutions",
+    cta: "Explore Product Company Solutions",
     image: "/images/who-we-serve/oem-product-companies.webp",
     imageAlt: "Plastic and precision metal components for OEM product companies"
   },
   {
-    title: "Injection Molding & Tooling Companies",
+    title: "Injection Molding Companies",
     href: "/solutions/injection-molding-companies",
-    body: "We support global injection molders with export tooling, mold manufacturing, validation, and production-ready solutions.",
+    body: "For injection molding companies that need reliable offshore tooling capacity, export-ready injection molds, sampling support and spare parts.",
     badges: [
       "Export Tooling",
       "Meusburger / DME Standard",
@@ -171,10 +170,28 @@ const manufacturingCapabilities = [
 
 const toolingCategories = [
   {
+    title: "Multi-Cavity Injection Molds",
+    description: "Balanced multi-cavity mold systems designed for repeatable dimensions, consistent filling, efficient cooling, and high-volume output.",
+    image: "/images/mold-types/multi-cavity-injection-molds.png",
+    alt: "Multi-cavity injection molds for consistent high-volume plastic production"
+  },
+  {
+    title: "Hot Runner Molds",
+    description: "Hot runner tooling engineered for balanced filling, reduced material waste, stable cycle times, and high-volume molding programs.",
+    image: "/images/seo/injection-mold-manufacturing.png",
+    alt: "Hot runner injection molds for efficient high-volume plastic production"
+  },
+  {
     title: "Insert Molding Tools",
     description: "Precision tooling for molded components with threaded inserts, terminals, bushings, pins, and other integrated metal features.",
     image: "/images/mold-types/insert-molding-tools.png",
     alt: "Insert molding tools for plastic components with integrated metal inserts"
+  },
+  {
+    title: "Overmolding Tools",
+    description: "Overmolding tooling for soft-touch surfaces, integrated seals, grips, and multi-material product features.",
+    image: "/images/capabilities/plastic-injection-molding-v2.png",
+    alt: "Overmolding tools for soft-touch and multi-material plastic components"
   },
   {
     title: "Unscrewing Molds",
@@ -183,34 +200,16 @@ const toolingCategories = [
     alt: "Unscrewing injection molds for plastic parts with internal and external threads"
   },
   {
-    title: "Gas-Assisted Injection Molds",
-    description: "Gas-assisted tooling solutions for large or thick-wall components requiring reduced sink marks, lower weight, and controlled filling.",
-    image: "/images/mold-types/gas-assisted-injection-molds.png",
-    alt: "Gas-assisted injection molds for large and thick-wall plastic components"
-  },
-  {
-    title: "Multi-Cavity Injection Molds",
-    description: "Balanced multi-cavity mold systems designed for repeatable dimensions, consistent filling, efficient cooling, and high-volume output.",
-    image: "/images/mold-types/multi-cavity-injection-molds.png",
-    alt: "Multi-cavity injection molds for consistent high-volume plastic production"
+    title: "Two-Shot / 2K Molds",
+    description: "Multi-material mold systems for integrated colors, soft-touch features, seals, grips, and functional two-component assemblies.",
+    image: "/images/mold-types/two-shot-2k-bi-injection-molds.png",
+    alt: "Two-shot 2K bi-injection molds for multi-material plastic components"
   },
   {
     title: "Large Component Molds",
     description: "Robust tooling for large industrial housings and structural plastic parts with controlled cooling, movement, and dimensional stability.",
     image: "/images/mold-types/large-component-molds.png",
     alt: "Large component injection molds for industrial housings and structural plastic parts"
-  },
-  {
-    title: "Two-Shot (2K / Bi-Injection) Molds",
-    description: "Multi-material mold systems for integrated colors, soft-touch features, seals, grips, and functional two-component assemblies.",
-    image: "/images/mold-types/two-shot-2k-bi-injection-molds.png",
-    alt: "Two-shot 2K bi-injection molds for multi-material plastic components"
-  },
-  {
-    title: "Thermoset Molds",
-    description: "Specialized tooling for heat-resistant thermoset materials used in electrical, industrial, and demanding performance applications.",
-    image: "/images/mold-types/thermoset-molds.png",
-    alt: "Thermoset molds for heat-resistant electrical and industrial components"
   },
   {
     title: "Die Casting Tooling",
@@ -222,68 +221,68 @@ const toolingCategories = [
 
 const industryCategories = [
   {
-    title: "Automotive & Electric Vehicles",
-    description: "Injection molds and precision components for automotive interiors, EV charging products, battery-related housings, connectors, brackets, and functional plastic and metal parts.",
-    tags: ["EV Charging", "Interior Components", "Battery Housings", "Connectors"],
-    image: "/images/industries/automotive-ev-components.jpg",
-    alt: "Injection molds and precision components for automotive and electric vehicle products",
-    href: "/industries/new-energy"
-  },
-  {
-    title: "Home Appliances & Smart Home Products",
-    description: "Plastic injection molded housings, structural parts, knobs, panels, covers, and assembled components for home appliances, coffee machines, kitchen devices, and smart home products.",
-    tags: ["Coffee Machines", "Kitchen Devices", "Smart Home", "Plastic Housings"],
-    image: "/images/industries/home-appliance-smart-home-components.jpg",
-    alt: "Plastic injection molded housings and components for home appliances and smart home products",
-    href: "/industries/smart-home"
-  },
-  {
-    title: "Consumer Electronics & Electrical Devices",
-    description: "Custom plastic enclosures, electronic housings, cable management parts, precision inserts, and assembled components for consumer electronics and electrical product manufacturing.",
-    tags: ["Electronic Housings", "Plastic Enclosures", "Insert Molding", "Assembly"],
-    image: "/images/industries/consumer-electronics-enclosures.jpg",
-    alt: "Custom plastic enclosures and electronic housings for consumer electronics and electrical devices",
-    href: "/industries"
-  },
-  {
-    title: "Smart Devices & IoT Products",
-    description: "Prototype and production support for smart devices, IoT sensors, wearable housings, connected product enclosures, and precision plastic components.",
-    tags: ["IoT Sensors", "Wearables", "Connected Devices", "Prototypes"],
-    image: "/images/industries/smart-iot-device-housings.jpg",
-    alt: "Smart device housings, IoT sensor enclosures, and precision plastic components",
-    href: "/industries/smart-home"
+    title: "Robotics",
+    description: "Precision plastic and metal components for robotic systems, end effectors, sensors, controllers, and automation equipment.",
+    tags: ["Robot Housings", "End Effectors", "Sensor Mounts", "Precision Parts"],
+    image: "/images/industries/aerospace-defense-precision-components.jpg",
+    alt: "Precision plastic and metal components for robotics and automation systems",
+    href: "/industries/robotics"
   },
   {
     title: "Medical & Healthcare Devices",
-    description: "Precision plastic parts, medical device housings, diagnostic product components, and clean assembly support for healthcare and laboratory equipment applications.",
+    description: "Precision plastic parts, medical housings, diagnostic product components, and clean assembly support for healthcare equipment.",
     tags: ["Medical Housings", "Diagnostic Devices", "Clean Assembly", "Precision Parts"],
     image: "/images/industries/medical-healthcare-device-parts.jpg",
     alt: "Precision plastic parts and medical device housings for healthcare equipment",
     href: "/industries/medical-devices"
   },
   {
-    title: "Aerospace & Defense",
-    description: "Precision machined parts, high-performance plastic components, metal brackets, housings, and engineering support for aerospace, defense, and demanding industrial applications.",
-    tags: ["High-Performance Plastics", "CNC Parts", "Metal Brackets", "Engineering Support"],
-    image: "/images/industries/aerospace-defense-precision-components.jpg",
-    alt: "Precision machined parts and high-performance components for aerospace and defense applications",
-    href: "/industries"
-  },
-  {
-    title: "Industrial Equipment & Automation",
-    description: "Durable plastic and metal components for industrial equipment, automation systems, robotics, sensors, control housings, fixtures, and mechanical assemblies.",
-    tags: ["Robotics", "Control Housings", "Automation Parts", "Mechanical Assemblies"],
+    title: "Industrial Automation",
+    description: "Durable components for industrial controls, sensors, fixtures, machinery, and automated production systems.",
+    tags: ["Control Housings", "Automation Parts", "Sensors", "Assemblies"],
     image: "/images/industries/industrial-automation-components.jpg",
-    alt: "Plastic and metal components for industrial equipment, robotics, and automation systems",
+    alt: "Plastic and metal components for industrial automation equipment",
     href: "/industries/industrial-automation"
   },
   {
-    title: "Pet & Lifestyle Products",
-    description: "Custom plastic molded parts, consumer product housings, lifestyle accessories, pet product components, and assembled parts for durable daily-use products.",
-    tags: ["Pet Products", "Lifestyle Accessories", "Consumer Parts", "Plastic Components"],
+    title: "Smart Home & IoT",
+    description: "Housings, sensors, connected device components, and assemblies for smart home and IoT product programs.",
+    tags: ["IoT Sensors", "Smart Controls", "Connected Devices", "Device Housings"],
+    image: "/images/industries/smart-iot-device-housings.jpg",
+    alt: "Smart home and IoT device housings and precision components",
+    href: "/industries/smart-home"
+  },
+  {
+    title: "Energy Storage & EV Charging",
+    description: "Plastic and metal components for battery systems, charging equipment, power electronics, connectors, and energy storage products.",
+    tags: ["EV Charging", "Battery Housings", "Power Electronics", "Connectors"],
+    image: "/images/industries/automotive-ev-components.jpg",
+    alt: "Components for energy storage systems and electric vehicle charging products",
+    href: "/industries/new-energy"
+  },
+  {
+    title: "Outdoor & New Energy Products",
+    description: "Weather-resistant housings, structural components, and assemblies for outdoor equipment and new energy product applications.",
+    tags: ["Outdoor Housings", "Weather Resistance", "Structural Parts", "New Energy"],
+    image: "/images/industries/home-appliance-smart-home-components.jpg",
+    alt: "Durable components for outdoor equipment and new energy products",
+    href: "/industries/outdoor-products"
+  },
+  {
+    title: "Pet Tech Products",
+    description: "Custom plastic molded parts, housings, accessories, and assembled components for connected and durable pet products.",
+    tags: ["Smart Feeders", "Pet Devices", "Plastic Housings", "Assembly"],
     image: "/images/industries/pet-lifestyle-product-parts.jpg",
-    alt: "Custom plastic molded parts and assembled components for pet and lifestyle products",
+    alt: "Custom plastic molded parts and assemblies for pet technology products",
     href: "/industries/pet-tech"
+  },
+  {
+    title: "Consumer Electronics",
+    description: "Electronic housings, plastic enclosures, precision inserts, and assembled components for consumer electronics manufacturing.",
+    tags: ["Electronic Housings", "Plastic Enclosures", "Insert Molding", "Assembly"],
+    image: "/images/industries/consumer-electronics-enclosures.jpg",
+    alt: "Custom plastic enclosures and housings for consumer electronics",
+    href: "/industries"
   }
 ];
 
@@ -335,12 +334,11 @@ const qualitySignals = [
 ];
 
 const deliverySteps = [
-  { title: "CAD & Requirement Confirmation", description: "Confirm drawings, materials, tolerances, volumes, and project targets.", icon: "cad" },
-  { title: "DFM Review & Risk Alignment", description: "Review manufacturability, tooling risks, and recommended design actions.", icon: "review" },
-  { title: "Mold Design & Manufacturing", description: "Complete mold engineering, tool design approval, and manufacturing.", icon: "tooling" },
-  { title: "Trial, Sampling & Customer Approval", description: "Run tool trials, inspect samples, and close customer feedback.", icon: "approval" },
-  { title: "Production Readiness Setup", description: "Validate process settings, quality controls, and production capacity.", icon: "production" },
-  { title: "Final Inspection & Export Delivery", description: "Complete final inspection, documentation, packing, and shipment.", icon: "delivery" }
+  { title: "RFQ & CAD Review", description: "We review drawings, STEP files, materials, volume and project requirements.", icon: "cad" },
+  { title: "DFM Engineering Feedback", description: "Our engineering team identifies tooling risks, part design issues and cost drivers.", icon: "review" },
+  { title: "Tooling & Manufacturing Plan", description: "We define mold structure, steel, cavities, lead time, sampling and production strategy.", icon: "tooling" },
+  { title: "Sample Validation & Inspection", description: "T1 samples, dimensional inspection and improvement actions are managed before approval.", icon: "approval" },
+  { title: "Export Delivery & Production Support", description: "We support export packing, spare parts, repeat orders and ongoing production.", icon: "delivery" }
 ];
 
 function DeliveryIcon({ type }: { type: string }) {
@@ -463,10 +461,10 @@ export default function Home() {
         <div className="container-page">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">WHO WE SUPPORT</p>
           <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.01em] text-[var(--brand-dark)] sm:text-[2.5rem]">
-            Manufacturing Support for OEM Brands and Injection Molding Companies
+            Manufacturing Support for Product Companies and Injection Molding Companies
           </h2>
           <p className="mt-5 max-w-3xl leading-7 text-[var(--muted)]">
-            We support OEM product companies and injection molding partners with engineering, tooling, plastic components, metal parts, validation, and production-ready manufacturing solutions.
+            Arktech supports product-driven companies and injection molding companies with DFM engineering, export tooling, plastic injection molding, CNC machining, die casting, assembly and quality documentation.
           </p>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {whoWeServe.map((buyer) => (
@@ -486,7 +484,7 @@ export default function Home() {
                 <h3 className="mt-5 text-2xl font-bold text-[var(--brand-dark)] transition-colors group-hover:text-[var(--brand)]">{buyer.title}</h3>
                 <p className="mt-4 leading-7 text-[var(--muted)]">{buyer.body}</p>
                 <ul className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3" aria-label={`${buyer.title} capabilities`}>
-                  {(buyer.title === "OEM & Product Companies" ? oemCapabilities : buyer.badges).map((item) => (
+                  {(buyer.title === "Product Companies" ? oemCapabilities : buyer.badges).map((item) => (
                     <li className="flex min-h-16 items-center rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-bold leading-5 text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:bg-[var(--accent-soft)]" key={item}>
                       {item}
                     </li>
@@ -506,21 +504,57 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="trust-system" className="order-8 scroll-mt-24 bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="why-arktech-heading">
+      <section id="trust-system" className="order-6 scroll-mt-24 bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="trust-delivery-heading">
         <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Why Arktech</p>
-          <h2 id="why-arktech-heading" className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Why Global OEMs Choose Arktech</h2>
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">TRUST &amp; DELIVERY PROOF</p>
+          <h2 id="trust-delivery-heading" className="mt-3 max-w-4xl text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Built to Reduce Tooling Risk and Support Export Production</h2>
           <p className="mt-4 max-w-4xl leading-7 text-[var(--muted)]">
-            We support OEM brands and injection molding companies with engineering-led project review, ISO-controlled quality systems, validated tooling processes, and export-ready manufacturing support.
+            Arktech combines DFM engineering, controlled tooling execution, inspection documentation and export delivery support to help OEM product companies, EMS manufacturers and injection molding companies move projects from RFQ to production with lower risk.
           </p>
-          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {chooseArktechReasons.map((item) => (
-              <article className="rounded-sm border border-[var(--line)] bg-white p-5 shadow-sm" key={item.title}>
-                <div className="text-[var(--brand)]"><TrustIcon type={item.icon} /></div>
-                <h3 className="mt-3 text-lg font-bold text-[var(--brand-dark)]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.description}</p>
+
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["15+ Years Experience", "Tooling and manufacturing support for overseas projects."],
+              ["300+ Export Tooling Projects", "Injection molds, die casting tooling and production support for global customers."],
+              ["ISO 9001 Certified", "Quality management system for tooling, molding and component manufacturing."],
+              ["24h RFQ Response Target", "Engineering review for new CAD files, drawings and production requirements."]
+            ].map(([title, description]) => (
+              <article className="rounded-sm border border-[var(--line)] bg-white p-4 shadow-sm" key={title}>
+                <h3 className="text-lg font-bold text-[var(--brand)]">{title}</h3>
+                <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{description}</p>
               </article>
             ))}
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-bold text-[var(--brand-dark)]">Engineering-to-Production Delivery</h3>
+            <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              {deliverySteps.map((step, index) => (
+                <li className="rounded-sm border border-[var(--line)] bg-white p-4 shadow-sm" key={step.title}>
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="text-sm font-bold text-[var(--brand)]">0{index + 1}</span>
+                    <span className="text-[var(--industrial-blue)]"><DeliveryIcon type={step.icon} /></span>
+                  </div>
+                  <h4 className="mt-3 text-sm font-bold leading-5 text-[var(--brand-dark)]">{step.title}</h4>
+                  <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{step.description}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="mt-8 grid gap-6 rounded-sm border border-[var(--line)] bg-white p-5 shadow-sm lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <h3 className="text-xl font-bold text-[var(--brand-dark)]">Documentation Before Shipment</h3>
+              <ul className="mt-4 grid gap-2 text-sm text-[var(--muted)] sm:grid-cols-2 lg:grid-cols-4">
+                {["DFM Report", "Mold Trial Report", "Dimensional Inspection Report", "Steel Certificate", "Material Certificate", "Spare Parts List", "Export Packing Checklist"].map((item) => (
+                  <li className="flex items-center gap-2" key={item}><span className="font-bold text-[var(--brand)]">✓</span>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link className="inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Start RFQ</Link>
+              <Link className="inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -671,36 +705,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="order-6 bg-[var(--surface-soft)] py-16" aria-labelledby="testimonials-heading">
-        <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Customer Proof</p>
-          <h2 id="testimonials-heading" className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Proven Results From Global OEM Customers</h2>
-          <TestimonialsCarousel />
-        </div>
-      </section>
-
-      <section className="order-7 bg-white py-16" aria-labelledby="delivery-process-heading">
-        <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Delivery</p>
-          <h2 id="delivery-process-heading" className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Structured Engineering-to-Production Delivery Process</h2>
-          <ol className="relative mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-            {deliverySteps.map((step, index) => (
-              <li className="relative ml-4 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5 before:absolute before:-left-4 before:top-0 before:h-full before:w-px before:bg-[var(--line)] sm:ml-0 sm:before:hidden" key={step.title}>
-                <div className="flex items-start justify-between gap-3">
-                  <span className="text-sm font-bold text-[var(--brand)]">0{index + 1}</span>
-                  <span className="text-[var(--industrial-blue)]"><DeliveryIcon type={step.icon} /></span>
-                </div>
-                <h3 className="mt-4 text-sm font-bold leading-6 text-[var(--brand-dark)]">{step.title}</h3>
-                <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{step.description}</p>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-6 max-w-4xl text-sm leading-6 text-[var(--muted)]">
-            This validation process connects DFM engineering services, injection molding tooling, precision manufacturing, and export mold supplier documentation for OEM manufacturing in China.
-          </p>
         </div>
       </section>
 
