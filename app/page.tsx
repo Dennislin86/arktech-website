@@ -261,12 +261,12 @@ const industryCategories = [
     href: "/industries/new-energy"
   },
   {
-    title: "Outdoor & New Energy Products",
-    description: "Weather-resistant housings, structural components, and assemblies for outdoor equipment and new energy product applications.",
-    tags: ["Outdoor Housings", "Weather Resistance", "Structural Parts", "New Energy"],
+    title: "Home Appliance",
+    description: "Injection-molded housings, smart device enclosures, control panels, and functional plastic parts for home appliance products.",
+    tags: ["Appliance Housings", "Smart Device Enclosures", "Control Panels", "Functional Plastic Parts"],
     image: "/images/industries/home-appliance-smart-home-components.jpg",
-    alt: "Durable components for outdoor equipment and new energy products",
-    href: "/industries/outdoor-products"
+    alt: "Plastic housings, control panels, and functional parts for home appliances",
+    href: "/industries/smart-home"
   },
   {
     title: "Pet Tech Products",
