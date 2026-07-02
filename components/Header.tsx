@@ -5,26 +5,26 @@ import Link from "next/link";
 import { useState } from "react";
 
 const capabilityMenu = [
-  { label: "Custom Injection Mold Tooling", href: "/services/injection-mold-manufacturing" },
+  { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+  { label: "Mold Trial & Sampling Support", href: "/services/injection-mold-manufacturing" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-  { label: "Precision CNC Machining", href: "/services/cnc-metal-parts" },
+  { label: "Tooling Spare Parts", href: "/services/injection-mold-manufacturing" },
+  { label: "CNC Machining", href: "/services/cnc-metal-parts" },
   { label: "Die Casting", href: "/services/die-casting-mold" },
   { label: "Sheet Metal Fabrication", href: "/seo/sheet-metal-fabrication" },
   { label: "Rapid Prototyping", href: "/seo/rapid-prototyping-services" },
-  { label: "Vacuum Casting", href: "/seo/vacuum-casting-services" },
-  { label: "Assembly & Secondary Operations", href: "/services/plastic-metal-assembly" },
-  { label: "Product Engineering & Development", href: "/services/dfm-engineering" }
+  { label: "Assembly & Secondary Operations", href: "/services/plastic-metal-assembly" }
 ];
 
 const industryMenu = [
-  { label: "Automotive & Electric Vehicles", href: "/industries/new-energy" },
-  { label: "Home Appliances & Smart Home Products", href: "/industries/smart-home" },
-  { label: "Consumer Electronics & Electrical Devices", href: "/industries" },
-  { label: "Smart Devices & IoT Products", href: "/industries/smart-home" },
+  { label: "Robotics", href: "/industries/robotics" },
   { label: "Medical & Healthcare Devices", href: "/industries/medical-devices" },
-  { label: "Aerospace & Defense", href: "/industries" },
-  { label: "Industrial Equipment & Automation", href: "/industries/industrial-automation" },
-  { label: "Pet & Lifestyle Products", href: "/industries/pet-tech" }
+  { label: "Industrial Automation", href: "/industries/industrial-automation" },
+  { label: "Smart Home & IoT", href: "/industries/smart-home" },
+  { label: "Energy Storage & EV Charging", href: "/industries/new-energy" },
+  { label: "Home Appliance", href: "/industries/smart-home" },
+  { label: "Pet Tech Products", href: "/industries/pet-tech" },
+  { label: "Consumer Electronics", href: "/industries" }
 ];
 
 const injectionMoldMenu = [
@@ -38,11 +38,17 @@ const injectionMoldMenu = [
   { label: "Die Casting Tooling", href: "/tooling-examples/die-casting-molds" }
 ];
 
+const aboutMenu = [
+  { label: "Group", href: "/company" },
+  { label: "Quality", href: "/company#quality" },
+  { label: "Project Management", href: "/company#project-management" }
+];
+
 const navigation = [
   { label: "Capabilities", href: "/services", menu: capabilityMenu },
   { label: "Industries", href: "/industries", menu: industryMenu },
   { label: "Injection Molds", href: "/tooling-examples", menu: injectionMoldMenu },
-  { label: "Quality", href: "/#trust-system" },
+  { label: "About", href: "/company", menu: aboutMenu },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" }
@@ -56,7 +62,7 @@ function MegaMenu({ items, overviewHref, overviewLabel }: { items: MenuItem[]; o
       <div className="rounded-md border border-[var(--line)] bg-white p-3 shadow-[0_20px_50px_rgba(15,35,60,0.18)]">
         <div className="grid grid-cols-1 gap-1">
           {items.map((item) => (
-            <Link className="focus-ring rounded-sm px-3 py-3 text-sm font-medium text-[var(--brand-dark)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--brand)]" href={item.href} key={item.href}>
+            <Link className="focus-ring rounded-sm px-3 py-3 text-sm font-medium text-[var(--brand-dark)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--brand)]" href={item.href} key={item.label}>
               {item.label}
             </Link>
           ))}
@@ -83,7 +89,7 @@ export function Header() {
             width={220}
             height={68}
             priority
-            className="h-8 w-auto object-contain lg:h-9"
+            className="h-14 w-auto object-contain lg:h-[62px]"
           />
         </Link>
 
@@ -155,7 +161,7 @@ export function Header() {
                     <Link
                       className="rounded-sm px-3 py-2 text-sm font-medium text-[var(--muted)] hover:bg-white hover:text-[var(--brand)]"
                       href={subItem.href}
-                      key={subItem.href}
+                      key={subItem.label}
                       onClick={() => setMenuOpen(false)}
                     >
                       {subItem.label}

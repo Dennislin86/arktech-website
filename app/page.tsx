@@ -95,15 +95,23 @@ const whyArktech = [
 
 const manufacturingCapabilities = [
   {
-    title: "Custom Injection Mold Tooling Services",
+    title: "Injection Mold Manufacturing",
     description:
-      "We design and manufacture export-grade injection molds for OEM brands and molders, including multi-cavity molds, hot runner systems, insert molding, and mold transfer solutions.",
+      "Export-grade injection mold manufacturing for product companies and injection molding companies, including multi-cavity, hot runner, insert molding and mold transfer programs.",
     image: "/images/seo/plastic-injection-molding.png",
     alt: "Production injection molds and molded components manufactured by Arktech",
     href: "/services/injection-mold-manufacturing"
   },
   {
-    title: "Plastic Injection Molding Production",
+    title: "Mold Trial & Sampling Support",
+    description:
+      "Structured mold trials, sample review, dimensional inspection reports and improvement actions before tooling approval and export delivery.",
+    image: "/images/capabilities/rd-product-development.webp",
+    alt: "Injection mold trial, sample validation and dimensional inspection support",
+    href: "/services/injection-mold-manufacturing"
+  },
+  {
+    title: "Plastic Injection Molding",
     description:
       "Low & High-volume plastic injection molding for engineering components, industrial housings, consumer products, and OEM assemblies with stable quality and scalable production capacity.",
     image: "/images/capabilities/plastic-injection-molding.webp",
@@ -111,7 +119,15 @@ const manufacturingCapabilities = [
     href: "/services/plastic-injection-molding"
   },
   {
-    title: "Precision CNC Machining Services",
+    title: "Tooling Spare Parts",
+    description:
+      "Replacement inserts, wear components, ejector systems and documented spare parts packages for export molds and ongoing production support.",
+    image: "/images/capabilities/cnc-machining.jpg",
+    alt: "Precision tooling inserts and spare parts for export injection molds",
+    href: "/services/injection-mold-manufacturing"
+  },
+  {
+    title: "CNC Machining",
     description:
       "Precision CNC machining for aluminum, stainless steel, brass, and engineering plastics, supporting prototypes, tooling components, and low-volume OEM production.",
     image: "/images/capabilities/cnc-machining.jpg",
@@ -119,7 +135,7 @@ const manufacturingCapabilities = [
     href: "/services/cnc-machining"
   },
   {
-    title: "OEM Die Casting Services for Metal Parts",
+    title: "Die Casting",
     description:
       "Aluminum and zinc die casting solutions for industrial components, precision housings, and OEM metal parts with machining and surface finishing.",
     image: "/images/seo/die-casting-cnc-metal-parts.png",
@@ -127,7 +143,7 @@ const manufacturingCapabilities = [
     href: "/services/die-casting"
   },
   {
-    title: "Sheet Metal Fabrication for Industrial Enclosures",
+    title: "Sheet Metal Fabrication",
     description:
       "Sheet metal fabrication for OEM enclosures, brackets, and industrial assemblies including laser cutting, bending, welding, and finishing.",
     image: "/images/capabilities/sheet-metal-fabrication.jpg",
@@ -135,36 +151,20 @@ const manufacturingCapabilities = [
     href: "/services/sheet-metal-fabrication"
   },
   {
-    title: "Rapid Prototyping for Product Development",
+    title: "Rapid Prototyping",
     description:
-      "Fast SLA, SLS and CNC prototypes for design validation, functional testing and low-volume production.",
+      "Fast SLA, SLS and CNC prototypes for design validation, functional testing and low-volume product development.",
     image: "/images/capabilities/rapid-prototyping-v3.png",
-    alt: "Rapid prototype parts produced with industrial 3D printing",
+    alt: "Rapid prototype parts for design validation and functional testing",
     href: "/services/rapid-prototyping"
   },
   {
-    title: "Vacuum Casting for Product Prototyping",
-    description:
-      "High-quality polyurethane casting for bridge production, appearance models and functional prototypes.",
-    image: "/images/capabilities/vacuum-casting-v3.png",
-    alt: "Vacuum cast polyurethane prototype parts",
-    href: "/services/vacuum-casting"
-  },
-  {
-    title: "Assembly & Secondary Manufacturing Services",
+    title: "Assembly & Secondary Operations",
     description:
       "Component assembly, ultrasonic welding, heat staking, printing, packaging and inspection before shipment.",
     image: "/images/capabilities/assembly-secondary-operations.webp",
     alt: "Electronics assembly line for component assembly and secondary operations",
     href: "/services/assembly-secondary-operations"
-  },
-  {
-    title: "Product Engineering & Development Services",
-    description:
-      "Engineering support from concept to production including DFM analysis, material selection, CAD design, and manufacturability validation for OEM products.",
-    image: "/images/capabilities/rd-product-development.webp",
-    alt: "DFM engineering review and product development for manufactured components",
-    href: "/services/rd-design"
   }
 ];
 
@@ -407,23 +407,22 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,55,94,0.97),rgba(23,55,94,0.84),rgba(23,55,94,0.28))]" />
         <div className="relative mx-auto flex min-h-[74vh] w-[min(1240px,calc(100%-32px))] items-center py-20 sm:py-24 lg:py-28">
           <div className="max-w-[1040px]">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f1c5c5]">Global Export Tooling & Precision Manufacturing Platform</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f1c5c5]">EXPORT INJECTION MOLDS &amp; MANUFACTURING SUPPORT</p>
             <h1 className="mt-5 max-w-[1000px] text-[2rem] font-semibold leading-[1.14] tracking-[-0.015em] text-white sm:text-[2.4rem] lg:text-[2.75rem]">
-              Injection Molds, Plastic & Metal Components & Manufacturing Solutions from China
+              Export Injection Mold Partner
+              <br />
+              for Product Companies and Injection Molding Companies
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-[1.65] text-white/85 lg:text-[17px]">
-              End-to-end manufacturing support for OEM brands and injection molders—from DFM engineering and export tooling to validated mass production in China.
+              Arktech specializes in export injection molds, DFM engineering and mold trial support, with plastic injection molding, CNC machining, die casting and assembly capabilities to support product development and production needs.
             </p>
             <p className="mt-4 text-sm font-bold uppercase tracking-[0.1em] text-[#f1c5c5]">DFM Engineering → Tooling Development → Validated Mass Production</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white shadow-sm transition hover:bg-[var(--brand-hover)] sm:w-auto" href="/request-a-quote">
-                Request Manufacturing Quote
+                Start RFQ
               </Link>
-              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm border border-white/80 bg-white/10 px-6 font-bold text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--brand-dark)] sm:w-auto" href="/request-a-quote">
-                Upload CAD for DFM Review
-              </Link>
-              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center px-2 font-semibold text-white/90 underline decoration-white/40 underline-offset-8 transition hover:text-white hover:decoration-white sm:w-auto" href="#manufacturing-capabilities">
-                Explore Manufacturing Capabilities
+              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm border border-white/80 bg-white/10 px-6 font-bold text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--brand-dark)] sm:w-auto" href="#manufacturing-capabilities">
+                View Capabilities
               </Link>
             </div>
             <ul className="mt-6 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/25 bg-white/20 sm:grid-cols-4" aria-label="Manufacturing trust indicators">
@@ -461,10 +460,10 @@ export default function Home() {
         <div className="container-page">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">WHO WE SUPPORT</p>
           <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.01em] text-[var(--brand-dark)] sm:text-[2.5rem]">
-            Manufacturing Support for Product Companies and Injection Molding Companies
+            Export Mold Support for Product Companies and Injection Molding Companies
           </h2>
           <p className="mt-5 max-w-3xl leading-7 text-[var(--muted)]">
-            Arktech supports product-driven companies and injection molding companies with DFM engineering, export tooling, plastic injection molding, CNC machining, die casting, assembly and quality documentation.
+            Arktech supports product-driven companies and injection molding companies with export injection molds, DFM engineering, mold trial support, plastic injection molding and related manufacturing services.
           </p>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {whoWeServe.map((buyer) => (
@@ -515,7 +514,7 @@ export default function Home() {
           <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
               ["15+ Years Experience", "Tooling and manufacturing support for overseas projects."],
-              ["300+ Export Tooling Projects", "Injection molds, die casting tooling and production support for global customers."],
+              ["300+ Export Tooling Projects", "Export injection molds, die casting tooling and production support for global customers."],
               ["ISO 9001 Certified", "Quality management system for tooling, molding and component manufacturing."],
               ["24h RFQ Response Target", "Engineering review for new CAD files, drawings and production requirements."]
             ].map(([title, description]) => (
@@ -566,7 +565,7 @@ export default function Home() {
             Engineering & Manufacturing Capabilities for Injection Molding & Precision Production
           </h2>
           <p className="mt-4 max-w-4xl leading-7 text-[var(--muted)]">
-            We integrate DFM engineering, tooling development, precision manufacturing, and production validation into a structured engineering system that helps OEM brands and injection molders reduce development risk, improve manufacturability, and accelerate time to market.
+            Export injection mold manufacturing is our core capability, supported by mold trial, sampling, spare parts, plastic injection molding, CNC machining, die casting, sheet metal fabrication and assembly.
           </p>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {manufacturingCapabilities.map((capability) => (
@@ -599,66 +598,6 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="hidden bg-[var(--brand-dark)] py-14 text-white">
-        <div className="container-page">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-wide text-[#f4c7ca]">How to Start an RFQ</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">From CAD Upload to Manufacturable Injection Molds and Precision Components</h2>
-            <p className="mt-4 leading-7 text-[#e6e9f2]">
-              Upload your RFQ files for engineering review, manufacturability analysis, and export tooling quotation from our China manufacturing team.
-            </p>
-          </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {oemWorkflow.map((step, index) => (
-              <article key={step.title} className="rounded-sm border border-white/15 bg-white/8 p-5">
-                <p className="text-sm font-bold text-[#f4c7ca]">0{index + 1}</p>
-                <h3 className="mt-3 text-xl font-bold">{step.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-[#e6e9f2]">{step.body}</p>
-                {index === 0 && (
-                  <Link className="mt-5 inline-flex font-bold text-white underline decoration-[#f4c7ca] underline-offset-4" href="/request-a-quote">
-                    Upload Files for DFM Review
-                  </Link>
-                )}
-              </article>
-            ))}
-          </div>
-          <div className="mt-8 rounded-sm border border-white/20 bg-white p-6 text-[var(--foreground)] shadow-xl sm:p-8">
-            <div className="grid gap-7 lg:grid-cols-[0.55fr_1fr] lg:items-end">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Engineering Intake</p>
-                <h3 className="mt-2 text-2xl font-bold sm:text-3xl">Start Your DFM Review</h3>
-                <p className="mt-3 leading-7 text-[var(--muted)]">Share the essential project details now, then complete the secure CAD upload on the DFM review page.</p>
-              </div>
-              <form action="/request-a-quote" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5" method="get">
-                <label className="grid gap-2 text-sm font-bold sm:col-span-2 lg:col-span-2">
-                  CAD upload
-                  <input accept=".step,.stp,.iges,.igs,.stl,.x_t,.pdf,.zip" className="min-h-12 rounded-sm border border-dashed border-[var(--brand)] px-3 py-2 font-normal" multiple name="files" type="file" />
-                </label>
-                <label className="grid gap-2 text-sm font-bold">
-                  Material
-                  <input className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal" name="material" placeholder="e.g. ABS" />
-                </label>
-                <label className="grid gap-2 text-sm font-bold">
-                  Volume
-                  <input className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal" name="volume" placeholder="Annual units" />
-                </label>
-                <label className="grid gap-2 text-sm font-bold">
-                  Lead time
-                  <input className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal" name="lead-time" placeholder="Target date" />
-                </label>
-                <label className="grid gap-2 text-sm font-bold sm:col-span-2 lg:col-span-2">
-                  Target country
-                  <input className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal" name="target-country" placeholder="Country" />
-                </label>
-                <button className="min-h-12 rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)] sm:col-span-2 lg:col-span-3 lg:self-end" type="submit">
-                  Get Engineering Feedback in 24 Hours
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </section>

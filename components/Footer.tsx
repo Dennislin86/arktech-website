@@ -14,27 +14,28 @@ const footerColumns = [
   {
     title: "Capabilities",
     links: [
-      ["Injection Mold Tooling", "/services/injection-mold-manufacturing"],
+      ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
+      ["Mold Trial & Sampling Support", "/services/injection-mold-manufacturing"],
       ["Plastic Injection Molding", "/services/plastic-injection-molding"],
+      ["Tooling Spare Parts", "/services/injection-mold-manufacturing"],
       ["CNC Machining", "/services/cnc-metal-parts"],
       ["Die Casting", "/services/die-casting-mold"],
-      ["Sheet Metal Fabrication", "/services"],
-      ["Rapid Prototyping", "/services"],
+      ["Sheet Metal Fabrication", "/seo/sheet-metal-fabrication"],
+      ["Rapid Prototyping", "/seo/rapid-prototyping-services"],
       ["Assembly & Secondary Services", "/services/plastic-metal-assembly"],
-      ["Product Engineering & Development", "/services/dfm-engineering"]
     ]
   },
   {
     title: "Industries",
     links: [
-      ["Automotive & Electric Vehicles", "/industries/new-energy"],
-      ["Home Appliances & Smart Home Products", "/industries/smart-home"],
-      ["Consumer Electronics & Electrical Devices", "/industries"],
+      ["Robotics", "/industries/robotics"],
       ["Medical & Healthcare Devices", "/industries/medical-devices"],
-      ["Aerospace & Defense", "/industries"],
-      ["Industrial Equipment & Automation", "/industries/industrial-automation"],
-      ["Smart Devices & IoT Products", "/industries/smart-home"],
-      ["Pet & Lifestyle Products", "/industries/pet-tech"]
+      ["Industrial Automation", "/industries/industrial-automation"],
+      ["Smart Home & IoT", "/industries/smart-home"],
+      ["Energy Storage & EV Charging", "/industries/new-energy"],
+      ["Home Appliance", "/industries/smart-home"],
+      ["Pet Tech Products", "/industries/pet-tech"],
+      ["Consumer Electronics", "/industries"]
     ]
   },
   {
@@ -53,6 +54,11 @@ export function Footer() {
   return (
     <>
       <footer className="bg-[var(--brand-dark)] text-white">
+        <div className="container-page border-b border-white/10 py-8">
+          <p className="max-w-4xl text-sm leading-7 text-white/75">
+            Arktech is an export injection mold and manufacturing support partner for product companies and injection molding companies across Europe and North America.
+          </p>
+        </div>
         <div className="container-page grid gap-9 py-12 sm:grid-cols-2 lg:grid-cols-5">
           {footerColumns.map((column) => (
             <nav aria-label={`${column.title} footer links`} key={column.title}>
@@ -86,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="container-page flex flex-col gap-3 py-5 text-xs leading-5 text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Arktech. Injection Mold Tooling, Plastic & Metal Components Manufacturing from China. All rights reserved.</p>
+          <p>© 2026 Arktech. Export tooling, plastic injection molding, CNC machining, die casting and assembly support for global manufacturing projects. All rights reserved.</p>
           <nav aria-label="Legal">
             <ul className="flex flex-wrap gap-x-4 gap-y-2">
               <li><Link className="hover:text-white" href="/privacy-policy">Privacy Policy</Link></li>
