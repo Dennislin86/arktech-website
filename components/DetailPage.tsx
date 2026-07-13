@@ -29,10 +29,30 @@ export function DetailPage({ page, parentHref, parentLabel }: DetailPageProps) {
               className="object-cover"
             />
           </div>
+          {page.intro ? (
+            <div className="mt-7 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6">
+              <p className="max-w-5xl leading-7 text-[var(--muted)]">{page.intro}</p>
+            </div>
+          ) : null}
+          {page.galleryImages ? (
+            <div className="mt-7 grid gap-5 md:grid-cols-3">
+              {page.galleryImages.map((image) => (
+                <div className="relative aspect-[16/10] overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm" key={image.src}>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
           <div className="mt-7 grid gap-5 lg:grid-cols-2">
             {page.sections.map((section) => (
               <article key={section.title} className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold">{section.title}</h2>
+                <h2 className="text-2xl font-bold text-[var(--brand-dark)]">{section.title}</h2>
                 <ul className="mt-5 grid gap-3 leading-7 text-[var(--muted)]">
                   {section.items.map((item) => (
                     <li key={item} className="border-l-4 border-[var(--brand)] pl-4">
@@ -43,19 +63,62 @@ export function DetailPage({ page, parentHref, parentLabel }: DetailPageProps) {
               </article>
             ))}
           </div>
-          <div className="mt-5 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6">
-            <h2 className="text-2xl font-bold">Next Step</h2>
-            <p className="mt-3 max-w-3xl leading-7 text-[var(--muted)]">
-              Send CAD files, drawings, material targets, annual volume, and target lead time. Arktech Mold will use your files only for engineering review and quotation.
+          {page.processFlow ? (
+            <section className="mt-7 rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
+              <h2 className="text-2xl font-bold text-[var(--brand-dark)]">Process Flow</h2>
+              <ol className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {page.processFlow.map((step, index) => (
+                  <li className="rounded-sm bg-[var(--surface-soft)] p-4" key={step}>
+                    <span className="text-sm font-bold text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span>
+                    <p className="mt-2 text-sm font-bold leading-6 text-[var(--brand-dark)]">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          ) : null}
+
+          {page.relatedLinks ? (
+            <section className="mt-7 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6">
+              <h2 className="text-2xl font-bold text-[var(--brand-dark)]">Related Capabilities</h2>
+              <div className="mt-5 flex flex-wrap gap-3">
+                {page.relatedLinks.map((link) => (
+                  <Link className="rounded-sm border border-[var(--line)] bg-white px-4 py-3 text-sm font-bold text-[var(--brand-dark)] shadow-sm transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={link.href} key={link.href}>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {page.faqs ? (
+            <section className="mt-7 rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
+              <h2 className="text-2xl font-bold text-[var(--brand-dark)]">FAQ</h2>
+              <div className="mt-5 grid gap-3">
+                {page.faqs.map((faq) => (
+                  <details className="group rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-4" key={faq.question}>
+                    <summary className="cursor-pointer text-base font-bold text-[var(--brand-dark)] marker:text-[var(--brand)]">
+                      {faq.question}
+                    </summary>
+                    <p className="mt-3 leading-7 text-[var(--muted)]">{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          <div className="mt-7 rounded-sm border border-[var(--line)] bg-[var(--brand-dark)] p-6 text-white">
+            <h2 className="text-2xl font-bold">Final RFQ CTA</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-white/75">
+              Send CAD files, drawings, material targets, annual volume, and target lead time. Arktech Mold will review your files for DFM feedback and practical quotation planning.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link className="focus-ring rounded-sm bg-[var(--accent)] px-4 py-3 text-sm font-bold text-white hover:brightness-90" href="/request-a-quote">
-                Request a Quote
+              <Link className="focus-ring rounded-sm bg-[var(--brand)] px-4 py-3 text-sm font-bold text-white hover:bg-[var(--brand-hover)]" href="/request-a-quote">
+                Upload CAD for DFM Review
               </Link>
-              <Link className="focus-ring rounded-sm bg-white px-4 py-3 text-sm font-bold text-[var(--brand)] shadow-sm hover:text-[var(--brand-dark)]" href="/case-studies">
-                View Case Studies
+              <Link className="focus-ring rounded-sm border border-white/70 bg-transparent px-4 py-3 text-sm font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">
+                Request Manufacturing Quote
               </Link>
-              <Link className="focus-ring rounded-sm bg-white px-4 py-3 text-sm font-bold text-[var(--brand)] shadow-sm hover:text-[var(--brand-dark)]" href="/resources">
+              <Link className="focus-ring rounded-sm border border-white/70 bg-transparent px-4 py-3 text-sm font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]" href="/resources">
                 Read Resources
               </Link>
             </div>

@@ -28,27 +28,30 @@ const industryMenu = [
 ];
 
 const injectionMoldMenu = [
-  { label: "Insert Molding Tools", href: "/tooling-examples/insert-molds" },
-  { label: "Unscrewing Molds", href: "/tooling-examples/unscrewing-molds" },
-  { label: "Gas-Assisted Injection Molds", href: "/tooling-examples" },
   { label: "Multi-Cavity Injection Molds", href: "/tooling-examples/multi-cavity-molds" },
-  { label: "Large Component Molds", href: "/tooling-examples" },
-  { label: "Two-Shot (2K / Bi-Injection) Molds", href: "/tooling-examples/overmolding-tools" },
-  { label: "Thermoset Molds", href: "/tooling-examples" },
+  { label: "Hot Runner Injection Molds", href: "/tooling-examples/hot-runner-molds" },
+  { label: "Insert Molding Tools", href: "/tooling-examples/insert-molds" },
+  { label: "Overmolding Tools", href: "/tooling-examples/overmolding-tools" },
+  { label: "Unscrewing Molds", href: "/tooling-examples/unscrewing-molds" },
+  { label: "Two-Shot (2K) Injection Molds", href: "/tooling-examples/two-shot-2k-molds" },
+  { label: "Large Component Molds", href: "/tooling-examples/large-component-molds" },
+  { label: "Gas-Assisted Injection Molds", href: "/tooling-examples/gas-assisted-injection-molds" },
+  { label: "Thermoset Molds", href: "/tooling-examples/thermoset-molds" },
   { label: "Die Casting Tooling", href: "/tooling-examples/die-casting-molds" }
 ];
 
 const aboutMenu = [
-  { label: "Group", href: "/company" },
-  { label: "Quality", href: "/company#quality" },
-  { label: "Project Management", href: "/company#project-management" }
+  { label: "Arktech Mold", href: "/company" },
+  { label: "Arktech Group", href: "/company/arktech-group" },
+  { label: "Quality & Documentation", href: "/company/quality-documentation" },
+  { label: "Project Management", href: "/company/project-management" }
 ];
 
 const navigation = [
   { label: "Capabilities", href: "/services", menu: capabilityMenu },
   { label: "Industries", href: "/industries", menu: industryMenu },
   { label: "Injection Molds", href: "/tooling-examples", menu: injectionMoldMenu },
-  { label: "About", href: "/company", menu: aboutMenu },
+  { label: "About Us", href: "/company", menu: aboutMenu },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" }

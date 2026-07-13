@@ -4,10 +4,10 @@ const footerColumns = [
   {
     title: "Company",
     links: [
-      ["About Arktech", "/company"],
-      ["Why Arktech", "/company"],
-      ["Quality & Certifications", "/company"],
-      ["Export Tooling Experience", "/tooling-examples"],
+      ["Arktech Mold", "/company"],
+      ["Arktech Group", "/company/arktech-group"],
+      ["Quality & Documentation", "/company/quality-documentation"],
+      ["Project Management", "/company/project-management"],
       ["Contact Us", "/contact"]
     ]
   },
@@ -33,9 +33,9 @@ const footerColumns = [
       ["Industrial Automation", "/industries/industrial-automation"],
       ["Smart Home & IoT", "/industries/smart-home"],
       ["Energy Storage & EV Charging", "/industries/new-energy"],
-      ["Home Appliance", "/industries/smart-home"],
+      ["Home Appliance & Smart Device Components", "/industries/smart-home"],
       ["Pet Tech Products", "/industries/pet-tech"],
-      ["Consumer Electronics", "/industries"]
+      ["Industrial Electronics & Smart Device Components", "/industries"]
     ]
   },
   {
@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="container-page flex flex-col gap-3 py-5 text-xs leading-5 text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Arktech. Export tooling, plastic injection molding, CNC machining, die casting and assembly support for global manufacturing projects. All rights reserved.</p>
+          <p>© 2026 Arktech. Export injection mold and manufacturing support partner for global tooling projects. All rights reserved.</p>
           <nav aria-label="Legal">
             <ul className="flex flex-wrap gap-x-4 gap-y-2">
               <li><Link className="hover:text-white" href="/privacy-policy">Privacy Policy</Link></li>

@@ -173,49 +173,57 @@ const toolingCategories = [
     title: "Multi-Cavity Injection Molds",
     description: "Balanced multi-cavity mold systems designed for repeatable dimensions, consistent filling, efficient cooling, and high-volume output.",
     image: "/images/mold-types/multi-cavity-injection-molds.png",
-    alt: "Multi-cavity injection molds for consistent high-volume plastic production"
+    alt: "Multi-cavity injection molds for consistent high-volume plastic production",
+    href: "/tooling-examples/multi-cavity-molds"
   },
   {
     title: "Hot Runner Molds",
     description: "Hot runner tooling engineered for balanced filling, reduced material waste, stable cycle times, and high-volume molding programs.",
     image: "/images/seo/injection-mold-manufacturing.png",
-    alt: "Hot runner injection molds for efficient high-volume plastic production"
+    alt: "Hot runner injection molds for efficient high-volume plastic production",
+    href: "/tooling-examples/hot-runner-molds"
   },
   {
     title: "Insert Molding Tools",
     description: "Precision tooling for molded components with threaded inserts, terminals, bushings, pins, and other integrated metal features.",
     image: "/images/mold-types/insert-molding-tools.png",
-    alt: "Insert molding tools for plastic components with integrated metal inserts"
+    alt: "Insert molding tools for plastic components with integrated metal inserts",
+    href: "/tooling-examples/insert-molds"
   },
   {
     title: "Overmolding Tools",
     description: "Overmolding tooling for soft-touch surfaces, integrated seals, grips, and multi-material product features.",
     image: "/images/capabilities/plastic-injection-molding-v2.png",
-    alt: "Overmolding tools for soft-touch and multi-material plastic components"
+    alt: "Overmolding tools for soft-touch and multi-material plastic components",
+    href: "/tooling-examples/overmolding-tools"
   },
   {
     title: "Unscrewing Molds",
     description: "Mechanically driven tooling for plastic parts with internal or external threads, engineered for reliable release and production cycling.",
     image: "/images/mold-types/unscrewing-molds.png",
-    alt: "Unscrewing injection molds for plastic parts with internal and external threads"
+    alt: "Unscrewing injection molds for plastic parts with internal and external threads",
+    href: "/tooling-examples/unscrewing-molds"
   },
   {
     title: "Two-Shot / 2K Molds",
     description: "Multi-material mold systems for integrated colors, soft-touch features, seals, grips, and functional two-component assemblies.",
     image: "/images/mold-types/two-shot-2k-bi-injection-molds.png",
-    alt: "Two-shot 2K bi-injection molds for multi-material plastic components"
+    alt: "Two-shot 2K bi-injection molds for multi-material plastic components",
+    href: "/tooling-examples/two-shot-2k-molds"
   },
   {
     title: "Large Component Molds",
     description: "Robust tooling for large industrial housings and structural plastic parts with controlled cooling, movement, and dimensional stability.",
     image: "/images/mold-types/large-component-molds.png",
-    alt: "Large component injection molds for industrial housings and structural plastic parts"
+    alt: "Large component injection molds for industrial housings and structural plastic parts",
+    href: "/tooling-examples/large-component-molds"
   },
   {
     title: "Die Casting Tooling",
     description: "Production tooling for aluminum and zinc components with coordinated slides, cooling, venting, trimming, and machining allowances.",
     image: "/images/mold-types/die-casting-tooling.png",
-    alt: "Die casting tooling for aluminum and zinc production components"
+    alt: "Die casting tooling for aluminum and zinc production components",
+    href: "/tooling-examples/die-casting-molds"
   }
 ];
 
@@ -334,12 +342,62 @@ const qualitySignals = [
 ];
 
 const deliverySteps = [
-  { title: "RFQ & CAD Review", description: "We review drawings, STEP files, materials, volume and project requirements.", icon: "cad" },
-  { title: "DFM Engineering Feedback", description: "Our engineering team identifies tooling risks, part design issues and cost drivers.", icon: "review" },
-  { title: "Tooling & Manufacturing Plan", description: "We define mold structure, steel, cavities, lead time, sampling and production strategy.", icon: "tooling" },
-  { title: "Sample Validation & Inspection", description: "T1 samples, dimensional inspection and improvement actions are managed before approval.", icon: "approval" },
-  { title: "Export Delivery & Production Support", description: "We support export packing, spare parts, repeat orders and ongoing production.", icon: "delivery" }
+  {
+    title: "RFQ & CAD Review",
+    description: "We review drawings, STEP files, materials, volume and project requirements.",
+    icon: "cad",
+    image: "/images/seo/rfq-engineering-review.png",
+    alt: "CAD files and engineering review for export injection mold RFQ"
+  },
+  {
+    title: "DFM Engineering Feedback",
+    description: "Our engineering team identifies tooling risks, part design issues and cost drivers.",
+    icon: "review",
+    image: "/images/capabilities/rd-product-development.webp",
+    alt: "DFM engineering feedback for plastic part design and tooling risk review"
+  },
+  {
+    title: "Tooling & Manufacturing Plan",
+    description: "We define mold structure, steel, cavities, lead time, sampling and production strategy.",
+    icon: "tooling",
+    image: "/images/seo/injection-mold-manufacturing.png",
+    alt: "Injection mold manufacturing plan and export tooling development"
+  },
+  {
+    title: "Sample Validation & Inspection",
+    description: "T1 samples, dimensional inspection and improvement actions are managed before approval.",
+    icon: "approval",
+    image: "/images/capabilities/plastic-injection-molding.webp",
+    alt: "Plastic injection molded sample validation and dimensional inspection"
+  },
+  {
+    title: "Export Delivery & Production Support",
+    description: "We support export packing, spare parts, repeat orders and ongoing production.",
+    icon: "delivery",
+    image: "/images/capabilities/assembly-secondary-operations.webp",
+    alt: "Production support and export delivery preparation for manufacturing projects"
+  }
 ];
+
+function MetricIcon({ type }: { type: string }) {
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    strokeWidth: 1.8
+  };
+
+  return (
+    <svg aria-hidden="true" className="size-8" viewBox="0 0 32 32">
+      {type === "experience" && <><circle {...common} cx="16" cy="16" r="11" /><path {...common} d="M16 9v7l5 3M9 4l-3 4M23 4l3 4" /></>}
+      {type === "projects" && <><path {...common} d="M6 8h20v18H6zM10 5h12v3" /><path {...common} d="M11 14h10M11 19h7" /><path {...common} d="M23 18l2 2 4-5" /></>}
+      {type === "quality" && <><path {...common} d="M16 3l10 4v7c0 7-4.2 12-10 15C10.2 26 6 21 6 14V7z" /><path {...common} d="M11 16l3 3 7-8" /></>}
+      {type === "response" && <><path {...common} d="M5 7h16v13H9l-4 4z" /><path {...common} d="M21 11h5v13h-4" /><path {...common} d="M10 12h6M10 16h4" /></>}
+      {type === "communication" && <><path {...common} d="M5 7h22v13H14l-6 5v-5H5z" /><path {...common} d="M10 12h12M10 16h8" /><path {...common} d="M21 21l3 3 3-3" /></>}
+    </svg>
+  );
+}
 
 function DeliveryIcon({ type }: { type: string }) {
   const common = {
@@ -511,31 +569,53 @@ export default function Home() {
             Arktech combines DFM engineering, controlled tooling execution, inspection documentation and export delivery support to help OEM product companies, EMS manufacturers and injection molding companies move projects from RFQ to production with lower risk.
           </p>
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              ["15+ Years Experience", "Tooling and manufacturing support for overseas projects."],
-              ["300+ Export Tooling Projects", "Export injection molds, die casting tooling and production support for global customers."],
-              ["ISO 9001 Certified", "Quality management system for tooling, molding and component manufacturing."],
-              ["24h RFQ Response Target", "Engineering review for new CAD files, drawings and production requirements."]
-            ].map(([title, description]) => (
-              <article className="rounded-sm border border-[var(--line)] bg-white p-4 shadow-sm" key={title}>
+              ["15+ Years Experience", "Tooling and manufacturing support for overseas projects.", "experience"],
+              ["200+ Export Tooling Projects", "Normal mold size: 500 × 500 mm. Export injection molds and production support for global customers.", "projects"],
+              ["ISO 9001 Certified", "Quality management system for tooling, molding and component manufacturing.", "quality"],
+              ["24h RFQ Response Target", "Engineering review for new CAD files, drawings and production requirements.", "response"],
+              ["One-Window Communication in English", "Clear English communication for RFQ, DFM review, tooling updates and project follow-up.", "communication"]
+            ].map(([title, description, icon]) => (
+              <article className="rounded-sm border border-[var(--line)] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--brand)] hover:shadow-md" key={title}>
+                <div className="mb-4 inline-flex size-12 items-center justify-center rounded-sm bg-[var(--accent-soft)] text-[var(--brand)]">
+                  <MetricIcon type={icon} />
+                </div>
                 <h3 className="text-lg font-bold text-[var(--brand)]">{title}</h3>
                 <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{description}</p>
               </article>
             ))}
           </div>
 
-          <div className="mt-8">
-            <h3 className="text-xl font-bold text-[var(--brand-dark)]">Engineering-to-Production Delivery</h3>
-            <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10">
+            <div className="max-w-5xl">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">HOW TO WORK WITH US</p>
+              <h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)] sm:text-3xl">Engineering-to-Production Delivery</h3>
+              <p className="mt-3 max-w-4xl leading-7 text-[var(--muted)]">
+                Send us your CAD files, drawings or samples for engineering and DFM review. We confirm materials, tolerances, finishes, lead time and pricing before tooling, sampling, production inspection and export delivery.
+              </p>
+            </div>
+            <ol className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
               {deliverySteps.map((step, index) => (
-                <li className="rounded-sm border border-[var(--line)] bg-white p-4 shadow-sm" key={step.title}>
-                  <div className="flex items-start justify-between gap-3">
-                    <span className="text-sm font-bold text-[var(--brand)]">0{index + 1}</span>
-                    <span className="text-[var(--industrial-blue)]"><DeliveryIcon type={step.icon} /></span>
+                <li className="group overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md" key={step.title}>
+                  <div className="relative aspect-[16/11] overflow-hidden bg-[var(--surface-soft)]">
+                    <Image
+                      src={step.image}
+                      alt={step.alt}
+                      fill
+                      sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.05]"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,31,51,0.02),rgba(11,31,51,0.26))]" />
+                    <div className="absolute right-3 top-3 flex size-11 items-center justify-center rounded-full bg-white/95 text-[var(--brand)] shadow-sm">
+                      <DeliveryIcon type={step.icon} />
+                    </div>
                   </div>
-                  <h4 className="mt-3 text-sm font-bold leading-5 text-[var(--brand-dark)]">{step.title}</h4>
-                  <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{step.description}</p>
+                  <div className="p-5">
+                    <span className="text-sm font-bold tracking-[0.12em] text-[var(--brand)]">0{index + 1}</span>
+                    <h4 className="mt-3 text-lg font-bold leading-6 text-[var(--brand-dark)] transition-colors group-hover:text-[var(--brand)]">{step.title}</h4>
+                    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{step.description}</p>
+                  </div>
                 </li>
               ))}
             </ol>
@@ -609,14 +689,14 @@ export default function Home() {
           <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Specialized mold engineering for complex geometries, multiple materials, production scale, and demanding industrial applications.</p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {toolingCategories.map((category) => (
-              <article key={category.title} className="group flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md lg:h-[420px]">
+              <Link href={category.href} key={category.title} className="group flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md lg:h-[420px]">
                 <div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)] lg:h-3/4 lg:shrink-0 lg:aspect-auto">
                   <Image src={category.image} alt={category.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-[1.035]" />
                 </div>
                 <div className="flex flex-1 items-center p-4 lg:h-1/4 lg:min-h-0">
                   <h3 className="text-lg font-bold text-[var(--brand-dark)]">{category.title}</h3>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
