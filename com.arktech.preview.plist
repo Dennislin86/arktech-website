@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.arktech.preview</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>/private/tmp/arktech-preview-runtime/server.js</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/private/tmp/arktech-preview-runtime</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOSTNAME</key>
+    <string>127.0.0.1</string>
+    <key>PORT</key>
+    <string>3000</string>
+    <key>NODE_ENV</key>
+    <string>production</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/private/tmp/arktech-preview.log</string>
+  <key>StandardErrorPath</key>
+  <string>/private/tmp/arktech-preview-error.log</string>
+</dict>
+</plist>
