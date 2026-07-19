@@ -4,21 +4,25 @@ import Link from "next/link";
 import { Box, Cog, FileSearch, FlaskConical, PackageCheck, PenTool, SearchCheck, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Injection Mold Manufacturer | Export Tooling Partner | Arktech Mold" },
+  title: { absolute: "Injection Mold Manufacturer China | Export Tooling Partner | Arktech Mold" },
   description:
-    "Arktech Mold provides export injection molds, DFM engineering support, precision tooling and plastic injection molding solutions for global OEMs and injection molding companies.",
+    "Arktech Mold is an export injection mold manufacturer in China, providing custom injection molds, DFM engineering support, precision tooling and plastic injection molding solutions for global OEM customers.",
   keywords: [
     "injection mold manufacturer",
+    "injection mold manufacturer China",
+    "China injection mold supplier",
+    "custom injection molds",
+    "DFM engineering",
     "export tooling partner",
     "plastic injection molding",
-    "OEM manufacturing partner"
+    "OEM customers"
   ],
-  alternates: { canonical: "https://www.arktech-group.com" },
+  alternates: { canonical: "https://www.arktechmold.com" },
   openGraph: {
-    title: "Injection Mold Manufacturer | Export Tooling Partner | Arktech Mold",
+    title: "Injection Mold Manufacturer China | Export Tooling Partner | Arktech Mold",
     description:
-      "Arktech Mold provides export injection molds, DFM engineering support, precision tooling and plastic injection molding solutions for global OEMs and injection molding companies.",
-    url: "https://www.arktech-group.com",
+      "Arktech Mold is an export injection mold manufacturer in China, providing custom injection molds, DFM engineering support, precision tooling and plastic injection molding solutions for global OEM customers.",
+    url: "https://www.arktechmold.com",
     type: "website"
   }
 };
@@ -35,42 +39,42 @@ const developmentSteps = [
 const capabilities = [
   {
     title: "Complex & Precision Injection Molds",
-    body: "Advanced tooling for complex plastic parts requiring tight tolerances and multiple actions.",
+    body: "Advanced tooling for complex parts requiring tight tolerances and multiple actions.",
     image: "/images/mold-types/complex-injection-molds.JPG",
     alt: "Complex injection molds manufactured for precision plastic parts",
     href: "/injection-molds/complex-injection-molds"
   },
   {
     title: "Multi-Cavity Injection Molds",
-    body: "High-efficiency tooling for mass production with optimized cavity layouts, stable cycles and consistent part quality.",
+    body: "High-efficiency molds for mass production with stable cycles and quality.",
     image: "/images/mold-types/multi-cavity-injection-molds.png",
     alt: "Multi-cavity injection molds for high volume plastic production",
     href: "/injection-molds/multi-cavity-molds"
   },
   {
     title: "Insert Molding Tools",
-    body: "Tooling solutions combining plastic components with metal inserts and functional assemblies.",
+    body: "Tooling solutions combining plastic parts with metal inserts.",
     image: "/images/mold-types/insert-molding-tools.png",
     alt: "Insert molding tools combining plastic parts with metal inserts",
     href: "/injection-molds/insert-molding"
   },
   {
     title: "Unscrewing Molds",
-    body: "Advanced molds for threaded components using rotating cores and automated release mechanisms.",
+    body: "Molds for threaded components using rotating cores and automated release.",
     image: "/images/mold-types/unscrewing-molds.png",
     alt: "Unscrewing injection molds for threaded plastic components",
     href: "/injection-molds/unscrewing-molds"
   },
   {
     title: "Two-Shot / 2K Injection Molds",
-    body: "Multi-material and multi-color tooling for complex products requiring combined materials and functional designs.",
+    body: "Multi-material tooling for complex products with combined functions.",
     image: "/images/mold-types/two-shot-2k-bi-injection-molds.png",
     alt: "Two-shot 2K injection molds for multi-material plastic products",
     href: "/injection-molds/2k-molds"
   },
   {
     title: "Prototype Injection Molds",
-    body: "Prototype tooling solutions for product validation, engineering trials and early-stage production requirements.",
+    body: "Prototype tooling for validation, trials and early production.",
     image: "/images/mold-types/prototype-injection-mold.png",
     alt: "Prototype injection molds for product validation and engineering trials",
     href: "/injection-molds/prototype-molds"
@@ -80,45 +84,53 @@ const capabilities = [
 const engineeringCapabilities = [
   {
     title: "Co-design Support",
-    body: "Product design optimization and manufacturing feasibility support before tooling."
+    body: "Product design optimization and manufacturing feasibility review before tooling development."
   },
   {
     title: "DFM Analysis",
-    body: "DFM review to identify molding risks, optimize part design and improve tooling reliability before manufacturing."
+    body: "Identify molding risks, improve part design and optimize tooling reliability before mold manufacturing."
+  },
+  {
+    title: "Moldflow Analysis",
+    body: "Flow simulation, filling analysis, cooling evaluation and warpage prediction for better mold performance."
   },
   {
     title: "Mold Design",
-    body: "Professional mold design including tooling structure, parting concepts and production considerations."
+    body: "Professional mold structure design including parting line, gating concept and tooling solutions."
+  },
+  {
+    title: "Tooling Optimization",
+    body: "Engineering improvements for cycle time, mold reliability and production stability."
   }
 ];
 
 const reasons = [
   {
     icon: "01",
-    title: "Co-design & DFM Support",
-    body: "Our engineers review product designs, identify molding risks and optimize part designs before tooling."
+    title: "Engineering-Led Tooling Development",
+    body: "Our engineers support product review, DFM analysis and mold design optimization to reduce tooling risks before manufacturing."
   },
   {
     icon: "02",
-    title: "Export Mold Experience",
-    body: "Supporting global OEM customers with international communication, tooling documentation and export delivery experience."
+    title: "Global Export Tooling Experience",
+    body: "Supporting OEM customers worldwide with technical communication, tooling documentation and international project management."
   },
   {
     icon: "03",
-    title: "Complete Mold Manufacturing Control",
-    body: "From precision machining, EDM and polishing to mold assembly and trial validation, we control the complete tooling process."
+    title: "Complete Tooling Process Control",
+    body: "From precision machining and EDM to polishing, mold assembly and trial validation, we control the complete injection mold manufacturing process."
   },
   {
     icon: "04",
-    title: "Production Support",
-    body: "Beyond mold making, we support injection molding production, quality control and production ramp-up."
+    title: "Injection Production Support",
+    body: "Supporting injection molding production, process optimization, quality control and production ramp-up after mold approval."
   }
 ];
 
 const supportingCapabilities = [
   {
     title: "CNC Machining",
-    body: "Precision CNC machining for mold components, prototypes and production parts supporting tooling and product development.",
+    body: "Precision CNC machining support for mold components, prototypes and production parts.",
     image: "/images/capabilities/cnc-machining.jpg",
     alt: "Precision CNC machining for aluminum and stainless steel components",
     href: "/services/cnc-metal-parts"
@@ -138,13 +150,6 @@ const supportingCapabilities = [
     href: "/services/die-casting-mold"
   },
   {
-    title: "Sheet Metal Fabrication",
-    body: "Sheet metal fabrication for enclosures, brackets and structural components supporting complete product programs.",
-    image: "/images/capabilities/sheet-metal-fabrication.jpg",
-    alt: "Sheet metal fabrication for industrial enclosures and structural components",
-    href: "/services/sheet-metal-fabrication"
-  },
-  {
     title: "Assembly & Secondary Operations",
     body: "Product finishing, assembly and secondary processing support for ready-to-use products.",
     image: "/images/capabilities/assembly-secondary-operations.webp",
@@ -160,19 +165,38 @@ const injectionProductionPoints = [
   },
   {
     title: "Low Volume Production",
-    body: "Flexible low volume injection molding for product validation, pilot runs and early market launch."
+    body: "Flexible injection molding for product validation, pilot runs and early market launch."
   },
   {
     title: "Bridge Production",
-    body: "Bridge production support between prototype validation and full-scale manufacturing."
+    body: "Production support between prototype validation and full-scale manufacturing."
   },
   {
     title: "Mass Production",
-    body: "Stable mass production with optimized processes, quality control and consistent part performance."
+    body: "Stable mass production with optimized processes and consistent part quality."
   },
   {
     title: "Quality Control & Production Management",
-    body: "Production quality control, inspection documentation and delivery management supporting global OEM requirements."
+    body: "Quality control, inspection documentation and production management for global OEM requirements."
+  }
+];
+
+const injectionProductionHighlights = [
+  {
+    value: "25-480T",
+    label: "Injection Molding Machines"
+  },
+  {
+    value: "<2g to >2.5kg",
+    label: "Part Weight Range"
+  },
+  {
+    value: "Prototype to Mass Production",
+    label: "Production Flexibility"
+  },
+  {
+    value: "Engineering & Commodity Materials",
+    label: "Material Capability"
   }
 ];
 
@@ -200,32 +224,42 @@ const trustProof = [
   {
     icon: "✓",
     value: "DFM Engineering",
-    label: "& Moldflow Support"
+    label: "Moldflow & Design Optimization"
   },
   {
     icon: "✓",
     value: "Mold Trial Validation",
-    label: "& Inspection Documentation"
+    label: "Inspection Documentation"
+  },
+  {
+    icon: "✓",
+    value: "Complex Mold Capability",
+    label: "Multi-Cavity, Insert & 2K Tooling"
+  },
+  {
+    icon: "✓",
+    value: "Quality Documentation",
+    label: "Inspection Reports & Production Records"
   }
 ];
 
 const industries = [
   {
-    title: "Smart Home",
+    title: "Smart Home & IoT Devices",
     image: "/images/industries/home-appliance-smart-home-components.jpg",
-    alt: "Injection molded housings and components for smart home products",
+    alt: "Injection molded housings and plastic components for smart home and IoT devices",
     href: "/industries/smart-home"
   },
   {
-    title: "Robotics",
+    title: "Robotics & Automation",
     image: "/images/industries/robotics-injection-mold-components.jpg",
-    alt: "Custom injection molded housings and precision components for robotics applications",
+    alt: "Injection molded housings and precision plastic components for robotics and automation",
     href: "/industries/robotics"
   },
   {
-    title: "Medical Devices",
+    title: "Medical & Healthcare Devices",
     image: "/images/industries/medical-healthcare-device-parts.jpg",
-    alt: "Precision plastic housings for medical devices",
+    alt: "Precision injection molded plastic housings for medical and healthcare devices",
     href: "/industries/medical-devices"
   },
   {
@@ -242,8 +276,8 @@ const industries = [
   },
   {
     title: "Industrial Products",
-    image: "/images/capabilities/injection-mold-manufacturing.jpg",
-    alt: "Industrial plastic components, technical molded parts and injection molds",
+    image: "/images/capabilities/plastic-injection-molding.webp",
+    alt: "Industrial plastic housings and technical molded components under quality inspection",
     href: "/industries/industrial-products"
   },
   {
@@ -258,52 +292,52 @@ const manufacturingSteps = [
   {
     icon: FileSearch,
     title: "RFQ & CAD Review",
-    body: "Review customer CAD data, requirements and tooling feasibility before quotation."
+    body: "Review CAD data, requirements and tooling feasibility before quotation."
   },
   {
     icon: SearchCheck,
     title: "DFM Feedback & Moldflow Analysis",
-    body: "Analyze molding risks, filling behavior, cooling and warpage to optimize part design before tooling."
+    body: "Use DFM and Moldflow analysis to evaluate filling, cooling and warpage risks."
   },
   {
     icon: PenTool,
     title: "Mold Design Approval",
-    body: "Confirm mold structure, parting lines, gating concepts and tooling solutions before manufacturing."
+    body: "Approve mold structure, parting lines, gating and tooling solutions."
   },
   {
     icon: Box,
-    title: "Steel Cutting",
-    body: "Start mold manufacturing with approved steel materials and production planning."
+    title: "Steel Cutting & Tool Preparation",
+    body: "Prepare approved mold steel and tooling components for manufacturing."
   },
   {
     icon: Cog,
     title: "Precision Machining",
-    body: "High precision CNC machining and EDM processes for accurate mold components."
+    body: "Precision CNC machining and EDM for accurate mold components."
   },
   {
     icon: Wrench,
-    title: "Mold Assembly & Fitting",
-    body: "Mold assembly, fitting adjustment and component verification before trial."
+    title: "Mold Assembly & Fitting Adjustment",
+    body: "Assemble, fit and adjust mold components before trial."
   },
   {
     icon: FlaskConical,
-    title: "Mold Trial & Adjustment",
-    body: "Trial molding, parameter adjustment and optimization to validate part quality and performance."
+    title: "Mold Trial, Testing & Optimization",
+    body: "Trial, test and optimize molding parameters, part quality and performance."
   },
   {
     icon: PackageCheck,
-    title: "Packing & Delivery",
-    body: "Final inspection, documentation, packing and delivery preparation for global customers."
+    title: "Final Inspection & Export Delivery",
+    body: "Complete final inspection, documentation, packing and export delivery."
   }
 ];
 
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "ManufacturingBusiness"],
     name: "Arktech Mold",
-    url: "https://www.arktech-group.com",
-    logo: "https://www.arktech-group.com/images/arktech-mold-logo.png",
+    url: "https://www.arktechmold.com",
+    logo: "https://www.arktechmold.com/images/arktech-mold-logo.png",
     description:
       "Export tooling and plastic manufacturing partner supporting global OEMs with DFM engineering, injection molds and production solutions.",
     areaServed: "Worldwide",
@@ -317,6 +351,7 @@ export default function Home() {
       "Two-shot injection molding",
       "Prototype injection molds",
       "DFM analysis",
+      "Moldflow analysis",
       "Plastic injection molding",
       "Export tooling"
     ]
@@ -331,7 +366,7 @@ export default function Home() {
 
       <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[var(--brand-dark)] lg:min-h-[720px]">
         <Image
-          src="/images/seo/arktech-tooling-manufacturing-hero.png"
+          src="/images/hero/export-injection-mold-manufacturing-hero.webp"
           alt="Export injection mold with molded plastic parts and precision tooling components"
           fill
           priority
@@ -339,22 +374,22 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,31,51,0.98)_0%,rgba(11,31,51,0.90)_46%,rgba(11,31,51,0.30)_100%)]" />
-        <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] w-[min(1240px,calc(100%-32px))] items-center py-20 lg:min-h-[720px] lg:py-28">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,31,51,0.94)_0%,rgba(11,31,51,0.84)_46%,rgba(11,31,51,0.26)_100%)]" />
+        <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] w-[min(1240px,calc(100%-32px))] items-center py-20 lg:min-h-[720px]">
           <div className="max-w-[850px]">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f1c5c5] sm:text-sm">EXPORT INJECTION MOLD MANUFACTURER</p>
-            <h1 className="mt-5 text-[2.3rem] font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-[3.2rem] lg:text-[4rem]">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f1c5c5] sm:text-sm">EXPORT TOOLING &amp; INJECTION MOLD MANUFACTURER</p>
+            <h1 className="mt-5 text-[2.3rem] font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-[3.2rem] lg:text-[3.5rem]">
               Export Tooling &amp; Manufacturing Partner for Global OEMs and Injection Molding Companies
             </h1>
             <p className="mt-6 max-w-3xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-              From product co-design and DFM analysis to precision mold manufacturing and injection production, Arktech Mold helps global OEMs and injection molding companies develop reliable plastic parts with high-quality tooling solutions and production support.
+              From product co-design and DFM analysis to precision mold manufacturing and injection production, Arktech Mold helps global OEMs develop reliable plastic parts with professional tooling and production support.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--brand-hover)]" href="/request-a-quote">
                 Start Your RFQ
               </Link>
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-white/10 px-6 font-bold text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--brand-dark)]" href="#capabilities">
-                Explore Injection Mold Capabilities
+                Explore Injection Molds
               </Link>
             </div>
             <div className="mt-10 grid max-w-2xl grid-cols-3 gap-px overflow-hidden rounded-sm border border-white/20 bg-white/20">
@@ -379,20 +414,20 @@ export default function Home() {
               </div>
             </div>
             <div className="overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm">
-              <div className="relative aspect-[16/9] min-h-56 bg-[var(--brand-dark)]">
+              <div className="relative aspect-[16/9] min-h-56 bg-white">
                 <Image
-                  src="/images/capabilities/co-design-dfm-engineering.webp"
-                  alt="Product design, DFM engineering and injection mold manufacturing process for plastic injection molding projects"
+                  src="/images/capabilities/product-design-injection-mold-production.jpg"
+                  alt="Product design, engineering, injection molding tool development and production workflow"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
-                  className="object-cover"
+                  className="object-contain object-center"
                 />
               </div>
               <ol className="grid grid-cols-2 gap-px border-t border-[var(--line)] bg-[var(--line)] sm:grid-cols-3" aria-label="Product development process">
                 {developmentSteps.map((step, index) => (
-                  <li className="group min-h-24 bg-[var(--surface-soft)] p-4 transition hover:bg-white" key={step}>
+                  <li className="group min-h-20 bg-[var(--surface-soft)] p-3 transition hover:bg-white sm:min-h-24 sm:p-4" key={step}>
                     <span className="text-xs font-bold tracking-[0.14em] text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span>
-                    <p className="mt-3 font-bold text-[var(--brand-dark)]">{step}</p>
+                    <p className="mt-2 font-bold leading-tight text-[var(--brand-dark)]">{step}</p>
                   </li>
                 ))}
               </ol>
@@ -410,19 +445,21 @@ export default function Home() {
           <article className="mt-10 grid overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm lg:grid-cols-[0.8fr_1.2fr]">
             <div className="relative min-h-72 bg-[var(--brand-dark)]">
               <Image
-                src="/images/capabilities/co-design-dfm-engineering.webp"
-                alt="Product design support, co-design and DFM engineering review for injection molding projects"
+                src="/images/engineering/injection-mold-engineering-dfm-analysis.webp"
+                alt="Injection mold engineering support with DFM analysis, Moldflow simulation and mold design review"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             <div className="p-6 sm:p-8 lg:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">TOOLING ENGINEERING SUPPORT</p>
-              <h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]">Engineering Support</h3>
+              <h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]">Injection Mold Engineering Support</h3>
+              <p className="mt-4 leading-7 text-[var(--muted)]">From DFM analysis and Moldflow simulation to mold design optimization, Arktech provides engineering support to reduce tooling risks and improve injection mold performance before manufacturing.</p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {engineeringCapabilities.map((capability) => (
+                {engineeringCapabilities.map((capability, index) => (
                   <div className="border-l-2 border-[var(--brand)] pl-4" key={capability.title}>
+                    <span className="text-xs font-bold tracking-[0.14em] text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span>
                     <h4 className="font-bold text-[var(--brand-dark)]">{capability.title}</h4>
                     <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.body}</p>
                   </div>
@@ -437,13 +474,13 @@ export default function Home() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((capability) => (
               <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[var(--brand)] hover:shadow-md" key={capability.title}>
-                <div className="relative aspect-[16/10] overflow-hidden bg-white">
-                  <Image src={capability.image} alt={capability.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-contain p-3 transition duration-500 group-hover:scale-[1.035]" />
+                <div className="relative h-64 overflow-hidden bg-white sm:h-72 md:h-72 lg:h-80 xl:h-96">
+                  <Image src={capability.image} alt={capability.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-contain p-2 transition duration-500 group-hover:scale-[1.035]" />
                 </div>
-                <div className="flex flex-1 flex-col border-t border-[var(--line)] p-6">
+                <div className="flex flex-1 flex-col border-t border-[var(--line)] p-5">
                   <h3 className="text-xl font-bold text-[var(--brand-dark)]">{capability.title}</h3>
-                  <p className="mt-3 leading-7 text-[var(--muted)]">{capability.body}</p>
-                  <Link className="focus-ring mt-auto inline-flex items-center gap-2 pt-5 font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href={capability.href}>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.body}</p>
+                  <Link className="focus-ring mt-auto inline-flex items-center gap-2 pt-4 font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href={capability.href}>
                     View capability <span aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -468,7 +505,15 @@ export default function Home() {
             <div className="p-6 sm:p-8 lg:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">INJECTION MOLDING PRODUCTION</p>
               <h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]">Plastic Injection Molding Production</h3>
-              <p className="mt-4 leading-7 text-[var(--muted)]">From mold trial validation to low volume and mass production, Arktech provides plastic injection molding solutions with process optimization, quality control and reliable delivery support for global OEM products.</p>
+              <p className="mt-4 leading-7 text-[var(--muted)]">From mold trial validation to low volume and mass production, Arktech provides flexible plastic injection molding solutions for global OEMs, supporting parts from small precision components to large structural housings.</p>
+              <ul className="mt-5 grid gap-2 sm:grid-cols-2 xl:grid-cols-4" aria-label="Plastic injection molding production capabilities">
+                {injectionProductionHighlights.map((highlight) => (
+                  <li className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-3" key={highlight.label}>
+                    <strong className="block text-sm leading-5 text-[var(--brand-dark)]">{highlight.value}</strong>
+                    <span className="mt-1 block text-xs leading-5 text-[var(--muted)]">{highlight.label}</span>
+                  </li>
+                ))}
+              </ul>
               <ul className="mt-5 grid gap-4 text-sm text-[var(--brand-dark)] sm:grid-cols-2" aria-label="Plastic injection molding production journey">
                 {injectionProductionPoints.map((point) => (
                   <li className="flex items-start gap-2" key={point.title}>
@@ -480,6 +525,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-5 text-sm leading-6 text-[var(--muted)]">Supporting engineering and commodity materials including ABS, PC, PA, POM, PP and customer-specified materials.</p>
               <Link className="focus-ring mt-7 inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/services/plastic-injection-molding">
                 Explore Plastic Injection Molding
               </Link>
@@ -487,17 +533,26 @@ export default function Home() {
           </article>
           <div className="mt-10 border-t border-[var(--line)] pt-8">
             <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">ADDITIONAL MANUFACTURING SUPPORT BY ARKTECH GROUP</p>
-              <h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]">Complementary Manufacturing Resources for Complete Product Programs</h3>
-              <p className="mt-4 leading-7 text-[var(--muted)]">Beyond injection mold manufacturing and plastic injection molding, Arktech Group provides complementary manufacturing resources including CNC machining, die casting, sheet metal fabrication, rapid prototyping and assembly support for complete product development programs.</p>
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">ARKTECH GROUP RESOURCES</p>
+              <h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]">Additional Manufacturing Support by Arktech Group</h3>
+              <p className="mt-4 leading-7 text-[var(--muted)]">Beyond injection mold manufacturing and plastic injection molding, Arktech Group provides additional manufacturing resources to support complete product programs when required.</p>
             </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {supportingCapabilities.map((capability) => (
-                <Link className="group rounded-sm border border-[var(--line)] bg-white p-4 transition hover:-translate-y-0.5 hover:border-[var(--brand)] hover:shadow-sm" href={capability.href} key={capability.title}>
-                  <h4 className="font-bold text-[var(--brand-dark)] transition group-hover:text-[var(--brand)]">{capability.title}</h4>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.body}</p>
+                <Link className="group flex h-full flex-col overflow-hidden rounded-sm border border-[var(--line)] bg-white transition hover:-translate-y-0.5 hover:border-[var(--brand)] hover:shadow-sm" href={capability.href} key={capability.title}>
+                  <div className="relative h-40 overflow-hidden bg-[var(--surface-soft)] sm:h-32">
+                    <Image src={capability.image} alt={capability.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-center transition duration-300 group-hover:scale-[1.025]" />
+                  </div>
+                  <div className="flex flex-1 flex-col border-t border-[var(--line)] p-4">
+                    <h4 className="font-bold text-[var(--brand-dark)] transition group-hover:text-[var(--brand)]">{capability.title}</h4>
+                    <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.body}</p>
+                  </div>
                 </Link>
               ))}
+            </div>
+            <div className="mt-6 flex flex-col gap-2 text-sm sm:flex-row sm:items-center">
+              <span className="font-semibold text-[var(--brand-dark)]">Need additional manufacturing resources?</span>
+              <a className="focus-ring font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="https://www.arktech-group.com">Explore Arktech Group capabilities →</a>
             </div>
           </div>
         </div>
@@ -509,18 +564,18 @@ export default function Home() {
           <h2 id="why-heading" className="mt-4 text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl">Why Choose Arktech Mold</h2>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((reason) => (
-              <article className="min-h-64 bg-[#102d4b] p-6 lg:p-7" key={reason.title}>
+              <article className="min-h-56 bg-[#102d4b] p-5 lg:p-6" key={reason.title}>
                 <span aria-hidden="true" className="inline-flex size-11 items-center justify-center rounded-full border border-white/25 text-xl text-[#f1c5c5]">{reason.icon}</span>
-                <h3 className="mt-8 text-xl font-bold text-white">{reason.title}</h3>
-                <p className="mt-4 leading-7 text-white/70">{reason.body}</p>
+                <h3 className="mt-5 text-xl font-bold text-white">{reason.title}</h3>
+                <p className="mt-3 leading-6 text-white/70">{reason.body}</p>
               </article>
             ))}
           </div>
           <ul className="mt-6 grid gap-px overflow-hidden rounded-sm border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-4" aria-label="Arktech manufacturing credibility">
             {trustProof.map((item) => (
-              <li className="flex min-h-40 flex-col items-start justify-center bg-[#102d4b] px-5 py-5" key={item.label}>
-                <span aria-hidden="true" className="text-xl text-[#f1c5c5]">{item.icon}</span>
-                <strong className="mt-3 text-2xl font-semibold text-white">{item.value}</strong>
+              <li className="flex min-h-32 flex-col items-start justify-center bg-[#102d4b] px-5 py-4" key={item.label}>
+                <span aria-hidden="true" className="text-lg text-[#f1c5c5]">{item.icon}</span>
+                <strong className="mt-2 text-xl font-semibold leading-6 text-white">{item.value}</strong>
                 <span className="mt-1 text-sm font-semibold leading-5 text-white/70">{item.label}</span>
               </li>
             ))}
@@ -532,7 +587,7 @@ export default function Home() {
         <div className="container-page">
           <p className="section-eyebrow">APPLICATION EXPERIENCE</p>
           <h2 id="industries-heading" className="section-heading">Industries We Serve</h2>
-          <p className="mt-5 max-w-3xl leading-7 text-[var(--muted)]">Supporting OEMs, EMS providers and injection molding companies with injection mold manufacturing and plastic injection molding solutions for global markets.</p>
+          <p className="mt-5 max-w-3xl leading-7 text-[var(--muted)]">As an OEM manufacturing partner, Arktech supports OEMs, EMS providers and injection molding companies with injection mold manufacturing and plastic component production for demanding global industries.</p>
           <div className="mt-8 grid gap-4 lg:grid-cols-2">
             <article className="border-l-4 border-[var(--brand)] bg-[var(--surface-soft)] p-5">
               <h3 className="text-lg font-bold text-[var(--brand-dark)]">OEM Product Companies</h3>
@@ -568,12 +623,14 @@ export default function Home() {
               const StepIcon = step.icon;
 
               return (
-                <li className="relative min-h-40 border-b border-[var(--line)] p-5 last:border-b-0 sm:border-r lg:[&:nth-child(4n)]:border-r-0 lg:[&:nth-child(n+5)]:border-b-0" key={step.title}>
-                  <StepIcon aria-hidden="true" className="size-6 text-[var(--brand)]" strokeWidth={1.75} />
-                  <span className="mt-5 block text-sm font-bold tracking-[0.14em] text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span>
+                <li className="relative min-h-36 border-b border-[var(--line)] p-4 last:border-b-0 sm:border-r lg:[&:nth-child(4n)]:border-r-0 lg:[&:nth-child(n+5)]:border-b-0" key={step.title}>
+                  <div className="flex items-center gap-3">
+                    <StepIcon aria-hidden="true" className="size-5 text-[var(--brand)]" strokeWidth={1.75} />
+                    <span className="text-xs font-bold tracking-[0.14em] text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span>
+                  </div>
                   <h3 className="mt-3 text-lg font-bold leading-6 text-[var(--brand-dark)]">{step.title}</h3>
-                  <p className="mt-3 pb-8 text-sm leading-6 text-[var(--muted)]">{step.body}</p>
-                  {index < manufacturingSteps.length - 1 ? <span aria-hidden="true" className="absolute bottom-5 right-5 text-xl text-[var(--brand)]">→</span> : null}
+                  <p className="mt-2 pb-6 text-sm leading-5 text-[var(--muted)]">{step.body}</p>
+                  {index < manufacturingSteps.length - 1 ? <span aria-hidden="true" className="absolute bottom-4 right-4 text-lg text-[var(--brand)]">→</span> : null}
                 </li>
               );
             })}
@@ -581,14 +638,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[var(--industrial-blue)] py-16 text-white sm:py-20" aria-label="Request an injection mold quotation">
-        <div className="absolute inset-y-0 right-0 hidden w-2/5 opacity-20 lg:block">
-          <Image src="/images/capabilities/plastic-injection-molding.webp" alt="" fill sizes="40vw" className="object-cover" />
-        </div>
-        <div className="relative container-page">
-          <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.02em] text-white sm:text-4xl">Ready to Start Your Injection Mold Project?</h2>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Send us your 3D CAD files and project requirements. Our engineering team will provide DFM feedback and tooling recommendations before quotation.</p>
-          <ol className="mt-6 flex max-w-2xl flex-col gap-2 text-sm font-semibold text-white/90 sm:flex-row sm:items-center" aria-label="RFQ engineering review steps">
+      <section className="relative overflow-hidden bg-[#123B32] text-white" aria-label="Request an injection mold quotation">
+        <div className="relative z-10 container-page py-16 sm:py-20">
+          <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.02em] text-white lg:max-w-[56%] sm:text-4xl">Ready to Develop Your Next Injection Mold Project?</h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80 lg:max-w-[56%]">Send your 3D CAD files and project requirements. Our tooling engineers will review your design and provide DFM feedback, mold recommendations and quotation support.</p>
+          <ol className="mt-6 flex max-w-2xl flex-col gap-2 text-sm font-semibold text-white/90 sm:flex-row sm:items-center lg:max-w-[56%]" aria-label="RFQ engineering review steps">
             {["Upload CAD Files", "DFM Review", "Mold Quotation"].map((step, index) => (
               <li className="flex items-center gap-2" key={step}>
                 <span className="inline-flex size-7 items-center justify-center rounded-full border border-white/30 text-xs">{index + 1}</span>
@@ -597,9 +651,13 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <Link className="focus-ring mt-8 inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-7 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-            Upload CAD for DFM Review
+          <Link className="focus-ring mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-[var(--brand)] px-7 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--brand-hover)] sm:w-auto" href="/request-a-quote">
+            Submit CAD for Mold Review
           </Link>
+        </div>
+        <div className="relative h-56 w-full overflow-hidden sm:h-64 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-2/5">
+          <Image src="/images/capabilities/plastic-injection-molding.webp" alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover brightness-110 saturate-[0.85]" />
+          <div className="absolute inset-0 bg-[#123B32]/25" />
         </div>
       </section>
     </div>

@@ -22,7 +22,8 @@ This is the source of truth for website image selection. Paths are relative to `
 | Rapid Prototyping | `/images/capabilities/rapid-prototyping-v3.png` | SLA SLS and CNC rapid prototyping for product validation | AI-generated; active |
 | Vacuum Casting | `/images/capabilities/vacuum-casting-v3.png` | Polyurethane vacuum casting for bridge production and prototypes | AI-generated; active |
 | Assembly & Secondary Operations | `/images/capabilities/assembly-secondary-operations.webp` | Electronics assembly line for component assembly and secondary operations | User-supplied AI-generated image; active |
-| Engineering Support | `/images/capabilities/co-design-dfm-engineering.webp` | Product design, DFM engineering and injection mold manufacturing process for plastic injection molding projects | Existing SEO-optimized asset; active on homepage development process and engineering support blocks |
+| Engineering Support | `/images/engineering/injection-mold-engineering-dfm-analysis.webp` | Injection mold engineering support with DFM analysis, Moldflow simulation and mold design review | User-supplied engineering image converted to optimized WebP; active on homepage Engineering Support block |
+| Product Design to Injection Mold Production | `/images/capabilities/product-design-injection-mold-production.jpg` | Product design, engineering, injection molding tool development and production workflow | User-supplied workflow image; active on homepage development process block |
 
 ## Existing General Assets
 
@@ -30,6 +31,7 @@ This is the source of truth for website image selection. Paths are relative to `
 | --- | --- | --- |
 | Arktech Mold logo | `/images/arktech-mold-logo.png` | Brand asset |
 | Arktech logo | `/images/arktech-logo.svg` | Brand asset |
+| Homepage export injection mold hero | `/images/hero/export-injection-mold-manufacturing-hero.webp` | User-supplied hero asset converted to optimized WebP; active on homepage |
 | Homepage tooling hero | `/images/seo/arktech-tooling-manufacturing-hero.png` | AI-generated |
 | OEM manufacturing hero | `/images/seo/oem-manufacturing-hero.png` | AI-generated |
 | RFQ engineering review | `/images/seo/rfq-engineering-review.png` | AI-generated |
@@ -44,9 +46,11 @@ This is the source of truth for website image selection. Paths are relative to `
 | Unscrewing Molds | `/images/mold-types/unscrewing-molds.png` | Unscrewing injection molds for threaded plastic components | Existing tooling image; active on homepage |
 | Two-Shot / 2K Injection Molds | `/images/mold-types/two-shot-2k-bi-injection-molds.png` | Two-shot 2K injection molds for multi-material plastic products | Existing tooling image; active on homepage |
 | Prototype Injection Molds | `/images/mold-types/prototype-injection-mold.png` | Prototype injection molds for product validation and engineering trials | Existing SEO-optimized tooling photo; active on homepage |
-| Robotics | `/images/industries/robotics-injection-mold-components.jpg` | Custom injection molded housings and precision components for robotics applications | Existing industry image; active on homepage |
+| Smart Home & IoT Devices | `/images/industries/home-appliance-smart-home-components.jpg` | Injection molded housings and plastic components for smart home and IoT devices | Existing industry image; active on homepage |
+| Robotics & Automation | `/images/industries/robotics-injection-mold-components.jpg` | Injection molded housings and precision plastic components for robotics and automation | Existing industry image; active on homepage |
+| Medical & Healthcare Devices | `/images/industries/medical-healthcare-device-parts.jpg` | Precision injection molded plastic housings for medical and healthcare devices | Existing industry image; active on homepage |
 | Automotive Interior | `/images/case-studies/two-shot-light-cover.webp` | Two-shot injection mold and molded light-cover components for automotive interiors | Legacy-site project graphic; active on homepage |
-| Industrial Products | `/images/capabilities/injection-mold-manufacturing.jpg` | Industrial plastic components, technical molded parts and injection molds | Real legacy-site tooling and molded-parts image; active on homepage |
+| Industrial Products | `/images/capabilities/plastic-injection-molding.webp` | Industrial plastic housings and technical molded components under quality inspection | User-supplied AI-generated production image; active on homepage |
 | EMS Manufacturing | `/images/capabilities/assembly-secondary-operations.webp` | Electronics assembly line supporting EMS manufacturing programs | User-supplied AI-generated image; active on homepage |
 
 ## Maintenance notes
