@@ -1,7 +1,7 @@
 export const site = {
   name: "Arktech Mold",
   url: "https://www.arktechmold.com",
-  email: "sales@arktech-group.com",
+  email: "Engineering@arktechmold.com",
   phone: "+86 755 2314 8996",
   description:
     "Tooling and manufacturing partner for OEM product companies and injection molders sourcing export molds, plastic molding, die casting molds, CNC metal parts, and DFM engineering support.",

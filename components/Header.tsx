@@ -8,19 +8,19 @@ type MenuItem = { label: string; href: string };
 type NavigationItem = MenuItem & { menu?: MenuItem[] };
 
 const injectionMoldMenu: MenuItem[] = [
-  { label: "Custom Injection Molds", href: "/injection-molds/custom-injection-molds" },
-  { label: "Precision Injection Molds", href: "/injection-molds/precision-injection-molds" },
-  { label: "Prototype Injection Molds", href: "/injection-molds/prototype-molds" },
-  { label: "Insert Molding Tools", href: "/injection-molds/insert-molding" },
-  { label: "Overmolding Tools", href: "/injection-molds/overmolding" },
-  { label: "Two Shot / 2K Molds", href: "/injection-molds/2k-molds" },
-  { label: "Unscrewing Molds", href: "/injection-molds/unscrewing-molds" }
+  { label: "Complex Injection Molds", href: "/injection-molds/complex-injection-molds" },
+  { label: "Multi-Cavity Injection Molds", href: "/injection-molds/multi-cavity-molds" },
+  { label: "Insert Molding", href: "/injection-molds/insert-molding" },
+  { label: "Unscrewing Molds", href: "/injection-molds/unscrewing-molds" },
+  { label: "Two-Shot / 2K Molds", href: "/injection-molds/2k-molds" },
+  { label: "Prototype Injection Molds", href: "/injection-molds/prototype-molds" }
 ];
 
 const engineeringMenu: MenuItem[] = [
-  { label: "Co-design & Product Review", href: "/engineering-support/co-design" },
+  { label: "Co-design Support", href: "/engineering-support/co-design" },
   { label: "DFM Analysis", href: "/engineering-support/dfm-analysis" },
   { label: "Mold Design", href: "/engineering-support/mold-design" },
+  { label: "Moldflow Analysis", href: "/engineering-support/moldflow-analysis" },
   { label: "Project Management", href: "/engineering-support/project-management" }
 ];
 
@@ -30,16 +30,25 @@ const industryMenu: MenuItem[] = [
   { label: "Medical Devices", href: "/industries/medical-devices" },
   { label: "Consumer Electronics", href: "/industries/consumer-electronics" },
   { label: "Automotive Interior", href: "/industries/automotive-interior" },
-  { label: "Industrial Products", href: "/industries/industrial-products" },
   { label: "EMS Manufacturing", href: "/industries/ems-manufacturing" }
+];
+
+const resourcesMenu: MenuItem[] = [
+  { label: "Case Studies", href: "/resources/case-studies" },
+  { label: "DFM Guide", href: "/resources/dfm-guide" },
+  { label: "Mold Design Guidelines", href: "/resources/mold-design-guidelines" },
+  { label: "Material Selection Guide", href: "/resources/material-selection-guide" },
+  { label: "FAQ", href: "/resources/faq" },
+  { label: "Injection Mold Blog", href: "/blog" }
 ];
 
 const navigation: NavigationItem[] = [
   { label: "Home", href: "/" },
-  { label: "Injection Molds", href: "/injection-molds/custom-injection-molds", menu: injectionMoldMenu },
+  { label: "Injection Molds", href: "/injection-molds", menu: injectionMoldMenu },
   { label: "Plastic Injection", href: "/services/plastic-injection-molding" },
-  { label: "Engineering Support", href: "/engineering-support/dfm-analysis", menu: engineeringMenu },
+  { label: "Engineering Support", href: "/engineering-support", menu: engineeringMenu },
   { label: "Industries", href: "/industries", menu: industryMenu },
+  { label: "Resources", href: "/resources", menu: resourcesMenu },
   { label: "Quality", href: "/company/quality-documentation" },
   { label: "About Us", href: "/company" },
   { label: "Contact", href: "/contact" }
@@ -47,7 +56,7 @@ const navigation: NavigationItem[] = [
 
 function Dropdown({ items }: { items: MenuItem[] }) {
   return (
-    <div className="invisible absolute left-1/2 top-full z-[9999] w-72 -translate-x-1/2 pt-3 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+    <div className="invisible absolute left-1/2 top-[calc(100%-4px)] z-[9999] w-72 -translate-x-1/2 pt-4 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
       <div className="rounded-sm border border-[var(--line)] bg-white p-2 shadow-[0_20px_50px_rgba(15,35,60,0.18)]">
         {items.map((item) => (
           <Link
@@ -77,7 +86,7 @@ export function Header() {
             width={220}
             height={68}
             priority
-            className="h-12 w-auto object-contain xl:h-[58px]"
+            className="h-12 w-auto object-contain lg:h-[53px] xl:h-16"
           />
         </Link>
 
@@ -86,7 +95,7 @@ export function Header() {
             <div className="group relative overflow-visible" key={item.label}>
               <Link
                 aria-haspopup={item.menu ? "menu" : undefined}
-                className="focus-ring inline-flex items-center gap-1 whitespace-nowrap rounded-sm px-2 py-2 text-[13px] font-medium tracking-[0.01em] text-[var(--brand-dark)] transition hover:text-[var(--brand)] xl:px-2.5 xl:text-sm"
+                className="focus-ring inline-flex items-center gap-1 whitespace-nowrap rounded-sm px-2 py-2 text-[13px] font-medium tracking-[0.01em] text-[var(--brand-dark)] transition hover:text-[var(--brand)] xl:text-sm"
                 href={item.href}
               >
                 {item.label}
