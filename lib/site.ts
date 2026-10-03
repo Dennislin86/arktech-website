@@ -1,7 +1,7 @@
 export const site = {
   name: "Arktech Mold",
   url: "https://www.arktechmold.com",
-  email: "sales@arktech-group.com",
+  email: "engineering@arktechmold.com",
   phone: "+86 755 2314 8996",
   description:
     "Tooling and manufacturing partner for OEM product companies and injection molders sourcing export molds, plastic molding, die casting molds, CNC metal parts, and DFM engineering support.",
@@ -11,7 +11,7 @@ export const site = {
     experience: "15+ years focused on custom prototyping and manufacturing solutions",
     certifications: ["ISO 9001:2015", "ISO 13485:2016"],
     headOffice: "R1702, Lingxingyu Technology Building, Guangming Street, Guangming District, Shenzhen, Guangdong Province, China 518107",
-    factoryAddress: "No.14 Hedi Road, Gongming Street, Shenzhen, China",
+    factoryAddress: "No. 13, Road Southwest Lang, Jinsha River South, ChangAn Town, Dongguan, China",
     legacyWebsite: "https://www.arktech-group.com"
   },
   nav: [

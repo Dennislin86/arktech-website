@@ -2,9 +2,10 @@ import type { MetadataRoute } from "next";
 import { caseStudyPages, industryPages, resourcePages, servicePages, solutionPages, toolingExamplePages } from "@/lib/page-data";
 import { site } from "@/lib/site";
 import { seoPages } from "@/lib/seo-pages";
+import { allEngineeringResources } from "@/lib/engineering-resources";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["/", ...site.nav.map((item) => item.href), "/request-a-quote", "/seo"];
+  const staticRoutes = ["/", ...site.nav.map((item) => item.href), "/request-a-quote", "/resources/faq", "/seo"];
   const detailRoutes = [
     ...servicePages.map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...toolingExamplePages.map((page) => `/tooling-examples/${page.slug}`),
     ...caseStudyPages.map((page) => `/case-studies/${page.slug}`),
     ...resourcePages.map((page) => `/resources/${page.slug}`),
+    ...allEngineeringResources.map((page) => page.path),
     ...seoPages.map((page) => `/seo/${page.slug}`)
   ];
 

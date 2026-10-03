@@ -492,7 +492,7 @@ export const seoPages: SeoLandingPage[] = [
     ],
     serviceLinks: [
       { label: "DFM Engineering Support", href: "/services/dfm-engineering" },
-      { label: "DFM Checklist", href: "/resources/dfm-checklist-for-plastic-housing" },
+      { label: "DFM Guide", href: "/resources/dfm-guide" },
       { label: "Upload CAD for Review", href: "/request-a-quote" }
     ],
     relatedSeoSlugs: ["injection-molding-tooling", "die-casting-manufacturing", "oem-manufacturing-services"]

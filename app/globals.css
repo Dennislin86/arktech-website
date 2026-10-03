@@ -25,6 +25,10 @@
   --line: var(--color-border);
   --surface: #ffffff;
   --surface-soft: var(--color-bg-light);
+  --cta-bg: #f4f6f8;
+  --cta-heading: #102a43;
+  --cta-body: #536273;
+  --cta-border: #e3e8ed;
 }
 
 * {
@@ -68,4 +72,12 @@ a {
 
 .focus-ring:focus-visible {
   outline-color: var(--accent);
+}
+
+.internal-page-title {
+  max-width: 820px;
+  font-size: clamp(2.25rem, calc(1.75rem + 2vw), 3.75rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
 }

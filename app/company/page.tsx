@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
+import { LazyVideoPlayer } from "@/components/LazyVideoPlayer";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -71,19 +72,13 @@ export default function CompanyPage() {
             </div>
           </div>
 
-          <div className="relative aspect-[16/10] overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--brand-dark)] shadow-sm">
-            <video
-              aria-label="Arktech factory video showing export injection mold and manufacturing support"
-              autoPlay
-              className="h-full w-full object-cover"
-              controls
-              loop
-              muted
-              playsInline
-              preload="metadata"
-            >
-              <source src="/videos/arktech-group-factory-video.mp4" type="video/mp4" />
-            </video>
+          <div className="relative aspect-[16/9] overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
+            <LazyVideoPlayer
+              label="Arktech factory video showing export injection mold and manufacturing support"
+              mp4Src="/videos/arktech-mold-introduction.mp4"
+              poster="/images/company/arktech-mold-video-poster.webp"
+              posterAlt="Arktech Mold factory scene for export injection mold manufacturing and tooling support"
+            />
           </div>
         </div>
       </section>

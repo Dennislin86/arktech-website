@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CTA } from "@/components/CTA";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
@@ -23,8 +24,7 @@ const rfqChecklist = [
 const contactCards = [
   ["Email", site.email],
   ["Phone", site.phone],
-  ["Location", "Shenzhen, Guangdong, China"],
-  ["Certifications", site.company.certifications.join(" / ")],
+  ["Certification", "ISO 9001:2015"],
   ["Response Target", "Within 24 hours"]
 ];
 
@@ -42,8 +42,12 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="CONTACT ARKTECH MOLD"
-        title="Contact Arktech Mold for Export Injection Mold RFQs"
+        title="Contact Arktech Mold for Injection Mold RFQs"
         body="Send CAD files, drawings, material requirements and production needs. Arktech Mold supports export injection mold projects with DFM engineering, mold trial support, sampling and related manufacturing services from Shenzhen, China."
+        image={{
+          src: "/images/Contact/contact-mold-factory-workshop.webp",
+          alt: "Arktech injection mold manufacturing workshop in China"
+        }}
       />
 
       <section className="py-14">
@@ -51,7 +55,7 @@ export default function ContactPage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Export Injection Mold RFQ</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)]">
-              Upload CAD files or request a manufacturing quote.
+              Upload Your CAD Files for an Injection Mold Quote
             </h2>
             <p className="mt-4 leading-7 text-[var(--muted)]">
               Contact Arktech Mold when you need an injection mold company China partner for export tooling, DFM engineering, mold trial support, sampling support, tooling spare parts or related production support.
@@ -67,7 +71,7 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-bold text-[var(--brand-dark)]">What to Include in Your RFQ</h2>
+            <h3 className="text-2xl font-bold text-[var(--brand-dark)]">What to Include in Your RFQ</h3>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {rfqChecklist.map((item) => (
                 <li className="flex gap-3 rounded-sm bg-[var(--surface-soft)] p-3 text-sm font-semibold leading-6 text-[var(--brand-dark)]" key={item}>
@@ -80,13 +84,15 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <CTA variant="homepage" />
+
       <section className="bg-white py-14">
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Contact Details</p>
           <h2 className="mt-3 max-w-3xl text-3xl font-bold text-[var(--brand-dark)]">
-            RFQ contact information for export mold and manufacturing support.
+            Contact Our Injection Mold Engineering Team
           </h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {contactCards.map(([label, value]) => (
               <div className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5 shadow-sm" key={label}>
                 <h3 className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">{label}</h3>
@@ -98,20 +104,15 @@ export default function ContactPage() {
       </section>
 
       <section className="py-14">
-        <div className="container-page grid gap-6 lg:grid-cols-2">
-          <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-bold text-[var(--brand-dark)]">Shenzhen Office</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">{site.company.headOffice}</p>
+        <div className="container-page grid gap-5 lg:grid-cols-2">
+          <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm sm:p-7">
+            <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Shenzhen Head Office</h2>
+            <address className="mt-4 not-italic leading-7 text-[var(--muted)]">{site.company.headOffice}</address>
           </article>
-          <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-bold text-[var(--brand-dark)]">Manufacturing Address</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">{site.company.factoryAddress}</p>
+          <article className="rounded-sm border border-[var(--line)] bg-white p-6 shadow-sm sm:p-7">
+            <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Factory Address</h2>
+            <address className="mt-4 not-italic leading-7 text-[var(--muted)]">{site.company.factoryAddress}</address>
           </article>
-        </div>
-        <div className="container-page mt-5">
-          <p className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-4 text-sm font-semibold leading-6 text-[var(--muted)]">
-            Visits are available by appointment for qualified tooling and manufacturing projects.
-          </p>
         </div>
       </section>
 
@@ -120,7 +121,7 @@ export default function ContactPage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Why Send Your RFQ</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)]">
-              Why Send Your RFQ to Arktech Mold?
+              Why Product Companies Choose Arktech Mold
             </h2>
             <p className="mt-4 leading-7 text-[var(--muted)]">
               Our team reviews upload CAD files and project requirements with practical engineering focus before preparing an export injection mold RFQ or manufacturing quote.
@@ -136,25 +137,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--brand-dark)] py-14 text-white">
-        <div className="container-page grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-[#f4c7ca]">Start Your Export Mold RFQ</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight">Start Your Export Mold RFQ</h2>
-            <p className="mt-4 max-w-4xl leading-7 text-white/75">
-              Upload CAD files, drawings, material requirements, expected volumes and delivery region. Our engineering team will review your project and provide practical DFM feedback and quotation details.
-            </p>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[430px]">
-            <Link className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-              Upload CAD for DFM Review
-            </Link>
-            <Link className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/70 px-5 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">
-              Request Manufacturing Quote
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

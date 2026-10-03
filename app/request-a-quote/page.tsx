@@ -21,7 +21,7 @@ export default function RequestQuotePage() {
       <section className="bg-[var(--brand-dark)] py-16 text-white sm:py-20" id="top">
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#f4c7ca]">DFM Engineering Review</p>
-          <h1 className="mt-4 max-w-5xl text-3xl font-semibold leading-tight tracking-[-0.02em] sm:text-4xl lg:text-5xl">
+          <h1 className="internal-page-title mt-4">
             Upload CAD Files for DFM Review, Injection Mold Quotation & Manufacturing Feasibility Analysis
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">

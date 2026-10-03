@@ -24,9 +24,10 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
       telephone: site.phone,
       address: {
         "@type": "PostalAddress",
-        streetAddress: site.company.factoryAddress,
+        streetAddress: site.company.headOffice,
         addressLocality: "Shenzhen",
         addressRegion: "Guangdong",
+        postalCode: "518107",
         addressCountry: "CN"
       }
     },
@@ -78,7 +79,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
             </ol>
           </nav>
           <p className="mt-8 text-xs font-bold uppercase tracking-[0.16em] text-[#f1c5c5]">Engineering & Manufacturing in China</p>
-          <h1 className="mt-4 max-w-5xl text-4xl font-semibold leading-tight tracking-[-0.02em] sm:text-5xl">{page.h1}</h1>
+          <h1 className="internal-page-title mt-4">{page.h1}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85">{page.subtitle}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:brightness-90" href="/request-a-quote">

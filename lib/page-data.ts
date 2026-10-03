@@ -370,6 +370,21 @@ export const servicePages: DetailPageData[] = [
     ]
   },
   {
+    slug: "injection-molding-production-options",
+    title: "Injection Molding Production Options",
+    description:
+      "Prototype, low-volume and mass-production injection molding paths with tooling, DFM, inspection, secondary operations and assembly support.",
+    eyebrow: "Production Options",
+    heroTitle: "Injection molding from prototype to mass production.",
+    heroBody:
+      "Choose an injection molding production path based on engineering validation, launch requirements, repeatability and long-term supply needs.",
+    sections: [
+      { title: "Prototype Injection Molding", items: ["Engineering validation", "Functional samples", "Design and assembly checks"] },
+      { title: "Low-Volume Production", items: ["Bridge and pilot production", "Market launch", "Controlled repeatability"] },
+      { title: "Mass Production", items: ["Stable repeat production", "Process control", "Recurring delivery"] }
+    ]
+  },
+  {
     slug: "die-casting-mold",
     title: "Die Casting Mold Manufacturing",
     description:
@@ -1951,6 +1966,78 @@ export const caseStudyPages: CaseStudyData[] = [
       { label: "Die Casting Mold Manufacturing", href: "/services/die-casting-mold" },
       { label: "Industrial Automation Components", href: "/industries/industrial-automation" },
       { label: "CNC Metal Parts", href: "/services/cnc-metal-parts" }
+    ]
+  },
+  {
+    slug: "two-shot-2k-injection-mold-tooling",
+    title: "Two-Shot 2K Injection Mold Tooling Case Study",
+    description: "A real Arktech two-shot injection mold project showing first-shot and second-shot tooling for an integrated multi-material light-cover component.",
+    projectName: "Two-Shot Light Cover Injection Mold",
+    customerType: "Confidential OEM Program",
+    region: "Confidential",
+    productCategory: "Multi-material plastic component",
+    serviceScope: ["Two-shot mold engineering", "Injection mold manufacturing", "First-shot and second-shot coordination", "Tooling validation"],
+    challenge: [
+      "The component required coordinated first-shot and second-shot geometry.",
+      "The two tools needed repeatable alignment between the first molded substrate and the second-shot feature.",
+      "Visible surfaces required tooling and sampling review across both molding stages."
+    ],
+    solution: [
+      "Arktech engineered the first-shot and second-shot mold relationship as one tooling system.",
+      "Part transfer, locating features and the second-shot interface were reviewed before tooling approval.",
+      "The documented project image shows both molds and the resulting two-stage component structure."
+    ],
+    manufacturingScope: [
+      "Mold type: coordinated two-shot / 2K tooling",
+      "Material: customer-specified two-material application",
+      "Focus: first-shot and second-shot alignment",
+      "Validation: interface, appearance and part-release review"
+    ],
+    result: [
+      "The project established a controlled relationship between both tooling stages.",
+      "The molded component provided physical evidence for interface and appearance review.",
+      "Tooling records remained linked to the two-shot manufacturing sequence."
+    ],
+    related: [
+      { label: "Two-Shot / 2K Molds", href: "/tooling-examples/two-shot-2k-molds" },
+      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Transparent Plastic Molding", href: "/resources/injection-molding/transparent-plastic-molding" }
+    ]
+  },
+  {
+    slug: "unscrewing-threaded-component-mold",
+    title: "Unscrewing Injection Mold Case Study",
+    description: "A real Arktech motor-driven unscrewing mold project for molded components with internal threaded features.",
+    projectName: "Motor-Driven Unscrewing Mold",
+    customerType: "Confidential OEM Program",
+    region: "Confidential",
+    productCategory: "Threaded plastic component",
+    serviceScope: ["DFM review", "Unscrewing mold engineering", "Injection mold manufacturing", "Mechanical validation"],
+    challenge: [
+      "The internal thread prevented straight-line part ejection.",
+      "The mold required controlled rotation and release before the next molding cycle.",
+      "The unscrewing mechanism needed to remain accessible for production maintenance."
+    ],
+    solution: [
+      "Arktech used a motor-driven unscrewing concept to release the internal threaded geometry.",
+      "The mold layout coordinated the rotating cores with guidance, actuation and the normal mold cycle.",
+      "The documented project image shows the mold, drive system and molded threaded components."
+    ],
+    manufacturingScope: [
+      "Mold type: motor-driven unscrewing injection mold",
+      "Material: customer-specified thermoplastic",
+      "Focus: controlled threaded-core release",
+      "Validation: mold movement, release and molded-thread review"
+    ],
+    result: [
+      "The tooling solution enabled automated release of the internal threaded geometry.",
+      "The molded components provided physical evidence for thread and release review.",
+      "The mechanism and service points were documented for the tooling program."
+    ],
+    related: [
+      { label: "Unscrewing Molds", href: "/tooling-examples/unscrewing-molds" },
+      { label: "Undercut Design", href: "/resources/injection-molding/undercut-design" },
+      { label: "Mold Design Guidelines", href: "/resources/mold-design-guidelines" }
     ]
   }
 ];
