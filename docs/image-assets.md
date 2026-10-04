@@ -2,6 +2,27 @@
 
 This is the source of truth for website image selection. Paths are relative to `public` and must be referenced in code as `/images/...`.
 
+## Homepage Commercial Flow
+
+The optimized Homepage reuses approved first-party and existing local assets; it does not add stock, competitor or newly generated imagery. Below-fold videos use muted lazy autoplay with documented poster fallbacks.
+
+| Homepage use | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Hero | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Export injection molds manufactured by Arktech for global production | Existing approved Arktech hero image; priority-loaded above the fold |
+| Featured project — automotive multi-cavity tooling | `/images/case-studies/automotive-multi-cavity-mold.webp` | Multi-cavity injection mold and molded automotive sensor housings | Existing real Arktech case-study image; linked to the verified project page |
+| Featured project — two-shot light cover | `/images/case-studies/two-shot-light-cover.webp` | First-shot and second-shot injection molds with molded light cover | Existing real Arktech case-study image; linked to the verified project page |
+| Featured project — unscrewing tooling | `/images/case-studies/unscrewing-mold.webp` | Motor-driven unscrewing injection mold and threaded molded components | Existing real Arktech case-study image; linked to the verified project page |
+| DFM engineering proof | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | DFM report for injection mold design review | Existing anonymized real engineering report; shown with `object-fit: contain` |
+| Injection mold manufacturing video | `/videos/injection-mold-manufacturing/mold-manufacturing.mp4` | Arktech injection mold manufacturing process | Optimized first-party H.264 video; lazy-loaded below the fold |
+| Injection mold manufacturing poster | `/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp` | Injection mold fitting and assembly at Arktech | Optimized first-party video frame; loading and reduced-motion fallback |
+| Toolroom capabilities video | `/videos/injection-mold-manufacturing/arktech-mold-toolroom.mp4` | Arktech mold manufacturing and toolroom process | Optimized first-party H.264 video; lazy-loaded below the fold |
+| Toolroom capabilities poster | `/images/injection-mold-manufacturing/arktech-toolroom-video-poster.webp` | Mold fitting and assembly in the Arktech toolroom | Optimized first-party video frame; loading and reduced-motion fallback |
+| Validation evidence | `/images/quality/dimensional-inspection-report-anonymized.webp` | Dimensional inspection report from injection mold trial validation | Existing anonymized real inspection report; active |
+| Validation parameters | `/images/Mold trail/Injection parameter.png` | Injection molding parameter record from mold trial | Existing real Arktech parameter record; active |
+| Plastic injection molding video | `/videos/injection-molding-production.mp4` | Plastic injection molding production at Arktech | Existing real Arktech production video; reused through the approved production-video component |
+
+The six Homepage Injection Mold Capability cards reuse the approved Mold Type assets documented below. The six Homepage Industries cards reuse the approved Homepage Industries assets documented below.
+
 ## Who We Serve
 
 | Content | Approved asset | Recommended alt text | Source/status |
