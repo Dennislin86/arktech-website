@@ -19,7 +19,7 @@ export type CaseStudyProfile = (typeof caseStudyPages)[number] & {
 const profiles: Record<string, Omit<CaseStudyProfile, keyof (typeof caseStudyPages)[number]>> = {
   "automotive-sensor-housing-tooling": {
     industry: "Automotive & EV",
-    industryLink: "/industries/new-energy",
+    industryLink: "/industries/automotive",
     image: "/images/case-studies/automotive-multi-cavity-mold.webp",
     imageAlt: "Multi-cavity injection mold and molded automotive sensor housings",
     featured: true,
@@ -52,7 +52,7 @@ const profiles: Record<string, Omit<CaseStudyProfile, keyof (typeof caseStudyPag
   },
   "smart-home-plastic-housing": {
     industry: "Smart Home & IoT",
-    industryLink: "/industries/smart-home",
+    industryLink: "/industries/smart-home-iot",
     image: "/images/case-studies/ihgs-housing.webp",
     imageAlt: "Smart home device housing components and assembly concept",
     featured: true,

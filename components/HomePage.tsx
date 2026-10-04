@@ -102,32 +102,32 @@ const moldCapabilities = [
 
 const industries = [
   {
-    title: "Robotics & Automation",
-    body: "Housings, sensor interfaces and functional molded components.",
-    image: "/images/industries/robotics-automation.png",
-    alt: "Robotics housings and automation components supported by injection molding",
-    href: "/industries/robotics"
+    title: "Industrial Automation",
+    body: "Controller housings, sensor interfaces and functional molded components.",
+    image: "/images/industries/Industrial-parts.jpg",
+    alt: "Industrial automation housings sensors controllers and functional components",
+    href: "/industries/industrial-automation"
   },
   {
     title: "Automotive Components",
     body: "Interior, control and functional plastic components.",
     image: "/images/industries/Automotive-Components.png",
     alt: "Automotive interior and functional molded plastic components",
-    href: "/industries/automotive-components"
+    href: "/industries/automotive"
   },
   {
     title: "Smart Home & IoT",
     body: "Connected-device housings, sensors and control enclosures.",
     image: "/images/industries/smart-device-housings.png",
     alt: "Smart home and IoT device housings and sensor enclosures",
-    href: "/industries/smart-home"
+    href: "/industries/smart-home-iot"
   },
   {
-    title: "Home Appliance",
+    title: "Home Appliances",
     body: "Appliance housings, control panels and functional parts.",
     image: "/images/industries/home-appliance.png",
     alt: "Home appliance housings control panels and molded components",
-    href: "/industries/home-appliance"
+    href: "/industries/home-appliances"
   },
   {
     title: "Pet Tech Products",
@@ -142,6 +142,13 @@ const industries = [
     image: "/images/industries/consumer-electronics-enclosures.png",
     alt: "Consumer electronics enclosures and functional plastic components",
     href: "/industries/consumer-electronics"
+  },
+  {
+    title: "Medical Device Components",
+    body: "Medical equipment housings, enclosures and functional molded parts.",
+    image: "/images/industries/medial-industry.webp",
+    alt: "Medical equipment with molded plastic housings and functional components",
+    href: "/industries/medical-devices"
   }
 ] as const;
 

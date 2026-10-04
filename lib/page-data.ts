@@ -1025,8 +1025,8 @@ const commonToolingServices = [
 ];
 
 const commonToolingIndustries = [
-  { label: "Robotics", href: "/industries/robotics" },
-  { label: "Medical & Healthcare Devices", href: "/industries/medical-healthcare-devices" },
+  { label: "Automotive Components", href: "/industries/automotive" },
+  { label: "Medical Devices", href: "/industries/medical-devices" },
   { label: "Industrial Automation", href: "/industries/industrial-automation" }
 ];
 
@@ -1924,7 +1924,7 @@ export const caseStudyPages: CaseStudyData[] = [
       "The buyer had a practical path from tooling to molded production parts."
     ],
     related: [
-      { label: "Smart Home Product Manufacturing", href: "/industries/smart-home" },
+      { label: "Smart Home Product Manufacturing", href: "/industries/smart-home-iot" },
       { label: "Plastic Housing Manufacturing", href: "/services/plastic-housing-manufacturing" },
       { label: "For OEM Product Companies", href: "/solutions/oem-product-companies" }
     ]

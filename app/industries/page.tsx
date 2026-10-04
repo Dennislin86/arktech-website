@@ -21,7 +21,7 @@ const industries: Industry[] = [
     tags: ["Appearance Control", "Precision Tooling", "Assembly Features"],
     image: "/images/industries/smart-device-housings.png",
     alt: "Smart home cameras hubs sensors and connected devices with molded plastic housings",
-    href: "/industries/smart-home",
+    href: "/industries/smart-home-iot",
     cta: "Explore Smart Home & IoT"
   },
   {
@@ -30,7 +30,7 @@ const industries: Industry[] = [
     tags: ["Housing Tooling", "Warpage Review", "Repeat Production"],
     image: "/images/industries/home-appliance.png",
     alt: "Home appliances with molded plastic housings controls and functional components in a kitchen",
-    href: "/industries/home-appliance",
+    href: "/industries/home-appliances",
     cta: "Explore Home Appliances"
   },
   {
@@ -57,7 +57,7 @@ const industries: Industry[] = [
     tags: ["Texture & Appearance", "Dimensional Control", "Production Tooling"],
     image: "/images/industries/Automotive-Components.png",
     alt: "Automotive interior controls panels and functional molded plastic components",
-    href: "/industries/automotive-components",
+    href: "/industries/automotive",
     cta: "Explore Automotive Components"
   },
   {

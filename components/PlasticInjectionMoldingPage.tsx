@@ -289,11 +289,11 @@ const secondaryOperationGroups = [
 
 const applicationIndustries = [
   {
-    title: "Robotics",
-    application: "Robot housings · Sensor enclosures",
-    image: "/images/industries/robotics-automation.png",
-    alt: "Injection molded housings and enclosures for robotics applications",
-    href: "/industries/robotics"
+    title: "Industrial Automation",
+    application: "Controller housings · Sensor enclosures",
+    image: "/images/industries/Industrial-parts.jpg",
+    alt: "Injection molded housings and enclosures for industrial automation",
+    href: "/industries/industrial-automation"
   },
   {
     title: "Medical & Healthcare Devices",
@@ -306,27 +306,29 @@ const applicationIndustries = [
     title: "Automotive Components",
     application: "Interior parts · Control housings",
     image: "/images/industries/Automotive-Components.png",
-    alt: "Injection molded interior components and control housings for automotive applications"
+    alt: "Injection molded interior components and control housings for automotive applications",
+    href: "/industries/automotive"
   },
   {
     title: "Smart Home & IoT",
     application: "Device housings · Sensor enclosures",
     image: "/images/industries/smart-device-housings.png",
     alt: "Injection molded device housings and sensor enclosures for smart home products",
-    href: "/industries/smart-home"
+    href: "/industries/smart-home-iot"
   },
   {
     title: "Energy Storage & EV Charging",
     application: "Charging housings · Connectors",
     image: "/images/industries/autimotive-ev.webp",
     alt: "Injection molded housings and connector components for EV charging applications",
-    href: "/industries/new-energy"
+    href: "/industries/automotive"
   },
   {
     title: "Home Appliance",
     application: "Appliance housings · Control panels",
     image: "/images/industries/home-appliance.png",
-    alt: "Injection molded housings and control panels for home appliance products"
+    alt: "Injection molded housings and control panels for home appliance products",
+    href: "/industries/home-appliances"
   },
   {
     title: "Pet Tech Products",
@@ -339,7 +341,8 @@ const applicationIndustries = [
     title: "Consumer Electronics",
     application: "Electronic enclosures · Insert-molded parts",
     image: "/images/industries/consumer-electronics-enclosures.png",
-    alt: "Injection molded enclosures and insert-molded parts for consumer electronics"
+    alt: "Injection molded enclosures and insert-molded parts for consumer electronics",
+    href: "/industries/consumer-electronics"
   }
 ];
 

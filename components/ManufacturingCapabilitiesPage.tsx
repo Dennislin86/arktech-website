@@ -116,11 +116,12 @@ const processStages = [
 ];
 
 const industries = [
-  { title: "Robotics", description: "Tooling and molded components for robot housings, sensors and automation products.", image: "/images/industries/robotics-automation.png", alt: "Robotics housings and automation components supported by injection tooling", href: "/industries/robotics" },
+  { title: "Industrial Automation", description: "Tooling and molded components for controllers, sensors and automation products.", image: "/images/industries/Industrial-parts.jpg", alt: "Industrial automation housings sensors and functional components", href: "/industries/industrial-automation" },
   { title: "Medical & Healthcare Devices", description: "Precision tooling and molded housings for medical and diagnostic product applications.", image: "/images/industries/medial-industry.webp", alt: "Medical device housings and precision molded components", href: "/industries/medical-devices" },
-  { title: "Automotive Components", description: "Tooling and molded parts for interiors, controls and functional automotive applications.", image: "/images/industries/Automotive-Components.png", alt: "Automotive control and functional injection molded components", href: "/industries/automotive-components" },
-  { title: "Smart Home & IoT", description: "Molded housings and enclosures for sensors, hubs and connected devices.", image: "/images/industries/smart-device-housings.png", alt: "Smart home device housings and connected product enclosures", href: "/industries/smart-home" },
-  { title: "Home Appliance", description: "Tooling and molded housings, panels and functional plastic parts for appliances.", image: "/images/industries/home-appliance.png", alt: "Home appliance housings and molded functional plastic parts", href: "/industries/home-appliance" },
+  { title: "Automotive Components", description: "Tooling and molded parts for interiors, controls and functional automotive applications.", image: "/images/industries/Automotive-Components.png", alt: "Automotive control and functional injection molded components", href: "/industries/automotive" },
+  { title: "Smart Home & IoT", description: "Molded housings and enclosures for sensors, hubs and connected devices.", image: "/images/industries/smart-device-housings.png", alt: "Smart home device housings and connected product enclosures", href: "/industries/smart-home-iot" },
+  { title: "Home Appliances", description: "Tooling and molded housings, panels and functional plastic parts for appliances.", image: "/images/industries/home-appliance.png", alt: "Home appliance housings and molded functional plastic parts", href: "/industries/home-appliances" },
+  { title: "Pet Tech Products", description: "Molded housings and functional parts for connected pet-care products.", image: "/images/industries/pet-lifestyle-product-parts.png", alt: "Smart pet product housings and molded plastic components", href: "/industries/pet-tech" },
   { title: "Consumer Electronics", description: "Injection molded enclosures and structural components for electronic products.", image: "/images/industries/consumer-electronics-enclosures.png", alt: "Consumer electronics enclosures and molded plastic components", href: "/industries/consumer-electronics" }
 ];
 

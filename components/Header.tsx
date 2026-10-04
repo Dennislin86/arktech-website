@@ -122,14 +122,13 @@ const navigation: NavigationItem[] = [
       {
         title: "Industries We Serve",
         links: [
-          { label: "Robotics", href: "/industries/robotics" },
-          { label: "Medical & Healthcare Devices", href: "/industries/medical-devices" },
-          { label: "Automotive Components", href: "/industries/automotive-components" },
-          { label: "Smart Home & IoT", href: "/industries/smart-home" },
-          { label: "Energy Storage & EV Charging", href: "/industries/new-energy" },
-          { label: "Home Appliance", href: "/industries/home-appliance" },
+          { label: "Smart Home & IoT", href: "/industries/smart-home-iot" },
+          { label: "Home Appliances", href: "/industries/home-appliances" },
+          { label: "Consumer Electronics", href: "/industries/consumer-electronics" },
           { label: "Pet Tech Products", href: "/industries/pet-tech" },
-          { label: "Consumer Electronics", href: "/industries/consumer-electronics" }
+          { label: "Automotive Components", href: "/industries/automotive" },
+          { label: "Industrial Automation", href: "/industries/industrial-automation" },
+          { label: "Medical Device Components", href: "/industries/medical-devices" }
         ]
       }
     ],

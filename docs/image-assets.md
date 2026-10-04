@@ -487,13 +487,27 @@ The first-screen audit reuses approved local media only. No source image or vide
 | Plastic Injection Molding | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Existing approved real production frame; active as the full-width part-production background |
 | Resources hub | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | Existing approved Arktech DFM and mold-CAD engineering visual; active as the full-width editorial background |
 | DFM Engineering | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | Existing anonymized engineering review visual; active |
-| Industry child pages | Per-page `heroImage` values in `lib/industry-landing-pages.ts` | Existing approved industry application media; active across all eight primary industry routes |
+| Industry child pages | Per-page `heroImage` values in `lib/industry-landing-pages.ts` | Existing approved industry application media; active across the seven canonical industry routes |
 | Generic capability and mold-type child pages | Approved slug mapping from `lib/images.ts` | Existing approved local media used only when the mapped file exists |
 | Company, quality, materials, solutions and resource hubs | Existing approved page-specific assets in each `PageHero` call | Added to previously text-only first screens without creating new assets |
 
 Known missing source media remain intentionally unassigned for the gas-assisted injection mold, thermoset mold and die-casting tooling detail heroes. These pages retain a text-led hero until a real approved project asset is supplied.
 
 The pre-launch asset audit confirmed that dedicated gas-assisted injection mold and thermoset mold gallery images are not present in the repository. Their invalid image references were removed rather than replaced with unrelated media. The large-component mold reference now uses the exact existing case-sensitive filename `/images/mold-types/large-component-molds.JPG`, and the die-casting tooling gallery reuses the approved existing `/images/capabilities/die-casting.webp` and `/images/capabilities/die-casting.png` assets.
+
+## Canonical Industry Child Pages (2026-10-04)
+
+The seven canonical industry pages reuse approved local media and differentiated real-project evidence where available. No new image file was created or downloaded for this update.
+
+| Industry page | Hero / application media | Selected evidence | Source/status |
+| --- | --- | --- | --- |
+| Smart Home & IoT | `/images/industries/smart-device-housings.png`, `/images/industries/smart-iot-device-housings.jpg` | `/images/case-studies/smart-home-iot-project.webp` | Approved industry media plus real existing Smart Home housing project evidence |
+| Home Appliances | `/images/industries/home-appliance.png`, `/images/industries/home-appliance-smart-home-components.webp` | `/images/industries/home-appliance-smart-home-components.webp` | Approved application media; `needsAssetReplacement` is recorded in page data until a verified Arktech appliance project image is approved |
+| Consumer Electronics | `/images/industries/consumer-electronics-enclosures.png`, `/images/industries/consumer-electronics-enclosures.webp` | `/images/case-studies/two-shot-light-cover.webp` | Approved application media plus real existing two-shot tooling project evidence |
+| Pet Tech Products | `/images/industries/pet-lifestyle-product-parts.png`, `/images/industries/pet-lifestyle-product-parts.webp` | `/images/industries/pet-lifestyle-product-parts.webp` | Approved application media; `needsAssetReplacement` is recorded in page data until a verified Arktech pet-tech project image is approved |
+| Automotive Components | `/images/industries/Automotive-Components.png`, `/images/industries/automotive-ev-components.webp` | `/images/case-studies/automotive-multi-cavity-mold.webp` | Approved industry media plus real existing automotive sensor-housing tooling evidence |
+| Industrial Automation | `/images/industries/Industrial-parts.jpg`, `/images/industries/industrial-parts.webp` | `/images/case-studies/fan-blade-mold.webp` | Approved industrial component media plus real complex fan-blade mold evidence |
+| Medical Device Components | `/images/industries/medial-industry.webp`, `/images/industries/medical-healthcare-device-parts.webp` | `/images/case-studies/medical-education-device.webp` | Approved medical application media plus real existing medical education device project evidence; no unverified certification claim |
 
 ## Maintenance notes
 

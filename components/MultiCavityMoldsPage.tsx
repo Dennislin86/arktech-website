@@ -51,8 +51,8 @@ const applications = [
   ["Connector Components", "Functional connector parts requiring repeatable interfaces across each cavity.", null],
   ["Electronic Housings", "Compact housings and covers produced in repeat cycles for electronic assemblies.", null],
   ["Medical / Diagnostic Plastic Components", "Molded housings and functional parts reviewed against project-specific product requirements.", "/industries/medical-devices"],
-  ["Smart Device Parts", "Enclosures, sensor housings and repeated components for connected products.", "/industries/smart-home"],
-  ["Repeated Functional Components", "Production parts with critical fit, assembly or functional interfaces.", "/industries/robotics"]
+  ["Smart Device Parts", "Enclosures, sensor housings and repeated components for connected products.", "/industries/smart-home-iot"],
+  ["Repeated Functional Components", "Production parts with critical fit, assembly or functional interfaces.", "/industries/industrial-automation"]
 ] as const;
 
 const designFeatures = [
@@ -71,10 +71,10 @@ const validationSteps = [
 ] as const;
 
 const industries = [
-  ["Robotics & Automation", "Repeated housings, sensor parts and functional automation components.", "/industries/robotics"],
+  ["Industrial Automation", "Repeated housings, sensor parts and functional automation components.", "/industries/industrial-automation"],
   ["Medical & Healthcare Devices", "Diagnostic housings and functional plastic components reviewed to project requirements.", "/industries/medical-devices"],
   ["Automotive Components", "Clips, connectors, controls and repeated functional components.", null],
-  ["Smart Home & IoT", "Sensor housings, hubs and connected-device enclosures.", "/industries/smart-home"],
+  ["Smart Home & IoT", "Sensor housings, hubs and connected-device enclosures.", "/industries/smart-home-iot"],
   ["Consumer Electronics", "Electronic enclosures and repeatable internal structural parts.", null],
   ["Home Appliance", "Housings, control parts and repeated functional components.", null]
 ] as const;

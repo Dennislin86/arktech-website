@@ -49,11 +49,11 @@ const exportItems = [
 ] as const;
 
 const industries = [
-  ["Smart Home & IoT", "/industries/smart-home"],
-  ["Home Appliances", "/industries/home-appliance"],
+  ["Smart Home & IoT", "/industries/smart-home-iot"],
+  ["Home Appliances", "/industries/home-appliances"],
   ["Consumer Electronics", "/industries/consumer-electronics"],
   ["Pet Tech Products", "/industries/pet-tech"],
-  ["Automotive Components", "/industries/automotive-components"],
+  ["Automotive Components", "/industries/automotive"],
   ["Industrial Automation", "/industries/industrial-automation"],
   ["Medical Devices", "/industries/medical-devices"]
 ] as const;

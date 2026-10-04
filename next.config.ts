@@ -131,6 +131,36 @@ const nextConfig: NextConfig = {
         source: "/industries/medical-healthcare-devices",
         destination: "/industries/medical-devices",
         permanent: true
+      },
+      {
+        source: "/industries/smart-home",
+        destination: "/industries/smart-home-iot",
+        permanent: true
+      },
+      {
+        source: "/industries/home-appliance",
+        destination: "/industries/home-appliances",
+        permanent: true
+      },
+      {
+        source: "/industries/automotive-components",
+        destination: "/industries/automotive",
+        permanent: true
+      },
+      {
+        source: "/industries/robotics",
+        destination: "/industries/industrial-automation",
+        permanent: true
+      },
+      {
+        source: "/industries/new-energy",
+        destination: "/industries",
+        permanent: true
+      },
+      {
+        source: "/industries/outdoor-products",
+        destination: "/industries",
+        permanent: true
       }
     ];
   }

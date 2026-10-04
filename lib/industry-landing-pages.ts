@@ -1,794 +1,226 @@
 export type IndustryItem = readonly [title: string, body: string];
 export type IndustryLinkItem = { title: string; body: string; href: string };
 export type IndustryMoldType = { title: string; body: string; href?: string };
-export type IndustryMaterialGroup = { title: string; body: string; items: string[] };
-export type IndustryProjectExample = { title: string; application: string; focus: string; support: string };
 export type IndustryFaq = readonly [question: string, answer: string];
-
+export type IndustryEvidence = {
+  eyebrow: string; title: string; summary: string; image: string; alt: string;
+  application: string; engineeringFocus: string; validation: string;
+  href?: string; linkLabel?: string;
+};
 export type IndustryLandingPageData = {
-  slug: string;
-  navTitle: string;
-  eyebrow: string;
-  seoTitle: string;
-  metaDescription: string;
-  h1: string;
-  heroCopy: string;
-  heroImage: string;
-  heroAlt: string;
-  applicationImage: string;
-  applicationAlt: string;
-  applicationsEyebrow?: string;
-  applicationsHeading: string;
-  applicationsIntro: string;
-  applications: IndustryItem[];
-  engineeringHeading: string;
-  engineeringIntro: string;
-  engineeringConsiderations: IndustryItem[];
-  capabilityIntro: string;
-  capabilitiesHeading?: string;
-  capabilities: IndustryLinkItem[];
-  extendedManufacturing?: string[];
-  lifecycleIntro: string;
-  lifecycleHeading?: string;
-  lifecycle: IndustryItem[];
-  materialIntro: string;
-  materialsHeading?: string;
-  materials: IndustryMaterialGroup[];
-  qualityIntro: string;
-  qualityHeading?: string;
-  qualityItems: IndustryItem[];
-  moldTypesIntro: string;
-  moldTypes: IndustryMoldType[];
-  examplesIntro: string;
-  examplesHeading?: string;
-  examples: IndustryProjectExample[];
-  resources: IndustryLinkItem[];
-  relatedCapabilities: IndustryLinkItem[];
-  faqs: IndustryFaq[];
-  ctaEyebrow: string;
-  ctaHeading: string;
-  ctaCopy: string;
+  slug: string; navTitle: string; eyebrow: string; seoTitle: string; metaDescription: string;
+  h1: string; heroCopy: string; heroImage: string; heroAlt: string;
+  heroPosition?: "center" | "right" | "top"; secondaryCta: string;
+  applicationImage: string; applicationAlt: string; applicationsHeading: string;
+  applicationsIntro: string; applications: IndustryItem[];
+  engineeringHeading: string; engineeringIntro: string; engineeringConsiderations: IndustryItem[];
+  toolingHeading: string; toolingIntro: string; toolingConsiderations: IndustryItem[];
+  moldTypesIntro: string; moldTypes: IndustryMoldType[]; evidence: IndustryEvidence;
+  processIntro: string; validationHeading: string; validationIntro: string;
+  validationItems: IndustryItem[]; resources: IndustryLinkItem[];
+  relatedCapabilities: IndustryLinkItem[]; faqs: IndustryFaq[];
+  ctaEyebrow: string; ctaHeading: string; ctaCopy: string;
+  needsAssetReplacement?: boolean; assetReplacementNote?: string;
 };
 
-const related = (industry: string): IndustryLinkItem[] => [
-  { title: "Injection Mold Manufacturing", body: `Tooling development for ${industry} programs.`, href: "/services/injection-mold-manufacturing" },
-  { title: "Plastic Injection Molding", body: `Molded-part supply from samples to repeat production.`, href: "/services/plastic-injection-molding" },
-  { title: "DFM Engineering", body: `Resolve geometry and tooling risks before steel release.`, href: "/injection-molding-engineering" },
-  { title: "Mold Trial & Validation", body: "Review samples, process conditions and improvement actions before release.", href: "/injection-molds/mold-trial-validation" },
-  { title: "Quality & Documentation", body: "Connect inspection evidence with tooling approval and export delivery.", href: "/company/quality-documentation" }
-];
-
-const lifecycle = (noun: string): IndustryItem[] => [
-  ["CAD & DFM Review", `Review ${noun} geometry, interfaces, resin targets and production requirements.`],
-  ["Prototype / Engineering Samples", "Build early parts or molded samples for fit, function and design learning."],
-  ["Production Tooling", "Release mold design and manufacture tooling around approved project requirements."],
-  ["Mold Trial & Validation", "Establish a molding window, inspect samples and manage engineering corrections."],
-  ["Injection Production", "Run approved process conditions for low-volume or repeat molded-part supply."],
-  ["Secondary Operations & Delivery", "Complete required finishing, assembly, packaging and shipment preparation."]
-];
-
 const mold = {
-  precision: { title: "Precision Injection Molds", body: "Controlled tooling for repeatable dimensions, alignment features and stable assembly interfaces.", href: "/injection-molds/precision-injection-molds" },
-  complex: { title: "Complex Injection Molds", body: "Tooling with coordinated sliders, lifters, shutoffs or other geometry-driven mold actions.", href: "/injection-molds/complex-injection-molds" },
-  multi: { title: "Multi-Cavity Injection Molds", body: "Balanced multi-cavity tooling for repeat production of consistent components.", href: "/injection-molds/multi-cavity-molds" },
-  hot: { title: "Hot Runner Molds", body: "Runner-system strategies for production programs where material, gate and volume support the approach.", href: "/injection-molds/hot-runner-molds" },
-  insert: { title: "Insert Molding Tools", body: "Tooling for molded components with integrated metal or functional inserts.", href: "/injection-molds/insert-molding-tools" },
-  over: { title: "Overmolding Tools", body: "Tooling for integrated soft-touch, sealing or multi-material product features.", href: "/injection-molds/overmolding-tools" },
-  twoK: { title: "Two-Shot / 2K Molds", body: "Multi-material tooling for integrated interfaces, seals or product differentiation.", href: "/injection-molds/two-shot-2k-molds" },
-  large: { title: "Large Injection Molds", body: "Large-format tooling for structural housings, covers and visible panels.", href: "/injection-molds/large-injection-molds" }
+  precision: { title: "Precision Injection Molds", body: "Controlled tooling for repeatable dimensions, assembly datums and stable production.", href: "/injection-molds/precision-injection-molds" },
+  complex: { title: "Complex Injection Molds", body: "Coordinated sliders, lifters and shutoffs for difficult release geometry.", href: "/injection-molds/complex-injection-molds" },
+  multi: { title: "Multi-Cavity Injection Molds", body: "Balanced cavitation for repeated components and production output.", href: "/injection-molds/multi-cavity-molds" },
+  hot: { title: "Hot Runner Molds", body: "Runner concepts reviewed around resin, gate location, appearance and volume.", href: "/injection-molds/hot-runner-molds" },
+  insert: { title: "Insert Molding Tools", body: "Tooling for molded parts with integrated metal or functional inserts.", href: "/injection-molds/insert-molding-tools" },
+  over: { title: "Overmolding Tools", body: "Tooling for integrated grip, protection, sealing or multi-material features.", href: "/injection-molds/overmolding-tools" },
+  twoK: { title: "Two-Shot / 2K Molds", body: "Multi-material tooling for integrated interfaces, controls and visible features.", href: "/injection-molds/two-shot-2k-molds" },
+  large: { title: "Large Injection Molds", body: "Large-format tooling for structural housings, covers and visible panels.", href: "/injection-molds/large-injection-molds" },
+  unscrewing: { title: "Unscrewing Molds", body: "Mechanically released tooling for molded threads and rotational undercuts.", href: "/injection-molds/unscrewing-molds" }
 } satisfies Record<string, IndustryMoldType>;
 
-const baseResources: IndustryLinkItem[] = [
-  { title: "DFM Guide", body: "Prepare molded-part geometry for a practical tooling review.", href: "/resources/dfm-guide" },
-  { title: "Material Selection Guide", body: "Compare resin families against product and manufacturing requirements.", href: "/resources/material-selection-guide" },
-  { title: "Mold Design Guidelines", body: "Understand mold structure, actions, runner choices and export-tool details.", href: "/resources/mold-design-guidelines" },
-  { title: "Wall Thickness Guidelines", body: "Review walls, transitions and local mass before tooling release.", href: "/resources/injection-molding/wall-thickness-guidelines" }
+const caps = (industry: string): IndustryLinkItem[] => [
+  { title: "Injection Mold Manufacturing", body: `Export tooling developed around ${industry} product, machine and validation requirements.`, href: "/services/injection-mold-manufacturing" },
+  { title: "Plastic Injection Molding", body: "Engineering samples, low-volume builds and repeat molded-part supply after approval.", href: "/services/plastic-injection-molding" },
+  { title: "DFM & Injection Molding Engineering", body: "Review geometry, material intent, assembly interfaces and tooling risks before release.", href: "/injection-molding-engineering" },
+  { title: "Mold Trial & Validation", body: "Document samples, process conditions, inspection results and correction actions.", href: "/injection-molds/mold-trial-validation" }
 ];
+
+const resource = {
+  dfm: { title: "DFM Guide", body: "Prepare geometry, requirements and risk items before tooling release.", href: "/resources/dfm-guide" },
+  material: { title: "Material Selection Guide", body: "Compare resin families against product and manufacturing requirements.", href: "/resources/material-selection-guide" },
+  ribs: { title: "Ribs & Bosses Design", body: "Plan stiffness and fastening features without unnecessary local mass.", href: "/resources/injection-molding/ribs-bosses-design" },
+  draft: { title: "Draft Angle Guidelines", body: "Coordinate part release with depth, texture and visible surfaces.", href: "/resources/injection-molding/draft-angle-guidelines" },
+  warpage: { title: "Warpage: Causes & Solutions", body: "Connect geometry, shrinkage, gate direction and cooling to distortion.", href: "/resources/injection-molding/warpage-causes-solutions" },
+  transparent: { title: "Transparent Plastic Molding", body: "Review resin, polish, flow and visual criteria for clear parts.", href: "/resources/injection-molding/transparent-plastic-molding" },
+  engineering: { title: "Engineering Plastics Guide", body: "Review reinforced and performance resins using the exact supplier grade.", href: "/resources/injection-molding/engineering-plastics-guide" },
+  slider: { title: "Slider vs Lifter", body: "Compare release mechanisms for external and internal undercuts.", href: "/resources/injection-molds/slider-vs-lifter" },
+  multi: { title: "Multi-Cavity vs Family Mold", body: "Compare cavitation strategies against balance, demand and part mix.", href: "/resources/injection-molds/multi-cavity-vs-family-mold" }
+} satisfies Record<string, IndustryLinkItem>;
+
+export const industryProcess = [
+  ["01", "Product & RFQ Review"], ["02", "DFM & Mold Concept"],
+  ["03", "Mold Design & Approval"], ["04", "Tooling & Mold Trial"],
+  ["05", "Sample Validation"], ["06", "Production & Delivery"]
+] as const;
 
 export const industryLandingPages: IndustryLandingPageData[] = [
   {
-    slug: "robotics",
-    navTitle: "Robotics",
-    eyebrow: "ROBOTICS & AUTOMATION",
-    seoTitle: "Robotics Injection Molding & Injection Molds | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for robotics products, including robot housings, sensor enclosures, AMR / AGV covers and functional plastic components. DFM, tooling, validation and production support.",
-    h1: "Robotics Injection Molding & Tooling",
-    heroCopy: "Arktech supports robotics and automation product teams with DFM engineering, injection mold manufacturing and plastic injection molding for robot housings, sensor enclosures, controller components, AMR / AGV applications and functional plastic parts.",
-    heroImage: "/images/industries/robotics-automation.png",
-    heroAlt: "Industrial robot handling molded robotics components in an automated production environment",
-    applicationImage: "/images/industries/robotics-injection-mold-components.webp",
-    applicationAlt: "Robotics housings sensor modules and precision components for automation applications",
-    applicationsEyebrow: "ROBOTICS APPLICATIONS",
-    applicationsHeading: "Plastic Components for Robotics & Automation Products",
-    applicationsIntro: "Tooling and molding programs are developed around the mechanical, sensing and assembly functions of each robotics product.",
-    applications: [
-      ["Robot Controller Housings", "Protective molded housings with PCB mounts, connector openings and service access."],
-      ["Sensor & Camera Housings", "Compact enclosures with controlled optical, mounting and sealing interfaces."],
-      ["AMR / AGV Covers", "Structural and cosmetic covers for autonomous mobile robot platforms."],
-      ["End-Effector Covers", "Lightweight guards and housings around grippers, drives and tooling interfaces."],
-      ["Joint & Motor Covers", "Molded covers designed around motion, cable routing and repeated assembly."],
-      ["Electronics Enclosures", "Functional enclosures for controls, power electronics and connected modules."]
-    ],
-    engineeringHeading: "Engineering Considerations for Robotics Plastic Components",
-    engineeringIntro: "Robotics plastic parts often combine sensor alignment, cable routing, threaded inserts, repeated motion and tight assembly interfaces. DFM review should consider these requirements together with moldability, material behavior and tooling feasibility.",
-    engineeringConsiderations: [
-      ["Dimensional Stability", "Control geometry that affects axes, mounts and assembly references."],
-      ["Sensor & Camera Alignment", "Protect optical and sensing interfaces from avoidable tooling variation."],
-      ["Tolerance Stack-Up", "Review mating components as a complete assembly rather than isolated parts."],
-      ["Threaded Inserts & Fasteners", "Plan insert location, pull-out needs and service cycles before mold release."],
-      ["Ribs, Bosses & Snap-Fits", "Balance stiffness and assembly function against sink, stress and release."],
-      ["Cable Routing", "Coordinate channels, pass-throughs and connector access with tooling direction."],
-      ["Assembly Interfaces", "Validate fits, gaps and datum relationships across plastic and metal parts."],
-      ["Repeated Motion & Wear", "Consider contact zones and material behavior around moving mechanisms."]
-    ],
-    capabilityIntro: "Four connected capabilities support robotics programs from part review through validated molded-part supply.",
-    capabilitiesHeading: "Core Manufacturing Capabilities for Robotics Products",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Production molds developed around robotics housings, side actions, inserts and the receiving molding-machine requirements.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Engineering samples, low-volume builds and repeat supply for approved robotics components and enclosures.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Review sensor alignment, cable routes, fastening features and mold release before committing to steel.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Trial samples checked around critical interfaces, assembly fit and agreed dimensional requirements.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    extendedManufacturing: ["CNC Machining", "Sheet Metal", "Rapid Prototyping", "Assembly"],
-    lifecycleIntro: "A staged engineering path helps robotics teams move from CAD data to approved tooling and repeat production.",
-    lifecycleHeading: "From Robotics Prototype to Production",
-    lifecycle: lifecycle("robotics component"),
-    materialIntro: "Material selection is based on housing, functional and flexible-feature requirements rather than a single default resin.",
-    materialsHeading: "Materials for Robotics Plastic Components",
-    materials: [
-      { title: "Housings & Covers", body: "Materials for visible and protective enclosures.", items: ["PC/ABS", "ABS", "PC"] },
-      { title: "Functional Components", body: "Materials for stable, wear-related or reinforced features.", items: ["PA / PA-GF", "PBT", "POM"] },
-      { title: "Flexible Interfaces", body: "Elastomer families for grips, protection or compliant interfaces.", items: ["TPU", "TPE"] }
-    ],
-    qualityIntro: "Validation focuses on the interfaces that determine robotics assembly, sensing and repeatable operation.",
-    qualityHeading: "Quality & Validation for Robotics Components",
-    qualityItems: [
-      ["Critical Dimension Verification", "Measure agreed dimensions tied to mounting, motion or assembly."],
-      ["Sensor / Mounting Interfaces", "Review alignment and locating features against drawings and mating parts."],
-      ["Insert Position Verification", "Confirm molded-in or installed insert location and orientation."],
-      ["Assembly & Fit", "Check representative mating parts, gaps and fastening conditions."],
-      ["Cosmetic Inspection", "Review visible surfaces, texture and allowable molding marks."],
-      ["Sample Approval", "Document trial status and agreed correction actions before release."]
-    ],
-    moldTypesIntro: "Robotics programs can require precision, side actions, inserts or production-focused runner and cavitation strategies.",
-    moldTypes: [
-      { ...mold.precision, body: "Controlled tooling for sensor, mounting and motion-related interfaces in robotics assemblies." },
-      { ...mold.complex, body: "Sliders, lifters and coordinated actions for robotics housings with difficult release geometry." },
-      { ...mold.insert, body: "Tools for integrating threaded or functional inserts into robot and automation components." },
-      { ...mold.multi, body: "Balanced cavitation for repeat production of smaller robotics covers or functional parts." },
-      { ...mold.hot, body: "Runner strategies considered for robotics programs with suitable resin, gate and volume needs." }
-    ],
-    examplesIntro: "Representative project scopes show how tooling decisions connect to typical robotics product needs; they are not customer case-study claims.",
-    examplesHeading: "Typical Robotics Tooling Applications",
-    examples: [
-      { title: "Robot Controller Housing Tooling", application: "Controller enclosure", focus: "PCB mounts, connector access and cosmetic surfaces", support: "DFM, mold design, trial and molded samples" },
-      { title: "Sensor Housing Mold & Production", application: "Camera or sensor module", focus: "Optical alignment, sealing interface and insert position", support: "Precision tooling, inspection and repeat molding" },
-      { title: "AMR / AGV Cover Tooling", application: "Mobile robot exterior cover", focus: "Large geometry, assembly datums and visible finish", support: "Tooling, trial corrections and production support" },
-      { title: "End-Effector Housing", application: "Gripper or actuator cover", focus: "Cable routing, fasteners and motion clearance", support: "DFM review, tooling and sample validation" }
-    ],
-    resources: [baseResources[0], baseResources[1], { title: "Slider vs Lifter", body: "Compare tooling actions for robotics undercuts and side features.", href: "/resources/injection-molds/slider-vs-lifter" }, baseResources[2]],
-    relatedCapabilities: related("robotics"),
-    faqs: [
-      ["What plastic parts are commonly injection molded for robotics products?", "Programs can include controller housings, sensor and camera enclosures, AMR or AGV covers, joint covers, end-effector housings and other functional molded parts."],
-      ["What materials are commonly used for robotics housings and components?", "Common candidates include ABS, PC/ABS and PC, while PA, PBT, POM, TPU or TPE may suit specific functional needs. Final selection depends on the application."],
-      ["Can Arktech support threaded inserts and complex undercuts for robotics parts?", "Yes. Insert molding, installed inserts, sliders, lifters and other release strategies can be reviewed around geometry, loading and production needs."],
-      ["Can Arktech manufacture AMR / AGV plastic housings?", "AMR and AGV cover programs can be reviewed for part size, assembly datums, finish, molding equipment and repeat-production requirements."],
-      ["Can you support prototype and low-volume robotics production?", "Arktech can support engineering samples, low-volume builds and repeat injection molding after tooling and sample approval."],
-      ["How are sensor and assembly interfaces inspected?", "The inspection plan can identify critical locating and mounting dimensions, then compare molded samples with the agreed drawing and representative mating parts."],
-      ["Can you build tooling for our existing injection molding machine?", "Tooling can be reviewed against the receiving machine, controller, connection, mold-base and plant standards when those requirements are supplied before design approval."]
-    ],
-    ctaEyebrow: "START YOUR ROBOTICS PROJECT",
-    ctaHeading: "Developing a Robotics Product?",
-    ctaCopy: "Send your CAD files, drawings, material requirements, expected production volume and key assembly interfaces for DFM, tooling and molding review."
-  },
-  {
-    slug: "medical-devices",
-    navTitle: "Medical & Healthcare Devices",
-    eyebrow: "MEDICAL & HEALTHCARE DEVICES",
-    seoTitle: "Medical Device Injection Molding & Injection Molds | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for medical and diagnostic device housings, precision components and assembly interfaces, with DFM, tooling validation and dimensional inspection support.",
-    h1: "Medical Device Molding & Tooling",
-    heroCopy: "Arktech supports medical and diagnostic product teams with DFM review, injection mold manufacturing, sample validation and plastic injection molding for precision housings, covers and functional components.",
-    heroImage: "/images/industries/medial-industry.webp",
-    heroAlt: "Medical and diagnostic equipment with molded plastic housings and functional components",
-    applicationImage: "/images/industries/medical-healthcare-device-parts.webp",
-    applicationAlt: "Medical device housings transparent components and diagnostic equipment parts",
-    applicationsHeading: "Typical Medical and Diagnostic Device Components",
-    applicationsIntro: "Support is focused on moldable product components and documented engineering review without implying device certification or regulatory approval.",
-    applications: [
-      ["Diagnostic Housings", "Molded enclosures for displays, controls and internal electronics."],
-      ["Medical Equipment Enclosures", "Protective covers and panels for equipment assemblies."],
-      ["Cartridge & Device Housings", "Controlled interfaces for replaceable or assembled device modules."],
-      ["Precision Molded Covers", "Covers with repeatable mounting, gap and fastener conditions."],
-      ["Transparent Components", "Clear molded parts where geometry, polish and visual quality require early review."],
-      ["Assembly Interfaces", "Mating features, inserts, snaps and sealing surfaces used in final assembly."]
-    ],
-    engineeringHeading: "Engineering Considerations for Medical Device Components",
-    engineeringIntro: "Part geometry, material intent and inspection requirements are reviewed around the device assembly and intended manufacturing process.",
-    engineeringConsiderations: [
-      ["Critical Dimensions", "Identify drawing features that control assembly, movement or device interfaces."],
-      ["Tight Assembly Interfaces", "Review fits, gaps, snaps and fastening geometry with mating parts."],
-      ["Material Selection", "Align resin choice with product, molding and documented customer requirements."],
-      ["Transparent & Cosmetic Parts", "Plan gates, ejection and surface requirements around visible components."],
-      ["Insert Features", "Coordinate molded-in or installed inserts with loading and inspection needs."],
-      ["Sealing Surfaces", "Protect flatness and contact geometry where a seal or gasket interface exists."],
-      ["Traceable Inspection", "Define which dimensions and sample stages require recorded results."],
-      ["Sample Validation", "Review molded samples and engineering actions before production release."]
-    ],
-    capabilityIntro: "Medical-related component programs connect part review, tooling, molding and sample evidence within an agreed project scope.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Precision tooling built around medical-equipment housings, transparent features and critical assembly geometry.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Controlled sample and production molding for validated diagnostic-device components.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Early review of critical dimensions, sealing contact, inserts and visible surfaces without inferring device approval.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Documented sample review and correction actions tied to the agreed drawing and inspection scope.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "A controlled development path keeps geometry, tooling actions and sample evidence connected from design review to production.",
-    lifecycle: lifecycle("medical-device component"),
-    materialIntro: "Resin selection is reviewed against the customer's specified performance, appearance and manufacturing requirements; Arktech does not infer regulatory suitability.",
-    materials: [
-      { title: "Equipment Housings", body: "Common housing families selected around appearance and structure.", items: ["ABS", "PC/ABS", "PC"] },
-      { title: "Functional Components", body: "Engineering resins considered for stable or wear-related features.", items: ["PBT", "PA", "POM"] },
-      { title: "Clear / Flexible Features", body: "Material families reviewed only where the component requires them.", items: ["Transparent PC", "TPU", "TPE"] }
-    ],
-    qualityIntro: "Inspection planning focuses on agreed product dimensions, interfaces and sample-stage evidence rather than unsupported regulatory claims.",
-    qualityItems: [
-      ["Critical Dimension Verification", "Record agreed product dimensions from the customer drawing."],
-      ["Assembly Interface Inspection", "Check locating, fastening and mating features."],
-      ["Transparent / Cosmetic Review", "Inspect visible surfaces for agreed appearance requirements."],
-      ["Insert Position Verification", "Confirm insert location, orientation and surrounding molded geometry."],
-      ["Sample Comparison", "Compare trial parts against drawings, references and agreed criteria."],
-      ["Dimensional Report", "Prepare measurement results for defined critical dimensions when required."]
-    ],
-    moldTypesIntro: "Medical-device components may need precision tooling, repeat cavitation or controlled insert and runner strategies.",
-    moldTypes: [
-      { ...mold.precision, body: "Tooling for diagnostic housings and components with controlled interfaces and dimensions." },
-      { ...mold.multi, body: "Repeat-cavity tooling for suitable smaller medical-equipment components." },
-      { ...mold.insert, body: "Tools that locate specified inserts within molded equipment housings or functional parts." },
-      { ...mold.hot, body: "Runner systems assessed around material behavior, gate needs and documented production demand." },
-      { ...mold.complex, body: "Mold actions for difficult housing geometry, side openings and release conditions." }
-    ],
-    examplesIntro: "These representative scopes illustrate typical medical-component engineering work and are not presented as certified customer programs.",
-    examples: [
-      { title: "Diagnostic Control Housing", application: "Equipment enclosure", focus: "Display opening, PCB mounts and assembly gaps", support: "DFM, tooling, samples and dimensional review" },
-      { title: "Transparent Device Cover", application: "Visible protective component", focus: "Flow, gate, polish and cosmetic criteria", support: "Mold engineering, trial and appearance review" },
-      { title: "Precision Cartridge Housing", application: "Replaceable device module", focus: "Critical fits, datum features and repeat molding", support: "Precision mold, inspection report and production support" }
-    ],
-    resources: [baseResources[0], baseResources[1], { title: "Engineering Plastics Guide", body: "Compare engineering-resin behavior without inferring medical suitability.", href: "/resources/injection-molding/engineering-plastics-guide" }, { title: "Quality & Documentation", body: "Review dimensional reports, trial evidence and tooling documentation.", href: "/company/quality-documentation" }],
-    relatedCapabilities: related("medical-device component"),
-    faqs: [
-      ["What medical-device components can Arktech support?", "Support can include diagnostic equipment housings, covers, cartridge housings, transparent components and precision assembly interfaces."],
-      ["Does Arktech claim medical-device certification or regulatory approval?", "No. This page describes manufacturing support only. Product compliance, regulatory approval and material suitability remain project-specific customer responsibilities."],
-      ["Can critical dimensions be reported?", "Yes. Agreed critical dimensions can be measured and recorded in a dimensional inspection report based on the drawing and inspection scope."],
-      ["Can you mold transparent medical components?", "Transparent molding can be reviewed when the resin, geometry, gate strategy, polish and visual criteria are defined for the project."],
-      ["How are sample approvals managed?", "Trial samples are reviewed against agreed dimensional, assembly and appearance requirements, with correction actions managed before release."],
-      ["What information is needed for a tooling quote?", "Provide CAD, drawings, material specification, volume, appearance requirements, critical dimensions and any inspection or documentation expectations."]
-    ],
-    ctaEyebrow: "START YOUR MEDICAL COMPONENT PROJECT",
-    ctaHeading: "Developing a Medical or Diagnostic Device Component?",
-    ctaCopy: "Share your part data and project requirements for a practical review of moldability, tooling, sample validation and production support."
-  },
-  {
-    slug: "automotive-components",
-    navTitle: "Automotive Components",
-    eyebrow: "AUTOMOTIVE COMPONENTS",
-    seoTitle: "Automotive Injection Molding & Injection Molds | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for automotive interior, control and functional components. DFM, textured tooling, insert molding, sample validation and repeat production support.",
-    h1: "Automotive Injection Molding & Tooling",
-    heroCopy: "Arktech supports automotive product and component teams with DFM engineering, export tooling, mold trials and plastic injection molding for interior, control and functional plastic parts.",
-    heroImage: "/images/industries/Automotive-Components.png",
-    heroAlt: "Automotive interior controls display housing and functional molded plastic components",
-    applicationImage: "/images/industries/automotive-ev-components.webp",
-    applicationAlt: "Automotive molded housings connectors and functional production components",
-    applicationsHeading: "Typical Automotive Plastic Component Applications",
-    applicationsIntro: "Programs are reviewed around appearance, assembly, environment and repeat-production requirements.",
-    applications: [
-      ["Interior Trim", "Visible trim, bezels and covers with controlled gaps and texture."],
-      ["Control Housings", "Enclosures for switches, displays and electronic control modules."],
-      ["Switch & Button Components", "Molded interfaces designed around feel, movement and assembly."],
-      ["Connector Housings", "Functional components with alignment, retention and terminal interfaces."],
-      ["Brackets & Mounts", "Structural molded components for locating and fastening assemblies."],
-      ["Ventilation & Console Parts", "Duct, vent and console components with visible and functional geometry."]
-    ],
-    engineeringHeading: "Engineering Considerations for Automotive Components",
-    engineeringIntro: "Automotive molded parts often combine visible surfaces, clips, assembly datums and production-volume requirements in one geometry.",
-    engineeringConsiderations: [
-      ["Cosmetic Surfaces", "Define visible zones, gate limitations and acceptable witness marks."],
-      ["Texture & Draft", "Coordinate draft with texture depth and release direction."],
-      ["Snap-Fits & Clips", "Review strain, retention, root geometry and tool access."],
-      ["Insert Features", "Plan inserts around loading, molding sequence and verification."],
-      ["Heat Resistance", "Select materials around the documented operating environment."],
-      ["Dimensional Stability", "Manage datums and long geometry that influence assembly fit."],
-      ["Assembly Interfaces", "Evaluate mating panels, fasteners, connectors and gap conditions."],
-      ["Multi-Cavity Production", "Assess balance and cavitation when demand supports repeat output."]
-    ],
-    capabilityIntro: "Automotive component programs combine product DFM, tooling, sample validation and repeat molding support.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Export tooling for automotive trim, controls, connectors and functional components with defined plant standards.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Sample, bridge and repeat molding support for approved automotive plastic parts.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Coordinate texture, clips, inserts, assembly datums and repeat-production risks before mold release.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Evaluate dimensional, assembly and visible-surface results before production approval.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "Project stages connect appearance approval, tool build and production evidence without separating design decisions from manufacturing reality.",
-    lifecycle: lifecycle("automotive component"),
-    materialIntro: "Material families are evaluated against the documented application environment, appearance and mechanical needs.",
-    materials: [
-      { title: "Interior & Cosmetic Parts", body: "Resin families commonly considered for visible components.", items: ["PP", "ABS", "PC/ABS"] },
-      { title: "Functional Components", body: "Engineering resins for stable or structural molded features.", items: ["PA", "PBT", "POM"] },
-      { title: "Flexible / Reinforced Options", body: "Used only where the application and project specification support them.", items: ["TPE", "TPU", "Reinforced grades"] }
-    ],
-    qualityIntro: "Validation focuses on fit, appearance and production-critical dimensions defined for the component program.",
-    qualityItems: [
-      ["Datum & Interface Dimensions", "Check mounting and mating dimensions against the drawing."],
-      ["Clip & Fastener Features", "Inspect retention geometry and assembly locations."],
-      ["Texture / Cosmetic Review", "Compare visible surfaces with agreed appearance criteria."],
-      ["Insert & Connector Position", "Verify functional interface location and orientation."],
-      ["Assembly Trial", "Use available mating parts or fixtures to review practical fit."],
-      ["Production Sample Approval", "Record trial status and correction actions before repeat supply."]
-    ],
-    moldTypesIntro: "Automotive applications may use large-format, multi-cavity, insert, multi-material or hot-runner tooling according to geometry and volume.",
-    moldTypes: [
-      { ...mold.large, body: "Large-format tooling for automotive panels, consoles and structural interior housings." },
-      { ...mold.multi, body: "Cavity strategies for repeat automotive clips, controls and smaller functional parts." },
-      { ...mold.insert, body: "Tooling that integrates specified metal features into automotive molded components." },
-      { ...mold.over, body: "Overmolding for suitable grip, sealing or interface requirements in automotive products." },
-      { ...mold.twoK, body: "Two-material tooling for integrated automotive controls or interface features." },
-      { ...mold.hot, body: "Hot-runner concepts assessed for production demand, material and gate requirements." }
-    ],
-    examplesIntro: "Representative scopes illustrate common automotive tooling decisions without identifying confidential customer projects.",
-    examples: [
-      { title: "Interior Control Bezel", application: "Visible cabin interface", focus: "Texture, display opening and assembly gaps", support: "DFM, textured mold, trial and cosmetic review" },
-      { title: "Connector Housing Tooling", application: "Electrical interface component", focus: "Terminal alignment, latches and dimensional stability", support: "Precision tooling, inspection and repeat molding" },
-      { title: "Console / Vent Component", application: "Interior functional part", focus: "Long geometry, clips and visible surfaces", support: "Complex mold, sample validation and production" }
-    ],
-    resources: [{ title: "Draft Angle Guidelines", body: "Coordinate part release, depth and textured automotive surfaces.", href: "/resources/injection-molding/draft-angle-guidelines" }, baseResources[1], { title: "Hot Runner vs Cold Runner", body: "Compare runner strategies for repeat automotive production.", href: "/resources/injection-molds/hot-runner-vs-cold-runner" }, { title: "Multi-Cavity vs Family Mold", body: "Review cavitation options for related or repeat-use components.", href: "/resources/injection-molds/multi-cavity-vs-family-mold" }],
-    relatedCapabilities: related("automotive component"),
-    faqs: [
-      ["Which automotive plastic components can Arktech support?", "Typical scopes include interior trim, control housings, switch components, connector housings, brackets, vent and console parts."],
-      ["Can textured automotive parts be reviewed before tooling?", "Yes. Texture intent, draft, parting lines, gates, ejection and visible-surface requirements should be reviewed together before steel release."],
-      ["Can you support insert or two-shot molding?", "Insert, overmolding and two-shot tooling can be evaluated when the component design and receiving production setup support the process."],
-      ["How are automotive appearance parts validated?", "Validation can include trial sample review, agreed cosmetic zones, texture comparison, dimensional checks and assembly fit."],
-      ["Do you support low-volume and repeat production?", "Programs can progress from samples or low-volume builds into repeat production after tooling and process approval."],
-      ["What data should be included in an automotive RFQ?", "Send 3D and 2D data, resin and texture requirements, annual demand, appearance zones, critical dimensions and receiving-plant standards."]
-    ],
-    ctaEyebrow: "START YOUR AUTOMOTIVE COMPONENT PROJECT",
-    ctaHeading: "Need Tooling for an Automotive Plastic Component?",
-    ctaCopy: "Upload your CAD, drawings, material, texture and production requirements for DFM and tooling review."
-  },
-  {
-    slug: "smart-home",
-    navTitle: "Smart Home & IoT",
-    eyebrow: "SMART HOME & IOT",
-    seoTitle: "Smart Home & IoT Injection Molding & Tooling | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for smart home and IoT device housings, sensors, hubs, locks, cameras and connected products. DFM, tooling and production support.",
-    h1: "Smart Home & IoT Injection Molding",
-    heroCopy: "Arktech supports connected-product teams with DFM, export injection molds, sample validation and plastic injection molding for hubs, sensors, smart locks, cameras and electronic device housings.",
+    slug: "smart-home-iot", navTitle: "Smart Home & IoT", eyebrow: "SMART HOME & IOT",
+    seoTitle: "Smart Home & IoT Injection Molding & Tooling | Arktech",
+    metaDescription: "Custom injection molds and plastic injection molding for smart home and IoT products including housings, controls, connected devices and functional plastic components.",
+    h1: "Injection Molding & Tooling for Smart Home & IoT Products",
+    heroCopy: "Engineering, tooling and molded plastic components for connected devices where appearance, assembly, dimensional fit and scalable production matter.",
     heroImage: "/images/industries/smart-device-housings.png",
-    heroAlt: "Smart home cameras hubs sensors and connected device housings",
+    heroAlt: "Smart home cameras hubs controls and sensors with molded plastic housings",
+    secondaryCta: "Discuss a Smart Home Project",
     applicationImage: "/images/industries/smart-iot-device-housings.jpg",
-    applicationAlt: "Smart home product housings sensors hubs and connected controls",
-    applicationsHeading: "Typical Smart Home and IoT Product Components",
-    applicationsIntro: "Connected products combine cosmetic housings with electronics, sensors, connectors and assembly features that must be resolved before tooling.",
-    applications: [
-      ["Hub Housings", "Cosmetic enclosures with PCB mounts, ventilation and connector access."],
-      ["Sensor Enclosures", "Compact housings with controlled openings and mounting geometry."],
-      ["Smart Lock Components", "Covers, bezels and internal carriers for connected access products."],
-      ["Router & Gateway Housings", "Larger enclosures with ventilation, antenna and assembly requirements."],
-      ["Camera Housings", "Visible shells designed around optical alignment and cable interfaces."],
-      ["Device Covers & Controls", "Buttons, panels and protective components for smart products."]
-    ],
-    engineeringHeading: "Engineering Considerations for Connected Devices",
-    engineeringIntro: "Smart-device enclosures must protect electronics while maintaining appearance, connectivity, sensor function and efficient final assembly.",
-    engineeringConsiderations: [
-      ["Cosmetic Housing Surfaces", "Plan gates, parting lines and ejection away from key visible zones."],
-      ["PCB & Electronic Interfaces", "Coordinate bosses, standoffs and clearances with board geometry."],
-      ["Sensor Openings", "Protect alignment and aperture dimensions for sensing performance."],
-      ["Connector & Cable Access", "Review ports, channels and strain-relief geometry for tooling release."],
-      ["Snap-Fits", "Balance assembly retention with stress, repeated access and molding limits."],
-      ["Insert Mounting", "Define insert load, position and installation or molding approach."],
-      ["Heat & Ventilation", "Review airflow and local wall conditions around heat-generating electronics."],
-      ["Assembly Fit", "Control gaps, flushness and mating relationships across enclosure parts."]
-    ],
-    capabilityIntro: "Smart-product programs benefit from connected DFM, tooling, molded samples and repeat-production support.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Tooling for connected-device enclosures with sensor openings, electronic interfaces and cosmetic surfaces.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Molded samples and repeat supply for approved hubs, sensors, cameras and device covers.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Review PCB mounts, ports, vents, snap-fits and appearance zones before final mold design.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Check sample fit, opening alignment and surface quality across connected-product assemblies.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "The workflow keeps electronics interfaces and cosmetic requirements visible throughout tooling development and sample approval.",
-    lifecycle: lifecycle("smart-home enclosure"),
-    materialIntro: "Material choices are reviewed around enclosure appearance, impact, heat, dimensional and flexible-interface requirements.",
-    materials: [
-      { title: "Device Housings", body: "Common families for cosmetic connected-product enclosures.", items: ["ABS", "PC/ABS", "PC"] },
-      { title: "Functional Parts", body: "Engineering families for internal carriers and interfaces.", items: ["PBT", "PA", "POM"] },
-      { title: "Flexible Features", body: "Options for grips, seals or compliant interfaces where specified.", items: ["TPU", "TPE"] }
-    ],
-    qualityIntro: "Inspection focuses on visible housing quality and the electronic, sensor and assembly interfaces that make the device function.",
-    qualityItems: [
-      ["Housing Dimensions", "Verify agreed envelope, gap and mating dimensions."],
-      ["PCB / Boss Location", "Check mounting points and internal clearance features."],
-      ["Sensor & Port Openings", "Inspect alignment and edge conditions around apertures."],
-      ["Insert / Fastener Position", "Confirm locations used in repeated product assembly."],
-      ["Cosmetic Surface Review", "Review visible molding marks, texture and finish."],
-      ["Device Assembly Fit", "Evaluate enclosure halves and available electronic or mating parts."]
-    ],
-    moldTypesIntro: "Connected-device parts frequently combine precision interfaces, side actions, inserts or multi-material features.",
-    moldTypes: [
-      { ...mold.precision, body: "Precision tools for smart-device sensor, PCB and connector interfaces." },
-      { ...mold.complex, body: "Side actions and shutoffs for port openings and detailed connected-product housings." },
-      { ...mold.insert, body: "Insert tools for threaded or functional attachment points in smart devices." },
-      { ...mold.over, body: "Overmolding for selected grips, seals or compliant smart-product features." },
-      { ...mold.multi, body: "Multi-cavity production for suitable smaller sensors, covers and controls." },
-      { ...mold.hot, body: "Runner concepts for repeat housing production where material and gate needs align." }
-    ],
-    examplesIntro: "Representative scopes describe common smart-product work without implying named customer programs.",
-    examples: [
-      { title: "Smart Hub Housing", application: "Connected home gateway", focus: "PCB standoffs, vents and cosmetic enclosure gaps", support: "DFM, mold, samples and repeat production" },
-      { title: "Sensor Enclosure Tooling", application: "Environmental or occupancy sensor", focus: "Aperture alignment, wall control and snap assembly", support: "Precision tooling and dimensional validation" },
-      { title: "Camera Housing Program", application: "Connected indoor camera", focus: "Optical interface, cable route and visible finish", support: "Complex mold, cosmetic review and molded parts" }
-    ],
-    resources: [baseResources[0], baseResources[1], baseResources[3], { title: "Ribs & Bosses Design", body: "Design electronics mounts and housing reinforcement for molding.", href: "/resources/injection-molding/ribs-bosses-design" }],
-    relatedCapabilities: related("smart-home and IoT device"),
-    faqs: [
-      ["What smart-home components can Arktech support?", "Typical scopes include hub, sensor, lock, router, gateway and camera housings plus buttons, bezels and internal functional parts."],
-      ["Can DFM include PCB and connector interfaces?", "Yes. CAD review can consider standoffs, bosses, ports, cable routes and accessible assembly information before tooling release."],
-      ["Can smart-device housings include overmolded features?", "Overmolding or two-shot concepts can be reviewed for grips, seals or integrated interfaces when the design and material combination support them."],
-      ["How are cosmetic enclosure surfaces handled?", "Visible zones, parting lines, gates, ejection, texture and sample appearance criteria are defined before approval."],
-      ["Can you support sample builds before repeat production?", "Yes. Programs can include mold trials, engineering samples, low-volume builds and later repeat production."],
-      ["What should be provided for an IoT housing review?", "Share CAD, drawings, resin, finish, annual volume, PCB or mating geometry, critical openings and assembly requirements."]
-    ],
-    ctaEyebrow: "START YOUR SMART PRODUCT PROJECT",
-    ctaHeading: "Developing a Smart Home or IoT Device?",
-    ctaCopy: "Send your enclosure CAD, electronic interface data and production requirements for DFM and tooling review."
+    applicationAlt: "Connected home controls sensors hubs and camera housings",
+    applicationsHeading: "Smart Home & Connected-Device Applications",
+    applicationsIntro: "Support spans visible enclosures and the functional features used to package electronics and assemble connected products.",
+    applications: [["Smart Hubs & Gateways", "Housings with PCB mounts, ports, ventilation and controlled gaps."], ["Cameras & Sensors", "Compact enclosures with optical openings and locating features."], ["Smart Locks & Controls", "Visible covers, buttons and carriers for connected access products."], ["Routers & Network Devices", "Ventilated housings with cable access and internal supports."], ["Connected Accessories", "Bases, cradles and functional parts designed for repeated assembly."]],
+    engineeringHeading: "Engineering Priorities for Connected Product Housings",
+    engineeringIntro: "Smart-product housings combine a visible consumer surface with dense internal electronics and frequent assembly operations.",
+    engineeringConsiderations: [["Cosmetic Surface Control", "Coordinate texture, polish, gate vestige and parting lines around visible zones."], ["PCB & Connector Packaging", "Review bosses, ports and clearances against the real electronic assembly."], ["Snap-Fit Reliability", "Balance retention, service access and molding stress around repeated assembly."], ["Optical Features", "Protect light paths and camera openings from avoidable weld lines and distortion."], ["Gap & Flush Interfaces", "Define datums and tolerances across mating covers, bezels and bases."], ["Ventilation Geometry", "Review thin slots for filling, steel strength and release."]],
+    toolingHeading: "Tooling & Molding Considerations for Smart Devices",
+    toolingIntro: "Tool design is aligned with appearance zones, internal interfaces, material behavior and intended production scale.",
+    toolingConsiderations: [["Gate strategy", "Keep gates away from priority cosmetic and optical areas where practical."], ["Shutoffs & side actions", "Release ports, hooks and switch openings with serviceable mechanisms."], ["Texture & polishing", "Confirm finish requirements before final steel and sample acceptance."], ["Warpage control", "Balance walls, ribs, gate direction and cooling around broad enclosure surfaces."], ["Assembly validation", "Check PCB, connector and mating-part interfaces during sample approval."]],
+    moldTypesIntro: "Connected-device programs commonly use precision, complex, multi-cavity and multi-material tooling.",
+    moldTypes: [mold.precision, mold.complex, mold.multi, mold.twoK],
+    evidence: { eyebrow: "REAL PROJECT EVIDENCE", title: "Smart Home Housing Tooling Project", summary: "A documented housing program connecting DFM review, appearance requirements, assembly features and mold validation.", image: "/images/case-studies/smart-home-iot-project.webp", alt: "Smart home IoT housing project with molded enclosure components and assembly evidence", application: "Connected-device enclosure and mating housing components", engineeringFocus: "Visible surfaces, snap-fit assembly and controlled gaps", validation: "Molded samples reviewed for appearance, dimensions and assembly fit", href: "/case-studies/smart-home-plastic-housing", linkLabel: "View Smart Home Housing Project" },
+    processIntro: "The development path keeps appearance, electronic interfaces and production requirements connected from CAD review through repeat molding.",
+    validationHeading: "Validation for Smart Home Housings & Assemblies",
+    validationIntro: "Approval focuses on the visible and functional interfaces that determine product assembly and user-facing quality.",
+    validationItems: [["Cosmetic review", "Inspect agreed visible zones, texture and allowable molding marks."], ["Gap & flush check", "Review mating covers and bezels against interface criteria."], ["PCB / connector fit", "Confirm mounts, ports and clearances with representative hardware."], ["Critical dimensions", "Record drawing dimensions that control assembly or function."], ["Process records", "Retain agreed molding parameters and sample status for release review."]],
+    resources: [resource.ribs, resource.draft, resource.material], relatedCapabilities: caps("smart home and IoT"),
+    faqs: [["What smart home parts can Arktech support?", "Programs can include hubs, gateways, cameras, sensors, smart locks, routers, controls and connected-product housings."], ["Can DFM include PCB and connector data?", "Yes. Representative electronics and mating parts help review bosses, ports, clearances and datums before tooling release."], ["How are visible surfaces controlled?", "Appearance zones, texture, gates, parting lines and allowed witness marks are agreed before mold approval and reviewed during trials."], ["Can Arktech support low-volume and repeat production?", "Projects can progress from engineering samples and low-volume builds into repeat molding after approval."]],
+    ctaEyebrow: "SMART HOME & IOT RFQ", ctaHeading: "Discuss Your Smart Home or IoT Application", ctaCopy: "Send CAD, material targets, finish requirements, expected volume and electronic or mating-part data for engineering review."
   },
   {
-    slug: "new-energy",
-    navTitle: "Energy Storage & EV Charging",
-    eyebrow: "ENERGY STORAGE & EV CHARGING",
-    seoTitle: "EV Charging & Energy Storage Injection Molding | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for EV charging and energy products, including charging housings, connectors, control enclosures and functional molded components.",
-    h1: "EV Charging Injection Molding",
-    heroCopy: "Arktech supports EV charging and energy-product teams with DFM engineering, injection mold manufacturing, validation and molding for housings, connectors, power-electronics covers and functional components.",
-    heroImage: "/images/industries/autimotive-ev.webp",
-    heroAlt: "Electric vehicle charging stations and molded EV charging product housings",
-    applicationImage: "/images/industries/automotive-ev-components.jpg",
-    applicationAlt: "EV charging housings connector components and power electronics enclosures",
-    applicationsHeading: "Typical EV Charging and Energy Product Components",
-    applicationsIntro: "Tooling and molding are developed around the product's electrical interfaces, assembly geometry and documented environmental requirements.",
-    applications: [
-      ["Charging Housings", "Structural and visible enclosures for charging equipment."],
-      ["Connector Components", "Molded shells, carriers and protective interfaces around connectors."],
-      ["Control Housings", "Enclosures for controls, displays and connected electronics."],
-      ["Power Electronics Covers", "Protective covers designed around heat, service and fasteners."],
-      ["Protective Enclosures", "Molded barriers and housings for energy-related assemblies."],
-      ["Functional Molded Components", "Mounts, carriers and internal components with defined interfaces."]
-    ],
-    engineeringHeading: "Engineering Considerations for EV and Energy Products",
-    engineeringIntro: "These components often combine connector alignment, heat, inserts, structural features and environmental interfaces in large or complex molded geometry.",
-    engineeringConsiderations: [
-      ["Electrical Interfaces", "Coordinate openings, barriers and connector geometry with the product design."],
-      ["Heat Considerations", "Review ventilation and material targets around heat-generating assemblies."],
-      ["Dimensional Stability", "Control datums and large geometry that influence sealing and assembly."],
-      ["Connector Alignment", "Protect locating and terminal-interface dimensions through tooling and inspection."],
-      ["Sealing Features", "Review gasket grooves and contact surfaces for moldability and verification."],
-      ["Insert Features", "Define inserts, busbar interfaces or fasteners around loads and process sequence."],
-      ["Structural Strength", "Use ribs and wall transitions without creating avoidable sink or stress."],
-      ["Assembly & Service Access", "Plan fastening, cable and maintenance access into the molded geometry."]
-    ],
-    capabilityIntro: "EV and energy-product work connects DFM, production tooling, sample validation and molding without implying product electrical certification.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Tooling for charging housings, connector parts and power-product enclosures with defined receiving-plant interfaces.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Sample and repeat molding for approved EV charging and energy-product components.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Review connector alignment, sealing geometry, inserts, structure and heat-related product requirements.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Validate critical interfaces, insert position and enclosure assembly before production release.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "A staged path helps teams validate connector, enclosure and assembly geometry before repeat molded-part supply.",
-    lifecycle: lifecycle("EV charging component"),
-    materialIntro: "Material selection follows the customer's documented mechanical, thermal and product requirements; no UL, flammability or electrical certification is implied.",
-    materials: [
-      { title: "Housings & Covers", body: "Candidate families for structural or visible enclosures.", items: ["PC/ABS", "PC", "PBT"] },
-      { title: "Functional Components", body: "Engineering families considered for stable connector or carrier geometry.", items: ["PA", "PA-GF", "POM"] },
-      { title: "Flexible Interfaces", body: "Options for compliant features where the application specifies them.", items: ["TPU", "TPE"] }
-    ],
-    qualityIntro: "Validation is organized around agreed connector, sealing, mounting and assembly requirements.",
-    qualityItems: [
-      ["Connector Interface Dimensions", "Measure agreed locating and mating geometry."],
-      ["Insert Position Verification", "Confirm metal or threaded insert position and orientation."],
-      ["Sealing Feature Review", "Inspect gasket channels and contact surfaces against requirements."],
-      ["Housing Assembly Fit", "Check enclosure halves, fasteners and available mating components."],
-      ["Visual / Surface Inspection", "Review visible molding marks and finish criteria."],
-      ["Sample Validation Records", "Document critical results and correction actions before approval."]
-    ],
-    moldTypesIntro: "EV and energy products may require large, insert, complex, multi-cavity, hot-runner or precision tooling according to component geometry.",
-    moldTypes: [
-      { ...mold.large, body: "Large molds for charging enclosures and structural energy-product housings." },
-      { ...mold.insert, body: "Tools for molded components that integrate specified threaded or conductive inserts." },
-      { ...mold.complex, body: "Complex actions for connector, sealing and service-access geometry." },
-      { ...mold.multi, body: "Repeat-cavity tooling for suitable connector and functional components." },
-      { ...mold.hot, body: "Flow systems considered around engineering resin behavior and production demand." },
-      { ...mold.precision, body: "Controlled tools for connector alignment and critical energy-product interfaces." }
-    ],
-    examplesIntro: "Representative scopes describe common engineering work and do not imply electrical compliance or named customer programs.",
-    examples: [
-      { title: "EV Charging Control Housing", application: "Charging equipment enclosure", focus: "Display, connector and service-access geometry", support: "DFM, large tooling, trial and samples" },
-      { title: "Connector Component Tooling", application: "Charging connector assembly", focus: "Alignment, inserts and assembly interfaces", support: "Precision mold, dimensional review and production" },
-      { title: "Power Electronics Cover", application: "Protective energy-product enclosure", focus: "Heat, fastening and structural rib layout", support: "Mold engineering, validation and molded parts" }
-    ],
-    resources: [baseResources[1], { title: "Engineering Plastics Guide", body: "Compare engineering resin families for demanding molded components.", href: "/resources/injection-molding/engineering-plastics-guide" }, { title: "PPS vs PBT vs PA", body: "Compare three engineering material families around performance and processing.", href: "/resources/materials/pps-vs-pbt-vs-pa" }, baseResources[0]],
-    relatedCapabilities: related("EV charging and energy-product"),
-    faqs: [
-      ["Which EV charging components can Arktech support?", "Potential scopes include charging housings, connector components, control enclosures, power-electronics covers and internal functional parts."],
-      ["Does this page claim UL or electrical certification?", "No. Product compliance, flammability and electrical certification depend on customer specifications, materials and product-level testing."],
-      ["Can metal inserts be integrated into charging components?", "Insert molding or post-mold insert installation can be evaluated around geometry, loading, material and process requirements."],
-      ["How are connector interfaces inspected?", "Agreed alignment, locating and mating dimensions can be included in dimensional inspection and assembly-fit review."],
-      ["Can large charging housings be tooled?", "Large-format tooling can be assessed from CAD geometry, press requirements, material, projected area and receiving production constraints."],
-      ["What information is needed for an EV product RFQ?", "Provide CAD, drawings, resin specification, application requirements, expected volume, insert details, critical dimensions and inspection expectations."]
-    ],
-    ctaEyebrow: "START YOUR EV OR ENERGY PROJECT",
-    ctaHeading: "Need Tooling for an EV Charging or Energy Product?",
-    ctaCopy: "Share the component data, material specification, interfaces and production demand for a practical DFM and tooling review."
+    slug: "home-appliances", navTitle: "Home Appliances", eyebrow: "HOME APPLIANCES",
+    seoTitle: "Home Appliance Injection Molding & Plastic Tooling | Arktech",
+    metaDescription: "Injection molds and molded plastic components for home appliance housings, panels, controls and structural parts with focus on appearance, fit, warpage and production consistency.",
+    h1: "Injection Molding & Tooling for Home Appliances",
+    heroCopy: "Mold design and plastic injection molding for appliance housings, control panels and structural components where appearance, fit, warpage control and repeatable production matter.",
+    heroImage: "/images/industries/home-appliance.png", heroAlt: "Home appliances with molded housings controls panels and functional plastic components", secondaryCta: "Discuss an Appliance Project",
+    applicationImage: "/images/industries/home-appliance-smart-home-components.webp", applicationAlt: "Home appliance housings panels controls and molded functional parts",
+    applicationsHeading: "Molded Components for Home Appliance Products", applicationsIntro: "Programs cover visible outer housings and internal carriers, controls and air- or water-management features.",
+    applications: [["Exterior Housings", "Large visible covers with controlled texture, gaps and assembly datums."], ["Control Panels & Bezels", "Interfaces around displays, buttons and touch-control assemblies."], ["Knobs & Buttons", "Repeated user-interface components requiring stable feel and finish."], ["Internal Frames", "Structural carriers for motors, PCBs, pumps and subassemblies."], ["Air & Water Components", "Ducts, reservoirs and flow features reviewed around geometry and resin."]],
+    engineeringHeading: "Engineering Priorities for Appliance Plastic Parts", engineeringIntro: "Appliance parts often combine broad cosmetic surfaces, environmental exposure and multiple assembly interfaces.",
+    engineeringConsiderations: [["Warpage & Flatness", "Control long surfaces through geometry, gating and cooling review."], ["Surface Appearance", "Coordinate texture, color, parting lines and gate vestige."], ["Heat & Moisture Exposure", "Confirm the customer-selected material grade against service conditions."], ["Assembly Datums", "Protect locating and fastening points across multipart housings."], ["Ribs & Structural Support", "Add stiffness without creating sink behind cosmetic walls."], ["Service & Reassembly", "Review clips, screws and access features around intended use."]],
+    toolingHeading: "Tooling & Molding Considerations for Appliance Components", toolingIntro: "Tooling decisions balance broad-part filling, visible surfaces and reliable repeated assembly.",
+    toolingConsiderations: [["Cooling balance", "Plan circuits around broad geometry to manage shrinkage."], ["Gate direction", "Review flow orientation and weld lines around openings and visible zones."], ["Texture release", "Confirm draft before applying specified texture."], ["Large-part ejection", "Distribute release forces to reduce whitening or deformation."], ["Cavity strategy", "Match cavitation to part size, volume and machine constraints."]],
+    moldTypesIntro: "Home-appliance programs often require large, precision, hot-runner or multi-cavity tooling.", moldTypes: [mold.large, mold.precision, mold.hot, mold.multi],
+    evidence: { eyebrow: "APPLICATION EVIDENCE", title: "Appliance Housing & Control Component Review", summary: "An application-specific view of housing, control and structural part families used during appliance tooling planning.", image: "/images/industries/home-appliance-smart-home-components.webp", alt: "Home appliance housings control panels and functional molded component examples", application: "Visible housings, control interfaces and internal structural components", engineeringFocus: "Warpage, surface appearance, assembly datums and repeat production", validation: "Sample appearance, critical dimensions and mating-part fit" },
+    processIntro: "Appliance programs move through DFM, tool concept, design approval, trial and sample review before production release.",
+    validationHeading: "Validation for Appliance Housings & Components", validationIntro: "Review criteria are agreed around visible quality, dimensional fit and final-appliance assembly conditions.",
+    validationItems: [["Flatness & warpage", "Measure agreed housing conditions after defined cooling or conditioning."], ["Surface appearance", "Review texture, gloss, flow marks and visible witness lines."], ["Assembly fit", "Check covers, bezels, frames and fasteners with mating parts."], ["Functional interfaces", "Verify openings, mounts and moving controls against drawings."], ["Repeat samples", "Compare critical conditions across samples or cavities."]],
+    resources: [resource.warpage, { title: "Wall Thickness Guidelines", body: "Manage transitions and local mass in large housings.", href: "/resources/injection-molding/wall-thickness-guidelines" }, resource.material], relatedCapabilities: caps("home appliance"),
+    faqs: [["Which appliance parts can Arktech support?", "Scopes include housings, panels, bezels, knobs, controls, frames, ducts, reservoirs, bases and brackets."], ["How is warpage reviewed for large housings?", "DFM considers walls, ribs, gates, cooling and measurement conditions as one connected system."], ["Can texture and gloss requirements be included?", "Yes. Finish, draft, gate and parting-line requirements should be defined before mold release."], ["Can Arktech support assembly checks?", "Representative controls, fasteners and mating parts can be included when acceptance criteria are defined."]],
+    ctaEyebrow: "HOME APPLIANCE RFQ", ctaHeading: "Discuss Your Home Appliance Application", ctaCopy: "Share CAD, material, visible-surface requirements, annual volume and mating-part information for review.",
+    needsAssetReplacement: true, assetReplacementNote: "Replace with a verified Arktech appliance tooling or molded-part project image when publication approval is available."
   },
   {
-    slug: "home-appliance",
-    navTitle: "Home Appliance",
-    eyebrow: "HOME APPLIANCE",
-    seoTitle: "Home Appliance Injection Molding & Injection Molds | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for home appliance housings, control panels, covers and functional plastic components. DFM, tooling, validation and production support.",
-    h1: "Home Appliance Molding & Tooling",
-    heroCopy: "Arktech supports appliance product teams with DFM engineering, export molds, sample validation and injection molding for housings, panels, covers and functional plastic components.",
-    heroImage: "/images/industries/home-appliance.png",
-    heroAlt: "Home appliances with molded housings control panels and functional plastic parts",
-    applicationImage: "/images/industries/home-appliance-smart-home-components.webp",
-    applicationAlt: "Molded home appliance housings control interfaces and functional components",
-    applicationsHeading: "Typical Plastic Components for Home Appliances",
-    applicationsIntro: "Appliance components are reviewed around visible finish, assembly, heat or moisture exposure and efficient production.",
-    applications: [
-      ["Appliance Housings", "Large and medium enclosures for countertop and household products."],
-      ["Control Panels", "Visible interfaces with buttons, displays and mounting features."],
-      ["Protective Covers", "Molded covers for internal mechanisms, electronics or service areas."],
-      ["Internal Functional Parts", "Carriers, brackets, guides and assembly components."],
-      ["Air / Water Management Parts", "Ducts, channels and interfaces where geometry controls flow."],
-      ["Buttons & User Interfaces", "Molded controls designed around movement, appearance and assembly."]
-    ],
-    engineeringHeading: "Engineering Considerations for Appliance Components",
-    engineeringIntro: "Appliance parts often combine broad visible surfaces, snaps, ribs and interfaces with heat, moisture or repeated household use.",
-    engineeringConsiderations: [
-      ["Large Cosmetic Surfaces", "Manage gate, flow, ejection and deformation risks on visible panels."],
-      ["Snap-Fits", "Review strain, retention and assembly sequence."],
-      ["Assembly Interfaces", "Control gaps, fasteners and mating relationships across housings."],
-      ["Heat / Moisture Conditions", "Select materials from documented use requirements."],
-      ["Dimensional Stability", "Protect datums and long features that influence final fit."],
-      ["Structural Ribs", "Create stiffness without avoidable sink or heavy local mass."],
-      ["Surface Finish", "Define texture, gloss and visible molding criteria before release."],
-      ["Multi-Cavity Production", "Evaluate cavitation for smaller repeat-use appliance parts."]
-    ],
-    capabilityIntro: "Appliance programs connect housing DFM, tooling, sample approval and production support within one engineering path.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Production tooling for appliance housings, panels, ducts and functional components across varied part sizes.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Samples, launch quantities and repeat molded-part supply for approved appliance components.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Review broad cosmetic surfaces, ribs, snaps, air or water paths and final assembly before steel release.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Assess enclosure fit, control interfaces, appearance and critical dimensions during trial approval.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "From enclosure review through molded-part delivery, each stage addresses both product appearance and manufacturing stability.",
-    lifecycle: lifecycle("home-appliance component"),
-    materialIntro: "Resin families are selected around specified appearance, temperature, moisture, strength and production needs.",
-    materials: [
-      { title: "Visible Housings", body: "Common families for cosmetic appliance enclosures and panels.", items: ["ABS", "PP", "PC/ABS"] },
-      { title: "Functional Components", body: "Engineering families for carriers, mechanisms and stable features.", items: ["POM", "PA", "PBT"] },
-      { title: "Flexible Interfaces", body: "Options for grips, seals and compliant product features.", items: ["TPE", "TPU"] }
-    ],
-    qualityIntro: "Inspection combines visible-surface review with dimensions and assembly checks that affect appliance performance.",
-    qualityItems: [
-      ["Housing Envelope Dimensions", "Check overall size, datums and mounting interfaces."],
-      ["Panel & Control Fit", "Review gaps, flushness and button or display openings."],
-      ["Snap / Fastener Features", "Inspect assembly geometry and retention locations."],
-      ["Cosmetic Surface Review", "Assess visible finish, texture and agreed molding marks."],
-      ["Assembly Verification", "Fit representative housing parts and available mechanisms."],
-      ["Production Sample Approval", "Confirm required corrections before repeat molding."]
-    ],
-    moldTypesIntro: "Appliance programs can require large molds for housings and multi-cavity, hot-runner or multi-material tools for repeat components.",
-    moldTypes: [
-      { ...mold.large, body: "Large-format molds for visible appliance shells, panels and structural covers." },
-      { ...mold.multi, body: "Balanced cavities for suitable appliance buttons, controls and small repeat components." },
-      { ...mold.hot, body: "Runner systems reviewed for housing size, gate appearance and production needs." },
-      { ...mold.complex, body: "Actions and shutoffs for appliance ducts, openings and detailed enclosure geometry." },
-      { ...mold.insert, body: "Insert tools for appliance components with specified threaded or functional hardware." },
-      { ...mold.twoK, body: "Multi-material tools for suitable controls, seals and soft-touch appliance features." }
-    ],
-    examplesIntro: "Representative scopes show typical appliance tooling work without presenting confidential customer projects.",
-    examples: [
-      { title: "Countertop Appliance Housing", application: "Visible outer enclosure", focus: "Large surfaces, vents and assembly gaps", support: "DFM, large mold, cosmetic trial and production" },
-      { title: "Control Panel Tooling", application: "User-interface panel", focus: "Display opening, buttons and texture", support: "Precision tool, samples and fit review" },
-      { title: "Internal Air-Flow Component", application: "Duct or functional carrier", focus: "Flow geometry, ribs and mounting features", support: "Complex tooling and dimensional validation" }
-    ],
-    resources: [baseResources[3], { title: "Draft Angle Guidelines", body: "Review draft for deep housings and textured appliance surfaces.", href: "/resources/injection-molding/draft-angle-guidelines" }, baseResources[1], { title: "Hot Runner vs Cold Runner", body: "Compare runner choices for appliance production tooling.", href: "/resources/injection-molds/hot-runner-vs-cold-runner" }],
-    relatedCapabilities: related("home-appliance component"),
-    faqs: [
-      ["What appliance components can Arktech support?", "Typical scopes include housings, control panels, covers, buttons, ducts, carriers and other functional molded parts."],
-      ["Can large appliance housings be tooled?", "Large housing tooling can be reviewed against part size, material, wall geometry, projected area and receiving molding equipment."],
-      ["How are visible appliance surfaces controlled?", "DFM and mold design review gates, parting lines, ejection, texture and deformation risks before trial samples are assessed."],
-      ["Can appliance parts include soft-touch features?", "Overmolding or 2K concepts can be evaluated when geometry, material compatibility and production requirements support them."],
-      ["Can you support assembly of molded appliance parts?", "Secondary operations and assembly support can be scoped where drawings, components and acceptance requirements are defined."],
-      ["What should be included in an appliance tooling RFQ?", "Provide CAD, drawings, resin, finish or texture, volume, critical surfaces, assembly information and expected production location."]
-    ],
-    ctaEyebrow: "START YOUR APPLIANCE PROJECT",
-    ctaHeading: "Developing a Home Appliance Plastic Component?",
-    ctaCopy: "Upload your CAD, drawings, material and appearance requirements for an engineering-led tooling review."
+    slug: "consumer-electronics", navTitle: "Consumer Electronics", eyebrow: "CONSUMER ELECTRONICS",
+    seoTitle: "Consumer Electronics Injection Molding & Tooling | Arktech", metaDescription: "Custom tooling and plastic injection molding for electronic housings, bezels, buttons and structural components requiring appearance, precision and repeatable production.",
+    h1: "Injection Molding & Tooling for Consumer Electronics", heroCopy: "Precision tooling and molded plastic parts for electronics enclosures, controls and structural components where appearance, compact assembly and production consistency are critical.",
+    heroImage: "/images/industries/consumer-electronics-enclosures.png", heroAlt: "Consumer electronics with molded enclosures bezels controls and functional components", secondaryCta: "Discuss an Electronics Project",
+    applicationImage: "/images/industries/consumer-electronics-enclosures.webp", applicationAlt: "Electronic housings bezels buttons and internal molded components",
+    applicationsHeading: "Plastic Components for Consumer Electronics", applicationsIntro: "Support spans visible enclosures and smaller precision parts that locate electronics, controls and user interfaces.",
+    applications: [["Device Enclosures", "Upper and lower housings with controlled gaps, ports and mounts."], ["Bezels & Display Frames", "Visible frames around screens, lenses and touch interfaces."], ["Buttons & Controls", "Tactile or two-material controls requiring consistent geometry."], ["Router & Hub Housings", "Ventilated enclosures for connected electronics."], ["Internal Carriers", "Structures locating PCBs, batteries, connectors and modules."]],
+    engineeringHeading: "Engineering Priorities for Electronics Enclosures", engineeringIntro: "Compact products make every wall, boss, port and interface part of the assembly tolerance stack.",
+    engineeringConsiderations: [["Thin-Wall Filling", "Review flow length, gates and restrictions before steel release."], ["Cosmetic Zones", "Define acceptable parting lines, ejector marks and gate vestige."], ["PCB & Battery Clearance", "Use real package data to protect internal space."], ["Insert Features", "Plan threaded or functional inserts around load and location."], ["Vent & Port Geometry", "Balance open area, steel strength and release."], ["Transparent Features", "Coordinate resin handling, polish, flow and protection."]],
+    toolingHeading: "Tooling & Molding Considerations for Electronic Products", toolingIntro: "Tool construction focuses on appearance, compact features and repeatable enclosure assembly.",
+    toolingConsiderations: [["Precision parting lines", "Place split lines around visible and closely fitted interfaces."], ["Fine shutoffs", "Review ports and vents for steel strength."], ["Multi-material controls", "Assess 2K or overmolding against the real material pair."], ["Polished surfaces", "Protect gloss and transparent zones through handling."], ["Cavity identification", "Maintain traceability where multiple cavities are used."]],
+    moldTypesIntro: "Electronics programs can combine precision, 2K, overmolding and multi-cavity tooling.", moldTypes: [mold.precision, mold.twoK, mold.over, mold.multi],
+    evidence: { eyebrow: "REAL TOOLING EVIDENCE", title: "Two-Shot Light-Cover Tooling", summary: "A real two-material tooling project demonstrating integrated clear and functional features for a visible electronic component.", image: "/images/case-studies/two-shot-light-cover.webp", alt: "Two-shot injection mold and molded light-cover components for an electronic product", application: "Visible light-cover component with integrated material interface", engineeringFocus: "Material interface, gate location, appearance and tooling sequence", validation: "Trial samples reviewed for interface quality, appearance and fit", href: "/case-studies/two-shot-2k-injection-mold-tooling", linkLabel: "View Two-Shot Tooling Project" },
+    processIntro: "Electronics tooling progresses from package-aware DFM to sample approval with visible and functional interfaces checked together.",
+    validationHeading: "Validation for Consumer Electronics Components", validationIntro: "Approval connects cosmetic criteria with PCB, connector, control and enclosure assembly requirements.",
+    validationItems: [["Cosmetic inspection", "Review visible surfaces under agreed conditions."], ["Enclosure fit", "Check gaps, flushness, snaps and fasteners."], ["Electronic package check", "Confirm ports, mounts, battery space and connector access."], ["Transparent-part review", "Inspect flow features, gate vestige and clarity as required."], ["Cavity comparison", "Compare repeated parts by cavity where applicable."]],
+    resources: [resource.transparent, resource.draft, resource.ribs], relatedCapabilities: caps("consumer electronics"),
+    faqs: [["Which electronics components can Arktech support?", "Scopes include enclosures, bezels, controls, router housings, internal carriers and transparent features."], ["Can you support 2K or overmolded controls?", "Concepts can be reviewed against the real material pair, geometry and production requirements."], ["How are PCB interfaces validated?", "Representative hardware supports review of bosses, ports, clearances and datums."], ["Can clear components be molded?", "Transparent parts can be assessed around resin, polish, gate vestige, visual criteria and handling."]],
+    ctaEyebrow: "CONSUMER ELECTRONICS RFQ", ctaHeading: "Discuss Your Consumer Electronics Application", ctaCopy: "Upload enclosure CAD, electronic-package data, material and finish requirements for review."
   },
   {
-    slug: "pet-tech",
-    navTitle: "Pet Tech Products",
-    eyebrow: "PET TECH PRODUCTS",
-    seoTitle: "Pet Tech Injection Molding & Plastic Tooling | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for smart pet feeders, water devices, cameras, sensors and connected pet-product housings. DFM, tooling and production support.",
-    h1: "Pet Tech Injection Molding & Tooling",
-    heroCopy: "Arktech supports smart pet-product teams with DFM review, injection mold manufacturing and molding for feeders, dispensers, cameras, sensors, housings and connected device components.",
-    heroImage: "/images/industries/pet-lifestyle-product-parts.png",
-    heroAlt: "Smart pet feeders water devices cameras and connected pet products",
-    applicationImage: "/images/industries/pet-lifestyle-product-parts.webp",
-    applicationAlt: "Smart pet product housings bowls cameras and molded functional components",
-    applicationsHeading: "Typical Components for Connected Pet Products",
-    applicationsIntro: "Pet-tech products combine appliance-like housings with sensors, moving features, water or food interfaces and frequent cleaning needs.",
-    applications: [
-      ["Smart Feeder Housings", "Molded enclosures for food storage, dispensing and controls."],
-      ["Water Device Components", "Reservoir, channel and housing parts designed around cleaning and assembly."],
-      ["Pet Camera Housings", "Connected camera enclosures with optical and cable interfaces."],
-      ["Sensor Components", "Compact housings and mounts for presence, weight or activity sensing."],
-      ["Control Covers", "Visible panels, buttons and protective covers for electronics."],
-      ["Connected Device Parts", "Internal carriers, mounts and enclosure components for smart products."]
-    ],
-    engineeringHeading: "Engineering Considerations for Smart Pet Products",
-    engineeringIntro: "Product geometry should support daily use, assembly and cleaning without creating avoidable tooling or production risks.",
-    engineeringConsiderations: [
-      ["Food / Water Interfaces", "Review channels and contact geometry where the product design includes them."],
-      ["Assembly & Cleaning", "Avoid inaccessible traps and define practical disassembly where required."],
-      ["Sensor Openings", "Control aperture and mounting geometry for sensing functions."],
-      ["Cosmetic Surfaces", "Plan gates, parting lines and texture around visible home-use products."],
-      ["Snap-Fits", "Balance retention, service access and molded-part strain."],
-      ["Inserts & Fasteners", "Coordinate repeated assembly points and structural loads."],
-      ["Cable Routing", "Provide molded channels and protected connector access."],
-      ["Moisture-Related Geometry", "Review sealing contact and drainage features without claiming certification."]
-    ],
-    capabilityIntro: "Pet-tech programs can move from product DFM and tooling into samples, repeat molding and scoped assembly support.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Tooling for feeder, water-device, camera and sensor housings with cleaning and assembly needs considered.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Engineering samples and repeat molding for approved smart pet-product components.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Review dispensing paths, sensor openings, electronics, snaps and moisture-related geometry before tooling.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Evaluate housing fit, functional interfaces and visible quality without making food-contact claims.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "A linked development path keeps user-facing appearance, connected-device interfaces and practical assembly under review.",
-    lifecycle: lifecycle("pet-tech product component"),
-    materialIntro: "Material candidates are evaluated against the actual product specification; no food-contact or water-contact certification is implied.",
-    materials: [
-      { title: "Product Housings", body: "Common families for visible pet-device enclosures.", items: ["ABS", "PC/ABS", "PP"] },
-      { title: "Moving / Functional Parts", body: "Engineering families considered for mechanisms and stable interfaces.", items: ["POM", "PA", "PBT"] },
-      { title: "Flexible Features", body: "Options for grips, seals or compliant interfaces where specified.", items: ["TPE", "TPU"] }
-    ],
-    qualityIntro: "Validation focuses on housing fit, device interfaces and the molded geometry used in repeated operation or cleaning.",
-    qualityItems: [
-      ["Housing & Assembly Dimensions", "Check interfaces across enclosure and functional parts."],
-      ["Sensor / Camera Alignment", "Verify critical openings and mounting features."],
-      ["Dispensing Interfaces", "Inspect functional geometry against drawing requirements."],
-      ["Insert / Fastener Position", "Confirm locations used during assembly and service."],
-      ["Cosmetic Surface Review", "Review visible finish and agreed appearance criteria."],
-      ["Sample Fit & Function", "Evaluate available mating components and documented sample needs."]
-    ],
-    moldTypesIntro: "Smart pet products may use precision, complex, multi-cavity, insert, overmolding or hot-runner tools depending on product architecture.",
-    moldTypes: [
-      { ...mold.precision, body: "Precision tools for sensor, camera and dispensing interfaces in connected pet products." },
-      { ...mold.complex, body: "Mold actions for channels, undercuts and detailed pet-device enclosure geometry." },
-      { ...mold.multi, body: "Multi-cavity concepts for suitable buttons, covers and smaller functional parts." },
-      { ...mold.insert, body: "Insert tooling for repeated fastening and loaded attachment points." },
-      { ...mold.over, body: "Overmolding for selected grips, seals or compliant pet-product interfaces." },
-      { ...mold.hot, body: "Runner strategies considered around resin, appearance and repeat-production requirements." }
-    ],
-    examplesIntro: "Representative scopes reflect typical pet-tech engineering without making food-contact claims or identifying customer programs.",
-    examples: [
-      { title: "Smart Feeder Housing", application: "Connected dispensing product", focus: "Food-path interfaces, motor mounts and cosmetic enclosure", support: "DFM, tooling, samples and molded parts" },
-      { title: "Pet Camera Enclosure", application: "Connected monitoring device", focus: "Optical opening, PCB mounts and cable access", support: "Precision tooling and assembly-fit review" },
-      { title: "Water Device Component Set", application: "Circulation or dispensing product", focus: "Channels, sealing geometry and cleaning access", support: "Complex molds, sample validation and production" }
-    ],
-    resources: [baseResources[1], baseResources[0], baseResources[3], { title: "Undercut Design", body: "Review snaps, service features and release strategies for pet products.", href: "/resources/injection-molding/undercut-design" }],
-    relatedCapabilities: related("smart pet-product"),
-    faqs: [
-      ["Which smart pet products can Arktech support?", "Potential scopes include feeder, water-device, camera, sensor and control housings plus internal functional components."],
-      ["Does Arktech claim food-contact certification?", "No. Material compliance and product certification depend on customer requirements, resin documentation and product-level evaluation."],
-      ["Can water-related geometry be reviewed during DFM?", "Yes. Channels, sealing contact, drainage, wall geometry and assembly access can be reviewed for moldability and inspection."],
-      ["Can pet-product housings include electronic interfaces?", "PCB mounts, sensor openings, cable channels and connector access can be included in the DFM and sample-fit scope."],
-      ["Do you support assembly after molding?", "Assembly and secondary operations can be scoped when components, work instructions and acceptance criteria are available."],
-      ["What is needed for a pet-tech tooling quote?", "Send CAD, drawings, materials, annual volume, food or water interface requirements, electronics data and critical dimensions."]
-    ],
-    ctaEyebrow: "START YOUR PET TECH PROJECT",
-    ctaHeading: "Developing a Smart Pet Product?",
-    ctaCopy: "Send the product CAD, material targets, interfaces and volume requirements for DFM, tooling and molding review."
+    slug: "pet-tech", navTitle: "Pet Tech Products", eyebrow: "PET TECH PRODUCTS",
+    seoTitle: "Pet Tech Injection Molding & Product Tooling | Arktech", metaDescription: "Custom injection molds and molded plastic components for smart feeders, connected pet products, monitoring devices and automated pet-care products.",
+    h1: "Injection Molding & Tooling for Pet Tech Products", heroCopy: "Tooling and molded plastic components for smart feeders, monitoring devices and automated pet-care products where consumer appearance and functional assembly must work together.",
+    heroImage: "/images/industries/pet-lifestyle-product-parts.png", heroAlt: "Smart pet feeder water device camera and molded plastic product housings", secondaryCta: "Discuss a Pet Tech Project",
+    applicationImage: "/images/industries/pet-lifestyle-product-parts.webp", applicationAlt: "Pet technology housings bowls camera enclosures and functional molded components",
+    applicationsHeading: "Molded Components for Connected Pet Products", applicationsIntro: "Pet-tech programs combine consumer styling with moving, feeding, sensing or water-handling assemblies.",
+    applications: [["Smart Feeders", "Housings, bowls, lids and dispensing parts around motors and sensors."], ["Water Devices", "Reservoir, cover and pump-related components with defined interfaces."], ["Pet Cameras", "Camera housings, bases and moving covers."], ["Smart Doors & Access", "Frames, latches and sensor housings for controlled access."], ["Automated Care Products", "Functional housings and carriers for motorized pet products."]],
+    engineeringHeading: "Engineering Priorities for Pet Tech Products", engineeringIntro: "These products combine visible housings with moving mechanisms, removable cleaning parts and user-accessible assemblies.",
+    engineeringConsiderations: [["Cleaning & Disassembly", "Plan removable components and fasteners around intended cleaning."], ["Motor & Sensor Packaging", "Protect alignment, clearance and service access."], ["Water-Handling Interfaces", "Define contact geometry without making unverified ingress claims."], ["Noise & Vibration Features", "Review mounting geometry around motors or pumps."], ["Consumer Appearance", "Control texture, color split, gates and witness lines."], ["Safe Edge Geometry", "Review exposed edges and openings against customer requirements."]],
+    toolingHeading: "Tooling & Molding Considerations for Pet Tech Assemblies", toolingIntro: "Tool concepts account for multipart housings, removable components and functional geometry around mechanisms.",
+    toolingConsiderations: [["Large housing fill", "Balance gate location, walls and cooling across styled enclosures."], ["Moving components", "Review clearances and datums for lids, doors and dispensers."], ["Side-action features", "Release ports, hooks and openings with serviceable actions."], ["Insert strategy", "Plan threads and metal features around use and assembly."], ["Assembly samples", "Validate representative subassemblies, not isolated parts only."]],
+    moldTypesIntro: "Pet-tech products commonly use precision housing, complex-action, insert and large-component tooling.", moldTypes: [mold.precision, mold.complex, mold.insert, mold.large],
+    evidence: { eyebrow: "APPLICATION EVIDENCE", title: "Smart Pet Product Component Review", summary: "An application-led view of housings, removable components and functional interfaces considered in pet-tech tooling.", image: "/images/industries/pet-lifestyle-product-parts.webp", alt: "Smart pet product housings feeder parts water-device components and camera enclosures", application: "Connected feeders, water devices and monitoring products", engineeringFocus: "Cleaning access, mechanism packaging, appearance and assembly", validation: "Mating-part fit, motion clearance, visible surfaces and critical dimensions" },
+    processIntro: "Pet-tech projects move from assembly-aware DFM through tooling, functional samples and approved production conditions.",
+    validationHeading: "Validation for Pet Tech Product Assemblies", validationIntro: "Validation reflects how molded parts interact with motors, sensors, removable components and the finished product.",
+    validationItems: [["Assembly fit", "Review covers, bowls, reservoirs, frames and modules together."], ["Motion clearance", "Check doors, lids and dispensing mechanisms through travel."], ["Visible quality", "Inspect cosmetic zones, texture and witness marks."], ["Critical dimensions", "Record interfaces controlling fit or mechanism position."], ["Cleaning-related fit", "Confirm removable parts locate and reassemble as defined."]],
+    resources: [resource.ribs, resource.material, { title: "Undercut Design", body: "Review hooks, latches and side features before choosing tooling actions.", href: "/resources/injection-molding/undercut-design" }], relatedCapabilities: caps("pet tech"),
+    faqs: [["Which pet-tech products can Arktech support?", "Programs can include feeders, water devices, cameras, access products, trackers and automated-care housings."], ["Can moving mechanisms be checked during DFM?", "Yes. Motor, sensor and mating-part data supports clearance and mounting review."], ["Does Arktech claim pet food-contact certification?", "No. Any food-contact or compliance requirement must be defined and verified for the selected material and project."], ["Can the project include assembly validation?", "Representative assemblies can be checked when mating components and acceptance criteria are available."]],
+    ctaEyebrow: "PET TECH RFQ", ctaHeading: "Discuss Your Pet Tech Application", ctaCopy: "Send product CAD, mechanism data, material targets, assembly needs and expected volume for review.",
+    needsAssetReplacement: true, assetReplacementNote: "Replace with a verified Arktech pet-tech tooling or molded-part project image when publication approval is available."
   },
   {
-    slug: "consumer-electronics",
-    navTitle: "Consumer Electronics",
-    eyebrow: "CONSUMER ELECTRONICS",
-    seoTitle: "Consumer Electronics Injection Molding & Tooling | Arktech Mold",
-    metaDescription: "Injection molds and plastic injection molding for consumer electronics enclosures, router housings, handheld covers, control housings and functional plastic components.",
-    h1: "Consumer Electronics Molding",
-    heroCopy: "Arktech supports consumer-electronics teams with DFM engineering, export injection molds, sample validation and molding for product enclosures, handheld covers and functional components.",
-    heroImage: "/images/industries/consumer-electronics-enclosures.png",
-    heroAlt: "Consumer electronics products including enclosures mobile devices audio products and accessories",
-    applicationImage: "/images/industries/consumer-electronics-enclosures.webp",
-    applicationAlt: "Consumer electronics housings enclosures circuit interfaces and functional components",
-    applicationsHeading: "Typical Consumer Electronics Plastic Components",
-    applicationsIntro: "Electronics enclosures require a coordinated review of visible surfaces, PCB and connector interfaces, assembly features and production finish.",
-    applications: [
-      ["Electronic Enclosures", "Cosmetic shells for connected, powered and portable products."],
-      ["Router Housings", "Ventilated enclosures with ports, antennas and internal mounts."],
-      ["Power-Bank Housings", "Compact shells with battery, connector and assembly interfaces."],
-      ["Handheld Covers", "Ergonomic exterior parts with controlled gaps and visible finish."],
-      ["Control Housings", "Enclosures for displays, buttons and electronics modules."],
-      ["Insert-Molded Components", "Functional plastic parts integrating specified metal features."]
-    ],
-    engineeringHeading: "Engineering Considerations for Electronics Enclosures",
-    engineeringIntro: "Consumer products often place cosmetic expectations, thin geometry and dense internal interfaces into a compact molded assembly.",
-    engineeringConsiderations: [
-      ["Cosmetic Surfaces", "Protect visible zones from avoidable gates, ejection and witness marks."],
-      ["Thin / Controlled Walls", "Balance filling, stiffness, sink and cooling across the enclosure."],
-      ["PCB & Connector Interfaces", "Coordinate mounts, port locations and internal clearances."],
-      ["Snap-Fits", "Review strain, retention and assembly or service cycles."],
-      ["Threaded Inserts", "Define insert locations and loads before mold and process selection."],
-      ["Heat & Ventilation", "Design openings and local structure around electronic heat sources."],
-      ["Assembly Gaps", "Control datums and mating geometry across enclosure halves."],
-      ["Surface Finish", "Define texture, gloss and visible acceptance criteria before trial."]
-    ],
-    capabilityIntro: "Consumer-electronics programs connect enclosure DFM, precision tooling, sample approval and molded-part production.",
-    capabilities: [
-      { title: "Injection Mold Manufacturing", body: "Precision and complex tooling for electronics shells, ports, inserts and visible enclosure surfaces.", href: "/services/injection-mold-manufacturing" },
-      { title: "Plastic Injection Molding", body: "Engineering samples, launch builds and repeat supply for approved electronics components.", href: "/services/plastic-injection-molding" },
-      { title: "DFM Engineering", body: "Review walls, PCB interfaces, vents, snaps and cosmetic requirements within compact enclosure geometry.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Inspect housing gaps, connector openings, surface finish and assembly fit before production release.", href: "/injection-molds/mold-trial-validation" }
-    ],
-    lifecycleIntro: "A staged workflow keeps product appearance and electronic interfaces aligned through tooling, trial and repeat supply.",
-    lifecycle: lifecycle("consumer-electronics enclosure"),
-    materialIntro: "Materials are selected around documented appearance, strength, heat and product-use requirements.",
-    materials: [
-      { title: "Cosmetic Enclosures", body: "Common families for visible electronics housings.", items: ["ABS", "PC/ABS", "PC"] },
-      { title: "Functional Components", body: "Engineering families for carriers, connectors and mechanisms.", items: ["PBT", "PA", "POM"] },
-      { title: "Flexible / Clear Features", body: "Options used where the actual product design requires them.", items: ["TPU", "TPE", "Transparent PC"] }
-    ],
-    qualityIntro: "Validation combines visible-surface criteria with the internal dimensions needed for electronics and final assembly.",
-    qualityItems: [
-      ["Enclosure & Gap Dimensions", "Check mating edges, flushness and overall assembly datums."],
-      ["PCB / Connector Position", "Verify mounts and openings used by electronic components."],
-      ["Insert Location", "Confirm threaded or functional insert position and orientation."],
-      ["Cosmetic Surface Inspection", "Review texture, gloss and allowable molding marks."],
-      ["Assembly Fit", "Test available housing halves, boards or representative components."],
-      ["Sample Approval", "Document dimensional and appearance results before repeat production."]
-    ],
-    moldTypesIntro: "Electronics programs may need precision, complex, insert, overmolding, 2K, multi-cavity or hot-runner tooling.",
-    moldTypes: [
-      { ...mold.precision, body: "Controlled tools for compact electronics housings and internal alignment features." },
-      { ...mold.complex, body: "Tooling actions for side ports, detailed vents and enclosure undercuts." },
-      { ...mold.insert, body: "Insert tools for threaded and functional features in electronic products." },
-      { ...mold.over, body: "Overmolding for selected grips, protection and compliant enclosure interfaces." },
-      { ...mold.twoK, body: "Two-material tools for integrated controls, seals or cosmetic product features." },
-      { ...mold.multi, body: "Multi-cavity tools for suitable smaller electronics components and controls." },
-      { ...mold.hot, body: "Runner systems evaluated around surface quality, resin and production economics." }
-    ],
-    examplesIntro: "Representative scopes illustrate common consumer-electronics tooling needs without identifying customer programs.",
-    examples: [
-      { title: "Router Housing Tooling", application: "Connected network device", focus: "Ventilation, ports, PCB mounts and cosmetic finish", support: "DFM, mold, samples and repeat molding" },
-      { title: "Handheld Product Enclosure", application: "Portable electronic product", focus: "Ergonomics, snap assembly and controlled gaps", support: "Precision tooling and cosmetic validation" },
-      { title: "Insert-Molded Control Part", application: "Functional electronic interface", focus: "Insert location, molded geometry and assembly datum", support: "Insert tool, inspection and production support" }
-    ],
-    resources: [baseResources[3], { title: "Draft Angle Guidelines", body: "Coordinate part release with enclosure depth and texture.", href: "/resources/injection-molding/draft-angle-guidelines" }, baseResources[1], { title: "Transparent Plastic Molding", body: "Review clear windows, light paths and cosmetic molding requirements.", href: "/resources/injection-molding/transparent-plastic-molding" }],
-    relatedCapabilities: related("consumer-electronics"),
-    faqs: [
-      ["Which consumer-electronics parts can Arktech support?", "Typical scopes include product enclosures, router housings, handheld covers, control housings, internal carriers and insert-molded components."],
-      ["Can you review PCB and connector geometry before tooling?", "Yes. Mounting bosses, ports, internal clearances and assembly datums can be reviewed with available electronic and mating data."],
-      ["How are cosmetic electronics housings validated?", "Visible zones, finish criteria, gates, parting lines and sample appearance are reviewed together with dimensional and assembly requirements."],
-      ["Can enclosures include transparent or soft-touch features?", "Transparent molding, overmolding or 2K concepts can be assessed when the design, materials and process requirements support them."],
-      ["Can Arktech support prototype through repeat production?", "Programs can include engineering samples, trial builds, low-volume molding and repeat production after approval."],
-      ["What data is needed for an electronics enclosure RFQ?", "Provide CAD, drawings, resin and finish, annual demand, PCB or connector data, appearance zones and critical dimensions."]
-    ],
-    ctaEyebrow: "START YOUR ELECTRONICS PROJECT",
-    ctaHeading: "Developing a Consumer Electronics Product?",
-    ctaCopy: "Upload your enclosure CAD, interface data, material and finish requirements for DFM and tooling review."
+    slug: "automotive", navTitle: "Automotive Components", eyebrow: "AUTOMOTIVE COMPONENTS",
+    seoTitle: "Automotive Plastic Injection Molding & Tooling | Arktech", metaDescription: "Injection molds and plastic components for automotive interior controls, panels, vents and functional parts requiring dimensional consistency and controlled surface appearance.",
+    h1: "Injection Molding & Tooling for Automotive Components", heroCopy: "Export tooling and molded plastic components for automotive interiors, controls and functional applications where texture, dimensional consistency and repeat production matter.",
+    heroImage: "/images/industries/Automotive-Components.png", heroAlt: "Automotive interior dashboard controls vents and molded plastic components", secondaryCta: "Discuss an Automotive Project",
+    applicationImage: "/images/industries/automotive-ev-components.webp", applicationAlt: "Automotive and EV charging housings connectors and functional molded components",
+    applicationsHeading: "Automotive Interior & Functional Applications", applicationsIntro: "Arktech supports component tooling without implying vehicle-level approval or certification.",
+    applications: [["Interior Controls", "Switch, button and control housings with visible and tactile requirements."], ["Vents & Airflow Parts", "Slats, frames and duct interfaces requiring controlled motion."], ["Panels & Bezels", "Appearance-critical frames, trims and control-panel parts."], ["Sensor Housings", "Compact enclosures with connector and mounting interfaces."], ["Connector Components", "Functional molded geometry around electrical and mechanical interfaces."]],
+    engineeringHeading: "Engineering Priorities for Automotive Plastic Components", engineeringIntro: "Automotive components require project-specific control of visible surfaces, dimensional interfaces and repeated production.",
+    engineeringConsiderations: [["Texture & Grain", "Coordinate draft, split lines and gates with visible finish."], ["Dimensional Stability", "Protect mounting, connector and moving interfaces."], ["Heat & Environment", "Confirm the exact material grade against service requirements."], ["Clip & Fastener Features", "Review stress, assembly direction and release."], ["Cavity Balance", "Plan repeat production around balanced filling and traceability."], ["Mating-Part Fit", "Use representative hardware to check gaps and motion."]],
+    toolingHeading: "Tooling & Molding Considerations for Automotive Parts", toolingIntro: "Tooling is planned around supplied standards, destination machine, visible surfaces and validation scope.",
+    toolingConsiderations: [["Texture-ready steel", "Complete appearance and draft review before texture release."], ["Precision actions", "Control sliders and shutoffs around clips and vents."], ["Balanced cavitation", "Validate filling and cooling across production cavities."], ["Material shrinkage", "Use the confirmed supplier grade for tool offsets."], ["Machine compatibility", "Align mold base and connections with destination equipment."]],
+    moldTypesIntro: "Automotive programs frequently use multi-cavity, precision, complex-action and hot-runner tooling.", moldTypes: [mold.multi, mold.precision, mold.complex, mold.hot],
+    evidence: { eyebrow: "REAL PROJECT EVIDENCE", title: "Automotive Sensor Housing Multi-Cavity Mold", summary: "A real tooling project for repeated sensor-housing components with cavity balance and dimensional consistency at the center of validation.", image: "/images/case-studies/automotive-multi-cavity-mold.webp", alt: "Automotive sensor housing multi-cavity injection mold and molded components", application: "Repeated automotive sensor-housing components", engineeringFocus: "Cavity balance, locating interfaces and dimensional stability", validation: "Cavity-specific samples and dimensional inspection", href: "/case-studies/automotive-sensor-housing-tooling", linkLabel: "View Automotive Tooling Project" },
+    processIntro: "Automotive tooling progresses through requirements review, mold approval, cavity-aware trials and documented validation.",
+    validationHeading: "Validation for Automotive Tooling & Molded Parts", validationIntro: "Inspection follows the drawing and customer requirements; no unverified PPAP or IATF claim is made.",
+    validationItems: [["Cavity-specific inspection", "Keep measurements traceable to each cavity."], ["Texture & appearance", "Review visible zones and allowable molding marks."], ["Assembly interfaces", "Check clips, mounts, connectors and moving features."], ["Process parameters", "Record approved trial conditions."], ["Correction history", "Track actions and updated samples before release."]],
+    resources: [resource.multi, resource.engineering, resource.warpage], relatedCapabilities: caps("automotive component"),
+    faqs: [["Which automotive parts can Arktech support?", "Scopes include controls, vents, bezels, sensor housings, connector components and other functional parts."], ["Does Arktech claim IATF or PPAP capability?", "No unverified IATF certification or PPAP service is claimed. Documentation is agreed per project."], ["Can tooling be built for our molding plant?", "Yes. Destination machine and plant standards should be supplied before approval."], ["How is multi-cavity consistency reviewed?", "Samples and measurements can be identified by cavity for balance and dimensional review."]],
+    ctaEyebrow: "AUTOMOTIVE COMPONENT RFQ", ctaHeading: "Discuss Your Automotive Component Application", ctaCopy: "Share CAD, material grade, texture requirements, annual volume and destination-machine standards."
+  },
+  {
+    slug: "industrial-automation", navTitle: "Industrial Automation", eyebrow: "INDUSTRIAL AUTOMATION",
+    seoTitle: "Industrial Automation Injection Molding & Tooling | Arktech", metaDescription: "Custom injection molds and plastic components for controllers, sensors, automation equipment housings and industrial products requiring functional geometry and production consistency.",
+    h1: "Injection Molding & Tooling for Industrial Automation", heroCopy: "Engineering, export tooling and molded plastic components for controllers, sensors and automation equipment where functional geometry and stable production are priorities.",
+    heroImage: "/images/industries/Industrial-parts.jpg", heroAlt: "Industrial automation housings sensors controllers and precision functional components", secondaryCta: "Discuss an Automation Project",
+    applicationImage: "/images/industries/industrial-parts.webp", applicationAlt: "Industrial controller housings sensor enclosures and precision automation components",
+    applicationsHeading: "Plastic Components for Industrial Automation", applicationsIntro: "Programs focus on functional housings and interfaces used around control, sensing, motion and factory equipment.",
+    applications: [["Controller Housings", "Enclosures for controls, displays and industrial connections."], ["Sensor Enclosures", "Compact housings with cable and mounting interfaces."], ["Machine Interface Panels", "Bezels and panels around operator controls."], ["Automation Covers", "Protective covers for actuators and moving assemblies."], ["Industrial Fan Components", "Complex hub and blade geometry requiring coordinated release."]],
+    engineeringHeading: "Engineering Priorities for Automation Components", engineeringIntro: "Industrial parts combine functional geometry, reinforced materials, inserts and repeated service access.",
+    engineeringConsiderations: [["Functional Datums", "Control interfaces locating sensors, boards or hardware."], ["Insert & Thread Features", "Plan metal interfaces around torque and pull-out needs."], ["Cable Routing", "Protect bend, clearance and connector access."], ["Reinforced Materials", "Account for directional shrinkage and tool wear."], ["Complex Release", "Resolve ports and hooks with robust tooling actions."], ["Serviceability", "Review access around repeated maintenance."]],
+    toolingHeading: "Tooling & Molding Considerations for Industrial Parts", toolingIntro: "Industrial tooling prioritizes durable mechanisms, replaceable wear areas and stable interfaces.",
+    toolingConsiderations: [["Slider / lifter sequence", "Model the complete motion path for side features."], ["Wear & replaceability", "Design high-contact areas for practical maintenance."], ["Insert loading", "Define location and handling for metal features."], ["Cooling thick geometry", "Manage local mass in structural housings."], ["Dimensional conditioning", "Agree when material conditioning affects inspection."]],
+    moldTypesIntro: "Automation parts can require complex-action, insert, precision and unscrewing molds.", moldTypes: [mold.complex, mold.insert, mold.precision, mold.unscrewing],
+    evidence: { eyebrow: "REAL TOOLING EVIDENCE", title: "Industrial Fan-Blade Mold with Coordinated Sliders", summary: "A real complex injection mold showing coordinated side actions used to release detailed fan-blade geometry.", image: "/images/case-studies/fan-blade-mold.webp", alt: "Complex industrial fan-blade injection mold with coordinated slider mechanisms", application: "Industrial fan component with detailed hub and blade features", engineeringFocus: "Seven-direction slider concept, release sequence and serviceable actions", validation: "Dry-run movement, mold trial and molded-part review", href: "/injection-molds/complex-injection-molds", linkLabel: "Explore Complex Injection Molds" },
+    processIntro: "Automation programs connect functional DFM with serviceable tooling, controlled trials and assembly-aware approval.",
+    validationHeading: "Validation for Industrial Automation Components", validationIntro: "Validation centers on interfaces and mechanisms that determine fit, function and repeat production.",
+    validationItems: [["Functional dimensions", "Inspect mounting, locating and movement-related features."], ["Insert position", "Verify metal-feature location and orientation."], ["Tool movement", "Confirm actions through dry run and molding trials."], ["Assembly fit", "Review electronics, sensors and hardware where available."], ["Repeatability", "Compare agreed conditions across samples and cavities."]],
+    resources: [resource.slider, resource.engineering, { title: "Undercut Design", body: "Reduce avoidable tooling complexity while preserving function.", href: "/resources/injection-molding/undercut-design" }], relatedCapabilities: caps("industrial automation"),
+    faqs: [["Which automation parts can Arktech support?", "Programs can include controller housings, sensor enclosures, panels, covers and functional parts."], ["Can tooling include sliders or unscrewing actions?", "Yes. The concept follows actual geometry, travel, steel, sequence and reliability requirements."], ["Can metal inserts be included?", "Insert molding or installed inserts can be reviewed against load, position and inspection requirements."], ["How are reinforced plastics handled?", "The exact grade is reviewed for drying, shrinkage, wear and conditioning."]],
+    ctaEyebrow: "INDUSTRIAL AUTOMATION RFQ", ctaHeading: "Discuss Your Industrial Automation Application", ctaCopy: "Send CAD, material grade, hardware interfaces, volume and destination-machine requirements."
+  },
+  {
+    slug: "medical-devices", navTitle: "Medical Device Components", eyebrow: "MEDICAL DEVICE COMPONENTS",
+    seoTitle: "Medical Device Injection Molding & Tooling | Arktech", metaDescription: "Injection molds and molded plastic components for medical device housings, enclosures and functional parts with focus on dimensional control, material requirements and validation.",
+    h1: "Injection Molding & Tooling for Medical Device Components", heroCopy: "Tooling and molded plastic components for medical and diagnostic equipment where dimensional control, material requirements and documented sample validation must be defined clearly.",
+    heroImage: "/images/industries/medial-industry.webp", heroAlt: "Medical and diagnostic equipment with molded housings controls and functional components", secondaryCta: "Discuss a Medical Component",
+    applicationImage: "/images/industries/medical-healthcare-device-parts.webp", applicationAlt: "Medical device housings transparent parts cartridges and diagnostic components",
+    applicationsHeading: "Medical & Diagnostic Product Components", applicationsIntro: "Support covers moldable components without implying device approval, cleanroom production or medical-system certification.",
+    applications: [["Diagnostic Housings", "Enclosures around screens, controls and electronics."], ["Equipment Covers & Panels", "Visible and structural covers used on equipment."], ["Cartridge Housings", "Controlled interfaces for replaceable modules."], ["Transparent Components", "Clear covers and windows with defined visual requirements."], ["Internal Carriers", "Structures locating boards, sensors or functional modules."]],
+    engineeringHeading: "Engineering Priorities for Medical Device Components", engineeringIntro: "Review begins with customer-defined material, dimensional, appearance and validation requirements.",
+    engineeringConsiderations: [["Critical Dimensions", "Identify interfaces controlling assembly or functional alignment."], ["Material Definition", "Work from the exact approved supplier grade."], ["Transparent Features", "Protect polish, gate and weld-line requirements."], ["Sealing Surfaces", "Review flatness and parting-line placement around defined seals."], ["Insert Interfaces", "Coordinate load, position and repeated assembly."], ["Traceable Inspection", "Agree dimensions, stages and report format before trials."]],
+    toolingHeading: "Tooling & Molding Considerations for Medical Components", toolingIntro: "Tooling follows the supplied component specification and inspection plan; no regulatory or cleanroom claim is made.",
+    toolingConsiderations: [["Precision steel conditions", "Protect critical interfaces with stable inserts and datums."], ["Part handling", "Plan ejection around visible or sensitive areas."], ["Material preparation", "Follow verified requirements for the selected grade."], ["Cavity traceability", "Maintain sample identity where multiple cavities are used."], ["Documented corrections", "Connect mold changes with updated samples and results."]],
+    moldTypesIntro: "Medical components can require precision, multi-cavity, insert and transparent-part tooling.", moldTypes: [mold.precision, mold.multi, mold.insert, { title: "Transparent Part Tooling", body: "Polished tooling for clear covers and windows.", href: "/injection-molds/high-gloss-injection-molds" }],
+    evidence: { eyebrow: "REAL APPLICATION EVIDENCE", title: "Medical Education Device Housing Project", summary: "A real product-development project showing the relationship between device housing geometry, internal interfaces and assembled-product requirements.", image: "/images/case-studies/medical-education-device.webp", alt: "Medical education device housing components engineering development and assembled product", application: "Medical education device enclosure and internal component set", engineeringFocus: "Housing interfaces, internal packaging and product assembly", validation: "Molded-component dimensions, visible surfaces and assembled-device fit" },
+    processIntro: "Medical component programs move through requirements review, approved tooling data, controlled trials and documented validation.",
+    validationHeading: "Documented Validation for Medical Components", validationIntro: "Inspection is based on customer drawings and agreed requirements; it does not imply regulatory approval of the finished device.",
+    validationItems: [["Critical-dimension report", "Record nominal, tolerance and actual results."], ["Visual inspection", "Review defined cosmetic and transparent surfaces."], ["Assembly fit", "Check mating parts, inserts and fasteners where available."], ["Cavity traceability", "Identify sample results by cavity when applicable."], ["Trial documentation", "Retain parameters, observations and correction actions."]],
+    resources: [resource.material, resource.transparent, resource.dfm], relatedCapabilities: caps("medical device component"),
+    faqs: [["Which medical-related components can Arktech support?", "Typical scopes include housings, covers, panels, cartridges, transparent parts and internal carriers."], ["Does Arktech claim ISO 13485, cleanroom or FDA approval?", "No. This page makes no unverified ISO 13485, cleanroom or FDA claim."], ["Can dimensional reports be provided?", "Critical dimensions can be reported against customer drawings and an agreed scope."], ["Can transparent components be reviewed?", "Yes. Review covers exact resin, polish, flow path, handling and customer visual criteria."]],
+    ctaEyebrow: "MEDICAL COMPONENT RFQ", ctaHeading: "Discuss Your Medical Device Component Application", ctaCopy: "Upload CAD, drawings, exact material requirements, critical dimensions and validation expectations."
   }
 ];
 
