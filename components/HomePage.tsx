@@ -190,26 +190,32 @@ export function HomePage() {
   return (
     <div className="overflow-x-clip">
       <section className="relative isolate overflow-hidden bg-[var(--brand-dark)] text-white" aria-labelledby="homepage-hero-heading">
-        <Image alt="Export injection molds manufactured by Arktech for global production" className="-z-20 object-cover object-[68%_center] sm:object-center" fill priority sizes="100vw" src="/images/hero/export-injection-mold-manufacturing-hero.webp" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,35,58,0.92)_0%,rgba(8,35,58,0.82)_48%,rgba(8,35,58,0.48)_78%,rgba(8,35,58,0.30)_100%)]" />
-        <div className="container-page flex min-h-[610px] items-center py-14 sm:min-h-[620px] lg:min-h-[650px]">
-          <div className="max-w-[1050px]">
-            <p className="text-xs font-bold uppercase tracking-[0.11em] text-white/80 sm:text-sm">Export Injection Molds &amp; Plastic Injection Molding</p>
-            <h1 className="mt-4 max-w-[1050px] text-[1.75rem] font-bold leading-[1.06] tracking-[-0.025em] text-white sm:text-[2.5rem] md:text-[3rem] lg:text-[3.35rem] xl:text-[3.625rem]" id="homepage-hero-heading">
-              Export Injection Mold Manufacturer &amp; Plastic Injection Molding Partner
+        <Image alt="Export injection molds and molded plastic parts manufactured by Arktech" className="-z-20 object-cover object-[64%_center] sm:object-center" fill priority sizes="100vw" src="/images/hero/export-injection-mold-manufacturing-hero.webp" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,35,58,0.96)_0%,rgba(8,35,58,0.90)_56%,rgba(8,35,58,0.68)_100%)] sm:bg-[linear-gradient(90deg,rgba(8,35,58,0.95)_0%,rgba(8,35,58,0.87)_46%,rgba(8,35,58,0.48)_72%,rgba(8,35,58,0.18)_100%)] lg:bg-[linear-gradient(90deg,rgba(8,35,58,0.95)_0%,rgba(8,35,58,0.88)_43%,rgba(8,35,58,0.44)_65%,rgba(8,35,58,0.10)_100%)]" />
+        <div className="container-page flex min-h-[640px] items-center py-12 sm:min-h-[650px] sm:py-14 lg:min-h-[660px] lg:py-16">
+          <div className="w-full sm:max-w-[800px] lg:w-[65%] lg:max-w-[740px]">
+            <p className="text-xs font-bold uppercase tracking-[0.11em] text-white/90 sm:text-sm">Export Tooling &amp; Plastic Part Production</p>
+            <h1 className="mt-4 text-[2rem] font-bold leading-[1.1] tracking-[-0.025em] text-white sm:text-[2.5rem] md:text-[2.75rem] lg:text-[2.875rem]" id="homepage-hero-heading">
+              <span className="lg:block">Injection Mold Manufacturer &amp;</span>{" "}
+              <span className="lg:block">Plastic Injection Molding Partner</span>
             </h1>
-            <p className="mt-5 max-w-[800px] text-base leading-7 text-white/85 sm:text-lg sm:leading-8 lg:text-xl">From DFM and export tooling to mold trials and plastic injection production, Arktech supports product companies and injection molding companies from tool development through production.</p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[rgba(8,35,58,0.34)] px-6 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
-            </div>
-          </div>
-        </div>
-      </section>
+            <p className="mt-5 max-w-[720px] text-[0.9375rem] leading-6 text-white sm:text-base sm:leading-7 lg:text-lg lg:leading-8">Custom export molds and plastic part production for OEMs, product companies and injection molders—from DFM and mold design to trial validation and global delivery.</p>
 
-      <section className="border-b border-[var(--line)] bg-white" aria-label="Arktech tooling and molding proof points">
-        <div className="container-page grid grid-cols-2 gap-x-5 gap-y-3 py-5 sm:grid-cols-3 lg:grid-cols-5 lg:py-6">
-          {proofItems.map((item) => <p className="flex items-center gap-2 text-sm font-semibold leading-5 text-[var(--brand-dark)]" key={item}><span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-[var(--brand)]" />{item}</p>)}
+            <div className="mt-6 grid max-w-[740px] grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-2.5" aria-label="Arktech tooling and molding capabilities">
+              {proofItems.map((item) => (
+                <span className={`flex min-h-10 items-center gap-2 rounded-sm border border-white/25 bg-white/10 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white backdrop-blur-[2px] sm:min-h-11 sm:px-3.5 sm:text-sm ${item === "Plastic Injection Molding 25–550T" ? "col-span-2 whitespace-nowrap" : ""}`} key={item}>
+                  <span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Request a Tooling Quote</Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[rgba(8,35,58,0.28)] px-6 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-white/85">Share your CAD files and project requirements.</p>
+          </div>
         </div>
       </section>
 

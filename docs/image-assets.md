@@ -8,7 +8,7 @@ The optimized Homepage reuses approved first-party and existing local assets; it
 
 | Homepage use | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Hero | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Export injection molds manufactured by Arktech for global production | Existing approved Arktech hero image; priority-loaded above the fold |
+| Hero | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Export injection molds and molded plastic parts manufactured by Arktech | Existing approved Arktech hero image; priority-loaded above the fold |
 | Featured project — automotive multi-cavity tooling | `/images/case-studies/automotive-multi-cavity-mold.webp` | Multi-cavity injection mold and molded automotive sensor housings | Existing real Arktech case-study image; linked to the verified project page |
 | Featured project — two-shot light cover | `/images/case-studies/two-shot-light-cover.webp` | First-shot and second-shot injection molds with molded light cover | Existing real Arktech case-study image; linked to the verified project page |
 | Featured project — unscrewing tooling | `/images/case-studies/unscrewing-mold.webp` | Motor-driven unscrewing injection mold and threaded molded components | Existing real Arktech case-study image; linked to the verified project page |
