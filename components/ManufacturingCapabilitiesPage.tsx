@@ -71,28 +71,11 @@ const engineeringCapabilities = [
   }
 ];
 
-const specialtyCapabilities = [
-  {
-    title: "Insert Molding",
-    description: "Tooling for integrated metal or plastic inserts with controlled location and retention.",
-    image: "/images/mold-types/insert-molding-tools.webp",
-    alt: "Insert molding tool for integrated inserts in plastic components",
-    href: "/injection-molds/insert-molding-tools"
-  },
-  {
-    title: "Two-Shot / 2K Molding",
-    description: "Mold concepts for two materials, colors or functional zones in a coordinated molding sequence.",
-    image: "/images/mold-types/two-shot-2k-bi-injection-molds.webp",
-    alt: "Two-shot 2K injection mold for multi-material plastic components",
-    href: "/injection-molds/two-shot-2k-molds"
-  },
-  {
-    title: "Overmolding",
-    description: "Tooling support for soft-touch, sealing, grip and other multi-material product requirements.",
-    image: "/images/mold-types/arktech-overmolding-tool.webp",
-    alt: "Injection mold for overmolding applications",
-    href: "/injection-molds/overmolding-tools"
-  }
+const specialtyMoldingLinks = [
+  { label: "Insert Molding", href: "/injection-molds/insert-molding-tools" },
+  { label: "Two-Shot / 2K Molding", href: "/injection-molds/two-shot-2k-molds" },
+  { label: "Overmolding", href: "/injection-molds/overmolding-tools" },
+  { label: "In-Mold Labeling (IML)", href: "/injection-molds#in-mold-labeling" }
 ];
 
 const supportingCapabilities = [
@@ -225,6 +208,21 @@ export function ManufacturingCapabilitiesPage() {
                     </ul>
                   </nav>
                 ) : null}
+
+                {index === 1 ? (
+                  <nav aria-labelledby="specialty-molding-navigation" className="border-y border-[var(--line)] bg-[var(--surface-soft)] px-5 py-5 sm:px-6 sm:py-6" id="specialty-molding">
+                    <p className="text-xs font-bold uppercase tracking-[0.13em] text-[var(--brand)]">Molding Processes</p>
+                    <h3 className="mt-2 text-xl font-bold leading-tight text-[var(--brand-dark)] sm:text-2xl" id="specialty-molding-navigation">Specialty Molding Capabilities</h3>
+                    <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">Explore molding processes for integrated inserts, multi-material parts, functional surfaces and in-mold decoration.</p>
+                    <ul aria-label="Specialty molding capability pages" className="mt-4 flex flex-wrap gap-2">
+                      {specialtyMoldingLinks.map((process) => (
+                        <li key={process.href}>
+                          <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-semibold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={process.href}>{process.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                ) : null}
               </Fragment>
             ))}
           </div>
@@ -243,21 +241,6 @@ export function ManufacturingCapabilitiesPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-14 sm:py-16" id="specialty-molding">
-        <div className="container-page">
-          <SectionHeading eyebrow="Molding Processes" title="Specialty Molding Capabilities" body="Explore insert molding, two-shot / 2K molding and overmolding for integrated inserts, multi-material parts and functional surfaces." />
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {specialtyCapabilities.map((capability) => (
-              <Link className="focus-ring group grid grid-cols-[112px_minmax(0,1fr)] overflow-hidden rounded-sm border border-[var(--line)] bg-white transition hover:border-[var(--brand)] sm:grid-cols-[152px_minmax(0,1fr)] md:grid-cols-1" href={capability.href} key={capability.title}>
-                <div className="relative min-h-36 overflow-hidden bg-[var(--surface-soft)] md:aspect-[16/9]"><Image alt={capability.alt} className="object-cover object-center transition duration-300 group-hover:scale-[1.02] motion-reduce:transition-none" fill sizes="(min-width: 768px) 33vw, 152px" src={capability.image} /></div>
-                <div className="p-5"><h3 className="text-xl font-bold text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{capability.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.description}</p><span className="mt-4 inline-flex text-sm font-bold text-[var(--brand)]">View mold capability →</span></div>
-              </Link>
-            ))}
-          </div>
-          <Link className="focus-ring mt-7 inline-flex font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Mold Types →</Link>
         </div>
       </section>
 
