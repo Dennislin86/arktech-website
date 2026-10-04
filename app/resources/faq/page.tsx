@@ -26,7 +26,7 @@ const relatedGuides = [
 const relatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-  { label: "DFM Engineering", href: "/services/dfm-engineering" },
+  { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }
 ];

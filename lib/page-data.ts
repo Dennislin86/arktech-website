@@ -1889,7 +1889,7 @@ export const caseStudyPages: CaseStudyData[] = [
     related: [
       { label: "Medical Device Plastic Parts", href: "/industries/medical-devices" },
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-      { label: "DFM Engineering Support", href: "/services/dfm-engineering" }
+      { label: "DFM Engineering Support", href: "/injection-molding-engineering" }
     ]
   },
   {

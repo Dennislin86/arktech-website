@@ -5,7 +5,7 @@ import { FullBleedHero } from "@/components/FullBleedHero";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 
 const capabilities = [
-  { title: "DFM & Tooling Engineering", body: "Review part geometry, moldability, gating, cooling, ejection and moving mechanisms before steel cutting.", href: "/services/dfm-engineering", link: "Explore DFM Engineering" },
+  { title: "DFM & Tooling Engineering", body: "Review part geometry, moldability, gating, cooling, ejection and moving mechanisms before steel cutting.", href: "/injection-molding-engineering", link: "Explore DFM Engineering" },
   { title: "Mold Design & Approval", body: "Finalize mold structure, parting strategy, inserts, sliders, lifters, hot runner layout and receiving machine requirements for approval." },
   { title: "Precision Mold Manufacturing", body: "Coordinate CNC machining, EDM, wire cutting, grinding and precision machining of mold steel and tooling components." },
   { title: "Mold Fitting & Assembly", body: "Fit and verify inserts, movements, shut-offs, cooling connections and key mold mechanisms before trial." },
@@ -35,7 +35,7 @@ const exportReadyCapabilities = [
   {
     title: "Machine & Interface Compatibility",
     body: "Mold dimensions, clamping requirements, connections and machine interface are reviewed for the receiving production environment.",
-    href: "/services/dfm-engineering"
+    href: "/injection-molding-engineering"
   },
   {
     title: "Mold Trial & Validation",
@@ -202,7 +202,7 @@ const processStages = [
     title: "Engineering",
     steps: ["DFM & Tooling Review", "Mold Design Approval"],
     body: "Confirm part data, moldability, tooling requirements and final mold structure before manufacturing release.",
-    link: { label: "Explore DFM Engineering", href: "/services/dfm-engineering" }
+    link: { label: "Explore DFM Engineering", href: "/injection-molding-engineering" }
   },
   {
     number: "02",
@@ -360,7 +360,7 @@ const audiences = [
 ];
 
 const relatedCapabilities = [
-  { label: "DFM Engineering", href: "/services/dfm-engineering" },
+  { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" },
@@ -542,7 +542,7 @@ export function InjectionMoldManufacturingPage() {
               <p className="text-sm font-bold uppercase tracking-[0.12em] text-red-200">Production Mold Design</p>
               <h3 className="mt-3 text-2xl font-bold leading-tight sm:text-3xl">Tool Structure Matched to the Receiving Production Environment</h3>
               <p className="mt-4 leading-7 text-slate-300">Mold design approval connects tool structure, cooling, runner and gate strategy, ejection, moving mechanisms, component standards and customer machine compatibility before manufacturing release.</p>
-              <Link className="focus-ring mt-6 inline-flex w-fit rounded-sm font-bold text-white transition hover:text-red-200" href="/services/dfm-engineering">Explore DFM Engineering <span className="ml-2" aria-hidden="true">→</span></Link>
+              <Link className="focus-ring mt-6 inline-flex w-fit rounded-sm font-bold text-white transition hover:text-red-200" href="/injection-molding-engineering">Explore DFM Engineering <span className="ml-2" aria-hidden="true">→</span></Link>
             </figcaption>
           </figure>
 
@@ -582,7 +582,7 @@ export function InjectionMoldManufacturingPage() {
                   <p className="font-bold text-[var(--brand-dark)]">Have a complex part or tooling requirement?</p>
                   <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col xl:flex-row">
                     <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review <span className="ml-2" aria-hidden="true">→</span></Link>
-                    <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/services/dfm-engineering">Explore DFM Engineering <span className="ml-2" aria-hidden="true">→</span></Link>
+                    <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/injection-molding-engineering">Explore DFM Engineering <span className="ml-2" aria-hidden="true">→</span></Link>
                   </div>
                 </div>
               </div>
@@ -603,7 +603,7 @@ export function InjectionMoldManufacturingPage() {
               <p className="mt-4 text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">Send your CAD files, 2D drawings, machine information and tooling requirements for engineering review before mold design approval.</p>
               <div className="mt-6 flex flex-col gap-3">
                 <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review <span className="ml-2" aria-hidden="true">→</span></Link>
-                <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/services/dfm-engineering">Explore DFM Engineering <span className="ml-2" aria-hidden="true">→</span></Link>
+                <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/injection-molding-engineering">Explore DFM Engineering <span className="ml-2" aria-hidden="true">→</span></Link>
               </div>
             </aside>
           </div>

@@ -189,7 +189,7 @@ export default function ProjectManagementPage() {
           <div>
             <SectionHeader eyebrow="Project Management Overview" title="Structured Project Management for Export Injection Molds" body="Each export tooling project is coordinated through defined engineering milestones, customer approvals, weekly project updates and action tracking. This helps overseas engineering and sourcing teams follow tooling status, identify open issues early and prepare for mold trial, sample approval and production transfer." />
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
-              <TextLink href="/services/dfm-engineering">DFM Engineering</TextLink>
+              <TextLink href="/injection-molding-engineering">DFM Engineering</TextLink>
               <TextLink href="/services/injection-mold-manufacturing">Injection Mold Manufacturing</TextLink>
             </div>
           </div>

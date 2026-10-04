@@ -107,7 +107,7 @@ Recommended pages:
 
 - `/services/plastic-housing-manufacturing`
 - `/services/plastic-metal-assembly`
-- `/services/dfm-engineering`
+- `/injection-molding-engineering`
 
 Recommended CTA:
 
@@ -161,7 +161,7 @@ Pages:
 - `/services/cnc-metal-parts`
 - `/services/plastic-housing-manufacturing`
 - `/services/plastic-metal-assembly`
-- `/services/dfm-engineering`
+- `/injection-molding-engineering`
 
 Internal links:
 

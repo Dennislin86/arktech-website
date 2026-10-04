@@ -51,7 +51,7 @@ const coreCapabilities = [
   {
     title: "DFM Engineering",
     body: "Early review of draft, wall thickness, ribs, bosses, undercuts, interfaces and tooling risks.",
-    href: "/services/dfm-engineering"
+    href: "/injection-molding-engineering"
   },
   {
     title: "Insert Molding",
@@ -183,7 +183,7 @@ const resources = [
 const relatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-  { label: "DFM Engineering", href: "/services/dfm-engineering" },
+  { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }
 ];
@@ -384,7 +384,7 @@ export function RoboticsIndustryPage() {
             <figure className="relative mt-8 aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm">
               <Image alt="DFM engineering review for injection molded robotics component geometry" className="object-contain object-center" fill sizes="(min-width: 1024px) 42vw, 100vw" src="/images/process/dfm-engineering-feedback-old-website.png" />
             </figure>
-            <div className="mt-6"><ArrowLink href="/services/dfm-engineering">View DFM Engineering</ArrowLink></div>
+            <div className="mt-6"><ArrowLink href="/injection-molding-engineering">View DFM Engineering</ArrowLink></div>
           </div>
           <div className="grid gap-px overflow-hidden rounded-md border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">
             {engineeringConsiderations.map((item, index) => (

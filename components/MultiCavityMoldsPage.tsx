@@ -90,8 +90,8 @@ const relatedMolds = [
 
 const relatedCapabilities = [
   ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
-  ["DFM Engineering", "/services/dfm-engineering"],
-  ["Mold Flow Analysis", "/services/dfm-engineering#mold-flow-analysis"],
+  ["DFM Engineering", "/injection-molding-engineering"],
+  ["Mold Flow Analysis", "/injection-molding-engineering#moldflow-analysis"],
   ["Mold Trial & Validation", "/services/mold-trial-sampling-support"],
   ["Quality & Documentation", "/company/quality-documentation"],
   ["Plastic Injection Molding", "/services/plastic-injection-molding"],
@@ -303,7 +303,7 @@ export function MultiCavityMoldsPage() {
           </div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3">
             <ArrowLink href="/resources/injection-molds/hot-runner-vs-cold-runner">Hot Runner vs Cold Runner</ArrowLink>
-            <ArrowLink href="/services/dfm-engineering#mold-flow-analysis">View Mold Flow Analysis</ArrowLink>
+            <ArrowLink href="/injection-molding-engineering#moldflow-analysis">View Mold Flow Analysis</ArrowLink>
           </div>
         </div>
       </section>
@@ -359,7 +359,7 @@ export function MultiCavityMoldsPage() {
           <div>
             <SectionTitle eyebrow="DFM for Multi-Cavity Tooling" title="DFM Decisions Before Multi-Cavity Mold Design" />
             <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">Multi-cavity tooling should be evaluated as a complete molding system rather than simply duplicating a single cavity.</p>
-            <div className="mt-7"><ArrowLink href="/services/dfm-engineering">Explore DFM Engineering</ArrowLink></div>
+            <div className="mt-7"><ArrowLink href="/injection-molding-engineering">Explore DFM Engineering</ArrowLink></div>
           </div>
           <ol className="grid gap-3">
             {["Number of Cavities", "Part & Cavity Layout", "Runner / Gate Strategy", "Cooling & Venting", "Critical Dimensions by Cavity"].map((item, index) => (

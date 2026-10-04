@@ -16,7 +16,7 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
       { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
-      { label: "DFM Engineering", href: "/services/dfm-engineering" },
+      { label: "Injection Molding Engineering", href: "/injection-molding-engineering" },
       { label: "Tooling Spare Parts", href: "/services/tooling-spare-parts" },
       { label: "Extended Manufacturing by Arktech Group ↗", href: "https://www.arktech-group.com", external: true, groupLink: true }
     ]

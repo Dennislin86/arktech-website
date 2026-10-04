@@ -69,7 +69,7 @@ export const seoPages: SeoLandingPage[] = [
     ],
     serviceLinks: [
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "DFM Engineering Support", href: "/services/dfm-engineering" },
+      { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "Injection Molds", href: "/injection-molds" }
     ],
     relatedSeoSlugs: ["plastic-injection-molding", "dfm-engineering-services", "oem-manufacturing-services"]
@@ -303,7 +303,7 @@ export const seoPages: SeoLandingPage[] = [
       { question: "Can Arktech move the design into production tooling?", answer: "Yes. Prototype learning can feed into DFM, mold manufacturing, sampling and production planning." }
     ],
     serviceLinks: [
-      { label: "DFM Engineering Support", href: "/services/dfm-engineering" },
+      { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "CNC Metal Parts", href: "/services/cnc-metal-parts" },
       { label: "Request a Prototype Quote", href: "/request-a-quote" }
     ],
@@ -351,7 +351,7 @@ export const seoPages: SeoLandingPage[] = [
     ],
     serviceLinks: [
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-      { label: "DFM Engineering Support", href: "/services/dfm-engineering" },
+      { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "Request a Vacuum Casting Quote", href: "/request-a-quote" }
     ],
     relatedSeoSlugs: ["rapid-prototyping-services", "plastic-injection-molding", "oem-manufacturing-services"]
@@ -491,7 +491,7 @@ export const seoPages: SeoLandingPage[] = [
       { question: "Can DFM cover assemblies with plastic and metal parts?", answer: "Yes. Mixed-material interface, tolerance, fastening and process risks can be reviewed together." }
     ],
     serviceLinks: [
-      { label: "DFM Engineering Support", href: "/services/dfm-engineering" },
+      { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "DFM Guide", href: "/resources/dfm-guide" },
       { label: "Upload CAD for Review", href: "/request-a-quote" }
     ],

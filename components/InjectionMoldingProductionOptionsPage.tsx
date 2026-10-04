@@ -74,7 +74,7 @@ const faqs = [
 const related = [
   ["Plastic Injection Molding", "/services/plastic-injection-molding"],
   ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
-  ["DFM Engineering", "/services/dfm-engineering"],
+  ["DFM Engineering", "/injection-molding-engineering"],
   ["Insert & Overmolding", "/injection-molds/overmolding-tools"],
   ["Two-Shot / 2K Molding", "/injection-molds/two-shot-2k-molds"],
   ["Transparent Part Injection Molding", "/services/plastic-injection-molding"],

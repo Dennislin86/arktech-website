@@ -47,7 +47,7 @@ const engineeringCapabilities = [
     detail: "Part Review · Tooling Concept · Moldability Risk",
     image: "/images/Engineering/injection-molding-dfm-report-anonymized.webp",
     alt: "DFM report for injection mold design review",
-    href: "/services/dfm-engineering"
+    href: "/injection-molding-engineering"
   },
   {
     title: "Mold Trial & Validation",
@@ -104,7 +104,7 @@ const manufacturingPaths = [
   { question: "Need a Production Mold?", description: "Start with injection mold design, DFM, toolmaking and mold trial support.", cta: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
   { question: "Need Molded Plastic Parts?", description: "Move from mold validation into low-volume or mass plastic injection production.", cta: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
   { question: "Need a Specialized Mold?", description: "Explore mold types for complex geometry, production volume, materials and molding requirements.", cta: "Explore Injection Molds", href: "/injection-molds" },
-  { question: "Still Validating the Product?", description: "Start with DFM and engineering review before committing to production tooling.", cta: "Start with DFM Engineering", href: "/services/dfm-engineering" }
+  { question: "Still Validating the Product?", description: "Start with DFM and engineering review before committing to production tooling.", cta: "Start with DFM Engineering", href: "/injection-molding-engineering" }
 ];
 
 const processStages = [

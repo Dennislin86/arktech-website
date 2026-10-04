@@ -62,7 +62,7 @@ const coDesignResources = [
     title: "DFM Engineering",
     body: "Review part geometry and moldability before tooling.",
     label: "Explore DFM Engineering",
-    href: "/services/dfm-engineering"
+    href: "/injection-molding-engineering"
   },
   {
     title: "Material Selection Guide",
@@ -350,7 +350,7 @@ const reasons = [
     subtitle: "Review manufacturability before steel cutting",
     body: "Part geometry, material, tooling risks and assembly requirements are reviewed before tooling release to help reduce avoidable engineering changes later in the project.",
     label: "View DFM Engineering",
-    href: "/services/dfm-engineering"
+    href: "/injection-molding-engineering"
   },
   {
     number: "02",
@@ -438,7 +438,7 @@ const faqs = [
 
 const faqRelatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-  { label: "DFM Engineering", href: "/services/dfm-engineering" },
+  { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }
 ];
@@ -819,7 +819,7 @@ export function PlasticInjectionMoldingPage() {
                 <h4 className="text-lg font-bold text-[var(--brand-dark)]">Have a complex undercut or side-action part?</h4>
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review →</Link>
-                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/services/dfm-engineering">Explore DFM Engineering →</Link>
+                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/injection-molding-engineering">Explore DFM Engineering →</Link>
                 </div>
               </aside>
             </div>
@@ -944,7 +944,7 @@ export function PlasticInjectionMoldingPage() {
             <div>
               <h3 className="text-lg font-bold text-[var(--brand-dark)]">Not sure which molding process fits your part?</h3>
               <p className="mt-1 max-w-3xl text-sm leading-6 text-[var(--muted)]">Send us your CAD file, material requirements and expected volume for DFM review and process recommendation.</p>
-              <Link className="focus-ring mt-2 inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand-dark)] hover:text-[var(--brand)] hover:underline" href="/services/dfm-engineering">
+              <Link className="focus-ring mt-2 inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand-dark)] hover:text-[var(--brand)] hover:underline" href="/injection-molding-engineering">
                 DFM Engineering Support →
               </Link>
             </div>

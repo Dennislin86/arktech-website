@@ -328,15 +328,19 @@ No new image or video assets were created for `/services/mold-trial-sampling-sup
 | Specialty molding — Overmolding | `/images/material-capabilities/silicone-tpu-tpe-elastomer-components.webp` | Overmolded plastic components with rigid and soft materials | Existing user-supplied molded-component visual; reused in the Specialty Molding section |
 | Specialty molding — Two-Shot / 2K Molding | `/images/case-studies/two-shot-light-cover.webp` | Two-shot 2K molded component with two materials | Existing real Arktech tooling project image; reused in the Specialty Molding section |
 
-## DFM Engineering Page
+## Injection Molding Engineering Page
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Hero engineering review | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | DFM engineering review for injection molded parts before mold design | Anonymized technical crop from the existing first-party `/images/Molding/DFM.png`; active in the DFM hero |
-| DFM review scope report | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | Injection molding DFM report reviewing part design, moldability and tooling requirements | Privacy-safe 1812 × 817 WebP derivative of the existing real `/images/Engineering/DFM report.png`; cover/general-information pages excluded and customer/project response areas masked; active in the DFM Review Scope section |
-| Design principles | `/images/process/dfm-engineering-feedback-old-website.png` | DFM review showing plastic part geometry and injection mold engineering feedback | Existing Arktech DFM and mold-engineering graphic; active in the design guidance section |
-| DFM deliverables report example | `/images/Engineering/dfm-report-tooling-review-example.webp` | Anonymized injection molding DFM report showing parting, gating, venting, tooling actions, cooling and ejection review | Privacy-safe 1600 × 490 WebP derivative of the existing real `/images/Molding/DFM.png`; cover and customer/project pages excluded; active in the DFM Deliverables section |
-| Co-design engineering | `/images/capabilities/co-design-dfm-engineering.webp` | Engineer reviewing plastic part geometry during co-design and DFM | Existing approved engineering visual; active in the Co-Design section |
+| Hero engineering review | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | Injection molding DFM engineering report reviewing product and tooling risks | Anonymized technical crop from the existing first-party `/images/Molding/DFM.png`; active as the primary Hero visual |
+| Product co-design CAD | `/images/plastic-injection-molding/wall-thickness-rib-design.webp` | Annotated product CAD for injection molding co-design review | Existing annotated engineering visual; active in the Hero and Product Co-Design section |
+| DFM review report | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | Anonymized injection molding DFM report with moldability and tooling review | Privacy-safe 1812 × 817 WebP derivative of the existing real `/images/Engineering/DFM report.png`; cover/general-information pages excluded and customer/project response areas masked; active in the DFM and engineering-deliverables sections |
+| DFM deliverables report example | `/images/Engineering/dfm-report-tooling-review-example.webp` | DFM tooling review example documenting engineering decisions and open items | Privacy-safe 1600 × 490 WebP derivative of the existing real `/images/Molding/DFM.png`; cover and customer/project pages excluded; active in Engineering Deliverables |
+| Moldflow filling analysis | `/images/capabilities/moldflow-filling-analysis.webp` | Moldflow filling analysis showing progressive fill results for an injection molded component | Privacy-safe 1653 × 1100 WebP crop from the existing real `/images/Engineering/Moldflow report.png`; customer/project cover data excluded; original PNG retained unchanged; active in the Hero and Moldflow section |
+| Mold design engineering | `/images/process/dfm-engineering-feedback-old-website.png` | 3D injection mold design with core cavity layout and mold engineering details | Existing Arktech engineering graphic; active in Engineering Deliverables and Mold Design Engineering |
+| Mold trial evidence | `/images/injection-mold-manufacturing/mold-trial-report-evidence.webp` | Injection mold trial report documenting mold condition and validation | Existing real Arktech report asset; active in Engineering Validation |
+| Dimensional inspection | `/images/quality/dimensional-inspection-report-anonymized.webp` | Dimensional inspection report for injection molded trial samples | Existing anonymized Arktech inspection report; active in Engineering Validation |
+| Molding parameters | `/images/injection-mold-manufacturing/injection-molding-process-parameters.webp` | Injection molding process parameter sheet from mold trial | Existing real Arktech process record; active in Engineering Validation |
 
 ## Injection Molding Production Options Page
 

@@ -101,7 +101,7 @@ const capabilityRows = [
 ];
 
 const capabilityLinks: Record<string, string> = {
-  DFM: "/services/dfm-engineering",
+  DFM: "/injection-molding-engineering",
   "Complex Molds": "/services/injection-mold-manufacturing",
   "Engineering Plastics": "/services/plastic-injection-molding",
   "Insert Molding": "/injection-molds/insert-molding-tools",
@@ -117,7 +117,7 @@ const capabilityLinks: Record<string, string> = {
 };
 
 const process = [
-  { number: "01", title: "Co-Design & DFM", body: "Review geometry, application requirements, material targets and manufacturing risks before tooling release.", href: "/services/dfm-engineering" },
+  { number: "01", title: "Co-Design & DFM", body: "Review geometry, application requirements, material targets and manufacturing risks before tooling release.", href: "/injection-molding-engineering" },
   { number: "02", title: "Injection Mold Manufacturing", body: "Build the tooling strategy around part geometry, production needs and the intended molding location.", href: "/services/injection-mold-manufacturing" },
   { number: "03", title: "Mold Trial & Validation", body: "Evaluate samples, molding conditions and improvement actions before customer approval.", href: "/services/mold-trial-sampling-support" },
   { number: "04", title: "Plastic Injection Molding", body: "Move approved tooling into low-volume or repeat production with defined process requirements.", href: "/services/plastic-injection-molding" },

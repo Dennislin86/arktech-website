@@ -137,7 +137,7 @@ const deliverables = [
 
 const relatedCapabilities = [
   ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
-  ["DFM Engineering", "/services/dfm-engineering"],
+  ["DFM Engineering", "/injection-molding-engineering"],
   ["Quality & Documentation", "/company/quality-documentation"],
   ["Plastic Injection Molding", "/services/plastic-injection-molding"],
   ["Project Management", "/company/project-management"]

@@ -116,7 +116,7 @@ const specialtyMolding: MoldCardData[] = [
 ];
 
 const supportItems = [
-  { title: "DFM & Co-Design", body: "Review part geometry, draft, parting, gating, ejection and the tooling concept before mold design release.", href: "/services/dfm-engineering" },
+  { title: "DFM & Co-Design", body: "Review part geometry, draft, parting, gating, ejection and the tooling concept before mold design release.", href: "/injection-molding-engineering" },
   { title: "Mold Manufacturing", body: "Coordinate machining, EDM, fitting, assembly and toolmaking around the approved mold design.", href: "/services/injection-mold-manufacturing" },
   { title: "Mold Trial & Validation", body: "Manage trial setup, molding parameters, samples, dimensional inspection, corrections and approval records.", href: "/services/mold-trial-sampling-support" },
   { title: "Export Tooling Support", body: "Prepare machine compatibility information, agreed documentation, spare parts, packing and export delivery.", href: "/services/injection-mold-manufacturing" }

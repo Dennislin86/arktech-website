@@ -104,7 +104,7 @@ export const manufacturingFaqCategories: ManufacturingFaqCategory[] = [
     title: "DFM & Mold Design FAQs",
     description: "Engineering questions that should be resolved before mold design approval and steel cutting.",
     relatedLabel: "Explore DFM Engineering",
-    relatedHref: "/services/dfm-engineering",
+    relatedHref: "/injection-molding-engineering",
     items: [
       {
         question: "What is DFM for injection molding?",

@@ -50,7 +50,7 @@ export const services = [
     body: "Coordinated sourcing for plastic molded parts, die castings, machined parts, finishing, inserts, fasteners, assembly, inspection, and export logistics."
   },
   {
-    title: "DFM Engineering Support",
+    title: "Injection Molding Engineering",
     body: "Early engineering feedback on draft, wall thickness, ribs, tolerance stackups, gating, cooling, material choice, finish risk, and cost drivers before tooling release."
   }
 ];

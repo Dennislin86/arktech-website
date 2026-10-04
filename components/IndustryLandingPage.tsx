@@ -103,7 +103,7 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
         <div className="container-page grid gap-10 lg:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-14">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionHeading eyebrow="ENGINEERING CONSIDERATIONS" title={page.engineeringHeading} intro={page.engineeringIntro} />
-            <div className="mt-6"><ArrowLink href="/services/dfm-engineering">Explore DFM Engineering</ArrowLink></div>
+            <div className="mt-6"><ArrowLink href="/injection-molding-engineering">Explore DFM Engineering</ArrowLink></div>
           </div>
           <ol className="grid gap-x-9 gap-y-0 sm:grid-cols-2">
             {page.engineeringConsiderations.map(([title, body], index) => (

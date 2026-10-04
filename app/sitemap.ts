@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     ...site.nav.map((item) => item.href),
     "/request-a-quote",
+    "/injection-molding-engineering",
     "/resources/faq",
     "/seo",
     "/company/arktech-group",
@@ -23,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookie-policy"
   ];
   const detailRoutes = [
-    ...servicePages.map((page) => `/services/${page.slug}`),
+    ...servicePages.filter((page) => page.slug !== "dfm-engineering").map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
     ...toolingExamplePages.filter((page) => page.slug !== "die-casting-molds").map((page) => `/injection-molds/${injectionMoldSlug(page.slug)}`),

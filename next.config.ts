@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/dfm-engineering",
+        destination: "/injection-molding-engineering",
+        permanent: true
+      },
+      {
+        source: "/services/dfm-engineering",
+        destination: "/injection-molding-engineering",
+        permanent: true
+      },
+      {
         source: "/tooling-examples",
         destination: "/injection-molds",
         permanent: true

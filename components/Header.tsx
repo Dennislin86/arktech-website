@@ -23,7 +23,7 @@ function activeMenuLinkLabel(item: NavigationItem, pathname: string) {
 
 function isTopLevelActive(item: NavigationItem, pathname: string) {
   if (item.id === "resources" && pathname.startsWith("/case-studies")) return true;
-  if (item.id === "capabilities" && pathname.startsWith("/services/")) return true;
+  if (item.id === "capabilities" && (pathname.startsWith("/services/") || pathname === "/injection-molding-engineering")) return true;
   return pathname === item.href || pathname.startsWith(`${item.href}/`);
 }
 
@@ -37,7 +37,7 @@ const navigation: NavigationItem[] = [
         title: "Export Tooling",
         links: [
           { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing", emphasis: true },
-          { label: "DFM & Mold Engineering", href: "/services/dfm-engineering" },
+          { label: "Engineering & DFM", href: "/injection-molding-engineering" },
           { label: "Mold Design & Approval", href: "/services/injection-mold-manufacturing" },
           { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
           { label: "Quality & Documentation", href: "/company/quality-documentation" }
@@ -55,11 +55,11 @@ const navigation: NavigationItem[] = [
         ]
       },
       {
-        title: "Engineering Support",
+        title: "Engineering",
         links: [
-          { label: "Co-Design & Product Engineering", href: "/services/dfm-engineering", emphasis: true },
-          { label: "DFM for Plastic Parts", href: "/services/dfm-engineering" },
-          { label: "Mold Flow Analysis", href: "/services/dfm-engineering" },
+          { label: "Co-Design & Product Engineering", href: "/injection-molding-engineering#co-design", emphasis: true },
+          { label: "DFM for Plastic Parts", href: "/injection-molding-engineering#engineering-review" },
+          { label: "Moldflow Analysis", href: "/injection-molding-engineering#moldflow-analysis" },
           { label: "Material & Tolerance Review", staticCapability: true }
         ]
       },

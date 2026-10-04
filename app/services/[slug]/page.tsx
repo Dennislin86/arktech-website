@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DetailPage } from "@/components/DetailPage";
-import { DfmEngineeringPage } from "@/components/DfmEngineeringPage";
 import { InjectionMoldManufacturingPage } from "@/components/InjectionMoldManufacturingPage";
 import { InjectionMoldingProductionOptionsPage } from "@/components/InjectionMoldingProductionOptionsPage";
 import { MoldTrialValidationPage } from "@/components/MoldTrialValidationPage";
@@ -14,7 +13,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return servicePages.map((page) => ({ slug: page.slug }));
+  return servicePages.filter((page) => page.slug !== "dfm-engineering").map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -54,15 +53,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         url: `${site.url}/services/plastic-injection-molding`,
         images: [{ url: "/images/capabilities/plastic-injection-molding-production-video-frame.webp", alt: "Plastic injection molding production at Arktech" }]
       }
-    };
-  }
-
-  if (slug === "dfm-engineering") {
-    return {
-      title: { absolute: "DFM Engineering for Injection Molding | Arktech Mold" },
-      description:
-        "Arktech provides DFM engineering for plastic injection molded parts, reviewing wall thickness, draft, ribs, bosses, undercuts, gating, ejection, materials, tolerances and tooling risks before mold design.",
-      alternates: { canonical: "/services/dfm-engineering" }
     };
   }
 
@@ -118,10 +108,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   if (slug === "plastic-injection-molding") {
     return <PlasticInjectionMoldingPage />;
-  }
-
-  if (slug === "dfm-engineering") {
-    return <DfmEngineeringPage />;
   }
 
   if (slug === "injection-molding-production-options") {
