@@ -85,8 +85,8 @@ const specialtyCapabilities = [
   {
     title: "Overmolding",
     description: "Tooling support for soft-touch, sealing, grip and other multi-material product requirements.",
-    image: "/images/mold-types/insert-molding-tools.webp",
-    alt: "Production mold used for overmolding tooling applications",
+    image: "/images/mold-types/arktech-overmolding-tool.webp",
+    alt: "Injection mold for overmolding applications",
     href: "/injection-molds/overmolding-tools"
   }
 ];
