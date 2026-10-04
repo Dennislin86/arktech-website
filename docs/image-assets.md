@@ -161,11 +161,11 @@ The eight high-intent Industry child pages reuse approved local application imag
 
 | Mold category | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Precision Injection Molds | `/images/mold-types/Precision-Molds.png` | Precision injection mold for controlled-dimension plastic parts and repeatable production | Existing real Arktech tooling image; active as the Hub hero and Core Mold Type image |
+| Precision Injection Molds | `/images/mold-types/Precision-Molds.png` | Precision injection mold for controlled-dimension plastic parts and repeatable production | Existing real Arktech tooling image; active on the Hub and dedicated Precision Injection Molds child page |
 | Multi-Cavity Injection Molds | `/images/mold-types/multi-cavity-injection-molds.webp` | Multi-cavity injection mold with repeated production cavities | Existing real Arktech tooling image; active on the Hub, homepage and dedicated child page; High-Cavitation intent is consolidated here because no distinct route, content or asset exists |
 | Large Injection Molds | `/images/mold-types/large-component-molds.JPG` | Large injection mold for industrial housing and structural plastic parts | Existing real Arktech tooling photo; active on overview and homepage |
-| Complex Injection Molds | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with multiple sliders and tooling mechanisms | Existing real Arktech tooling image; active on overview and homepage |
-| Prototype Injection Molds | `/images/mold-types/prototype-injection-mold.webp` | Prototype injection mold with a molded part for engineering validation | Existing real Arktech tooling image; active as an informational Hub card because no dedicated child route exists |
+| Complex Injection Molds | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with multiple sliders and tooling mechanisms | Existing real Arktech tooling image; active on overview, homepage and dedicated Complex Injection Molds child page |
+| Prototype Injection Molds | `/images/mold-types/prototype-injection-mold.webp` | Prototype injection mold with a molded part for engineering validation | Existing real Arktech tooling image; active on the Hub and dedicated Prototype Injection Molds child page |
 | Insert Molding Tools | `/images/mold-types/insert-molding-tools.webp` | Insert molding tool for plastic parts with integrated inserts | Existing real Arktech tooling image; active on Hub and dedicated child page |
 | Overmolding Tools | `/images/mold-types/insert-molding-tools.webp` | Production mold used for insert and overmolding tooling applications | Existing approved real tooling image reused because no separate verified Overmolding mold photo exists; dedicated child route is active |
 | Two-Shot / 2K Molds | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | Two-shot and 2K injection mold for multi-material plastic parts | Existing real Arktech tooling image; active on overview and homepage |
@@ -173,6 +173,28 @@ The eight high-intent Industry child pages reuse approved local application imag
 | Hot Runner Molds | `/images/mold-types/hot-runner-molds.webp` | Hot runner injection mold for controlled production molding | Existing real Arktech tooling image; active on overview and homepage |
 | Valve Gate Molds | `/images/mold-types/hot-runner-molds.webp` | Hot runner injection mold representative of valve gate tooling engineering | Existing real Arktech hot-runner tooling image; reused because no separate verified valve-gate asset exists |
 | Slider & Lifter engineering resource | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with sliders and lifters for side-action release | Removed as a standalone Hub Mold Type; retained only as a Complex Mold mechanism and engineering-resource topic |
+
+### Dedicated Mold Type Child Pages
+
+The reusable Mold Type page system uses only approved local assets and factual alt text. Dedicated child routes now use the following primary/supporting evidence pairs:
+
+| Page | Primary asset | Supporting asset | Asset status |
+| --- | --- | --- | --- |
+| Precision Injection Molds | `/images/mold-types/Precision-Molds.png` | `/images/injection-mold-manufacturing/mold-trial-report-evidence.webp` | Verified mold + real validation record |
+| Complex Injection Molds | `/images/mold-types/complex-injection-molds.png` | `/images/case-studies/fan-blade-mold.webp` | Verified complex mold + real multi-action project |
+| Family Injection Molds | `/images/mold-types/Family-molds.JPG` | `/images/mold-types/multi-cavity-injection-molds.webp` | Verified family mold + factual comparison visual |
+| Large Injection Molds | `/images/mold-types/large-component-molds.JPG` | `/images/process/tooling-manufacturing-plan-mold.png` | Verified large mold + real inspection image |
+| Prototype Injection Molds | `/images/mold-types/prototype-injection-mold.webp` | `/images/capabilities/product-design-injection-mold-production.webp` | Verified prototype mold + real development components |
+| Unscrewing Injection Molds | `/images/mold-types/unscrewing-molds.webp` | `/images/case-studies/unscrewing-mold.webp` | Verified tooling + real unscrewing project |
+| High-Gloss Injection Molds | `/images/mold-types/High-Gloss Injection Molds.JPG` | `/images/factory-workshop/injection-mold-cavity-polishing-room.webp` | Verified polished mold + real polishing work |
+| Insert Molding Tools | `/images/mold-types/insert-molding-tools.webp` | `/images/capabilities/plastic-injection-molding-v2.png` | Verified insert tool + general molded-component context |
+| Two-Shot / 2K Injection Molds | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | `/images/case-studies/two-shot-light-cover.webp` | Verified 2K tool + real two-shot project |
+| Overmolding Tools | `/images/material-capabilities/silicone-tpu-tpe-elastomer-components.webp` | `/images/mold-types/insert-molding-tools.webp` | Temporary: real material components + real Arktech mold; replace with verified overmolding tool and substrate/finished-part image |
+| Hot Runner Injection Molds | `/images/mold-types/hot-runner-molds.webp` | `/images/injection-mold-manufacturing/injection-molding-process-parameters.webp` | Verified hot-runner tool + real process record |
+| Gas-Assisted Injection Molds | `/images/mold-types/complex-injection-molds.png` | `/images/plastic-injection-molding/gate-flow-analysis.webp` | Temporary: factual Arktech mold + flow-analysis context; replace with verified gas-assisted tool and molded section |
+| Thermoset Molds | `/images/mold-types/hot-runner-molds.webp` | `/images/factory-workshop/injection-mold-precision-grinding-workshop.webp` | Temporary: factual Arktech tooling + real component machining; replace with verified thermoset tooling and molded part |
+
+High-Temperature Injection Molds and In-Mold Labeling remain overview/resource topics only. No standalone child page is indexed because the current asset and project evidence is insufficient for a differentiated, non-thin page.
 
 The `/injection-molds` page uses approved real case-study assets for Automotive Sensor Housing, Medical Device Cartridge, Smart Home Housing, Two-Shot Light Cover, Threaded Component Unscrewing and Fan Blade tooling in the horizontal **Real Injection Mold Projects** portfolio. Every carousel card uses a unique factual alt description. No toolroom overview, operator, polishing, trial-report or inspection-only image is included in that completed-mold portfolio.
 

@@ -68,8 +68,8 @@ const lifecycle = (noun: string): IndustryItem[] => [
 ];
 
 const mold = {
-  precision: { title: "Precision Injection Molds", body: "Controlled tooling for repeatable dimensions, alignment features and stable assembly interfaces.", href: "/injection-molds#precision-injection-molds" },
-  complex: { title: "Complex Injection Molds", body: "Tooling with coordinated sliders, lifters, shutoffs or other geometry-driven mold actions.", href: "/injection-molds#complex-injection-molds" },
+  precision: { title: "Precision Injection Molds", body: "Controlled tooling for repeatable dimensions, alignment features and stable assembly interfaces.", href: "/injection-molds/precision-injection-molds" },
+  complex: { title: "Complex Injection Molds", body: "Tooling with coordinated sliders, lifters, shutoffs or other geometry-driven mold actions.", href: "/injection-molds/complex-injection-molds" },
   multi: { title: "Multi-Cavity Injection Molds", body: "Balanced multi-cavity tooling for repeat production of consistent components.", href: "/injection-molds/multi-cavity-molds" },
   hot: { title: "Hot Runner Molds", body: "Runner-system strategies for production programs where material, gate and volume support the approach.", href: "/injection-molds/hot-runner-molds" },
   insert: { title: "Insert Molding Tools", body: "Tooling for molded components with integrated metal or functional inserts.", href: "/injection-molds/insert-molding-tools" },

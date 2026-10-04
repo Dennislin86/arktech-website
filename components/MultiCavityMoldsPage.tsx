@@ -104,12 +104,12 @@ const faqs = [
     answer: "A multi-cavity injection mold contains multiple cavities for producing more than one identical part in each molding cycle. The complete layout must be engineered so filling, cooling, venting, packing, ejection and dimensional review remain controlled across the cavities."
   },
   {
-    question: "When should a project use a multi-cavity mold?",
-    answer: "It is typically considered when the part design is sufficiently stable and forecast production demand justifies the additional tooling complexity. Part geometry, resin behavior, quality requirements, machine compatibility and long-term production planning also influence the decision."
+    question: "How is the number of cavities selected?",
+    answer: "There is no universal cavity count. The appropriate number depends on part size, material, runner layout, machine capacity, production volume, mold footprint and tooling requirements. These factors should be reviewed together during DFM and mold concept planning."
   },
   {
-    question: "How many cavities should an injection mold have?",
-    answer: "There is no universal cavity count. The appropriate number depends on part size, material, runner layout, machine capacity, production volume, mold footprint and tooling requirements. These factors should be reviewed together during DFM and mold concept planning."
+    question: "What is the difference between multi-cavity and family molds?",
+    answer: "A multi-cavity mold produces multiple identical parts, while a family mold produces different related parts. Family tooling must balance unequal part volumes, geometry and demand; multi-cavity tooling focuses on consistency between repeated cavities."
   },
   {
     question: "How do you balance filling in a multi-cavity mold?",
@@ -120,8 +120,12 @@ const faqs = [
     answer: "Yes, a hot runner may be considered when it fits the part geometry, resin, gate requirements, production plan and maintenance approach. A balanced cold runner can also be appropriate; the decision is project-specific."
   },
   {
-    question: "How are multi-cavity molds inspected and validated?",
+    question: "How are parts from different cavities validated?",
     answer: "Trial samples should be identified by cavity so visual condition, filling behavior and critical dimensions can be reviewed separately. Any correction and re-trial actions can then be traced to the affected cavity condition."
+  },
+  {
+    question: "When should a product move to multi-cavity tooling?",
+    answer: "The move is considered when the product design and material are sufficiently stable, forecast demand supports the tooling investment, and cavity layout, machine capacity and quality requirements can be validated as one production system."
   }
 ];
 
@@ -180,7 +184,7 @@ export function MultiCavityMoldsPage() {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       name: "Multi-Cavity Injection Molds",
-      description: "Multi-cavity injection molds engineered for balanced filling, cooling, repeatable dimensions and production output.",
+      description: "Design and manufacturing of multi-cavity injection molds with balanced filling, cooling, cavity-to-cavity consistency, mold trials and dimensional validation for production.",
       url: pageUrl
     },
     {
@@ -196,7 +200,7 @@ export function MultiCavityMoldsPage() {
         url: site.url
       },
       areaServed: "Worldwide",
-      description: "Multi-cavity injection molds engineered for balanced filling, cooling, repeatable dimensions and production output."
+      description: "Design and manufacturing of multi-cavity injection molds with balanced filling, cooling, cavity-to-cavity consistency, mold trials and dimensional validation for production."
     },
     {
       "@context": "https://schema.org",
@@ -230,15 +234,15 @@ export function MultiCavityMoldsPage() {
       <section className="border-b border-[var(--line)] bg-[var(--surface-soft)]">
         <div className="container-page grid items-center gap-9 py-12 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-12 lg:py-16">
           <div>
-            <Eyebrow>Injection Mold Type</Eyebrow>
+            <Eyebrow>Production Tooling</Eyebrow>
             <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">
-              Multi-Cavity Molds for Repeat Production
+              Multi-Cavity Injection Molds for Repeat Production
             </h1>
-            <p className="mt-6 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Multi-cavity injection molds produce multiple identical parts per cycle. Arktech supports DFM, cavity-layout planning, runner and cooling review, mold trials and cavity-specific validation for repeat production.</p>
+            <p className="mt-6 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Multi-cavity tooling produces multiple identical parts in each molding cycle and requires careful cavity layout, filling balance, cooling and cavity-to-cavity validation.</p>
             <p className="mt-6 text-sm font-bold leading-6 text-[var(--brand-dark)] sm:text-base">Balanced Filling · Cooling Strategy · Cavity Identification · Trial Validation</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <PrimaryButton href="/request-a-quote">Upload CAD for DFM Review</PrimaryButton>
-              <SecondaryButton href="/request-a-quote">Request Tooling Quote</SecondaryButton>
+              <PrimaryButton href="/request-a-quote">Upload CAD for Tooling Review</PrimaryButton>
+              <SecondaryButton href="/request-a-quote">Discuss Cavity Requirements</SecondaryButton>
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-[var(--line)] bg-white">
@@ -250,6 +254,41 @@ export function MultiCavityMoldsPage() {
               sizes="(min-width: 1024px) 62vw, 100vw"
               className="object-cover object-center"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--surface-soft)] py-16">
+        <div className="container-page">
+          <SectionTitle eyebrow="Tooling Selection" title="Multi-Cavity vs Family Molds" body="Both approaches can produce more than one part per cycle, but they solve different production requirements." />
+          <div className="mt-9 grid gap-px overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--line)] md:grid-cols-2">
+            <article className="bg-white p-6"><h3 className="text-2xl font-bold text-[var(--brand-dark)]">Multi-Cavity Mold</h3><ul className="mt-5 grid gap-3 text-[var(--muted)]">{["Multiple identical parts", "Focus on cavity-to-cavity consistency", "Suitable for repeat production", "Balanced filling and cooling are critical"].map((item) => <li className="border-l-2 border-[var(--brand)] pl-4" key={item}>{item}</li>)}</ul></article>
+            <article className="bg-white p-6"><h3 className="text-2xl font-bold text-[var(--brand-dark)]">Family Mold</h3><ul className="mt-5 grid gap-3 text-[var(--muted)]">{["Multiple different but related parts", "Different part volumes and geometry", "Balancing different components is more complex", "Used only when product and molding conditions make it practical"].map((item) => <li className="border-l-2 border-[var(--brand)] pl-4" key={item}>{item}</li>)}</ul><div className="mt-6"><ArrowLink href="/injection-molds/family-molds">Explore Family Injection Molds</ArrowLink></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="container-page">
+          <SectionTitle eyebrow="Production Scale-Up" title="Scaling from Validation to Multi-Cavity Production" body="Depending on project stage and production requirements, tooling may move from lower-cavity validation into multi-cavity production tooling. A preliminary single-cavity tool is not required for every program." />
+          <ol className="mt-9 grid gap-px overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2 lg:grid-cols-7">
+            {["Product / Design Validation", "Production Volume Review", "Cavity Count Evaluation", "Multi-Cavity Mold Design", "Mold Manufacturing", "Trial & Cavity Validation", "Production"].map((step, index) => <li className="bg-[var(--surface-soft)] p-4" key={step}><span className="text-xs font-extrabold text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span><p className="mt-2 text-sm font-bold leading-5 text-[var(--brand-dark)]">{step}</p></li>)}
+          </ol>
+        </div>
+      </section>
+
+      <section className="bg-[var(--brand-dark)] py-14 text-white">
+        <div className="container-page grid gap-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+          <div><p className="text-xs font-extrabold uppercase tracking-[0.16em] text-red-200 sm:text-sm">Tooling to Production</p><h2 className="mt-3 text-3xl font-extrabold leading-[1.1] sm:text-4xl">From Multi-Cavity Tooling to Production</h2><p className="mt-4 max-w-3xl leading-7 text-white/75">Validated multi-cavity molds can continue into plastic injection production at Arktech when customers prefer tooling and molding under one workflow, supported by molding equipment from 25–550T.</p></div>
+          <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white hover:bg-[var(--brand-hover)]" href="/services/plastic-injection-molding">Explore Plastic Injection Molding</Link>
+        </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="container-page grid gap-12 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)]">
+          <SectionTitle eyebrow="Cavity Planning" title="How We Evaluate Cavity Count" body="Cavity count is an engineering and production decision. Arktech does not apply a fixed number before reviewing the part, mold and receiving-machine conditions." />
+          <div className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+            {["Expected Production Volume", "Part Size & Geometry", "Material", "Mold Size", "Runner & Gate Strategy", "Injection Machine Capacity", "Shot Size", "Clamp Requirement", "Cooling", "Tool Complexity", "Cavity-to-Cavity Consistency"].map((item) => <p className="border-b border-[var(--line)] py-3 font-semibold text-[var(--brand-dark)]" key={item}>{item}</p>)}
           </div>
         </div>
       </section>
@@ -277,7 +316,7 @@ export function MultiCavityMoldsPage() {
 
       <section className="bg-[var(--surface-soft)] py-16">
         <div className="container-page">
-          <SectionTitle eyebrow="Multi-Cavity Engineering" title="Engineering Challenges in Multi-Cavity Injection Molds" />
+          <SectionTitle eyebrow="Multi-Cavity Engineering" title="Multi-Cavity Mold Engineering Considerations" />
           <div className="mt-9 grid gap-x-8 gap-y-7 md:grid-cols-2 lg:grid-cols-3">
             {engineeringChallenges.map(([title, body], index) => (
               <article className="border-t-2 border-[var(--brand)] pt-5" key={title}>

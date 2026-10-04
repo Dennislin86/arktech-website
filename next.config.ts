@@ -58,6 +58,16 @@ const nextConfig: NextConfig = {
         permanent: true
       },
       {
+        source: "/injection-molds/large-component-molds",
+        destination: "/injection-molds/large-injection-molds",
+        permanent: true
+      },
+      {
+        source: "/injection-molds/insert-molds",
+        destination: "/injection-molds/insert-molding-tools",
+        permanent: true
+      },
+      {
         source: "/tooling-examples/die-casting-molds",
         destination: "/services/die-casting-mold",
         permanent: true

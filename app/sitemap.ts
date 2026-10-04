@@ -1,12 +1,11 @@
 import type { MetadataRoute } from "next";
-import { caseStudyPages, resourcePages, servicePages, solutionPages, toolingExamplePages } from "@/lib/page-data";
+import { caseStudyPages, resourcePages, servicePages, solutionPages } from "@/lib/page-data";
 import { site } from "@/lib/site";
 import { seoPages } from "@/lib/seo-pages";
 import { allEngineeringResources } from "@/lib/engineering-resources";
 import { industryLandingPages } from "@/lib/industry-landing-pages";
 import { toolingSupportSlugs } from "@/lib/tooling-support-pages";
-
-const injectionMoldSlug = (slug: string) => slug === "large-component-molds" ? "large-injection-molds" : slug === "insert-molds" ? "insert-molding-tools" : slug;
+import { moldTypeSlugs } from "@/lib/mold-type-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -28,7 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages.filter((page) => !["dfm-engineering", "mold-trial-sampling-support", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
-    ...toolingExamplePages.filter((page) => page.slug !== "die-casting-molds").map((page) => `/injection-molds/${injectionMoldSlug(page.slug)}`),
+    "/injection-molds/multi-cavity-molds",
+    ...moldTypeSlugs.map((slug) => `/injection-molds/${slug}`),
     ...toolingSupportSlugs.map((slug) => `/injection-molds/${slug}`),
     ...caseStudyPages.map((page) => `/case-studies/${page.slug}`),
     ...resourcePages.map((page) => `/resources/${page.slug}`),

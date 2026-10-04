@@ -61,14 +61,14 @@ const moldCapabilities = [
     body: "Controlled tooling for repeatable dimensions, fit and production performance.",
     image: "/images/mold-types/Precision-Molds.png",
     alt: "Precision injection mold for controlled-dimension plastic parts",
-    href: "/injection-molds#precision-injection-molds"
+    href: "/injection-molds/precision-injection-molds"
   },
   {
     title: "Complex Injection Molds",
     body: "Slides, lifters and coordinated side actions for demanding part geometry.",
     image: "/images/mold-types/complex-injection-molds.png",
     alt: "Complex injection mold with multiple side-action mechanisms",
-    href: "/injection-molds#complex-injection-molds"
+    href: "/injection-molds/complex-injection-molds"
   },
   {
     title: "Multi-Cavity Injection Molds",
@@ -82,7 +82,7 @@ const moldCapabilities = [
     body: "Related parts produced together when demand and molding conditions align.",
     image: "/images/mold-types/Family-molds.JPG",
     alt: "Family injection mold with several related part cavities",
-    href: "/injection-molds#family-injection-molds"
+    href: "/injection-molds/family-molds"
   },
   {
     title: "Two-Shot / 2K Molds",

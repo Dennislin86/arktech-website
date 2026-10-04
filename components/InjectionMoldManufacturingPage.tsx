@@ -60,7 +60,7 @@ const moldTypes = [
     description: "Tooling for undercuts, sliders, lifters and coordinated side actions in demanding part geometries.",
     image: "/images/mold-types/complex-injection-molds.png",
     alt: "Complex injection mold with sliders lifters and coordinated side actions",
-    href: "/injection-molds#complex-injection-molds"
+    href: "/injection-molds/complex-injection-molds"
   },
   {
     title: "Multi-Cavity Injection Molds",
@@ -109,7 +109,7 @@ const moldTypes = [
     description: "Prototype tooling for engineering samples, validation and early production builds.",
     image: "/images/mold-types/prototype-injection-mold.webp",
     alt: "Prototype injection mold with molded sample for engineering validation",
-    href: "/services/injection-molding-production-options#prototype"
+    href: "/injection-molds/prototype-injection-molds"
   }
 ];
 
@@ -936,7 +936,7 @@ export function InjectionMoldManufacturingPage() {
                 ))}
               </div>
               <div className="mt-6">
-                <TextLink href="/injection-molds#complex-injection-molds">Explore Complex Injection Molds</TextLink>
+                <TextLink href="/injection-molds/complex-injection-molds">Explore Complex Injection Molds</TextLink>
               </div>
             </article>
           </div>

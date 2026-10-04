@@ -20,14 +20,16 @@ const coreMolds: MoldCardData[] = [
     title: "Precision Injection Molds",
     description: "Tooling for plastic parts with demanding dimensional, fit and repeatability requirements, supported by controlled machining and dimensional validation.",
     image: "/images/mold-types/Precision-Molds.png",
-    alt: "Precision injection mold for controlled-dimension plastic parts"
+    alt: "Precision injection mold for controlled-dimension plastic parts",
+    href: "/injection-molds/precision-injection-molds"
   },
   {
     id: "complex-injection-molds",
     title: "Complex Injection Molds",
     description: "Injection molds using slides, lifters, side actions and other mechanisms for complex geometry, undercuts and challenging part release.",
     image: "/images/mold-types/complex-injection-molds.png",
-    alt: "Complex injection mold with multiple side-action mechanisms"
+    alt: "Complex injection mold with multiple side-action mechanisms",
+    href: "/injection-molds/complex-injection-molds"
   },
   {
     id: "multi-cavity-molds",
@@ -42,7 +44,8 @@ const coreMolds: MoldCardData[] = [
     title: "Family Injection Molds",
     description: "Different related parts produced in one mold when material, molding conditions and production ratios make family tooling practical.",
     image: "/images/mold-types/Family-molds.JPG",
-    alt: "Family injection mold with cavities for several related plastic parts"
+    alt: "Family injection mold with cavities for several related plastic parts",
+    href: "/injection-molds/family-molds"
   },
   {
     id: "large-injection-molds",
@@ -57,7 +60,8 @@ const coreMolds: MoldCardData[] = [
     title: "Prototype Injection Molds",
     description: "Tooling for design validation, pilot builds and early production stages before full-scale manufacturing.",
     image: "/images/mold-types/prototype-injection-mold.webp",
-    alt: "Prototype injection mold and molded part for design validation"
+    alt: "Prototype injection mold and molded part for design validation",
+    href: "/injection-molds/prototype-injection-molds"
   }
 ];
 
@@ -75,7 +79,8 @@ const specializedMolds: MoldCardData[] = [
     title: "High-Gloss Injection Molds",
     description: "Mirror-polished injection tooling for plastic housings, panels and visible parts with demanding surface appearance requirements.",
     image: "/images/mold-types/High-Gloss Injection Molds.JPG",
-    alt: "Mirror-polished mold cavities for high-gloss plastic housings"
+    alt: "Mirror-polished mold cavities for high-gloss plastic housings",
+    href: "/injection-molds/high-gloss-injection-molds"
   },
   {
     id: "high-temperature-injection-molds",

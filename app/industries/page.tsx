@@ -97,8 +97,8 @@ const priorities = [
 ] as const;
 
 const applicationThemes = [
-  { number: "01", title: "Appearance-Critical Parts", body: "High-gloss surfaces, texture, visible parting lines and gate restrictions can influence both product and mold design.", href: "/injection-molds#high-gloss-injection-molds", link: "Explore Appearance Tooling" },
-  { number: "02", title: "Complex Functional Parts", body: "Undercuts, sliders, lifters, inserts, threads and assembly interfaces may require more complex mold concepts.", href: "/injection-molds#complex-injection-molds", link: "Explore Complex Tooling" },
+  { number: "01", title: "Appearance-Critical Parts", body: "High-gloss surfaces, texture, visible parting lines and gate restrictions can influence both product and mold design.", href: "/injection-molds/high-gloss-injection-molds", link: "Explore Appearance Tooling" },
+  { number: "02", title: "Complex Functional Parts", body: "Undercuts, sliders, lifters, inserts, threads and assembly interfaces may require more complex mold concepts.", href: "/injection-molds/complex-injection-molds", link: "Explore Complex Tooling" },
   { number: "03", title: "Production Components", body: "Multi-cavity tooling, mold validation and injection production support repeatable manufacturing for higher-volume programs.", href: "/injection-molds/multi-cavity-molds", link: "Explore Multi-Cavity Molds" }
 ];
 

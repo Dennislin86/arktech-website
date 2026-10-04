@@ -87,9 +87,9 @@ const navigation: NavigationItem[] = [
         title: "Mold Types",
         links: [
           { label: "Multi-Cavity Molds", href: "/injection-molds/multi-cavity-molds" },
-          { label: "Family Molds", href: "/resources/injection-molds/multi-cavity-vs-family-mold" },
+          { label: "Family Molds", href: "/injection-molds/family-molds" },
           { label: "Large Injection Molds", href: "/injection-molds/large-injection-molds" },
-          { label: "Complex Injection Molds", href: "/services/injection-mold-manufacturing" },
+          { label: "Complex Injection Molds", href: "/injection-molds/complex-injection-molds" },
           { label: "Insert Molding Tools", href: "/injection-molds/insert-molding-tools" },
           { label: "Overmolding Tools", href: "/injection-molds/overmolding-tools" },
           { label: "Two-Shot / 2K Molds", href: "/injection-molds/two-shot-2k-molds" },
