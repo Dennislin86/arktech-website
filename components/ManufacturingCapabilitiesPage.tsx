@@ -88,10 +88,10 @@ const supportingCapabilities = [
 ];
 
 const manufacturingPaths = [
-  { question: "Need a Production Mold?", description: "Start with injection mold design, DFM, toolmaking and mold trial support.", cta: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
-  { question: "Need Molded Plastic Parts?", description: "Move from mold validation into low-volume or mass plastic injection production.", cta: "Plastic Injection Molding", href: "/plastic-injection-molding" },
-  { question: "Need a Specialized Mold?", description: "Explore mold types for complex geometry, production volume, materials and molding requirements.", cta: "Explore Injection Molds", href: "/injection-molds" },
-  { question: "Still Validating the Product?", description: "Start with DFM and engineering review before committing to production tooling.", cta: "Start with DFM Engineering", href: "/injection-molding-engineering" }
+  { title: "I Need an Injection Mold", description: "Develop production tooling for your part and molding requirements.", href: "/injection-mold-manufacturing" },
+  { title: "I Need Molded Plastic Parts", description: "Plan low-volume or mass production of your plastic parts.", href: "/plastic-injection-molding" },
+  { title: "Help Me Choose a Mold Type", description: "Explore tooling options for your part geometry and production needs.", href: "/injection-molds" },
+  { title: "I Need DFM & Design Support", description: "Review your part design and moldability before tooling.", href: "/injection-molding-engineering" }
 ];
 
 const processStages = [
@@ -256,10 +256,10 @@ export function ManufacturingCapabilitiesPage() {
 
       <section className="bg-white py-14 sm:py-16" id="manufacturing-path">
         <div className="container-page">
-          <SectionHeading eyebrow="Choose Your Starting Point" title="Find the Right Manufacturing Path" body="Start with the project need that best matches your current stage. Each route leads to a focused engineering or production capability." />
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {manufacturingPaths.map((path, index) => <Link className="focus-ring group flex min-h-52 flex-col justify-between rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6 transition hover:border-[var(--brand)] sm:p-7" href={path.href} key={path.question}><div><p className="text-sm font-bold text-[var(--brand)]">0{index + 1}</p><h3 className="mt-3 text-2xl font-bold text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{path.question}</h3><p className="mt-3 max-w-xl text-base leading-7 text-[var(--muted)]">{path.description}</p></div><span className="mt-6 inline-flex font-bold text-[var(--brand)]">{path.cta}<span className="ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></span></Link>)}
-          </div>
+          <SectionHeading eyebrow="CHOOSE YOUR STARTING POINT" title="Find the Right Project Path" body="Choose the support that matches your project stage." />
+          <nav aria-label="Project starting points" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {manufacturingPaths.map((path) => <Link className="focus-ring group flex min-h-44 flex-col rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5 transition hover:border-[var(--brand)]" href={path.href} key={path.title}><h3 className="text-xl font-bold leading-7 text-[var(--brand-dark)] transition group-hover:text-[var(--brand)]">{path.title}</h3><p className="mt-3 text-sm leading-6 text-[var(--muted)] sm:text-[15px]">{path.description}</p><span className="mt-auto inline-flex pt-4 text-xl font-bold text-[var(--brand)] transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></Link>)}
+          </nav>
         </div>
       </section>
 
