@@ -309,10 +309,10 @@ export function HomePage() {
 
       <ToolingGallery />
 
-      <section className="bg-[var(--brand-dark)] py-14 text-white sm:py-16" aria-labelledby="homepage-rfq-heading">
-        <div className="container-page grid gap-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
-          <div><p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f3b9b9] sm:text-sm">Start Your RFQ</p><h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl" id="homepage-rfq-heading">Start Your Injection Mold Project</h2><p className="mt-4 max-w-3xl text-base leading-7 text-white/75 sm:text-lg">Upload your CAD data and project requirements for DFM review, tooling discussion and quotation.</p></div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end"><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/70 px-6 font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">Request Tooling Quote</Link></div>
+      <section className="border-t border-[var(--cta-border)] bg-[var(--cta-bg)] py-12 sm:py-16 lg:py-20" aria-labelledby="homepage-rfq-heading">
+        <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,56fr)_minmax(320px,44fr)] lg:items-center lg:gap-12">
+          <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Start Your RFQ</p><h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--cta-heading)] sm:text-4xl" id="homepage-rfq-heading">Start Your Injection Mold Project</h2><p className="mt-4 text-base leading-7 text-[var(--cta-body)] sm:text-lg">Upload your CAD data and project requirements for DFM review, tooling discussion and quotation.</p></div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[440px] lg:justify-self-end"><Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand)] bg-[var(--brand)] px-6 font-bold text-white transition hover:border-[var(--brand-hover)] hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link><Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--cta-heading)] bg-white px-6 font-bold text-[var(--cta-heading)] transition hover:bg-[var(--cta-heading)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link></div>
         </div>
       </section>
     </div>
