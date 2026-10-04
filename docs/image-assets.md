@@ -60,11 +60,12 @@ The initial set contains eight completed-mold images and seven molded-part/proje
 
 | Capability | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| CNC Machining | `/images/capabilities/cnc-machining.webp` | Precision CNC machined metal and plastic components | Existing capability image; active |
-| Die Casting | `/images/capabilities/die-casting.webp` | Aluminum and zinc die cast components manufactured by Arktech Group | Existing capability image; active |
-| Sheet Metal Fabrication | `/images/capabilities/sheet-metal-fabrication.jpg` | Custom sheet metal components produced by Arktech Group | Real legacy-site photo; active |
-| Rapid Prototyping | `/images/capabilities/rapid-prototyping-v3.webp` | Rapid prototyping equipment and prototype components for design validation | Existing capability image; active |
-| Assembly | `/images/capabilities/molded-part-component-assembly.webp` | Product and component assembly support by Arktech Group | Optimized derivative of an existing real project assembly photo; active on the `/services` Extended Manufacturing card |
+| CNC Machining | `/images/capabilities/cnc-machining.webp` | CNC machined components arranged on a work surface | Existing real manufactured-components image; active in the Homepage supporting-capability grid |
+| Die Casting | `/images/capabilities/die-casting.webp` | Die-cast component housings and structural parts on a workbench | Existing manufactured-components image; active in the Homepage supporting-capability grid |
+| Sheet Metal Fabrication | `/images/capabilities/sheet-metal-fabrication.jpg` | Sheet metal clips brackets and formed components arranged on a surface | Real legacy-site photo; active in the Homepage supporting-capability grid |
+| Rapid Prototyping | `/images/capabilities/rapid-prototyping-v2.jpg` | Prototype plastic trim components arranged for product review | Existing real prototype-parts image; active in the Homepage supporting-capability grid; retained at native resolution rather than replaced by the AI-generated v3 asset |
+| Vacuum Casting | `/images/case-studies/vacuum-casting-prototype.webp` | Silicone vacuum casting molds with a clear prototype part | Existing real vacuum-casting project image; active in the Homepage supporting-capability grid |
+| Assembly & Secondary Operations | `/images/capabilities/molded-part-component-assembly.webp` | Operator assembling molded plastic components at a work fixture | Optimized derivative of an existing real assembly photo; active in the Homepage supporting-capability grid and `/services` Extended Manufacturing card |
 | Secondary Operations | `/images/capabilities/secondary-operations-pad-printing.webp` | Secondary operations for molded plastic components including welding printing and insert installation | Optimized WebP derivative of the user-supplied real Arktech pad-printing workshop photo; active on the `/services` Extended Manufacturing card and distinct from Assembly |
 
 ## Homepage Industries & Industries Hub

@@ -84,12 +84,48 @@ const moldCapabilities = [
 ] as const;
 
 const supportingCapabilities = [
-  ["CNC Machining", "Precision machined metal and plastic components."],
-  ["Die Casting", "Aluminum and zinc components with finishing support."],
-  ["Sheet Metal Fabrication", "Cut, bent, welded and finished sheet components."],
-  ["Rapid Prototyping", "Physical parts for early engineering and design review."],
-  ["Vacuum Casting", "Short-run prototype parts for validation and bridge needs."],
-  ["Assembly & Secondary Operations", "Printing, welding, inserts, assembly and packaging."]
+  {
+    title: "CNC Machining",
+    body: "Precision metal and plastic parts for prototypes, assemblies and production.",
+    image: "/images/capabilities/cnc-machining.webp",
+    alt: "CNC machined components arranged on a work surface",
+    fit: "object-cover"
+  },
+  {
+    title: "Die Casting",
+    body: "Aluminum and zinc components with machining and finishing support.",
+    image: "/images/capabilities/die-casting.webp",
+    alt: "Die-cast component housings and structural parts on a workbench",
+    fit: "object-cover"
+  },
+  {
+    title: "Sheet Metal Fabrication",
+    body: "Enclosures, brackets and sheet metal components with fabrication and finishing.",
+    image: "/images/capabilities/sheet-metal-fabrication.jpg",
+    alt: "Sheet metal clips brackets and formed components arranged on a surface",
+    fit: "object-cover"
+  },
+  {
+    title: "Rapid Prototyping",
+    body: "Physical prototypes for fit, function and design review before tooling.",
+    image: "/images/capabilities/rapid-prototyping-v2.jpg",
+    alt: "Prototype plastic trim components arranged for product review",
+    fit: "object-contain"
+  },
+  {
+    title: "Vacuum Casting",
+    body: "Small batches of prototype parts for product evaluation and pre-production review.",
+    image: "/images/case-studies/vacuum-casting-prototype.webp",
+    alt: "Silicone vacuum casting molds with a clear prototype part",
+    fit: "object-contain"
+  },
+  {
+    title: "Assembly & Secondary Operations",
+    body: "Printing, welding, inserts, assembly and packaging for molded parts and product programs.",
+    image: "/images/capabilities/molded-part-component-assembly.webp",
+    alt: "Operator assembling molded plastic components at a work fixture",
+    fit: "object-cover"
+  }
 ] as const;
 
 function SectionHeading({ eyebrow, title, body, id }: { eyebrow: string; title: string; body?: string; id: string }) {
@@ -195,6 +231,26 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="border-b border-[var(--line)] bg-white py-12 sm:py-14" aria-labelledby="supporting-capabilities-heading">
+        <div className="container-page">
+          <SectionHeading body="Complement your injection mold and plastic molding projects with CNC machining, die casting, sheet metal, prototyping, vacuum casting and assembly support provided by Arktech Group." eyebrow="Support by Arktech Group" id="supporting-capabilities-heading" title="Supporting Manufacturing Capabilities" />
+          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {supportingCapabilities.map((capability) => (
+              <article className="flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(8,35,58,0.04)]" key={capability.title}>
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#eef2f5]">
+                  <Image alt={capability.alt} className={`${capability.fit} object-center`} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" src={capability.image} />
+                </div>
+                <div className="flex flex-1 flex-col border-t border-[var(--line)] p-4 sm:p-5">
+                  <h3 className="text-lg font-bold leading-6 text-[var(--brand-dark)]">{capability.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <a className="focus-ring mt-6 inline-flex min-h-11 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="https://arktech-group.com/" rel="noopener noreferrer" target="_blank">Explore Manufacturing Support at Arktech Group <span aria-hidden="true" className="ml-2">↗</span><span className="sr-only"> (opens in a new window)</span></a>
+        </div>
+      </section>
+
       <section className="bg-white py-14 sm:py-16" aria-labelledby="dfm-heading">
         <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,54fr)_minmax(0,46fr)] lg:items-center lg:gap-12 xl:gap-14">
           <DfmReportPreview />
@@ -252,14 +308,6 @@ export function HomePage() {
       </section>
 
       <ToolingGallery />
-
-      <section className="bg-white py-14 sm:py-16" aria-labelledby="supporting-capabilities-heading">
-        <div className="container-page">
-          <SectionHeading body="Additional processes available when a tooling or molded-part program requires them." eyebrow="Arktech Group" id="supporting-capabilities-heading" title="Supporting Manufacturing Capabilities" />
-          <div className="mt-8 grid gap-px overflow-hidden rounded-md border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2 lg:grid-cols-3">{supportingCapabilities.map(([title, body]) => <article className="bg-[var(--surface-soft)] p-5" key={title}><h3 className="text-lg font-bold text-[var(--brand-dark)]">{title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{body}</p></article>)}</div>
-          <a className="focus-ring mt-6 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="https://www.arktech-group.com" rel="noopener noreferrer" target="_blank">Explore Arktech Group <span aria-hidden="true" className="ml-2">↗</span></a>
-        </div>
-      </section>
 
       <section className="bg-[var(--brand-dark)] py-14 text-white sm:py-16" aria-labelledby="homepage-rfq-heading">
         <div className="container-page grid gap-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
