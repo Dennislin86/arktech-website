@@ -89,6 +89,22 @@ The current `/industries/` hub uses seven primary application groups. It reuses 
 | Automotive project proof | `/images/case-studies/automotive-multi-cavity-mold.webp` | Automotive sensor housing multi-cavity injection mold and molded components | Existing real Arktech tooling-project image; active |
 | Medical project proof | `/images/case-studies/medical-education-device.webp` | Medical education device housing development engineering and injection molding project | Existing local Arktech Group case-study image; active |
 
+## Technical Resources Hub
+
+The `/resources/` Technical Resources Hub reuses approved local technical and project assets only. No external, competitor, stock or newly generated image was added for this rebuild.
+
+| Hub use | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Hero — DFM engineering | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | Injection mold DFM engineering review on CAD workstations | Existing approved Arktech engineering image; active |
+| Hero — complex tooling | `/images/mold-types/complex-injection-molds.png` | Completed complex injection mold with multiple tooling actions | Existing approved mold-type image; active |
+| Hero — dimensional report | `/images/quality/dimensional-inspection-report-anonymized.webp` | Anonymized dimensional inspection report for molded trial samples | Existing approved anonymized quality record; active |
+| Featured guide — injection molding | `/images/capabilities/plastic-injection-molding-production.webp` | Plastic injection molding production and molded component validation | Existing approved capability image; active |
+| Automotive case study | `/images/case-studies/automotive-multi-cavity-mold.webp` | Multi-cavity injection mold and molded automotive sensor housings | Existing real Arktech tooling-project image; active |
+| Smart Home case study | `/images/case-studies/ihgs-housing.webp` | Smart home device housing components and assembly concept | Existing real Arktech project image; active |
+| Two-Shot / 2K case study | `/images/case-studies/two-shot-light-cover.webp` | Two-shot injection molds and transparent molded light-cover component | Existing real Arktech tooling-project image; active |
+
+All remaining technical-resource cards inherit their approved image paths and factual alt text from `lib/engineering-resources.ts`.
+
 ## Robotics Industry Page
 
 No new image files, hotlinked images, competitor images or external stock assets were added for `/industries/robotics`. The page reuses the following approved local assets.
