@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DfmReportPreview } from "@/components/DfmReportPreview";
 import { InjectionMoldingProductionVideo } from "@/components/InjectionMoldingProductionVideo";
-import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
+import { ManufacturingYouTubeVideo } from "@/components/ManufacturingYouTubeVideo";
 import { ToolingGallery } from "@/components/ToolingGallery";
 
 const proofItems = [
@@ -253,16 +253,27 @@ export function HomePage() {
       </section>
 
       <section className="bg-[var(--brand-dark)] py-14 text-white sm:py-16" aria-labelledby="mold-manufacturing-heading">
-        <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-center lg:gap-12">
-          <div><p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f3b9b9] sm:text-sm">Export Tooling</p><h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl" id="mold-manufacturing-heading">Injection Mold Manufacturing</h2><p className="mt-4 text-base leading-7 text-white/75 sm:text-lg">Production tooling engineered for export, customer machine compatibility and repeatable molding.</p><ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">{["Mold Design & DFM", "CNC / EDM Machining", "Fitting & Assembly", "Mold Trial Before Export"].map((item) => <li className="flex items-start gap-3 font-semibold text-white" key={item}><span aria-hidden="true" className="text-[#f3b9b9]">✓</span>{item}</li>)}</ul><Link className="focus-ring mt-7 inline-flex min-h-11 items-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:bg-[var(--brand-hover)]" href="/services/injection-mold-manufacturing">Explore Mold Manufacturing <span aria-hidden="true" className="ml-2">→</span></Link></div>
-          <figure className="overflow-hidden rounded-md border border-white/15 bg-black/20"><div className="relative aspect-video"><LazyAutoplayVideo ariaLabel="Arktech injection mold manufacturing process" className="h-full w-full object-cover object-center" poster="/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp" preload="metadata" src="/videos/injection-mold-manufacturing/mold-manufacturing.mp4" /></div><figcaption className="border-t border-white/15 px-4 py-3 text-sm text-white/70">Mold fitting and assembly during injection mold manufacturing.</figcaption></figure>
-        </div>
-      </section>
-
-      <section className="bg-white py-14 sm:py-16" aria-labelledby="toolroom-heading">
-        <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,54fr)_minmax(0,46fr)] lg:items-center lg:gap-12">
-          <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]"><div className="relative aspect-video"><LazyAutoplayVideo ariaLabel="Arktech mold manufacturing and toolroom process" className="h-full w-full object-cover object-center" poster="/images/injection-mold-manufacturing/arktech-toolroom-video-poster.webp" preload="metadata" src="/videos/injection-mold-manufacturing/arktech-mold-toolroom.mp4" /></div><figcaption className="border-t border-[var(--line)] px-4 py-3 text-sm text-[var(--muted)]">Real mold fitting, assembly and toolroom work at Arktech.</figcaption></figure>
-          <div><SectionHeading body="In-house execution connects approved engineering with tool build, fitting, trials and dimensional review." eyebrow="Inside Our Toolroom" id="toolroom-heading" title="Toolroom Capabilities" /><div className="mt-7 grid gap-px overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">{[["Toolmaking", "CNC, EDM and precision mold-component work."], ["Mold Assembly", "Fitting, movement checks and final assembly."], ["Mold Trial", "Sampling with defined process conditions."], ["Inspection", "Tooling, sample and dimensional verification."]].map(([title, body]) => <article className="bg-white p-5" key={title}><h3 className="text-lg font-bold text-[var(--brand-dark)]">{title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{body}</p></article>)}</div></div>
+        <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] lg:items-center lg:gap-12">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f3b9b9] sm:text-sm">Export Tooling · In-House Toolroom</p>
+            <h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl" id="mold-manufacturing-heading">Injection Mold Manufacturing</h2>
+            <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">From CNC and EDM machining to fitting, assembly and mold trials, we build export injection molds around your machine specifications and tooling requirements.</p>
+            <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-white/15 bg-white/15 sm:grid-cols-2">
+              {[
+                ["CNC & EDM Machining", "Precision machining of mold plates, inserts and tooling components."],
+                ["Mold Fitting & Assembly", "Fitting, assembly and checks of mold movement and function."],
+                ["Mold Trial & Inspection", "Sampling and inspection before customer review."],
+                ["Export Preparation & Documentation", "Tooling records and shipment preparation for mold transfer."]
+              ].map(([title, body]) => (
+                <article className="bg-[var(--brand-dark)] p-4" key={title}>
+                  <h3 className="text-base font-bold leading-6 text-white">{title}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-white/70">{body}</p>
+                </article>
+              ))}
+            </div>
+            <Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[#f3b9b9] transition hover:text-white" href="/services/injection-mold-manufacturing">Explore Mold Manufacturing <span aria-hidden="true" className="ml-2">→</span></Link>
+          </div>
+          <ManufacturingYouTubeVideo />
         </div>
       </section>
 
