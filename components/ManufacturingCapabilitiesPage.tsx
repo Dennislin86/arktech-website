@@ -79,12 +79,12 @@ const specialtyMoldingLinks = [
 ];
 
 const supportingCapabilities = [
-  { title: "CNC Machining", description: "Precision machined metal and plastic components for prototypes, tooling and production support.", image: "/images/capabilities/cnc-machining.webp", alt: "CNC machined metal and plastic components for manufacturing support" },
-  { title: "Die Casting", description: "Aluminum and zinc die-cast components for structural and functional product applications.", image: "/images/capabilities/die-casting.webp", alt: "Die cast metal components for structural and functional applications" },
-  { title: "Sheet Metal Fabrication", description: "Cut, bent and formed components for product housings, brackets and assemblies.", image: "/images/capabilities/sheet-metal-fabrication.jpg", alt: "Sheet metal fabricated housings brackets and formed components" },
-  { title: "Rapid Prototyping", description: "Prototype parts for design review, fit checks and functional validation.", image: "/images/capabilities/rapid-prototyping-v3.webp", alt: "Rapid prototype parts for design validation and functional testing" },
-  { title: "Vacuum Casting", description: "Small-batch cast parts for product evaluation and bridge requirements.", image: "/images/capabilities/vacuum-casting.jpg", alt: "Vacuum cast prototype parts for small-batch product evaluation" },
-  { title: "Assembly & Secondary Operations", description: "Printing, welding, insert installation, finishing and product assembly support.", image: "/images/capabilities/molded-part-component-assembly.webp", alt: "Assembly and secondary operations for molded plastic components" }
+  { title: "CNC Machining", description: "Metal and plastic parts for prototypes, functional components and assemblies.", image: "/images/capabilities/cnc-machining.webp", alt: "CNC machined components arranged on a work surface", imageClassName: "object-cover object-center" },
+  { title: "Die Casting", description: "Aluminum and zinc components with machining and finishing support.", image: "/images/capabilities/die-casting.webp", alt: "Die-cast component housings and structural parts on a workbench", imageClassName: "object-cover object-center" },
+  { title: "Sheet Metal Fabrication", description: "Enclosures, brackets and formed parts for product assemblies.", image: "/images/capabilities/sheet-metal-fabrication.jpg", alt: "Sheet metal clips brackets and formed components arranged on a surface", imageClassName: "object-contain object-center p-2" },
+  { title: "Rapid Prototyping", description: "Prototypes for fit, function and design review before tooling.", image: "/images/capabilities/rapid-prototyping-v2.jpg", alt: "Prototype plastic trim components arranged for product review", imageClassName: "object-contain object-center p-5" },
+  { title: "Vacuum Casting", description: "Small batches of prototype parts for product evaluation.", image: "/images/case-studies/vacuum-casting-prototype.webp", alt: "Silicone vacuum casting molds with a clear prototype part", imageClassName: "object-contain object-center p-3" },
+  { title: "Assembly & Secondary Operations", description: "Printing, welding, inserts, assembly and packaging support.", image: "/images/capabilities/molded-part-component-assembly.webp", alt: "Operator assembling molded plastic components at a work fixture", imageClassName: "object-cover object-center" }
 ];
 
 const manufacturingPaths = [
@@ -246,12 +246,11 @@ export function ManufacturingCapabilitiesPage() {
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16" id="supporting-capabilities">
         <div className="container-page">
-          <SectionHeading eyebrow="Arktech Group" title="Supporting Manufacturing Capabilities" body="Additional manufacturing processes available when a tooling or molded-part program requires them." />
-          <p className="mt-4 max-w-3xl text-sm leading-6 text-[var(--muted)]">Supporting processes for tooling, prototypes, metal components and assembly needs within broader product programs.</p>
+          <SectionHeading eyebrow="SUPPORT BY ARKTECH GROUP" title="Supporting Manufacturing Capabilities" body="Complete your OEM and ODM product programs with metal parts, prototypes, finishing and assembly support from Arktech Group, alongside injection molds and molded plastic parts." />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {supportingCapabilities.map((capability) => <article className="grid grid-cols-[104px_minmax(0,1fr)] overflow-hidden rounded-sm border border-[var(--line)] bg-white" key={capability.title}><div className="relative min-h-36 overflow-hidden bg-white"><Image alt={capability.alt} className="object-cover object-center" fill sizes="104px" src={capability.image} /></div><div className="p-4"><h3 className="text-lg font-bold leading-6 text-[var(--brand-dark)]">{capability.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{capability.description}</p></div></article>)}
+            {supportingCapabilities.map((capability) => <article className="overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(8,35,58,0.04)]" key={capability.title}><div className="relative aspect-[16/10] overflow-hidden bg-[#f5f6f7]"><Image alt={capability.alt} className={capability.imageClassName} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" src={capability.image} /></div><div className="border-t border-[var(--line)] p-5"><h3 className="text-xl font-bold leading-7 text-[var(--brand-dark)]">{capability.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-[15px]">{capability.description}</p></div></article>)}
           </div>
-          <Link className="focus-ring mt-7 inline-flex font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/company/arktech-group">Explore Supporting Manufacturing by Arktech Group →</Link>
+          <a className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="https://arktech-group.com/" rel="noopener noreferrer" target="_blank">Explore OEM &amp; ODM Manufacturing Support at Arktech Group <span className="ml-1" aria-hidden="true">↗</span><span className="sr-only"> (opens in a new window)</span></a>
         </div>
       </section>
 
