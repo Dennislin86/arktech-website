@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
+    "gallery:generate": "node scripts/generate-tooling-gallery.mjs",
+    "dev": "node scripts/dev-with-tooling-gallery.mjs",
+    "prebuild": "node scripts/generate-tooling-gallery.mjs",
     "build": "next build --webpack",
     "postbuild": "node scripts/prepare-standalone.mjs",
     "start": "node .next/standalone/server.js",

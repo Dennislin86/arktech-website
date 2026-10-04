@@ -9,9 +9,8 @@ The optimized Homepage reuses approved first-party and existing local assets; it
 | Homepage use | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
 | Hero | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Export injection molds and molded plastic parts manufactured by Arktech | Existing approved Arktech hero image; priority-loaded above the fold |
-| Featured project — automotive multi-cavity tooling | `/images/case-studies/automotive-multi-cavity-mold.webp` | Multi-cavity injection mold and molded automotive sensor housings | Existing real Arktech case-study image; linked to the verified project page |
-| Featured project — two-shot light cover | `/images/case-studies/two-shot-light-cover.webp` | First-shot and second-shot injection molds with molded light cover | Existing real Arktech case-study image; linked to the verified project page |
-| Featured project — unscrewing tooling | `/images/case-studies/unscrewing-mold.webp` | Motor-driven unscrewing injection mold and threaded molded components | Existing real Arktech case-study image; linked to the verified project page |
+| Tooling gallery — Injection Molds | `/images/tooling-gallery/Mould/` | Per-image factual alt text is maintained in the gallery metadata | Eight copied source assets from the approved real Arktech Mold Types library; generated derivatives are used on the Homepage |
+| Tooling gallery — Plastic Parts | `/images/tooling-gallery/Plastic part/` | Per-image factual alt text is maintained in the gallery metadata | Seven copied source assets from approved real Arktech project and molded-part imagery; generated derivatives are used on the Homepage |
 | DFM engineering proof | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | DFM report for injection mold design review | Existing anonymized real engineering report; shown with `object-fit: contain` |
 | Injection mold manufacturing video | `/videos/injection-mold-manufacturing/mold-manufacturing.mp4` | Arktech injection mold manufacturing process | Optimized first-party H.264 video; lazy-loaded below the fold |
 | Injection mold manufacturing poster | `/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp` | Injection mold fitting and assembly at Arktech | Optimized first-party video frame; loading and reduced-motion fallback |
@@ -22,6 +21,17 @@ The optimized Homepage reuses approved first-party and existing local assets; it
 | Plastic injection molding video | `/videos/injection-molding-production.mp4` | Plastic injection molding production at Arktech | Existing real Arktech production video; reused through the approved production-video component |
 
 The six Homepage Injection Mold Capability cards reuse the approved Mold Type assets documented below. The six Homepage Industries cards reuse the approved Homepage Industries assets documented below.
+
+### Homepage Tooling & Molded Parts Gallery
+
+The Homepage gallery is generated from two user-managed source directories. Original source files remain unchanged; `scripts/generate-tooling-gallery.mjs` writes optimized, content-hashed WebP derivatives to `/images/tooling-gallery/optimized/` and creates `generated/tooling-gallery-manifest.json`. The generated output directory is never scanned as source input.
+
+- Injection mold sources: `/images/tooling-gallery/Mould/`
+- Molded-part sources: `/images/tooling-gallery/Plastic part/`
+- Optional metadata: `/images/tooling-gallery/metadata.json`
+- Asset instructions: `/images/tooling-gallery/README.md`
+
+The initial set contains eight completed-mold images and seven molded-part/project images. All are copied from approved local Arktech assets already documented in the Injection Mold Types, Material Capabilities and Arktech Group Case Studies sections below. No external, competitor, stock or newly generated asset was introduced. Web paths containing the `Plastic part` source-folder space are not emitted into the page: the generated derivatives use safe lowercase hyphenated filenames under `/images/tooling-gallery/optimized/`.
 
 ## Who We Serve
 

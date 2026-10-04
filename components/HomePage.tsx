@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { InjectionMoldingProductionVideo } from "@/components/InjectionMoldingProductionVideo";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
+import { ToolingGallery } from "@/components/ToolingGallery";
 
 const proofItems = [
   "DFM & Mold Design",
@@ -31,33 +32,6 @@ const buyerPaths = [
     alt: "Completed export injection mold with mold trial validation and packing preparation",
     cta: "Explore Export Tooling",
     href: "/services/injection-mold-manufacturing"
-  }
-] as const;
-
-const featuredProjects = [
-  {
-    title: "Multi-Cavity Mold for Automotive Sensor Housing",
-    moldType: "Multi-Cavity Production Mold",
-    features: "Glass-filled PBT · Dimensional validation",
-    image: "/images/case-studies/automotive-multi-cavity-mold.webp",
-    alt: "Multi-cavity injection mold and molded automotive sensor housings",
-    href: "/case-studies/automotive-sensor-housing-tooling"
-  },
-  {
-    title: "Two-Shot Tooling for Integrated Light Cover",
-    moldType: "Two-Shot / 2K Mold",
-    features: "First- and second-shot alignment · Visible surfaces",
-    image: "/images/case-studies/two-shot-light-cover.webp",
-    alt: "First-shot and second-shot injection molds with molded light cover",
-    href: "/case-studies/two-shot-2k-injection-mold-tooling"
-  },
-  {
-    title: "Unscrewing Mold for Threaded Components",
-    moldType: "Motor-Driven Unscrewing Mold",
-    features: "Internal thread release · Mechanical validation",
-    image: "/images/case-studies/unscrewing-mold.webp",
-    alt: "Motor-driven unscrewing injection mold and threaded molded components",
-    href: "/case-studies/unscrewing-threaded-component-mold"
   }
 ] as const;
 
@@ -260,16 +234,6 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-14 sm:py-16" aria-labelledby="featured-projects-heading">
-        <div className="container-page">
-          <SectionHeading body="Selected completed tooling programs show how mold type, part geometry and validation requirements come together in real projects." eyebrow="Real Tooling Evidence" id="featured-projects-heading" title="Featured Injection Mold Projects" />
-          <div className="mt-8 grid auto-rows-fr gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project) => <Link className="focus-ring group flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white transition hover:border-[var(--brand)] hover:shadow-sm" href={project.href} key={project.title}><div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)]"><Image alt={project.alt} className="object-cover object-center transition duration-300 group-hover:scale-[1.02] motion-reduce:transition-none" fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" src={project.image} /></div><div className="flex flex-1 flex-col p-5"><p className="text-xs font-bold uppercase tracking-[0.1em] text-[var(--brand)]">{project.moldType}</p><h3 className="mt-2 text-xl font-bold leading-tight text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{project.title}</h3><p className="mt-3 text-sm leading-6 text-[var(--muted)]">{project.features}</p><span className="mt-auto pt-4 text-sm font-bold text-[var(--brand)]">View Project <span aria-hidden="true">→</span></span></div></Link>)}
-          </div>
-          <Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Mold Projects <span aria-hidden="true" className="ml-2">→</span></Link>
-        </div>
-      </section>
-
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="mold-capabilities-heading">
         <div className="container-page">
           <SectionHeading body="Representative production-tooling categories for precision, complex geometry, cavity strategy and controlled mold movement." eyebrow="What We Build" id="mold-capabilities-heading" title="Injection Mold Capabilities" />
@@ -325,6 +289,8 @@ export function HomePage() {
           <Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/industries">Explore All Industries <span aria-hidden="true" className="ml-2">→</span></Link>
         </div>
       </section>
+
+      <ToolingGallery />
 
       <section className="bg-white py-14 sm:py-16" aria-labelledby="supporting-capabilities-heading">
         <div className="container-page">

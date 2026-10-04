@@ -1,0 +1,107 @@
+.gallery {
+  --gallery-gap: 0.875rem;
+}
+
+.rowViewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: var(--gallery-gap);
+  width: max-content;
+  will-change: transform;
+}
+
+.sequence {
+  display: flex;
+  gap: var(--gallery-gap);
+}
+
+.movingLeft {
+  animation: gallery-left var(--gallery-duration, 42s) linear infinite;
+}
+
+.movingRight {
+  animation: gallery-right var(--gallery-duration, 42s) linear infinite;
+}
+
+.paused .movingLeft,
+.paused .movingRight,
+.gallery:focus-within .movingLeft,
+.gallery:focus-within .movingRight {
+  animation-play-state: paused;
+}
+
+@media (hover: hover) {
+  .gallery:hover .movingLeft,
+  .gallery:hover .movingRight {
+    animation-play-state: paused;
+  }
+}
+
+.card {
+  width: clamp(13.75rem, 20vw, 17.5rem);
+}
+
+@keyframes gallery-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - (var(--gallery-gap) / 2))); }
+}
+
+@keyframes gallery-right {
+  from { transform: translateX(calc(-50% - (var(--gallery-gap) / 2))); }
+  to { transform: translateX(0); }
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    --gallery-gap: 0.75rem;
+  }
+
+  .rowViewport {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .track,
+  .movingLeft,
+  .movingRight {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .clone {
+    display: none;
+  }
+
+  .card {
+    scroll-snap-align: start;
+    width: min(72vw, 15rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rowViewport {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+
+  .track,
+  .movingLeft,
+  .movingRight {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .clone {
+    display: none;
+  }
+}
