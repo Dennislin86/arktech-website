@@ -77,11 +77,11 @@ export function Footer() {
       <div className="container-page grid gap-x-8 gap-y-10 py-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1.05fr)_minmax(0,0.9fr)_minmax(0,1.05fr)]">
         <div>
           <div>
-            <p className="whitespace-nowrap text-[1.45rem] font-extrabold uppercase leading-tight tracking-[0.08em] text-[#F7FAFC] sm:text-[1.625rem]">
-              Arktech Mold Ltd
+            <p className="whitespace-nowrap text-[20px] font-semibold leading-[1.25] tracking-[0.3px] text-[var(--brand)] sm:text-[24px]">
+              ARKTECH Mold Ltd
             </p>
-            <p className="mt-2 text-[15px] font-medium leading-6 text-[#CBD5E1]">
-              Plastic Tooling &amp; Injection Molding
+            <p className="mt-[10px] text-sm font-normal leading-[1.5] text-[var(--muted)]">
+              Export Injection Molds &amp; Plastic Injection Molding
             </p>
           </div>
 
