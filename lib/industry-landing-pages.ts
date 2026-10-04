@@ -54,7 +54,7 @@ const related = (industry: string): IndustryLinkItem[] => [
   { title: "Injection Mold Manufacturing", body: `Tooling development for ${industry} programs.`, href: "/services/injection-mold-manufacturing" },
   { title: "Plastic Injection Molding", body: `Molded-part supply from samples to repeat production.`, href: "/services/plastic-injection-molding" },
   { title: "DFM Engineering", body: `Resolve geometry and tooling risks before steel release.`, href: "/injection-molding-engineering" },
-  { title: "Mold Trial & Validation", body: "Review samples, process conditions and improvement actions before release.", href: "/services/mold-trial-sampling-support" },
+  { title: "Mold Trial & Validation", body: "Review samples, process conditions and improvement actions before release.", href: "/injection-molds/mold-trial-validation" },
   { title: "Quality & Documentation", body: "Connect inspection evidence with tooling approval and export delivery.", href: "/company/quality-documentation" }
 ];
 
@@ -127,7 +127,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Production molds developed around robotics housings, side actions, inserts and the receiving molding-machine requirements.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Engineering samples, low-volume builds and repeat supply for approved robotics components and enclosures.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Review sensor alignment, cable routes, fastening features and mold release before committing to steel.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Trial samples checked around critical interfaces, assembly fit and agreed dimensional requirements.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Trial samples checked around critical interfaces, assembly fit and agreed dimensional requirements.", href: "/injection-molds/mold-trial-validation" }
     ],
     extendedManufacturing: ["CNC Machining", "Sheet Metal", "Rapid Prototyping", "Assembly"],
     lifecycleIntro: "A staged engineering path helps robotics teams move from CAD data to approved tooling and repeat production.",
@@ -220,7 +220,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Precision tooling built around medical-equipment housings, transparent features and critical assembly geometry.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Controlled sample and production molding for validated diagnostic-device components.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Early review of critical dimensions, sealing contact, inserts and visible surfaces without inferring device approval.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Documented sample review and correction actions tied to the agreed drawing and inspection scope.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Documented sample review and correction actions tied to the agreed drawing and inspection scope.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "A controlled development path keeps geometry, tooling actions and sample evidence connected from design review to production.",
     lifecycle: lifecycle("medical-device component"),
@@ -306,7 +306,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Export tooling for automotive trim, controls, connectors and functional components with defined plant standards.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Sample, bridge and repeat molding support for approved automotive plastic parts.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Coordinate texture, clips, inserts, assembly datums and repeat-production risks before mold release.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Evaluate dimensional, assembly and visible-surface results before production approval.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Evaluate dimensional, assembly and visible-surface results before production approval.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "Project stages connect appearance approval, tool build and production evidence without separating design decisions from manufacturing reality.",
     lifecycle: lifecycle("automotive component"),
@@ -393,7 +393,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Tooling for connected-device enclosures with sensor openings, electronic interfaces and cosmetic surfaces.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Molded samples and repeat supply for approved hubs, sensors, cameras and device covers.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Review PCB mounts, ports, vents, snap-fits and appearance zones before final mold design.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Check sample fit, opening alignment and surface quality across connected-product assemblies.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Check sample fit, opening alignment and surface quality across connected-product assemblies.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "The workflow keeps electronics interfaces and cosmetic requirements visible throughout tooling development and sample approval.",
     lifecycle: lifecycle("smart-home enclosure"),
@@ -480,7 +480,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Tooling for charging housings, connector parts and power-product enclosures with defined receiving-plant interfaces.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Sample and repeat molding for approved EV charging and energy-product components.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Review connector alignment, sealing geometry, inserts, structure and heat-related product requirements.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Validate critical interfaces, insert position and enclosure assembly before production release.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Validate critical interfaces, insert position and enclosure assembly before production release.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "A staged path helps teams validate connector, enclosure and assembly geometry before repeat molded-part supply.",
     lifecycle: lifecycle("EV charging component"),
@@ -567,7 +567,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Production tooling for appliance housings, panels, ducts and functional components across varied part sizes.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Samples, launch quantities and repeat molded-part supply for approved appliance components.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Review broad cosmetic surfaces, ribs, snaps, air or water paths and final assembly before steel release.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Assess enclosure fit, control interfaces, appearance and critical dimensions during trial approval.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Assess enclosure fit, control interfaces, appearance and critical dimensions during trial approval.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "From enclosure review through molded-part delivery, each stage addresses both product appearance and manufacturing stability.",
     lifecycle: lifecycle("home-appliance component"),
@@ -654,7 +654,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Tooling for feeder, water-device, camera and sensor housings with cleaning and assembly needs considered.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Engineering samples and repeat molding for approved smart pet-product components.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Review dispensing paths, sensor openings, electronics, snaps and moisture-related geometry before tooling.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Evaluate housing fit, functional interfaces and visible quality without making food-contact claims.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Evaluate housing fit, functional interfaces and visible quality without making food-contact claims.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "A linked development path keeps user-facing appearance, connected-device interfaces and practical assembly under review.",
     lifecycle: lifecycle("pet-tech product component"),
@@ -741,7 +741,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
       { title: "Injection Mold Manufacturing", body: "Precision and complex tooling for electronics shells, ports, inserts and visible enclosure surfaces.", href: "/services/injection-mold-manufacturing" },
       { title: "Plastic Injection Molding", body: "Engineering samples, launch builds and repeat supply for approved electronics components.", href: "/services/plastic-injection-molding" },
       { title: "DFM Engineering", body: "Review walls, PCB interfaces, vents, snaps and cosmetic requirements within compact enclosure geometry.", href: "/injection-molding-engineering" },
-      { title: "Mold Trial & Validation", body: "Inspect housing gaps, connector openings, surface finish and assembly fit before production release.", href: "/services/mold-trial-sampling-support" }
+      { title: "Mold Trial & Validation", body: "Inspect housing gaps, connector openings, surface finish and assembly fit before production release.", href: "/injection-molds/mold-trial-validation" }
     ],
     lifecycleIntro: "A staged workflow keeps product appearance and electronic interfaces aligned through tooling, trial and repeat supply.",
     lifecycle: lifecycle("consumer-electronics enclosure"),

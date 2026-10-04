@@ -188,7 +188,7 @@ export const manufacturingFaqCategories: ManufacturingFaqCategory[] = [
     title: "Mold Trial & Validation FAQs",
     description: "Questions about trial stages, sample review, corrections and readiness for customer approval.",
     relatedLabel: "Explore Mold Trial & Validation",
-    relatedHref: "/services/mold-trial-sampling-support",
+    relatedHref: "/injection-molds/mold-trial-validation",
     items: [
       {
         question: "What happens during a T0 mold trial?",

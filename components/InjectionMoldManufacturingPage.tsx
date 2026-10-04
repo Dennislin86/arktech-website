@@ -361,10 +361,10 @@ const audiences = [
 
 const relatedCapabilities = [
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
-  { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
+  { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" },
-  { label: "Tooling Spare Parts", href: "/services/tooling-spare-parts" },
+  { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
   { label: "Project Management", href: "/company/project-management" },
   { label: "Mold Design Guidelines", href: "/resources/mold-design-guidelines" },
   { label: "Hot Runner vs Cold Runner", href: "/resources/injection-molds/hot-runner-vs-cold-runner" },

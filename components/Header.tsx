@@ -39,7 +39,7 @@ const navigation: NavigationItem[] = [
           { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing", emphasis: true },
           { label: "Engineering & DFM", href: "/injection-molding-engineering" },
           { label: "Mold Design & Approval", href: "/services/injection-mold-manufacturing" },
-          { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
+          { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
           { label: "Quality & Documentation", href: "/company/quality-documentation" }
         ]
       },
@@ -101,10 +101,10 @@ const navigation: NavigationItem[] = [
       {
         title: "Tooling Support",
         links: [
-          { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
-          { label: "Tooling Documentation", href: "/company/quality-documentation" },
-          { label: "Spare Parts Support", href: "/services/tooling-spare-parts" },
-          { label: "Tooling Transfer & Export", href: "/services/injection-mold-manufacturing" }
+          { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
+          { label: "Tooling Documentation", href: "/injection-molds/tooling-documentation" },
+          { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
+          { label: "Export Tooling & Mold Transfer", href: "/injection-molds/export-tooling-transfer" }
         ]
       },
       {

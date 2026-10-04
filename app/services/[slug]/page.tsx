@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { DetailPage } from "@/components/DetailPage";
 import { InjectionMoldManufacturingPage } from "@/components/InjectionMoldManufacturingPage";
 import { InjectionMoldingProductionOptionsPage } from "@/components/InjectionMoldingProductionOptionsPage";
-import { MoldTrialValidationPage } from "@/components/MoldTrialValidationPage";
 import { PlasticInjectionMoldingPage } from "@/components/PlasticInjectionMoldingPage";
 import { servicePages } from "@/lib/page-data";
 import { site } from "@/lib/site";
@@ -13,7 +12,9 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return servicePages.filter((page) => page.slug !== "dfm-engineering").map((page) => ({ slug: page.slug }));
+  return servicePages
+    .filter((page) => !["dfm-engineering", "mold-trial-sampling-support", "tooling-spare-parts"].includes(page.slug))
+    .map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -65,28 +66,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  if (slug === "mold-trial-sampling-support") {
-    return {
-      title: { absolute: "Mold Trial, Sampling & Validation for Injection Molds | Arktech Mold" },
-      description:
-        "Structured injection mold trials with sample review, molding parameter records, dimensional inspection, correction loops and validation before tooling approval and export delivery.",
-      alternates: { canonical: "/services/mold-trial-sampling-support" },
-      openGraph: {
-        title: "Mold Trial, Sampling & Validation for Injection Molds | Arktech Mold",
-        description:
-          "Structured injection mold trials with sample review, molding parameter records, dimensional inspection, correction loops and validation before tooling approval and export delivery.",
-        type: "website",
-        url: "/services/mold-trial-sampling-support",
-        images: [
-          {
-            url: "/images/Mold trail/Mold trial video photos.png",
-            alt: "Injection mold installed in a molding machine for trial and validation"
-          }
-        ]
-      }
-    };
-  }
-
   return {
     title: page.title,
     description: page.description,
@@ -112,10 +91,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   if (slug === "injection-molding-production-options") {
     return <InjectionMoldingProductionOptionsPage />;
-  }
-
-  if (slug === "mold-trial-sampling-support") {
-    return <MoldTrialValidationPage />;
   }
 
   return <DetailPage page={page} parentHref="/manufacturing-capabilities" parentLabel="Capabilities" />;

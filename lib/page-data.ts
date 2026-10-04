@@ -106,8 +106,8 @@ export const servicePages: DetailPageData[] = [
     ],
     processFlow: ["RFQ & CAD review", "DFM engineering feedback", "Mold design review", "Mold manufacturing", "Mold trial and sample inspection", "Correction loop and final approval", "Export packing and mold shipping"],
     relatedLinks: [
-      { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
-      { label: "Tooling Spare Parts", href: "/services/tooling-spare-parts" },
+      { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
+      { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
       { label: "Hot Runner Molds", href: "/injection-molds/hot-runner-molds" },
       { label: "Multi-Cavity Molds", href: "/injection-molds/multi-cavity-molds" }
     ],
@@ -128,7 +128,7 @@ export const servicePages: DetailPageData[] = [
   },
   {
     slug: "mold-trial-sampling-support",
-    title: "Mold Trial & Sampling Support",
+    title: "Mold Trial & Validation",
     description:
       "Mold trial and sampling support for export injection molds, including trial reports, process parameters, sample inspection and customer approval follow-up.",
     eyebrow: "Capability",
@@ -209,7 +209,7 @@ export const servicePages: DetailPageData[] = [
   },
   {
     slug: "tooling-spare-parts",
-    title: "Tooling Spare Parts",
+    title: "Mold Spare Parts",
     description:
       "Tooling spare parts support for export injection molds, including inserts, wear components, ejector parts, hot runner components and documented spare parts packages.",
     eyebrow: "Capability",
@@ -350,7 +350,7 @@ export const servicePages: DetailPageData[] = [
     processFlow: ["DFM and resin review", "Mold sampling and approval", "Production planning", "Injection molding production", "Inspection and secondary operations", "Assembly and packaging", "Export delivery"],
     relatedLinks: [
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
+      { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Plastic Housing Manufacturing", href: "/services/plastic-housing-manufacturing" },
       { label: "Assembly & Secondary Services", href: "/services/plastic-metal-assembly" }
     ],
@@ -760,7 +760,7 @@ export const industryPages: DetailPageData[] = [
     relatedLinks: [
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
+      { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Medical Case Study", href: "/case-studies/medical-device-cartridge-molding" }
     ],
     faqs: [
@@ -857,7 +857,7 @@ export const industryPages: DetailPageData[] = [
     relatedLinks: [
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
+      { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Medical Case Study", href: "/case-studies/medical-device-cartridge-molding" }
     ],
     faqs: [
@@ -1018,8 +1018,8 @@ export const industryPages: DetailPageData[] = [
 
 const commonToolingServices = [
   { label: "Export Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-  { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
-  { label: "Tooling Spare Parts", href: "/services/tooling-spare-parts" },
+  { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
+  { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
   { label: "Request an RFQ", href: "/request-a-quote" }
 ];

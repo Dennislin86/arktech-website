@@ -15,9 +15,11 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
       { label: "Manufacturing Capabilities", href: "/manufacturing-capabilities" },
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-      { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
+      { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Injection Molding Engineering", href: "/injection-molding-engineering" },
-      { label: "Tooling Spare Parts", href: "/services/tooling-spare-parts" },
+      { label: "Tooling Documentation", href: "/injection-molds/tooling-documentation" },
+      { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
+      { label: "Export Tooling & Mold Transfer", href: "/injection-molds/export-tooling-transfer" },
       { label: "Extended Manufacturing by Arktech Group ↗", href: "https://www.arktech-group.com", external: true, groupLink: true }
     ]
   },

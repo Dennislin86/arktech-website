@@ -295,7 +295,7 @@ export default function ProjectManagementPage() {
             {communicationAreas.map((area) => <article className="border-t-2 border-[var(--brand)] bg-white p-5" key={area.title}><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--brand-dark)]">{area.title}</h3><p className="mt-3 text-sm leading-6 text-[var(--muted)]">{area.body}</p></article>)}
           </div>
           <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 text-sm">
-            <TextLink href="/services/mold-trial-sampling-support">Mold Trial &amp; Validation</TextLink>
+            <TextLink href="/injection-molds/mold-trial-validation">Mold Trial &amp; Validation</TextLink>
             <TextLink href="/request-a-quote">Request a Quote</TextLink>
           </div>
         </div>

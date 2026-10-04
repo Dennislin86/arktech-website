@@ -27,7 +27,7 @@ const processes = [
 const capabilityGroups = [
   {
     title: "Core Mold & Tooling",
-    items: ["Injection Mold Manufacturing", "Mold Design Support", "Mold Trial Support", "Tooling Spare Parts"]
+    items: ["Injection Mold Manufacturing", "Mold Design Support", "Mold Trial Support", "Mold Spare Parts"]
   },
   {
     title: "Plastic Manufacturing",

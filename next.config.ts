@@ -38,6 +38,16 @@ const nextConfig: NextConfig = {
         permanent: true
       },
       {
+        source: "/services/mold-trial-sampling-support",
+        destination: "/injection-molds/mold-trial-validation",
+        permanent: true
+      },
+      {
+        source: "/services/tooling-spare-parts",
+        destination: "/injection-molds/mold-spare-parts",
+        permanent: true
+      },
+      {
         source: "/tooling-examples/large-component-molds",
         destination: "/injection-molds/large-injection-molds",
         permanent: true

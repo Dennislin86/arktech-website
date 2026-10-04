@@ -403,6 +403,22 @@ No new image or video assets were created for `/services/mold-trial-sampling-sup
 | --- | --- | --- | --- |
 | Contact hero factory workshop | `/images/Contact/contact-mold-factory-workshop.webp` | Arktech injection mold manufacturing workshop in China | Existing real Arktech factory workshop photo; active |
 
+## Injection Molds Tooling Support Pages
+
+The four Tooling Support pages reuse approved first-party project media and privacy-safe engineering records. No stock, competitor or newly generated media was added.
+
+| Page / content | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Mold Trial & Validation hero | `/images/Mold trail/Mold trial video photos.png` | Injection mold installed in a molding machine for trial and validation | Existing real Arktech mold-trial image; active |
+| Mold Trial Report evidence | `/images/injection-mold-manufacturing/mold-trial-report-evidence.webp` | Injection mold trial report documenting mold condition and validation | Existing privacy-safe Arktech report image; active |
+| Trial process parameters | `/images/injection-mold-manufacturing/injection-molding-process-parameters.webp` | Injection molding process parameter sheet from mold trial | Existing real project record; active |
+| Trial dimensional inspection | `/images/quality/dimensional-inspection-report-anonymized.webp` | Dimensional inspection report for injection molded trial samples | Existing anonymized project record; active |
+| Tooling Documentation hero | `/images/documentation/tooling-documentation-package.png` | Injection mold documentation package with tooling drawings and validation records | Existing real Arktech tooling-package screenshot; active |
+| Tooling design review example | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | Anonymized injection mold drawing and DFM tooling documentation | Existing privacy-safe engineering record; active |
+| Mold Spare Parts hero and evidence | `/images/capabilities/tooling-spare-parts.jpg` | Replacement core and cavity inserts for an injection mold | Existing real mold-insert photograph; active |
+| Export Tooling hero and handover | `/images/company/Precision Mold to Global Delivery.png` | Completed export injection mold with molded part and tooling packing preparation | Existing approved first-party handover composite; active |
+| Export Tooling Open Graph | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Completed export injection mold prepared for customer production | Existing approved export-tooling hero; active |
+
 ## Existing General Assets
 
 | Content | Asset | Source/status |

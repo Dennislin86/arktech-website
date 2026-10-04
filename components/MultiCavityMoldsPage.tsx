@@ -92,10 +92,10 @@ const relatedCapabilities = [
   ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
   ["DFM Engineering", "/injection-molding-engineering"],
   ["Mold Flow Analysis", "/injection-molding-engineering#moldflow-analysis"],
-  ["Mold Trial & Validation", "/services/mold-trial-sampling-support"],
+  ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
   ["Quality & Documentation", "/company/quality-documentation"],
   ["Plastic Injection Molding", "/services/plastic-injection-molding"],
-  ["Tooling Spare Parts", "/services/tooling-spare-parts"]
+  ["Mold Spare Parts", "/injection-molds/mold-spare-parts"]
 ] as const;
 
 const faqs = [
@@ -414,7 +414,7 @@ export function MultiCavityMoldsPage() {
               </li>
             ))}
           </ol>
-          <div className="mt-7"><ArrowLink href="/services/mold-trial-sampling-support">View Mold Trial & Validation</ArrowLink></div>
+          <div className="mt-7"><ArrowLink href="/injection-molds/mold-trial-validation">View Mold Trial & Validation</ArrowLink></div>
         </div>
       </section>
 

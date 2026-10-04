@@ -61,7 +61,7 @@ const relatedCapabilities = [
   ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
   ["Plastic Injection Molding", "/services/plastic-injection-molding"],
   ["Injection Mold Types", "/injection-molds"],
-  ["Mold Trial & Validation", "/services/mold-trial-sampling-support"]
+  ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"]
 ];
 
 const engineeringResources = [

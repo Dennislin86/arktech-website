@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { seoPages } from "@/lib/seo-pages";
 import { allEngineeringResources } from "@/lib/engineering-resources";
 import { industryLandingPages } from "@/lib/industry-landing-pages";
+import { toolingSupportSlugs } from "@/lib/tooling-support-pages";
 
 const injectionMoldSlug = (slug: string) => slug === "large-component-molds" ? "large-injection-molds" : slug === "insert-molds" ? "insert-molding-tools" : slug;
 
@@ -24,10 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookie-policy"
   ];
   const detailRoutes = [
-    ...servicePages.filter((page) => page.slug !== "dfm-engineering").map((page) => `/services/${page.slug}`),
+    ...servicePages.filter((page) => !["dfm-engineering", "mold-trial-sampling-support", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
     ...toolingExamplePages.filter((page) => page.slug !== "die-casting-molds").map((page) => `/injection-molds/${injectionMoldSlug(page.slug)}`),
+    ...toolingSupportSlugs.map((slug) => `/injection-molds/${slug}`),
     ...caseStudyPages.map((page) => `/case-studies/${page.slug}`),
     ...resourcePages.map((page) => `/resources/${page.slug}`),
     ...allEngineeringResources.map((page) => page.path),

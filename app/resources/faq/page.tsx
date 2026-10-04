@@ -27,7 +27,7 @@ const relatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
   { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
-  { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },
+  { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }
 ];
 

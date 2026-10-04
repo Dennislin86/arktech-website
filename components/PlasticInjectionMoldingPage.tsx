@@ -439,7 +439,7 @@ const faqs = [
 const faqRelatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
-  { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
+  { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }
 ];
 

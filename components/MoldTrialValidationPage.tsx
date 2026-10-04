@@ -201,7 +201,7 @@ export function MoldTrialValidationPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: site.url },
       { "@type": "ListItem", position: 2, name: "Injection Molds", item: `${site.url}/injection-molds` },
-      { "@type": "ListItem", position: 3, name: "Mold Trial & Validation", item: `${site.url}/services/mold-trial-sampling-support` }
+      { "@type": "ListItem", position: 3, name: "Mold Trial & Validation", item: `${site.url}/injection-molds/mold-trial-validation` }
     ]
   };
 

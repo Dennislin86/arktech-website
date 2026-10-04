@@ -55,7 +55,7 @@ const engineeringCapabilities = [
     detail: "Samples · Process Parameters · Correction Tracking",
     image: "/images/process/export-delivery-production-support-molding.png",
     alt: "Injection mold trial and sample validation before approval",
-    href: "/services/mold-trial-sampling-support"
+    href: "/injection-molds/mold-trial-validation"
   },
   {
     title: "Quality Inspection",

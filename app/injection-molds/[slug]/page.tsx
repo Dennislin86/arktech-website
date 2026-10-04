@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DetailPage } from "@/components/DetailPage";
 import { MultiCavityMoldsPage } from "@/components/MultiCavityMoldsPage";
+import { ToolingSupportPage } from "@/components/ToolingSupportPage";
 import { toolingExamplePages } from "@/lib/page-data";
 import { site } from "@/lib/site";
+import { isToolingSupportSlug, toolingSupportPages, toolingSupportSlugs } from "@/lib/tooling-support-pages";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -34,11 +36,30 @@ const displayOverrides: Record<string, { title: string; heroTitle: string }> = {
 };
 
 export function generateStaticParams() {
-  return toolingExamplePages.filter((page) => page.slug !== "die-casting-molds").map((page) => ({ slug: publicSlug(page.slug) }));
+  return [
+    ...toolingExamplePages.filter((page) => page.slug !== "die-casting-molds").map((page) => ({ slug: publicSlug(page.slug) })),
+    ...toolingSupportSlugs.map((slug) => ({ slug }))
+  ];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  if (isToolingSupportSlug(slug)) {
+    const page = toolingSupportPages[slug];
+    const canonical = `${site.url}/injection-molds/${slug}/`;
+    return {
+      title: { absolute: page.seoTitle },
+      description: page.description,
+      alternates: { canonical },
+      openGraph: {
+        title: page.seoTitle,
+        description: page.description,
+        type: "website",
+        url: canonical,
+        images: [{ url: page.ogImage, alt: page.heroAlt }]
+      }
+    };
+  }
   if (slug === "large-component-molds" || slug === "insert-molds" || slug === "die-casting-molds") return {};
   const sourceSlug = slugAliases[slug] ?? slug;
   const page = toolingExamplePages.find((item) => item.slug === sourceSlug);
@@ -55,6 +76,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function InjectionMoldDetailPage({ params }: PageProps) {
   const { slug } = await params;
+  if (isToolingSupportSlug(slug)) return <ToolingSupportPage slug={slug} />;
   if (slug === "large-component-molds" || slug === "insert-molds" || slug === "die-casting-molds") notFound();
   const sourceSlug = slugAliases[slug] ?? slug;
   const page = toolingExamplePages.find((item) => item.slug === sourceSlug);
