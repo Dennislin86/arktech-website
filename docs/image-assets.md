@@ -55,6 +55,7 @@ The initial set contains eight completed-mold images and seven molded-part/proje
 | Vacuum Casting | `/images/capabilities/vacuum-casting-v3.png` | Polyurethane vacuum casting for bridge production and prototypes | AI-generated; active |
 | Assembly & Secondary Operations | `/images/capabilities/assembly-secondary-operations.webp` | Electronics assembly line for component assembly and secondary operations | User-supplied AI-generated image; active |
 | R&D & Product Development | `/images/capabilities/rd-product-development.webp` | DFM engineering review and product development for manufactured components | User-supplied AI-generated image; active |
+| Connected Manufacturing flow | `/images/capabilities/arktech-connected-tooling-production-process.webp` | Production flow chart showing DFM, mold design, machining, assembly, validation, plastic part production and delivery | Lossless WebP derivative of the user-supplied `/images/capabilities/Connected Manufacturing.png`; active on the Manufacturing Capabilities page |
 
 ## Arktech Group Supporting Capabilities
 

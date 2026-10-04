@@ -95,11 +95,11 @@ const manufacturingPaths = [
 ];
 
 const processStages = [
-  ["01", "DFM & Co-Design", "Review geometry, materials and tooling risks before release."],
-  ["02", "Injection Mold Manufacturing", "Build and fit the approved production tooling."],
-  ["03", "Mold Trial & Validation", "Trial the mold, inspect samples and track corrections."],
-  ["04", "Plastic Injection Molding", "Move approved tooling into low-volume or repeat production."],
-  ["05", "Inspection & Secondary Operations", "Complete required verification, finishing and assembly support."]
+  ["01", "DFM & Co-Design", "Review part design and tooling risks."],
+  ["02", "Mold Manufacturing", "Build and assemble the approved tooling."],
+  ["03", "Trial & Validation", "Check samples, parameters and dimensions."],
+  ["04", "Injection Production", "Move approved tooling into production."],
+  ["05", "Inspection & Secondary Operations", "Complete required checks, finishing and assembly."]
 ];
 
 const industries = [
@@ -263,13 +263,29 @@ export function ManufacturingCapabilitiesPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--brand-dark)] py-14 text-white sm:py-16" id="capability-flow">
+      <section className="bg-[var(--brand-dark)] py-12 text-white sm:py-14" id="capability-flow">
         <div className="container-page">
-          <div className="max-w-4xl"><p className="text-sm font-bold uppercase tracking-[0.12em] text-[#ffb2b5]">Connected Manufacturing</p><h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl lg:text-[44px]">From Product Design to Tooling and Production</h2><p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">Core steps are coordinated around project requirements. Supporting processes are added only where the product program needs them.</p></div>
-          <ol className="relative mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-5" aria-label="Arktech product development to production capability flow">
-            {processStages.map(([number, title, description], index) => <li className="relative border-t-2 border-[var(--brand)] pt-5" key={title}><span className="text-sm font-bold text-[#ffb2b5]">{number}</span><h3 className="mt-2 text-lg font-bold leading-6 text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-300">{description}</p>{index < processStages.length - 1 ? <span className="absolute -right-4 top-5 hidden text-xl font-bold text-[#ffb2b5] lg:block" aria-hidden="true">→</span> : null}</li>)}
+          <div className="grid items-center gap-7 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-10">
+            <div className="max-w-xl">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#ffb2b5]">CONNECTED MANUFACTURING</p>
+              <h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl lg:text-[42px]">From Design to Tooling &amp; Production</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300 sm:text-lg">Start at the stage your project requires. Export molds can be delivered after validation; molded-part programs continue into production.</p>
+            </div>
+            <div className="overflow-hidden rounded-sm border border-white/15 bg-[#0b2c48]">
+              <Image
+                alt="Production flow chart showing DFM, mold design, machining, assembly, validation, plastic part production and delivery"
+                className="h-auto w-full object-contain"
+                height={943}
+                sizes="(min-width: 1024px) 64vw, 100vw"
+                src="/images/capabilities/arktech-connected-tooling-production-process.webp"
+                unoptimized
+                width={1813}
+              />
+            </div>
+          </div>
+          <ol className="relative mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-5 lg:gap-0" aria-label="Arktech design, tooling and production process summary">
+            {processStages.map(([number, title, description], index) => <li className="relative border-l-2 border-[var(--brand)] py-1 pl-4 lg:border-l-0 lg:border-t-2 lg:px-4 lg:pb-0 lg:pt-4 lg:first:pl-0 lg:last:pr-0" key={title}><span className="text-sm font-bold text-[#ffb2b5]">{number}</span><h3 className="mt-1.5 text-base font-bold leading-6 text-white">{title}</h3><p className="mt-1.5 text-sm leading-6 text-slate-300">{description}</p>{index < processStages.length - 1 ? <span className="absolute -right-2.5 top-3.5 hidden text-lg font-bold text-[#ffb2b5] lg:block" aria-hidden="true">→</span> : null}</li>)}
           </ol>
-          <p className="mt-8 border-t border-white/15 pt-6 text-sm font-semibold text-slate-300">Supporting processes are available as required by the project.</p>
         </div>
       </section>
 
