@@ -55,7 +55,7 @@ const coreCapabilities: Array<{
     links: [
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
       { label: "Production Options", href: "/services/injection-molding-production-options" },
-      { label: "Insert & Overmolding", href: "/tooling-examples#insert-overmolding-tools" }
+      { label: "Insert & Overmolding", href: "/injection-molds#insert-overmolding-tools" }
     ],
     cta: "Explore Injection Molding",
     href: "/services/plastic-injection-molding"

@@ -70,7 +70,7 @@ export const seoPages: SeoLandingPage[] = [
     serviceLinks: [
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "DFM Engineering Support", href: "/services/dfm-engineering" },
-      { label: "Tooling Examples", href: "/tooling-examples" }
+      { label: "Injection Molds", href: "/injection-molds" }
     ],
     relatedSeoSlugs: ["plastic-injection-molding", "dfm-engineering-services", "oem-manufacturing-services"]
   },

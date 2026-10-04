@@ -169,63 +169,63 @@ const toolingCategories = [
     description: "Precision tooling for parts requiring controlled dimensions, repeatable molding, stable assembly interfaces and consistent production performance.",
     image: "/images/mold-types/Precision-Molds.png",
     alt: "Precision injection mold for controlled-dimension plastic parts and repeatable production",
-    href: "/tooling-examples#production-injection-molds"
+    href: "/injection-molds#production-injection-molds"
   },
   {
     title: "Multi-Cavity Molds",
     description: "Balanced multi-cavity mold systems for repeatable dimensions, controlled cooling and efficient recurring production.",
     image: "/images/mold-types/multi-cavity-injection-molds.webp",
     alt: "Multi-cavity injection molds for repeat plastic part production",
-    href: "/tooling-examples/multi-cavity-molds"
+    href: "/injection-molds/multi-cavity-molds"
   },
   {
     title: "Complex Injection Molds",
     description: "Complex tooling configurations for demanding geometry, coordinated side actions, undercuts and engineered mold movements.",
     image: "/images/mold-types/complex-injection-molds.png",
     alt: "Complex injection mold with multiple sliders and tooling mechanisms",
-    href: "/tooling-examples#complex-injection-molds"
+    href: "/injection-molds#complex-injection-molds"
   },
   {
     title: "Large Injection Molds",
     description: "Large tooling for industrial housings and structural plastic parts with controlled cooling, movement and dimensional stability.",
     image: "/images/mold-types/large-component-molds.JPG",
     alt: "Large injection mold for industrial housings and structural plastic parts",
-    href: "/tooling-examples/large-component-molds"
+    href: "/injection-molds/large-injection-molds"
   },
   {
     title: "Insert & Overmolding Tools",
     description: "Tooling for molding around metal inserts, prepared substrates or compatible second materials.",
     image: "/images/mold-types/insert-molding-tools.webp",
     alt: "Insert and overmolding tools for integrated plastic and metal components",
-    href: "/tooling-examples#insert-overmolding-tools"
+    href: "/injection-molds#insert-overmolding-tools"
   },
   {
     title: "Two-Shot / 2K Molds",
     description: "Two-material or two-color molds engineered around shot sequence, material compatibility and machine configuration.",
     image: "/images/mold-types/two-shot-2k-bi-injection-molds.webp",
     alt: "Two-shot and 2K injection mold for multi-material plastic parts",
-    href: "/tooling-examples/two-shot-2k-molds"
+    href: "/injection-molds/two-shot-2k-molds"
   },
   {
     title: "Unscrewing Molds",
     description: "Mechanically controlled tooling for threaded plastic parts requiring reliable core rotation and release.",
     image: "/images/mold-types/unscrewing-molds.webp",
     alt: "Unscrewing injection mold for internally threaded plastic components",
-    href: "/tooling-examples/unscrewing-molds"
+    href: "/injection-molds/unscrewing-molds"
   },
   {
     title: "Hot Runner Molds",
     description: "Hot runner tooling evaluated for balanced material delivery, gate control and stable recurring production.",
     image: "/images/mold-types/hot-runner-molds.webp",
     alt: "Hot runner injection mold for controlled production molding",
-    href: "/tooling-examples/hot-runner-molds"
+    href: "/injection-molds/hot-runner-molds"
   },
   {
     title: "Prototype Injection Molds",
     description: "Prototype injection molds for engineering validation, functional samples and early-stage product development before larger production tooling commitments.",
     image: "/images/mold-types/prototype-injection-mold.webp",
     alt: "Prototype injection mold and molded plastic component for engineering validation",
-    href: "/tooling-examples#production-injection-molds"
+    href: "/injection-molds#production-injection-molds"
   }
 ];
 
@@ -728,7 +728,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <Link className="focus-ring mt-7 inline-flex font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/tooling-examples">View All Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
+          <Link className="focus-ring mt-7 inline-flex font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/injection-molds">View All Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
         </div>
       </section>
 

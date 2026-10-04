@@ -20,7 +20,7 @@ export const site = {
     { label: "Services", href: "/services" },
     { label: "Industries", href: "/industries" },
     { label: "Solutions", href: "/solutions" },
-    { label: "Tooling", href: "/tooling-examples" },
+    { label: "Injection Molds", href: "/injection-molds" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Resources", href: "/resources" },
     { label: "About", href: "/company" },

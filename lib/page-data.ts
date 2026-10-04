@@ -108,8 +108,8 @@ export const servicePages: DetailPageData[] = [
     relatedLinks: [
       { label: "Mold Trial & Sampling Support", href: "/services/mold-trial-sampling-support" },
       { label: "Tooling Spare Parts", href: "/services/tooling-spare-parts" },
-      { label: "Hot Runner Molds", href: "/tooling-examples/hot-runner-molds" },
-      { label: "Multi-Cavity Molds", href: "/tooling-examples/multi-cavity-molds" }
+      { label: "Hot Runner Molds", href: "/injection-molds/hot-runner-molds" },
+      { label: "Multi-Cavity Molds", href: "/injection-molds/multi-cavity-molds" }
     ],
     faqs: [
       {
@@ -271,7 +271,7 @@ export const servicePages: DetailPageData[] = [
     relatedLinks: [
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "Project Management", href: "/company/project-management" },
-      { label: "Hot Runner Molds", href: "/tooling-examples/hot-runner-molds" }
+      { label: "Hot Runner Molds", href: "/injection-molds/hot-runner-molds" }
     ],
     faqs: [
       {
@@ -1852,7 +1852,7 @@ export const caseStudyPages: CaseStudyData[] = [
     related: [
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "Solutions for Injection Molding Companies", href: "/solutions/injection-molding-companies" },
-      { label: "Multi-Cavity Mold Manufacturing", href: "/tooling-examples/multi-cavity-molds" }
+      { label: "Multi-Cavity Mold Manufacturing", href: "/injection-molds/multi-cavity-molds" }
     ]
   },
   {
@@ -1997,7 +1997,7 @@ export const caseStudyPages: CaseStudyData[] = [
       "Tooling records remained linked to the two-shot manufacturing sequence."
     ],
     related: [
-      { label: "Two-Shot / 2K Molds", href: "/tooling-examples/two-shot-2k-molds" },
+      { label: "Two-Shot / 2K Molds", href: "/injection-molds/two-shot-2k-molds" },
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "Transparent Plastic Molding", href: "/resources/injection-molding/transparent-plastic-molding" }
     ]
@@ -2033,7 +2033,7 @@ export const caseStudyPages: CaseStudyData[] = [
       "The mechanism and service points were documented for the tooling program."
     ],
     related: [
-      { label: "Unscrewing Molds", href: "/tooling-examples/unscrewing-molds" },
+      { label: "Unscrewing Molds", href: "/injection-molds/unscrewing-molds" },
       { label: "Undercut Design", href: "/resources/injection-molding/undercut-design" },
       { label: "Mold Design Guidelines", href: "/resources/mold-design-guidelines" }
     ]

@@ -9,13 +9,31 @@ type DetailPageProps = {
   page: DetailPageData;
   parentHref: string;
   parentLabel: string;
+  includeSiteCta?: boolean;
+  canonicalUrl?: string;
 };
 
-export function DetailPage({ page, parentHref, parentLabel }: DetailPageProps) {
+export function DetailPage({ page, parentHref, parentLabel, includeSiteCta = true, canonicalUrl }: DetailPageProps) {
   const heroImage = approvedHeroImageForSlug(page.slug);
+  const breadcrumbSchema = canonicalUrl ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.arktechmold.com" },
+      { "@type": "ListItem", position: 2, name: parentLabel, item: "https://www.arktechmold.com/injection-molds" },
+      { "@type": "ListItem", position: 3, name: page.title, item: canonicalUrl }
+    ]
+  } : null;
+  const pageSchemas = canonicalUrl ? [
+    breadcrumbSchema,
+    { "@context": "https://schema.org", "@type": "WebPage", "@id": `${canonicalUrl}#webpage`, name: page.title, description: page.description, url: canonicalUrl },
+    { "@context": "https://schema.org", "@type": "Service", name: page.title, serviceType: page.title, description: page.description, url: canonicalUrl, mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` }, provider: { "@type": "Organization", name: "Arktech Mold", url: "https://www.arktechmold.com" }, areaServed: "Worldwide" }
+  ] : [];
 
   return (
     <>
+      {pageSchemas.map((schema, index) => <script dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} key={index} type="application/ld+json" />)}
+      {canonicalUrl ? <nav aria-label="Breadcrumb" className="border-b border-[var(--line)] bg-white"><ol className="container-page flex flex-wrap items-center gap-2 py-4 text-sm text-[var(--muted)]"><li><Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/">Home</Link></li><li aria-hidden="true">/</li><li><Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href={parentHref}>{parentLabel}</Link></li><li aria-hidden="true">/</li><li aria-current="page" className="font-semibold text-[var(--brand-dark)]">{page.title}</li></ol></nav> : null}
       <PageHero
         eyebrow={page.eyebrow}
         title={page.title}
@@ -105,7 +123,7 @@ export function DetailPage({ page, parentHref, parentLabel }: DetailPageProps) {
           ) : null}
 
           <div className="mt-7 rounded-sm border border-[var(--line)] bg-[var(--brand-dark)] p-6 text-white">
-            <h2 className="text-2xl font-bold">Final RFQ CTA</h2>
+            <h2 className="text-2xl font-bold">Discuss Your Manufacturing Project</h2>
             <p className="mt-3 max-w-3xl leading-7 text-white/75">
               Send CAD files, drawings, material targets, annual volume, and target lead time. Arktech Mold will review your files for DFM feedback and practical quotation planning.
             </p>
@@ -123,7 +141,7 @@ export function DetailPage({ page, parentHref, parentLabel }: DetailPageProps) {
           </div>
         </div>
       </section>
-      <CTA />
+      {includeSiteCta ? <CTA /> : null}
     </>
   );
 }

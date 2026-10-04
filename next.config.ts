@@ -23,6 +23,31 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/tooling-examples",
+        destination: "/injection-molds",
+        permanent: true
+      },
+      {
+        source: "/tooling-examples/large-component-molds",
+        destination: "/injection-molds/large-injection-molds",
+        permanent: true
+      },
+      {
+        source: "/tooling-examples/insert-molds",
+        destination: "/injection-molds/insert-molding-tools",
+        permanent: true
+      },
+      {
+        source: "/tooling-examples/die-casting-molds",
+        destination: "/services/die-casting-mold",
+        permanent: true
+      },
+      {
+        source: "/tooling-examples/:slug",
+        destination: "/injection-molds/:slug",
+        permanent: true
+      },
+      {
         source: "/service/mould-making",
         destination: "/services/injection-mold-manufacturing",
         permanent: true

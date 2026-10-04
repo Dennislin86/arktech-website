@@ -98,7 +98,9 @@ The eight high-intent Industry child pages reuse approved local application imag
 | Unscrewing Molds | `/images/mold-types/unscrewing-molds.webp` | Unscrewing injection molds for plastic parts with internal and external threads | User-supplied tooling image; active |
 | Two-Shot / 2K Injection Molds | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | Two-shot 2K bi-injection molds for multi-material plastic components | User-supplied tooling image; active |
 | Large Component Molds | `/images/mold-types/large-component-molds.JPG` | Large component injection molds for industrial housings and structural plastic parts | Real Arktech tooling photo; active in Mold Types and Company navigation |
-| Family Molds | `/images/mold-types/Family-molds.JPG` | Family injection mold with multiple part geometries in one tooling set | Existing real Arktech tooling photo; approved asset available for future family-mold content, not currently referenced by a live page |
+| Family Molds | `/images/mold-types/Family-molds.JPG` | Family injection mold with multiple part geometries in one tooling set | Existing real Arktech tooling photo; active on the Injection Molds Hub |
+| High-Gloss Injection Molds | `/images/mold-types/High-Gloss Injection Molds.JPG` | Mirror-polished mold cavities for high-gloss visible plastic parts | Existing user-supplied tooling photo; active on the Injection Molds Hub |
+| In-Mold Labeling (IML) | `/images/mold-types/In-mould labelling (IML).png` | Diagram of decorative film placement and in-mold labeling integration | Existing user-supplied technical visual; active on the Injection Molds Hub and presented without unsupported automation claims |
 | Die Casting Tooling | `/images/capabilities/die-casting.webp` | Die casting tooling for aluminum and zinc production components | User-supplied image; active |
 
 ## Injection Molds Taxonomy & Overview Page
@@ -118,7 +120,7 @@ The eight high-intent Industry child pages reuse approved local application imag
 | Valve Gate Molds | `/images/mold-types/hot-runner-molds.webp` | Hot runner injection mold representative of valve gate tooling engineering | Existing real Arktech hot-runner tooling image; reused because no separate verified valve-gate asset exists |
 | Slider & Lifter engineering resource | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with sliders and lifters for side-action release | Removed as a standalone Hub Mold Type; retained only as a Complex Mold mechanism and engineering-resource topic |
 
-The `/tooling-examples` page also reuses the approved Precision, Complex, Multi-Cavity, Hot Runner, Two-Shot / 2K, Insert, Unscrewing, Large and Prototype assets above in the horizontal **Real Injection Mold Projects** portfolio. Every carousel card uses a unique factual alt description. No toolroom overview, operator, polishing, trial-report or inspection-only image is included in that completed-mold portfolio.
+The `/injection-molds` page uses approved real case-study assets for Automotive Sensor Housing, Medical Device Cartridge, Smart Home Housing, Two-Shot Light Cover, Threaded Component Unscrewing and Fan Blade tooling in the horizontal **Real Injection Mold Projects** portfolio. Every carousel card uses a unique factual alt description. No toolroom overview, operator, polishing, trial-report or inspection-only image is included in that completed-mold portfolio.
 
 No new image files were created for the synchronized taxonomy. Missing dedicated High-Cavitation, Overmolding and Valve Gate mold images remain documented rather than being replaced with generated or external placeholders. High-Cavitation is merged into Multi-Cavity on the Hub, Overmolding reuses the approved Insert/Overmolding tooling image, and Valve Gate reuses the approved Hot Runner tooling image.
 
@@ -343,7 +345,7 @@ The first-screen audit reuses approved local media only. No source image or vide
 | Homepage | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Existing approved export-tooling hero restored as a full-width background with a stronger left-side navy readability overlay and complete tooling visible on the right |
 | Capabilities hub | `/images/hero/tooling-mold-trial-engineering-capabilities.webp` | Existing approved tooling, mold-trial and engineering composite; active as the full-width background |
 | Injection Mold Manufacturing | `/images/mold-types/Precision-Molds.png` | Existing approved completed precision mold image; active as the full-width export-tooling background |
-| Injection Molds / Tooling Examples hub | `/images/mold-types/complex-injection-molds.png` | Existing approved completed complex mold image; active as the full-width project background |
+| Injection Molds Hub | `/images/mold-types/complex-injection-molds.png` | Existing approved completed complex mold image; active as the full-width Hero background on `/injection-molds` |
 | Industries hub | `/images/industries/robotics-automation.png`, `/images/industries/medial-industry.webp`, `/images/industries/Automotive-Components.png`, `/images/industries/autimotive-ev.webp` | Existing approved application images; active as a four-image full-width industry collage |
 | Plastic Injection Molding | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Existing approved real production frame; active as the full-width part-production background |
 | Resources hub | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | Existing approved Arktech DFM and mold-CAD engineering visual; active as the full-width editorial background |

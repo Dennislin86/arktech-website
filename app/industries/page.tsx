@@ -104,16 +104,16 @@ const capabilityLinks: Record<string, string> = {
   DFM: "/services/dfm-engineering",
   "Complex Molds": "/services/injection-mold-manufacturing",
   "Engineering Plastics": "/services/plastic-injection-molding",
-  "Insert Molding": "/tooling-examples/insert-molds",
+  "Insert Molding": "/injection-molds/insert-molding-tools",
   "Production Molds": "/services/injection-mold-manufacturing",
   Documentation: "/company/quality-documentation",
-  "2K Molding": "/tooling-examples/two-shot-2k-molds",
+  "2K Molding": "/injection-molds/two-shot-2k-molds",
   Assembly: "/services/plastic-metal-assembly",
   "Production Tooling": "/services/injection-mold-manufacturing",
-  "Large Housings": "/tooling-examples/large-component-molds",
+  "Large Housings": "/injection-molds/large-injection-molds",
   "Mass Production": "/services/injection-molding-production-options",
   "Low Volume to Production": "/services/injection-molding-production-options",
-  Overmolding: "/tooling-examples/overmolding-tools"
+  Overmolding: "/injection-molds/overmolding-tools"
 };
 
 const process = [

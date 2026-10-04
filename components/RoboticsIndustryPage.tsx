@@ -56,12 +56,12 @@ const coreCapabilities = [
   {
     title: "Insert Molding",
     body: "Tooling support for molded parts that integrate approved threaded or functional inserts.",
-    href: "/tooling-examples#insert-overmolding-tools"
+    href: "/injection-molds#insert-overmolding-tools"
   },
   {
     title: "Overmolding",
     body: "Substrate, shutoff and material-interface review for multi-material grips, seals and protective features.",
-    href: "/tooling-examples/overmolding-tools"
+    href: "/injection-molds/overmolding-tools"
   },
   {
     title: "Mold Trial & Validation",

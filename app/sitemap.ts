@@ -5,6 +5,8 @@ import { seoPages } from "@/lib/seo-pages";
 import { allEngineeringResources } from "@/lib/engineering-resources";
 import { industryLandingPages } from "@/lib/industry-landing-pages";
 
+const injectionMoldSlug = (slug: string) => slug === "large-component-molds" ? "large-injection-molds" : slug === "insert-molds" ? "insert-molding-tools" : slug;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "/",
@@ -24,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages.map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
-    ...toolingExamplePages.map((page) => `/tooling-examples/${page.slug}`),
+    ...toolingExamplePages.filter((page) => page.slug !== "die-casting-molds").map((page) => `/injection-molds/${injectionMoldSlug(page.slug)}`),
     ...caseStudyPages.map((page) => `/case-studies/${page.slug}`),
     ...resourcePages.map((page) => `/resources/${page.slug}`),
     ...allEngineeringResources.map((page) => page.path),

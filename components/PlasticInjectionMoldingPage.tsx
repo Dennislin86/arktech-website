@@ -187,7 +187,7 @@ const specialtyMoldingCapabilities = [
     applications: "Threaded inserts · bushings · contacts · embedded components",
     image: "/images/mold-types/insert-molding-tools.webp",
     alt: "Insert molding tool for plastic components with integrated metal inserts",
-    href: "/tooling-examples/insert-molds",
+    href: "/injection-molds/insert-molding-tools",
     link: "Explore Insert Molding"
   },
   {
@@ -196,7 +196,7 @@ const specialtyMoldingCapabilities = [
     applications: "Seals · grips · protective surfaces · soft-touch features",
     image: "/images/material-capabilities/silicone-tpu-tpe-elastomer-components.webp",
     alt: "Overmolded plastic components with rigid and soft materials",
-    href: "/tooling-examples/overmolding-tools",
+    href: "/injection-molds/overmolding-tools",
     link: "Explore Overmolding"
   },
   {
@@ -205,7 +205,7 @@ const specialtyMoldingCapabilities = [
     applications: "Dual-material parts · two-color components · integrated soft / rigid parts",
     image: "/images/case-studies/two-shot-light-cover.webp",
     alt: "Two-shot 2K molded component with two materials",
-    href: "/tooling-examples/two-shot-2k-molds",
+    href: "/injection-molds/two-shot-2k-molds",
     link: "Explore 2K Molding"
   }
 ];
@@ -214,25 +214,25 @@ const productionToolingOptions = [
   {
     title: "Multi-Cavity Tooling",
     body: "Higher-output production using multiple balanced cavities for repeatable part production.",
-    href: "/tooling-examples/multi-cavity-molds",
+    href: "/injection-molds/multi-cavity-molds",
     link: "Explore Multi-Cavity Molds"
   },
   {
     title: "Hot Runner Systems",
     body: "Runner-control solutions that can reduce material waste and support more stable repeat production.",
-    href: "/tooling-examples/hot-runner-molds",
+    href: "/injection-molds/hot-runner-molds",
     link: "Explore Hot Runner Molds"
   },
   {
     title: "Unscrewing / Threaded Parts",
     body: "Controlled core rotation and tooling mechanisms for molded internal or external threaded features.",
-    href: "/tooling-examples/unscrewing-molds",
+    href: "/injection-molds/unscrewing-molds",
     link: "Explore Unscrewing Molds"
   },
   {
     title: "Valve Gate Systems",
     body: "Controlled gating for applications requiring improved gate control, multi-cavity balance or cosmetic performance.",
-    href: "/tooling-examples/hot-runner-molds",
+    href: "/injection-molds/hot-runner-molds",
     link: "View Valve Gate Support"
   }
 ];

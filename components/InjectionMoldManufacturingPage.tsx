@@ -60,49 +60,49 @@ const moldTypes = [
     description: "Tooling for undercuts, sliders, lifters and coordinated side actions in demanding part geometries.",
     image: "/images/mold-types/complex-injection-molds.png",
     alt: "Complex injection mold with sliders lifters and coordinated side actions",
-    href: "/tooling-examples#complex-injection-molds"
+    href: "/injection-molds#complex-injection-molds"
   },
   {
     title: "Multi-Cavity Injection Molds",
     description: "Multi-cavity tooling engineered for balanced filling, dimensional consistency and repeatable production.",
     image: "/images/mold-types/multi-cavity-injection-molds.webp",
     alt: "Multi-cavity injection mold for balanced filling and repeatable production",
-    href: "/tooling-examples/multi-cavity-molds"
+    href: "/injection-molds/multi-cavity-molds"
   },
   {
     title: "Hot Runner Molds",
     description: "Hot runner tooling designed around material flow, gate control and production efficiency.",
     image: "/images/mold-types/hot-runner-molds.webp",
     alt: "Hot runner injection mold for material flow and gate control",
-    href: "/tooling-examples/hot-runner-molds"
+    href: "/injection-molds/hot-runner-molds"
   },
   {
     title: "Two-Shot / 2K Molds",
     description: "Two-material or two-color tooling engineered around shot sequence, material compatibility and machine configuration.",
     image: "/images/mold-types/two-shot-2k-bi-injection-molds.webp",
     alt: "Two-shot 2K injection mold for two-material plastic components",
-    href: "/tooling-examples/two-shot-2k-molds"
+    href: "/injection-molds/two-shot-2k-molds"
   },
   {
     title: "Insert Molding Tools",
     description: "Tooling for molding plastic around metal inserts and prepared components.",
     image: "/images/mold-types/insert-molding-tools.webp",
     alt: "Insert molding tool for plastic molded around prepared components",
-    href: "/tooling-examples/insert-molds"
+    href: "/injection-molds/insert-molding-tools"
   },
   {
     title: "Unscrewing Molds",
     description: "Mechanically controlled tooling for threaded parts and internal screw features.",
     image: "/images/mold-types/unscrewing-molds.webp",
     alt: "Unscrewing injection mold for threaded plastic parts",
-    href: "/tooling-examples/unscrewing-molds"
+    href: "/injection-molds/unscrewing-molds"
   },
   {
     title: "Large Injection Molds",
     description: "Large-format tooling for housings, panels and structural plastic components.",
     image: "/images/mold-types/large-component-molds.JPG",
     alt: "Large injection mold for housings panels and structural plastic components",
-    href: "/tooling-examples/large-component-molds"
+    href: "/injection-molds/large-injection-molds"
   },
   {
     title: "Prototype Injection Molds",
@@ -704,7 +704,7 @@ export function InjectionMoldManufacturingPage() {
           </div>
 
           <div className="mt-9 flex flex-col gap-3 border-t border-[var(--line)] pt-6 sm:flex-row sm:flex-wrap">
-            <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-5 text-sm font-bold text-[var(--brand-dark)] transition-colors hover:bg-[var(--brand-dark)] hover:text-white" href="/tooling-examples">
+            <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-5 text-sm font-bold text-[var(--brand-dark)] transition-colors hover:bg-[var(--brand-dark)] hover:text-white" href="/injection-molds">
               Explore All Injection Mold Types <span className="ml-2" aria-hidden="true">→</span>
             </Link>
             <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand)] bg-[var(--brand)] px-5 text-sm font-bold text-white transition-colors hover:border-[var(--brand-hover)] hover:bg-[var(--brand-hover)]" href="/request-a-quote">
@@ -904,7 +904,7 @@ export function InjectionMoldManufacturingPage() {
                 ))}
               </div>
               <div className="mt-6">
-                <TextLink href="/tooling-examples#complex-injection-molds">Explore Complex Injection Molds</TextLink>
+                <TextLink href="/injection-molds#complex-injection-molds">Explore Complex Injection Molds</TextLink>
               </div>
             </article>
           </div>

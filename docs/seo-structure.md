@@ -143,7 +143,7 @@ Page sections:
 - Hero
 - Who We Serve
 - Core Services
-- Tooling Examples
+- Injection Molds
 - Industries Served
 - Why Arktech
 - Case Studies
@@ -169,18 +169,18 @@ Internal links:
 - Service pages should link to relevant industry pages
 - Every service page should include a Request a Quote CTA
 
-### Tooling Examples Cluster
+### Injection Molds Cluster
 
 Tooling pages target buyers searching for specific mold types.
 
 Pages:
 
-- `/tooling-examples/multi-cavity-molds`
-- `/tooling-examples/hot-runner-molds`
-- `/tooling-examples/insert-molds`
-- `/tooling-examples/overmolding-tools`
-- `/tooling-examples/unscrewing-molds`
-- `/tooling-examples/die-casting-molds`
+- `/injection-molds/multi-cavity-molds`
+- `/injection-molds/hot-runner-molds`
+- `/injection-molds/insert-molding-tools`
+- `/injection-molds/overmolding-tools`
+- `/injection-molds/unscrewing-molds`
+- `/injection-molds/die-casting-molds`
 
 Recommended page structure:
 
@@ -417,7 +417,7 @@ Example path for injection molders:
 1. `/`
 2. `/solutions/for-injection-molders`
 3. `/services/injection-mold-manufacturing`
-4. `/tooling-examples/multi-cavity-molds`
+4. `/injection-molds/multi-cavity-molds`
 5. `/case-studies`
 6. `/request-a-quote`
 
@@ -441,7 +441,7 @@ Primary CTAs:
 Secondary CTAs:
 
 - View Services
-- See Tooling Examples
+- See Injection Molds
 - Explore Case Studies
 
 CTA placement:

@@ -80,12 +80,12 @@ const industries = [
 ] as const;
 
 const relatedMolds = [
-  ["Hot Runner Molds", "/tooling-examples/hot-runner-molds"],
-  ["Two-Shot / 2K Molds", "/tooling-examples/two-shot-2k-molds"],
-  ["Insert Molding Tools", "/tooling-examples/insert-molds"],
-  ["Overmolding Tools", "/tooling-examples/overmolding-tools"],
-  ["Unscrewing Molds", "/tooling-examples/unscrewing-molds"],
-  ["Large Injection Molds", "/tooling-examples/large-component-molds"]
+  ["Hot Runner Molds", "/injection-molds/hot-runner-molds"],
+  ["Two-Shot / 2K Molds", "/injection-molds/two-shot-2k-molds"],
+  ["Insert Molding Tools", "/injection-molds/insert-molding-tools"],
+  ["Overmolding Tools", "/injection-molds/overmolding-tools"],
+  ["Unscrewing Molds", "/injection-molds/unscrewing-molds"],
+  ["Large Injection Molds", "/injection-molds/large-injection-molds"]
 ] as const;
 
 const relatedCapabilities = [
@@ -164,14 +164,32 @@ function SecondaryButton({ href, children, inverse = false }: { href: string; ch
 }
 
 export function MultiCavityMoldsPage() {
-  const pageUrl = `${site.url}/tooling-examples/multi-cavity-molds`;
+  const pageUrl = `${site.url}/injection-molds/multi-cavity-molds/`;
   const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+        { "@type": "ListItem", position: 2, name: "Injection Molds", item: `${site.url}/injection-molds/` },
+        { "@type": "ListItem", position: 3, name: "Multi-Cavity Injection Molds", item: pageUrl }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      name: "Multi-Cavity Injection Molds",
+      description: "Multi-cavity injection molds engineered for balanced filling, cooling, repeatable dimensions and production output.",
+      url: pageUrl
+    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
       name: "Multi-Cavity Injection Mold Engineering and Tooling",
       serviceType: "Multi-cavity injection mold design, manufacturing and validation",
       url: pageUrl,
+      mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
       provider: {
         "@type": "Organization",
         name: site.name,
@@ -201,7 +219,7 @@ export function MultiCavityMoldsPage() {
             <ol className="flex flex-wrap items-center gap-2">
               <li><Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/">Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/tooling-examples">Injection Molds</Link></li>
+              <li><Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/injection-molds">Injection Molds</Link></li>
               <li aria-hidden="true">/</li>
               <li aria-current="page" className="font-semibold text-[var(--brand-dark)]">Multi-Cavity Injection Molds</li>
             </ol>

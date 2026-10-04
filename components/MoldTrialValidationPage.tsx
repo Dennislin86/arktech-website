@@ -110,7 +110,7 @@ const sampleValidation = [
   {
     title: "Cavity Identification",
     body: "For multi-cavity molds, identify sample cavities where cavity-specific measurement or correction tracking is required.",
-    href: "/tooling-examples/multi-cavity-molds"
+    href: "/injection-molds/multi-cavity-molds"
   },
   {
     title: "Visual & Cosmetic Review",
@@ -200,7 +200,7 @@ export function MoldTrialValidationPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-      { "@type": "ListItem", position: 2, name: "Injection Molds", item: `${site.url}/tooling-examples` },
+      { "@type": "ListItem", position: 2, name: "Injection Molds", item: `${site.url}/injection-molds` },
       { "@type": "ListItem", position: 3, name: "Mold Trial & Validation", item: `${site.url}/services/mold-trial-sampling-support` }
     ]
   };
@@ -216,7 +216,7 @@ export function MoldTrialValidationPage() {
           <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-sm text-slate-500 sm:text-[15px]">
             <Link className="focus-ring rounded-sm transition hover:text-[var(--brand)]" href="/">Home</Link>
             <span aria-hidden="true">/</span>
-            <Link className="focus-ring rounded-sm transition hover:text-[var(--brand)]" href="/tooling-examples">Injection Molds</Link>
+            <Link className="focus-ring rounded-sm transition hover:text-[var(--brand)]" href="/injection-molds">Injection Molds</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page" className="font-medium text-slate-600">Mold Trial &amp; Validation</span>
           </nav>

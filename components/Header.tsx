@@ -48,7 +48,7 @@ const navigation: NavigationItem[] = [
           { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding", emphasis: true },
           { label: "Production Options", href: "/services/injection-molding-production-options" },
           { label: "Insert & Overmolding", staticCapability: true },
-          { label: "Two-Shot / 2K Molding", href: "/tooling-examples/two-shot-2k-molds" },
+          { label: "Two-Shot / 2K Molding", href: "/injection-molds/two-shot-2k-molds" },
           { label: "Transparent Part Injection Molding", staticCapability: true },
           { label: "Engineering Plastics Injection Molding", staticCapability: true }
         ]
@@ -80,21 +80,21 @@ const navigation: NavigationItem[] = [
   {
     id: "injection-molds",
     label: "Injection Molds",
-    href: "/tooling-examples",
+    href: "/injection-molds",
     groups: [
       {
         title: "Mold Types",
         links: [
-          { label: "Multi-Cavity Molds", href: "/tooling-examples/multi-cavity-molds" },
+          { label: "Multi-Cavity Molds", href: "/injection-molds/multi-cavity-molds" },
           { label: "Family Molds", href: "/resources/injection-molds/multi-cavity-vs-family-mold" },
-          { label: "Large Injection Molds", href: "/tooling-examples/large-component-molds" },
+          { label: "Large Injection Molds", href: "/injection-molds/large-injection-molds" },
           { label: "Complex Injection Molds", href: "/services/injection-mold-manufacturing" },
-          { label: "Insert Molding Tools", href: "/tooling-examples/insert-molds" },
-          { label: "Overmolding Tools", href: "/tooling-examples/overmolding-tools" },
-          { label: "Two-Shot / 2K Molds", href: "/tooling-examples/two-shot-2k-molds" },
-          { label: "Unscrewing Molds", href: "/tooling-examples/unscrewing-molds" },
-          { label: "Hot Runner Molds", href: "/tooling-examples/hot-runner-molds" },
-          { label: "High-Temperature Injection Molds", href: "/tooling-examples#high-temperature-injection-molds" }
+          { label: "Insert Molding Tools", href: "/injection-molds/insert-molding-tools" },
+          { label: "Overmolding Tools", href: "/injection-molds/overmolding-tools" },
+          { label: "Two-Shot / 2K Molds", href: "/injection-molds/two-shot-2k-molds" },
+          { label: "Unscrewing Molds", href: "/injection-molds/unscrewing-molds" },
+          { label: "Hot Runner Molds", href: "/injection-molds/hot-runner-molds" },
+          { label: "High-Temperature Injection Molds", href: "/injection-molds#high-temperature-injection-molds" }
         ]
       },
       {
@@ -111,7 +111,7 @@ const navigation: NavigationItem[] = [
         links: [{ label: "Die Casting Tooling →", href: groupWebsite, external: true, priority: true }]
       }
     ],
-    overview: { label: "View All Injection Molds", href: "/tooling-examples" }
+    overview: { label: "View All Injection Molds", href: "/injection-molds" }
   },
   {
     id: "industries",

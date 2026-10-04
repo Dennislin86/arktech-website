@@ -330,7 +330,7 @@ export function DfmEngineeringPage() {
                 <p className="mt-4 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">The selected solution depends on undercut direction, available mold space, part release, maintenance access, cycle expectations and receiving machine requirements.</p>
                 <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:gap-x-7">
                   <ArrowLink href="/resources/injection-molds/slider-vs-lifter">Read Slider vs Lifter</ArrowLink>
-                  <ArrowLink href="/tooling-examples#complex-injection-molds">Explore Complex Injection Molds</ArrowLink>
+                  <ArrowLink href="/injection-molds#complex-injection-molds">Explore Complex Injection Molds</ArrowLink>
                 </div>
               </div>
 
