@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
+import { FullBleedHero } from "@/components/FullBleedHero";
 import { pillarGuides, resourceArticles } from "@/lib/engineering-resources";
 import { site } from "@/lib/site";
 
@@ -55,19 +56,20 @@ const featuredProjects = [
 export default function ResourcesPage() {
   return (
     <>
-      <section className="border-b border-[var(--line)] bg-white">
-        <div className="container-page grid gap-9 py-12 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">ENGINEERING RESOURCES</p>
-            <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">Injection Molding &amp; Mold Engineering Resources</h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">Practical guidance for plastic part design, injection mold engineering, material selection, molded-part troubleshooting, tooling validation and export delivery.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><a className="focus-ring rounded-sm bg-[var(--brand)] px-5 py-3 font-bold text-white hover:bg-[var(--brand-hover)]" href="#featured-guides">Explore Engineering Guides</a><Link className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white" href="/resources/faq">Browse Manufacturing FAQ</Link></div>
-          </div>
-          <figure className="relative aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
-            <Image alt="Injection mold DFM report and engineering resource reference" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 62vw, 100vw" src="/images/Engineering/dfm-report-tooling-review-example.webp" />
-          </figure>
-        </div>
-      </section>
+      <FullBleedHero
+        backgroundImages={[{
+          src: "/images/Engineering/injection-mold-engineering-dfm-analysis.webp",
+          alt: "Arktech engineers reviewing injection mold DFM analysis and mold CAD",
+          position: "right"
+        }]}
+        description="Practical engineering guides, material resources, mold design references, manufacturing FAQs and real tooling projects for product designers, engineers and sourcing teams."
+        eyebrow="Engineering Resources"
+        height="compact"
+        overlay="light"
+        primaryCta={{ label: "Explore Engineering Guides", href: "#featured-guides" }}
+        secondaryCta={{ label: "Manufacturing FAQ", href: "/resources/faq" }}
+        title="Injection Molding & Tooling Engineering Resources"
+      />
 
       <section className="scroll-mt-24 bg-[var(--surface-soft)] py-14 sm:py-16" id="featured-guides">
         <div className="container-page"><p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Pillar Guides</p><h2 className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Featured Engineering Guides</h2><p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Start with a complete guide, then move into focused technical articles for the decision in front of your team.</p>

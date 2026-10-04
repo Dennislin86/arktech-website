@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FullBleedHero } from "@/components/FullBleedHero";
 import { InjectionMoldProjectsCarousel } from "@/components/InjectionMoldProjectsCarousel";
 import { site } from "@/lib/site";
 
-const pageTitle = "Injection Mold Types for Production Tooling | Arktech Mold";
+const pageTitle = "Injection Mold Examples & Export Tooling Projects | Arktech";
 const pageDescription =
   "Explore injection mold types for different part geometries, production volumes and molding requirements, including precision, multi-cavity, complex, hot runner, insert, overmolding, 2K, unscrewing and large molds.";
 const pageUrl = `${site.url}/tooling-examples`;
@@ -269,20 +270,20 @@ export default function ToolingExamplesPage() {
     <>
       {[breadcrumbSchema, collectionSchema, faqSchema].map((schema, index) => <script dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} key={index} type="application/ld+json" />)}
 
-      <section className="border-b border-[var(--line)] bg-white">
-        <div className="core-hero-shell py-10 sm:py-12 md:py-14 xl:py-16">
-          <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--muted)]"><Link className="focus-ring hover:text-[var(--brand)]" href="/">Home</Link><span aria-hidden="true" className="mx-2">/</span><span aria-current="page">Injection Molds</span></nav>
-          <div className="grid gap-9 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-center lg:gap-10 xl:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] xl:gap-12 2xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)]">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Injection Molds</p>
-              <h1 className="core-hero-title mt-4 text-[var(--brand-dark)]">Injection Mold Types for Production Tooling</h1>
-              <p className="mt-5 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Explore injection mold types for different part geometries, production volumes and molding requirements, including multi-cavity, family, complex, hot runner, insert, overmolding, 2K, unscrewing, high-temperature and large injection molds.</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row"><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link></div>
-            </div>
-            <figure className="relative aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]"><Image alt="Completed precision injection mold for production tooling" className="object-cover object-center" fill priority sizes="(min-width: 1536px) 62vw, (min-width: 1280px) 60vw, (min-width: 1024px) 58vw, 100vw" src="/images/mold-types/Precision-Molds.png" /></figure>
-          </div>
-        </div>
-      </section>
+      <FullBleedHero
+        backgroundImages={[{
+          src: "/images/mold-types/complex-injection-molds.png",
+          alt: "Completed complex Arktech injection mold with coordinated tooling mechanisms",
+          position: "right"
+        }]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Injection Molds" }]}
+        description="Explore real Arktech tooling examples including custom production molds, multi-cavity molds, complex tooling, hot runner systems and specialized mold structures for overseas production."
+        eyebrow="Real Tooling Projects"
+        height="standard"
+        primaryCta={{ label: "View Tooling Projects", href: "#mold-types" }}
+        secondaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        title="Injection Mold & Tooling Examples"
+      />
 
       <section aria-labelledby="core-mold-types-heading" className="scroll-mt-24 bg-[var(--surface-soft)] py-14 sm:py-16" id="mold-types"><div className="container-page scroll-mt-24" id="production-injection-molds"><SectionHeading eyebrow="Core Mold Types" id="core-mold-types-heading" title="Injection Mold Types for Production Applications" body="Different mold types are selected around part geometry, production volume, material, cavity requirements, machine conditions and long-term tooling needs." /><div className="mt-9 grid auto-rows-fr gap-6 lg:grid-cols-2">{coreMolds.map((mold) => <MoldCard key={mold.title} mold={mold} size="large" />)}</div></div></section>
 

@@ -23,7 +23,7 @@ export function CaseStudyDetail({ project, relatedProjects }: { project: CaseStu
   ];
 
   return (
-    <main>
+    <div>
       <section className="border-b border-[var(--line)] bg-[var(--surface-soft)] py-12 sm:py-16">
         <div className="container-page">
           <Link className="focus-ring inline-flex rounded-sm text-sm font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/case-studies">← Back to Case Studies</Link>
@@ -82,6 +82,6 @@ export function CaseStudyDetail({ project, relatedProjects }: { project: CaseStu
           <div className="flex flex-wrap gap-3"><Link href="/request-a-quote" className="focus-ring rounded-sm bg-[var(--accent)] px-5 py-3 font-bold text-white hover:brightness-90">Upload CAD for DFM Review</Link><Link href="/contact" className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-white">Request Tooling Quote</Link></div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

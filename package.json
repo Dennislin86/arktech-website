@@ -8,7 +8,8 @@
     "postbuild": "node scripts/prepare-standalone.mjs",
     "start": "node .next/standalone/server.js",
     "audit:prelaunch": "node scripts/prelaunch-audit.mjs",
-    "lint": "next lint"
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@next/swc-wasm-nodejs": "^16.2.7",

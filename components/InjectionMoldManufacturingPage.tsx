@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { FullBleedHero } from "@/components/FullBleedHero";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 
 const capabilities = [
@@ -393,38 +394,25 @@ function TextLink({ href, children }: { href: string; children: ReactNode }) {
 export function InjectionMoldManufacturingPage() {
   return (
     <>
-      <section className="border-b border-[var(--line)] bg-white">
-        <div className="mx-auto w-[min(1280px,calc(100%-32px))] py-8 sm:py-10 lg:py-12 xl:py-14">
-          <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-sm text-slate-500 sm:text-[15px]"><Link className="focus-ring rounded-sm transition hover:text-[var(--brand)]" href="/">Home</Link><span aria-hidden="true">/</span><Link className="focus-ring rounded-sm transition hover:text-[var(--brand)]" href="/services">Capabilities</Link><span aria-hidden="true">/</span><span aria-current="page" className="font-medium text-slate-600">Injection Mold Manufacturing</span></nav>
-          <div className="grid gap-8 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)] sm:text-base">Export Injection Mold Manufacturing</p>
-              <h1 className="mt-4 text-balance text-[34px] font-bold leading-[1.05] tracking-[-0.035em] text-[var(--brand-dark)] sm:text-[40px] xl:text-[44px]">
-                Export Injection Molds for Global Production
-              </h1>
-              <p className="mt-5 max-w-[42rem] text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">
-                Arktech manufactures export-ready injection molds in China for product companies and injection molders worldwide, with DFM engineering, mold trials, validation and documented delivery before shipment.
-              </p>
-              <p className="mt-5 text-sm font-semibold leading-6 text-[var(--brand-dark)] sm:text-base">
-                DFM <span aria-hidden="true">·</span> Tooling <span aria-hidden="true">·</span> Mold Trial <span aria-hidden="true">·</span> Validation <span aria-hidden="true">·</span> Export Delivery
-              </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:gap-2">
-                <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-3 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
-                <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-3 text-center text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link>
-              </div>
-            </div>
-            <div className="relative aspect-video overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
-              <LazyAutoplayVideo
-                ariaLabel="Arktech injection mold trial and validation process"
-                className="h-full w-full object-cover object-center"
-                poster="/images/Mold trail/Mold trial video photos.png"
-                preload="metadata"
-                src="/videos/Mold manufacturing/Mold-trial.mp4"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <FullBleedHero
+        backgroundImages={[{
+          src: "/images/mold-types/Precision-Molds.png",
+          alt: "Completed export-ready precision injection mold built by Arktech",
+          position: "right"
+        }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Capabilities", href: "/services" },
+          { label: "Injection Mold Manufacturing" }
+        ]}
+        description="Arktech manufactures export-ready injection molds in China for product companies and injection molders worldwide, with DFM engineering, mold design, mold trials, validation and documented delivery before shipment."
+        eyebrow="Export Injection Mold Manufacturing"
+        height="standard"
+        primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        secondaryCta={{ label: "Request Tooling Quote", href: "/request-a-quote" }}
+        supportingLine="DFM · Tooling · Mold Trial · Validation · Export Delivery"
+        title="Export Injection Molds for Global Production"
+      />
 
       <section className="bg-[var(--surface-soft)] py-12 sm:py-14 lg:py-16">
         <div className="container-page">

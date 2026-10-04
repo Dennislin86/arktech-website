@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { IndustryLandingPageData } from "@/lib/industry-landing-pages";
+import { site } from "@/lib/site";
 
 const eyebrowClass = "text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]";
 const h2Class = "mt-3 max-w-4xl text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl lg:text-[46px]";
@@ -31,9 +32,9 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.arktechmold.com" },
-      { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.arktechmold.com/industries" },
-      { "@type": "ListItem", position: 3, name: page.navTitle, item: `https://www.arktechmold.com/industries/${page.slug}` }
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      { "@type": "ListItem", position: 2, name: "Industries", item: `${site.url}/industries` },
+      { "@type": "ListItem", position: 3, name: page.navTitle, item: `${site.url}/industries/${page.slug}` }
     ]
   };
   const faqJsonLd = {
@@ -47,7 +48,7 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
   };
 
   return (
-    <main>
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }} />
 
@@ -244,6 +245,6 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
           <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[440px] lg:justify-self-end"><Link className={primaryButton} href="/request-a-quote">Upload CAD for DFM Review</Link><Link className={secondaryButton} href="/request-a-quote">Request Tooling Quote</Link></div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

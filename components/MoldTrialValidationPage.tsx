@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
+import { site } from "@/lib/site";
 
 const validationBenefits = [
   {
@@ -198,9 +199,9 @@ export function MoldTrialValidationPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.arktechmold.com" },
-      { "@type": "ListItem", position: 2, name: "Injection Molds", item: "https://www.arktechmold.com/tooling-examples" },
-      { "@type": "ListItem", position: 3, name: "Mold Trial & Validation", item: "https://www.arktechmold.com/services/mold-trial-sampling-support" }
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      { "@type": "ListItem", position: 2, name: "Injection Molds", item: `${site.url}/tooling-examples` },
+      { "@type": "ListItem", position: 3, name: "Mold Trial & Validation", item: `${site.url}/services/mold-trial-sampling-support` }
     ]
   };
 

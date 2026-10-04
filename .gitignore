@@ -17,3 +17,6 @@ pnpm-debug.log*
 *.zip
 output/
 tmp/
+
+# Unoptimized local source footage (393 MB); not referenced by the website.
+/public/videos/Mold manufacturing/Mold manufacturing.mp4

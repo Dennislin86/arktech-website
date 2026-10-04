@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FullBleedHero } from "@/components/FullBleedHero";
+import { site } from "@/lib/site";
 
 type Industry = {
   title: string;
@@ -145,9 +147,16 @@ const resources = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Injection Molding Industries | Tooling & Production | Arktech Mold" },
+  title: { absolute: "Injection Molding for Smart Home, Medical & Automotive | Arktech" },
   description: "Explore Arktech injection molding and tooling capabilities for robotics, medical devices, automotive, smart home, EV charging, home appliances, pet tech and consumer electronics.",
-  alternates: { canonical: "/industries" }
+  alternates: { canonical: "/industries" },
+  openGraph: {
+    title: "Injection Molding for Smart Home, Medical & Automotive | Arktech",
+    description: "Industry-specific injection molding, export tooling and DFM support for robotics, medical, automotive, smart home and EV product teams.",
+    type: "website",
+    url: `${site.url}/industries`,
+    images: [{ url: "/images/industries/Automotive-Components.png", alt: "Injection molded components for automotive and other product industries" }]
+  }
 };
 
 function SectionHeading({ eyebrow, title, body }: { eyebrow: string; title: string; body?: string }) {
@@ -168,41 +177,22 @@ function Capability({ label }: { label: string }) {
 
 export default function IndustriesPage() {
   return (
-    <main>
-      <section className="border-b border-[var(--line)] bg-white">
-        <div className="core-hero-shell grid gap-9 py-10 sm:py-12 md:py-14 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-center lg:gap-10 xl:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] xl:gap-12 xl:py-16 2xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)]">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">Industries We Serve</p>
-            <h1 className="core-hero-title mt-4 text-[var(--brand-dark)]">Molding &amp; Tooling for Product Industries</h1>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech supports product companies across robotics, medical devices, automotive, smart home, EV charging, home appliances, pet tech and consumer electronics with DFM, tooling and plastic injection molding.</p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="#industry-grid">Explore Industries</Link>
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
-            </div>
-          </div>
-
-          <div className="grid min-h-[300px] grid-cols-2 gap-2 overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] p-2 sm:min-h-[360px] sm:grid-cols-[1.25fr_0.75fr] lg:min-h-[420px] xl:min-h-[440px]">
-            <div className="relative row-span-2 overflow-hidden rounded-sm">
-              <Image alt="Robotics application supported by injection molding and tooling" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 39vw, 62vw" src="/images/industries/robotics-automation.png" />
-              <span className="absolute bottom-3 left-3 rounded-sm bg-[rgba(7,32,55,0.84)] px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">Robotics</span>
-            </div>
-            <div className="relative overflow-hidden rounded-sm">
-              <Image alt="Medical device application with precision plastic components" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 19vw, 38vw" src="/images/industries/medial-industry.webp" />
-              <span className="absolute bottom-2 left-2 rounded-sm bg-[rgba(7,32,55,0.84)] px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-white">Medical</span>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="relative overflow-hidden rounded-sm">
-                <Image alt="Automotive component application for custom tooling and molding" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 10vw, 19vw" src="/images/industries/Automotive-Components.png" />
-                <span className="absolute bottom-2 left-2 rounded-sm bg-[rgba(7,32,55,0.84)] px-2 py-1 text-[0.62rem] font-bold uppercase tracking-wider text-white">Automotive</span>
-              </div>
-              <div className="relative overflow-hidden rounded-sm">
-                <Image alt="EV charging application supported by plastic injection molding" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 10vw, 19vw" src="/images/industries/autimotive-ev.webp" />
-                <span className="absolute bottom-2 left-2 rounded-sm bg-[rgba(7,32,55,0.84)] px-2 py-1 text-[0.62rem] font-bold uppercase tracking-wider text-white">EV Charging</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <>
+      <FullBleedHero
+        backgroundImages={[
+          { src: "/images/industries/robotics-automation.png", alt: "Robotics product application supported by injection molding and tooling", position: "center" },
+          { src: "/images/industries/medial-industry.webp", alt: "Medical device application with precision molded plastic components", position: "center" },
+          { src: "/images/industries/Automotive-Components.png", alt: "Automotive components supported by custom tooling and plastic injection molding", position: "center" },
+          { src: "/images/industries/autimotive-ev.webp", alt: "EV charging application supported by molded housings and components", position: "center" }
+        ]}
+        description="Arktech supports robotics, medical devices, automotive, smart home, EV charging, home appliances, pet tech and consumer electronics with DFM, export tooling and plastic injection molding."
+        eyebrow="Industries We Serve"
+        height="standard"
+        overlay="strong"
+        primaryCta={{ label: "Explore Industries", href: "#industry-grid" }}
+        secondaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        title="Injection Molding & Tooling Across Key Product Industries"
+      />
 
       <section className="bg-[var(--surface-soft)] py-16 sm:py-20" id="industry-grid">
         <div className="container-page">
@@ -350,6 +340,6 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

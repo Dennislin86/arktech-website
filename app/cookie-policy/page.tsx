@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <main className="container-page py-16">
+    <div className="container-page py-16">
       <h1 className="internal-page-title text-[var(--brand-dark)]">Cookie Policy</h1>
       <div className="mt-6 max-w-3xl space-y-4 leading-7 text-[var(--muted)]">
         <p>This website may use essential cookies required for site operation and limited analytics cookies used to understand page performance and improve navigation.</p>
         <p>You can control or remove cookies through your browser settings. Disabling essential cookies may affect some website functions.</p>
       </div>
-    </main>
+    </div>
   );
 }

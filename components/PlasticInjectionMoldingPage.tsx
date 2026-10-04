@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FullBleedHero } from "@/components/FullBleedHero";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 import { site } from "@/lib/site";
 
@@ -499,55 +500,25 @@ export function PlasticInjectionMoldingPage() {
     <>
       <JsonLd data={schemas} />
 
-      <section className="border-b border-[var(--line)] bg-white">
-        <div className="core-hero-shell py-10 sm:py-12 md:py-14 xl:py-16">
-          <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-sm text-[var(--muted)]">
-            <Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/">Home</Link>
-            <span aria-hidden="true">/</span>
-            <Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/services">Capabilities</Link>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page" className="font-semibold text-[var(--brand-dark)]">Plastic Injection Molding</span>
-          </nav>
-
-          <div className="grid gap-9 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-center lg:gap-10 xl:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] xl:gap-12 2xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)]">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Plastic Injection Molding</p>
-              <h1 className="core-hero-title mt-4 text-[var(--brand-dark)]">
-                <span className="block">Custom Plastic Injection Molding</span>
-                <span className="mt-2 block text-[0.62em] font-bold tracking-[-0.02em]">from Prototype to Production</span>
-              </h1>
-              <p className="mt-5 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech supports plastic injection molding for functional components, product housings and OEM parts from engineering samples and low-volume builds through repeat production.</p>
-              <p className="mt-3 text-sm leading-6 text-[var(--muted)] sm:text-base">DFM, tooling development, mold trials and validation are coordinated before stable production where required.</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-                  Upload CAD for DFM Review
-                </Link>
-                <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
-                  Request Injection Molding Quote
-                </Link>
-              </div>
-            </div>
-
-            <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
-              <div className="aspect-video overflow-hidden bg-[var(--brand-dark)]">
-                <video
-                  aria-label="Arktech plastic injection molding production with an injection molding machine running"
-                  autoPlay
-                  className="h-full w-full object-cover object-center"
-                  loop
-                  muted
-                  playsInline
-                  poster="/images/capabilities/plastic-injection-molding-production.webp"
-                  preload="metadata"
-                >
-                  <source src="/videos/injection-molding-production.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </figure>
-          </div>
-
-        </div>
-      </section>
+      <FullBleedHero
+        backgroundImages={[{
+          src: "/images/capabilities/plastic-injection-molding-production-video-frame.webp",
+          alt: "Plastic injection molding production line for OEM molded components",
+          position: "right"
+        }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Capabilities", href: "/services" },
+          { label: "Plastic Injection Molding" }
+        ]}
+        description="Arktech supports injection molding for engineering components, product housings and OEM programs from prototype builds and low-volume production through stable repeat and mass production."
+        eyebrow="Plastic Injection Molding"
+        height="standard"
+        primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        secondaryCta={{ label: "Request Injection Molding Quote", href: "/request-a-quote" }}
+        supportingLine="Prototype · Low Volume · Mass Production · Secondary Operations"
+        title="Custom Plastic Injection Molding from Prototype to Production"
+      />
 
       <section aria-label="Plastic injection molding production capability" className="bg-[var(--brand-dark)] text-white">
         <div className="container-page grid grid-cols-2 divide-x divide-y divide-white/20 lg:grid-cols-4 lg:divide-y-0">

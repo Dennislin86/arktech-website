@@ -113,7 +113,7 @@ export function InjectionMoldingProductionOptionsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas).replaceAll("<", "\\u003c") }} />
-      <main>
+      <div>
         <section className="border-b border-[var(--line)] bg-white">
           <div className="container-page grid gap-9 py-12 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
             <div>
@@ -262,7 +262,7 @@ export function InjectionMoldingProductionOptionsPage() {
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><Link href="/request-a-quote" className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:bg-[var(--brand-dark)]">Upload CAD for DFM Review</Link><Link href="/request-a-quote" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-6 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white">Request Injection Molding Quote</Link></div>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

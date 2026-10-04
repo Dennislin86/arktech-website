@@ -98,6 +98,7 @@ The eight high-intent Industry child pages reuse approved local application imag
 | Unscrewing Molds | `/images/mold-types/unscrewing-molds.webp` | Unscrewing injection molds for plastic parts with internal and external threads | User-supplied tooling image; active |
 | Two-Shot / 2K Injection Molds | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | Two-shot 2K bi-injection molds for multi-material plastic components | User-supplied tooling image; active |
 | Large Component Molds | `/images/mold-types/large-component-molds.JPG` | Large component injection molds for industrial housings and structural plastic parts | Real Arktech tooling photo; active in Mold Types and Company navigation |
+| Family Molds | `/images/mold-types/Family-molds.JPG` | Family injection mold with multiple part geometries in one tooling set | Existing real Arktech tooling photo; approved asset available for future family-mold content, not currently referenced by a live page |
 | Die Casting Tooling | `/images/capabilities/die-casting.webp` | Die casting tooling for aluminum and zinc production components | User-supplied image; active |
 
 ## Injection Molds Taxonomy & Overview Page
@@ -188,8 +189,8 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Hero mold-trial video | `/videos/Mold manufacturing/Mold-trial.mp4` | Arktech injection mold trial and validation process | Existing real Arktech mold-trial video; active in the Injection Mold Manufacturing hero with muted lazy autoplay |
-| Hero mold-trial poster | `/images/Mold trail/Mold trial video photos.png` | Injection mold installed in a molding machine for trial and validation | Existing real mold-trial video frame; active as the hero loading and reduced-motion fallback |
+| Mold-trial video | `/videos/Mold manufacturing/Mold-trial.mp4` | Arktech injection mold trial and validation process | Existing real Arktech mold-trial video; retained in the later manufacturing proof content with muted lazy autoplay |
+| Mold-trial poster | `/images/Mold trail/Mold trial video photos.png` | Injection mold installed in a molding machine for trial and validation | Existing real mold-trial video frame; retained as the video loading and reduced-motion fallback |
 | Export tooling overview | `/images/injection-mold-manufacturing/Precision Mold to Global Delivery.png` | Precision injection mold manufacturing, validation and global delivery preparation | Existing first-party export tooling visual; active in the Injection Mold Manufacturing export-tooling overview |
 | Core capabilities — DFM & Mold Design | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | DFM engineering and mold design review for export injection mold manufacturing | Existing Arktech engineering-office visual; reused in the Core Capabilities proof strip |
 | Core capabilities — Precision Mold Manufacturing | `/images/factory-workshop/injection-mold-cnc-machining-workshop.webp` | Precision mold manufacturing with CNC machining equipment for injection tooling | Real Arktech workshop photo; reused in the Core Capabilities proof strip |
@@ -264,8 +265,9 @@ No new image or video assets were created for `/services/mold-trial-sampling-sup
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
 | Injection molding capability production video | `/videos/injection-molding-production-homepage.mp4` | Plastic injection molding production process at Arktech | Existing optimized user-supplied production video; active in the second-screen Injection Molding Capabilities section with metadata preload and reduced-motion/data-saver handling |
-| Hero and Real Production video poster | `/images/capabilities/plastic-injection-molding-production.webp` | Plastic injection molding production at Arktech | Existing user-supplied real production image; active as the lightweight poster for the service-page hero and Real Production video |
-| Hero and Real Production video | `/videos/injection-molding-production.mp4` | Plastic injection molding production process at Arktech | Existing user-supplied real production video; hero uses muted autoplay, loop, inline playback and metadata preload; below-the-fold instances load only near the viewport |
+| Full-width Hero background | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Plastic injection molding production line for OEM molded components | Existing approved production frame; active as the full-width Plastic Injection Molding Hero background |
+| Real Production video poster | `/images/capabilities/plastic-injection-molding-production.webp` | Plastic injection molding production at Arktech | Existing user-supplied real production image; retained as the lightweight poster for below-the-fold production video |
+| Real Production video | `/videos/injection-molding-production.mp4` | Plastic injection molding production process at Arktech | Existing user-supplied real production video; below-the-fold instances load only near the viewport |
 | Production-process and mold-trial visual | `/images/process/export-delivery-production-support-molding.png` | Injection mold trial and process setup before production | Existing real Arktech mold-production photo; reused in the five-stage production timeline and Real Production proof card |
 | Production options video poster | `/images/capabilities/plastic-injection-molding-production.webp` | Plastic injection molding production line at Arktech | Existing user-supplied real production image; reused as the lightweight poster for the Production Options video |
 | Production options video | `/videos/Injection%20Molding/injection-molding-production1.mp4` | Plastic injection molding production process | Existing user-supplied 1280 × 720 real production video; selected as the landscape Production Planning visual and loaded near the viewport with metadata preload |
@@ -334,16 +336,17 @@ No new image or video assets were created for `/services/mold-trial-sampling-sup
 
 ## Full-Site Hero System Audit (2026-10-04)
 
-The first-screen audit reuses approved local media only. No source image or video was edited. The four core commercial heroes use a 42% text / 58% media grid at `1024px`, a 40% text / 60% media grid at `1280px`, and a 38% text / 62% media grid at `1536px` and above, then stack text before media below `1024px`. Other shared split heroes retain the existing `1280px` split behavior.
+The first-screen audit reuses approved local media only. No source image or video was edited. The six primary hub and commercial pages now share one full-width responsive background-image Hero system with live HTML content, page-specific imagery, a navy readability overlay and no more than two CTAs. The Homepage retains its separately approved full-width Hero treatment, and unrelated child-page Hero systems are unchanged.
 
 | Page family | Hero media | Usage/status |
 | --- | --- | --- |
 | Homepage | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Existing approved export-tooling hero restored as a full-width background with a stronger left-side navy readability overlay and complete tooling visible on the right |
-| Capabilities hub | `/images/hero/tooling-mold-trial-engineering-capabilities.webp` | Existing approved tooling, trial and engineering composite; active |
-| Injection Molds hub | `/images/mold-types/Precision-Molds.png` | Existing approved completed precision mold image; active |
-| Industries hub | `/images/industries/robotics-automation.png`, `/images/industries/medial-industry.webp`, `/images/industries/Automotive-Components.png`, `/images/industries/autimotive-ev.webp` | Existing approved industry collage sources; active |
-| Plastic Injection Molding | `/videos/injection-molding-production.mp4` with `/images/capabilities/plastic-injection-molding-production.webp` poster | Existing verified first-party landscape production media; active in the Hero with metadata preload, silent inline autoplay and no controls; preferred over the portrait-oriented homepage edit because it fills the 60–62% desktop frame without black side bars |
-| Injection Mold Manufacturing and Mold Trial | `/videos/Mold manufacturing/Mold-trial.mp4` | Existing first-party mold-trial video; active |
+| Capabilities hub | `/images/hero/tooling-mold-trial-engineering-capabilities.webp` | Existing approved tooling, mold-trial and engineering composite; active as the full-width background |
+| Injection Mold Manufacturing | `/images/mold-types/Precision-Molds.png` | Existing approved completed precision mold image; active as the full-width export-tooling background |
+| Injection Molds / Tooling Examples hub | `/images/mold-types/complex-injection-molds.png` | Existing approved completed complex mold image; active as the full-width project background |
+| Industries hub | `/images/industries/robotics-automation.png`, `/images/industries/medial-industry.webp`, `/images/industries/Automotive-Components.png`, `/images/industries/autimotive-ev.webp` | Existing approved application images; active as a four-image full-width industry collage |
+| Plastic Injection Molding | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Existing approved real production frame; active as the full-width part-production background |
+| Resources hub | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | Existing approved Arktech DFM and mold-CAD engineering visual; active as the full-width editorial background |
 | DFM Engineering | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | Existing anonymized engineering review visual; active |
 | Industry child pages | Per-page `heroImage` values in `lib/industry-landing-pages.ts` | Existing approved industry application media; active across all eight primary industry routes |
 | Generic capability and mold-type child pages | Approved slug mapping from `lib/images.ts` | Existing approved local media used only when the mapped file exists |

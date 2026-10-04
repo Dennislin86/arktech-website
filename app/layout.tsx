@@ -5,6 +5,8 @@ import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 import "./globals.css";
 
+const isProduction = process.env.VERCEL_ENV === "production";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -12,6 +14,14 @@ export const metadata: Metadata = {
     template: "%s | Arktech Mold"
   },
   description: site.description,
+  robots: {
+    index: isProduction,
+    follow: isProduction,
+    googleBot: {
+      index: isProduction,
+      follow: isProduction
+    }
+  },
   icons: {
     icon: "/favicon-arktech.png",
     apple: "/apple-touch-icon.png"
@@ -31,7 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arktech Mold",
     description: site.description,
-    url: site.url,
     siteName: site.name,
     type: "website",
     images: [
@@ -49,12 +58,46 @@ export const metadata: Metadata = {
   }
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${site.url}/#organization`,
+  name: site.company.legalName,
+  url: site.url,
+  logo: `${site.url}/images/arktech-mold-logo.png`,
+  email: site.email,
+  telephone: site.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "R1702, Lingxingyu Technology Building, Guangming Street, Guangming District",
+    addressLocality: "Shenzhen",
+    addressRegion: "Guangdong",
+    postalCode: "518107",
+    addressCountry: "CN"
+  },
+  sameAs: [site.company.legacyWebsite]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${site.url}/#website`,
+  name: site.name,
+  url: site.url,
+  publisher: { "@id": `${site.url}/#organization` }
+};
+
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body>
+        <a className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-sm focus:bg-white focus:px-4 focus:py-3 focus:font-bold focus:text-[var(--brand-dark)] focus:shadow-lg" href="#main-content">
+          Skip to main content
+        </a>
+        <script dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replaceAll("<", "\\u003c") }} type="application/ld+json" />
+        <script dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema).replaceAll("<", "\\u003c") }} type="application/ld+json" />
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

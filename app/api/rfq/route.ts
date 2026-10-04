@@ -3,9 +3,11 @@ import { site } from "@/lib/site";
 
 export const runtime = "nodejs";
 
-const MAX_FILE_BYTES = 10 * 1024 * 1024;
-const MAX_TOTAL_BYTES = 20 * 1024 * 1024;
-const MAX_REQUEST_BYTES = 22 * 1024 * 1024;
+// Vercel Functions reject request payloads above 4.5 MB before this handler runs.
+// Keep multipart uploads below that platform ceiling until direct-to-storage uploads are configured.
+const MAX_FILE_BYTES = 4 * 1024 * 1024;
+const MAX_TOTAL_BYTES = 4 * 1024 * 1024;
+const MAX_REQUEST_BYTES = Math.floor(4.4 * 1024 * 1024);
 const MAX_FILES = 6;
 const allowedExtensions = new Set(["step", "stp", "iges", "igs", "stl", "x_t", "x_b", "pdf", "dwg", "dxf", "zip", "rar", "7z"]);
 
@@ -45,7 +47,7 @@ function safeSubjectPart(input: string) {
 export async function POST(request: Request) {
   const contentLength = Number(request.headers.get("content-length") || 0);
   if (contentLength > MAX_REQUEST_BYTES) {
-    return NextResponse.json({ message: "The submitted request exceeds the 22 MB limit." }, { status: 413 });
+    return NextResponse.json({ message: "The submitted request exceeds the 4 MB upload limit." }, { status: 413 });
   }
 
   const origin = request.headers.get("origin");
@@ -94,11 +96,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: `The file type for “${file.name}” is not supported.` }, { status: 400 });
     }
     if (file.size > MAX_FILE_BYTES) {
-      return NextResponse.json({ message: `“${file.name}” exceeds the 10 MB per-file limit.` }, { status: 413 });
+      return NextResponse.json({ message: `“${file.name}” exceeds the 4 MB upload limit.` }, { status: 413 });
     }
   }
   if (totalBytes > MAX_TOTAL_BYTES) {
-    return NextResponse.json({ message: "The combined upload exceeds the 20 MB limit." }, { status: 413 });
+    return NextResponse.json({ message: "The combined upload exceeds the 4 MB limit." }, { status: 413 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FullBleedHero } from "@/components/FullBleedHero";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Engineering, Tooling & Manufacturing Capabilities | Arktech" },
+  title: { absolute: "Injection Molding & Tooling Services | Arktech" },
   description:
     "Explore Arktech capabilities in DFM engineering, export injection mold manufacturing, mold trials, plastic injection molding and extended manufacturing support including CNC machining, die casting, sheet metal, prototyping and assembly.",
-  alternates: { canonical: "/services" }
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Injection Molding & Tooling Services | Arktech",
+    description: "DFM engineering, export injection mold manufacturing, mold trials and plastic injection molding for global OEM programs.",
+    type: "website",
+    url: `${site.url}/services`,
+    images: [{ url: "/images/capabilities/injection-mold-manufacturing.png", alt: "Arktech injection molding and export tooling services" }]
+  }
 };
 
 type CapabilityLink = { label: string; href: string };
@@ -325,33 +334,21 @@ function SectionHeading({ eyebrow, title, body }: { eyebrow: string; title: stri
 export default function ServicesPage() {
   return (
     <>
-      <section className="border-b border-[var(--line)] bg-white">
-        <div className="mx-auto grid w-[min(1520px,calc(100%-32px))] gap-8 py-10 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Arktech Capabilities</p>
-            <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">Engineering, Tooling &amp; Production Capabilities</h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech connects DFM engineering, export injection mold manufacturing, mold trials, plastic injection molding and extended production support for product companies and injection molders.</p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="#core-capabilities">Explore Capabilities</Link>
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
-            </div>
-          </div>
-
-          <figure className="overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--surface-soft)]">
-            <Image
-              alt="Injection mold tooling, mold trial and engineering support at Arktech Mold"
-              className="h-auto w-full"
-              height={1086}
-              priority
-              quality={84}
-              sizes="(min-width: 1024px) 62vw, 100vw"
-              src="/images/hero/tooling-mold-trial-engineering-capabilities.webp"
-              width={1448}
-            />
-          </figure>
-        </div>
-        <div aria-hidden="true" id="core-capabilities" />
-      </section>
+      <FullBleedHero
+        backgroundImages={[{
+          src: "/images/hero/tooling-mold-trial-engineering-capabilities.webp",
+          alt: "Arktech engineering, injection mold tooling and mold trial capabilities",
+          position: "right"
+        }]}
+        description="Arktech supports product companies and injection molding companies from DFM engineering and export injection mold manufacturing through mold trials, plastic injection molding and extended manufacturing support."
+        eyebrow="Arktech Capabilities"
+        height="tall"
+        primaryCta={{ label: "Explore Export Tooling", href: "/services/injection-mold-manufacturing" }}
+        secondaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        supportingLine="ENGINEERING → TOOLING → MOLDING → PRODUCTION"
+        title="Engineering, Tooling & Manufacturing Capabilities"
+      />
+      <div className="sr-only" aria-hidden="true" id="core-capabilities" />
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16">
         <div className="container-page">

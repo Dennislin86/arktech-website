@@ -136,7 +136,7 @@ export function DfmEngineeringPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replaceAll("<", "\\u003c") }} />
-      <main>
+      <div>
         <section className="border-b border-[var(--line)] bg-white">
           <div className="container-page grid items-center gap-9 py-12 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-12 lg:py-16">
             <div>
@@ -646,7 +646,7 @@ export function DfmEngineeringPage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

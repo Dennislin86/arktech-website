@@ -20,7 +20,7 @@ const proofAreas = [
 
 export default function CaseStudiesPage() {
   return (
-    <main>
+    <>
       <section className="relative overflow-hidden bg-[var(--brand-dark)] text-white">
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(7,31,54,.98)_0%,rgba(7,31,54,.92)_46%,rgba(7,31,54,.68)_100%)]" />
         <div className="container-page relative grid min-h-[560px] items-center gap-10 py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-12 lg:py-16">
@@ -39,7 +39,7 @@ export default function CaseStudiesPage() {
               ["/images/case-studies/fan-blade-mold.webp", "Complex fan blade mold with seven sliders"],
               ["/images/case-studies/die-casting-control-housing.webp", "Die casting mold and finished control housing"],
               ["/images/case-studies/ihgs-housing.webp", "Smart home housing engineering and components"]
-            ].map(([src, alt], index) => <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/20 bg-white/10"><Image src={src} alt={alt} fill sizes="(min-width: 1024px) 24vw, 50vw" className="object-cover" priority={index < 2} unoptimized /></div>)}
+            ].map(([src, alt], index) => <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/20 bg-white/10"><Image src={src} alt={alt} fill sizes="(min-width: 1024px) 24vw, 50vw" className="object-cover" priority={index === 0} /></div>)}
           </div>
         </div>
       </section>
@@ -76,6 +76,6 @@ export default function CaseStudiesPage() {
           <div className="flex flex-wrap gap-3"><Link href="/request-a-quote" className="focus-ring rounded-sm bg-[var(--accent)] px-5 py-3 font-bold text-white hover:brightness-90">Upload CAD for DFM Review</Link><Link href="/contact" className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-white">Contact Engineering</Link></div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

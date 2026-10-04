@@ -1,5 +1,7 @@
 const base = process.env.AUDIT_BASE_URL || "http://127.0.0.1:3000";
-const productionOrigin = "https://www.arktechmold.com";
+const productionOrigin = process.env.PRODUCTION_ORIGIN || "https://www.arktechmold.com";
+const expectIndexable = process.env.AUDIT_EXPECT_INDEXABLE === "true";
+const checkRfqDelivery = process.env.AUDIT_CHECK_RFQ_DELIVERY === "true";
 
 function decodeHtml(value) {
   return value.replaceAll("&amp;", "&").replaceAll("&#x27;", "'").replaceAll("&quot;", '"');
@@ -32,6 +34,7 @@ const failures = [];
 const canonicalFailures = [];
 const h1Failures = [];
 const developmentUrlLeaks = [];
+const indexabilityFailures = [];
 const pageLinks = [];
 const assetUrls = new Set();
 
@@ -49,6 +52,12 @@ for (const path of sitemapPaths) {
 
   const leaks = [...new Set(extractAll(text, /(?:href|src|content)="([^"]*(?:localhost|vercel\.app|staging|preview)[^"]*)"/gi))];
   if (leaks.length) developmentUrlLeaks.push({ path, values: leaks });
+
+  const robotsMeta = extractAll(text, /<meta[^>]+name="robots"[^>]+content="([^"]+)"/gi)[0] || "";
+  const noindex = /noindex/i.test(robotsMeta);
+  if ((expectIndexable && noindex) || (!expectIndexable && !noindex)) {
+    indexabilityFailures.push({ path, expected: expectIndexable ? "index" : "noindex", actual: robotsMeta || null });
+  }
 
   for (const href of extractAll(text, /<a[^>]+href="([^"]+)"/g)) {
     const target = localUrl(href, path);
@@ -86,17 +95,39 @@ for (const asset of assetUrls) {
 }
 
 const robotsResult = await read(`${base}/robots.txt`);
-const robotsOk = robotsResult.response.status === 200 && /Allow:\s*\//i.test(robotsResult.text) && robotsResult.text.includes(`${productionOrigin}/sitemap.xml`) && !/Disallow:\s*\/(?:\s|$)/i.test(robotsResult.text);
+const productionRobotsOk = /Allow:\s*\//i.test(robotsResult.text) && robotsResult.text.includes(`${productionOrigin}/sitemap.xml`) && !/Disallow:\s*\/(?:\s|$)/i.test(robotsResult.text);
+const previewRobotsOk = /Disallow:\s*\/(?:\s|$)/i.test(robotsResult.text) && !robotsResult.text.includes("Sitemap:");
+const robotsOk = robotsResult.response.status === 200 && (expectIndexable ? productionRobotsOk : previewRobotsOk);
 const sitemapOk = sitemapResult.response.status === 200 && sitemapProductionUrls.every((url) => url.startsWith(productionOrigin));
 
 const rfqMissingFields = await fetch(`${base}/api/rfq`, { method: "POST", body: new FormData() });
-const configuredTest = new FormData();
-configuredTest.set("name", "Launch Test");
-configuredTest.set("email", "launch-test@example.com");
-configuredTest.set("project-summary", "Non-confidential technical smoke test; do not treat as a customer inquiry.");
-configuredTest.set("source", "Automated pre-launch audit");
-const rfqDeliveryCheck = await fetch(`${base}/api/rfq`, { method: "POST", body: configuredTest });
-const rfqDeliveryBody = await rfqDeliveryCheck.json().catch(() => ({}));
+const invalidEmailTest = new FormData();
+invalidEmailTest.set("name", "Launch Test");
+invalidEmailTest.set("email", "invalid-email");
+const rfqInvalidEmail = await fetch(`${base}/api/rfq`, { method: "POST", body: invalidEmailTest });
+const invalidFileTest = new FormData();
+invalidFileTest.set("name", "Launch Test");
+invalidFileTest.set("email", "launch-test@arktechmold.invalid");
+invalidFileTest.set("cad-files", new File(["safe audit fixture"], "unsupported.exe", { type: "application/octet-stream" }));
+const rfqInvalidFile = await fetch(`${base}/api/rfq`, { method: "POST", body: invalidFileTest });
+const rfqCrossOrigin = await fetch(`${base}/api/rfq`, {
+  method: "POST",
+  body: new FormData(),
+  headers: { Origin: "https://malicious.invalid" }
+});
+let rfqDeliveryStatus = null;
+let rfqDeliveryMessage = "Skipped; set AUDIT_CHECK_RFQ_DELIVERY=true only when a real test submission is approved.";
+if (checkRfqDelivery) {
+  const configuredTest = new FormData();
+  configuredTest.set("name", "Launch Test");
+  configuredTest.set("email", "launch-test@arktechmold.invalid");
+  configuredTest.set("project-summary", "Non-confidential technical smoke test; do not treat as a customer inquiry.");
+  configuredTest.set("source", "Automated pre-launch audit");
+  const rfqDeliveryCheck = await fetch(`${base}/api/rfq`, { method: "POST", body: configuredTest });
+  const rfqDeliveryBody = await rfqDeliveryCheck.json().catch(() => ({}));
+  rfqDeliveryStatus = rfqDeliveryCheck.status;
+  rfqDeliveryMessage = rfqDeliveryBody.message || null;
+}
 
 console.log(JSON.stringify({
   base,
@@ -105,6 +136,7 @@ console.log(JSON.stringify({
   canonicalFailures,
   h1Failures,
   developmentUrlLeaks,
+  indexabilityFailures,
   internalLinksChecked: pageLinks.length,
   uniqueInternalDestinations: fetchedPaths.size,
   linkFailures,
@@ -114,6 +146,9 @@ console.log(JSON.stringify({
   robotsOk,
   sitemapOk,
   rfqValidationStatus: rfqMissingFields.status,
-  rfqDeliveryStatus: rfqDeliveryCheck.status,
-  rfqDeliveryMessage: rfqDeliveryBody.message || null
+  rfqInvalidEmailStatus: rfqInvalidEmail.status,
+  rfqInvalidFileStatus: rfqInvalidFile.status,
+  rfqCrossOriginStatus: rfqCrossOrigin.status,
+  rfqDeliveryStatus,
+  rfqDeliveryMessage
 }, null, 2));

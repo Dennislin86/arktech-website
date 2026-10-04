@@ -339,7 +339,7 @@ export function Header() {
           })}
         </nav>
         <div className="flex shrink-0 items-center gap-2">
-          <Link className={`focus-ring inline-flex items-center justify-center rounded-sm bg-[var(--brand)] text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--brand-hover)] ${isHomepage ? "h-10 px-3.5 sm:px-4 lg:h-11 lg:px-5" : "h-10 px-3.5 sm:px-4"}`} href="/request-a-quote">Upload CAD</Link>
+          <Link aria-label="Request a quote" className={`focus-ring inline-flex items-center justify-center rounded-sm bg-[var(--brand)] text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--brand-hover)] ${isHomepage ? "h-10 px-3.5 sm:px-4 lg:h-11 lg:px-5" : "h-10 px-3.5 sm:px-4"}`} href="/request-a-quote"><span className="sm:hidden">Quote</span><span className="hidden sm:inline">Request a Quote</span></Link>
           <button aria-controls="mobile-menu" aria-expanded={mobileOpen} aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"} className="focus-ring inline-flex size-10 items-center justify-center rounded-sm border border-[var(--line)] text-[var(--brand-dark)] lg:hidden" onClick={() => setMobileOpen((open) => !open)} type="button"><span aria-hidden="true" className="text-xl leading-none">{mobileOpen ? "×" : "☰"}</span></button>
         </div>
       </div>
@@ -364,7 +364,7 @@ export function Header() {
               </div>
             );
           })}
-          <Link className="focus-ring mt-3 inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-semibold text-white" href="/request-a-quote" onClick={() => setMobileOpen(false)}>Upload CAD</Link>
+          <Link className="focus-ring mt-3 inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-semibold text-white" href="/request-a-quote" onClick={() => setMobileOpen(false)}>Request a Quote</Link>
         </div>
       </nav>
     </header>

@@ -2,12 +2,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { InjectionMoldingProductionVideo } from "@/components/InjectionMoldingProductionVideo";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Export Injection Molds for OEM & Injection Molding Companies",
+  title: { absolute: "Injection Mold Manufacturer & Plastic Injection Molding | Arktech" },
   description:
-    "China tooling supplier for export injection molds and OEM manufacturing, supporting injection molding companies across Europe and North America.",
+    "Arktech is an injection mold manufacturer and plastic injection molding partner for global OEM teams, with DFM, export tooling, validation and production support.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Injection Mold Manufacturer & Plastic Injection Molding | Arktech",
+    description: "Injection mold manufacturing, DFM engineering and plastic injection molding for global product companies and injection molders.",
+    type: "website",
+    url: site.url,
+    images: [{ url: "/images/hero/export-injection-mold-manufacturing-hero.webp", alt: "Export injection mold manufacturing at Arktech" }]
+  },
   keywords: [
     "export injection molds",
     "injection molding companies",
@@ -43,26 +51,6 @@ const whoWeServe = [
     image: "/images/company/Precision Mold to Global Delivery.png",
     imageAlt: "Completed export injection mold, mold trial validation and export packing preparation"
   }
-];
-
-const oemIndustryCategories = [
-  "Automotive & Electric Vehicles",
-  "Home Appliances & Smart Home Products",
-  "Consumer Electronics & Electrical Devices",
-  "Smart Devices & IoT Products",
-  "Medical & Healthcare Devices",
-  "Aerospace & Defense",
-  "Industrial Equipment & Automation",
-  "Pet & Lifestyle Products"
-];
-
-const whyArktech = [
-  "Engineering-led DFM feedback before tooling release",
-  "Support for both plastic and metal component programs",
-  "Export documentation, trial reports, samples, and spare parts",
-  "Clear communication for European and North American buyer expectations",
-  "Manufacturing support from prototype validation to production supply",
-  "Practical focus on cost, tolerance, material, finish, and launch risk"
 ];
 
 const coreCapabilities = [
@@ -305,53 +293,6 @@ const industryCategories: HomepageIndustry[] = [
   }
 ];
 
-const oemWorkflow = [
-  {
-    title: "Upload CAD / RFQ Files",
-    body: "Submit STEP, IGES, STL, or PDF files. Include material, tolerance, volume, and target lead time."
-  },
-  {
-    title: "DFM Engineering Review",
-    body: "Engineers analyze manufacturability, tooling strategy, material selection, and cost drivers."
-  },
-  {
-    title: "Quotation & Production Plan",
-    body: "Receive detailed quotation covering tooling, sampling, production, inspection, and export logistics."
-  },
-  {
-    title: "Tooling to Mass Production",
-    body: "Move from prototype or mold trial to stable production with export-ready delivery."
-  }
-];
-
-const oemConfidence = [
-  {
-    title: "Manufacturability Review",
-    body: "DFM feedback covers geometry, material behavior, tolerance risk, tooling strategy, and assembly interfaces before tooling release."
-  },
-  {
-    title: "Quality Documentation",
-    body: "Sampling records, inspection points, material notes, tooling corrections, and shipment documents help overseas teams evaluate launch readiness."
-  },
-  {
-    title: "Prototype to Production",
-    body: "Support ranges from prototype validation and bridge production to export molds, molded parts, CNC metal components, and repeat supply."
-  },
-  {
-    title: "File Security",
-    body: "Uploaded files are used only for engineering review and quotation. NDA-based projects can be supported when required."
-  }
-];
-
-const qualitySignals = [
-  "Export molds delivered to Europe & North America",
-  "15+ years injection mold manufacturing experience",
-  "DFM engineering support for overseas customers",
-  "ISO 9001 certified production system",
-  "OEM & EMS supply chain experience",
-  "Tooling validation and sampling before shipment"
-];
-
 const deliverySteps = [
   {
     title: "RFQ & CAD Review",
@@ -430,15 +371,6 @@ function DeliveryIcon({ type }: { type: string }) {
     </svg>
   );
 }
-
-const chooseArktechReasons = [
-  { title: "Engineering-Led DFM Review", description: "Early feasibility review, DFM analysis, and manufacturability validation before tooling release.", icon: "engineering" },
-  { title: "Integrated Manufacturing Coordination", description: "Tooling, injection molding, CNC machining, die casting, finishing, and assembly under one workflow.", icon: "workflow" },
-  { title: "ISO-Controlled Quality System", description: "Structured inspection and validation process for stable OEM manufacturing programs.", icon: "quality" },
-  { title: "Export Tooling Experience", description: "15+ years supporting tooling and component projects for Europe and North America.", icon: "export" },
-  { title: "Secure CAD & NDA Protection", description: "Confidential project handling for CAD files, drawings, and customer technical data.", icon: "security" },
-  { title: "Sampling & Spare Parts Support", description: "Trial, sampling, approval, export documentation, and spare parts support after delivery.", icon: "support" }
-];
 
 function TrustIcon({ type }: { type: string }) {
   const common = {
