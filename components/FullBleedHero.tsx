@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DecorativeHeroVideo } from "@/components/DecorativeHeroVideo";
 
 type HeroImage = {
   src: string;
   alt: string;
+  position?: "center" | "right" | "top";
+};
+
+type HeroVideo = {
+  src: string;
+  poster: string;
+  loopStart?: number;
+  loopEnd?: number;
   position?: "center" | "right" | "top";
 };
 
@@ -25,9 +34,10 @@ type FullBleedHeroProps = {
   primaryCta: HeroLink;
   secondaryCta?: HeroLink;
   backgroundImages: HeroImage[];
+  backgroundVideo?: HeroVideo;
   breadcrumbs?: BreadcrumbItem[];
   height?: "compact" | "standard" | "tall";
-  overlay?: "standard" | "strong" | "light";
+  overlay?: "standard" | "strong" | "light" | "video";
 };
 
 const heightClasses = {
@@ -39,7 +49,8 @@ const heightClasses = {
 const overlayClasses = {
   standard: "bg-[linear-gradient(90deg,rgba(5,25,45,0.96)_0%,rgba(5,25,45,0.88)_43%,rgba(5,25,45,0.52)_72%,rgba(5,25,45,0.32)_100%)]",
   strong: "bg-[linear-gradient(90deg,rgba(5,25,45,0.97)_0%,rgba(5,25,45,0.91)_46%,rgba(5,25,45,0.66)_76%,rgba(5,25,45,0.48)_100%)]",
-  light: "bg-[linear-gradient(90deg,rgba(5,25,45,0.94)_0%,rgba(5,25,45,0.82)_46%,rgba(5,25,45,0.43)_76%,rgba(5,25,45,0.24)_100%)]"
+  light: "bg-[linear-gradient(90deg,rgba(5,25,45,0.94)_0%,rgba(5,25,45,0.82)_46%,rgba(5,25,45,0.43)_76%,rgba(5,25,45,0.24)_100%)]",
+  video: "bg-[linear-gradient(90deg,rgba(8,35,58,0.88)_0%,rgba(8,35,58,0.68)_52%,rgba(8,35,58,0.30)_100%)]"
 };
 
 const positionClasses = {
@@ -56,6 +67,7 @@ export function FullBleedHero({
   primaryCta,
   secondaryCta,
   backgroundImages,
+  backgroundVideo,
   breadcrumbs,
   height = "standard",
   overlay = "standard"
@@ -80,6 +92,17 @@ export function FullBleedHero({
           </div>
         ))}
       </div>
+      {backgroundVideo ? (
+        <div className="absolute inset-0 -z-[15] hidden overflow-hidden md:block" aria-hidden="true">
+          <DecorativeHeroVideo
+            className={`h-full w-full object-cover ${positionClasses[backgroundVideo.position ?? "center"]}`}
+            loopEnd={backgroundVideo.loopEnd}
+            loopStart={backgroundVideo.loopStart}
+            poster={backgroundVideo.poster}
+            src={backgroundVideo.src}
+          />
+        </div>
+      ) : null}
       <div className={`absolute inset-0 -z-10 ${overlayClasses[overlay]}`} />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,25,45,0.18)_0%,rgba(5,25,45,0.06)_58%,rgba(5,25,45,0.32)_100%)]" />
 

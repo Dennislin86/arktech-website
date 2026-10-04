@@ -502,10 +502,17 @@ export function PlasticInjectionMoldingPage() {
 
       <FullBleedHero
         backgroundImages={[{
-          src: "/images/capabilities/plastic-injection-molding-production-video-frame.webp",
+          src: "/images/hero/plastic-injection-molding-video-poster.webp",
           alt: "Plastic injection molding production line for OEM molded components",
           position: "right"
         }]}
+        backgroundVideo={{
+          src: "/videos/Injection%20Molding/injection-molding-production1.mp4",
+          poster: "/images/hero/plastic-injection-molding-video-poster.webp",
+          loopStart: 0.5,
+          loopEnd: 10.5,
+          position: "center"
+        }}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Capabilities", href: "/manufacturing-capabilities" },
@@ -514,6 +521,7 @@ export function PlasticInjectionMoldingPage() {
         description="Arktech supports injection molding for engineering components, product housings and OEM programs from prototype builds and low-volume production through stable repeat and mass production."
         eyebrow="Plastic Injection Molding"
         height="standard"
+        overlay="video"
         primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
         secondaryCta={{ label: "Request Injection Molding Quote", href: "/request-a-quote" }}
         supportingLine="Prototype · Low Volume · Mass Production · Secondary Operations"

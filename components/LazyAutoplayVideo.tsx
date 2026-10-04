@@ -7,10 +7,20 @@ type LazyAutoplayVideoProps = {
   className?: string;
   poster: string;
   preload?: "none" | "metadata";
+  rootMargin?: string;
   src: string;
+  threshold?: number;
 };
 
-export function LazyAutoplayVideo({ ariaLabel, className, poster, preload = "none", src }: LazyAutoplayVideoProps) {
+export function LazyAutoplayVideo({
+  ariaLabel,
+  className,
+  poster,
+  preload = "none",
+  rootMargin = "300px 0px",
+  src,
+  threshold = 0.05
+}: LazyAutoplayVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [shouldAutoplay, setShouldAutoplay] = useState(false);
@@ -31,12 +41,12 @@ export function LazyAutoplayVideo({ ariaLabel, className, poster, preload = "non
           video.pause();
         }
       },
-      { rootMargin: "300px 0px", threshold: 0.05 }
+      { rootMargin, threshold }
     );
 
     observer.observe(video);
     return () => observer.disconnect();
-  }, []);
+  }, [rootMargin, threshold]);
 
   useEffect(() => {
     const video = videoRef.current;

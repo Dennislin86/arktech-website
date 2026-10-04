@@ -329,26 +329,27 @@ const trialValidationGroups = [
   }
 ];
 
-const trialValidationEvidence = [
+const primaryTrialValidationEvidence = {
+  label: "Mold Trial Report",
+  description: "Trial setup, mold condition, observations and validation records.",
+  image: "/images/injection-mold-manufacturing/mold-trial-report-evidence.webp",
+  alt: "Injection mold trial report documenting mold condition and validation",
+  width: 1400,
+  height: 1037
+};
+
+const supportingTrialValidationEvidence = [
   {
-    label: "Trial Report",
-    image: "/images/injection-mold-manufacturing/mold-trial-report-evidence.webp",
-    alt: "Mold trial report for injection mold validation"
+    label: "Dimensional Inspection",
+    description: "Critical dimensions and inspection results from molded trial samples.",
+    image: "/images/quality/dimensional-inspection-report-anonymized.webp",
+    alt: "Dimensional inspection report for injection molded trial samples"
   },
   {
     label: "Process Parameters",
+    description: "Recorded molding conditions used during sample validation.",
     image: "/images/injection-mold-manufacturing/injection-molding-process-parameters.webp",
-    alt: "Injection molding parameter sheet recorded during mold trial"
-  },
-  {
-    label: "Dimensional Inspection",
-    image: "/images/quality/dimensional-inspection-report-anonymized.webp",
-    alt: "Dimensional inspection report for molded trial samples"
-  },
-  {
-    label: "Trial Sample",
-    image: "/images/injection-mold-manufacturing/molded-trial-sample-evidence.webp",
-    alt: "Injection molded trial samples for tooling approval"
+    alt: "Injection molding process parameter sheet from mold trial"
   }
 ];
 const documentationItems = ["DFM Report", "Mold Trial Report", "Dimensional Inspection Report", "Steel / Material Certificates", "Tooling 2D / 3D Data", "Spare Parts List", "Hot Runner Information", "Cooling Information", "Packing Photos", "Export Packing Checklist"];
@@ -424,15 +425,32 @@ export function InjectionMoldManufacturingPage() {
           </div>
 
           <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-10 xl:grid-cols-[minmax(0,55fr)_minmax(0,45fr)]">
-            <figure className="relative aspect-[16/9] overflow-hidden rounded-md border border-[var(--line)] bg-white">
-              <Image
-                alt="Precision injection mold manufacturing, validation and global delivery preparation"
-                className="object-contain object-center"
-                fill
-                sizes="(min-width: 1280px) 55vw, (min-width: 1024px) 50vw, 100vw"
-                src="/images/injection-mold-manufacturing/Precision Mold to Global Delivery.png"
-              />
-            </figure>
+            <div className="space-y-6 lg:space-y-7">
+              <figure className="relative aspect-[16/9] overflow-hidden rounded-md border border-[var(--line)] bg-white">
+                <Image
+                  alt="Precision injection mold manufacturing, validation and global delivery preparation"
+                  className="object-contain object-center"
+                  fill
+                  sizes="(min-width: 1280px) 55vw, (min-width: 1024px) 50vw, 100vw"
+                  src="/images/injection-mold-manufacturing/Precision Mold to Global Delivery.png"
+                />
+              </figure>
+
+              <figure className="relative aspect-video overflow-hidden rounded-md border border-[var(--line)] bg-[var(--brand-dark)]">
+                <LazyAutoplayVideo
+                  ariaLabel="Arktech injection mold manufacturing process"
+                  className="h-full w-full object-cover object-center"
+                  poster="/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp"
+                  preload="metadata"
+                  rootMargin="100px 0px"
+                  src="/videos/injection-mold-manufacturing/mold-manufacturing.mp4"
+                  threshold={0.25}
+                />
+                <figcaption className="pointer-events-none absolute left-3 top-3 rounded-sm bg-[rgba(8,35,58,0.84)] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white sm:left-4 sm:top-4 sm:text-[13px]">
+                  Mold Manufacturing
+                </figcaption>
+              </figure>
+            </div>
 
             <div>
               <div className="space-y-3 text-[17px] leading-[1.6] text-[var(--muted)]">
@@ -550,21 +568,25 @@ export function InjectionMoldManufacturingPage() {
             <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">DFM Engineering Review</p>
             <h3 className="mt-3 max-w-3xl text-2xl font-bold leading-tight text-[var(--brand-dark)] sm:text-3xl">Mold Engineering Review Before Manufacturing Release</h3>
 
-            <div className="mt-7 grid gap-7 lg:grid-cols-[minmax(0,58fr)_minmax(0,42fr)] lg:items-start lg:gap-10">
+            <div className="mt-7 grid gap-7 lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)] lg:items-start lg:gap-10">
               <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-white">
-                <Image
-                  alt="Complete injection mold DFM engineering review covering parting, cooling, gating and moving mechanisms"
-                  className="h-auto w-full object-contain"
-                  height={1095}
-                  loading="lazy"
-                  sizes="(min-width: 1024px) 58vw, 100vw"
-                  src="/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp"
-                  width={1800}
-                />
+                <div className="relative aspect-[4/5] bg-slate-100">
+                  <Image
+                    alt="Injection molding DFM engineering report with tooling review items"
+                    className="object-contain object-center"
+                    fill
+                    loading="lazy"
+                    sizes="(min-width: 1024px) 45vw, 100vw"
+                    src="/images/injection-mold-manufacturing/dfm-engineering-report.webp"
+                  />
+                </div>
+                <figcaption className="border-t border-[var(--line)] px-4 py-3 text-[15px] leading-6 text-[var(--muted)] sm:px-5 sm:text-base">
+                  Real DFM review covering parting line, gating, cooling, ejection and tooling risks before mold release.
+                </figcaption>
               </figure>
 
               <div>
-                <ol className="grid gap-x-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2" aria-label="Injection mold DFM engineering review topics">
+                <ol className="grid gap-x-6 sm:grid-cols-2" aria-label="Injection mold DFM engineering review topics">
                   {dfmReviewTopics.map((topic, index) => (
                     <li className="border-b border-[var(--line)] py-4 first:pt-0" key={topic.title}>
                       <div className="flex items-start gap-3">
@@ -715,38 +737,48 @@ export function InjectionMoldManufacturingPage() {
       </section>
 
       <section className="bg-white py-14 sm:py-16">
-        <div className="container-page grid gap-10 lg:grid-cols-[minmax(0,58fr)_minmax(0,42fr)] lg:items-start lg:gap-14">
-          <figure className="relative aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
-            <LazyAutoplayVideo
-              ariaLabel="Arktech CNC machining for injection mold manufacturing"
-              className="h-full w-full object-cover object-center"
-              poster="/images/about/arktech-mold-factory-video-poster.webp"
-              preload="metadata"
-              src="/videos/arktech-group-cnc-hero.mp4"
-            />
+        <div className="container-page grid gap-7 xl:grid-cols-[minmax(0,52fr)_minmax(0,48fr)] xl:items-stretch xl:gap-x-10 xl:gap-y-6">
+          <figure className="order-2 flex flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white xl:order-1 xl:row-span-3 xl:h-full">
+            <div className="relative aspect-[4/3] overflow-hidden bg-[var(--surface-soft)] xl:min-h-[560px] xl:flex-1 xl:aspect-auto">
+              <LazyAutoplayVideo
+                ariaLabel="Arktech mold manufacturing and toolroom process"
+                className="h-full w-full object-cover object-center"
+                poster="/images/injection-mold-manufacturing/arktech-toolroom-video-poster.webp"
+                preload="metadata"
+                rootMargin="100px 0px"
+                src="/videos/injection-mold-manufacturing/arktech-mold-toolroom.mp4"
+                threshold={0.25}
+              />
+              <span className="pointer-events-none absolute left-3 top-3 rounded-sm bg-[rgba(8,35,58,0.84)] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white sm:left-4 sm:top-4 sm:text-[13px]">
+                Mold Manufacturing
+              </span>
+            </div>
+            <figcaption className="border-t border-[var(--line)] px-4 py-3 text-[15px] leading-6 text-[var(--muted)] sm:px-5 sm:text-base">
+              Real mold manufacturing, fitting and assembly in Arktech’s toolroom.
+            </figcaption>
           </figure>
 
-          <div>
+          <div className="order-1 xl:order-2 xl:col-start-2">
             <SectionHeader
               eyebrow="Toolroom Capabilities"
               title="Toolroom Capabilities for Injection Mold Manufacturing"
-              body="Arktech’s toolroom supports mold steel machining, EDM, wire cutting, fitting, polishing and final assembly for production injection molds. Manufacturing work is coordinated against the approved mold design, tooling specification and customer production requirements."
+              body="Arktech’s toolroom supports mold steel machining, EDM, wire cutting, fitting, polishing and final assembly for production injection molds, working from approved mold design and customer tooling requirements."
             />
-
-            <div className="mt-7 border-t border-[var(--line)]">
-              {toolroomCapabilities.map((item) => (
-                <article className="border-b border-[var(--line)] py-5" key={item.title}>
-                  <h3 className="text-lg font-bold leading-tight text-[var(--brand-dark)] sm:text-xl">{item.title}</h3>
-                  <p className="mt-2 text-xs font-bold uppercase leading-5 tracking-[0.06em] text-[var(--brand)] sm:text-[13px]">{item.processes}</p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-[15px]">{item.body}</p>
-                </article>
-              ))}
-            </div>
-
-            <Link className="focus-ring mt-6 inline-flex min-h-11 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-hover)]" href="#manufacturing-equipment">
-              View Manufacturing Equipment <span className="ml-2" aria-hidden="true">→</span>
-            </Link>
           </div>
+
+          <div className="order-3 grid gap-x-7 gap-y-6 min-[769px]:grid-cols-2 xl:col-start-2" aria-label="Injection mold toolroom capabilities">
+            {toolroomCapabilities.map((item) => (
+              <article className="border-t border-[var(--line)] pt-4" key={item.title}>
+                <h3 className="text-[23px] font-bold leading-[1.18] text-[var(--brand-dark)] sm:text-2xl">{item.title}</h3>
+                <p className="mt-3 text-[13px] font-bold uppercase leading-5 tracking-[0.05em] text-[var(--brand)] sm:text-sm">{item.processes}</p>
+                <p className="mt-2.5 text-[15px] leading-6 text-[var(--muted)] sm:text-base lg:text-[17px] lg:leading-7">{item.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <Link className="focus-ring order-4 inline-flex min-h-11 w-fit items-center text-[17px] font-semibold text-[var(--brand)] transition hover:text-[var(--brand-hover)] xl:col-start-2" href="#manufacturing-equipment">
+            View Manufacturing Equipment <span className="ml-2" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 
@@ -927,7 +959,7 @@ export function InjectionMoldManufacturingPage() {
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16">
         <div className="container-page">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,44fr)_minmax(0,56fr)] lg:items-start lg:gap-12 xl:grid-cols-[minmax(0,43fr)_minmax(0,57fr)] xl:gap-14">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,48fr)_minmax(0,52fr)] lg:items-start lg:gap-12 xl:gap-14">
             <div>
               <SectionHeader eyebrow="Mold Trial & Validation" title="Mold Trial, Correction and Approval" />
               <div className="mt-4 max-w-3xl space-y-3 text-base leading-7 text-[var(--muted)] sm:text-lg">
@@ -960,21 +992,42 @@ export function InjectionMoldManufacturingPage() {
 
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--brand)] sm:text-sm">Documented Validation</p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                {trialValidationEvidence.map((item) => (
-                  <figure className="overflow-hidden rounded-sm border border-[var(--line)] bg-white" key={item.label}>
-                    <div className="relative aspect-[4/3] overflow-hidden bg-white">
-                      <Image
-                        alt={item.alt}
-                        className="object-contain object-center"
-                        fill
-                        sizes="(min-width: 1280px) 27vw, (min-width: 1024px) 26vw, (min-width: 640px) 50vw, 100vw"
-                        src={item.image}
-                      />
-                    </div>
-                    <figcaption className="border-t border-[var(--line)] px-4 py-3 text-sm font-bold text-[var(--brand-dark)]">{item.label}</figcaption>
-                  </figure>
-                ))}
+              <div className="mt-5 space-y-5">
+                <figure className="overflow-hidden rounded-sm border border-[var(--line)] bg-white">
+                  <Image
+                    alt={primaryTrialValidationEvidence.alt}
+                    className="h-auto w-full object-contain object-center"
+                    height={primaryTrialValidationEvidence.height}
+                    loading="lazy"
+                    sizes="(min-width: 1280px) 52vw, (min-width: 1024px) 50vw, 100vw"
+                    src={primaryTrialValidationEvidence.image}
+                    width={primaryTrialValidationEvidence.width}
+                  />
+                  <figcaption className="border-t border-[var(--line)] px-4 py-4 sm:px-5">
+                    <p className="text-base font-bold text-[var(--brand-dark)] sm:text-lg">{primaryTrialValidationEvidence.label}</p>
+                    <p className="mt-1 text-sm leading-6 text-[var(--muted)] sm:text-[15px]">{primaryTrialValidationEvidence.description}</p>
+                  </figcaption>
+                </figure>
+
+                <div className="grid gap-5 lg:grid-cols-2">
+                  {supportingTrialValidationEvidence.map((item) => (
+                    <figure className="overflow-hidden rounded-sm border border-[var(--line)] bg-white" key={item.label}>
+                      <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                        <Image
+                          alt={item.alt}
+                          className="object-contain object-center"
+                          fill
+                          sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 24vw, (min-width: 768px) 50vw, 100vw"
+                          src={item.image}
+                        />
+                      </div>
+                      <figcaption className="border-t border-[var(--line)] px-4 py-4">
+                        <p className="text-sm font-bold text-[var(--brand-dark)] sm:text-base">{item.label}</p>
+                        <p className="mt-1 text-[13px] leading-5 text-[var(--muted)] sm:text-sm">{item.description}</p>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
