@@ -423,6 +423,24 @@ The four Tooling Support pages reuse approved first-party project media and priv
 | Export Tooling hero and handover | `/images/company/Precision Mold to Global Delivery.png` | Completed export injection mold with molded part and tooling packing preparation | Existing approved first-party handover composite; active |
 | Export Tooling Open Graph | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Completed export injection mold prepared for customer production | Existing approved export-tooling hero; active |
 
+## Company Trust & Entity Page
+
+The `/company/` page reuses approved first-party manufacturing, tooling and validation media. No stock, competitor or newly generated visual was added.
+
+| Company page use | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Hero — factory and mold assembly | `/images/factory-workshop/injection-mold-assembly-workshop.webp` | Arktech injection mold manufacturing and assembly workshop in Dongguan | Existing real Arktech factory photo; active and priority-loaded only in the hero |
+| Core focus — injection mold manufacturing | `/images/injection-mold-manufacturing/Precision Mold to Global Delivery.png` | Finished injection molds and molded parts manufactured by Arktech | Existing first-party tooling composite; active |
+| Core focus — plastic injection molding | `/images/capabilities/plastic-injection-molding-production.webp` | Plastic injection molded component undergoing dimensional inspection at Arktech | Existing approved production image; active |
+| Manufacturing environment video | `/videos/injection-mold-manufacturing/mold-manufacturing.mp4` | Arktech injection mold manufacturing and toolroom process | Existing optimized first-party H.264 video; lazy-loaded with muted inline playback |
+| Manufacturing environment poster | `/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp` | Injection mold fitting and assembly at Arktech | Existing first-party video frame; active as the loading and reduced-motion fallback |
+| Tool fitting proof | `/images/factory-workshop/injection-mold-fitting-workshop.webp` | Injection mold fitting and assembly at Arktech | Existing real Arktech workshop photo; active |
+| Mold-trial proof | `/images/Mold trail/Mold trial video photos.png` | Injection mold installed for trial and sample validation at Arktech | Existing real Arktech mold-trial image; active |
+| Engineering review proof | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | Anonymized DFM report for injection mold engineering review | Existing privacy-safe engineering record; active |
+| Dimensional inspection proof | `/images/quality/dimensional-inspection-report-anonymized.webp` | Dimensional inspection report from injection mold trial validation | Existing anonymized validation record; active |
+| Process parameter proof | `/images/injection-mold-manufacturing/injection-molding-process-parameters.webp` | Injection molding process parameter sheet from mold trial | Existing privacy-safe trial record; active |
+| International tooling program | `/images/company/Precision Mold to Global Delivery.png` | Export injection mold prepared for customer production with validation and packing records | Existing first-party export-tooling composite; active |
+
 ## Existing General Assets
 
 | Content | Asset | Source/status |
