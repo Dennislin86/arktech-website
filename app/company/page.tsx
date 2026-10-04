@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CompanyPage } from "@/components/CompanyPage";
 import { site } from "@/lib/site";
 
-const pageUrl = `${site.url}/company/`;
+const pageUrl = `${site.url}/company`;
 const pageTitle = "About Arktech | Export Tooling & Injection Molding Company";
 const pageDescription = "Learn about Arktech’s engineering, export injection mold manufacturing, mold validation and plastic injection molding capabilities for international product and molding companies.";
 

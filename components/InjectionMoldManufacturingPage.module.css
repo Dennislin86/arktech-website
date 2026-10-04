@@ -1,0 +1,35 @@
+.card {
+  transition: border-color 200ms ease;
+}
+
+.image {
+  transition: transform 300ms ease;
+}
+
+.title {
+  transition: color 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    border-color: var(--brand);
+  }
+
+  .card:hover .title {
+    color: var(--brand);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .card:hover .image {
+    transform: scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .image,
+  .title {
+    transition-duration: 0.01ms;
+  }
+}

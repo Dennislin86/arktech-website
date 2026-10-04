@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "standalone",
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/avif", "image/webp"],
+    qualities: [75, 86]
   },
   async headers() {
     return [

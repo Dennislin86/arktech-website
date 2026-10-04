@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 const title = "Custom Injection Molds & Tooling Projects | Arktech";
 const description = "Explore custom injection molds, specialized tooling and real mold projects from Arktech, including multi-cavity, family, 2K, unscrewing and high-gloss tooling.";
-const canonical = `${site.url}/injection-molds/`;
+const canonical = `${site.url}/injection-molds`;
 
 export const metadata: Metadata = {
   title: { absolute: title },

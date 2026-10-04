@@ -3,7 +3,7 @@ import { DfmEngineeringPage } from "@/components/DfmEngineeringPage";
 
 const title = "Injection Molding Engineering, DFM & Moldflow | Arktech";
 const description = "Injection molding engineering support from product co-design and DFM to Moldflow analysis, mold design and tooling validation before production.";
-const canonical = "https://www.arktechmold.com/injection-molding-engineering/";
+const canonical = "https://www.arktechmold.com/injection-molding-engineering";
 
 export const metadata: Metadata = {
   title: { absolute: title },

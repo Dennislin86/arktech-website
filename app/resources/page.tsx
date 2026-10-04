@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 const pageTitle = "Injection Molding & Mold Design Resources | Arktech";
 const pageDescription = "Technical resources for injection molding, DFM, mold design, tooling, materials, mold trials and production, with practical guides and real project case studies.";
-const pageUrl = `${site.url}/resources/`;
+const pageUrl = `${site.url}/resources`;
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

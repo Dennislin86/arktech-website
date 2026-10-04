@@ -132,7 +132,7 @@ const resources = [
   ["Mold Trial & Validation", "Understand sampling, corrections, inspection and approval before release.", "/injection-molds/mold-trial-validation"]
 ] as const;
 
-const pageUrl = `${site.url}/industries/`;
+const pageUrl = `${site.url}/industries`;
 const pageTitle = "Injection Molding for Electronics, Automotive & Product Industries | Arktech";
 const pageDescription = "Custom injection molds and plastic injection molding for smart home, appliances, electronics, pet tech, automotive, medical and industrial products, from DFM through production.";
 

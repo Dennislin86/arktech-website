@@ -89,7 +89,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html data-scroll-behavior="smooth" lang="en">
       <body>
         <a className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-sm focus:bg-white focus:px-4 focus:py-3 focus:font-bold focus:text-[var(--brand-dark)] focus:shadow-lg" href="#main-content">
           Skip to main content

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   if (isToolingSupportSlug(slug)) {
     const page = toolingSupportPages[slug];
-    const canonical = `${site.url}/injection-molds/${slug}/`;
+    const canonical = `${site.url}/injection-molds/${slug}`;
     return {
       title: { absolute: page.seoTitle },
       description: page.description,
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     };
   }
-  const canonical = `${site.url}/injection-molds/${slug}/`;
+  const canonical = `${site.url}/injection-molds/${slug}`;
   if (slug === "multi-cavity-molds") {
     const title = "Multi-Cavity Injection Molds & Tooling | Arktech";
     const description = "Design and manufacturing of multi-cavity injection molds with balanced filling, cooling, cavity-to-cavity consistency, mold trials and dimensional validation for production.";

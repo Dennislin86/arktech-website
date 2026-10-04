@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 const title = "Injection Mold Manufacturing & Plastic Injection Molding Capabilities | Arktech";
 const description = "Explore Arktech injection mold manufacturing and plastic injection molding capabilities, including DFM, mold trials, validation, production and supporting manufacturing processes.";
-const canonical = `${site.url}/manufacturing-capabilities/`;
+const canonical = `${site.url}/manufacturing-capabilities`;
 
 export const metadata: Metadata = {
   title: { absolute: title },

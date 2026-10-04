@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const landingPage = industryLandingPageBySlug.get(slug);
 
   if (landingPage) {
-    const canonical = `${site.url}/industries/${landingPage.slug}/`;
+    const canonical = `${site.url}/industries/${landingPage.slug}`;
     return {
       title: { absolute: landingPage.seoTitle },
       description: landingPage.metaDescription,
