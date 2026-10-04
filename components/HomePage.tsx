@@ -13,17 +13,23 @@ const proofItems = [
 
 const buyerPaths = [
   {
-    eyebrow: "Developing a new product?",
+    eyebrow: "From Part Design to Production",
     title: "Product Companies & OEM Teams",
-    body: "From product design to production-ready tooling and molded parts.",
-    cta: "Mold + Production Support",
+    body: "Bring your plastic parts into production with support for co-design, DFM, mold manufacturing and injection molding—from initial CAD review to validated samples and production.",
+    points: ["Co-design & DFM Support", "Mold Development & Validation", "Low-Volume & Mass Production"],
+    image: "/images/company/arktech-product-design-injection-mold-production.webp",
+    alt: "Product design, DFM, mold development and injection molding production workflow",
+    cta: "Explore Tooling & Production Support",
     href: "/services/plastic-injection-molding"
   },
   {
-    eyebrow: "Need more tooling capacity?",
+    eyebrow: "Export Molds for Your Production",
     title: "Injection Molding Companies",
-    body: "Export-ready molds engineered for your machines, standards and production requirements.",
-    cta: "Export Tooling Support",
+    body: "Expand your tooling capacity with injection molds built to your machine specifications and tooling standards, supported by documented mold trials, export preparation and spare parts.",
+    points: ["Machine & Tooling Standard Compatibility", "Mold Trials & Technical Documentation", "Export Preparation & Spare Parts"],
+    image: "/images/company/arktech-export-injection-mold-global-delivery.webp",
+    alt: "Completed export injection mold with mold trial validation and packing preparation",
+    cta: "Explore Export Tooling",
     href: "/services/injection-mold-manufacturing"
   }
 ] as const;
@@ -221,9 +227,35 @@ export function HomePage() {
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="who-we-support-heading">
         <div className="container-page">
-          <SectionHeading body="Two focused project paths for product teams developing molded parts and molders expanding export-tooling capacity." eyebrow="Buyer Paths" id="who-we-support-heading" title="Who We Support" />
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {buyerPaths.map((buyer) => <article className="border-t-2 border-[var(--brand)] bg-white p-6 sm:p-7" key={buyer.title}><p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--brand)]">{buyer.eyebrow}</p><h3 className="mt-3 text-2xl font-bold leading-tight text-[var(--brand-dark)] sm:text-3xl">{buyer.title}</h3><p className="mt-4 max-w-xl leading-7 text-[var(--muted)]">{buyer.body}</p><Link className="focus-ring mt-5 inline-flex min-h-11 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href={buyer.href}>{buyer.cta} <span aria-hidden="true" className="ml-2">→</span></Link></article>)}
+          <SectionHeading body="Export injection molds for your molding facility. Tooling and plastic part production for your product." eyebrow="Buyer Paths" id="who-we-support-heading" title="Who We Support" />
+          <div className="mt-8 grid auto-rows-fr gap-5 md:grid-cols-2 lg:gap-6">
+            {buyerPaths.map((buyer) => (
+              <article className="group flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm transition hover:border-[var(--brand)]" key={buyer.title}>
+                <div className="relative aspect-video overflow-hidden bg-[#eef2f5]">
+                  <Image
+                    alt={buyer.alt}
+                    className="object-contain object-center transition duration-300 group-hover:scale-[1.01] motion-reduce:transition-none"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    src={buyer.image}
+                  />
+                </div>
+                <div className="flex flex-1 flex-col border-t border-[var(--line)] p-5 sm:p-6">
+                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--brand)]">{buyer.eyebrow}</p>
+                  <h3 className="mt-3 text-2xl font-bold leading-tight text-[var(--brand-dark)] sm:text-3xl">{buyer.title}</h3>
+                  <p className="mt-4 leading-7 text-[var(--muted)]">{buyer.body}</p>
+                  <ul className="mt-5 space-y-3">
+                    {buyer.points.map((point) => (
+                      <li className="flex items-start gap-3 font-semibold leading-6 text-[var(--brand-dark)]" key={point}>
+                        <span aria-hidden="true" className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link className="focus-ring mt-auto inline-flex min-h-11 items-center self-start pt-6 font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href={buyer.href}>{buyer.cta} <span aria-hidden="true" className="ml-2 transition-transform group-hover:translate-x-1 motion-reduce:transition-none">→</span></Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

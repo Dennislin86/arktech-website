@@ -27,8 +27,8 @@ The six Homepage Injection Mold Capability cards reuse the approved Mold Type as
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| OEM & Product Companies | `/images/case-studies/medical-education-device.webp` | Medical education device product development, engineering and manufacturing workflow | Existing local copy of an Arktech Group case-study image; reused on the Homepage buyer-identification card |
-| Injection Molding & Tooling Companies | `/images/company/Precision Mold to Global Delivery.png` | Completed export injection mold, mold trial validation and export packing preparation | Existing first-party export tooling composite; active on the Homepage buyer-identification card |
+| OEM & Product Companies | `/images/company/arktech-product-design-injection-mold-production.webp` | Product design, DFM, mold development and injection molding production workflow | Optimized 1024 × 512 WebP derived from the existing first-party `product-design-injection-mold-production.jpg`; active on the Homepage buyer-identification card |
+| Injection Molding & Tooling Companies | `/images/company/arktech-export-injection-mold-global-delivery.webp` | Completed export injection mold with mold trial validation and packing preparation | Optimized 1200 × 675 WebP derived from the existing first-party `Precision Mold to Global Delivery.png`; active on the Homepage buyer-identification card |
 
 ## Manufacturing Capabilities
 
