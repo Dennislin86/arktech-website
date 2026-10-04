@@ -3,14 +3,6 @@ import Link from "next/link";
 import { FullBleedHero } from "@/components/FullBleedHero";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 
-const proofItems = [
-  "DFM & Mold Design",
-  "Export Tooling",
-  "Mold Trial & Validation",
-  "Plastic Injection Molding 25–550T",
-  "Supporting Manufacturing"
-];
-
 const primaryCapabilities = [
   {
     eyebrow: "Export Tooling",
@@ -147,15 +139,33 @@ export function ManufacturingCapabilitiesPage() {
         primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
         secondaryCta={{ label: "Request a Quote", href: "/request-a-quote" }}
         title="Injection Mold & Plastic Manufacturing Capabilities"
+        bottomContent={(
+          <div className="mt-8 border-t border-white/25 bg-[#071f34]/80 backdrop-blur-sm" data-capability-proof>
+            <ul className="grid grid-cols-2 text-sm leading-5 text-white/90 sm:grid-cols-3 lg:grid-cols-5" aria-label="Arktech manufacturing capability proof">
+              <li className="flex min-h-16 items-center gap-2 border-b border-r border-white/15 px-3 py-3 font-medium sm:px-4 lg:border-b-0">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                <span>DFM &amp; Mold Design</span>
+              </li>
+              <li className="flex min-h-16 items-center gap-2 border-b border-white/15 px-3 py-3 font-medium sm:border-r sm:px-4 lg:border-b-0">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                <span>Molds up to <strong className="whitespace-nowrap font-bold text-white">2,000&nbsp;mm</strong> / <strong className="whitespace-nowrap font-bold text-white">30&nbsp;Tonnes</strong></span>
+              </li>
+              <li className="flex min-h-16 items-center gap-2 border-b border-r border-white/15 px-3 py-3 font-medium sm:px-4 lg:border-b-0">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                <span><strong className="whitespace-nowrap font-bold text-white">200+</strong> Molds per Year</span>
+              </li>
+              <li className="flex min-h-16 items-center gap-2 border-b border-white/15 px-3 py-3 font-medium sm:border-r sm:px-4 lg:border-b-0">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                <span>Injection Molding · <strong className="whitespace-nowrap font-bold text-white">25–550T</strong></span>
+              </li>
+              <li className="col-span-2 flex min-h-16 items-center gap-2 border-r border-white/15 px-3 py-3 font-medium sm:col-span-1 sm:px-4 lg:border-r-0">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
+                <span>Export Tooling</span>
+              </li>
+            </ul>
+          </div>
+        )}
       />
-
-      <section className="border-b border-[var(--line)] bg-white" aria-label="Arktech capability proof">
-        <div className="container-page">
-          <ul className="grid grid-cols-2 gap-px bg-[var(--line)] sm:grid-cols-3 lg:grid-cols-5">
-            {proofItems.map((item) => <li className="flex min-h-20 items-center gap-3 bg-white px-4 py-4 text-sm font-bold leading-5 text-[var(--brand-dark)] sm:px-5" key={item}><span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />{item}</li>)}
-          </ul>
-        </div>
-      </section>
 
       <section className="bg-white py-14 sm:py-16 lg:py-20" id="primary-capabilities">
         <div className="container-page">

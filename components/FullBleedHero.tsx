@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { DecorativeHeroVideo } from "@/components/DecorativeHeroVideo";
 
 type HeroImage = {
@@ -38,6 +39,7 @@ type FullBleedHeroProps = {
   breadcrumbs?: BreadcrumbItem[];
   height?: "compact" | "standard" | "tall";
   overlay?: "standard" | "strong" | "light" | "video";
+  bottomContent?: ReactNode;
 };
 
 const heightClasses = {
@@ -70,7 +72,8 @@ export function FullBleedHero({
   backgroundVideo,
   breadcrumbs,
   height = "standard",
-  overlay = "standard"
+  overlay = "standard",
+  bottomContent
 }: FullBleedHeroProps) {
   const multipleImages = backgroundImages.length > 1;
   const imageGridClass = backgroundImages.length === 4 ? "grid grid-cols-2 grid-rows-2" : multipleImages ? "grid grid-cols-2" : "";
@@ -134,6 +137,7 @@ export function FullBleedHero({
             {secondaryCta ? <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white/80 bg-white/5 px-5 py-3 text-center text-sm font-bold text-white backdrop-blur-[2px] transition hover:border-white hover:bg-white hover:text-[var(--brand-dark)] sm:text-base" href={secondaryCta.href}>{secondaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link> : null}
           </div>
         </div>
+        {bottomContent}
       </div>
     </section>
   );
