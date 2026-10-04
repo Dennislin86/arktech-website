@@ -247,13 +247,16 @@ The former `/services/` Hub moved permanently to `/manufacturing-capabilities/`.
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
 | Hero tooling, mold trial and engineering composite | `/images/hero/tooling-mold-trial-engineering-capabilities.webp` | Injection mold tooling, mold trial and engineering support at Arktech Mold | Existing approved optimized WebP; active on `/manufacturing-capabilities/` |
-| Primary injection mold manufacturing | `/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp` | Injection mold manufacturing in the Arktech toolroom | Existing first-party video frame; active as documentary tooling evidence |
-| Primary plastic injection molding | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Plastic injection molding production on an Arktech molding machine | Existing Arktech-owned production-video frame; active |
+| Primary injection mold manufacturing video | `/videos/injection-mold-manufacturing/mold-manufacturing.mp4` | Arktech injection mold manufacturing process | Existing optimized 1.8 MB first-party H.264 tooling video; lazy-loaded with muted inline playback |
+| Primary injection mold manufacturing poster | `/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp` | Injection mold manufacturing in the Arktech toolroom | Existing first-party video frame; loading and reduced-motion fallback |
+| Primary plastic injection molding video | `/videos/Injection Molding/injection-molding-production1.mp4` | Plastic injection molding production process at Arktech | Existing 5.6 MB, 1280 × 720 Arktech-owned production video; lazy-loaded with muted inline playback to preserve a landscape production view without embedded side bars |
+| Primary plastic injection molding poster | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Plastic injection molding production on an Arktech molding machine | Existing Arktech-owned production-video frame; loading and reduced-motion fallback |
 | DFM & Co-Design | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | DFM report for injection mold design review | Existing privacy-safe real DFM report; active with live HTML explanation |
 | Mold Trial & Validation | `/images/process/export-delivery-production-support-molding.png` | Injection mold trial and sample validation before approval | Existing real Arktech mold-trial photo; active |
 | Quality Inspection | `/images/process/sample-validation-inspection-cmm.png` | Dimensional inspection during injection mold trial validation | Existing real Arktech inspection photo; active |
 | Insert Molding and Overmolding | `/images/mold-types/insert-molding-tools.webp` | Insert molding tool for integrated inserts in plastic components | Existing approved real tooling image; reused for both verified process routes because no separate approved Overmolding mold photo exists |
 | Two-Shot / 2K Molding | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | Two-shot 2K injection mold for multi-material plastic components | Existing approved real tooling image; active |
+| Supporting manufacturing cards | Existing approved assets under `/images/capabilities/` | Capability-specific factual alt text | Reuses approved CNC, die casting, sheet metal, rapid prototyping, vacuum casting and assembly images in compact cards |
 | Industry application cards | Existing approved assets under `/images/industries/` | Page-specific factual alt text | Reuses the approved Robotics, Medical, Automotive, Smart Home, Home Appliance and Consumer Electronics images; below-fold and lazy-loaded |
 
 ### Former `/services/` Hub asset record (superseded by the migration)
