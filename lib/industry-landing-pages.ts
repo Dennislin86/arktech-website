@@ -36,8 +36,8 @@ const mold = {
 } satisfies Record<string, IndustryMoldType>;
 
 const caps = (industry: string): IndustryLinkItem[] => [
-  { title: "Injection Mold Manufacturing", body: `Export tooling developed around ${industry} product, machine and validation requirements.`, href: "/services/injection-mold-manufacturing" },
-  { title: "Plastic Injection Molding", body: "Engineering samples, low-volume builds and repeat molded-part supply after approval.", href: "/services/plastic-injection-molding" },
+  { title: "Injection Mold Manufacturing", body: `Export tooling developed around ${industry} product, machine and validation requirements.`, href: "/injection-mold-manufacturing" },
+  { title: "Plastic Injection Molding", body: "Engineering samples, low-volume builds and repeat molded-part supply after approval.", href: "/plastic-injection-molding" },
   { title: "DFM & Injection Molding Engineering", body: "Review geometry, material intent, assembly interfaces and tooling risks before release.", href: "/injection-molding-engineering" },
   { title: "Mold Trial & Validation", body: "Document samples, process conditions, inspection results and correction actions.", href: "/injection-molds/mold-trial-validation" }
 ];

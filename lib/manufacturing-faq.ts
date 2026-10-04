@@ -20,7 +20,7 @@ export const manufacturingFaqCategories: ManufacturingFaqCategory[] = [
     title: "Injection Mold Manufacturing FAQs",
     description: "Questions about export tooling scope, mold construction and preparation for overseas production.",
     relatedLabel: "Explore Injection Mold Manufacturing",
-    relatedHref: "/services/injection-mold-manufacturing",
+    relatedHref: "/injection-mold-manufacturing",
     items: [
       {
         question: "What information do you need to quote an injection mold?",
@@ -62,7 +62,7 @@ export const manufacturingFaqCategories: ManufacturingFaqCategory[] = [
     title: "Plastic Injection Molding FAQs",
     description: "Production-stage questions covering samples, volumes, molding methods and secondary operations.",
     relatedLabel: "Explore Plastic Injection Molding",
-    relatedHref: "/services/plastic-injection-molding",
+    relatedHref: "/plastic-injection-molding",
     items: [
       {
         question: "What plastic materials can Arktech injection mold?",
@@ -272,7 +272,7 @@ export const manufacturingFaqCategories: ManufacturingFaqCategory[] = [
     title: "Tooling Transfer & Export FAQs",
     description: "Preparation for installing and running an approved mold in an overseas production facility.",
     relatedLabel: "Explore Export Tooling Support",
-    relatedHref: "/services/injection-mold-manufacturing",
+    relatedHref: "/injection-mold-manufacturing",
     items: [
       {
         question: "Can molds be shipped for production at our own factory?",

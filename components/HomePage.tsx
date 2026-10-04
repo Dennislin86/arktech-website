@@ -24,7 +24,7 @@ const buyerPaths = [
     image: "/images/company/arktech-product-design-injection-mold-production.webp",
     alt: "Product design, DFM, mold development and injection molding production workflow",
     cta: "Explore Tooling & Production Support",
-    href: "/services/plastic-injection-molding"
+    href: "/plastic-injection-molding"
   },
   {
     eyebrow: "Export Molds for Your Production",
@@ -34,7 +34,7 @@ const buyerPaths = [
     image: "/images/company/arktech-export-injection-mold-global-delivery.webp",
     alt: "Completed export injection mold with mold trial validation and packing preparation",
     cta: "Explore Export Tooling",
-    href: "/services/injection-mold-manufacturing"
+    href: "/injection-mold-manufacturing"
   }
 ] as const;
 
@@ -277,7 +277,7 @@ export function HomePage() {
                 </article>
               ))}
             </div>
-            <Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[#f3b9b9] transition hover:text-white" href="/services/injection-mold-manufacturing">Explore Mold Manufacturing <span aria-hidden="true" className="ml-2">→</span></Link>
+            <Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[#f3b9b9] transition hover:text-white" href="/injection-mold-manufacturing">Explore Mold Manufacturing <span aria-hidden="true" className="ml-2">→</span></Link>
           </div>
           <ManufacturingYouTubeVideo />
         </div>
@@ -293,7 +293,7 @@ export function HomePage() {
       <section className="bg-white py-14 sm:py-16" aria-labelledby="plastic-molding-heading">
         <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)] lg:items-center lg:gap-12">
           <InjectionMoldingProductionVideo />
-          <div><SectionHeading body="Keep tooling development, mold trials and plastic part production under one engineering workflow." eyebrow="Plastic Injection Molding" id="plastic-molding-heading" title="Plastic Injection Molding from Tool Validation to Production" /><div className="mt-6"><CheckList items={["25–550T Injection Molding", "Mold Trial & Process Optimization", "Low-Volume Production", "Mass Production", "Quality Inspection", "Secondary Operations"]} /></div><Link className="focus-ring mt-7 inline-flex min-h-11 items-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:bg-[var(--brand-hover)]" href="/services/plastic-injection-molding">Explore Plastic Injection Molding <span aria-hidden="true" className="ml-2">→</span></Link></div>
+          <div><SectionHeading body="Keep tooling development, mold trials and plastic part production under one engineering workflow." eyebrow="Plastic Injection Molding" id="plastic-molding-heading" title="Plastic Injection Molding from Tool Validation to Production" /><div className="mt-6"><CheckList items={["25–550T Injection Molding", "Mold Trial & Process Optimization", "Low-Volume Production", "Mass Production", "Quality Inspection", "Secondary Operations"]} /></div><Link className="focus-ring mt-7 inline-flex min-h-11 items-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:bg-[var(--brand-hover)]" href="/plastic-injection-molding">Explore Plastic Injection Molding <span aria-hidden="true" className="ml-2">→</span></Link></div>
         </div>
       </section>
 

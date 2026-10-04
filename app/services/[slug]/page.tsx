@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DetailPage } from "@/components/DetailPage";
-import { InjectionMoldManufacturingPage } from "@/components/InjectionMoldManufacturingPage";
 import { InjectionMoldingProductionOptionsPage } from "@/components/InjectionMoldingProductionOptionsPage";
-import { PlasticInjectionMoldingPage } from "@/components/PlasticInjectionMoldingPage";
 import { servicePages } from "@/lib/page-data";
-import { site } from "@/lib/site";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -13,7 +10,7 @@ type PageProps = {
 
 export function generateStaticParams() {
   return servicePages
-    .filter((page) => !["dfm-engineering", "mold-trial-sampling-support", "tooling-spare-parts"].includes(page.slug))
+    .filter((page) => !["dfm-engineering", "injection-mold-manufacturing", "mold-trial-sampling-support", "plastic-injection-molding", "tooling-spare-parts"].includes(page.slug))
     .map((page) => ({ slug: page.slug }));
 }
 
@@ -23,38 +20,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!page) {
     return {};
-  }
-
-  if (slug === "injection-mold-manufacturing") {
-    return {
-      title: { absolute: "Injection Mold Manufacturer & Export Tooling | Arktech" },
-      description:
-        "Arktech manufactures export-ready injection molds with DFM engineering, mold design, CNC and EDM machining, fitting, mold trials, validation, tooling documentation, spare parts and export preparation.",
-      alternates: { canonical: "/services/injection-mold-manufacturing" },
-      openGraph: {
-        title: "Injection Mold Manufacturer & Export Tooling | Arktech",
-        description: "Export-ready injection mold manufacturing with DFM, mold trials, validation and documented tooling delivery.",
-        type: "website",
-        url: `${site.url}/services/injection-mold-manufacturing`,
-        images: [{ url: "/images/mold-types/Precision-Molds.png", alt: "Precision export injection mold manufactured by Arktech" }]
-      }
-    };
-  }
-
-  if (slug === "plastic-injection-molding") {
-    return {
-      title: { absolute: "Custom Plastic Injection Molding 25–550T | Arktech" },
-      description:
-        "Custom plastic injection molding services from prototype and low-volume molding to scalable production, inspection, secondary operations and assembly for global OEM projects.",
-      alternates: { canonical: "/services/plastic-injection-molding" },
-      openGraph: {
-        title: "Custom Plastic Injection Molding 25–550T | Arktech",
-        description: "Custom plastic injection molding from prototype and low-volume builds through repeat production, inspection and assembly.",
-        type: "website",
-        url: `${site.url}/services/plastic-injection-molding`,
-        images: [{ url: "/images/capabilities/plastic-injection-molding-production-video-frame.webp", alt: "Plastic injection molding production at Arktech" }]
-      }
-    };
   }
 
   if (slug === "injection-molding-production-options") {
@@ -79,14 +44,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   if (!page) {
     notFound();
-  }
-
-  if (slug === "injection-mold-manufacturing") {
-    return <InjectionMoldManufacturingPage />;
-  }
-
-  if (slug === "plastic-injection-molding") {
-    return <PlasticInjectionMoldingPage />;
   }
 
   if (slug === "injection-molding-production-options") {

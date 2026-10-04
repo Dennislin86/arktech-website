@@ -188,8 +188,8 @@ export const servicePages: DetailPageData[] = [
     ],
     processFlow: ["Trial plan confirmation", "T1 mold trial", "Sample and parameter recording", "Dimensional inspection", "Customer feedback review", "Tool correction if required", "Final approval and shipping preparation"],
     relatedLinks: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "Project Management", href: "/company/project-management" }
     ],
     faqs: [
@@ -269,7 +269,7 @@ export const servicePages: DetailPageData[] = [
     ],
     processFlow: ["Identify wear and critical components", "Confirm standard systems and material requirements", "Manufacture or source spare parts", "Inspect and label spare parts", "Prepare spare parts list", "Pack with mold shipment"],
     relatedLinks: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Project Management", href: "/company/project-management" },
       { label: "Hot Runner Molds", href: "/injection-molds/hot-runner-molds" }
     ],
@@ -349,7 +349,7 @@ export const servicePages: DetailPageData[] = [
     ],
     processFlow: ["DFM and resin review", "Mold sampling and approval", "Production planning", "Injection molding production", "Inspection and secondary operations", "Assembly and packaging", "Export delivery"],
     relatedLinks: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Plastic Housing Manufacturing", href: "/services/plastic-housing-manufacturing" },
       { label: "Assembly & Secondary Services", href: "/services/plastic-metal-assembly" }
@@ -647,8 +647,8 @@ export const industryPages: DetailPageData[] = [
     ],
     processFlow: ["CAD and requirement review", "DFM and tolerance stack-up feedback", "Tooling or machining plan", "Sampling and dimensional inspection", "Assembly fit review", "Production and export delivery"],
     relatedLinks: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "CNC Metal Parts", href: "/services/cnc-metal-parts" },
       { label: "Upload CAD for RFQ", href: "/request-a-quote" }
     ],
@@ -758,8 +758,8 @@ export const industryPages: DetailPageData[] = [
     ],
     processFlow: ["CAD and medical requirement review", "DFM and material feedback", "Mold design and sampling plan", "Mold trial and sample inspection", "Clean assembly and packaging review", "Production support and documentation"],
     relatedLinks: [
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Medical Case Study", href: "/case-studies/medical-device-cartridge-molding" }
     ],
@@ -855,8 +855,8 @@ export const industryPages: DetailPageData[] = [
     ],
     processFlow: ["CAD and medical requirement review", "DFM and material feedback", "Mold design and sampling plan", "Mold trial and sample inspection", "Clean assembly and packaging review", "Production support and documentation"],
     relatedLinks: [
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Medical Case Study", href: "/case-studies/medical-device-cartridge-molding" }
     ],
@@ -952,8 +952,8 @@ export const industryPages: DetailPageData[] = [
     ],
     processFlow: ["CAD and application review", "DFM and material selection", "Tooling or machining plan", "Sample validation and fit check", "Inspection and finishing review", "Production and export packing"],
     relatedLinks: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "CNC Metal Parts", href: "/services/cnc-metal-parts" },
       { label: "Die Casting Mold Manufacturing", href: "/services/die-casting-mold" }
     ],
@@ -1017,10 +1017,10 @@ export const industryPages: DetailPageData[] = [
 ];
 
 const commonToolingServices = [
-  { label: "Export Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+  { label: "Export Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
   { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
-  { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+  { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "Request an RFQ", href: "/request-a-quote" }
 ];
 
@@ -1850,7 +1850,7 @@ export const caseStudyPages: CaseStudyData[] = [
       "The mold package was shipped with practical documentation and spare-part support."
     ],
     related: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Solutions for Injection Molding Companies", href: "/solutions/injection-molding-companies" },
       { label: "Multi-Cavity Mold Manufacturing", href: "/injection-molds/multi-cavity-molds" }
     ]
@@ -1888,7 +1888,7 @@ export const caseStudyPages: CaseStudyData[] = [
     ],
     related: [
       { label: "Medical Device Plastic Parts", href: "/industries/medical-devices" },
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "DFM Engineering Support", href: "/injection-molding-engineering" }
     ]
   },
@@ -1998,7 +1998,7 @@ export const caseStudyPages: CaseStudyData[] = [
     ],
     related: [
       { label: "Two-Shot / 2K Molds", href: "/injection-molds/two-shot-2k-molds" },
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Transparent Plastic Molding", href: "/resources/injection-molding/transparent-plastic-molding" }
     ]
   },

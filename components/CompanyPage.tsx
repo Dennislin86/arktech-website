@@ -17,9 +17,9 @@ const facts = [
 const workflow = [
   { number: "01", title: "Product Co-Design & DFM", body: "Review product geometry, material intent and tooling risk before mold design release.", href: "/injection-molding-engineering" },
   { number: "02", title: "Mold Engineering", body: "Define mold structure, actions, cooling, gating and customer-machine interfaces.", href: undefined },
-  { number: "03", title: "Injection Mold Manufacturing", body: "Machine, fit and assemble production tooling against the approved design.", href: "/services/injection-mold-manufacturing" },
+  { number: "03", title: "Injection Mold Manufacturing", body: "Machine, fit and assemble production tooling against the approved design.", href: "/injection-mold-manufacturing" },
   { number: "04", title: "Mold Trial & Validation", body: "Review trial samples, process conditions, dimensions and correction actions.", href: "/injection-molds/mold-trial-validation" },
-  { number: "05", title: "Plastic Injection Molding", body: "Move approved tools into low-volume, repeat or mass-production molding.", href: "/services/plastic-injection-molding" },
+  { number: "05", title: "Plastic Injection Molding", body: "Move approved tools into low-volume, repeat or mass-production molding.", href: "/plastic-injection-molding" },
   { number: "06", title: "Inspection & Delivery", body: "Confirm agreed records, packing requirements and production handover.", href: undefined }
 ] as const;
 
@@ -129,7 +129,7 @@ export function CompanyPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Export Tooling</p>
                 <h3 className="mt-2 text-2xl font-bold text-[var(--brand-dark)] sm:text-3xl">Injection Mold Manufacturing</h3>
                 <p className="mt-3 text-base leading-7 text-[var(--muted)]">Engineering, mold design, toolmaking, fitting, mold trials and export tooling support for production molds.</p>
-                <div className="mt-5"><ArrowLink href="/services/injection-mold-manufacturing">Explore Injection Mold Manufacturing</ArrowLink></div>
+                <div className="mt-5"><ArrowLink href="/injection-mold-manufacturing">Explore Injection Mold Manufacturing</ArrowLink></div>
               </div>
             </article>
             <article className="group overflow-hidden rounded-md border border-[var(--line)] bg-white">
@@ -140,7 +140,7 @@ export function CompanyPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Molded-Part Production</p>
                 <h3 className="mt-2 text-2xl font-bold text-[var(--brand-dark)] sm:text-3xl">Plastic Injection Molding</h3>
                 <p className="mt-3 text-base leading-7 text-[var(--muted)]">Mold validation and plastic component production from low-volume builds through mass production using 25–550T injection molding capacity.</p>
-                <div className="mt-5"><ArrowLink href="/services/plastic-injection-molding">Explore Plastic Injection Molding</ArrowLink></div>
+                <div className="mt-5"><ArrowLink href="/plastic-injection-molding">Explore Plastic Injection Molding</ArrowLink></div>
               </div>
             </article>
           </div>

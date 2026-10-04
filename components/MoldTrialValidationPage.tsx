@@ -136,10 +136,10 @@ const deliverables = [
 ] as const;
 
 const relatedCapabilities = [
-  ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
+  ["Injection Mold Manufacturing", "/injection-mold-manufacturing"],
   ["DFM Engineering", "/injection-molding-engineering"],
   ["Quality & Documentation", "/company/quality-documentation"],
-  ["Plastic Injection Molding", "/services/plastic-injection-molding"],
+  ["Plastic Injection Molding", "/plastic-injection-molding"],
   ["Project Management", "/company/project-management"]
 ] as const;
 

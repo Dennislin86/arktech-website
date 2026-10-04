@@ -89,12 +89,12 @@ const relatedMolds = [
 ] as const;
 
 const relatedCapabilities = [
-  ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
+  ["Injection Mold Manufacturing", "/injection-mold-manufacturing"],
   ["DFM Engineering", "/injection-molding-engineering"],
   ["Mold Flow Analysis", "/injection-molding-engineering#moldflow-analysis"],
   ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
   ["Quality & Documentation", "/company/quality-documentation"],
-  ["Plastic Injection Molding", "/services/plastic-injection-molding"],
+  ["Plastic Injection Molding", "/plastic-injection-molding"],
   ["Mold Spare Parts", "/injection-molds/mold-spare-parts"]
 ] as const;
 
@@ -280,7 +280,7 @@ export function MultiCavityMoldsPage() {
       <section className="bg-[var(--brand-dark)] py-14 text-white">
         <div className="container-page grid gap-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
           <div><p className="text-xs font-extrabold uppercase tracking-[0.16em] text-red-200 sm:text-sm">Tooling to Production</p><h2 className="mt-3 text-3xl font-extrabold leading-[1.1] sm:text-4xl">From Multi-Cavity Tooling to Production</h2><p className="mt-4 max-w-3xl leading-7 text-white/75">Validated multi-cavity molds can continue into plastic injection production at Arktech when customers prefer tooling and molding under one workflow, supported by molding equipment from 25–550T.</p></div>
-          <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white hover:bg-[var(--brand-hover)]" href="/services/plastic-injection-molding">Explore Plastic Injection Molding</Link>
+          <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white hover:bg-[var(--brand-hover)]" href="/plastic-injection-molding">Explore Plastic Injection Molding</Link>
         </div>
       </section>
 
@@ -424,7 +424,7 @@ export function MultiCavityMoldsPage() {
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--muted)]">
             <span>DFM → Mold Design → Tool Build → Trial → Validation → Export Delivery</span>
-            <ArrowLink href="/services/injection-mold-manufacturing">How the mold is built</ArrowLink>
+            <ArrowLink href="/injection-mold-manufacturing">How the mold is built</ArrowLink>
           </div>
         </div>
       </section>

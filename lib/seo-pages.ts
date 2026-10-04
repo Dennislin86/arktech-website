@@ -68,7 +68,7 @@ export const seoPages: SeoLandingPage[] = [
       { question: "Do you provide tool trial and inspection records?", answer: "Yes. Trial samples, correction notes and agreed dimensional inspection records can be included before shipment." }
     ],
     serviceLinks: [
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "Injection Molds", href: "/injection-molds" }
     ],
@@ -115,7 +115,7 @@ export const seoPages: SeoLandingPage[] = [
       { question: "Can molded parts be assembled before shipment?", answer: "Yes. Inserts, printing, welding, heat staking, fasteners, inspection and packaging can be coordinated." }
     ],
     serviceLinks: [
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "Plastic Housing Manufacturing", href: "/services/plastic-housing-manufacturing" },
       { label: "Request a Production Quote", href: "/request-a-quote" }
     ],
@@ -350,7 +350,7 @@ export const seoPages: SeoLandingPage[] = [
       { question: "Is vacuum casting suitable for functional testing?", answer: "Yes, when the selected polyurethane properties reasonably match the intended test loads and environment." }
     ],
     serviceLinks: [
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "Request a Vacuum Casting Quote", href: "/request-a-quote" }
     ],

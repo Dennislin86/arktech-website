@@ -363,7 +363,7 @@ const audiences = [
 const relatedCapabilities = [
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
-  { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+  { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" },
   { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },
   { label: "Project Management", href: "/company/project-management" },
@@ -675,7 +675,7 @@ export function InjectionMoldManufacturingPage() {
               <aside className="mt-7 border-t border-[var(--line)] pt-6" aria-label="Continue with mold manufacturing or start a tooling review">
                 <p className="font-bold leading-6 text-[var(--brand-dark)]">See how approved mold designs move into production tooling.</p>
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/services/injection-mold-manufacturing#mold-manufacturing-process">Explore Mold Manufacturing Process <span className="ml-2" aria-hidden="true">→</span></Link>
+                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/injection-mold-manufacturing#mold-manufacturing-process">Explore Mold Manufacturing Process <span className="ml-2" aria-hidden="true">→</span></Link>
                   <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review <span className="ml-2" aria-hidden="true">→</span></Link>
                 </div>
               </aside>

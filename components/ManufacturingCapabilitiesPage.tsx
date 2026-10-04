@@ -19,7 +19,7 @@ const primaryCapabilities = [
       "DFM, mold design, toolmaking, fitting, mold trials and export tooling support for production molds built to customer requirements.",
     points: ["DFM & Mold Design", "CNC / EDM Machining", "Fitting & Assembly", "Mold Trial", "Export Tooling"],
     cta: "Explore Injection Mold Manufacturing",
-    href: "/services/injection-mold-manufacturing",
+    href: "/injection-mold-manufacturing",
     video: "/videos/injection-mold-manufacturing/mold-manufacturing.mp4",
     poster: "/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp",
     ariaLabel: "Arktech injection mold manufacturing process",
@@ -32,7 +32,7 @@ const primaryCapabilities = [
       "Plastic part production from mold validation and process optimization through low-volume and mass production, supported by 25–550T injection molding capacity.",
     points: ["25–550T Injection Molding", "Mold Trial & Process Optimization", "Low-Volume Production", "Mass Production", "Quality Inspection", "Secondary Operations"],
     cta: "Explore Plastic Injection Molding",
-    href: "/services/plastic-injection-molding",
+    href: "/plastic-injection-molding",
     video: "/videos/Injection Molding/injection-molding-production1.mp4",
     poster: "/images/capabilities/plastic-injection-molding-production-video-frame.webp",
     ariaLabel: "Plastic injection molding production process at Arktech",
@@ -101,8 +101,8 @@ const supportingCapabilities = [
 ];
 
 const manufacturingPaths = [
-  { question: "Need a Production Mold?", description: "Start with injection mold design, DFM, toolmaking and mold trial support.", cta: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-  { question: "Need Molded Plastic Parts?", description: "Move from mold validation into low-volume or mass plastic injection production.", cta: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+  { question: "Need a Production Mold?", description: "Start with injection mold design, DFM, toolmaking and mold trial support.", cta: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+  { question: "Need Molded Plastic Parts?", description: "Move from mold validation into low-volume or mass plastic injection production.", cta: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { question: "Need a Specialized Mold?", description: "Explore mold types for complex geometry, production volume, materials and molding requirements.", cta: "Explore Injection Molds", href: "/injection-molds" },
   { question: "Still Validating the Product?", description: "Start with DFM and engineering review before committing to production tooling.", cta: "Start with DFM Engineering", href: "/injection-molding-engineering" }
 ];
@@ -199,7 +199,7 @@ export function ManufacturingCapabilitiesPage() {
 
       <section className="bg-white py-14 sm:py-16" id="specialty-molding">
         <div className="container-page">
-          <SectionHeading eyebrow="Molding Processes" title="Specialty Molding Capabilities" body="Explore verified insert, multi-material and overmolding routes without duplicating the full Injection Molds catalog." />
+          <SectionHeading eyebrow="Molding Processes" title="Specialty Molding Capabilities" body="Explore insert molding, two-shot / 2K molding and overmolding for integrated inserts, multi-material parts and functional surfaces." />
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {specialtyCapabilities.map((capability) => (
               <Link className="focus-ring group grid grid-cols-[112px_minmax(0,1fr)] overflow-hidden rounded-sm border border-[var(--line)] bg-white transition hover:border-[var(--brand)] sm:grid-cols-[152px_minmax(0,1fr)] md:grid-cols-1" href={capability.href} key={capability.title}>

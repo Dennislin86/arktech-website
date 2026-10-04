@@ -79,17 +79,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/service/mould-making",
-        destination: "/services/injection-mold-manufacturing",
+        destination: "/injection-mold-manufacturing",
         permanent: true
       },
       {
         source: "/service/mold-making",
-        destination: "/services/injection-mold-manufacturing",
+        destination: "/injection-mold-manufacturing",
         permanent: true
       },
       {
         source: "/service/plastic-injection",
-        destination: "/services/plastic-injection-molding",
+        destination: "/plastic-injection-molding",
         permanent: true
       },
       {
@@ -108,13 +108,13 @@ const nextConfig: NextConfig = {
         permanent: true
       },
       {
-        source: "/injection-mold-manufacturing",
-        destination: "/services/injection-mold-manufacturing",
+        source: "/services/injection-mold-manufacturing",
+        destination: "/injection-mold-manufacturing",
         permanent: true
       },
       {
-        source: "/plastic-injection-molding",
-        destination: "/services/plastic-injection-molding",
+        source: "/services/plastic-injection-molding",
+        destination: "/plastic-injection-molding",
         permanent: true
       },
       {

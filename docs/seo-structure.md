@@ -155,8 +155,8 @@ Service pages target commercial search intent. Each page should explain capabili
 
 Pages:
 
-- `/services/injection-mold-manufacturing`
-- `/services/plastic-injection-molding`
+- `/injection-mold-manufacturing`
+- `/plastic-injection-molding`
 - `/services/die-casting-mold`
 - `/services/cnc-metal-parts`
 - `/services/plastic-housing-manufacturing`
@@ -416,7 +416,7 @@ Example path for injection molders:
 
 1. `/`
 2. `/solutions/for-injection-molders`
-3. `/services/injection-mold-manufacturing`
+3. `/injection-mold-manufacturing`
 4. `/injection-molds/multi-cavity-molds`
 5. `/case-studies`
 6. `/request-a-quote`

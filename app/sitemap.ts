@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     ...site.nav.map((item) => item.href),
     "/request-a-quote",
+    "/injection-mold-manufacturing",
+    "/plastic-injection-molding",
     "/injection-molding-engineering",
     "/resources/faq",
     "/seo",
@@ -24,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookie-policy"
   ];
   const detailRoutes = [
-    ...servicePages.filter((page) => !["dfm-engineering", "mold-trial-sampling-support", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
+    ...servicePages.filter((page) => !["dfm-engineering", "injection-mold-manufacturing", "mold-trial-sampling-support", "plastic-injection-molding", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
     "/injection-molds/multi-cavity-molds",

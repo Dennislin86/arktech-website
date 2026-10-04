@@ -13,8 +13,8 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
     title: "Core Capabilities",
     links: [
       { label: "Manufacturing Capabilities", href: "/manufacturing-capabilities" },
-      { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-      { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+      { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
       { label: "Injection Molding Engineering", href: "/injection-molding-engineering" },
       { label: "Tooling Documentation", href: "/injection-molds/tooling-documentation" },

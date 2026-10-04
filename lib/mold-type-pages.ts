@@ -20,8 +20,8 @@ export type MoldTypePageData = {
   needsAssetReplacement?: boolean;
 };
 
-const manufacturing = { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" };
-const molding = { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" };
+const manufacturing = { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" };
+const molding = { label: "Plastic Injection Molding", href: "/plastic-injection-molding" };
 const trial = { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" };
 const engineering = { label: "Injection Molding Engineering", href: "/injection-molding-engineering" };
 
@@ -193,7 +193,7 @@ export const moldTypePages: MoldTypePageData[] = [
       { title: "Learning Record", body: "Document product, tooling and process findings for the production transition." }
     ],
     evidence: "The hero shows an actual prototype injection mold with a molded part; the supporting image shows real product-development components used for manufacturing review.",
-    related: [{ label: "Production Options", href: "/services/plastic-injection-molding#production-options" }, engineering, manufacturing],
+    related: [{ label: "Production Options", href: "/plastic-injection-molding#production-options" }, engineering, manufacturing],
     faqs: [
       { question: "What is a prototype injection mold?", answer: "It is tooling intended to produce injection-molded parts for engineering validation, pilot builds or early supply before a full repeat-production tool is justified." },
       { question: "Is prototype injection molding the same as 3D printing?", answer: "No. Prototype injection molding forms parts in a mold using an injection process, while additive prototypes use a different manufacturing route and may not represent molded material or process behavior." },

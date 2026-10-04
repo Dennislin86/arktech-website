@@ -72,13 +72,13 @@ const faqs = [
 ];
 
 const related = [
-  ["Plastic Injection Molding", "/services/plastic-injection-molding"],
-  ["Injection Mold Manufacturing", "/services/injection-mold-manufacturing"],
+  ["Plastic Injection Molding", "/plastic-injection-molding"],
+  ["Injection Mold Manufacturing", "/injection-mold-manufacturing"],
   ["DFM Engineering", "/injection-molding-engineering"],
   ["Insert & Overmolding", "/injection-molds/overmolding-tools"],
   ["Two-Shot / 2K Molding", "/injection-molds/two-shot-2k-molds"],
-  ["Transparent Part Injection Molding", "/services/plastic-injection-molding"],
-  ["Engineering Plastics Injection Molding", "/services/plastic-injection-molding"],
+  ["Transparent Part Injection Molding", "/plastic-injection-molding"],
+  ["Engineering Plastics Injection Molding", "/plastic-injection-molding"],
   ["Quality & Documentation", "/company/quality-documentation"]
 ];
 
@@ -172,7 +172,7 @@ export function InjectionMoldingProductionOptionsPage() {
             <div>
               <Heading eyebrow="Tooling Strategy" title="Tooling Strategy Changes with Production Requirements" body="Prototype projects may prioritize engineering validation and flexibility. Low-volume production requires greater repeatability and production readiness, while mass-production tooling is planned around stable recurring manufacture." />
               <p className="mt-5 leading-7 text-[var(--muted)]">Depending on the part, resin and program, mass-production planning may consider production-grade tooling, multi-cavity layouts, hot-runner systems, spare inserts, wear components, process stability and maintenance. Not every program requires every feature.</p>
-              <Link href="/services/injection-mold-manufacturing" className="mt-6 inline-flex font-bold text-[var(--brand)] hover:underline">View Injection Mold Manufacturing <span className="ml-2" aria-hidden="true">→</span></Link>
+              <Link href="/injection-mold-manufacturing" className="mt-6 inline-flex font-bold text-[var(--brand)] hover:underline">View Injection Mold Manufacturing <span className="ml-2" aria-hidden="true">→</span></Link>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-[var(--line)] bg-white"><Image src="/images/mold-types/prototype-injection-mold.webp" alt="Injection mold tooling prepared for plastic part production" fill sizes="(min-width: 1024px) 44vw, 100vw" className="object-cover" /></div>
           </div>

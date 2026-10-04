@@ -41,12 +41,12 @@ const coreCapabilities = [
   {
     title: "Injection Mold Manufacturing",
     body: "Export injection molds developed around part geometry, material, expected production and receiving-plant requirements.",
-    href: "/services/injection-mold-manufacturing"
+    href: "/injection-mold-manufacturing"
   },
   {
     title: "Plastic Injection Molding",
     body: "Molding support for functional housings, covers and assembly-ready robotics components.",
-    href: "/services/plastic-injection-molding"
+    href: "/plastic-injection-molding"
   },
   {
     title: "DFM Engineering",
@@ -181,8 +181,8 @@ const resources = [
 ];
 
 const relatedCapabilities = [
-  { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
-  { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
+  { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+  { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }

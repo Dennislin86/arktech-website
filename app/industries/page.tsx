@@ -84,7 +84,7 @@ const capabilityBar = [
   ["DFM & Co-Design", "/injection-molding-engineering"],
   ["Injection Molds", "/injection-molds"],
   ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
-  ["Plastic Injection Molding 25–550T", "/services/plastic-injection-molding"]
+  ["Plastic Injection Molding 25–550T", "/plastic-injection-molding"]
 ] as const;
 
 const priorities = [
@@ -109,8 +109,8 @@ const projects = [
 ];
 
 const capabilityLinks = [
-  ["Injection Mold Manufacturing", "Production tooling from engineering and mold design through manufacturing and trial.", "/services/injection-mold-manufacturing"],
-  ["Plastic Injection Molding", "Mold validation and plastic part production from low-volume builds to mass production.", "/services/plastic-injection-molding"],
+  ["Injection Mold Manufacturing", "Production tooling from engineering and mold design through manufacturing and trial.", "/injection-mold-manufacturing"],
+  ["Plastic Injection Molding", "Mold validation and plastic part production from low-volume builds to mass production.", "/plastic-injection-molding"],
   ["Injection Mold Types", "Multi-cavity, family, 2K, unscrewing, high-gloss and other tooling for different product requirements.", "/injection-molds"],
   ["Engineering & DFM", "Product co-design, moldability review and Moldflow support before mold design release.", "/injection-molding-engineering"],
   ["Mold Trial & Validation", "Trial samples, process parameters and dimensional results reviewed before approval.", "/injection-molds/mold-trial-validation"],

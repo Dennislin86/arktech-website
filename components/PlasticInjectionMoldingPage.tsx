@@ -361,7 +361,7 @@ const reasons = [
     subtitle: "One engineering path from mold development to molded-part production",
     body: "Mold design, tool manufacturing, mold trials, corrections and production molding can be coordinated through the same engineering and project team.",
     label: "Explore Injection Mold Manufacturing",
-    href: "/services/injection-mold-manufacturing"
+    href: "/injection-mold-manufacturing"
   },
   {
     number: "03",
@@ -440,7 +440,7 @@ const faqs = [
 ];
 
 const faqRelatedCapabilities = [
-  { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
+  { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
   { label: "Quality & Documentation", href: "/company/quality-documentation" }
@@ -468,7 +468,7 @@ function SectionHeading({ eyebrow, title, body }: { eyebrow: string; title: stri
 }
 
 export function PlasticInjectionMoldingPage() {
-  const pageUrl = `${site.url}/services/plastic-injection-molding`;
+  const pageUrl = `${site.url}/plastic-injection-molding/`;
   const schemas = [
     {
       "@context": "https://schema.org",
@@ -933,7 +933,7 @@ export function PlasticInjectionMoldingPage() {
                 <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Production Tooling Options</p>
                 <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--muted)]">Tooling architecture is selected around output, resin behavior, threaded features and appearance requirements.</p>
               </div>
-              <Link className="focus-ring inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand)] hover:underline" href="/services/injection-mold-manufacturing">
+              <Link className="focus-ring inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand)] hover:underline" href="/injection-mold-manufacturing">
                 Injection Mold Manufacturing →
               </Link>
             </div>
