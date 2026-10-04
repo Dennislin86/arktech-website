@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { FullBleedHero } from "@/components/FullBleedHero";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 import { ManufacturingYouTubeVideo } from "@/components/ManufacturingYouTubeVideo";
@@ -33,6 +34,14 @@ const primaryCapabilities = [
     ariaLabel: "Plastic injection molding production process at Arktech",
     mediaLabel: "Real Arktech injection molding production"
   }
+];
+
+const injectionMoldTypeLinks = [
+  { label: "Precision Injection Molds", href: "/injection-molds/precision-injection-molds" },
+  { label: "Complex Injection Molds", href: "/injection-molds/complex-injection-molds" },
+  { label: "Multi-Cavity Molds", href: "/injection-molds/multi-cavity-molds" },
+  { label: "Prototype Molds", href: "/injection-molds/prototype-injection-molds" },
+  { label: "Large Molds", href: "/injection-molds/large-injection-molds" }
 ];
 
 const engineeringCapabilities = [
@@ -175,27 +184,48 @@ export function ManufacturingCapabilitiesPage() {
           <SectionHeading eyebrow="Core Business" title="Primary Manufacturing Capabilities" body="Arktech connects export injection mold manufacturing with plastic injection molding production. Choose the capability path that matches your tooling or molded-part program." />
           <div className="mt-10 space-y-8 lg:space-y-10">
             {primaryCapabilities.map((capability, index) => (
-              <article className="grid overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)]" key={capability.title}>
-                <div className={`relative aspect-video overflow-hidden bg-[var(--brand-dark)] lg:aspect-auto lg:min-h-[430px] ${index === 1 ? "lg:order-2" : ""}`}>
-                  {capability.youtube ? (
-                    <ManufacturingYouTubeVideo layout="fill" requireFinePointerForAutoplay sizes="(min-width: 1024px) 55vw, 100vw" />
-                  ) : (
-                    <>
-                      <LazyAutoplayVideo ariaLabel={capability.ariaLabel} className="absolute inset-0 h-full w-full object-cover" poster={capability.poster} preload="none" src={capability.video ?? ""} />
-                      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08233acc] to-transparent px-5 pb-5 pt-16 text-sm font-semibold text-white sm:px-6" aria-hidden="true">{capability.mediaLabel}</div>
-                    </>
-                  )}
-                </div>
-                <div className={`flex flex-col justify-center bg-white p-6 sm:p-8 lg:p-10 ${index === 1 ? "lg:order-1" : ""}`}>
-                  <p className="text-xs font-bold uppercase tracking-[0.13em] text-[var(--brand)]">{capability.eyebrow}</p>
-                  <h3 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">{capability.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-[var(--muted)]">{capability.description}</p>
-                  <ul className="mt-6 grid gap-x-5 gap-y-2 border-t border-[var(--line)] pt-5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2" aria-label={`${capability.title} capabilities`}>
-                    {capability.points.map((point) => <li className="flex items-start gap-2 text-sm font-semibold leading-6 text-[var(--brand-dark)]" key={point}><span aria-hidden="true" className="text-[var(--brand)]">✓</span>{point}</li>)}
-                  </ul>
-                  <Link className="focus-ring mt-7 inline-flex min-h-12 w-fit items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href={capability.href}>{capability.cta}<span className="ml-2" aria-hidden="true">→</span></Link>
-                </div>
-              </article>
+              <Fragment key={capability.title}>
+                <article className="grid overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)]">
+                  <div className={`relative aspect-video overflow-hidden bg-[var(--brand-dark)] lg:aspect-auto lg:min-h-[430px] ${index === 1 ? "lg:order-2" : ""}`}>
+                    {capability.youtube ? (
+                      <ManufacturingYouTubeVideo layout="fill" requireFinePointerForAutoplay sizes="(min-width: 1024px) 55vw, 100vw" />
+                    ) : (
+                      <>
+                        <LazyAutoplayVideo ariaLabel={capability.ariaLabel} className="absolute inset-0 h-full w-full object-cover" poster={capability.poster} preload="none" src={capability.video ?? ""} />
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08233acc] to-transparent px-5 pb-5 pt-16 text-sm font-semibold text-white sm:px-6" aria-hidden="true">{capability.mediaLabel}</div>
+                      </>
+                    )}
+                  </div>
+                  <div className={`flex flex-col justify-center bg-white p-6 sm:p-8 lg:p-10 ${index === 1 ? "lg:order-1" : ""}`}>
+                    <p className="text-xs font-bold uppercase tracking-[0.13em] text-[var(--brand)]">{capability.eyebrow}</p>
+                    <h3 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">{capability.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-[var(--muted)]">{capability.description}</p>
+                    <ul className="mt-6 grid gap-x-5 gap-y-2 border-t border-[var(--line)] pt-5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2" aria-label={`${capability.title} capabilities`}>
+                      {capability.points.map((point) => <li className="flex items-start gap-2 text-sm font-semibold leading-6 text-[var(--brand-dark)]" key={point}><span aria-hidden="true" className="text-[var(--brand)]">✓</span>{point}</li>)}
+                    </ul>
+                    <Link className="focus-ring mt-7 inline-flex min-h-12 w-fit items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href={capability.href}>{capability.cta}<span className="ml-2" aria-hidden="true">→</span></Link>
+                  </div>
+                </article>
+
+                {index === 0 ? (
+                  <nav aria-labelledby="injection-mold-types-navigation" className="border-y border-[var(--line)] bg-[var(--surface-soft)] px-5 py-5 sm:px-6 sm:py-6">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
+                      <div>
+                        <h3 className="text-sm font-bold uppercase tracking-[0.11em] text-[var(--brand)]" id="injection-mold-types-navigation">Injection Mold Types</h3>
+                        <p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-base">Explore tooling options for part geometry, cavity layout and production requirements.</p>
+                      </div>
+                      <Link className="focus-ring inline-flex min-h-11 shrink-0 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/injection-molds">Explore All Injection Mold Types <span className="ml-1" aria-hidden="true">→</span></Link>
+                    </div>
+                    <ul aria-label="Injection mold type pages" className="mt-4 flex flex-wrap gap-2">
+                      {injectionMoldTypeLinks.map((moldType) => (
+                        <li key={moldType.href}>
+                          <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-semibold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={moldType.href}>{moldType.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                ) : null}
+              </Fragment>
             ))}
           </div>
           <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 border-t border-[var(--line)] pt-6"><Link className="focus-ring font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Mold Types →</Link><Link className="focus-ring font-bold text-[var(--brand-dark)] hover:text-[var(--brand)]" href="/resources">View Engineering Resources →</Link></div>
