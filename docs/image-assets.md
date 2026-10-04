@@ -71,16 +71,16 @@ The initial set contains eight completed-mold images and seven molded-part/proje
 
 | Industry | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Robotics | `/images/industries/robotics-automation.png` | Robotics applications with molded housings sensors and automation components | User-supplied industry image; active |
-| Medical & Healthcare Devices | `/images/industries/medial-industry.webp` | Medical device housings and precision molded plastic components | User-supplied industry image; active |
-| Automotive Components | `/images/industries/Automotive-Components.png` | Automotive interior control and functional plastic components | User-supplied industry image; active |
-| Energy Storage & EV Charging | `/images/industries/autimotive-ev.webp` | EV charging housings connectors and molded power components | User-supplied industry image; active |
-| Smart Home & IoT | `/images/industries/smart-device-housings.png` | Smart home device housings sensors and connected products | User-supplied industry image; active |
-| Home Appliance | `/images/industries/home-appliance.png` | Home appliance housings control panels and functional molded parts | User-supplied industry image; active |
-| Pet Tech Products | `/images/industries/pet-lifestyle-product-parts.png` | Smart pet feeders cameras and connected pet devices | User-supplied industry image; active |
-| Consumer Electronics | `/images/industries/consumer-electronics-enclosures.png` | Consumer electronics enclosures and functional molded plastic components | User-supplied industry image; active |
+| Robotics & Automation | `/images/industries/robotics-automation.png` | Industrial robot handling components on an automated production line | User-supplied industry image; active in the Homepage six-panel industry module |
+| Medical & Healthcare Devices | `/images/industries/medial-industry.webp` | Medical device housings and precision molded plastic components | User-supplied industry image; active outside the Homepage panel |
+| Automotive Components | `/images/industries/Automotive-Components.png` | Automotive interior with dashboard controls and molded trim components | User-supplied industry image; active in the Homepage six-panel industry module |
+| Energy Storage & EV Charging | `/images/industries/autimotive-ev.webp` | EV charging housings connectors and molded power components | User-supplied industry image; active outside the Homepage panel |
+| Smart Home & IoT | `/images/industries/smart-device-housings.png` | Smart home cameras hubs sensors and connected control devices | User-supplied industry image; active in the Homepage six-panel industry module |
+| Home Appliance | `/images/industries/home-appliance.png` | Home appliances with molded housings and control panels in a kitchen | User-supplied industry image; active in the Homepage six-panel industry module |
+| Pet Tech Products | `/images/industries/pet-lifestyle-product-parts.png` | Dog and cat using connected pet feeder water and camera products | User-supplied industry image; active in the Homepage six-panel industry module |
+| Consumer Electronics | `/images/industries/consumer-electronics-enclosures.png` | Consumer electronics including headphones phone watch camera and speaker | User-supplied industry image; active in the Homepage six-panel industry module |
 
-The same eight approved application images are reused on the Homepage and in the Plastic Injection Molding page application grid. No external, competitor, stock or newly generated images are used for these grids. The current `/industries/` Hub selection is documented separately below.
+The Homepage uses six approved application images in its full-width interactive panel. Other approved industry images remain active on the Industries Hub and deeper application pages. No external, competitor, stock or newly generated images are used for these modules.
 
 ### Industries Hub — seven-industry application structure
 

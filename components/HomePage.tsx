@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { DfmReportPreview } from "@/components/DfmReportPreview";
+import { HomeIndustryPanels } from "@/components/HomeIndustryPanels";
 import { InjectionMoldingProductionVideo } from "@/components/InjectionMoldingProductionVideo";
 import { ManufacturingYouTubeVideo } from "@/components/ManufacturingYouTubeVideo";
 import { ToolingGallery } from "@/components/ToolingGallery";
@@ -79,58 +80,6 @@ const moldCapabilities = [
     image: "/images/mold-types/unscrewing-molds.webp",
     alt: "Unscrewing injection mold for threaded plastic components",
     href: "/injection-molds/unscrewing-molds"
-  }
-] as const;
-
-const industries = [
-  {
-    title: "Industrial Automation",
-    body: "Controller housings, sensor interfaces and functional molded components.",
-    image: "/images/industries/Industrial-parts.jpg",
-    alt: "Industrial automation housings sensors controllers and functional components",
-    href: "/industries/industrial-automation"
-  },
-  {
-    title: "Automotive Components",
-    body: "Interior, control and functional plastic components.",
-    image: "/images/industries/Automotive-Components.png",
-    alt: "Automotive interior and functional molded plastic components",
-    href: "/industries/automotive"
-  },
-  {
-    title: "Smart Home & IoT",
-    body: "Connected-device housings, sensors and control enclosures.",
-    image: "/images/industries/smart-device-housings.png",
-    alt: "Smart home and IoT device housings and sensor enclosures",
-    href: "/industries/smart-home-iot"
-  },
-  {
-    title: "Home Appliances",
-    body: "Appliance housings, control panels and functional parts.",
-    image: "/images/industries/home-appliance.png",
-    alt: "Home appliance housings control panels and molded components",
-    href: "/industries/home-appliances"
-  },
-  {
-    title: "Pet Tech Products",
-    body: "Smart feeders, cameras and connected pet-product housings.",
-    image: "/images/industries/pet-lifestyle-product-parts.png",
-    alt: "Smart pet product housings and molded plastic components",
-    href: "/industries/pet-tech"
-  },
-  {
-    title: "Consumer Electronics",
-    body: "Electronic enclosures and functional molded components.",
-    image: "/images/industries/consumer-electronics-enclosures.png",
-    alt: "Consumer electronics enclosures and functional plastic components",
-    href: "/industries/consumer-electronics"
-  },
-  {
-    title: "Medical Device Components",
-    body: "Medical equipment housings, enclosures and functional molded parts.",
-    image: "/images/industries/medial-industry.webp",
-    alt: "Medical equipment with molded plastic housings and functional components",
-    href: "/industries/medical-devices"
   }
 ] as const;
 
@@ -294,8 +243,10 @@ export function HomePage() {
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="industries-heading">
         <div className="container-page">
-          <SectionHeading body="Export tooling and molded-part support for product teams across connected devices, automotive, appliances and engineered products." eyebrow="Applications" id="industries-heading" title="Industries Served" />
-          <div className="mt-8 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">{industries.map((industry) => <Link className="focus-ring group flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white transition hover:border-[var(--brand)]" href={industry.href} key={industry.title}><div className="relative aspect-video overflow-hidden bg-white"><Image alt={industry.alt} className="object-cover object-center transition duration-300 group-hover:scale-[1.02] motion-reduce:transition-none" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" src={industry.image} /></div><div className="flex flex-1 flex-col p-5"><h3 className="text-xl font-bold text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{industry.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{industry.body}</p></div></Link>)}</div>
+          <SectionHeading body="Export injection molds and plastic part production for housings, enclosures and functional components across key industries." eyebrow="Applications" id="industries-heading" title="Industries Served" />
+        </div>
+        <div className="mt-8"><HomeIndustryPanels /></div>
+        <div className="container-page">
           <Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/industries">Explore All Industries <span aria-hidden="true" className="ml-2">→</span></Link>
         </div>
       </section>
