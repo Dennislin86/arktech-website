@@ -70,7 +70,24 @@ The six Homepage Injection Mold Capability cards reuse the approved Mold Type as
 | Pet Tech Products | `/images/industries/pet-lifestyle-product-parts.png` | Smart pet feeders cameras and connected pet devices | User-supplied industry image; active |
 | Consumer Electronics | `/images/industries/consumer-electronics-enclosures.png` | Consumer electronics enclosures and functional molded plastic components | User-supplied industry image; active |
 
-The same eight approved application images are reused on `/industries` and in the Plastic Injection Molding page application grid; the Industries hero collage uses the Robotics, Medical, Automotive and EV assets, and its Quality section reuses `/images/process/sample-validation-inspection-cmm.png`. No external, competitor, stock or newly generated images are used for these grids.
+The same eight approved application images are reused on the Homepage and in the Plastic Injection Molding page application grid. No external, competitor, stock or newly generated images are used for these grids. The current `/industries/` Hub selection is documented separately below.
+
+### Industries Hub — seven-industry application structure
+
+The current `/industries/` hub uses seven primary application groups. It reuses approved local assets only; no new, external, competitor or generated image was added for this rebuild.
+
+| Hub use | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Smart Home & IoT | `/images/industries/smart-device-housings.png` | Smart home cameras hubs sensors and connected devices with molded plastic housings | Existing approved local industry image; active |
+| Home Appliances | `/images/industries/home-appliance.png` | Home appliances with molded plastic housings controls and functional components in a kitchen | Existing approved local industry image; active |
+| Consumer Electronics | `/images/industries/consumer-electronics-enclosures.png` | Consumer electronics with molded plastic housings controls and product enclosures | Existing approved local industry image; active |
+| Pet Tech Products | `/images/industries/pet-lifestyle-product-parts.png` | Dog and cat using a smart pet feeder water device and connected pet camera | Existing approved local industry image; active |
+| Automotive Components | `/images/industries/Automotive-Components.png` | Automotive interior controls panels and functional molded plastic components | Existing approved local industry image; active |
+| Industrial Automation | `/images/industries/robotics-injection-mold-components.webp` | Industrial automation components including sensor housings controllers and precision parts | Existing approved local automation-component image; active |
+| Medical Device Components | `/images/industries/medial-industry.webp` | Medical equipment with molded plastic housings functional components and control interfaces | Existing approved local industry image; active |
+| Smart Home project proof | `/images/case-studies/ihgs-housing.webp` | Smart home housing components and product assembly developed through injection molding engineering | Existing real Arktech project image; active |
+| Automotive project proof | `/images/case-studies/automotive-multi-cavity-mold.webp` | Automotive sensor housing multi-cavity injection mold and molded components | Existing real Arktech tooling-project image; active |
+| Medical project proof | `/images/case-studies/medical-education-device.webp` | Medical education device housing development engineering and injection molding project | Existing local Arktech Group case-study image; active |
 
 ## Robotics Industry Page
 
