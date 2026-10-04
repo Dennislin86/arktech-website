@@ -9,12 +9,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/solutions/for-injection-molders",
-        destination: "/solutions/injection-molders",
+        destination: "/solutions/injection-molding-companies",
         permanent: true
       },
       {
         source: "/solutions/for-oem-product-companies",
         destination: "/solutions/oem-product-companies",
+        permanent: true
+      },
+      {
+        source: "/industries/medical-healthcare-devices",
+        destination: "/industries/medical-devices",
         permanent: true
       }
     ];

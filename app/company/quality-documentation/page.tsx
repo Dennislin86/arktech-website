@@ -5,9 +5,10 @@ import { CTA } from "@/components/CTA";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Injection Mold Quality Control & Documentation | Arktech",
+  title: "Injection Mold Quality Control & Documentation",
   description:
-    "Arktech supports export injection mold projects with ISO 9001 quality management, mold inspection, sample validation, dimensional inspection reports, tooling documentation and export readiness checks."
+    "Arktech supports export injection mold projects with ISO 9001 quality management, mold inspection, sample validation, dimensional reports and export documentation.",
+  alternates: { canonical: "/company/quality-documentation" }
 };
 
 const qualityProcess = [
@@ -98,8 +99,12 @@ export default function QualityDocumentationPage() {
     <>
       <PageHero
         eyebrow="QUALITY & DOCUMENTATION"
-        title="Injection Mold Quality Control & Documentation"
+        title="Injection Mold Quality & Documentation"
         body="Arktech supports export injection mold projects with structured mold inspection, sample validation, dimensional reporting, tooling records and export delivery checks."
+        image={{
+          src: "/images/quality/dimensional-inspection-report-anonymized.webp",
+          alt: "Anonymized dimensional inspection report for injection mold sample validation"
+        }}
       />
 
       <section className="py-14">

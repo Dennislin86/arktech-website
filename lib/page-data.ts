@@ -1555,7 +1555,7 @@ export const toolingExamplePages: DetailPageData[] = [
     intro:
       "Large component molds require a different tooling mindset than small precision parts. The challenge is not only mold size; cooling uniformity, part shrinkage, warpage, mold movement, injection pressure, machine compatibility, ejection force and export handling all become more important. Arktech supports large component mold programs for product companies and injection molding companies needing export injection molds for industrial housings, appliance parts, outdoor products and structural plastic components.",
     gallery: [
-      { src: "/images/mold-types/large-component-molds.png", alt: "Large component injection mold for industrial housing production" },
+      { src: "/images/mold-types/large-component-molds.JPG", alt: "Large component injection mold for industrial housing production" },
       { src: "/images/seo/oem-manufacturing-hero.png", alt: "Large plastic housing and mold engineering support" },
       { src: "/images/capabilities/injection-mold-manufacturing.jpg", alt: "Export tooling manufacturing for large component molds" }
     ],
@@ -1623,8 +1623,7 @@ export const toolingExamplePages: DetailPageData[] = [
     intro:
       "Gas-assisted injection molding uses controlled gas pressure to form hollow channels or assist packing in selected areas of a plastic part. The process can reduce sink marks, part weight and clamp force for thick-wall or large components, but it requires careful part design, gas channel planning, material review and mold trial validation. Arktech supports gas assisted mold projects with DFM engineering, tooling strategy, sampling and documentation for export tooling buyers.",
     gallery: [
-      { src: "/images/mold-types/gas-assisted-injection-molds.png", alt: "Gas-assisted injection molds for structural plastic components" },
-      { src: "/images/mold-types/large-component-molds.png", alt: "Large plastic component mold for gas-assisted molding review" },
+      { src: "/images/mold-types/large-component-molds.JPG", alt: "Large plastic component mold for gas-assisted molding review" },
       { src: "/images/seo/injection-mold-manufacturing.png", alt: "Export injection mold engineering support for gas-assisted molds" }
     ],
     advantages: [
@@ -1691,7 +1690,6 @@ export const toolingExamplePages: DetailPageData[] = [
     intro:
       "Thermoset molding is different from thermoplastic injection molding because the material cures permanently under heat and pressure. Mold design must consider flow, curing time, venting, flash control, material handling, insert compatibility and post-processing. Arktech supports thermoset mold projects for industrial, electrical, automotive and appliance applications where heat resistance, dimensional stability and material performance are important.",
     gallery: [
-      { src: "/images/mold-types/thermoset-molds.png", alt: "Thermoset molds for high-performance molded components" },
       { src: "/images/seo/die-casting-cnc-metal-parts.png", alt: "Precision tooling and metal components for industrial thermoset applications" },
       { src: "/images/capabilities/injection-mold-manufacturing.jpg", alt: "Mold manufacturing support for thermoset tooling" }
     ],
@@ -1759,8 +1757,8 @@ export const toolingExamplePages: DetailPageData[] = [
     intro:
       "Die casting tooling supports metal components where strength, heat transfer, dimensional repeatability or integrated metal geometry is required. Compared with plastic injection molds, die casting tooling must handle molten aluminum or zinc, thermal fatigue, venting, overflow, trimming, ejector layout, slide action and CNC finishing allowance. Arktech supports die casting tooling projects together with machining, surface finishing and inspection documentation for global OEM manufacturing programs.",
     gallery: [
-      { src: "/images/mold-types/die-casting-tooling.png", alt: "Die casting tooling for aluminum and zinc components" },
-      { src: "/images/capabilities/die-casting.jpg", alt: "Die cast metal parts and machining support" },
+      { src: "/images/capabilities/die-casting.webp", alt: "Die casting tooling and finished aluminum housing components" },
+      { src: "/images/capabilities/die-casting.png", alt: "Die cast metal parts and machining support" },
       { src: "/images/seo/die-casting-cnc-metal-parts.png", alt: "CNC machined and die cast metal components for OEM manufacturing" }
     ],
     advantages: [

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Terms of Use" };
+export const metadata: Metadata = {
+  title: "Terms of Use",
+  description: "Terms governing use of Arktech Mold website content and project-specific engineering, quotation and manufacturing information.",
+  alternates: { canonical: "/terms-of-use" }
+};
 
 export default function TermsOfUsePage() {
   return (

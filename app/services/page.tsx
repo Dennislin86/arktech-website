@@ -5,7 +5,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: { absolute: "Engineering, Tooling & Manufacturing Capabilities | Arktech" },
   description:
-    "Explore Arktech capabilities in DFM engineering, export injection mold manufacturing, mold trials, plastic injection molding and extended manufacturing support including CNC machining, die casting, sheet metal, prototyping and assembly."
+    "Explore Arktech capabilities in DFM engineering, export injection mold manufacturing, mold trials, plastic injection molding and extended manufacturing support including CNC machining, die casting, sheet metal, prototyping and assembly.",
+  alternates: { canonical: "/services" }
 };
 
 type CapabilityLink = { label: string; href: string };
@@ -325,14 +326,14 @@ export default function ServicesPage() {
   return (
     <>
       <section className="border-b border-[var(--line)] bg-white">
-        <div className="mx-auto grid w-[min(1520px,calc(100%-32px))] gap-10 py-10 sm:py-14 xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] xl:items-center xl:gap-12 xl:py-20">
+        <div className="mx-auto grid w-[min(1520px,calc(100%-32px))] gap-8 py-10 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Arktech Capabilities</p>
-            <h1 className="mt-4 max-w-[780px] text-[clamp(2.25rem,3.4vw,3.5rem)] font-bold leading-[1.06] tracking-[-0.02em] text-[var(--brand-dark)] sm:text-[clamp(2.5rem,3.4vw,3.5rem)] lg:text-[clamp(3rem,3.4vw,3.5rem)]">Engineering, Tooling &amp; Manufacturing Capabilities for Product Companies</h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech supports product companies and injection molding companies with DFM engineering, export injection mold manufacturing, mold trials, plastic injection molding and extended manufacturing support. Our engineering-led approach helps customers move from product design through validated tooling and production with clearer project communication.</p>
+            <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">Engineering, Tooling &amp; Production Capabilities</h1>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech connects DFM engineering, export injection mold manufacturing, mold trials, plastic injection molding and extended production support for product companies and injection molders.</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="#core-capabilities">Explore Capabilities</Link>
-              <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="#core-capabilities">Explore Capabilities</Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
             </div>
           </div>
 
@@ -343,7 +344,7 @@ export default function ServicesPage() {
               height={1086}
               priority
               quality={84}
-              sizes="(min-width: 1280px) 60vw, 100vw"
+              sizes="(min-width: 1024px) 62vw, 100vw"
               src="/images/hero/tooling-mold-trial-engineering-capabilities.webp"
               width={1448}
             />

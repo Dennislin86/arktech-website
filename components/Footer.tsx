@@ -25,12 +25,12 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
     links: [
       { label: "Robotics", href: "/industries/robotics" },
       { label: "Medical & Healthcare Devices", href: "/industries/medical-devices" },
-      { label: "Automotive Components", href: "/industries" },
+      { label: "Automotive Components", href: "/industries/automotive-components" },
       { label: "Smart Home & IoT", href: "/industries/smart-home" },
       { label: "Energy Storage & EV Charging", href: "/industries/new-energy" },
-      { label: "Home Appliance", href: "/industries" },
+      { label: "Home Appliance", href: "/industries/home-appliance" },
       { label: "Pet Tech Products", href: "/industries/pet-tech" },
-      { label: "Consumer Electronics", href: "/industries" }
+      { label: "Consumer Electronics", href: "/industries/consumer-electronics" }
     ]
   },
   {

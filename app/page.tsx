@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Export Injection Molds for OEM & Injection Molding Companies",
   description:
     "China tooling supplier for export injection molds and OEM manufacturing, supporting injection molding companies across Europe and North America.",
+  alternates: { canonical: "/" },
   keywords: [
     "export injection molds",
     "injection molding companies",
@@ -27,8 +28,8 @@ const whoWeServe = [
     primaryHref: "/services/plastic-injection-molding",
     secondaryCta: "Upload CAD for DFM Review",
     secondaryHref: "/request-a-quote",
-    image: "/images/process/rfq-cad-review-old-website.png",
-    imageAlt: "Product development components drawings and manufacturing review for OEM teams"
+    image: "/images/case-studies/medical-education-device.webp",
+    imageAlt: "Medical education device product development, engineering and manufacturing workflow"
   },
   {
     context: "Need more tooling capacity?",
@@ -39,8 +40,8 @@ const whoWeServe = [
     primaryHref: "/services/injection-mold-manufacturing",
     secondaryCta: "Request Tooling Quote",
     secondaryHref: "/request-a-quote",
-    image: "/images/process/tooling-manufacturing-plan-mold.png",
-    imageAlt: "Export injection mold manufacturing for injection molding companies"
+    image: "/images/company/Precision Mold to Global Delivery.png",
+    imageAlt: "Completed export injection mold, mold trial validation and export packing preparation"
   }
 ];
 
@@ -463,61 +464,67 @@ function TrustIcon({ type }: { type: string }) {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="order-1 relative min-h-[74vh] overflow-hidden bg-[var(--brand-dark)]">
+      <section className="order-1 relative isolate overflow-hidden bg-[var(--brand-dark)] text-white">
         <Image
           src="/images/hero/export-injection-mold-manufacturing-hero.webp"
-          alt="Export injection molds and molded plastic components in a manufacturing workshop"
+          alt="Export injection molds manufactured by Arktech for overseas production"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="-z-20 object-cover object-[68%_center] sm:object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,42,72,0.86)_0%,rgba(10,42,72,0.74)_52%,rgba(10,42,72,0.38)_100%)] lg:bg-[linear-gradient(90deg,rgba(10,42,72,0.76)_0%,rgba(10,42,72,0.64)_35%,rgba(10,42,72,0.40)_65%,rgba(10,42,72,0.18)_100%)]" />
-        <div className="relative mx-auto flex min-h-[74vh] w-[min(1240px,calc(100%-32px))] items-center py-16 sm:py-20 lg:py-20">
-          <div className="max-w-[1040px]">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f1c5c5]">EXPORT INJECTION MOLDS &amp; MANUFACTURING SUPPORT</p>
-            <h1 className="mt-5 max-w-[980px] text-[2rem] font-bold leading-[1.12] tracking-[-0.02em] text-white sm:text-[2.5rem] lg:text-[3.35rem] lg:leading-[1.09]">
-              Export Injection Mold Manufacturer{" "}
-              <br />
-              for Product Companies &amp; Injection Molding Companies
-            </h1>
-            <p className="mt-5 max-w-3xl text-base leading-[1.65] text-white/85 lg:text-[17px]">
-              Arktech specializes in export injection molds, DFM engineering, mold trials and plastic injection molding, supporting product companies and injection molding companies from tooling development through validated production.
-            </p>
-            <p className="mt-4 text-sm font-bold uppercase tracking-[0.1em] text-[#f1c5c5]">DFM Engineering → Tooling Development → Validated Mass Production</p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white shadow-sm transition hover:bg-[var(--brand-hover)] sm:w-auto" href="/request-a-quote">
-                Start RFQ
-              </Link>
-              <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm border border-white/80 bg-white/10 px-6 font-bold text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--brand-dark)] sm:w-auto" href="#manufacturing-capabilities">
-                View Capabilities
-              </Link>
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,35,58,0.88)_0%,rgba(8,35,58,0.78)_44%,rgba(8,35,58,0.56)_70%,rgba(8,35,58,0.38)_100%)] sm:bg-[linear-gradient(90deg,rgba(8,35,58,0.86)_0%,rgba(8,35,58,0.75)_48%,rgba(8,35,58,0.52)_76%,rgba(8,35,58,0.34)_100%)]" />
+        <div className="mx-auto flex min-h-[680px] w-[min(1240px,calc(100%-32px))] items-center py-12 sm:min-h-[620px] sm:py-14 md:min-h-[660px] lg:min-h-[700px] xl:min-h-[720px]">
+          <div className="w-full max-w-[1100px]">
+            <div className="max-w-[900px]">
+              <p className="text-sm font-bold uppercase tracking-[0.08em] text-white/80 sm:text-[15px]">
+                Export Injection Molds &amp; Manufacturing Support
+              </p>
+              <h1 className="mt-4 max-w-[900px] text-[2.25rem] font-bold leading-[1.06] tracking-[-0.025em] text-white sm:text-[2.75rem] md:text-[3.25rem] lg:text-[3.5rem] xl:text-[3.75rem]">
+                Export Injection Mold Manufacturing for Product Companies &amp; Injection Molders
+              </h1>
+              <p className="mt-5 max-w-[820px] text-base leading-7 text-white/85 sm:text-lg sm:leading-8 lg:text-xl lg:leading-8">
+                Arktech supports product companies and injection molding companies with DFM engineering, export injection mold manufacturing, mold trials and plastic injection molding from tooling development through validated production.
+              </p>
+              <p className="mt-4 text-sm font-bold uppercase leading-6 tracking-[0.06em] text-[#f1d0d0] sm:text-[15px]">
+                DFM Engineering <span aria-hidden="true">→</span> Tooling Development <span aria-hidden="true">→</span> Mold Trial &amp; Validation <span aria-hidden="true">→</span> Production
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)] sm:w-auto" href="/request-a-quote">
+                  Upload CAD for DFM Review
+                </Link>
+                <Link className="focus-ring inline-flex min-h-12 w-full items-center justify-center rounded-sm border border-white/80 bg-[rgba(8,35,58,0.28)] px-6 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)] sm:w-auto" href="/services">
+                  View Capabilities
+                </Link>
+              </div>
             </div>
-            <ul className="mt-6 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/25 bg-white/20 sm:grid-cols-4" aria-label="Manufacturing trust indicators">
+
+            <ul className="mt-6 grid max-w-[1050px] grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/25 bg-white/20 sm:grid-cols-4" aria-label="Manufacturing trust indicators">
               {[
-                ["🛡", "ISO 9001 Certified Manufacturing"],
-                ["⚙", "DFM Engineering Review"],
-                ["🏭", "Prototype → Production Support"],
-                ["🔒", "NDA Protection"]
+                ["quality", "ISO 9001 Certified Manufacturing"],
+                ["engineering", "DFM Engineering Review"],
+                ["workflow", "Prototype → Production Support"],
+                ["security", "NDA / Confidential Project Support"]
               ].map(([icon, label]) => (
-                <li className="flex min-h-[72px] items-center gap-3 bg-[rgba(16,45,78,0.70)] px-4 py-3 text-sm font-semibold leading-5 text-white" key={label}>
-                  <span aria-hidden="true" className="text-xl">{icon}</span>
+                <li className="flex min-h-[70px] items-center gap-3 bg-[rgba(15,45,69,0.68)] px-3 py-3 text-sm font-semibold leading-5 text-white sm:px-4" key={label}>
+                  <span className="shrink-0 text-white/80" aria-hidden="true"><TrustIcon type={icon} /></span>
                   <span>{label}</span>
                 </li>
               ))}
             </ul>
-            <dl className="mt-7 grid max-w-3xl gap-5 border-t border-white/25 pt-5 sm:grid-cols-3">
+
+            <dl className="mt-5 grid max-w-[820px] grid-cols-3 gap-4 border-t border-white/25 pt-4">
               <div>
-                <dt className="text-xl font-semibold text-white">15+</dt>
-                <dd className="mt-1 text-sm font-medium text-white/75">Years Experience</dd>
+                <dt className="text-lg font-bold text-white sm:text-xl">15+</dt>
+                <dd className="mt-1 text-xs font-medium leading-5 text-white/75 sm:text-sm">Years Experience</dd>
               </div>
               <div>
-                <dt className="text-xl font-semibold text-white">200+</dt>
-                <dd className="mt-1 text-sm font-medium text-white/75">Export Molds / Year</dd>
+                <dt className="text-lg font-bold text-white sm:text-xl">200+</dt>
+                <dd className="mt-1 text-xs font-medium leading-5 text-white/75 sm:text-sm">Export Tooling Projects / Year</dd>
               </div>
               <div>
-                <dt className="text-lg font-semibold text-white">ISO 9001</dt>
-                <dd className="mt-1 text-sm font-medium text-white/75">Certified</dd>
+                <dt className="text-lg font-bold text-white sm:text-xl">ISO 9001</dt>
+                <dd className="mt-1 text-xs font-medium leading-5 text-white/75 sm:text-sm">Certified</dd>
               </div>
             </dl>
           </div>

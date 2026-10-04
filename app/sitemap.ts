@@ -1,15 +1,29 @@
 import type { MetadataRoute } from "next";
-import { caseStudyPages, industryPages, resourcePages, servicePages, solutionPages, toolingExamplePages } from "@/lib/page-data";
+import { caseStudyPages, resourcePages, servicePages, solutionPages, toolingExamplePages } from "@/lib/page-data";
 import { site } from "@/lib/site";
 import { seoPages } from "@/lib/seo-pages";
 import { allEngineeringResources } from "@/lib/engineering-resources";
+import { industryLandingPages } from "@/lib/industry-landing-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["/", ...site.nav.map((item) => item.href), "/request-a-quote", "/resources/faq", "/seo"];
+  const staticRoutes = [
+    "/",
+    ...site.nav.map((item) => item.href),
+    "/request-a-quote",
+    "/resources/faq",
+    "/seo",
+    "/company/arktech-group",
+    "/company/project-management",
+    "/company/quality-documentation",
+    "/materials",
+    "/privacy-policy",
+    "/terms-of-use",
+    "/cookie-policy"
+  ];
   const detailRoutes = [
     ...servicePages.map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
-    ...industryPages.map((page) => `/industries/${page.slug}`),
+    ...industryLandingPages.map((page) => `/industries/${page.slug}`),
     ...toolingExamplePages.map((page) => `/tooling-examples/${page.slug}`),
     ...caseStudyPages.map((page) => `/case-studies/${page.slug}`),
     ...resourcePages.map((page) => `/resources/${page.slug}`),
@@ -17,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...seoPages.map((page) => `/seo/${page.slug}`)
   ];
 
-  return [...staticRoutes, ...detailRoutes].map((href) => ({
+  return [...new Set([...staticRoutes, ...detailRoutes])].map((href) => ({
     url: `${site.url}${href === "/" ? "" : href}`,
     lastModified: new Date(),
     changeFrequency: href === "/" ? "weekly" : "monthly",

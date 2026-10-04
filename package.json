@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "start": "next start",
+    "postbuild": "node scripts/prepare-standalone.mjs",
+    "start": "node .next/standalone/server.js",
+    "audit:prelaunch": "node scripts/prelaunch-audit.mjs",
     "lint": "next lint"
   },
   "dependencies": {

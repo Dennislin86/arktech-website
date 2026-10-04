@@ -55,12 +55,17 @@ const featuredProjects = [
 export default function ResourcesPage() {
   return (
     <>
-      <section className="border-b border-[var(--line)] bg-white py-14 sm:py-18 lg:py-24">
-        <div className="container-page max-w-5xl">
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">ENGINEERING RESOURCES</p>
-          <h1 className="internal-page-title mt-4 text-[var(--brand-dark)]">Injection Molding &amp; Mold Engineering Resource Center</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">Practical guidance for plastic part design, injection mold engineering, material selection, molded-part troubleshooting, tooling validation and export delivery.</p>
-          <div className="mt-8 flex flex-wrap gap-3"><a className="focus-ring rounded-sm bg-[var(--brand)] px-5 py-3 font-bold text-white hover:bg-[var(--brand-hover)]" href="#featured-guides">Explore Engineering Guides</a><Link className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white" href="/resources/faq">Browse Manufacturing FAQ</Link></div>
+      <section className="border-b border-[var(--line)] bg-white">
+        <div className="container-page grid gap-9 py-12 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">ENGINEERING RESOURCES</p>
+            <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">Injection Molding &amp; Mold Engineering Resources</h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">Practical guidance for plastic part design, injection mold engineering, material selection, molded-part troubleshooting, tooling validation and export delivery.</p>
+            <div className="mt-8 flex flex-wrap gap-3"><a className="focus-ring rounded-sm bg-[var(--brand)] px-5 py-3 font-bold text-white hover:bg-[var(--brand-hover)]" href="#featured-guides">Explore Engineering Guides</a><Link className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white" href="/resources/faq">Browse Manufacturing FAQ</Link></div>
+          </div>
+          <figure className="relative aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
+            <Image alt="Injection mold DFM report and engineering resource reference" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 62vw, 100vw" src="/images/Engineering/dfm-report-tooling-review-example.webp" />
+          </figure>
         </div>
       </section>
 

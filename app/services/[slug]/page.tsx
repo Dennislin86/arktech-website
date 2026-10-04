@@ -4,6 +4,7 @@ import { DetailPage } from "@/components/DetailPage";
 import { DfmEngineeringPage } from "@/components/DfmEngineeringPage";
 import { InjectionMoldManufacturingPage } from "@/components/InjectionMoldManufacturingPage";
 import { InjectionMoldingProductionOptionsPage } from "@/components/InjectionMoldingProductionOptionsPage";
+import { MoldTrialValidationPage } from "@/components/MoldTrialValidationPage";
 import { PlasticInjectionMoldingPage } from "@/components/PlasticInjectionMoldingPage";
 import { servicePages } from "@/lib/page-data";
 
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title: "Export Injection Mold Manufacturing",
       description:
-        "Arktech manufactures export-ready injection molds with DFM engineering, mold design, CNC and EDM machining, fitting, mold trials, validation, tooling documentation, spare parts and export preparation."
+        "Arktech manufactures export-ready injection molds with DFM engineering, mold design, CNC and EDM machining, fitting, mold trials, validation, tooling documentation, spare parts and export preparation.",
+      alternates: { canonical: "/services/injection-mold-manufacturing" }
     };
   }
 
@@ -58,9 +60,32 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  if (slug === "mold-trial-sampling-support") {
+    return {
+      title: { absolute: "Mold Trial, Sampling & Validation for Injection Molds | Arktech Mold" },
+      description:
+        "Structured injection mold trials with sample review, molding parameter records, dimensional inspection, correction loops and validation before tooling approval and export delivery.",
+      alternates: { canonical: "/services/mold-trial-sampling-support" },
+      openGraph: {
+        title: "Mold Trial, Sampling & Validation for Injection Molds | Arktech Mold",
+        description:
+          "Structured injection mold trials with sample review, molding parameter records, dimensional inspection, correction loops and validation before tooling approval and export delivery.",
+        type: "website",
+        url: "/services/mold-trial-sampling-support",
+        images: [
+          {
+            url: "/images/Mold trail/Mold trial video photos.png",
+            alt: "Injection mold installed in a molding machine for trial and validation"
+          }
+        ]
+      }
+    };
+  }
+
   return {
     title: page.title,
-    description: page.description
+    description: page.description,
+    alternates: { canonical: `/services/${page.slug}` }
   };
 }
 
@@ -86,6 +111,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   if (slug === "injection-molding-production-options") {
     return <InjectionMoldingProductionOptionsPage />;
+  }
+
+  if (slug === "mold-trial-sampling-support") {
+    return <MoldTrialValidationPage />;
   }
 
   return <DetailPage page={page} parentHref="/services" parentLabel="Services" />;

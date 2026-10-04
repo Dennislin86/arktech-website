@@ -6,10 +6,10 @@ export const site = {
   description:
     "Tooling and manufacturing partner for OEM product companies and injection molders sourcing export molds, plastic molding, die casting molds, CNC metal parts, and DFM engineering support.",
   company: {
-    legalName: "Arktech Group LTD.",
+    legalName: "Arktech Mold Ltd.",
     founded: "2010",
     experience: "15+ years focused on custom prototyping and manufacturing solutions",
-    certifications: ["ISO 9001:2015", "ISO 13485:2016"],
+    certifications: ["ISO 9001:2015"],
     headOffice: "R1702, Lingxingyu Technology Building, Guangming Street, Guangming District, Shenzhen, Guangdong Province, China 518107",
     factoryAddress: "No. 13, Road Southwest Lang, Jinsha River South, ChangAn Town, Dongguan, China",
     legacyWebsite: "https://www.arktech-group.com"

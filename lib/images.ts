@@ -22,10 +22,8 @@ const imageMap: Record<string, string> = {
   "overmolding-tools": "/images/capabilities/plastic-injection-molding-v2.png",
   "unscrewing-molds": "/images/mold-types/unscrewing-molds.png",
   "two-shot-2k-molds": "/images/mold-types/two-shot-2k-bi-injection-molds.png",
-  "large-component-molds": "/images/mold-types/large-component-molds.png",
-  "gas-assisted-injection-molds": "/images/mold-types/gas-assisted-injection-molds.png",
-  "thermoset-molds": "/images/mold-types/thermoset-molds.png",
-  "die-casting-molds": "/images/mold-types/die-casting-tooling.png",
+  "large-component-molds": "/images/mold-types/large-component-molds.JPG",
+  "die-casting-molds": "/images/capabilities/die-casting.webp",
   "automotive-sensor-housing-tooling": "/images/seo/injection-mold-manufacturing.png",
   "medical-device-cartridge-molding": "/images/seo/plastic-injection-molding.png",
   "smart-home-plastic-housing": "/images/seo/oem-industry-components.png",
@@ -36,8 +34,18 @@ const imageMap: Record<string, string> = {
   "plastic-and-metal-assembly-sourcing-guide": "/images/seo/oem-industry-components.png"
 };
 
+const slugsWithoutApprovedHeroMedia = new Set([
+  "gas-assisted-injection-molds",
+  "thermoset-molds",
+  "die-casting-molds"
+]);
+
 export function seoImageForSlug(slug: string) {
   return imageMap[slug] ?? "/images/seo/oem-manufacturing-hero.png";
+}
+
+export function approvedHeroImageForSlug(slug: string) {
+  return slugsWithoutApprovedHeroMedia.has(slug) ? null : seoImageForSlug(slug);
 }
 
 export function seoImageAlt(title: string) {

@@ -35,16 +35,16 @@ export function EngineeringResourcePage({ resource }: { resource: EngineeringRes
 
       <article>
         <header className="border-b border-[var(--line)] bg-white">
-          <div className="container-page py-12 sm:py-16 lg:py-20">
+          <div className="container-page py-10 sm:py-14 lg:py-16">
             <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm font-semibold text-[var(--muted)]">
               <Link className="hover:text-[var(--brand)]" href="/">Home</Link><span aria-hidden="true">/</span>
               <Link className="hover:text-[var(--brand)]" href="/resources">Resources</Link><span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[var(--brand-dark)]">{resource.shortTitle}</span>
             </nav>
-            <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.03fr)_minmax(380px,.97fr)] lg:items-center">
+            <div className="mt-7 grid gap-9 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">{resource.kind === "pillar" ? "ENGINEERING GUIDE" : resource.topic}</p>
-                <h1 className="internal-page-title mt-4 text-[var(--brand-dark)]">{resource.title}</h1>
+                <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">{resource.title}</h1>
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">{resource.description}</p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:bg-[var(--brand-hover)]" href="#engineering-guide">Read the guide</a>
@@ -52,8 +52,7 @@ export function EngineeringResourcePage({ resource }: { resource: EngineeringRes
                 </div>
               </div>
               <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
-                <div className="relative aspect-[16/10]"><Image alt={resource.imageAlt} className="object-cover" fill priority sizes="(min-width: 1024px) 45vw, 100vw" src={resource.image} /></div>
-                <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm font-semibold text-[var(--brand-dark)]">{resource.topic} · Arktech engineering reference</figcaption>
+                <div className="relative aspect-[16/10]"><Image alt={resource.imageAlt} className="object-cover" fill priority sizes="(min-width: 1024px) 62vw, 100vw" src={resource.image} /></div>
               </figure>
             </div>
           </div>

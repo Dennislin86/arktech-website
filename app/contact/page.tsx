@@ -7,7 +7,8 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Arktech Mold | Export Injection Mold RFQ",
   description:
-    "Contact Arktech Mold for export injection mold RFQs, DFM engineering, mold trial support, sampling and related manufacturing services from Shenzhen, China."
+    "Contact Arktech Mold for export injection mold RFQs, DFM engineering, mold trial support, sampling and related manufacturing services from Shenzhen, China.",
+  alternates: { canonical: "/contact" }
 };
 
 const rfqChecklist = [

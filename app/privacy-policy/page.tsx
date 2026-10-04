@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy Policy" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How Arktech Mold handles inquiry details, RFQ information, drawings and project files submitted through this website.",
+  alternates: { canonical: "/privacy-policy" }
+};
 
 export default function PrivacyPolicyPage() {
   return (

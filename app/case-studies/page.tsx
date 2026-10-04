@@ -6,7 +6,8 @@ import { caseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = {
   title: { absolute: "Injection Mold Case Studies | Export Tooling Projects | Arktech Mold" },
-  description: "Explore real Arktech injection mold and tooling projects across robotics, medical devices, automotive, smart home, appliances and consumer products, including DFM, mold design, trial, validation and production support."
+  description: "Explore real Arktech injection mold and tooling projects across robotics, medical devices, automotive, smart home, appliances and consumer products, including DFM, mold design, trial, validation and production support.",
+  alternates: { canonical: "/case-studies" }
 };
 
 const workflow = ["RFQ & CAD Review", "DFM Engineering", "Mold Design Approval", "Tool Manufacturing", "Mold Trial & Correction", "Inspection & Validation", "Export Delivery"];
@@ -22,10 +23,10 @@ export default function CaseStudiesPage() {
     <main>
       <section className="relative overflow-hidden bg-[var(--brand-dark)] text-white">
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(7,31,54,.98)_0%,rgba(7,31,54,.92)_46%,rgba(7,31,54,.68)_100%)]" />
-        <div className="container-page relative grid min-h-[620px] items-center gap-10 py-16 lg:grid-cols-[1.05fr_.95fr]">
+        <div className="container-page relative grid min-h-[560px] items-center gap-10 py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-12 lg:py-16">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-red-200">Real Tooling Projects</p>
-            <h1 className="internal-page-title mt-4">Real Injection Mold &amp; Tooling Case Studies</h1>
+            <h1 className="split-hero-title mt-4">Real Injection Mold &amp; Tooling Case Studies</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Explore documented Arktech projects across DFM engineering, injection mold manufacturing, mold trials, dimensional inspection and export tooling delivery for global OEM and molding teams.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#featured-projects" className="focus-ring rounded-sm bg-[var(--accent)] px-5 py-3 font-bold text-white hover:brightness-90">Explore Featured Projects</Link>

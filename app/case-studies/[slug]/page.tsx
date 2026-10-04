@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: { absolute: `${project.projectName} Case Study | Arktech Mold` },
     description: project.description,
+    alternates: { canonical: `/case-studies/${project.slug}` },
     openGraph: { title: `${project.projectName} Case Study`, description: project.description, images: [{ url: project.image }] }
   };
 }

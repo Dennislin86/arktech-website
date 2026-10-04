@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { PageHero } from "@/components/PageHero";
-import { seoImageAlt, seoImageForSlug } from "@/lib/images";
+import { approvedHeroImageForSlug, seoImageAlt } from "@/lib/images";
 import type { DetailPageData } from "@/lib/page-data";
 
 type DetailPageProps = {
@@ -12,23 +12,21 @@ type DetailPageProps = {
 };
 
 export function DetailPage({ page, parentHref, parentLabel }: DetailPageProps) {
+  const heroImage = approvedHeroImageForSlug(page.slug);
+
   return (
     <>
-      <PageHero eyebrow={page.eyebrow} title={page.heroTitle} body={page.heroBody} />
+      <PageHero
+        eyebrow={page.eyebrow}
+        title={page.title}
+        body={page.heroBody}
+        image={heroImage ? { src: heroImage, alt: seoImageAlt(page.title) } : undefined}
+      />
       <section className="py-14">
         <div className="container-page">
           <Link className="focus-ring inline-flex rounded-sm text-sm font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href={parentHref}>
             Back to {parentLabel}
           </Link>
-          <div className="relative mt-7 aspect-[16/7] overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm">
-            <Image
-              src={seoImageForSlug(page.slug)}
-              alt={seoImageAlt(page.title)}
-              fill
-              sizes="(min-width: 1120px) 1120px, calc(100vw - 32px)"
-              className="object-cover"
-            />
-          </div>
           {page.intro ? (
             <div className="mt-7 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6">
               <p className="max-w-5xl leading-7 text-[var(--muted)]">{page.intro}</p>

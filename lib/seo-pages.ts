@@ -61,7 +61,7 @@ export const seoPages: SeoLandingPage[] = [
       solution: "Arktech reviewed wear areas, cooling, draft and critical assembly dimensions, then supplied hardened inserts and an export tooling package.",
       result: "Sampling reached stable dimensions with a clearer local launch plan and fewer tooling questions after delivery."
     },
-    trustPoints: ["15+ years of tooling experience", "300+ export molds per year", "ISO 9001 quality-management background", "DFM and trial documentation", "Export packing and spare-part planning"],
+    trustPoints: ["15+ years of tooling experience", "200+ export tooling projects per year", "ISO 9001 quality-management background", "DFM and trial documentation", "Export packing and spare-part planning"],
     faqs: [
       { question: "Can Arktech build molds for production outside China?", answer: "Yes. Export molds can be designed around customer machine, component and tooling standards for production in Europe or North America." },
       { question: "What information is required for a mold RFQ?", answer: "Send 3D CAD, 2D drawings, resin, annual volume, target cycle time, destination and any preferred mold standards." },

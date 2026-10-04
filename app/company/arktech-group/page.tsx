@@ -5,9 +5,10 @@ import { CTA } from "@/components/CTA";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "One-Stop Plastic & Metal Manufacturing Support | Arktech Group",
+  title: "Plastic & Metal Manufacturing Support by Arktech Group",
   description:
-    "Arktech Group provides one-stop plastic and metal manufacturing support around export injection mold programs, including mold making, plastic injection molding, CNC machining, die casting, sheet metal fabrication, 3D printing, vacuum casting, surface finishing and assembly."
+    "Arktech Group provides plastic and metal manufacturing support around export mold programs, including molding, machining, die casting, sheet metal, prototyping and assembly.",
+  alternates: { canonical: "/company/arktech-group" }
 };
 
 const processes = [
@@ -62,8 +63,12 @@ export default function ArktechGroupPage() {
     <>
       <PageHero
         eyebrow="ARKTECH GROUP"
-        title="One-Stop Plastic & Metal Manufacturing Support"
+        title="Plastic & Metal Manufacturing Support"
         body="Arktech Group provides one-stop manufacturing support around export injection mold programs, covering plastic parts, metal components, prototypes, tooling, surface finishing and assembly."
+        image={{
+          src: "/images/capabilities/Industrial Mold Engineering Showcase.png",
+          alt: "Industrial tooling and manufacturing capabilities supported by Arktech Group"
+        }}
       />
 
       <section className="py-14">

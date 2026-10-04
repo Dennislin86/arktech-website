@@ -103,71 +103,52 @@ const productionOptions = [
 
 const materialGroups = [
   {
-    title: "Common Thermoplastics",
-    materials: ["ABS", "PC", "PC/ABS", "PP", "POM", "PMMA", "TPU"],
-    body: "Common resin families for molded housings, covers, functional components and flexible features."
+    title: "General-Purpose Thermoplastics",
+    materials: ["ABS", "PP", "PE", "PS", "PMMA"],
+    body: "Common materials for molded housings, covers, consumer products and general functional components."
   },
   {
-    title: "Engineering Plastics",
-    materials: ["PA / Nylon", "PBT", "PPS"],
-    body: "Engineering materials selected where strength, wear resistance, dimensional stability or temperature performance is important."
+    title: "Engineering Plastics & Elastomers",
+    materials: ["PC", "PC/ABS", "PA / Nylon", "POM", "PBT", "TPU / TPE"],
+    body: "Materials selected where strength, wear resistance, dimensional stability, toughness or flexibility are important."
   },
   {
-    title: "High-Performance Plastics",
-    materials: ["PPSU", "PEEK"],
-    body: "Application-specific polymers for demanding temperature, chemical-resistance and engineering requirements."
+    title: "High-Performance & Reinforced Plastics",
+    materials: ["PA66-GF", "PBT-GF", "PPS", "PPSU", "PEEK"],
+    body: "Application-specific materials for higher temperature, stiffness, chemical resistance and demanding engineering requirements."
   }
 ];
 
-const materialSelectionCriteria = [
-  { title: "Mechanical Performance", body: "Strength, stiffness, impact and wear requirements." },
-  { title: "Operating Temperature", body: "Expected service temperature and thermal cycling." },
-  { title: "Chemical Resistance", body: "Exposure to oils, cleaners, fuels or chemicals." },
-  { title: "Dimensional Stability", body: "Tolerance, shrinkage and assembly-fit requirements." },
-  { title: "Surface Appearance", body: "Gloss, texture, transparency and cosmetic expectations." },
-  { title: "Regulatory Requirements", body: "Application-specific material or compliance requirements." }
+const materialSelectionConsiderations = [
+  "Strength & stiffness",
+  "Heat resistance",
+  "Chemical resistance",
+  "Shrinkage & stability",
+  "Surface appearance",
+  "Regulatory needs"
 ];
 
-const dfmTopics = [
+const sliderLifterReviewPoints = [
   {
     number: "01",
-    title: "Wall Thickness & Rib Design",
-    body: "Review wall thickness, ribs, bosses and structural transitions to help reduce sink marks, warpage and unnecessary material while maintaining part stiffness.",
-    image: "/images/plastic-injection-molding/wall-thickness-rib-design.webp",
-    alt: "Wall thickness and rib design review for molded plastic parts"
+    title: "Undercut Release Direction",
+    body: "Confirm how side undercuts can be released without part damage or mold interference."
   },
   {
     number: "02",
-    title: "Draft, Undercuts & Part Release",
-    body: "Review draft requirements, undercuts and release conditions to reduce unnecessary tooling complexity and support stable part ejection.",
-    image: "/images/plastic-injection-molding/draft-undercut-review.webp",
-    alt: "Draft and undercut analysis for injection molded component"
+    title: "Slider / Lifter Travel & Clearance",
+    body: "Review movement distance, available space and mechanism clearance for stable operation."
   },
   {
     number: "03",
-    title: "Gate Location & Flow Behavior",
-    body: "Evaluate gate position, flow path, weld-line risk, air traps and filling behavior based on geometry and cosmetic requirements.",
-    image: "/images/plastic-injection-molding/gate-flow-analysis.webp",
-    alt: "Gate location and flow analysis for plastic injection molding"
+    title: "Shut-Off & Insert Structure",
+    body: "Evaluate shut-off surfaces, insert construction and steel conditions around moving features."
   },
   {
     number: "04",
-    title: "Shrinkage, Tolerance & Assembly",
-    body: "Review material shrinkage, tolerance expectations and assembly interfaces so molded parts can better match functional and fit requirements.",
-    image: "/images/process/sample-validation-inspection-cmm.png",
-    alt: "Shrinkage tolerance and assembly review for molded plastic parts"
+    title: "Ejection & Interference Check",
+    body: "Check slider, lifter and ejection sequences to reduce collision and release risk during mold operation."
   }
-];
-
-const additionalDfmChecks = [
-  "Parting Line Strategy",
-  "Ejection & Witness Marks",
-  "Surface Finish & Texture",
-  "Insert Design",
-  "Venting",
-  "Snap-Fits",
-  "Assembly Interfaces",
-  "Critical Dimensions"
 ];
 
 const processSteps = [
@@ -519,8 +500,8 @@ export function PlasticInjectionMoldingPage() {
       <JsonLd data={schemas} />
 
       <section className="border-b border-[var(--line)] bg-white">
-        <div className="container-page py-12 sm:py-16 lg:py-20">
-          <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-2 text-sm text-[var(--muted)]">
+        <div className="core-hero-shell py-10 sm:py-12 md:py-14 xl:py-16">
+          <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-sm text-[var(--muted)]">
             <Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/">Home</Link>
             <span aria-hidden="true">/</span>
             <Link className="focus-ring rounded-sm hover:text-[var(--brand)]" href="/services">Capabilities</Link>
@@ -528,29 +509,26 @@ export function PlasticInjectionMoldingPage() {
             <span aria-current="page" className="font-semibold text-[var(--brand-dark)]">Plastic Injection Molding</span>
           </nav>
 
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] lg:items-center lg:gap-12">
+          <div className="grid gap-9 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-center lg:gap-10 xl:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] xl:gap-12 2xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)]">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Plastic Injection Molding</p>
-              <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--brand-dark)] sm:text-[46px] lg:text-[52px] xl:text-[56px]">
-                Custom Plastic Injection Molding <span className="block">from Prototype to Production</span>
+              <h1 className="core-hero-title mt-4 text-[var(--brand-dark)]">
+                <span className="block">Custom Plastic Injection Molding</span>
+                <span className="mt-2 block text-[0.62em] font-bold tracking-[-0.02em]">from Prototype to Production</span>
               </h1>
-              <p className="mt-6 text-lg leading-8 text-[var(--muted)]">
-                Arktech provides custom plastic injection molding for functional parts, product housings and assembled components, supporting prototype, low-volume and mass-production programs.
-              </p>
-              <p className="mt-4 leading-7 text-[var(--muted)]">
-                Our engineering team connects DFM review, tooling development, mold trials, part validation and production support so OEM teams can move from product design to stable, repeatable molded-part supply.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
+              <p className="mt-5 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech supports plastic injection molding for functional components, product housings and OEM parts from engineering samples and low-volume builds through repeat production.</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--muted)] sm:text-base">DFM, tooling development, mold trials and validation are coordinated before stable production where required.</p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
                   Upload CAD for DFM Review
                 </Link>
-                <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-6 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
+                <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
                   Request Injection Molding Quote
                 </Link>
               </div>
             </div>
 
-            <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
+            <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
               <div className="aspect-video overflow-hidden bg-[var(--brand-dark)]">
                 <video
                   aria-label="Arktech plastic injection molding production with an injection molding machine running"
@@ -565,9 +543,6 @@ export function PlasticInjectionMoldingPage() {
                   <source src="/videos/injection-molding-production.mp4" type="video/mp4" />
                 </video>
               </div>
-              <figcaption className="border-t border-[var(--line)] bg-white px-5 py-3 text-sm font-semibold text-[var(--brand-dark)]">
-                Injection molding production from mold setup to repeatable molded-part supply
-              </figcaption>
             </figure>
           </div>
 
@@ -756,127 +731,127 @@ export function PlasticInjectionMoldingPage() {
 
       <section id="materials" className="scroll-mt-24 bg-[var(--surface-soft)] py-16 sm:py-20">
         <div className="container-page">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Material Selection</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">Injection Molding Materials</h2>
-            <div className="mt-4 max-w-3xl space-y-3 text-base leading-7 text-[var(--muted)] sm:text-lg">
-              <p>Material selection for injection molding depends on mechanical strength, dimensional stability, heat and chemical resistance, surface requirements, regulatory needs and production conditions.</p>
-              <p>Arktech supports material review during DFM and tooling development to help match resin performance with part geometry, assembly requirements and end-use conditions. Our co-design approach can also include coordination with raw-material suppliers when project requirements call for additional material input.</p>
+            <h2 className="mt-3 text-3xl font-bold leading-[1.12] tracking-[-0.02em] text-[var(--brand-dark)] sm:text-4xl lg:text-[46px]">Plastic Materials for Injection Molding</h2>
+            <div className="mt-4 max-w-4xl space-y-2 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">
+              <p>Arktech supports material selection for injection molding based on mechanical performance, dimensional stability, heat and chemical resistance, appearance, regulatory requirements and production conditions.</p>
+              <p>During DFM and tooling development, we can also review resin behavior, shrinkage and processing requirements against part geometry and end-use needs.</p>
             </div>
           </div>
 
-          <div className="mt-9 grid gap-6 lg:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] lg:items-stretch lg:gap-8">
-            <figure className="flex min-h-[340px] flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm sm:min-h-[420px] lg:min-h-0">
-              <div className="relative min-h-[300px] flex-1 overflow-hidden bg-white sm:min-h-[380px] lg:min-h-0">
-                <Image
-                  alt="Engineering plastic injection molded housings and functional components"
-                  className="object-cover object-center"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  src="/images/material-capabilities/engineering-plastic-parts-abs-pc-pa-pom.webp"
-                />
-              </div>
-              <figcaption className="border-t border-[var(--line)] bg-white px-5 py-4 text-sm font-semibold leading-6 text-[var(--brand-dark)]">
-                Material selection for molded housings, structural components and high-performance applications
-              </figcaption>
+          <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,44fr)_minmax(0,56fr)] lg:items-stretch lg:gap-8">
+            <figure className="relative min-h-[360px] overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm sm:min-h-[480px] lg:min-h-0">
+              <Image
+                alt="Engineering plastic injection molded housings and functional components"
+                className="object-cover object-center"
+                fill
+                sizes="(min-width: 1024px) 44vw, 100vw"
+                src="/images/material-capabilities/engineering-plastic-parts-abs-pc-pa-pom.webp"
+              />
             </figure>
 
             <div className="overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm">
-              {materialGroups.map((group, index) => (
-                <article className={`p-5 sm:p-6 ${index ? "border-t border-[var(--line)]" : ""}`} key={group.title}>
-                  <h3 className="text-base font-bold uppercase tracking-[0.06em] text-[var(--brand-dark)] sm:text-lg">{group.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{group.body}</p>
-                  <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${group.title} materials`}>
-                    {group.materials.map((material) => (
-                      <li className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-1.5 text-sm font-bold text-[var(--brand-dark)]" key={material}>
-                        {material}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-              <p className="border-t border-[var(--line)] px-5 py-4 text-sm leading-6 text-[var(--muted)] sm:px-6">
-                Final resin grades, additives, colors and certifications are confirmed against project specifications before production.
-              </p>
+              <div className="px-5 pb-1 pt-5 sm:px-6 sm:pt-6">
+                <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Material Families</p>
+              </div>
+              <div className="divide-y divide-[var(--line)]">
+                {materialGroups.map((group) => (
+                  <article className="px-5 py-4 sm:px-6 sm:py-5" key={group.title}>
+                    <h3 className="text-xl font-bold leading-[1.2] text-[var(--brand-dark)] sm:text-[22px]">{group.title}</h3>
+                    <p className="mt-2 text-[15px] leading-6 text-[var(--muted)] sm:text-base">{group.body}</p>
+                    <ul className="mt-3 flex flex-wrap gap-2" aria-label={`${group.title} materials`}>
+                      {group.materials.map((material) => (
+                        <li className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-2.5 py-1 text-sm font-bold text-[var(--brand-dark)]" key={material}>
+                          {material}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+              <div className="border-t border-[var(--line)] bg-[var(--surface-soft)] px-5 py-4 sm:px-6">
+                <h3 className="text-lg font-bold text-[var(--brand-dark)] sm:text-xl">Project-Specific Material Review</h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Final resin grade, glass-fiber content, additives, color and certification requirements are confirmed against project specifications before production.</p>
+              </div>
             </div>
           </div>
 
-          <div className="mt-8 rounded-md border border-[var(--line)] bg-white p-6 sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">What We Review</p>
-            <h3 className="mt-2 text-2xl font-bold text-[var(--brand-dark)]">What We Review When Selecting a Resin</h3>
-            <div className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3" role="list">
-              {materialSelectionCriteria.map((criterion) => (
-                <article className="border-l-2 border-[var(--brand)] pl-4" key={criterion.title} role="listitem">
-                  <h4 className="font-bold text-[var(--brand-dark)]">{criterion.title}</h4>
-                  <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{criterion.body}</p>
-                </article>
+          <div className="mt-7 border-y border-[var(--line)] py-5 lg:grid lg:grid-cols-[260px_1fr] lg:items-center lg:gap-6">
+            <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Material Selection Considerations</p>
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-3 lg:mt-0 xl:grid-cols-6" aria-label="Material selection considerations">
+              {materialSelectionConsiderations.map((consideration) => (
+                <li className="flex gap-2 text-sm font-semibold leading-5 text-[var(--brand-dark)]" key={consideration}>
+                  <span aria-hidden="true" className="font-bold text-[var(--brand)]">—</span>
+                  <span>{consideration}</span>
+                </li>
               ))}
-            </div>
-            <div className="mt-7 border-t border-[var(--line)] pt-6">
-              <p className="max-w-4xl leading-7 text-[var(--muted)]">Material selection is reviewed together with part geometry and tooling strategy because resin behavior can affect shrinkage, draft, wall thickness, gating, cooling and dimensional stability.</p>
-              <Link className="focus-ring mt-4 inline-flex rounded-sm font-bold text-[var(--brand)] hover:underline" href="/services/dfm-engineering">View DFM Engineering →</Link>
-            </div>
+            </ul>
           </div>
 
-          <div className="mt-6 flex flex-col gap-5 rounded-md border border-[var(--line)] bg-[var(--brand-dark)] px-6 py-7 text-white sm:flex-row sm:items-center sm:justify-between sm:px-8">
-            <div>
-              <h3 className="text-xl font-bold">Need help selecting a resin?</h3>
-              <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">Compare material requirements for strength, temperature, chemical resistance, appearance and production conditions.</p>
+          <div className="mt-6 flex flex-col gap-5 rounded-sm border border-[var(--line)] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+            <h3 className="text-xl font-bold leading-7 text-[var(--brand-dark)]">Not sure which resin fits your application?</h3>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/resources/material-selection-guide">
+                View Material Selection Guide →
+              </Link>
+              <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
+                Upload CAD for DFM Review →
+              </Link>
             </div>
-            <Link className="focus-ring inline-flex shrink-0 items-center font-bold text-white underline decoration-[var(--brand)] decoration-2 underline-offset-4 transition hover:text-red-200" href="/resources/material-selection-guide">
-              View Material Selection Guide →
-            </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
+      <section id="dfm-moldability-review" className="scroll-mt-24 bg-white py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading
             eyebrow="DFM & Moldability Review"
             title="Design for Plastic Injection Molding"
-            body="Early DFM review helps identify part-design risks before tooling, including wall thickness, draft, undercuts, gate location, shrinkage, assembly interfaces and cosmetic requirements. The goal is to improve moldability, reduce avoidable tooling changes and support more stable molded-part production."
+            body="Injection molding DFM reviews complex undercuts and moving mold features before mold design and steel cutting. Slider and lifter analysis helps define release direction, travel, clearance, shut-off conditions and ejection sequence."
           />
 
-          <figure className="mt-9 overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm lg:grid lg:grid-cols-[minmax(0,62fr)_minmax(0,38fr)]">
-            <div className="relative aspect-[16/10] min-h-[280px] overflow-hidden lg:aspect-auto lg:min-h-[460px]">
-              <Image alt="DFM review for plastic injection molding" className="object-cover object-center" fill sizes="(min-width: 1024px) 62vw, 100vw" src="/images/Engineering/injection-mold-engineering-dfm-analysis.webp" />
-            </div>
-            <figcaption className="flex flex-col justify-center border-t border-[var(--line)] bg-[var(--brand-dark)] p-6 text-white lg:border-l lg:border-t-0 sm:p-8">
-              <p className="text-sm font-bold uppercase tracking-[0.12em] text-red-200">Part Design Review</p>
-              <h3 className="mt-3 text-2xl font-bold leading-tight">Moldability decisions before tooling release</h3>
-              <p className="mt-4 leading-7 text-slate-300">Part geometry, resin behavior, visible surfaces and assembly requirements are reviewed together so product decisions remain connected to injection molding and validation needs.</p>
-            </figcaption>
-          </figure>
+          <div className="mt-9 overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] lg:grid lg:grid-cols-[minmax(0,56fr)_minmax(0,44fr)]">
+            <figure className="flex items-center justify-center bg-white p-3 sm:p-5 lg:self-start lg:border-r lg:border-[var(--line)]">
+              <div className="relative aspect-[61/39] w-full overflow-hidden bg-white">
+                <Image
+                  alt="DFM analysis showing slider and lifter directions for undercut mold construction"
+                  className="object-contain object-center"
+                  fill
+                  sizes="(min-width: 1024px) 56vw, 100vw"
+                  src="/images/injection-mold-manufacturing/ejection-slider-lifter.webp"
+                />
+              </div>
+            </figure>
 
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
-            {dfmTopics.map((topic) => (
-              <article className="overflow-hidden rounded-md border border-[var(--line)] bg-white" key={topic.title}>
-                <div className="relative aspect-[16/10] overflow-hidden bg-white">
-                  <Image alt={topic.alt} className="object-contain object-center" fill sizes="(min-width: 768px) 50vw, 100vw" src={topic.image} />
-                </div>
-                <div className="border-t border-[var(--line)] p-5 sm:p-6">
-                  <p className="text-sm font-bold text-[var(--brand)]">{topic.number}</p>
-                  <h3 className="mt-2 text-xl font-bold text-[var(--brand-dark)]">{topic.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{topic.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+            <div className="border-t border-[var(--line)] bg-white p-5 sm:p-7 lg:border-t-0 lg:p-8">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Tooling Engineering Review</p>
+              <h3 id="slider-lifter-review" className="scroll-mt-24 mt-3 text-2xl font-bold leading-[1.15] text-[var(--brand-dark)] sm:text-[30px]">Slider &amp; Lifter Mold Construction Review</h3>
+              <div className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)] sm:text-[17px]">
+                <p>Slider and lifter mechanisms are reviewed during DFM to confirm undercut release, movement direction, shut-off conditions, insert structure and sufficient space for reliable mold operation.</p>
+                <p>The review helps identify tooling risks before mold design and steel cutting, especially for parts with side actions, deep undercuts or complex release requirements.</p>
+              </div>
 
-          <div className="mt-8 grid gap-8 border-t border-[var(--line)] pt-8 lg:grid-cols-[minmax(0,58fr)_minmax(0,42fr)]">
-            <div>
-              <h3 className="text-xl font-bold text-[var(--brand-dark)]">Additional DFM Checks</h3>
-              <ul className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-2">
-                {additionalDfmChecks.map((item) => <li className="flex gap-3 border-b border-[var(--line)] pb-3 text-sm font-semibold leading-6 text-[var(--brand-dark)]" key={item}><span aria-hidden="true" className="font-bold text-[var(--brand)]">—</span>{item}</li>)}
-              </ul>
-              <Link className="focus-ring mt-6 inline-flex rounded-sm font-bold text-[var(--brand)] hover:underline" href="/services/dfm-engineering">Explore DFM Engineering Support →</Link>
+              <ol className="mt-6 divide-y divide-[var(--line)] border-y border-[var(--line)]" aria-label="Slider and lifter mold construction review points">
+                {sliderLifterReviewPoints.map((point) => (
+                  <li className="grid grid-cols-[32px_1fr] gap-3 py-4" key={point.title}>
+                    <span className="text-sm font-bold text-[var(--brand)]">{point.number}</span>
+                    <div>
+                      <h4 className="text-lg font-bold leading-6 text-[var(--brand-dark)]">{point.title}</h4>
+                      <p className="mt-1 text-[15px] leading-6 text-[var(--muted)]">{point.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+
+              <aside className="mt-6 border-l-2 border-[var(--brand)] bg-[var(--surface-soft)] p-4 sm:p-5" aria-label="Complex undercut DFM review">
+                <h4 className="text-lg font-bold text-[var(--brand-dark)]">Have a complex undercut or side-action part?</h4>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review →</Link>
+                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/services/dfm-engineering">Explore DFM Engineering →</Link>
+                </div>
+              </aside>
             </div>
-            <aside className="border-l-2 border-[var(--brand)] bg-[var(--surface-soft)] p-6">
-              <h3 className="text-xl font-bold text-[var(--brand-dark)]">Not sure if your part is ready for tooling?</h3>
-              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">Upload your CAD files for an engineering DFM review before mold design and steel cutting.</p>
-              <Link className="focus-ring mt-5 inline-flex rounded-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">Upload CAD for DFM Review →</Link>
-            </aside>
           </div>
         </div>
       </section>

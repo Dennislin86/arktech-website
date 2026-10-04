@@ -6,8 +6,8 @@ This is the source of truth for website image selection. Paths are relative to `
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| OEM & Product Companies | `/images/process/rfq-cad-review-old-website.png` | Product development components drawings and manufacturing review for OEM teams | Real legacy-site engineering photo; active on the Homepage buyer-identification card |
-| Injection Molding & Tooling Companies | `/images/process/tooling-manufacturing-plan-mold.png` | Export injection mold manufacturing for injection molding companies | Real Arktech tooling photo; active on the Homepage buyer-identification card |
+| OEM & Product Companies | `/images/case-studies/medical-education-device.webp` | Medical education device product development, engineering and manufacturing workflow | Existing local copy of an Arktech Group case-study image; reused on the Homepage buyer-identification card |
+| Injection Molding & Tooling Companies | `/images/company/Precision Mold to Global Delivery.png` | Completed export injection mold, mold trial validation and export packing preparation | Existing first-party export tooling composite; active on the Homepage buyer-identification card |
 
 ## Manufacturing Capabilities
 
@@ -62,12 +62,35 @@ No new image files, hotlinked images, competitor images or external stock assets
 | Robotics DFM engineering | `/images/process/dfm-engineering-feedback-old-website.png` | DFM engineering review for injection molded robotics component geometry | Existing Arktech DFM engineering graphic; reused on Robotics page |
 | Robotics quality control | `/images/process/sample-validation-inspection-cmm.png` | Dimensional inspection of molded robotics components for sample validation | Existing real Arktech inspection photo; reused on Robotics page |
 
+## Industry Child Pages
+
+The eight high-intent Industry child pages reuse approved local application imagery. No external, competitor, stock or newly generated image was added. The shared quality-evidence layout also reuses the documented real Arktech inspection photo, anonymized dimensional report and trial-sample evidence.
+
+| Industry / page use | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Robotics hero | `/images/industries/robotics-automation.png` | Industrial robot handling molded robotics components in an automated production environment | Existing approved user-supplied industry image; active on `/industries/robotics` |
+| Robotics applications | `/images/industries/robotics-injection-mold-components.webp` | Robotics housings sensor modules and precision components for automation applications | Existing approved industry visual; active |
+| Medical hero | `/images/industries/medial-industry.webp` | Medical and diagnostic equipment with molded plastic housings and functional components | Existing approved user-supplied industry image; active on `/industries/medical-devices` |
+| Medical applications | `/images/industries/medical-healthcare-device-parts.webp` | Medical device housings transparent components and diagnostic equipment parts | Existing approved industry visual; active |
+| Automotive hero | `/images/industries/Automotive-Components.png` | Automotive interior controls display housing and functional molded plastic components | Existing approved user-supplied industry image; active on `/industries/automotive-components` |
+| Automotive applications | `/images/industries/automotive-ev-components.webp` | Automotive molded housings connectors and functional production components | Existing approved industry visual; active |
+| Smart Home & IoT hero | `/images/industries/smart-device-housings.png` | Smart home cameras hubs sensors and connected device housings | Existing approved user-supplied industry image; active on `/industries/smart-home` |
+| Smart Home & IoT applications | `/images/industries/smart-iot-device-housings.jpg` | Smart home product housings sensors hubs and connected controls | Existing approved industry visual; active |
+| Energy Storage & EV hero | `/images/industries/autimotive-ev.webp` | Electric vehicle charging stations and molded EV charging product housings | Existing approved user-supplied industry image; active on `/industries/new-energy` |
+| Energy Storage & EV applications | `/images/industries/automotive-ev-components.jpg` | EV charging housings connector components and power electronics enclosures | Existing approved industry visual; active |
+| Home Appliance hero | `/images/industries/home-appliance.png` | Home appliances with molded housings control panels and functional plastic parts | Existing approved user-supplied industry image; active on `/industries/home-appliance` |
+| Home Appliance applications | `/images/industries/home-appliance-smart-home-components.webp` | Molded home appliance housings control interfaces and functional components | Existing approved industry visual; active |
+| Pet Tech hero | `/images/industries/pet-lifestyle-product-parts.png` | Smart pet feeders water devices cameras and connected pet products | Existing approved user-supplied industry image; active on `/industries/pet-tech` |
+| Pet Tech applications | `/images/industries/pet-lifestyle-product-parts.webp` | Smart pet product housings bowls cameras and molded functional components | Existing approved industry visual; active |
+| Consumer Electronics hero | `/images/industries/consumer-electronics-enclosures.png` | Consumer electronics products including enclosures mobile devices audio products and accessories | Existing approved user-supplied industry image; active on `/industries/consumer-electronics` |
+| Consumer Electronics applications | `/images/industries/consumer-electronics-enclosures.webp` | Consumer electronics housings enclosures circuit interfaces and functional components | Existing approved industry visual; active |
+
 ## Injection Mold Types
 
 | Capability | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
 | Precision Injection Molds | `/images/mold-types/Precision-Molds.png` | Precision injection mold for controlled-dimension plastic parts and repeatable production | Existing user-supplied tooling image; active as the first Homepage Mold Types card |
-| Multi-Cavity Injection Molds | `/images/mold-types/multi-cavity-injection-molds.webp` | Multi-cavity injection molds for consistent high-volume plastic production | User-supplied tooling image; active |
+| Multi-Cavity Injection Molds | `/images/mold-types/multi-cavity-injection-molds.webp` | Multi-cavity injection mold with multiple production cavities | User-supplied real Arktech tooling image; active on the Homepage, Injection Molds Hub and dedicated Multi-Cavity Injection Molds child page |
 | Hot Runner Molds | `/images/mold-types/hot-runner-molds.webp` | Hot runner injection molds for efficient high-volume plastic production | User-supplied tooling image; active |
 | Insert Molding Tools | `/images/mold-types/insert-molding-tools.webp` | Insert molding tools for plastic components with integrated metal inserts | User-supplied tooling image; active |
 | Complex Injection Molds | `/images/mold-types/complex-injection-molds.png` | Complex injection molds for precision industrial plastic components | User-supplied real tooling photo; active in Mold Types, Company navigation and Resources Case Studies panel |
@@ -81,20 +104,22 @@ No new image files, hotlinked images, competitor images or external stock assets
 
 | Mold category | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Custom Injection Molds | `/images/mold-types/complex-injection-molds.png` | Custom injection mold with multiple engineered tooling actions | Existing real Arktech tooling image; active on Injection Molds overview |
-| Production Injection Molds | `/images/process/tooling-manufacturing-plan-mold.png` | Production injection mold prepared for repeat molding and export delivery | Existing real Arktech tooling photo; active on overview |
-| Multi-Cavity Molds | `/images/mold-types/multi-cavity-injection-molds.webp` | Multi-cavity injection molds for repeat plastic part production | Existing real Arktech tooling image; active on overview and homepage |
-| High-Cavitation Molds | `/images/mold-types/multi-cavity-injection-molds.png` | High-cavitation injection mold with repeated cavity layout | Existing real Arktech tooling image; reused because no separate verified high-cavitation asset exists |
+| Precision Injection Molds | `/images/mold-types/Precision-Molds.png` | Precision injection mold for controlled-dimension plastic parts and repeatable production | Existing real Arktech tooling image; active as the Hub hero and Core Mold Type image |
+| Multi-Cavity Injection Molds | `/images/mold-types/multi-cavity-injection-molds.webp` | Multi-cavity injection mold with repeated production cavities | Existing real Arktech tooling image; active on the Hub, homepage and dedicated child page; High-Cavitation intent is consolidated here because no distinct route, content or asset exists |
 | Large Injection Molds | `/images/mold-types/large-component-molds.JPG` | Large injection mold for industrial housing and structural plastic parts | Existing real Arktech tooling photo; active on overview and homepage |
 | Complex Injection Molds | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with multiple sliders and tooling mechanisms | Existing real Arktech tooling image; active on overview and homepage |
-| Insert & Overmolding Tools | `/images/mold-types/insert-molding-tools.webp` | Insert and overmolding tools for integrated plastic and metal components | Existing real Arktech tooling image; active on overview and homepage |
+| Prototype Injection Molds | `/images/mold-types/prototype-injection-mold.webp` | Prototype injection mold with a molded part for engineering validation | Existing real Arktech tooling image; active as an informational Hub card because no dedicated child route exists |
+| Insert Molding Tools | `/images/mold-types/insert-molding-tools.webp` | Insert molding tool for plastic parts with integrated inserts | Existing real Arktech tooling image; active on Hub and dedicated child page |
+| Overmolding Tools | `/images/mold-types/insert-molding-tools.webp` | Production mold used for insert and overmolding tooling applications | Existing approved real tooling image reused because no separate verified Overmolding mold photo exists; dedicated child route is active |
 | Two-Shot / 2K Molds | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | Two-shot and 2K injection mold for multi-material plastic parts | Existing real Arktech tooling image; active on overview and homepage |
 | Unscrewing Molds | `/images/mold-types/unscrewing-molds.webp` | Unscrewing injection mold for internally threaded plastic components | Existing real Arktech tooling image; active on overview and homepage |
 | Hot Runner Molds | `/images/mold-types/hot-runner-molds.webp` | Hot runner injection mold for controlled production molding | Existing real Arktech tooling image; active on overview and homepage |
 | Valve Gate Molds | `/images/mold-types/hot-runner-molds.webp` | Hot runner injection mold representative of valve gate tooling engineering | Existing real Arktech hot-runner tooling image; reused because no separate verified valve-gate asset exists |
-| Slider & Lifter Molds | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with sliders and lifters for side-action release | Existing real Arktech complex tooling image; reused on overview |
+| Slider & Lifter engineering resource | `/images/mold-types/complex-injection-molds.png` | Complex injection mold with sliders and lifters for side-action release | Removed as a standalone Hub Mold Type; retained only as a Complex Mold mechanism and engineering-resource topic |
 
-No new image files were created for the synchronized taxonomy. Missing dedicated High-Cavitation, Valve Gate, and Slider & Lifter images remain documented rather than being replaced with generated or external placeholders.
+The `/tooling-examples` page also reuses the approved Precision, Complex, Multi-Cavity, Hot Runner, Two-Shot / 2K, Insert, Unscrewing, Large and Prototype assets above in the horizontal **Real Injection Mold Projects** portfolio. Every carousel card uses a unique factual alt description. No toolroom overview, operator, polishing, trial-report or inspection-only image is included in that completed-mold portfolio.
+
+No new image files were created for the synchronized taxonomy. Missing dedicated High-Cavitation, Overmolding and Valve Gate mold images remain documented rather than being replaced with generated or external placeholders. High-Cavitation is merged into Multi-Cavity on the Hub, Overmolding reuses the approved Insert/Overmolding tooling image, and Valve Gate reuses the approved Hot Runner tooling image.
 
 ## Engineering-to-Production Delivery
 
@@ -163,23 +188,33 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Hero export injection mold | `/images/process/tooling-manufacturing-plan-mold.png` | Large export injection mold manufactured by Arktech | Real tooling photo; reused as the Injection Mold Manufacturing hero |
-| Mold type gallery | `/images/mold-types/` approved assets | Descriptive alt text for each supported injection mold type | Existing approved tooling images; reused in the mold type grid |
+| Hero mold-trial video | `/videos/Mold manufacturing/Mold-trial.mp4` | Arktech injection mold trial and validation process | Existing real Arktech mold-trial video; active in the Injection Mold Manufacturing hero with muted lazy autoplay |
+| Hero mold-trial poster | `/images/Mold trail/Mold trial video photos.png` | Injection mold installed in a molding machine for trial and validation | Existing real mold-trial video frame; active as the hero loading and reduced-motion fallback |
+| Export tooling overview | `/images/injection-mold-manufacturing/Precision Mold to Global Delivery.png` | Precision injection mold manufacturing, validation and global delivery preparation | Existing first-party export tooling visual; active in the Injection Mold Manufacturing export-tooling overview |
+| Core capabilities — DFM & Mold Design | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | DFM engineering and mold design review for export injection mold manufacturing | Existing Arktech engineering-office visual; reused in the Core Capabilities proof strip |
+| Core capabilities — Precision Mold Manufacturing | `/images/factory-workshop/injection-mold-cnc-machining-workshop.webp` | Precision mold manufacturing with CNC machining equipment for injection tooling | Real Arktech workshop photo; reused in the Core Capabilities proof strip |
+| Core capabilities — Mold Trial & Validation | `/images/process/export-delivery-production-support-molding.png` | Injection mold trial and sample validation before export delivery | Real Arktech process photo; reused in the Core Capabilities proof strip |
+| Mold type discovery grid | `/images/mold-types/` approved assets | Descriptive alt text for each supported injection mold type | Existing approved tooling images; reused in the two-column image-led mold type grid |
 | Export tooling spare parts | `/images/capabilities/tooling-spare-parts.jpg` | Precision tooling inserts and spare parts prepared for export injection molds | User-supplied tooling image; reused in Export-Ready Tooling section |
 | Tooling documentation | `/images/documentation/tooling-documentation-package.png` | Export injection mold tooling documentation and validation package | User-supplied documentation screenshot; reused in Quality & Documentation section |
-| Toolroom capabilities | `/images/factory-workshop/injection-mold-assembly-workshop.webp` | Injection mold assembly workshop with tooling workstations | Real Arktech workshop photo; active in Toolroom Capabilities |
-| CNC machining equipment | `/images/factory-workshop/injection-mold-cnc-machining-workshop.webp` | CNC machining centers in the injection mold manufacturing toolroom | Real Arktech workshop photo; active in Equipment |
-| EDM equipment | `/images/factory-workshop/injection-mold-edm-machine.webp` | GF AgieCharmilles EDM machine for injection mold cavity machining | Real Arktech equipment photo converted from `/images/facility/43081d0f-b20d-4505-b4c6-db4d44b05076.jpg`; active in Equipment |
-| Precision grinding | `/images/factory-workshop/injection-mold-precision-grinding-workshop.webp` | Precision grinding equipment for injection mold components | Real Arktech workshop photo; active in Equipment |
-| Mold fitting | `/images/factory-workshop/injection-mold-fitting-workshop.webp` | Injection mold fitting and component verification | Real Arktech workshop photo; active in Equipment and the gallery |
-| Mold polishing | `/images/factory-workshop/injection-mold-cavity-polishing-room.webp` | Injection mold cavity polishing before assembly | Real Arktech workshop photo; active in the gallery |
-| Mold trial | `/images/process/export-delivery-production-support-molding.png` | Injection mold trial before customer approval | Real Arktech process photo; active in Validation and the gallery |
-| Dimensional inspection | `/images/process/sample-validation-inspection-cmm.png` | Dimensional inspection for injection mold sample validation | Real Arktech inspection photo; active in Equipment and the gallery |
-| Tooling engineering overview | `/images/process/dfm-engineering-feedback-old-website.png` | Injection mold engineering before steel cutting | Existing Arktech engineering graphic; reused in the Tooling Engineering editorial panel |
-| Cavity, core and parting strategy | `/images/injection-mold-manufacturing/cavity-core-parting.webp` | Injection mold cavity core and parting-line design | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; active |
-| Cooling, gate and runner planning | `/images/injection-mold-manufacturing/cooling-gate-runner.webp` | Injection mold cooling gate and runner layout | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; active |
-| Ejection and moving mechanisms | `/images/injection-mold-manufacturing/ejection-slider-lifter.webp` | Slider lifter and ejection system for injection mold | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; active |
-| Steel, inserts and production standards | `/images/capabilities/tooling-spare-parts.jpg` | Mold steel insert and tooling component design | Existing approved real tooling-component photo; reused in the Tooling Engineering section |
+| Toolroom capabilities video | `/videos/arktech-group-cnc-hero.mp4` | Arktech CNC machining for injection mold cavity and core manufacturing | Existing lightweight first-party CNC machining video; active with muted lazy autoplay in Toolroom Capabilities |
+| Toolroom capabilities poster | `/images/about/arktech-mold-factory-video-poster.webp` | CNC machining of injection mold cavity and core details | Existing optimized first-party video frame; active as the Toolroom Capabilities loading and reduced-motion fallback |
+| CNC machining equipment | `/images/factory-workshop/injection-mold-cnc-machining-workshop.webp` | CNC machining centers supporting injection mold component manufacturing | Real Arktech workshop photo; active in Manufacturing Equipment |
+| EDM equipment | `/images/factory-workshop/injection-mold-edm-machine.webp` | Electrical discharge machining equipment for injection mold details | Real Arktech equipment photo converted from `/images/facility/43081d0f-b20d-4505-b4c6-db4d44b05076.jpg`; active in Manufacturing Equipment |
+| Wire EDM equipment | `/images/facility/41fc5d07-28a3-4fbf-9826-edaca9de7b2a.jpg` | Wire cutting equipment in the injection mold toolroom | Existing real Arktech toolroom photo; active in Manufacturing Equipment |
+| Grinding and milling | `/images/factory-workshop/injection-mold-precision-grinding-workshop.webp` | Grinding and milling equipment for injection mold components and inserts | Real Arktech workshop photo; active in Manufacturing Equipment |
+| Mold fitting and assembly | `/images/factory-workshop/injection-mold-fitting-workshop.webp` | Toolmakers fitting and assembling injection mold components | Real Arktech workshop photo; active in Manufacturing Equipment and the Engineering-to-Toolroom manufacturing-flow section |
+| Mold manufacturing process overview | `/images/Project/project-management-system.webp` | Injection mold manufacturing and project management process from DFM through mold trial and export delivery | Existing real Arktech workflow composite; active as the main visual in the Injection Mold Manufacturing lifecycle section |
+| Mold polishing | `/images/factory-workshop/injection-mold-cavity-polishing-room.webp` | Injection mold cavity polishing before assembly | Real Arktech workshop photo; retained in the asset library and intentionally excluded from the completed-mold portfolio |
+| Mold trial | `/images/process/export-delivery-production-support-molding.png` | Injection mold trial before customer approval | Real Arktech process photo; active in Validation and intentionally excluded from the completed-mold portfolio |
+| Dimensional inspection | `/images/process/sample-validation-inspection-cmm.png` | Dimensional inspection for injection mold sample validation | Real Arktech inspection photo; retained for quality and validation contexts and intentionally excluded from the completed-mold portfolio |
+| Production mold design review | `/images/factory-workshop/injection-mold-engineering-office.webp` | Injection mold engineering team reviewing production mold design before steel cutting | Existing real Arktech engineering-office photo; reused in the Tooling Engineering production-design block |
+| Complete DFM engineering review | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | Complete injection mold DFM engineering review covering parting, cooling, gating and moving mechanisms | Optimized 1800 × 1095 WebP crop from the existing first-party `/images/Molding/DFM.png`; cover and general-information pages containing customer and project identifiers were excluded; active |
+| Engineering to Toolroom bridge | `/images/factory-workshop/injection-mold-fitting-workshop.webp` | Injection mold fitting and tooling component verification in the Arktech toolroom | Existing real Arktech toolroom photo; reused in the Engineering-to-Toolroom manufacturing-flow section |
+| Mold trial validation — Trial Report | `/images/injection-mold-manufacturing/mold-trial-report-evidence.webp` | Mold trial report for injection mold validation | Optimized 1400 × 1037 WebP crop from the existing real Arktech `/images/Mold trail/Mold trail report.png`; customer and project identifiers excluded; active in the validation evidence composite |
+| Mold trial validation — Process Parameters | `/images/injection-mold-manufacturing/injection-molding-process-parameters.webp` | Injection molding parameter sheet recorded during mold trial | Optimized 1200 × 1142 WebP crop from the existing real Arktech `/images/Mold trail/Injection parameter.png`; mold, part and personnel identifiers excluded; active in the validation evidence composite |
+| Mold trial validation — Dimensional Inspection | `/images/quality/dimensional-inspection-report-anonymized.webp` | Dimensional inspection report for molded trial samples | Existing anonymized real Arktech dimensional-report preview; reused in the validation evidence composite |
+| Mold trial validation — Trial Sample | `/images/injection-mold-manufacturing/molded-trial-sample-evidence.webp` | Injection molded trial samples for tooling approval | Optimized 1400 × 919 WebP crop from the existing real Arktech `/images/Mold trail/Mold trail report.png`; customer and project identifiers excluded; active in the validation evidence composite |
 
 ## Capabilities Hub Page
 
@@ -211,6 +246,19 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 | Services industries — Pet Tech Products | `/images/industries/pet-lifestyle-product-parts.png` | Smart pet product housings and molded plastic components | User-supplied homepage industry image; reused in the `/services` traffic-distribution grid |
 | Services industries — Consumer Electronics | `/images/industries/consumer-electronics-enclosures.png` | Consumer electronics enclosures and functional injection molded components | User-supplied homepage industry image; reused in the `/services` traffic-distribution grid |
 
+## Mold Trial, Sampling & Validation Page
+
+No new image or video assets were created for `/services/mold-trial-sampling-support`. The page uses existing first-party Arktech trial media and previously prepared privacy-safe evidence crops.
+
+| Content | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Hero mold-trial video | `/videos/Mold manufacturing/Mold-trial.mp4` | Arktech injection mold trial and validation process | Existing real Arktech mold-trial video; active with muted lazy autoplay, metadata preload and reduced-motion/data-saver handling |
+| Hero video poster | `/images/Mold trail/Mold trial video photos.png` | Injection mold installed in a molding machine for trial and validation | Existing real mold-trial frame; active as the hero loading and reduced-motion fallback |
+| Mold Trial Report evidence | `/images/injection-mold-manufacturing/mold-trial-report-evidence.webp` | Anonymized Arktech mold trial report showing an injection mold installed for validation | Existing optimized crop from a real Arktech mold-trial report; customer and project identifiers excluded; active in the evidence board |
+| Process Parameter evidence | `/images/injection-mold-manufacturing/injection-molding-process-parameters.webp` | Anonymized injection molding process parameter sheet recorded during mold trial | Existing optimized crop from a real Arktech parameter sheet; customer and project identifiers excluded; active in the evidence board and Process Parameters section |
+| Dimensional Inspection evidence | `/images/quality/dimensional-inspection-report-anonymized.webp` | Anonymized dimensional inspection report for molded trial samples | Existing anonymized dimensional-report preview; customer and project identifiers masked; active in the evidence board |
+| Trial Sample evidence | `/images/injection-mold-manufacturing/molded-trial-sample-evidence.webp` | Injection molded trial samples photographed from multiple views for review | Existing optimized crop from a real Arktech trial report; customer and project identifiers excluded; active in the evidence board |
+
 ## Plastic Injection Molding Page
 
 | Content | Approved asset | Recommended alt text | Source/status |
@@ -222,7 +270,7 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 | Production options video poster | `/images/capabilities/plastic-injection-molding-production.webp` | Plastic injection molding production line at Arktech | Existing user-supplied real production image; reused as the lightweight poster for the Production Options video |
 | Production options video | `/videos/Injection%20Molding/injection-molding-production1.mp4` | Plastic injection molding production process | Existing user-supplied 1280 × 720 real production video; selected as the landscape Production Planning visual and loaded near the viewport with metadata preload |
 | Material selection and molded parts | `/images/material-capabilities/engineering-plastic-parts-abs-pc-pa-pom.webp` | Engineering plastic injection molded housings and functional components | Existing approved molded-component image; reused as the single editorial visual in the material-selection section |
-| DFM engineering overview | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | DFM review for plastic injection molding | Existing Arktech engineering visual; reused as the large DFM editorial image |
+| Slider and lifter DFM construction review | `/images/injection-mold-manufacturing/ejection-slider-lifter.webp` | DFM analysis showing slider and lifter directions for undercut mold construction | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; reused as the large DFM engineering visual |
 | Wall thickness and rib design | `/images/plastic-injection-molding/wall-thickness-rib-design.webp` | Wall thickness and rib design review for molded plastic parts | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; active |
 | Draft and undercut review | `/images/plastic-injection-molding/draft-undercut-review.webp` | Draft and undercut analysis for injection molded component | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; active |
 | Gate location and flow review | `/images/plastic-injection-molding/gate-flow-analysis.webp` | Gate location and flow analysis for plastic injection molding | Anonymized technical crop from `/images/Molding/DFM.png`; customer identity, project data and footer excluded; active |
@@ -240,8 +288,10 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |
-| Hero engineering review | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | Arktech engineers reviewing DFM analysis and injection mold design | Existing Arktech engineering-office visual; active in the DFM hero |
-| Design principles and DFM deliverables | `/images/process/dfm-engineering-feedback-old-website.png` | DFM review showing plastic part geometry and injection mold engineering feedback | Existing Arktech DFM and mold-engineering graphic; reused in the design guidance and deliverables sections |
+| Hero engineering review | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | DFM engineering review for injection molded parts before mold design | Anonymized technical crop from the existing first-party `/images/Molding/DFM.png`; active in the DFM hero |
+| DFM review scope report | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | Injection molding DFM report reviewing part design, moldability and tooling requirements | Privacy-safe 1812 × 817 WebP derivative of the existing real `/images/Engineering/DFM report.png`; cover/general-information pages excluded and customer/project response areas masked; active in the DFM Review Scope section |
+| Design principles | `/images/process/dfm-engineering-feedback-old-website.png` | DFM review showing plastic part geometry and injection mold engineering feedback | Existing Arktech DFM and mold-engineering graphic; active in the design guidance section |
+| DFM deliverables report example | `/images/Engineering/dfm-report-tooling-review-example.webp` | Anonymized injection molding DFM report showing parting, gating, venting, tooling actions, cooling and ejection review | Privacy-safe 1600 × 490 WebP derivative of the existing real `/images/Molding/DFM.png`; cover and customer/project pages excluded; active in the DFM Deliverables section |
 | Co-design engineering | `/images/capabilities/co-design-dfm-engineering.webp` | Engineer reviewing plastic part geometry during co-design and DFM | Existing approved engineering visual; active in the Co-Design section |
 
 ## Injection Molding Production Options Page
@@ -281,6 +331,27 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 | Homepage tooling hero | `/images/hero/export-injection-mold-manufacturing-hero.webp` | User-supplied injection mold manufacturing hero image; active |
 | OEM manufacturing hero | `/images/seo/oem-manufacturing-hero.png` | AI-generated |
 | RFQ engineering review | `/images/seo/rfq-engineering-review.png` | AI-generated |
+
+## Full-Site Hero System Audit (2026-10-04)
+
+The first-screen audit reuses approved local media only. No source image or video was edited. The four core commercial heroes use a 42% text / 58% media grid at `1024px`, a 40% text / 60% media grid at `1280px`, and a 38% text / 62% media grid at `1536px` and above, then stack text before media below `1024px`. Other shared split heroes retain the existing `1280px` split behavior.
+
+| Page family | Hero media | Usage/status |
+| --- | --- | --- |
+| Homepage | `/images/hero/export-injection-mold-manufacturing-hero.webp` | Existing approved export-tooling hero restored as a full-width background with a stronger left-side navy readability overlay and complete tooling visible on the right |
+| Capabilities hub | `/images/hero/tooling-mold-trial-engineering-capabilities.webp` | Existing approved tooling, trial and engineering composite; active |
+| Injection Molds hub | `/images/mold-types/Precision-Molds.png` | Existing approved completed precision mold image; active |
+| Industries hub | `/images/industries/robotics-automation.png`, `/images/industries/medial-industry.webp`, `/images/industries/Automotive-Components.png`, `/images/industries/autimotive-ev.webp` | Existing approved industry collage sources; active |
+| Plastic Injection Molding | `/videos/injection-molding-production.mp4` with `/images/capabilities/plastic-injection-molding-production.webp` poster | Existing verified first-party landscape production media; active in the Hero with metadata preload, silent inline autoplay and no controls; preferred over the portrait-oriented homepage edit because it fills the 60–62% desktop frame without black side bars |
+| Injection Mold Manufacturing and Mold Trial | `/videos/Mold manufacturing/Mold-trial.mp4` | Existing first-party mold-trial video; active |
+| DFM Engineering | `/images/injection-mold-manufacturing/complete-dfm-engineering-review.webp` | Existing anonymized engineering review visual; active |
+| Industry child pages | Per-page `heroImage` values in `lib/industry-landing-pages.ts` | Existing approved industry application media; active across all eight primary industry routes |
+| Generic capability and mold-type child pages | Approved slug mapping from `lib/images.ts` | Existing approved local media used only when the mapped file exists |
+| Company, quality, materials, solutions and resource hubs | Existing approved page-specific assets in each `PageHero` call | Added to previously text-only first screens without creating new assets |
+
+Known missing source media remain intentionally unassigned for the gas-assisted injection mold, thermoset mold and die-casting tooling detail heroes. These pages retain a text-led hero until a real approved project asset is supplied.
+
+The pre-launch asset audit confirmed that dedicated gas-assisted injection mold and thermoset mold gallery images are not present in the repository. Their invalid image references were removed rather than replaced with unrelated media. The large-component mold reference now uses the exact existing case-sensitive filename `/images/mold-types/large-component-molds.JPG`, and the die-casting tooling gallery reuses the approved existing `/images/capabilities/die-casting.webp` and `/images/capabilities/die-casting.png` assets.
 
 ## Maintenance notes
 

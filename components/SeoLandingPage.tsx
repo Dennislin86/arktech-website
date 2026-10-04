@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RfqForm } from "@/components/RfqForm";
 import { site } from "@/lib/site";
 import { getSeoPage, type SeoLandingPage as SeoLandingPageData } from "@/lib/seo-pages";
 
@@ -67,8 +68,8 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
 
       <section className="relative overflow-hidden bg-[var(--brand-dark)] text-white">
         <Image src={page.heroImage} alt={page.heroAlt} fill priority sizes="100vw" className="object-cover opacity-35" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,55,94,0.98),rgba(23,55,94,0.9),rgba(23,55,94,0.55))]" />
-        <div className="container-page relative py-16 sm:py-20 lg:py-24">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,55,94,0.98)_0%,rgba(23,55,94,0.90)_38%,rgba(23,55,94,0.58)_62%,rgba(23,55,94,0.20)_100%)]" />
+        <div className="container-page relative py-14 sm:py-16 lg:py-20">
           <nav aria-label="Breadcrumb" className="text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-2">
               <li><Link className="hover:text-white" href="/">Home</Link></li>
@@ -78,9 +79,10 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
               <li aria-current="page" className="text-white">{page.h1}</li>
             </ol>
           </nav>
-          <p className="mt-8 text-xs font-bold uppercase tracking-[0.16em] text-[#f1c5c5]">Engineering & Manufacturing in China</p>
-          <h1 className="internal-page-title mt-4">{page.h1}</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85">{page.subtitle}</p>
+          <div className="mt-8 max-w-[620px]">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f1c5c5]">Engineering & Manufacturing in China</p>
+          <h1 className="split-hero-title mt-4">{page.h1}</h1>
+          <p className="mt-6 text-lg leading-8 text-white/85">{page.subtitle}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:brightness-90" href="/request-a-quote">
               Request RFQ
@@ -88,6 +90,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
             <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/70 bg-white/10 px-6 font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]" href="/resources">
               Download Capability Sheet
             </Link>
+          </div>
           </div>
         </div>
       </section>
@@ -223,19 +226,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
               <Link className="font-bold text-white/85 hover:text-white" href="/contact">Contact Arktech →</Link>
             </nav>
           </div>
-          <form action="/request-a-quote" method="get" className="rounded-sm bg-white p-6 text-[var(--foreground)] shadow-xl">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="grid gap-2 text-sm font-bold">Name<input required name="name" className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal outline-none focus:border-[var(--brand)]" /></label>
-              <label className="grid gap-2 text-sm font-bold">Work Email<input required name="email" type="email" className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal outline-none focus:border-[var(--brand)]" /></label>
-              <label className="grid gap-2 text-sm font-bold">Company<input name="company" className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal outline-none focus:border-[var(--brand)]" /></label>
-              <label className="grid gap-2 text-sm font-bold">Annual Volume<input name="annual-volume" className="min-h-12 rounded-sm border border-[var(--line)] px-3 font-normal outline-none focus:border-[var(--brand)]" /></label>
-            </div>
-            <label className="mt-4 grid gap-2 text-sm font-bold">Project summary<textarea required name="project-summary" className="min-h-28 rounded-sm border border-[var(--line)] p-3 font-normal outline-none focus:border-[var(--brand)]" /></label>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-              <button type="submit" className="min-h-12 rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:brightness-90">Request RFQ</button>
-              <Link href="/request-a-quote" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 font-bold text-[var(--brand-dark)]">Upload CAD Files</Link>
-            </div>
-          </form>
+          <RfqForm source={`SEO landing page: ${page.slug}`} variant="compact" />
         </div>
       </section>
     </>

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Cookie Policy" };
+export const metadata: Metadata = {
+  title: "Cookie Policy",
+  description: "Information about essential and limited analytics cookies that may be used on the Arktech Mold website.",
+  alternates: { canonical: "/cookie-policy" }
+};
 
 export default function CookiePolicyPage() {
   return (

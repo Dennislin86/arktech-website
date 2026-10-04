@@ -33,7 +33,8 @@ const industries: Industry[] = [
     description: "Tooling and molding for interior, control and functional plastic components requiring repeatability, texture and assembly accuracy.",
     applications: ["Interior Trim", "Switch Panels", "Air Vent Components", "Clips & Covers"],
     image: "/images/industries/Automotive-Components.png",
-    alt: "Automotive interior components including dashboard controls display housing and functional plastic parts"
+    alt: "Automotive interior components including dashboard controls display housing and functional plastic parts",
+    href: "/industries/automotive-components"
   },
   {
     title: "Smart Home & IoT",
@@ -56,7 +57,8 @@ const industries: Industry[] = [
     description: "Plastic housings, covers and functional molded parts for consumer and household appliance products.",
     applications: ["Appliance Housings", "Control Panels", "Handles", "Functional Covers"],
     image: "/images/industries/home-appliance.png",
-    alt: "Home appliances with molded housings and electronic control panels"
+    alt: "Home appliances with molded housings and electronic control panels",
+    href: "/industries/home-appliance"
   },
   {
     title: "Pet Tech Products",
@@ -71,7 +73,8 @@ const industries: Industry[] = [
     description: "Cosmetic and functional plastic parts for electronics, smart hardware and portable consumer products.",
     applications: ["Electronic Housings", "Power Products", "Routers", "Windows & Bezels"],
     image: "/images/industries/consumer-electronics-enclosures.png",
-    alt: "Consumer electronics products including headphones smart devices cameras and mobile accessories"
+    alt: "Consumer electronics products including headphones smart devices cameras and mobile accessories",
+    href: "/industries/consumer-electronics"
   }
 ];
 
@@ -167,20 +170,20 @@ export default function IndustriesPage() {
   return (
     <main>
       <section className="border-b border-[var(--line)] bg-white">
-        <div className="container-page grid gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)] lg:items-center lg:py-20">
+        <div className="core-hero-shell grid gap-9 py-10 sm:py-12 md:py-14 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-center lg:gap-10 xl:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] xl:gap-12 xl:py-16 2xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)]">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">Industries We Serve</p>
-            <h1 className="internal-page-title mt-4 text-[var(--brand-dark)]">Injection Molding &amp; Tooling for Product Companies Across Key Industries</h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">Arktech supports product companies and injection molding teams across robotics, medical devices, automotive, smart home, EV charging, home appliances, pet tech and consumer electronics with DFM engineering, export tooling and plastic injection molding.</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="#industry-grid">Explore Industries</Link>
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
+            <h1 className="core-hero-title mt-4 text-[var(--brand-dark)]">Molding &amp; Tooling for Product Industries</h1>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Arktech supports product companies across robotics, medical devices, automotive, smart home, EV charging, home appliances, pet tech and consumer electronics with DFM, tooling and plastic injection molding.</p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="#industry-grid">Explore Industries</Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
             </div>
           </div>
 
-          <div className="grid min-h-[360px] grid-cols-2 gap-2 overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] p-2 shadow-sm sm:min-h-[430px] sm:grid-cols-[1.25fr_0.75fr]">
+          <div className="grid min-h-[300px] grid-cols-2 gap-2 overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] p-2 sm:min-h-[360px] sm:grid-cols-[1.25fr_0.75fr] lg:min-h-[420px] xl:min-h-[440px]">
             <div className="relative row-span-2 overflow-hidden rounded-sm">
-              <Image alt="Robotics application supported by injection molding and tooling" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 31vw, 62vw" src="/images/industries/robotics-automation.png" />
+              <Image alt="Robotics application supported by injection molding and tooling" className="object-cover object-center" fill priority sizes="(min-width: 1024px) 39vw, 62vw" src="/images/industries/robotics-automation.png" />
               <span className="absolute bottom-3 left-3 rounded-sm bg-[rgba(7,32,55,0.84)] px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">Robotics</span>
             </div>
             <div className="relative overflow-hidden rounded-sm">

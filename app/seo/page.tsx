@@ -16,8 +16,12 @@ export default function SeoLandingIndexPage() {
     <>
       <PageHero
         eyebrow="Manufacturing Resources"
-        title="Engineering and manufacturing guides for technical sourcing teams."
+        title="Manufacturing Guides for Technical Sourcing Teams"
         body="Explore focused resources for OEM product companies, EMS manufacturers and injection molding companies sourcing tooling, plastic and metal components, prototypes and assemblies."
+        image={{
+          src: "/images/Engineering/dfm-report-tooling-review-example.webp",
+          alt: "Injection mold DFM report and engineering review reference"
+        }}
       />
       <section className="py-16 sm:py-20">
         <div className="container-page grid gap-5 md:grid-cols-2">

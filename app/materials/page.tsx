@@ -6,7 +6,8 @@ import { materials } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Plastic Injection Molding Materials",
   description:
-    "Engineering plastic material guidance for ABS, PC, PP, PA, POM, PMMA, TPE, PBT, PPS, and glass-filled injection molded parts."
+    "Engineering plastic material guidance for ABS, PC, PP, PA, POM, PMMA, TPE, PBT, PPS, and glass-filled injection molded parts.",
+  alternates: { canonical: "/materials" }
 };
 
 const guidance = [
@@ -21,8 +22,12 @@ export default function MaterialsPage() {
     <>
       <PageHero
         eyebrow="Materials"
-        title="Engineering resin support for injection molded parts."
+        title="Engineering Resin Support for Injection Molding"
         body="Select the right material for performance, cost, compliance, and manufacturability before mold steel is cut."
+        image={{
+          src: "/images/material-capabilities/Engineering-Plastic-Parts.webp",
+          alt: "Engineering plastic parts molded for functional product applications"
+        }}
       />
       <section className="py-14">
         <div className="container-page grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">

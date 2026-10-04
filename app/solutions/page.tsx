@@ -9,7 +9,8 @@ import { solutionPages } from "@/lib/page-data";
 export const metadata: Metadata = {
   title: "Solutions for OEM Product Companies, EMS Manufacturers and Injection Molding Companies",
   description:
-    "Manufacturing solutions for OEM product companies, EMS manufacturers and injection molding companies sourcing molds, plastic parts, metal parts, assembly and engineering support."
+    "Manufacturing solutions for OEM product companies, EMS manufacturers and injection molding companies sourcing molds, plastic parts, metal parts, assembly and engineering support.",
+  alternates: { canonical: "/solutions" }
 };
 
 const comparison = [
@@ -30,8 +31,12 @@ export default function SolutionsPage() {
     <>
       <PageHero
         eyebrow="Solutions"
-        title="Two clear ways to work with Arktech: export tooling partner or full component manufacturing partner."
+        title="Export Tooling or Full Component Manufacturing"
         body="Whether you run injection molding capacity in Europe or North America, or you are an OEM developing plastic and metal products, Arktech helps reduce engineering and supply-chain friction."
+        image={{
+          src: "/images/who-we-serve/oem-product-companies.webp",
+          alt: "Product development components and engineering review for OEM manufacturing programs"
+        }}
       />
       <section className="py-14">
         <div className="container-page grid gap-5 lg:grid-cols-3">

@@ -6,7 +6,8 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Injection Mold Project Management | Export Tooling",
   description:
-    "See how Arktech manages export injection mold projects through RFQ review, DFM, mold design approval, weekly progress reporting, engineering change control, mold trials, sample approval and export delivery."
+    "See how Arktech manages export injection mold projects through DFM, mold design approval, progress reporting, mold trials, sample approval and export delivery.",
+  alternates: { canonical: "/company/project-management" }
 };
 
 const projectControls = [
@@ -154,11 +155,11 @@ export default function ProjectManagementPage() {
   return (
     <>
       <section className="border-b border-[var(--line)] bg-white">
-        <div className="container-page grid gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)] lg:items-center">
+        <div className="container-page grid gap-9 py-12 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Management</p>
-            <h1 className="internal-page-title mt-4 text-[var(--brand-dark)]">
-              Injection Mold Project Management from RFQ to Export Delivery
+            <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">
+              Export Mold Project Management
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">
               Arktech manages export injection mold projects through structured RFQ review, DFM feedback, mold design approval, weekly progress reporting, engineering change control, mold trial coordination, sample approval and export delivery support.

@@ -27,10 +27,10 @@ export function CaseStudyDetail({ project, relatedProjects }: { project: CaseStu
       <section className="border-b border-[var(--line)] bg-[var(--surface-soft)] py-12 sm:py-16">
         <div className="container-page">
           <Link className="focus-ring inline-flex rounded-sm text-sm font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/case-studies">← Back to Case Studies</Link>
-          <div className="mt-7 grid items-center gap-8 lg:grid-cols-[.9fr_1.1fr]">
+          <div className="mt-7 grid items-center gap-8 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-12">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[var(--brand)]">{project.industry} Case Study</p>
-              <h1 className="internal-page-title mt-3">{project.projectName}</h1>
+              <h1 className="split-hero-title mt-3">{project.projectName}</h1>
               <p className="mt-5 text-lg leading-8 text-[var(--muted)]">{project.description}</p>
               <ul className="mt-6 flex flex-wrap gap-2" aria-label="Capabilities used">
                 {project.capabilities.map((item) => <li key={item} className="rounded-sm bg-white px-3 py-2 text-sm font-semibold text-[var(--brand-dark)] shadow-sm">{item}</li>)}

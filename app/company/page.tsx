@@ -5,9 +5,10 @@ import { LazyVideoPlayer } from "@/components/LazyVideoPlayer";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Export Injection Mold Company in China | Arktech Mold",
+  title: "Export Injection Mold Company in China",
   description:
-    "Arktech Mold is the core export injection mold business of Arktech Group LTD., supporting product companies and injection molding companies with DFM engineering, injection mold manufacturing, mold trial support and export tooling delivery."
+    "Arktech Mold is the core export injection mold business of Arktech Group LTD., supporting product companies and injection molding companies with DFM engineering, injection mold manufacturing, mold trial support and export tooling delivery.",
+  alternates: { canonical: "/company" }
 };
 
 const moldCapabilities = [
@@ -48,6 +49,10 @@ export default function CompanyPage() {
         eyebrow="COMPANY PROFILE"
         title="Export Injection Mold Company in China"
         body="Arktech Mold is the core export injection mold business of Arktech Group LTD., supporting product companies and injection molding companies with DFM engineering, injection mold manufacturing, mold trial support and export tooling delivery."
+        image={{
+          src: "/images/company/arktech-mold-video-poster.webp",
+          alt: "Arktech Mold injection mold manufacturing and export tooling operations"
+        }}
       />
 
       <section className="py-14">

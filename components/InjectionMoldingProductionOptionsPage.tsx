@@ -115,10 +115,10 @@ export function InjectionMoldingProductionOptionsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas).replaceAll("<", "\\u003c") }} />
       <main>
         <section className="border-b border-[var(--line)] bg-white">
-          <div className="container-page grid gap-10 py-14 lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)] lg:items-center lg:py-20">
+          <div className="container-page grid gap-9 py-12 sm:py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-12 lg:py-16">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.15em] text-[var(--brand)]">Production Options</p>
-              <h1 className="internal-page-title mt-4 text-[var(--brand-dark)]">Injection Molding from Prototype to Mass Production</h1>
+              <h1 className="split-hero-title mt-4 text-[var(--brand-dark)]">Injection Molding from Prototype to Mass Production</h1>
               <p className="mt-6 text-lg leading-8 text-[var(--muted)]">Arktech supports injection molding programs from early engineering builds through low-volume production and stable repeat mass production. Tooling, DFM, material selection, inspection and secondary operations can be coordinated according to each production stage.</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link href="/request-a-quote" className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-dark)]">Upload CAD for DFM Review</Link>
@@ -127,7 +127,6 @@ export function InjectionMoldingProductionOptionsPage() {
             </div>
             <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
               <div className="relative aspect-[16/10]"><Image src="/images/capabilities/plastic-injection-molding-production.webp" alt="Arktech plastic injection molding production for molded component programs" fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" /></div>
-              <figcaption className="border-t border-[var(--line)] bg-white px-5 py-4 text-sm font-semibold text-[var(--brand-dark)]">Molding support aligned with validation, launch and repeat-production requirements</figcaption>
             </figure>
           </div>
         </section>

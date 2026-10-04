@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     template: "%s | Arktech Mold"
   },
   description: site.description,
+  icons: {
+    icon: "/favicon-arktech.png",
+    apple: "/apple-touch-icon.png"
+  },
   keywords: [
     "tooling and manufacturing partner",
     "export injection molds",
@@ -29,7 +33,19 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
     siteName: site.name,
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/images/hero/export-injection-mold-manufacturing-hero.webp",
+        alt: "Arktech export injection mold manufacturing"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arktech Mold",
+    description: site.description,
+    images: ["/images/hero/export-injection-mold-manufacturing-hero.webp"]
   }
 };
 

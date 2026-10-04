@@ -17,7 +17,7 @@ const megaMenuSecondaryLink = "text-[16px] font-medium leading-[1.35] text-[var(
 const megaMenuSupportingLink = "text-[16px] font-medium leading-[1.35] text-[var(--muted)] lg:text-[17px]";
 
 function activeMenuLinkLabel(item: NavigationItem, pathname: string) {
-  if (item.id === "injection-molds" && pathname === "/services/injection-mold-manufacturing") return "Export Injection Molds";
+  if (item.id === "injection-molds" && pathname === "/services/injection-mold-manufacturing") return undefined;
   return item.groups.flatMap((group) => group.links).find((link) => link.href === pathname && link.href.startsWith("/"))?.label;
 }
 
@@ -85,11 +85,8 @@ const navigation: NavigationItem[] = [
       {
         title: "Mold Types",
         links: [
-          { label: "Custom Injection Molds", href: "/services/injection-mold-manufacturing", priority: true },
-          { label: "Production Injection Molds", href: "/services/injection-mold-manufacturing" },
-          { label: "Export Injection Molds", href: "/services/injection-mold-manufacturing", priority: true },
           { label: "Multi-Cavity Molds", href: "/tooling-examples/multi-cavity-molds" },
-          { label: "High-Cavitation Molds", href: "/tooling-examples/multi-cavity-molds" },
+          { label: "Family Molds", href: "/resources/injection-molds/multi-cavity-vs-family-mold" },
           { label: "Large Injection Molds", href: "/tooling-examples/large-component-molds" },
           { label: "Complex Injection Molds", href: "/services/injection-mold-manufacturing" },
           { label: "Insert Molding Tools", href: "/tooling-examples/insert-molds" },
@@ -97,7 +94,7 @@ const navigation: NavigationItem[] = [
           { label: "Two-Shot / 2K Molds", href: "/tooling-examples/two-shot-2k-molds" },
           { label: "Unscrewing Molds", href: "/tooling-examples/unscrewing-molds" },
           { label: "Hot Runner Molds", href: "/tooling-examples/hot-runner-molds" },
-          { label: "Valve Gate Molds", href: "/tooling-examples/hot-runner-molds" }
+          { label: "High-Temperature Injection Molds", href: "/tooling-examples#high-temperature-injection-molds" }
         ]
       },
       {
@@ -126,12 +123,12 @@ const navigation: NavigationItem[] = [
         links: [
           { label: "Robotics", href: "/industries/robotics" },
           { label: "Medical & Healthcare Devices", href: "/industries/medical-devices" },
-          { label: "Automotive Components", href: "/industries" },
+          { label: "Automotive Components", href: "/industries/automotive-components" },
           { label: "Smart Home & IoT", href: "/industries/smart-home" },
           { label: "Energy Storage & EV Charging", href: "/industries/new-energy" },
-          { label: "Home Appliance", href: "/industries" },
+          { label: "Home Appliance", href: "/industries/home-appliance" },
           { label: "Pet Tech Products", href: "/industries/pet-tech" },
-          { label: "Consumer Electronics", href: "/industries" }
+          { label: "Consumer Electronics", href: "/industries/consumer-electronics" }
         ]
       }
     ],
@@ -205,6 +202,7 @@ function DesktopPanel({ item, open, onEnter, onLeave }: { item: NavigationItem; 
   const isIndustries = item.id === "industries";
   const pathname = usePathname();
   const activeLabel = activeMenuLinkLabel(item, pathname);
+  const moldTypeColumnBreak = isInjectionMolds ? 4 : Math.ceil((item.groups[0]?.links.length ?? 0) / 2);
   const columns = isCompany ? "grid-cols-[21fr_23fr_25fr_31fr]" : isResources ? "grid-cols-[30fr_27fr_43fr]" : isCapabilities ? "grid-cols-[1.05fr_1.05fr_0.95fr_0.95fr]" : isInjectionMolds ? "grid-cols-[minmax(0,2fr)_minmax(250px,0.78fr)]" : isIndustries ? "grid-cols-1" : item.groups.length === 4 ? "grid-cols-4" : item.groups.length === 2 ? "grid-cols-2" : "grid-cols-3";
   return (
     <div aria-hidden={!open} className={`absolute inset-x-0 top-full z-[9999] hidden border-t border-[var(--line)] bg-white shadow-[0_18px_35px_rgba(15,35,60,0.10)] transition duration-150 lg:block ${open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"}`} id={`${item.id}-mega-menu`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
@@ -215,10 +213,10 @@ function DesktopPanel({ item, open, onEnter, onLeave }: { item: NavigationItem; 
               <h2 className={megaMenuSectionHeading} id="injection-molds-mold-types">Mold Types</h2>
               <div className="mt-6 grid grid-cols-2 gap-x-12">
                 <div className="grid content-start gap-1">
-                  {item.groups[0].links.slice(0, 7).map((link) => <MenuLinkItem active={activeLabel === link.label} item={link} key={link.label} tabIndex={open ? undefined : -1} />)}
+                  {item.groups[0].links.slice(0, moldTypeColumnBreak).map((link) => <MenuLinkItem active={activeLabel === link.label} item={link} key={link.label} tabIndex={open ? undefined : -1} />)}
                 </div>
                 <div className="grid content-start gap-1">
-                  {item.groups[0].links.slice(7).map((link) => <MenuLinkItem active={activeLabel === link.label} item={link} key={link.label} tabIndex={open ? undefined : -1} />)}
+                  {item.groups[0].links.slice(moldTypeColumnBreak).map((link) => <MenuLinkItem active={activeLabel === link.label} item={link} key={link.label} tabIndex={open ? undefined : -1} />)}
                 </div>
               </div>
             </section>
