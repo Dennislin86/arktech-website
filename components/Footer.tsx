@@ -12,6 +12,7 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
   {
     title: "Core Capabilities",
     links: [
+      { label: "Manufacturing Capabilities", href: "/manufacturing-capabilities" },
       { label: "Injection Mold Manufacturing", href: "/services/injection-mold-manufacturing" },
       { label: "Plastic Injection Molding", href: "/services/plastic-injection-molding" },
       { label: "Mold Trial & Validation", href: "/services/mold-trial-sampling-support" },

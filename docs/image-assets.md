@@ -240,7 +240,23 @@ No new image files were created for Phase 1. The resource hub, four pillar guide
 | Mold trial validation — Dimensional Inspection | `/images/quality/dimensional-inspection-report-anonymized.webp` | Dimensional inspection report for molded trial samples | Existing anonymized real Arktech dimensional-report preview; reused in the validation evidence composite |
 | Mold trial validation — Trial Sample | `/images/injection-mold-manufacturing/molded-trial-sample-evidence.webp` | Injection molded trial samples for tooling approval | Optimized 1400 × 919 WebP crop from the existing real Arktech `/images/Mold trail/Mold trail report.png`; customer and project identifiers excluded; active in the validation evidence composite |
 
-## Capabilities Hub Page
+## Manufacturing Capabilities Hub Page
+
+The former `/services/` Hub moved permanently to `/manufacturing-capabilities/`. The rebuilt page reuses approved local assets only; no new image, stock media or generated placeholder was added.
+
+| Content | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Hero tooling, mold trial and engineering composite | `/images/hero/tooling-mold-trial-engineering-capabilities.webp` | Injection mold tooling, mold trial and engineering support at Arktech Mold | Existing approved optimized WebP; active on `/manufacturing-capabilities/` |
+| Primary injection mold manufacturing | `/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp` | Injection mold manufacturing in the Arktech toolroom | Existing first-party video frame; active as documentary tooling evidence |
+| Primary plastic injection molding | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Plastic injection molding production on an Arktech molding machine | Existing Arktech-owned production-video frame; active |
+| DFM & Co-Design | `/images/Engineering/injection-molding-dfm-report-anonymized.webp` | DFM report for injection mold design review | Existing privacy-safe real DFM report; active with live HTML explanation |
+| Mold Trial & Validation | `/images/process/export-delivery-production-support-molding.png` | Injection mold trial and sample validation before approval | Existing real Arktech mold-trial photo; active |
+| Quality Inspection | `/images/process/sample-validation-inspection-cmm.png` | Dimensional inspection during injection mold trial validation | Existing real Arktech inspection photo; active |
+| Insert Molding and Overmolding | `/images/mold-types/insert-molding-tools.webp` | Insert molding tool for integrated inserts in plastic components | Existing approved real tooling image; reused for both verified process routes because no separate approved Overmolding mold photo exists |
+| Two-Shot / 2K Molding | `/images/mold-types/two-shot-2k-bi-injection-molds.webp` | Two-shot 2K injection mold for multi-material plastic components | Existing approved real tooling image; active |
+| Industry application cards | Existing approved assets under `/images/industries/` | Page-specific factual alt text | Reuses the approved Robotics, Medical, Automotive, Smart Home, Home Appliance and Consumer Electronics images; below-fold and lazy-loaded |
+
+### Former `/services/` Hub asset record (superseded by the migration)
 
 | Content | Approved asset | Recommended alt text | Source/status |
 | --- | --- | --- | --- |

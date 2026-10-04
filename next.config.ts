@@ -64,7 +64,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/service",
-        destination: "/services",
+        destination: "/manufacturing-capabilities",
+        permanent: true
+      },
+      {
+        source: "/services",
+        destination: "/manufacturing-capabilities",
         permanent: true
       },
       {

@@ -490,7 +490,7 @@ export function PlasticInjectionMoldingPage() {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-        { "@type": "ListItem", position: 2, name: "Capabilities", item: `${site.url}/services` },
+        { "@type": "ListItem", position: 2, name: "Capabilities", item: `${site.url}/manufacturing-capabilities/` },
         { "@type": "ListItem", position: 3, name: "Plastic Injection Molding", item: pageUrl }
       ]
     }
@@ -508,7 +508,7 @@ export function PlasticInjectionMoldingPage() {
         }]}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Capabilities", href: "/services" },
+          { label: "Capabilities", href: "/manufacturing-capabilities" },
           { label: "Plastic Injection Molding" }
         ]}
         description="Arktech supports injection molding for engineering components, product housings and OEM programs from prototype builds and low-volume production through stable repeat and mass production."

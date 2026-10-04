@@ -402,7 +402,7 @@ export function InjectionMoldManufacturingPage() {
         }]}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Capabilities", href: "/services" },
+          { label: "Capabilities", href: "/manufacturing-capabilities" },
           { label: "Injection Mold Manufacturing" }
         ]}
         description="Arktech manufactures export-ready injection molds in China for product companies and injection molders worldwide, with DFM engineering, mold design, mold trials, validation and documented delivery before shipment."

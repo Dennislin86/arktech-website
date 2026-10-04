@@ -17,7 +17,7 @@ export const site = {
     legacyWebsite: "https://www.arktech-group.com"
   },
   nav: [
-    { label: "Services", href: "/services" },
+    { label: "Capabilities", href: "/manufacturing-capabilities" },
     { label: "Industries", href: "/industries" },
     { label: "Solutions", href: "/solutions" },
     { label: "Injection Molds", href: "/injection-molds" },

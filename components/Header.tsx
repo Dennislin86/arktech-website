@@ -23,6 +23,7 @@ function activeMenuLinkLabel(item: NavigationItem, pathname: string) {
 
 function isTopLevelActive(item: NavigationItem, pathname: string) {
   if (item.id === "resources" && pathname.startsWith("/case-studies")) return true;
+  if (item.id === "capabilities" && pathname.startsWith("/services/")) return true;
   return pathname === item.href || pathname.startsWith(`${item.href}/`);
 }
 
@@ -30,7 +31,7 @@ const navigation: NavigationItem[] = [
   {
     id: "capabilities",
     label: "Capabilities",
-    href: "/services",
+    href: "/manufacturing-capabilities",
     groups: [
       {
         title: "Export Tooling",
@@ -75,7 +76,7 @@ const navigation: NavigationItem[] = [
         ]
       }
     ],
-    overview: { label: "View All Capabilities", href: "/services" }
+    overview: { label: "View All Capabilities", href: "/manufacturing-capabilities" }
   },
   {
     id: "injection-molds",

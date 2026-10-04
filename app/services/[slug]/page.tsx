@@ -132,5 +132,5 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     return <MoldTrialValidationPage />;
   }
 
-  return <DetailPage page={page} parentHref="/services" parentLabel="Services" />;
+  return <DetailPage page={page} parentHref="/manufacturing-capabilities" parentLabel="Capabilities" />;
 }
