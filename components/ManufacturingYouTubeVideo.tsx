@@ -7,6 +7,12 @@ const videoId = "Fch2Y-y6cYI";
 const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
 const poster = "/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp";
 
+type ManufacturingYouTubeVideoProps = {
+  layout?: "inline" | "fill";
+  requireFinePointerForAutoplay?: boolean;
+  sizes?: string;
+};
+
 type YouTubeEvent = { data: number; target: YouTubePlayer };
 type YouTubeErrorEvent = { data: number; target: YouTubePlayer };
 
@@ -74,13 +80,18 @@ function loadYouTubeApi() {
   return youTubeApiPromise;
 }
 
-export function ManufacturingYouTubeVideo() {
+export function ManufacturingYouTubeVideo({
+  layout = "inline",
+  requireFinePointerForAutoplay = false,
+  sizes = "(min-width: 1024px) 58vw, 100vw"
+}: ManufacturingYouTubeVideoProps = {}) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const playerMountRef = useRef<HTMLDivElement | null>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
   const isMountedRef = useRef(true);
   const isVisibleRef = useRef(false);
   const isMobileRef = useRef(false);
+  const hasFinePointerRef = useRef(false);
   const reducedMotionRef = useRef(false);
   const saveDataRef = useRef(false);
   const manualPlayRequestedRef = useRef(false);
@@ -96,8 +107,11 @@ export function ManufacturingYouTubeVideo() {
   const [embedError, setEmbedError] = useState(false);
 
   const canAutoplay = useCallback(() => (
-    !isMobileRef.current && !reducedMotionRef.current && !saveDataRef.current
-  ), []);
+    !isMobileRef.current &&
+    !reducedMotionRef.current &&
+    !saveDataRef.current &&
+    (!requireFinePointerForAutoplay || hasFinePointerRef.current)
+  ), [requireFinePointerForAutoplay]);
 
   const requestManualPlay = useCallback(() => {
     manualPlayRequestedRef.current = true;
@@ -114,9 +128,11 @@ export function ManufacturingYouTubeVideo() {
     isMountedRef.current = true;
     const mobileQuery = window.matchMedia("(max-width: 767px)");
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const finePointerQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
 
     isMobileRef.current = mobileQuery.matches;
+    hasFinePointerRef.current = finePointerQuery.matches;
     reducedMotionRef.current = motionQuery.matches;
     saveDataRef.current = Boolean(connection?.saveData);
 
@@ -248,7 +264,8 @@ export function ManufacturingYouTubeVideo() {
 
   return (
     <div
-      className="relative aspect-video w-full overflow-hidden rounded-md border border-white/15 bg-black"
+      className={layout === "fill" ? "absolute inset-0 h-full w-full overflow-hidden bg-black" : "relative aspect-video w-full overflow-hidden rounded-md border border-white/15 bg-black"}
+      data-player-layout={layout}
       data-player-requested={playerRequested ? "true" : "false"}
       data-player-state={embedError ? "error" : playing ? "playing" : playerReady && userPaused ? "paused-by-user" : playerReady ? "ready" : playerRequested ? "loading" : "poster"}
       ref={sectionRef}
@@ -258,11 +275,15 @@ export function ManufacturingYouTubeVideo() {
         className="object-cover object-center"
         fill
         loading="lazy"
-        sizes="(min-width: 1024px) 58vw, 100vw"
+        sizes={sizes}
         src={poster}
       />
 
-      {playerRequested && !embedError ? <div className="absolute inset-0 [&_iframe]:h-full [&_iframe]:w-full" ref={playerMountRef} /> : null}
+      {playerRequested && !embedError ? (
+        <div className="absolute inset-0 [&>iframe]:h-full [&>iframe]:w-full">
+          <div ref={playerMountRef} />
+        </div>
+      ) : null}
 
       {!playerRequested ? (
         <button

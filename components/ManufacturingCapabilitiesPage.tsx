@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FullBleedHero } from "@/components/FullBleedHero";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
+import { ManufacturingYouTubeVideo } from "@/components/ManufacturingYouTubeVideo";
 
 const primaryCapabilities = [
   {
@@ -12,7 +13,8 @@ const primaryCapabilities = [
     points: ["DFM & Mold Design", "CNC / EDM Machining", "Fitting & Assembly", "Mold Trial", "Export Tooling"],
     cta: "Explore Injection Mold Manufacturing",
     href: "/injection-mold-manufacturing",
-    video: "/videos/injection-mold-manufacturing/mold-manufacturing.mp4",
+    video: null,
+    youtube: true,
     poster: "/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp",
     ariaLabel: "Arktech injection mold manufacturing process",
     mediaLabel: "Real Arktech toolmaking, fitting and mold assembly"
@@ -26,6 +28,7 @@ const primaryCapabilities = [
     cta: "Explore Plastic Injection Molding",
     href: "/plastic-injection-molding",
     video: "/videos/Injection Molding/injection-molding-production1.mp4",
+    youtube: false,
     poster: "/images/capabilities/plastic-injection-molding-production-video-frame.webp",
     ariaLabel: "Plastic injection molding production process at Arktech",
     mediaLabel: "Real Arktech injection molding production"
@@ -174,8 +177,14 @@ export function ManufacturingCapabilitiesPage() {
             {primaryCapabilities.map((capability, index) => (
               <article className="grid overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] lg:grid-cols-[minmax(0,55fr)_minmax(0,45fr)]" key={capability.title}>
                 <div className={`relative aspect-video overflow-hidden bg-[var(--brand-dark)] lg:aspect-auto lg:min-h-[430px] ${index === 1 ? "lg:order-2" : ""}`}>
-                  <LazyAutoplayVideo ariaLabel={capability.ariaLabel} className="absolute inset-0 h-full w-full object-cover" poster={capability.poster} preload="none" src={capability.video} />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08233acc] to-transparent px-5 pb-5 pt-16 text-sm font-semibold text-white sm:px-6" aria-hidden="true">{capability.mediaLabel}</div>
+                  {capability.youtube ? (
+                    <ManufacturingYouTubeVideo layout="fill" requireFinePointerForAutoplay sizes="(min-width: 1024px) 55vw, 100vw" />
+                  ) : (
+                    <>
+                      <LazyAutoplayVideo ariaLabel={capability.ariaLabel} className="absolute inset-0 h-full w-full object-cover" poster={capability.poster} preload="none" src={capability.video ?? ""} />
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08233acc] to-transparent px-5 pb-5 pt-16 text-sm font-semibold text-white sm:px-6" aria-hidden="true">{capability.mediaLabel}</div>
+                    </>
+                  )}
                 </div>
                 <div className={`flex flex-col justify-center bg-white p-6 sm:p-8 lg:p-10 ${index === 1 ? "lg:order-1" : ""}`}>
                   <p className="text-xs font-bold uppercase tracking-[0.13em] text-[var(--brand)]">{capability.eyebrow}</p>
