@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DfmReportPreview } from "@/components/DfmReportPreview";
 import { InjectionMoldingProductionVideo } from "@/components/InjectionMoldingProductionVideo";
 import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 import { ToolingGallery } from "@/components/ToolingGallery";
@@ -245,8 +246,8 @@ export function HomePage() {
       </section>
 
       <section className="bg-white py-14 sm:py-16" aria-labelledby="dfm-heading">
-        <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,48fr)_minmax(0,52fr)] lg:items-center lg:gap-12">
-          <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-white"><div className="relative aspect-[16/10] bg-[var(--surface-soft)]"><Image alt="DFM report for injection mold design review" className="object-contain object-center" fill sizes="(min-width: 1024px) 48vw, 100vw" src="/images/Engineering/injection-molding-dfm-report-anonymized.webp" /></div><figcaption className="border-t border-[var(--line)] px-4 py-3 text-sm leading-6 text-[var(--muted)]">Real engineering review before mold design release.</figcaption></figure>
+        <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,54fr)_minmax(0,46fr)] lg:items-center lg:gap-12 xl:gap-14">
+          <DfmReportPreview />
           <div><SectionHeading body="Review moldability, release, filling and tooling risks before steel is machined." eyebrow="DFM & Mold Design" id="dfm-heading" title="Engineering Before Steel Cutting" /><div className="mt-6"><CheckList items={["Parting line", "Draft & undercuts", "Gate strategy", "Ejection", "Steel-safe conditions", "Moldability risks"]} /></div><Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molding-engineering">Explore DFM &amp; Mold Design <span aria-hidden="true" className="ml-2">→</span></Link></div>
         </div>
       </section>
