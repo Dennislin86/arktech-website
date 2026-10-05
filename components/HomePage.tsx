@@ -182,14 +182,20 @@ export function HomePage() {
             <dl className="mt-5 grid max-w-[620px] grid-cols-1 gap-4 min-[390px]:grid-cols-2 sm:gap-6" aria-label="Arktech mold manufacturing metrics">
               <div className="border-l-2 border-[var(--brand)] pl-3.5 sm:pl-4">
                 <dt className="text-xs font-medium uppercase tracking-[0.08em] text-white/65 sm:text-[0.8125rem]">Mold Size &amp; Weight</dt>
-                <dd className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 min-[390px]:grid-cols-1 sm:grid-cols-2">
+                <dd className="mt-2 grid grid-cols-2 gap-x-5 gap-y-2 min-[390px]:grid-cols-1 sm:grid-cols-2 sm:gap-x-7">
                   <span>
                     <span className="block text-[0.6875rem] font-medium uppercase tracking-[0.06em] text-white/60">Size</span>
-                    <strong className="mt-0.5 block whitespace-nowrap text-lg leading-6 text-white sm:text-xl">Up to 2,000 mm</strong>
+                    <strong className="mt-1 block text-lg leading-5 text-white sm:text-xl sm:leading-6">
+                      <span className="block">Up to</span>
+                      <span className="block whitespace-nowrap">2,000 mm</span>
+                    </strong>
                   </span>
                   <span>
                     <span className="block text-[0.6875rem] font-medium uppercase tracking-[0.06em] text-white/60">Weight</span>
-                    <strong className="mt-0.5 block whitespace-nowrap text-lg leading-6 text-white sm:text-xl">Up to 30 Tonnes</strong>
+                    <strong className="mt-1 block text-lg leading-5 text-white sm:text-xl sm:leading-6">
+                      <span className="block">Up to</span>
+                      <span className="block whitespace-nowrap">30 Tonnes</span>
+                    </strong>
                   </span>
                 </dd>
               </div>

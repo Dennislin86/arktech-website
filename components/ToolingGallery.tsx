@@ -45,9 +45,6 @@ function GalleryCard({ item, clone = false, onOpen }: { item: GalleryItem; clone
           src={item.image}
         />
       </span>
-      <span className="block border-t border-[var(--line)] px-3 py-2.5 text-sm font-semibold leading-5 text-[var(--brand-dark)] transition group-hover:text-[var(--brand)]">
-        {item.title}
-      </span>
     </button>
   );
 }
@@ -55,7 +52,7 @@ function GalleryCard({ item, clone = false, onOpen }: { item: GalleryItem; clone
 function GalleryRow({ direction, rowItems, onOpen }: { direction: "left" | "right"; rowItems: GalleryItem[]; onOpen: (item: GalleryItem, trigger: HTMLButtonElement) => void }) {
   if (!rowItems.length) return null;
   const shouldAnimate = rowItems.length >= 3;
-  const duration = Math.max(34, rowItems.length * 10);
+  const duration = Math.max(34, rowItems.length * 10) / 1.5;
   const style = { "--gallery-duration": `${duration}s` } as CSSProperties;
 
   return (
