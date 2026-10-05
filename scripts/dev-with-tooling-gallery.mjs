@@ -6,10 +6,10 @@ import { generateToolingGallery } from "./generate-tooling-gallery.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceFolders = [
-  path.join(projectRoot, "public", "images", "tooling-gallery", "Mould"),
-  path.join(projectRoot, "public", "images", "tooling-gallery", "Plastic part")
+  path.join(projectRoot, "source-assets", "tooling-gallery", "Mould"),
+  path.join(projectRoot, "source-assets", "tooling-gallery", "Plastic part")
 ];
-const metadataFile = path.join(projectRoot, "public", "images", "tooling-gallery", "metadata.json");
+const metadataFile = path.join(projectRoot, "source-assets", "tooling-gallery", "metadata.json");
 
 await generateToolingGallery();
 

@@ -1,0 +1,85 @@
+{
+  "Mould/001-precision-injection-mold.png": {
+    "title": "Precision Injection Mold",
+    "alt": "Completed precision injection mold with core and cavity halves",
+    "order": 1,
+    "caseStudyUrl": "/injection-molds/precision-injection-molds"
+  },
+  "Mould/002-complex-injection-mold.png": {
+    "title": "Complex Injection Mold",
+    "alt": "Completed complex injection mold with coordinated tooling actions",
+    "order": 2,
+    "caseStudyUrl": "/injection-molds/complex-injection-molds"
+  },
+  "Mould/003-multi-cavity-injection-mold.webp": {
+    "title": "Multi-Cavity Injection Mold",
+    "alt": "Completed multi-cavity injection mold with repeated production cavities",
+    "order": 3,
+    "caseStudyUrl": "/injection-molds/multi-cavity-molds"
+  },
+  "Mould/004-insert-molding-tool.webp": {
+    "title": "Insert Molding Tool",
+    "alt": "Completed insert molding tool shown open for tooling inspection",
+    "order": 4,
+    "caseStudyUrl": "/injection-molds/insert-molding-tools"
+  },
+  "Mould/005-two-shot-2k-injection-mold.webp": {
+    "title": "Two-Shot / 2K Injection Mold",
+    "alt": "Two completed injection molds for a two-shot molded component",
+    "order": 5,
+    "caseStudyUrl": "/injection-molds/two-shot-2k-molds"
+  },
+  "Mould/006-unscrewing-injection-mold.webp": {
+    "title": "Unscrewing Injection Mold",
+    "alt": "Completed unscrewing injection mold with threaded molded parts",
+    "order": 6,
+    "caseStudyUrl": "/injection-molds/unscrewing-molds"
+  },
+  "Mould/007-hot-runner-injection-mold.webp": {
+    "title": "Hot Runner Injection Mold",
+    "alt": "Completed hot runner injection mold with open core and cavity halves",
+    "order": 7,
+    "caseStudyUrl": "/injection-molds/hot-runner-molds"
+  },
+  "Mould/008-prototype-injection-mold.webp": {
+    "title": "Prototype Injection Mold",
+    "alt": "Prototype injection mold with a molded plastic validation sample",
+    "order": 8,
+    "caseStudyUrl": "/injection-molds/prototype-injection-molds"
+  },
+  "Plastic part/IMG_6417.jpg": {
+    "title": "Lattice Molded Panels",
+    "alt": "Two gray molded circular panels with open lattice patterns",
+    "order": 1
+  },
+  "Plastic part/IMG_6419.jpg": {
+    "title": "Cylindrical Housing Components",
+    "alt": "Gray molded cylindrical housing components shown disassembled",
+    "order": 2
+  },
+  "Plastic part/IMG_6422.jpg": {
+    "title": "Functional Molded Component",
+    "alt": "Black molded plastic component with ribs bosses and mounting features",
+    "order": 3
+  },
+  "Plastic part/IMG_6423.jpg": {
+    "title": "Decorative Housing Components",
+    "alt": "Decorative molded cover and black vented circular housing",
+    "order": 4
+  },
+  "Plastic part/IMG_6424.jpg": {
+    "title": "Translucent Housing Components",
+    "alt": "Smoke-tinted translucent molded container housing with matching lid",
+    "order": 5
+  },
+  "Plastic part/IMG_6453.jpg": {
+    "title": "White Housing Components",
+    "alt": "White molded circular housing components and curved mounting part",
+    "order": 6
+  },
+  "Plastic part/IMG_6475.jpg": {
+    "title": "Rectangular Housing Components",
+    "alt": "Gray and black rectangular molded housing components with sealing edges",
+    "order": 7
+  }
+}

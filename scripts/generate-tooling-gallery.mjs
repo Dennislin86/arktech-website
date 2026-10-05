@@ -5,7 +5,8 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const defaultGalleryRoot = path.join(projectRoot, "public", "images", "tooling-gallery");
+const defaultSourceRoot = path.join(projectRoot, "source-assets", "tooling-gallery");
+const defaultOutputRoot = path.join(projectRoot, "public", "images", "tooling-gallery", "optimized");
 const defaultManifestPath = path.join(projectRoot, "generated", "tooling-gallery-manifest.json");
 const supportedExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 
@@ -74,12 +75,12 @@ async function optimizeImage(sourcePath, outputPath) {
 
 export async function generateToolingGallery({
   quiet = false,
-  galleryRoot = defaultGalleryRoot,
+  sourceRoot = defaultSourceRoot,
+  outputRoot = defaultOutputRoot,
   manifestPath = defaultManifestPath,
   publicBasePath = "/images/tooling-gallery/optimized"
 } = {}) {
-  const outputRoot = path.join(galleryRoot, "optimized");
-  const metadataPath = path.join(galleryRoot, "metadata.json");
+  const metadataPath = path.join(sourceRoot, "metadata.json");
   await ensureFolder(outputRoot);
   await ensureFolder(path.dirname(manifestPath));
   const metadataOverrides = await loadMetadata(metadataPath);
@@ -89,7 +90,7 @@ export async function generateToolingGallery({
   let cachedCount = 0;
 
   for (const category of categories) {
-    const sourceFolder = path.join(galleryRoot, category.folder);
+    const sourceFolder = path.join(sourceRoot, category.folder);
     await ensureFolder(sourceFolder);
     const filenames = (await readdir(sourceFolder))
       .filter((filename) => !filename.startsWith(".") && supportedExtensions.has(path.extname(filename).toLowerCase()))
@@ -98,7 +99,8 @@ export async function generateToolingGallery({
     for (const filename of filenames) {
       const sourcePath = path.join(sourceFolder, filename);
       const relativeKey = `${category.folder}/${filename}`;
-      const override = metadataOverrides[relativeKey] ?? {};
+      const override = metadataOverrides[relativeKey];
+      if (!override) continue;
       const source = await readFile(sourcePath);
       const hash = createHash("sha256").update(source).digest("hex").slice(0, 12);
       const slug = slugify(path.parse(filename).name);

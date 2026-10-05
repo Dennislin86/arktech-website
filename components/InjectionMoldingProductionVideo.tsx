@@ -10,21 +10,27 @@ export function InjectionMoldingProductionVideo() {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isInView, setIsInView] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(true);
+  const [posterOnly, setPosterOnly] = useState(true);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const updateMotionPreference = () => setPrefersReducedMotion(mediaQuery.matches);
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
+    const saveData = Boolean((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData);
+    const updatePlaybackPreference = () => setPosterOnly(mediaQuery.matches || mobileQuery.matches || saveData);
 
-    updateMotionPreference();
-    mediaQuery.addEventListener("change", updateMotionPreference);
+    updatePlaybackPreference();
+    mediaQuery.addEventListener("change", updatePlaybackPreference);
+    mobileQuery.addEventListener("change", updatePlaybackPreference);
 
-    return () => mediaQuery.removeEventListener("change", updateMotionPreference);
+    return () => {
+      mediaQuery.removeEventListener("change", updatePlaybackPreference);
+      mobileQuery.removeEventListener("change", updatePlaybackPreference);
+    };
   }, []);
 
   useEffect(() => {
     const container = containerRef.current;
-    if (!container || prefersReducedMotion) return;
+    if (!container || posterOnly) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => setIsInView(entry.isIntersecting),
@@ -33,27 +39,27 @@ export function InjectionMoldingProductionVideo() {
 
     observer.observe(container);
     return () => observer.disconnect();
-  }, [prefersReducedMotion]);
+  }, [posterOnly]);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    if (isInView && !prefersReducedMotion) {
+    if (isInView && !posterOnly) {
       void video.play().catch(() => {
         // The poster remains visible when a browser blocks muted autoplay.
       });
     } else {
       video.pause();
     }
-  }, [isInView, prefersReducedMotion]);
+  }, [isInView, posterOnly]);
 
   return (
     <div
       ref={containerRef}
       className="relative aspect-video overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm"
     >
-      {prefersReducedMotion ? (
+      {posterOnly ? (
         <Image
           src={POSTER_SRC}
           alt="Injection mold installed for plastic injection molding production"
