@@ -35,6 +35,8 @@ The Homepage gallery is generated from two user-managed source directories. Orig
 
 The initial set contains eight completed-mold images and seven molded-part/project images. All are copied from approved local Arktech assets already documented in the Injection Mold Types, Material Capabilities and Arktech Group Case Studies sections below. No external, competitor, stock or newly generated asset was introduced. Web paths containing the `Plastic part` source-folder space are not emitted into the page: the generated derivatives use safe lowercase hyphenated filenames under `/images/tooling-gallery/optimized/`.
 
+Gallery titles are displayed only when an explicit descriptive title exists in `/images/tooling-gallery/metadata.json`. Newly discovered files without reviewed metadata use the category-level factual alt fallback and never expose their filename as a caption, tooltip, dialog heading or accessible control name.
+
 ## Who We Serve
 
 | Content | Approved asset | Recommended alt text | Source/status |

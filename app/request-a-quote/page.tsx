@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { RfqForm } from "@/components/RfqForm";
 
 export const metadata: Metadata = {
-  title: "Upload CAD Files for DFM Review & Mold Quotation",
+  title: "Request an Injection Mold or Molding Quote",
   description:
-    "Upload CAD files for DFM engineering review, injection mold quotation, and manufacturing feasibility feedback from Arktech's China team within 24 hours.",
+    "Share CAD files, drawings and project requirements for injection mold or plastic injection molding quotation planning with Arktech.",
   alternates: { canonical: "/request-a-quote" }
 };
 
@@ -13,9 +13,9 @@ export default function RequestQuotePage() {
     <>
       <section className="bg-[var(--brand-dark)] py-16 text-white sm:py-20" id="top">
         <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#f4c7ca]">DFM Engineering Review</p>
-          <h1 className="internal-page-title mt-4">Upload CAD Files for DFM Review, Injection Mold Quotation &amp; Manufacturing Feasibility Analysis</h1>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">Get engineering feedback on manufacturability, tooling strategy, cost drivers, and production readiness from our China manufacturing team within 24 hours.</p>
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#f4c7ca]">Project Quotation</p>
+          <h1 className="internal-page-title mt-4">Request an Injection Mold or Molding Quote</h1>
+          <p className="mt-5 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">Share CAD files, drawings and project requirements for engineering review and quotation planning.</p>
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export default function RequestQuotePage() {
 
       <section className="border-y border-[var(--line)] bg-[var(--surface-soft)] py-10">
         <div className="container-page grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {["ISO 9001:2015 quality management", "Export tooling experience for EU & US markets", "NDA available", "24-hour engineering response target"].map((item) => (
+          {["ISO 9001:2015 quality management", "Export tooling experience for EU & US markets", "NDA available"].map((item) => (
             <div className="border-l-4 border-[var(--brand)] bg-white p-5 font-bold text-[var(--brand-dark)] shadow-sm" key={item}>{item}</div>
           ))}
         </div>

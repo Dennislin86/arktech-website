@@ -234,7 +234,7 @@ export default function ProjectManagementPage() {
                 </div>
               ))}
             </dl>
-            <p className="mt-5 text-sm leading-6 text-[var(--muted)]">Update content and frequency are agreed around the project. The visible example retains its factual “Weekly Report” title without defining a universal reporting schedule.</p>
+            <p className="mt-5 text-sm leading-6 text-[var(--muted)]">Progress updates cover agreed milestones, manufacturing status and open actions. Reporting frequency is agreed for each project.</p>
           </div>
         </div>
       </section>

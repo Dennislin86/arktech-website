@@ -16,10 +16,10 @@ function EvidenceSection({ eyebrow, title, items }: { eyebrow: string; title: st
 
 export function CaseStudyDetail({ project, relatedProjects }: { project: CaseStudyProfile; relatedProjects: CaseStudyProfile[] }) {
   const facts = [
-    ["Customer type", project.customerType],
-    ["Region", project.region],
-    ["Industry", project.industry],
-    ["Material / focus", project.manufacturingScope[1]?.replace(/^Material:\s*/i, "") ?? project.productCategory]
+    ["Industry focus", project.industry],
+    ["Project category", project.productCategory],
+    ["Primary scope", project.serviceScope[0]],
+    ["Related scope", project.serviceScope[1] ?? project.serviceScope[0]]
   ];
 
   return (
@@ -57,7 +57,7 @@ export function CaseStudyDetail({ project, relatedProjects }: { project: CaseStu
         <EvidenceSection eyebrow="Tooling Solution" title="Manufacturing strategy and mold scope" items={project.toolingSolution} />
         <EvidenceSection eyebrow="Mold Trial & Engineering Corrections" title="How samples supported tooling review" items={project.trialValidation} />
         <EvidenceSection eyebrow="Inspection & Validation" title="Evidence used for customer approval" items={project.inspectionValidation} />
-        <EvidenceSection eyebrow="Project Result" title="Verified project outcome" items={project.result} />
+        <EvidenceSection eyebrow="Project Evidence" title="Available project evidence" items={project.result} />
 
         <section className="border-t border-[var(--line)] py-12">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Gallery</p>

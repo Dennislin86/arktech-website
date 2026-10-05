@@ -2,6 +2,8 @@
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { trackGenerateLead } from "@/lib/analytics";
+import { rfqMaterialOptions } from "@/lib/rfq-options";
+import { site } from "@/lib/site";
 
 type RfqFormProps = {
   variant: "full" | "contact" | "compact";
@@ -15,7 +17,6 @@ type SubmissionState = {
 
 const initialState: SubmissionState = { kind: "idle", message: "" };
 
-const materials = ["ABS", "PC", "PP", "Nylon", "Aluminum", "Steel"];
 const volumes = ["Under 1,000 / year", "1,000–10,000 / year", "10,000–100,000 / year", "100,000+ / year"];
 const processes = ["Injection Molding", "CNC", "Die Casting", "Tooling Only"];
 const markets = ["Europe", "North America", "Other"];
@@ -84,6 +85,14 @@ function FilePicker({ compact = false }: { compact?: boolean }) {
       </span>
       {fileNames.length > 0 ? <span className="mt-2 max-w-full truncate text-xs text-[var(--muted)]">{fileNames.join(", ")}</span> : null}
     </label>
+  );
+}
+
+function LargeFileGuidance() {
+  return (
+    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+      Files larger than 4 MB? <a className="focus-ring rounded-sm font-bold text-[var(--brand)] hover:underline" href={`mailto:${site.email}`}>Contact us</a> to arrange a file transfer.
+    </p>
   );
 }
 
@@ -159,6 +168,7 @@ export function RfqForm({ variant, source }: RfqFormProps) {
         <input name="source" type="hidden" value={source} />
         <div className="border-b border-[var(--line)] p-5 sm:p-7 lg:border-b-0 lg:border-r">
           <FilePicker compact key={`compact-files-${resetToken}`} />
+          <LargeFileGuidance />
           <p className="mt-4 flex items-center gap-2 text-sm font-semibold text-[var(--brand-dark)]"><span aria-hidden="true" className="font-bold text-[var(--brand)]">✓</span>NDA available</p>
           <p className="mt-2 text-xs leading-5 text-[var(--muted)]">Files are reviewed only for DFM engineering and tooling quotation.</p>
         </div>
@@ -186,12 +196,12 @@ export function RfqForm({ variant, source }: RfqFormProps) {
         <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Start Your DFM Review</h2>
         <p className="mt-3 leading-7 text-[var(--muted)]">Add your CAD files and the project information our engineers need to provide useful feedback and an accurate quotation.</p>
       </div>
-      <div className="mt-7"><FilePicker key={`files-${resetToken}`} /></div>
+      <div className="mt-7"><FilePicker key={`files-${resetToken}`} /><LargeFileGuidance /></div>
       <div className="mt-7 grid gap-5 sm:grid-cols-2">
         {[['Full name', 'name', 'text'], ['Company', 'company', 'text'], ['Work email', 'email', 'email'], ['Phone / WhatsApp', 'phone', 'tel']].map(([label, name, type]) => (
           <label className="grid gap-2 text-sm font-bold" key={name}>{label}<input className={inputClass} name={name} required={name === "name" || name === "email"} type={type} /></label>
         ))}
-        <label className="grid gap-2 text-sm font-bold">Material selection<select className={inputClass} defaultValue="" name="material" required><option disabled value="">Select material</option>{materials.map((item) => <option key={item}>{item}</option>)}</select></label>
+        <label className="grid gap-2 text-sm font-bold">Material selection<select className={inputClass} defaultValue="" name="material" required><option disabled value="">Select material</option>{rfqMaterialOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select><span className="text-xs font-normal leading-5 text-[var(--muted)]">For other materials, include the resin or alloy grade in your project notes.</span></label>
         <label className="grid gap-2 text-sm font-bold">Annual volume<select className={inputClass} defaultValue="" name="annual-volume" required><option disabled value="">Select annual volume</option>{volumes.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label className="grid gap-2 text-sm font-bold">Manufacturing process<select className={inputClass} defaultValue="" name="manufacturing-process" required><option disabled value="">Select process</option>{processes.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label className="grid gap-2 text-sm font-bold">Target market<select className={inputClass} defaultValue="" name="target-market" required><option disabled value="">Select target market</option>{markets.map((item) => <option key={item}>{item}</option>)}</select></label>

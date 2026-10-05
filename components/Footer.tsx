@@ -81,7 +81,7 @@ export function Footer({ showAnalyticsPreferences = false }: { showAnalyticsPref
             <p className="whitespace-nowrap text-[20px] font-semibold leading-[1.25] tracking-[0.3px] text-[var(--brand)] sm:text-[24px]">
               ARKTECH Mold Ltd
             </p>
-            <p className="mt-[10px] text-sm font-normal leading-[1.5] text-[var(--muted)]">
+            <p className="mt-[10px] text-sm font-normal leading-[1.5] text-[#CBD5E1]">
               Export Injection Molds &amp; Plastic Injection Molding
             </p>
           </div>

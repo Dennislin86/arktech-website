@@ -27,7 +27,7 @@ export default function CaseStudiesPage() {
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-red-200">Real Tooling Projects</p>
             <h1 className="split-hero-title mt-4">Real Injection Mold &amp; Tooling Case Studies</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Explore documented Arktech projects across DFM engineering, injection mold manufacturing, mold trials, dimensional inspection and export tooling delivery for global OEM and molding teams.</p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Explore Arktech project examples across DFM engineering, injection mold manufacturing, mold trials, dimensional inspection and export tooling delivery.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#featured-projects" className="focus-ring rounded-sm bg-[var(--accent)] px-5 py-3 font-bold text-white hover:brightness-90">Explore Featured Projects</Link>
               <Link href="/request-a-quote" className="focus-ring rounded-sm border border-white/70 px-5 py-3 font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]">Upload CAD for DFM Review</Link>
@@ -62,7 +62,7 @@ export default function CaseStudiesPage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Evidence</p>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Engineering Evidence Behind the Tooling</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">Each project page keeps the visible evidence tied to the actual engineering scope. Unsupported performance claims and invented customer metrics are intentionally excluded.</p>
+            <p className="mt-4 leading-7 text-[var(--muted)]">Explore project examples covering tooling requirements, engineering decisions and available project evidence.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {proofAreas.map((area, index) => <article key={area.title} className="border-l-4 border-[var(--brand)] bg-[var(--surface-soft)] p-5"><p className="text-xs font-bold text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</p><h3 className="mt-2 text-lg font-bold">{area.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{area.body}</p></article>)}

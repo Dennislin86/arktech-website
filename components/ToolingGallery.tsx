@@ -14,7 +14,7 @@ type GalleryItem = {
   image: string;
   width: number;
   height: number;
-  title: string;
+  title?: string;
   alt: string;
   caseStudyUrl?: string;
   order: number;
@@ -29,7 +29,7 @@ function splitRows(categoryItems: GalleryItem[]) {
 function GalleryCard({ item, clone = false, onOpen }: { item: GalleryItem; clone?: boolean; onOpen: (item: GalleryItem, trigger: HTMLButtonElement) => void }) {
   return (
     <button
-      aria-label={clone ? undefined : `View ${item.title} larger`}
+      aria-label={clone ? undefined : `View ${item.alt} larger`}
       className={`${styles.card} focus-ring group shrink-0 overflow-hidden rounded-md border border-[var(--line)] bg-white text-left transition hover:border-[var(--brand)]`}
       onClick={clone ? undefined : (event) => onOpen(item, event.currentTarget)}
       tabIndex={clone ? -1 : 0}
@@ -173,7 +173,8 @@ export function ToolingGallery() {
 
       {activeItem ? (
         <div
-          aria-labelledby="tooling-gallery-dialog-title"
+          aria-label={activeItem.title ? undefined : `Image preview: ${activeItem.alt}`}
+          aria-labelledby={activeItem.title ? "tooling-gallery-dialog-title" : undefined}
           aria-modal="true"
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#081f33]/85 p-4 backdrop-blur-sm"
           onClick={(event) => { if (event.target === event.currentTarget) closeModal(); }}
@@ -195,8 +196,8 @@ export function ToolingGallery() {
             </div>
             <div className="flex flex-col gap-3 border-t border-[var(--line)] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
               <div>
-                <h3 className="text-lg font-bold text-[var(--brand-dark)]" id="tooling-gallery-dialog-title">{activeItem.title}</h3>
-                <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{activeItem.alt}</p>
+                {activeItem.title ? <h3 className="text-lg font-bold text-[var(--brand-dark)]" id="tooling-gallery-dialog-title">{activeItem.title}</h3> : null}
+                <p className={`${activeItem.title ? "mt-1" : ""} text-sm leading-6 text-[var(--muted)]`}>{activeItem.alt}</p>
               </div>
               {activeItem.caseStudyUrl ? <Link className="focus-ring inline-flex min-h-11 shrink-0 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href={activeItem.caseStudyUrl}>View Project <span aria-hidden="true" className="ml-2">→</span></Link> : null}
             </div>

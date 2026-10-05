@@ -140,9 +140,9 @@ export function MoldSparePartsHero() {
           <p className="mt-5 max-w-[47rem] text-base leading-7 text-slate-100 sm:text-lg sm:leading-8">Arktech manufactures custom injection mold components from customer drawings and supports project-specific spare parts and replacement inserts for existing tooling.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-hover)] sm:text-base" href="/request-a-quote">Request a Mold Component Quote <span aria-hidden="true" className="ml-2">→</span></Link>
-            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white/80 bg-white/5 px-5 py-3 text-center text-sm font-bold text-white backdrop-blur-[2px] transition hover:border-white hover:bg-white hover:text-[var(--brand-dark)] sm:text-base" href="#mold-components">Explore Mold Components <span aria-hidden="true" className="ml-2">↓</span></Link>
+            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white/80 bg-white/5 px-5 py-3 text-center text-sm font-bold text-white backdrop-blur-[2px] transition hover:border-white hover:bg-white hover:text-[var(--brand-dark)] sm:text-base" href="#spare-parts-scope">Explore Mold Components <span aria-hidden="true" className="ml-2">↓</span></Link>
           </div>
-          <p className="mt-5 max-w-2xl text-sm font-semibold leading-6 text-slate-200">CMM inspection footage shows a real machined mold component; no tolerance or acceptance result is inferred from the video.</p>
+          <p className="mt-5 max-w-2xl text-sm font-semibold leading-6 text-slate-200">CMM inspection of a machined mold component.</p>
         </div>
       </div>
 

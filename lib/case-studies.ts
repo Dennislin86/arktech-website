@@ -24,10 +24,10 @@ const profiles: Record<string, Omit<CaseStudyProfile, keyof (typeof caseStudyPag
     imageAlt: "Multi-cavity injection mold and molded automotive sensor housings",
     featured: true,
     capabilities: ["DFM Engineering", "Injection Mold Manufacturing", "Mold Trial", "Dimensional Inspection", "Export Tooling"],
-    challenges: ["Dimensional Stability", "Glass-Filled Materials", "Export Tooling"],
-    projectOverview: "An export production mold program for an automotive sensor housing molded in glass-filled PBT and prepared for operation at the customer’s local molding facility.",
+    challenges: ["Dimensional Stability", "Tooling Wear", "Export Tooling"],
+    projectOverview: "An export production mold example for an automotive sensor housing with dimensional, tooling-wear and receiving-facility requirements.",
     dfmReview: ["Draft, ribs, shutoffs and tolerance-sensitive assembly areas were reviewed before tooling release.", "Material behavior and wear at critical insert areas were considered in the tooling plan."],
-    toolingSolution: ["The mold strategy used hardened inserts and controlled cooling for the glass-filled material application.", "Export-ready spare components and the receiving molder’s production requirements were included in the release plan."],
+    toolingSolution: ["The tooling plan addressed insert access, cooling and the defined material requirements.", "Export spare components and the receiving facility requirements were included in the review scope."],
     trialValidation: ["Tool trials focused on stable sampling and the dimensions most relevant to downstream assembly.", "Sampling records supported engineering review before export release."],
     inspectionValidation: ["Critical assembly interfaces were included in the dimensional inspection plan.", "The shipment package included trial records, sample inspection information and a spare-parts list."],
     gallery: [
@@ -45,7 +45,7 @@ const profiles: Record<string, Omit<CaseStudyProfile, keyof (typeof caseStudyPag
     challenges: ["Tight Tolerances", "Assembly Fit", "Sample Validation"],
     projectOverview: "A precision plastic cartridge program requiring early manufacturability review, controlled sampling and defined inspection points for assembly-critical features.",
     dfmReview: ["Wall thickness, gate location, ejector areas and critical dimensions were reviewed before production tooling decisions.", "Tolerance stack-up at assembly interfaces was treated as an early engineering priority."],
-    toolingSolution: ["The precision mold concept was planned around repeatable cartridge features and the selected PC material.", "The engineering review connected tooling decisions with handling and packaging expectations."],
+    toolingSolution: ["The precision mold concept was planned around repeatable cartridge features and the defined material requirements.", "The engineering review connected tooling decisions with handling and packaging expectations."],
     trialValidation: ["Sampling concentrated on critical-to-quality features and repeatable molding conditions.", "Review points were organized around the interfaces most likely to affect assembly performance."],
     inspectionValidation: ["Critical dimensions and assembly interfaces formed the basis of the inspection plan.", "The agreed inspection standard gave the customer a clearer basis for repeat-production review."],
     gallery: [{ src: "/images/seo/plastic-injection-molding.png", alt: "Precision plastic injection molded samples undergoing dimensional inspection", caption: "Representative sample and dimensional review" }]

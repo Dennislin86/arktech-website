@@ -1807,32 +1807,31 @@ export const caseStudyPages: CaseStudyData[] = [
     slug: "automotive-sensor-housing-tooling",
     title: "Automotive Sensor Housing Tooling Case Study",
     description:
-      "See how Arktech supported an injection molder with DFM, export tooling, sampling, and inspection for an automotive sensor housing project.",
+      "An automotive sensor housing tooling example covering DFM, export tooling, sampling and inspection scope.",
     projectName: "Automotive Sensor Housing Tooling",
     customerType: "Injection Molder",
-    region: "Germany",
+    region: "Not publicly disclosed",
     productCategory: "Automotive and EV components",
     serviceScope: ["DFM review", "Injection mold manufacturing", "Tool trial", "Dimensional inspection", "Export tooling package"],
     challenge: [
-      "The customer needed an export mold prepared for production in its local molding facility.",
-      "Glass-filled material created dimensional stability and wear considerations.",
+      "The export tooling scope called for a mold prepared for production at the receiving facility.",
+      "Material requirements created dimensional stability and tooling-wear considerations.",
       "Critical assembly areas required clear inspection planning before shipment."
     ],
     solution: [
       "Arktech reviewed draft, ribs, shutoffs, and tolerance risks before tooling release.",
-      "The mold strategy included hardened inserts, controlled cooling, and export-ready spare components.",
+      "The tooling plan addressed insert access, cooling, and export spare-component requirements.",
       "Sampling records and inspection points were prepared for the customer engineering team."
     ],
     manufacturingScope: [
       "Mold type: production injection mold",
-      "Material: PBT-GF30",
+      "Material: project-specific engineering plastic",
       "Focus: dimensional stability and insert wear control",
       "Documentation: trial report, sample inspection, spare-part list, export packing"
     ],
     result: [
-      "The project moved from DFM review into stable sampling with fewer late tooling questions.",
-      "Inspection data helped the customer prepare the tool for local production launch.",
-      "The mold package was shipped with practical documentation and spare-part support."
+      "Available imagery shows the multi-cavity injection mold and corresponding molded housings.",
+      "The project example outlines the intended dimensional-inspection and export-tooling scope."
     ],
     related: [
       { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
@@ -1844,16 +1843,16 @@ export const caseStudyPages: CaseStudyData[] = [
     slug: "medical-device-cartridge-molding",
     title: "Medical Device Cartridge Molding Case Study",
     description:
-      "A medical device plastic parts case study covering DFM review, tight-tolerance PC molding, inspection planning, and clean packaging.",
+      "A medical device plastic-parts example covering DFM review, inspection planning and handling requirements.",
     projectName: "Medical Device Cartridge Molding",
     customerType: "OEM Product Company",
-    region: "United States",
+    region: "Not publicly disclosed",
     productCategory: "Medical devices",
     serviceScope: ["DFM engineering support", "Plastic injection molding", "Inspection planning", "Packaging review"],
     challenge: [
       "The part required tight dimensional control and clean handling expectations.",
       "Assembly interfaces made tolerance stackup and gate location important early decisions.",
-      "The buyer needed engineering feedback before committing to production tooling."
+      "The review scope required engineering feedback before production-tooling decisions."
     ],
     solution: [
       "Arktech reviewed wall thickness, gate location, ejector areas, and critical dimensions.",
@@ -1862,14 +1861,13 @@ export const caseStudyPages: CaseStudyData[] = [
     ],
     manufacturingScope: [
       "Mold type: precision injection mold",
-      "Material: PC",
+      "Material: project-specific thermoplastic",
       "Focus: tight-tolerance molded cartridge features",
       "Inspection: critical dimensions and assembly interface checks"
     ],
     result: [
-      "The customer received practical DFM feedback before production ramp decisions.",
-      "Sampling focused on the dimensions most likely to affect assembly performance.",
-      "The program had a clearer inspection standard for repeat production."
+      "Available imagery shows molded components in a dimensional-inspection context.",
+      "The project example outlines the intended DFM and inspection-planning scope."
     ],
     related: [
       { label: "Medical Device Plastic Parts", href: "/industries/medical-devices" },
@@ -1884,13 +1882,13 @@ export const caseStudyPages: CaseStudyData[] = [
       "A smart home plastic housing manufacturing case study covering cosmetic surfaces, snap-fit features, tooling strategy, and assembly review.",
     projectName: "Smart Home Plastic Housing",
     customerType: "OEM Product Company",
-    region: "Canada",
+    region: "Not publicly disclosed",
     productCategory: "Smart home products",
     serviceScope: ["Plastic housing manufacturing", "Injection mold manufacturing", "Plastic injection molding", "Assembly review"],
     challenge: [
       "The product family needed consistent cosmetic A-surfaces across multiple housing parts.",
       "Snap-fit features and internal carriers created assembly and tolerance risks.",
-      "The buyer wanted to reduce tooling investment while keeping product appearance consistent."
+      "The tooling review considered related housing parts while keeping product appearance requirements consistent."
     ],
     solution: [
       "Arktech reviewed wall thickness, ribs, bosses, snap features, and gate positions.",
@@ -1899,14 +1897,13 @@ export const caseStudyPages: CaseStudyData[] = [
     ],
     manufacturingScope: [
       "Mold type: housing and enclosure injection molds",
-      "Material: PC/ABS",
+      "Material: project-specific thermoplastic",
       "Focus: cosmetic surface control and assembly fit",
       "Secondary review: inserts, fastening points, and packaging"
     ],
     result: [
-      "The housing family had a clearer tooling plan before release.",
-      "Cosmetic and assembly risks were addressed earlier in DFM.",
-      "The buyer had a practical path from tooling to molded production parts."
+      "Available imagery shows the housing components and their assembly relationship.",
+      "The project example outlines the intended cosmetic-surface, assembly and tooling-review scope."
     ],
     related: [
       { label: "Smart Home Product Manufacturing", href: "/industries/smart-home-iot" },
@@ -1918,16 +1915,16 @@ export const caseStudyPages: CaseStudyData[] = [
     slug: "die-cast-control-housing",
     title: "Die Cast Control Housing Case Study",
     description:
-      "A die casting mold manufacturing case study for an aluminum control housing requiring parting strategy, sealing surfaces, and CNC finishing review.",
+      "A die casting tooling example for a control housing requiring parting strategy, sealing-surface and CNC-finishing review.",
     projectName: "Die Cast Control Housing",
     customerType: "OEM Product Company",
-    region: "United Kingdom",
+    region: "Not publicly disclosed",
     productCategory: "Industrial automation components",
     serviceScope: ["Die casting mold manufacturing", "CNC finishing review", "Inspection planning", "Manufacturing DFM"],
     challenge: [
-      "The aluminum housing required reliable sealing surfaces and stable machining datums.",
+      "The housing required reliable sealing surfaces and stable machining datums.",
       "Parting line and venting decisions could affect downstream CNC finishing.",
-      "The customer needed the tooling plan reviewed before committing to production."
+      "The tooling plan required review before production decisions."
     ],
     solution: [
       "Arktech reviewed parting, slide action, venting, cooling, trimming, and machining allowance.",
@@ -1935,15 +1932,14 @@ export const caseStudyPages: CaseStudyData[] = [
       "Inspection focus areas were defined around sealing and assembly interfaces."
     ],
     manufacturingScope: [
-      "Mold type: aluminum die casting mold",
-      "Material: aluminum alloy",
+      "Mold type: die casting die",
+      "Material: project-specific casting alloy",
       "Focus: sealing surface consistency and CNC finishing allowance",
       "Inspection: machined datum and housing interface checks"
     ],
     result: [
-      "The tooling and CNC finishing plan reduced uncertainty before production release.",
-      "The buyer had clearer inspection expectations for functional housing features.",
-      "Manufacturing risks were addressed before mold build and sampling."
+      "Available imagery shows the die casting tooling, raw casting and finished control housing.",
+      "The project example outlines the intended tooling, machining and inspection-planning scope."
     ],
     related: [
       { label: "Die Casting Mold Manufacturing", href: "/services/die-casting-mold" },
@@ -1977,9 +1973,8 @@ export const caseStudyPages: CaseStudyData[] = [
       "Validation: interface, appearance and part-release review"
     ],
     result: [
-      "The project established a controlled relationship between both tooling stages.",
-      "The molded component provided physical evidence for interface and appearance review.",
-      "Tooling records remained linked to the two-shot manufacturing sequence."
+      "Available imagery shows the first-shot and second-shot molds with the molded component structure.",
+      "The project example outlines the intended interface, appearance and tooling-sequence review scope."
     ],
     related: [
       { label: "Two-Shot / 2K Molds", href: "/injection-molds/two-shot-2k-molds" },
@@ -2013,9 +2008,8 @@ export const caseStudyPages: CaseStudyData[] = [
       "Validation: mold movement, release and molded-thread review"
     ],
     result: [
-      "The tooling solution enabled automated release of the internal threaded geometry.",
-      "The molded components provided physical evidence for thread and release review.",
-      "The mechanism and service points were documented for the tooling program."
+      "Available imagery shows the motor-driven unscrewing mold and threaded molded components.",
+      "The project example outlines the intended mechanism, release and service-access review scope."
     ],
     related: [
       { label: "Unscrewing Molds", href: "/injection-molds/unscrewing-molds" },

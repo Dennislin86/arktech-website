@@ -34,5 +34,5 @@ export default async function SolutionDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <DetailPage page={page} parentHref="/solutions" parentLabel="Solutions" />;
+  return <DetailPage includeSiteCta={false} page={page} parentHref="/solutions" parentLabel="Solutions" />;
 }

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isRfqMaterialValue } from "@/lib/rfq-options";
 import { site } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -76,12 +77,16 @@ export async function POST(request: Request) {
   const name = value(formData, "name", 120);
   const email = value(formData, "email", 254);
   const company = value(formData, "company", 160);
+  const material = value(formData, "material", 80);
 
   if (!name || !email) {
     return NextResponse.json({ message: "Name and work email are required." }, { status: 400 });
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ message: "Enter a valid work email address." }, { status: 400 });
+  }
+  if (material && !isRfqMaterialValue(material)) {
+    return NextResponse.json({ message: "Select a valid material option." }, { status: 400 });
   }
 
   const files = formData.getAll("cad-files").filter((item): item is File => item instanceof File && item.size > 0);

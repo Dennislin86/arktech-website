@@ -63,7 +63,7 @@ export function CaseStudiesHub({ projects }: { projects: CaseStudyProfile[] }) {
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Library</p>
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Browse Tooling &amp; Manufacturing Projects</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Filter the verified project library by industry, engineering capability or the manufacturing challenge addressed.</p>
+          <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Filter the project examples by industry, engineering capability or the manufacturing challenge addressed.</p>
           <div className="mt-8 grid gap-4 rounded-md border border-[var(--line)] bg-white p-5 lg:grid-cols-3">
             {(["industry", "capability", "challenge"] as FilterKey[]).map((key) => (
               <label key={key} className="grid gap-2 text-xs font-bold uppercase tracking-[0.12em] text-[var(--brand)]">
@@ -75,10 +75,10 @@ export function CaseStudiesHub({ projects }: { projects: CaseStudyProfile[] }) {
             ))}
           </div>
           <div className="mt-4 flex items-center justify-between gap-4 text-sm text-[var(--muted)]">
-            <p aria-live="polite">{filteredProjects.length} verified project{filteredProjects.length === 1 ? "" : "s"}</p>
+            <p aria-live="polite">Project examples</p>
             {Object.values(filters).some((value) => value !== "All") && <button type="button" onClick={() => setFilters(emptyFilters)} className="focus-ring rounded-sm font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]">Clear filters</button>}
           </div>
-          {filteredProjects.length > 0 ? <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{filteredProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div> : <div className="mt-6 rounded-md border border-dashed border-[var(--line)] bg-white p-8 text-center text-[var(--muted)]">No verified project matches all three filters. Clear one filter to broaden the results.</div>}
+          {filteredProjects.length > 0 ? <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{filteredProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div> : <div className="mt-6 rounded-md border border-dashed border-[var(--line)] bg-white p-8 text-center text-[var(--muted)]">No project example matches all three filters. Clear one filter to broaden the results.</div>}
         </div>
       </section>
 

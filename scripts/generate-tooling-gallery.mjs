@@ -26,13 +26,6 @@ function slugify(value) {
   return slug || "gallery-image";
 }
 
-function displayName(filename) {
-  return slugify(path.parse(filename).name)
-    .split("-")
-    .map((word) => word === "2k" ? "2K" : word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
 function orderFromName(filename) {
   const match = filename.match(/^(\d+)/);
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
@@ -138,7 +131,7 @@ export async function generateToolingGallery({
         image: `${publicBasePath}/${outputName}`,
         width: optimized.width,
         height: optimized.height,
-        title: typeof override.title === "string" && override.title.trim() ? override.title.trim() : displayName(filename),
+        ...(typeof override.title === "string" && override.title.trim() ? { title: override.title.trim() } : {}),
         alt: typeof override.alt === "string" && override.alt.trim() ? override.alt.trim() : category.defaultAlt,
         ...(caseStudyUrl ? { caseStudyUrl } : {}),
         order: Number.isFinite(override.order) ? override.order : orderFromName(filename),
