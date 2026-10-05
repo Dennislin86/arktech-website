@@ -23,7 +23,7 @@ function activeMenuLinkLabel(item: NavigationItem, pathname: string) {
 
 function isTopLevelActive(item: NavigationItem, pathname: string) {
   if (item.id === "resources" && pathname.startsWith("/case-studies")) return true;
-  if (item.id === "capabilities" && (pathname.startsWith("/services/") || pathname === "/injection-molding-engineering")) return true;
+  if (item.id === "capabilities" && (pathname.startsWith("/services/") || pathname.startsWith("/plastic-injection-molding") || pathname === "/injection-molding-engineering" || pathname === "/injection-mold-manufacturing")) return true;
   return pathname === item.href || pathname.startsWith(`${item.href}/`);
 }
 
@@ -47,11 +47,12 @@ const navigation: NavigationItem[] = [
         title: "Injection Molding",
         links: [
           { label: "Plastic Injection Molding", href: "/plastic-injection-molding", emphasis: true },
-          { label: "Production Options", href: "/services/injection-molding-production-options" },
-          { label: "Insert & Overmolding", staticCapability: true },
-          { label: "Two-Shot / 2K Molding", href: "/injection-molds/two-shot-2k-molds" },
-          { label: "Transparent Part Injection Molding", staticCapability: true },
-          { label: "Engineering Plastics Injection Molding", staticCapability: true }
+          { label: "Production Options", href: "/plastic-injection-molding/production-options" },
+          { label: "Insert Molding", href: "/plastic-injection-molding/insert-molding" },
+          { label: "Overmolding", href: "/plastic-injection-molding/overmolding" },
+          { label: "Two-Shot / 2K Molding", href: "/plastic-injection-molding/two-shot-molding" },
+          { label: "Transparent Part Molding", href: "/plastic-injection-molding/transparent-parts" },
+          { label: "Engineering Plastics Molding", href: "/plastic-injection-molding/engineering-plastics" }
         ]
       },
       {

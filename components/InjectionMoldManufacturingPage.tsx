@@ -529,33 +529,33 @@ export function InjectionMoldManufacturingPage() {
 
       <section className="bg-white py-14 sm:py-16">
         <div className="container-page">
-          <div className="grid gap-x-10 lg:grid-cols-[minmax(0,60fr)_minmax(0,40fr)] lg:items-start">
-            <div className="lg:col-start-2 lg:row-start-1">
+          <div className="grid gap-7 lg:grid-cols-[minmax(0,58fr)_minmax(0,42fr)] lg:items-stretch lg:gap-10">
+            <div className="min-h-0">
+              <ToolroomFactoryVideo />
+            </div>
+
+            <div className="flex min-w-0 flex-col">
               <SectionHeader
                 eyebrow="Toolroom Capabilities"
                 title="Inside Arktech’s Injection Mold Toolroom"
                 body="See the facilities and team supporting machining, fitting and assembly of production injection molds."
               />
-            </div>
 
-            <div className="mt-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
-              <ToolroomFactoryVideo />
-            </div>
+              <div className="mt-5 grid gap-x-5 sm:grid-cols-2" aria-label="Injection mold toolroom capabilities">
+                {toolroomCapabilities.map((item) => (
+                  <article className="border-t border-[var(--line)] py-3" key={item.title}>
+                    <span aria-hidden="true" className="mb-2 block h-0.5 w-8 bg-[var(--brand)]" />
+                    <h3 className="text-lg font-bold leading-snug text-[var(--brand-dark)]">{item.title}</h3>
+                    <p className="mt-1.5 text-sm leading-5 text-[var(--muted)]">{item.body}</p>
+                  </article>
+                ))}
+              </div>
 
-            <div className="mt-7 grid gap-x-6 sm:grid-cols-2 lg:col-start-2 lg:row-start-2" aria-label="Injection mold toolroom capabilities">
-              {toolroomCapabilities.map((item) => (
-                <article className="border-t border-[var(--line)] py-4" key={item.title}>
-                  <span aria-hidden="true" className="mb-3 block h-0.5 w-8 bg-[var(--brand)]" />
-                  <h3 className="text-lg font-bold leading-snug text-[var(--brand-dark)] sm:text-xl">{item.title}</h3>
-                  <p className="mt-2 text-[15px] leading-6 text-[var(--muted)]">{item.body}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-5 border-t border-[var(--line)] pt-5 lg:col-start-2 lg:row-start-3">
-              <Link className="focus-ring inline-flex min-h-11 w-fit items-center text-[17px] font-semibold text-[var(--brand)] transition hover:text-[var(--brand-hover)]" href="#manufacturing-equipment">
-                View Manufacturing Equipment <span className="ml-2" aria-hidden="true">→</span>
-              </Link>
+              <div className="mt-auto border-t border-[var(--line)] pt-4">
+                <Link className="focus-ring inline-flex min-h-11 w-fit items-center text-[17px] font-semibold text-[var(--brand)] transition hover:text-[var(--brand-hover)]" href="#manufacturing-equipment">
+                  View Manufacturing Equipment <span className="ml-2" aria-hidden="true">→</span>
+                </Link>
+              </div>
             </div>
           </div>
 

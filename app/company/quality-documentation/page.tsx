@@ -1,233 +1,136 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { CTA } from "@/components/CTA";
-import { PageHero } from "@/components/PageHero";
+import { QualityInspectionVideo } from "@/components/QualityInspectionVideo";
+import { QualityRecordPreview } from "@/components/QualityRecordPreview";
+
+const canonicalUrl = "https://www.arktechmold.com/company/quality-documentation";
 
 export const metadata: Metadata = {
-  title: "Injection Mold Quality Control & Documentation",
-  description:
-    "Arktech supports export injection mold projects with ISO 9001 quality management, mold inspection, sample validation, dimensional reports and export documentation.",
-  alternates: { canonical: "/company/quality-documentation" }
+  title: { absolute: "Injection Mold Quality Documentation & Inspection Records | Arktech" },
+  description: "Inspection reports, mold trial records and project-specific quality documentation for injection molds and molded parts, aligned with agreed customer requirements.",
+  alternates: { canonical: canonicalUrl },
+  openGraph: {
+    title: "Injection Mold Quality Documentation & Inspection Records | Arktech",
+    description: "Inspection reports, mold trial records and project-specific quality documentation for injection molds and molded parts, aligned with agreed customer requirements.",
+    type: "website",
+    url: canonicalUrl
+  }
 };
 
-const qualityProcess = [
-  "DFM Engineering",
-  "Mold Inspection",
-  "Mold Trial",
-  "Product Inspection",
-  "Dimensional Report",
-  "Documentation",
-  "Export Shipment"
-];
-
-const moldInspectionItems = [
-  "Mold structure and component inspection",
-  "Cavity and core insert inspection",
-  "Slider, lifter and ejector system checks",
-  "Cooling circuit verification",
-  "Hot runner connection checks when applicable",
-  "Mold movement and dry-run verification",
-  "Mold surface, edge and chamfer inspection",
-  "Spare parts verification",
-  "Final mold condition inspection before shipment"
-];
-
-const moldedPartInspectionItems = [
-  "T0 and T1 sample review",
-  "Critical dimension verification",
-  "Visual appearance inspection",
-  "Flash, short shot, sink mark and deformation review",
-  "Assembly and fit check",
-  "Surface finish and texture review",
-  "Color and cosmetic inspection when required",
-  "Comparison against the customer 2D drawing"
+const recordCategories = [
+  ["Dimensional Inspection", "Recorded results for agreed drawing characteristics and critical dimensions."],
+  ["Trial & Process Records", "Trial findings, sample status and recorded molding conditions where applicable."],
+  ["Material & Tooling Quality Records", "Specified material, steel or tooling inspection records where available and agreed."],
+  ["Correction & Confirmation", "Open items, agreed corrective actions and confirmation records where applicable."]
 ];
 
 const reportFields = [
-  ["Drawing dimension reference", "Links each inspection result to the relevant drawing characteristic."],
-  ["Nominal dimension", "Records the specified target dimension from the approved drawing."],
-  ["Tolerance", "Shows the agreed upper and lower acceptance limits."],
-  ["Actual measurement", "Records the measured result for the inspected sample."],
-  ["Pass / Fail status", "Identifies whether the result is within the agreed tolerance."],
-  ["Measurement method", "Documents the agreed method used for the characteristic."],
-  ["Inspection date / sample stage", "Connects the result to the relevant T0, T1 or later validation stage."]
+  ["Drawing reference", "The drawing characteristic linked to the inspected result."],
+  ["Nominal dimension and tolerance", "The specified target and agreed acceptance range."],
+  ["Measured result", "The value recorded for the inspected sample."],
+  ["Pass / Fail status", "The result against the agreed drawing requirement."],
+  ["Measurement method", "The project-specific method recorded for the characteristic."],
+  ["Inspection date / sample stage", "The date or relevant sample stage connected to the result."]
 ];
 
-const documentationGroups = [
-  {
-    stage: "Engineering Release",
-    items: ["DFM Report", "Mold Design Review"]
-  },
-  {
-    stage: "Mold Trial & Validation",
-    items: ["Mold Trial Report", "Process Parameter Sheet", "Dimensional Inspection Report", "Mold Trial Photos", "Mold Trial Video"]
-  },
-  {
-    stage: "Tooling & Material Records",
-    items: ["Steel Certificate", "Material Certificate", "Heat Treatment Certificate", "Spare Parts List"]
-  },
-  {
-    stage: "Export Release",
-    items: ["Packing Photos", "Export Packing Checklist"]
-  }
+const inspectionThemes = ["Critical dimensions", "Appearance and molding condition", "Assembly / fit where required", "Drawing-based review"];
+
+const contextualLinks = [
+  ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
+  ["Tooling Documentation", "/injection-molds/tooling-documentation"],
+  ["Export Tooling & Mold Transfer", "/injection-molds/export-tooling-transfer"]
 ];
 
-const exportChecks = [
-  "Final mold condition and movement review",
-  "Approved spare parts and loose components verified",
-  "Required tooling and quality records organized",
-  "Packing photos and export packing checklist completed",
-  "Shipment release coordinated against the agreed project status"
+const faqs = [
+  { question: "What quality records can be provided with an injection mold project?", answer: "Depending on the agreed scope, records can include dimensional inspection results, trial and process records, specified material or tooling records, and correction or confirmation items. Not every project requires every record." },
+  { question: "Can dimensional inspection reports be included?", answer: "Yes. Dimensional inspection reporting can be included for agreed drawing characteristics and critical dimensions, with the inspection scope and measurement methods confirmed for the project." },
+  { question: "Are molding parameters recorded during mold trials?", answer: "Molding conditions can be recorded during relevant trials where applicable. These records provide a reference for trial comparison and technical handover; they are not a guarantee of identical performance on every receiving machine." },
+  { question: "Can material or steel records be provided?", answer: "Specified material, steel or heat-treatment records can be provided where they are available, applicable and included in the agreed project scope." },
+  { question: "How do quality records support tooling handover?", answer: "They help customer teams review inspected characteristics, trial findings, open items and agreed project status. Technical tooling files and transfer requirements are handled through the relevant tooling-documentation and transfer scope." }
 ];
 
-function Checklist({ items }: { items: string[] }) {
-  return (
-    <ul className="grid gap-3 sm:grid-cols-2">
-      {items.map((item) => (
-        <li className="flex gap-3 rounded-sm border border-[var(--line)] bg-white p-4 text-sm font-semibold leading-6 text-[var(--brand-dark)]" key={item}>
-          <span aria-hidden="true" className="mt-0.5 text-[var(--brand)]">✓</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } }))
+};
+
+function SectionHeading({ eyebrow, title, intro, id }: { eyebrow: string; title: string; intro: string; id?: string }) {
+  return <div className="max-w-4xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">{eyebrow}</p><h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl" id={id}>{title}</h2><p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">{intro}</p></div>;
 }
 
 export default function QualityDocumentationPage() {
   return (
     <>
-      <PageHero
-        eyebrow="QUALITY & DOCUMENTATION"
-        title="Injection Mold Quality & Documentation"
-        body="Arktech supports export injection mold projects with structured mold inspection, sample validation, dimensional reporting, tooling records and export delivery checks."
-        image={{
-          src: "/images/quality/dimensional-inspection-report-anonymized.webp",
-          alt: "Anonymized dimensional inspection report for injection mold sample validation"
-        }}
-      />
+      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replaceAll("<", "\\u003c") }} type="application/ld+json" />
 
-      <section className="py-14">
-        <div className="container-page grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <section className="border-b border-[var(--line)] bg-[var(--surface-soft)]">
+        <div className="container-page grid gap-9 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center lg:gap-12 lg:py-16">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Quality System &amp; Certifications</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)]">Quality management supporting tooling approval and export delivery.</h2>
-            <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">
-              Quality activities are integrated into engineering review, mold manufacturing, trial preparation, sample validation and shipment release. Records are prepared according to project requirements so customer engineering teams can review tooling status and improvement actions.
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
-              <Link className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/manufacturing-capabilities">View Capabilities</Link>
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">QUALITY &amp; DOCUMENTATION</p>
+            <h1 className="mt-4 max-w-[760px] text-4xl font-bold leading-[1.05] tracking-tight text-[var(--brand-dark)] sm:text-5xl lg:text-[3rem]">Injection Mold Quality Documentation &amp; Inspection Records</h1>
+            <p className="mt-5 max-w-[44rem] text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Review inspection results, trial records and project-specific quality documentation for injection molds and molded parts, according to the agreed project scope.</p>
+            <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <Link className="focus-ring inline-flex min-h-12 shrink-0 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Discuss Documentation Requirements</Link>
+              <Link className="focus-ring inline-flex min-h-11 shrink-0 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="#inspection-evidence">View Inspection Evidence <span aria-hidden="true" className="ml-2">↓</span></Link>
             </div>
           </div>
-          <div className="rounded-sm border border-[var(--line)] bg-white p-7 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Certified Quality System</p>
-            <p className="mt-3 text-3xl font-bold text-[var(--brand-dark)]">ISO 9001:2015</p>
-            <p className="mt-3 leading-7 text-[var(--muted)]">A structured quality management framework supporting project review, inspection records, corrective actions and delivery documentation.</p>
-          </div>
+          <QualityRecordPreview alt="Anonymized dimensional inspection report for molded trial samples" caption="Anonymized dimensional inspection report" height={750} preload sizes="(min-width: 1024px) 48vw, 100vw" src="/images/quality/dimensional-inspection-report-anonymized.webp" width={1050} />
         </div>
       </section>
 
-      <section className="bg-white py-14">
-        <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Quality Control Process</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-bold text-[var(--brand-dark)]">Quality control from DFM review to export shipment</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Each stage creates a clear review point for tooling development, mold trial feedback, sample validation and final release.</p>
-          <ol className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-7">
-            {qualityProcess.map((step, index) => (
-              <li className="relative rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-4" key={step}>
-                <span className="text-sm font-bold text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span>
-                <p className="mt-2 text-sm font-bold leading-5 text-[var(--brand-dark)]">{step}</p>
-              </li>
-            ))}
-          </ol>
+      <section className="bg-white py-12 sm:py-14"><div className="container-page">
+        <SectionHeading eyebrow="PROJECT-SPECIFIC SCOPE" intro="The documentation scope is agreed around the project, customer requirements and relevant inspection or validation stages." title="What Quality Records Can Be Included" />
+        <div className="mt-8 grid gap-px overflow-hidden rounded-md border border-[var(--line)] bg-[var(--line)] md:grid-cols-2">{recordCategories.map(([title, body]) => <article className="bg-white p-5 sm:p-6" key={title}><h3 className="text-lg font-bold text-[var(--brand-dark)]">{title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-base">{body}</p></article>)}</div>
+        <div className="mt-5 grid max-w-5xl gap-3 text-sm leading-6 text-[var(--muted)] md:grid-cols-2">
+          <p>Material and tooling records may include steel / material identification records, specified certificates where available and agreed, and heat-treatment records where applicable.</p>
+          <p>Where findings require action, open items and agreed corrections can be recorded for review before confirmation or the next project step.</p>
         </div>
-      </section>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-[var(--muted)]">Records are generated at the relevant project stages; availability and format depend on the agreed scope.</p>
+      </div></section>
 
-      <section className="py-14">
-        <div className="container-page grid gap-9 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
-            <Image alt="Large injection mold undergoing structure and component inspection before trial" className="object-cover object-center" fill sizes="(min-width: 1024px) 48vw, 100vw" src="/images/process/tooling-manufacturing-plan-mold.png" />
-          </div>
+      <section aria-labelledby="inspection-evidence-heading" className="scroll-mt-24 bg-[var(--surface-soft)] py-12 sm:py-14" id="inspection-evidence"><div className="container-page">
+        <SectionHeading eyebrow="INSPECTION EVIDENCE" id="inspection-evidence-heading" intro="Inspection results are linked to the customer drawing and agreed inspection scope so engineering teams can review critical dimensions, sample condition and open items." title="Dimensional Inspection & Sample Evidence" />
+        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Mold Inspection</p>
-            <h2 className="mt-3 text-3xl font-bold text-[var(--brand-dark)]">Injection Mold Inspection Before Trial and Export</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">Mold inspection is carried out during tooling build, trial preparation and before shipment. The inspection scope is aligned with the mold design, tooling specification and agreed customer requirements.</p>
-            <div className="mt-6"><Checklist items={moldInspectionItems} /></div>
+            <h3 className="text-xl font-bold text-[var(--brand-dark)]">Typical report structure</h3>
+            <dl className="mt-5 grid gap-px overflow-hidden rounded-md border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">{reportFields.map(([field, purpose]) => <div className="bg-white p-4" key={field}><dt className="text-sm font-bold text-[var(--brand-dark)]">{field}</dt><dd className="mt-1 text-sm leading-6 text-[var(--muted)]">{purpose}</dd></div>)}</dl>
+            <p className="mt-5 text-sm leading-6 text-[var(--muted)]">Report scope and measurement methods are agreed according to drawing characteristics and project requirements.</p>
+            <ul aria-label="Inspection review themes" className="mt-6 grid gap-3 sm:grid-cols-2">{inspectionThemes.map((item) => <li className="flex min-h-11 items-center border-l-2 border-[var(--brand)] bg-white px-4 py-2 text-sm font-semibold leading-6 text-[var(--brand-dark)]" key={item}>{item}</li>)}</ul>
+          </div>
+          <div className="grid gap-5">
+            <QualityRecordPreview alt="Anonymized dimensional inspection report for molded trial samples" caption="Dimensional inspection report" height={750} sizes="(min-width: 1024px) 48vw, 100vw" src="/images/quality/dimensional-inspection-report-anonymized.webp" width={1050} />
+            <QualityRecordPreview alt="Operator reviewing a measurement screen beside dimensional inspection equipment" aspect="wide" caption="Inspection setup and measurement review" height={1085} sizes="(min-width: 1024px) 48vw, 100vw" src="/images/process/sample-validation-inspection-cmm.png" width={2048} />
+            <p className="text-sm leading-6 text-[var(--muted)]">The report and inspection image illustrate available record and inspection contexts; they are not presented as evidence from the same project.</p>
           </div>
         </div>
-      </section>
+        <QualityInspectionVideo />
+      </div></section>
 
-      <section className="bg-white py-14">
-        <div className="container-page grid gap-9 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Molded Part Inspection</p>
-            <h2 className="mt-3 text-3xl font-bold text-[var(--brand-dark)]">Molded Part Inspection &amp; Sample Validation</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">Trial samples are reviewed against the approved product drawing and project requirements. Findings support tooling adjustments, process review and the next customer approval stage.</p>
-            <div className="mt-6"><Checklist items={moldedPartInspectionItems} /></div>
-          </div>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
-            <Image alt="Molded plastic sample dimensional inspection and validation" className="object-cover object-center" fill sizes="(min-width: 1024px) 46vw, 100vw" src="/images/process/sample-validation-inspection-cmm.png" />
-          </div>
+      <section className="bg-white py-12 sm:py-14"><div className="container-page">
+        <SectionHeading eyebrow="MOLD TRIAL RECORDS" intro="Records generated during mold trials can document molding conditions, sample status and engineering findings for customer review." title="Trial & Process Records" />
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <QualityRecordPreview alt="Anonymized injection molding process parameter record from a mold trial" aspect="document" caption="Mold-trial process parameter record" height={1142} sizes="(min-width: 768px) 48vw, 100vw" src="/images/injection-mold-manufacturing/injection-molding-process-parameters.webp" width={1200} />
+          <QualityRecordPreview alt="Mold trial report page showing an open injection mold installed in a molding machine" aspect="document" caption="Mold trial observation record" height={1037} sizes="(min-width: 768px) 48vw, 100vw" src="/images/injection-mold-manufacturing/mold-trial-report-evidence.webp" width={1400} />
         </div>
-      </section>
+        <div className="mt-7 max-w-4xl border-l-2 border-[var(--brand)] pl-5"><p className="leading-7 text-[var(--muted)]">Recorded molding conditions provide a reference for trial comparison and technical handover. They do not guarantee identical performance on every receiving machine.</p><Link className="focus-ring mt-4 inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="/injection-molds/mold-trial-validation">Explore Mold Trial &amp; Validation <span aria-hidden="true" className="ml-2">→</span></Link></div>
+      </div></section>
 
-      <section className="py-14">
-        <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Dimensional Inspection Report</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-bold text-[var(--brand-dark)]">Dimensional Inspection Reports for Tooling Approval</h2>
-          <p className="mt-4 max-w-4xl leading-7 text-[var(--muted)]">Dimensional inspection reports are prepared for critical product dimensions based on customer drawings and agreed inspection requirements. Results help engineering teams review tooling status and confirm improvement actions before approval.</p>
-          <div className="mt-8 overflow-x-auto rounded-sm border border-[var(--line)] bg-white shadow-sm">
-            <table className="w-full min-w-[720px] border-collapse text-left">
-              <thead className="bg-[var(--brand-dark)] text-white">
-                <tr><th className="px-5 py-4 text-sm font-bold">Report field</th><th className="px-5 py-4 text-sm font-bold">Typical record structure</th></tr>
-              </thead>
-              <tbody>
-                {reportFields.map(([field, purpose]) => (
-                  <tr className="border-t border-[var(--line)]" key={field}><th className="px-5 py-4 text-sm font-bold text-[var(--brand-dark)]">{field}</th><td className="px-5 py-4 text-sm leading-6 text-[var(--muted)]">{purpose}</td></tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-4 text-sm leading-6 text-[var(--muted)]">Report scope and measurement methods are confirmed according to the drawing, critical characteristics and project approval requirements.</p>
-        </div>
-      </section>
+      <section className="bg-[var(--surface-soft)] py-12 sm:py-14"><div className="container-page">
+        <SectionHeading eyebrow="CUSTOMER REVIEW" intro="Quality records help customer teams review inspected characteristics, trial findings and agreed project status. Technical tooling files and transfer requirements are handled through the relevant tooling-support scope." title="Records for Customer Review & Handover" />
+        <nav aria-label="Related tooling quality and handover pages" className="mt-8 grid overflow-hidden rounded-md border border-[var(--line)] md:grid-cols-3">{contextualLinks.map(([label, href], index) => <Link className={`focus-ring flex min-h-14 items-center justify-between gap-4 px-5 py-4 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--brand)] ${index > 0 ? "border-t border-[var(--line)] md:border-l md:border-t-0" : ""}`} href={href} key={href}><span>{label}</span><span aria-hidden="true">→</span></Link>)}</nav>
+        <div className="mt-6 flex flex-col gap-3 border-l-2 border-[var(--brand)] pl-5 sm:flex-row sm:items-center sm:justify-between"><p className="max-w-3xl text-sm leading-6 text-[var(--muted)]">For molded-part production programs, inspection documentation is agreed around the project requirements.</p><Link className="focus-ring inline-flex min-h-11 shrink-0 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="/plastic-injection-molding">Plastic Injection Molding <span aria-hidden="true" className="ml-2">→</span></Link></div>
+      </div></section>
 
-      <section className="bg-white py-14">
-        <div className="container-page">
-          <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Quality Records &amp; Tooling Documentation</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-bold text-[var(--brand-dark)]">Tooling Documentation Package</h2>
-          <p className="mt-4 max-w-4xl leading-7 text-[var(--muted)]">Available records are organized by project stage so customer teams can review engineering release, mold trial results, material records and export preparation efficiently. The exact package depends on the agreed project scope.</p>
-          <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)]">
-              <Image alt="Export injection mold tooling documentation and pre-shipment validation package" className="object-contain object-center" fill sizes="(min-width: 1024px) 42vw, 100vw" src="/images/documentation/tooling-documentation-package.png" />
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {documentationGroups.map((group) => (
-                <article className="rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-5" key={group.stage}>
-                  <h3 className="text-lg font-bold text-[var(--brand-dark)]">{group.stage}</h3>
-                  <ul className="mt-4 grid gap-2">
-                    {group.items.map((item) => <li className="flex gap-2 text-sm leading-6 text-[var(--muted)]" key={item}><span aria-hidden="true" className="text-[var(--brand)]">✓</span><span>{item}</span></li>)}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="bg-white py-12 sm:py-14"><div className="container-page">
+        <SectionHeading eyebrow="QUALITY RECORD FAQ" intro="Documentation is matched to the project scope rather than treated as one fixed package." title="Quality Documentation Questions" />
+        <div className="mt-8 max-w-4xl divide-y divide-[var(--line)] border-y border-[var(--line)]">{faqs.map((item) => <details className="group" key={item.question}><summary className="focus-ring flex min-h-14 cursor-pointer list-none items-center justify-between gap-5 rounded-sm py-4 font-bold text-[var(--brand-dark)] marker:hidden"><span>{item.question}</span><span aria-hidden="true" className="text-xl text-[var(--brand)] transition group-open:rotate-45 motion-reduce:transition-none">+</span></summary><p className="max-w-3xl pb-5 pr-10 text-sm leading-7 text-[var(--muted)] sm:text-base">{item.answer}</p></details>)}</div>
+      </div></section>
 
-      <section className="py-14">
-        <div className="container-page grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Export Delivery Readiness</p>
-            <h2 className="mt-3 text-3xl font-bold text-[var(--brand-dark)]">Final checks before mold packing and export shipment</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">Before shipment, the team reviews final mold condition, required records, loose components, spare parts and packing evidence against the agreed delivery scope.</p>
-          </div>
-          <Checklist items={exportChecks} />
-        </div>
-      </section>
-
-      <CTA />
+      <section className="border-t border-[var(--line)] bg-white py-12 sm:py-14"><div className="container-page"><div className="rounded-md border border-[var(--line)] bg-[var(--surface-soft)] px-6 py-8 sm:px-8 sm:py-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+        <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">PROJECT-SPECIFIC DOCUMENTATION</p><h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">Discuss Your Quality Documentation Requirements</h2><p className="mt-4 leading-7 text-[var(--muted)]">Share your drawings, critical dimensions and documentation requirements so we can review the appropriate inspection and record scope for your project.</p></div>
+        <Link className="focus-ring mt-6 inline-flex min-h-12 shrink-0 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)] lg:mt-0" href="/request-a-quote">Discuss Documentation Requirements</Link>
+      </div></div></section>
     </>
   );
 }

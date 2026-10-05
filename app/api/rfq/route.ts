@@ -70,7 +70,7 @@ export async function POST(request: Request) {
   }
 
   if (value(formData, "website", 200)) {
-    return NextResponse.json({ message: "Thank you. Your request has been received." });
+    return NextResponse.json({ delivered: false, message: "Thank you. Your request has been received." });
   }
 
   const name = value(formData, "name", 120);
@@ -166,5 +166,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: `Your RFQ could not be delivered. Please email ${site.email}.` }, { status: 502 });
   }
 
-  return NextResponse.json({ message: "Thank you. Your RFQ has been delivered to the Arktech engineering team." });
+  return NextResponse.json({ delivered: true, message: "Thank you. Your RFQ has been delivered to the Arktech engineering team." });
 }

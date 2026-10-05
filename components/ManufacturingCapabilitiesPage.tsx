@@ -71,19 +71,19 @@ const engineeringCapabilities = [
   }
 ];
 
-const specialtyMoldingLinks = [
+const specialtyMoldingLinks: { label: string; href?: string }[] = [
   { label: "Insert Molding", href: "/injection-molds/insert-molding-tools" },
   { label: "Two-Shot / 2K Molding", href: "/injection-molds/two-shot-2k-molds" },
   { label: "Overmolding", href: "/injection-molds/overmolding-tools" },
-  { label: "In-Mold Labeling (IML)", href: "/injection-molds#in-mold-labeling" }
+  { label: "In-Mold Labeling (IML)" }
 ];
 
 const supportingCapabilities = [
   { title: "CNC Machining", description: "Metal and plastic parts for prototypes, functional components and assemblies.", image: "/images/capabilities/cnc-machining.webp", alt: "CNC machined components arranged on a work surface", imageClassName: "object-cover object-center" },
   { title: "Die Casting", description: "Aluminum and zinc components with machining and finishing support.", image: "/images/capabilities/die-casting.webp", alt: "Die-cast component housings and structural parts on a workbench", imageClassName: "object-cover object-center" },
   { title: "Sheet Metal Fabrication", description: "Enclosures, brackets and formed parts for product assemblies.", image: "/images/capabilities/sheet-metal-fabrication.jpg", alt: "Sheet metal clips brackets and formed components arranged on a surface", imageClassName: "object-contain object-center p-2" },
-  { title: "Rapid Prototyping", description: "Prototypes for fit, function and design review before tooling.", image: "/images/capabilities/rapid-prototyping-v2.jpg", alt: "Prototype plastic trim components arranged for product review", imageClassName: "object-contain object-center p-5" },
-  { title: "Vacuum Casting", description: "Small batches of prototype parts for product evaluation.", image: "/images/case-studies/vacuum-casting-prototype.webp", alt: "Silicone vacuum casting molds with a clear prototype part", imageClassName: "object-contain object-center p-3" },
+  { title: "Rapid Prototyping", description: "Prototypes for fit, function and design review before tooling.", image: "/images/capabilities/rapid-prototyping-v3.webp", alt: "Prototype components displayed beside additive manufacturing and machining equipment", imageClassName: "object-cover object-center" },
+  { title: "Vacuum Casting", description: "Small batches of prototype parts for product evaluation.", image: "/images/case-studies/vacuum-casting-prototype.webp", alt: "Silicone vacuum casting molds with a clear prototype part", imageClassName: "object-cover object-center" },
   { title: "Assembly & Secondary Operations", description: "Printing, welding, inserts, assembly and packaging support.", image: "/images/capabilities/molded-part-component-assembly.webp", alt: "Operator assembling molded plastic components at a work fixture", imageClassName: "object-cover object-center" }
 ];
 
@@ -216,8 +216,8 @@ export function ManufacturingCapabilitiesPage() {
                     <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">Explore molding processes for integrated inserts, multi-material parts, functional surfaces and in-mold decoration.</p>
                     <ul aria-label="Specialty molding capability pages" className="mt-4 flex flex-wrap gap-2">
                       {specialtyMoldingLinks.map((process) => (
-                        <li key={process.href}>
-                          <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-semibold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={process.href}>{process.label}</Link>
+                        <li key={process.label}>
+                          {process.href ? <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-semibold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={process.href}>{process.label}</Link> : <span className="inline-flex min-h-11 items-center rounded-sm border border-dashed border-[var(--line)] bg-white px-3.5 py-2 text-sm font-semibold text-[var(--muted)]">{process.label}</span>}
                         </li>
                       ))}
                     </ul>
@@ -244,7 +244,7 @@ export function ManufacturingCapabilitiesPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--surface-soft)] py-14 sm:py-16" id="supporting-capabilities">
+      <section className="scroll-mt-24 bg-[var(--surface-soft)] py-14 sm:py-16" id="supporting-capabilities">
         <div className="container-page">
           <SectionHeading eyebrow="SUPPORT BY ARKTECH GROUP" title="Supporting Manufacturing Capabilities" body="Complete your OEM and ODM product programs with metal parts, prototypes, finishing and assembly support from Arktech Group, alongside injection molds and molded plastic parts." />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -4,6 +4,7 @@ import { DfmReportPreview } from "@/components/DfmReportPreview";
 import { HomeIndustryPanels } from "@/components/HomeIndustryPanels";
 import { InjectionMoldingProductionVideo } from "@/components/InjectionMoldingProductionVideo";
 import { ManufacturingYouTubeVideo } from "@/components/ManufacturingYouTubeVideo";
+import { MoldDrawingPreview } from "@/components/MoldDrawingPreview";
 import { ToolingGallery } from "@/components/ToolingGallery";
 import { ValidationEvidenceGallery } from "@/components/ValidationEvidenceGallery";
 
@@ -108,16 +109,17 @@ const supportingCapabilities = [
   {
     title: "Rapid Prototyping",
     body: "Physical prototypes for fit, function and design review before tooling.",
-    image: "/images/capabilities/rapid-prototyping-v2.jpg",
-    alt: "Prototype plastic trim components arranged for product review",
-    fit: "object-contain"
+    image: "/images/capabilities/rapid-prototyping-v3.webp",
+    alt: "Transparent and white prototype components displayed on a workshop table",
+    fit: "object-cover"
   },
   {
     title: "Vacuum Casting",
     body: "Small batches of prototype parts for product evaluation and pre-production review.",
     image: "/images/case-studies/vacuum-casting-prototype.webp",
     alt: "Silicone vacuum casting molds with a clear prototype part",
-    fit: "object-contain"
+    fit: "object-cover",
+    position: "object-[center_48%]"
   },
   {
     title: "Assembly & Secondary Operations",
@@ -177,7 +179,27 @@ export function HomePage() {
               ))}
             </div>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <dl className="mt-5 grid max-w-[620px] grid-cols-1 gap-4 min-[390px]:grid-cols-2 sm:gap-6" aria-label="Arktech mold manufacturing metrics">
+              <div className="border-l-2 border-[var(--brand)] pl-3.5 sm:pl-4">
+                <dt className="text-xs font-medium uppercase tracking-[0.08em] text-white/65 sm:text-[0.8125rem]">Mold Size &amp; Weight</dt>
+                <dd className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 min-[390px]:grid-cols-1 sm:grid-cols-2">
+                  <span>
+                    <span className="block text-[0.6875rem] font-medium uppercase tracking-[0.06em] text-white/60">Size</span>
+                    <strong className="mt-0.5 block whitespace-nowrap text-lg leading-6 text-white sm:text-xl">Up to 2,000 mm</strong>
+                  </span>
+                  <span>
+                    <span className="block text-[0.6875rem] font-medium uppercase tracking-[0.06em] text-white/60">Weight</span>
+                    <strong className="mt-0.5 block whitespace-nowrap text-lg leading-6 text-white sm:text-xl">Up to 30 Tonnes</strong>
+                  </span>
+                </dd>
+              </div>
+              <div className="border-l-2 border-[var(--brand)] pl-3.5 sm:pl-4">
+                <dt className="text-xs font-medium uppercase tracking-[0.08em] text-white/65 sm:text-[0.8125rem]">Annual Manufacturing Capacity</dt>
+                <dd className="mt-2 whitespace-nowrap text-lg font-bold leading-7 text-white sm:text-2xl">200+ Molds / Year</dd>
+              </div>
+            </dl>
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Request a Tooling Quote</Link>
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[rgba(8,35,58,0.28)] px-6 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
             </div>
@@ -238,7 +260,13 @@ export function HomePage() {
             {supportingCapabilities.map((capability) => (
               <article className="flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(8,35,58,0.04)]" key={capability.title}>
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#eef2f5]">
-                  <Image alt={capability.alt} className={`${capability.fit} object-center`} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" src={capability.image} />
+                  <Image
+                    alt={capability.alt}
+                    className={`${capability.fit} ${"position" in capability ? capability.position : "object-center"}`}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    src={capability.image}
+                  />
                 </div>
                 <div className="flex flex-1 flex-col border-t border-[var(--line)] p-4 sm:p-5">
                   <h3 className="text-lg font-bold leading-6 text-[var(--brand-dark)]">{capability.title}</h3>
@@ -254,7 +282,7 @@ export function HomePage() {
       <section className="bg-white py-14 sm:py-16" aria-labelledby="dfm-heading">
         <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,54fr)_minmax(0,46fr)] lg:items-center lg:gap-12 xl:gap-14">
           <DfmReportPreview />
-          <div><SectionHeading body="Review moldability, release, filling and tooling risks before steel is machined." eyebrow="DFM & Mold Design" id="dfm-heading" title="Engineering Before Steel Cutting" /><div className="mt-6"><CheckList items={["Parting line", "Draft & undercuts", "Gate strategy", "Ejection", "Steel-safe conditions", "Moldability risks"]} /></div><Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molding-engineering">Explore DFM &amp; Mold Design <span aria-hidden="true" className="ml-2">→</span></Link></div>
+          <div><SectionHeading body="Review moldability, release, filling and tooling risks before steel is machined." eyebrow="DFM & Mold Design" id="dfm-heading" title="Engineering Before Steel Cutting" /><div className="mt-6"><CheckList items={["Parting line", "Draft & undercuts", "Gate strategy", "Ejection", "Steel-safe conditions", "Moldability risks"]} /></div><MoldDrawingPreview /><Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molding-engineering">Explore DFM &amp; Mold Design <span aria-hidden="true" className="ml-2">→</span></Link></div>
         </div>
       </section>
 

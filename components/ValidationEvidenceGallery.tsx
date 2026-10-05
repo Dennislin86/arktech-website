@@ -22,7 +22,7 @@ const evidence: Evidence[] = [
     id: "trial-report",
     objectFit: "contain",
     src: "/images/quality/arktech-mold-trial-report-overview.webp",
-    title: "Mold Trial Report",
+    title: "Mold Trial Out Report",
     width: 2000
   },
   {
@@ -32,18 +32,18 @@ const evidence: Evidence[] = [
     id: "trial-machine",
     objectFit: "cover",
     src: "/images/quality/arktech-mold-trial-machine.webp",
-    title: "Mold Trial",
+    title: "Mold Trial Video in 3 Cycle",
     width: 1400
   },
   {
-    alt: "Dimensional inspection report for molded samples",
-    ariaLabel: "Open the dimensional inspection report for molded samples",
-    height: 1200,
+    alt: "Sample inspection report with dimensional measurement results",
+    ariaLabel: "Open the sample inspection report with dimensional measurement results",
+    height: 1024,
     id: "dimensional-report",
     objectFit: "contain",
-    src: "/images/quality/arktech-dimensional-inspection-report.webp",
-    title: "Dimensional Inspection Report",
-    width: 1660
+    src: "/images/Mold trail/Sample Inspection Report.png",
+    title: "Sample Inspection Report",
+    width: 874
   },
   {
     alt: "Injection molding process parameter record",
@@ -52,7 +52,7 @@ const evidence: Evidence[] = [
     id: "molding-parameters",
     objectFit: "contain",
     src: "/images/quality/arktech-injection-molding-parameters.webp",
-    title: "Injection Molding Parameters",
+    title: "Injection Parameter Sheet",
     width: 1450
   }
 ];
@@ -61,22 +61,25 @@ const zoomLevels = [1, 1.5, 2, 3];
 
 function EvidenceButton({ item, onOpen, className }: { item: Evidence; onOpen: () => void; className: string }) {
   return (
-    <button
-      aria-haspopup="dialog"
-      aria-label={item.ariaLabel}
-      className={`focus-ring group relative block min-h-44 w-full cursor-zoom-in overflow-hidden rounded-md border border-[var(--line)] bg-white transition hover:border-[var(--brand)] ${className}`}
-      onClick={onOpen}
-      type="button"
-    >
-      <Image
-        alt={item.alt}
-        className={`${item.objectFit === "cover" ? "object-cover object-center" : "object-contain object-center p-1.5"} transition duration-300 group-hover:opacity-95 motion-reduce:transition-none`}
-        fill
-        loading="lazy"
-        sizes="(min-width: 1024px) 28vw, (min-width: 768px) 48vw, 100vw"
-        src={item.src}
-      />
-    </button>
+    <figure className="flex h-full min-w-0 flex-col">
+      <figcaption className="mb-2 text-sm font-bold leading-5 text-[var(--brand-dark)]">{item.title}</figcaption>
+      <button
+        aria-haspopup="dialog"
+        aria-label={item.ariaLabel}
+        className={`focus-ring group relative block min-h-44 w-full flex-1 cursor-zoom-in overflow-hidden rounded-md border border-[var(--line)] bg-white transition hover:border-[var(--brand)] ${className}`}
+        onClick={onOpen}
+        type="button"
+      >
+        <Image
+          alt={item.alt}
+          className={`${item.objectFit === "cover" ? "object-cover object-center" : "object-contain object-center p-1.5"} transition duration-300 group-hover:opacity-95 motion-reduce:transition-none`}
+          fill
+          loading="lazy"
+          sizes="(min-width: 1024px) 28vw, (min-width: 768px) 48vw, 100vw"
+          src={item.src}
+        />
+      </button>
+    </figure>
   );
 }
 
@@ -150,18 +153,18 @@ export function ValidationEvidenceGallery() {
     <>
       <div className="grid min-w-0 gap-3 md:h-[520px] md:grid-cols-2">
         <div ref={(node) => { triggerRefs.current[0] = node?.querySelector("button") ?? null; }}>
-          <EvidenceButton className="aspect-[4/5] h-full md:aspect-auto" item={evidence[0]} onOpen={() => openPreview(0)} />
+          <EvidenceButton className="aspect-[4/5] md:aspect-auto" item={evidence[0]} onOpen={() => openPreview(0)} />
         </div>
         <div className="grid min-w-0 gap-3 md:min-h-0 md:grid-rows-2">
           <div ref={(node) => { triggerRefs.current[1] = node?.querySelector("button") ?? null; }}>
-            <EvidenceButton className="aspect-[16/10] h-full md:aspect-auto" item={evidence[1]} onOpen={() => openPreview(1)} />
+            <EvidenceButton className="aspect-[16/10] md:aspect-auto" item={evidence[1]} onOpen={() => openPreview(1)} />
           </div>
           <div className="grid min-w-0 gap-3 sm:grid-cols-2 md:min-h-0">
             <div ref={(node) => { triggerRefs.current[2] = node?.querySelector("button") ?? null; }}>
-              <EvidenceButton className="aspect-[4/3] h-full sm:aspect-auto" item={evidence[2]} onOpen={() => openPreview(2)} />
+              <EvidenceButton className="aspect-[4/3] sm:aspect-auto" item={evidence[2]} onOpen={() => openPreview(2)} />
             </div>
             <div ref={(node) => { triggerRefs.current[3] = node?.querySelector("button") ?? null; }}>
-              <EvidenceButton className="aspect-[4/3] h-full sm:aspect-auto" item={evidence[3]} onOpen={() => openPreview(3)} />
+              <EvidenceButton className="aspect-[4/3] sm:aspect-auto" item={evidence[3]} onOpen={() => openPreview(3)} />
             </div>
           </div>
         </div>

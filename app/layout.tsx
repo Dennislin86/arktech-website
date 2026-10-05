@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { AnalyticsManager } from "@/components/AnalyticsManager";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
@@ -98,7 +99,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <script dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema).replaceAll("<", "\\u003c") }} type="application/ld+json" />
         <Header />
         <main id="main-content">{children}</main>
-        <Footer />
+        <Footer showAnalyticsPreferences={isProduction} />
+        <AnalyticsManager vercelProduction={isProduction} />
       </body>
     </html>
   );

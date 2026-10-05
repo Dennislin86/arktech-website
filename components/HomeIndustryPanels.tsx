@@ -8,7 +8,7 @@ const industries = [
     body: "Housings, sensor interfaces & functional components.",
     image: "/images/industries/robotics-automation.png",
     alt: "Industrial robot handling components on an automated production line",
-    href: "/industries/robotics",
+    href: "/industries/industrial-automation",
     position: "42% center"
   },
   {
@@ -16,7 +16,7 @@ const industries = [
     body: "Interior trim, control panels & functional plastic parts.",
     image: "/images/industries/Automotive-Components.png",
     alt: "Automotive interior with dashboard controls and molded trim components",
-    href: "/industries/automotive-components",
+    href: "/industries/automotive",
     position: "52% center"
   },
   {
@@ -24,7 +24,7 @@ const industries = [
     body: "Device housings, sensor enclosures & control panels.",
     image: "/images/industries/smart-device-housings.png",
     alt: "Smart home cameras hubs sensors and connected control devices",
-    href: "/industries/smart-home",
+    href: "/industries/smart-home-iot",
     position: "48% center"
   },
   {
@@ -32,7 +32,7 @@ const industries = [
     body: "Appliance housings, control panels & functional parts.",
     image: "/images/industries/home-appliance.png",
     alt: "Home appliances with molded housings and control panels in a kitchen",
-    href: "/industries/home-appliance",
+    href: "/industries/home-appliances",
     position: "50% center"
   },
   {

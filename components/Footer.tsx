@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnalyticsPreferencesButton } from "@/components/AnalyticsManager";
 import { site } from "@/lib/site";
 
 type FooterLink = {
@@ -65,7 +66,7 @@ function FooterNavLink({ link }: { link: FooterLink }) {
   return <Link className={className} href={link.href}>{link.label}</Link>;
 }
 
-export function Footer() {
+export function Footer({ showAnalyticsPreferences = false }: { showAnalyticsPreferences?: boolean }) {
   return (
     <footer className="bg-[#102A43] text-white">
       <div className="container-page border-b border-white/10 py-6">
@@ -153,6 +154,7 @@ export function Footer() {
             <li><Link className="transition hover:text-white" href="/privacy-policy">Privacy Policy</Link></li>
             <li><Link className="transition hover:text-white" href="/terms-of-use">Terms of Use</Link></li>
             <li><Link className="transition hover:text-white" href="/cookie-policy">Cookie Policy</Link></li>
+            <li><AnalyticsPreferencesButton enabled={showAnalyticsPreferences} /></li>
           </ul>
         </nav>
       </div>

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 type LazyAutoplayVideoProps = {
   ariaLabel: string;
   className?: string;
+  controls?: boolean;
   poster: string;
   preload?: "none" | "metadata";
   rootMargin?: string;
@@ -15,6 +16,7 @@ type LazyAutoplayVideoProps = {
 export function LazyAutoplayVideo({
   ariaLabel,
   className,
+  controls = false,
   poster,
   preload = "none",
   rootMargin = "300px 0px",
@@ -59,6 +61,7 @@ export function LazyAutoplayVideo({
       aria-label={ariaLabel}
       autoPlay={shouldAutoplay}
       className={className}
+      controls={controls}
       loop
       muted
       playsInline

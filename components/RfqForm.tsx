@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
+import { trackGenerateLead } from "@/lib/analytics";
 
 type RfqFormProps = {
   variant: "full" | "contact" | "compact";
@@ -89,9 +90,12 @@ function FilePicker({ compact = false }: { compact?: boolean }) {
 export function RfqForm({ variant, source }: RfqFormProps) {
   const [state, setState] = useState<SubmissionState>(initialState);
   const [resetToken, setResetToken] = useState(0);
+  const submissionInFlightRef = useRef(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submissionInFlightRef.current) return;
+    submissionInFlightRef.current = true;
     const form = event.currentTarget;
     setState({ kind: "submitting", message: "Submitting your RFQ securely…" });
 
@@ -103,7 +107,7 @@ export function RfqForm({ variant, source }: RfqFormProps) {
         body: formData,
         headers: { Accept: "application/json" }
       });
-      const payload = (await response.json().catch(() => null)) as { message?: string } | null;
+      const payload = (await response.json().catch(() => null)) as { message?: string; delivered?: boolean } | null;
 
       if (!response.ok) {
         throw new Error(payload?.message || "Your RFQ could not be submitted. Please try again or email engineering@arktechmold.com.");
@@ -115,11 +119,14 @@ export function RfqForm({ variant, source }: RfqFormProps) {
         kind: "success",
         message: payload?.message || "Thank you. Your RFQ has been delivered to the Arktech engineering team."
       });
+      if (payload?.delivered === true) trackGenerateLead();
     } catch (error) {
       setState({
         kind: "error",
         message: error instanceof Error ? error.message : "Your RFQ could not be submitted. Please email engineering@arktechmold.com."
       });
+    } finally {
+      submissionInFlightRef.current = false;
     }
   }
 

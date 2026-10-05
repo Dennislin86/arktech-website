@@ -370,21 +370,6 @@ export const servicePages: DetailPageData[] = [
     ]
   },
   {
-    slug: "injection-molding-production-options",
-    title: "Injection Molding Production Options",
-    description:
-      "Prototype, low-volume and mass-production injection molding paths with tooling, DFM, inspection, secondary operations and assembly support.",
-    eyebrow: "Production Options",
-    heroTitle: "Injection molding from prototype to mass production.",
-    heroBody:
-      "Choose an injection molding production path based on engineering validation, launch requirements, repeatability and long-term supply needs.",
-    sections: [
-      { title: "Prototype Injection Molding", items: ["Engineering validation", "Functional samples", "Design and assembly checks"] },
-      { title: "Low-Volume Production", items: ["Bridge and pilot production", "Market launch", "Controlled repeatability"] },
-      { title: "Mass Production", items: ["Stable repeat production", "Process control", "Recurring delivery"] }
-    ]
-  },
-  {
     slug: "die-casting-mold",
     title: "Die Casting Mold Manufacturing",
     description:

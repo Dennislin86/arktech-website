@@ -84,21 +84,21 @@ const productionOptions = [
     title: "Prototype Injection Molding",
     body: "Production-intent molded parts for design verification, functional testing and early customer evaluation before larger-volume production.",
     focus: ["Engineering samples", "Functional validation", "Early DFM alignment"],
-    href: "/services/injection-molding-production-options#prototype"
+    href: "/plastic-injection-molding/production-options#prototype"
   },
   {
     number: "02",
     title: "Low-Volume Production",
     body: "Controlled injection molding support for bridge production, pilot builds, market launch and specialist programs that do not yet require full-scale output.",
     focus: ["Bridge production", "Pilot runs", "Launch support"],
-    href: "/services/injection-molding-production-options#low-volume"
+    href: "/plastic-injection-molding/production-options#low-volume"
   },
   {
     number: "03",
     title: "Mass Production Support",
     body: "Repeatable molding programs with process validation, part inspection, secondary operations and assembly support for ongoing OEM supply.",
     focus: ["Stable supply", "Quality control", "Repeat production"],
-    href: "/services/injection-molding-production-options#mass-production"
+    href: "/plastic-injection-molding/production-options#mass-production"
   }
 ];
 
@@ -187,27 +187,36 @@ const specialtyMoldingCapabilities = [
     applications: "Threaded inserts · bushings · contacts · embedded components",
     image: "/images/mold-types/insert-molding-tools.webp",
     alt: "Insert molding tool for plastic components with integrated metal inserts",
-    href: "/injection-molds/insert-molding-tools",
+    href: "/plastic-injection-molding/insert-molding",
     link: "Explore Insert Molding"
-  },
-  {
-    title: "Overmolding",
-    body: "Combine rigid and soft materials to add grip, sealing, impact protection or functional surfaces while reducing separate assembly steps.",
-    applications: "Seals · grips · protective surfaces · soft-touch features",
-    image: "/images/material-capabilities/silicone-tpu-tpe-elastomer-components.webp",
-    alt: "Overmolded plastic components with rigid and soft materials",
-    href: "/injection-molds/overmolding-tools",
-    link: "Explore Overmolding"
   },
   {
     title: "Two-Shot / 2K Molding",
     body: "Integrate two compatible materials or colors within a controlled molding process for multi-material parts and repeat production.",
     applications: "Dual-material parts · two-color components · integrated soft / rigid parts",
-    image: "/images/case-studies/two-shot-light-cover.webp",
-    alt: "Two-shot 2K molded component with two materials",
-    href: "/injection-molds/two-shot-2k-molds",
+    image: "/images/mold-types-images/two-shot-2k-bi-injection-molds.png",
+    alt: "Two-shot 2K injection molds for multi-material plastic components",
+    href: "/plastic-injection-molding/two-shot-molding",
     link: "Explore 2K Molding"
+  },
+  {
+    title: "In-Mold Labeling (IML)",
+    body: "Position labels or decorative films in the mold so they become integrated with the plastic part during the injection molding cycle.",
+    applications: "Decorative films · labels · graphics · integrated surface decoration",
+    image: "/images/mold-types/In-mould labelling (IML).png",
+    alt: "In-mold labeling process integrating a decorative film with a plastic part",
+    href: "/request-a-quote",
+    link: "Discuss IML Project",
+    imageFit: "contain"
   }
+];
+
+const moldingProcessDiscovery = [
+  { label: "Insert Molding", href: "/plastic-injection-molding/insert-molding" },
+  { label: "Overmolding", href: "/plastic-injection-molding/overmolding" },
+  { label: "Two-Shot / 2K Molding", href: "/plastic-injection-molding/two-shot-molding" },
+  { label: "Transparent Part Molding", href: "/plastic-injection-molding/transparent-parts" },
+  { label: "Engineering Plastics Molding", href: "/plastic-injection-molding/engineering-plastics" }
 ];
 
 const productionToolingOptions = [
@@ -698,7 +707,7 @@ export function PlasticInjectionMoldingPage() {
               <div className="mt-1 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-4 sm:flex sm:items-center sm:justify-between sm:gap-5 sm:p-5">
                 <p className="text-base font-bold leading-6 text-[var(--brand-dark)] sm:max-w-[220px]">Need help choosing the right production path?</p>
                 <div className="mt-4 flex flex-col gap-3 sm:mt-0 sm:items-end">
-                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/services/injection-molding-production-options">
+                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/plastic-injection-molding/production-options">
                     Compare Production Options →
                   </Link>
                   <Link className="focus-ring inline-flex min-h-10 items-center rounded-sm text-sm font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/request-a-quote">
@@ -708,6 +717,13 @@ export function PlasticInjectionMoldingPage() {
               </div>
             </div>
           </div>
+
+          <nav aria-label="Injection molding process pages" className="mt-7 border-t border-[var(--line)] pt-6">
+            <p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Explore Molding Processes</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {moldingProcessDiscovery.map((item) => <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={item.href} key={item.href}>{item.label} →</Link>)}
+            </div>
+          </nav>
         </div>
       </section>
 
@@ -794,14 +810,23 @@ export function PlasticInjectionMoldingPage() {
           />
 
           <div className="mt-9 overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] lg:grid lg:grid-cols-[minmax(0,56fr)_minmax(0,44fr)]">
-            <figure className="flex items-center justify-center bg-white p-3 sm:p-5 lg:self-start lg:border-r lg:border-[var(--line)]">
-              <div className="relative aspect-[61/39] w-full overflow-hidden bg-white">
+            <figure className="flex items-center justify-center bg-white p-3 sm:p-5 lg:h-full lg:items-stretch lg:border-r lg:border-[var(--line)]">
+              <div className="relative aspect-[61/39] w-full overflow-hidden bg-white lg:hidden">
                 <Image
                   alt="DFM analysis showing slider and lifter directions for undercut mold construction"
                   className="object-contain object-center"
                   fill
-                  sizes="(min-width: 1024px) 56vw, 100vw"
+                  sizes="100vw"
                   src="/images/injection-mold-manufacturing/ejection-slider-lifter.webp"
+                />
+              </div>
+              <div className="relative hidden h-full min-h-0 w-full overflow-hidden bg-white lg:block">
+                <Image
+                  alt="Overview of 21 DFM report pages for injection mold design review"
+                  className="object-contain object-center"
+                  fill
+                  sizes="56vw"
+                  src="/images/Engineering/arktech-dfm-mold-design-report-overview.webp"
                 />
               </div>
             </figure>
@@ -898,7 +923,7 @@ export function PlasticInjectionMoldingPage() {
           <SectionHeading
             eyebrow="Specialty Molding"
             title="Specialty Injection Molding Capabilities"
-            body="Arktech supports insert molding, overmolding and multi-material molding for parts that require integrated inserts, soft-touch surfaces, sealing features or multiple materials. Production tooling can also incorporate multi-cavity layouts, hot runners and unscrewing mechanisms based on part geometry, materials and expected production volume."
+            body="Arktech supports insert molding, two-shot / 2K molding and in-mold labeling for parts that require integrated inserts, multiple materials or colors, and molded-in decorative surfaces. Production tooling can also incorporate multi-cavity layouts, hot runners and unscrewing mechanisms based on part geometry, materials and expected production volume."
           />
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -907,7 +932,7 @@ export function PlasticInjectionMoldingPage() {
                 <div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)]">
                   <Image
                     alt={capability.alt}
-                    className="object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+                    className={`${capability.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition duration-300 group-hover:scale-[1.02]`}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     src={capability.image}

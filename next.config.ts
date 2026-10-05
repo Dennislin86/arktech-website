@@ -24,6 +24,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/services/injection-molding-production-options",
+        destination: "/plastic-injection-molding/production-options",
+        permanent: true
+      },
+      {
         source: "/dfm-engineering",
         destination: "/injection-molding-engineering",
         permanent: true

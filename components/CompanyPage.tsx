@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { CompanyFactoryYouTubeVideo } from "@/components/CompanyFactoryYouTubeVideo";
 import { FullBleedHero } from "@/components/FullBleedHero";
-import { LazyAutoplayVideo } from "@/components/LazyAutoplayVideo";
 import { site } from "@/lib/site";
 
 const facts = [
@@ -178,7 +178,7 @@ export function CompanyPage() {
           <div className="mt-9 grid gap-6 lg:grid-cols-[minmax(0,58fr)_minmax(0,42fr)]">
             <figure className="overflow-hidden rounded-md border border-white/15 bg-black/20">
               <div className="relative aspect-video">
-                <LazyAutoplayVideo ariaLabel="Arktech injection mold manufacturing and toolroom process" className="h-full w-full object-cover object-center" poster="/images/injection-mold-manufacturing/mold-manufacturing-video-poster.webp" preload="metadata" src="/videos/injection-mold-manufacturing/mold-manufacturing.mp4" />
+                <CompanyFactoryYouTubeVideo />
               </div>
               <figcaption className="border-t border-white/15 px-5 py-4 text-sm text-slate-300">Mold fitting and assembly inside the Arktech toolroom.</figcaption>
             </figure>

@@ -12,6 +12,7 @@ type MoldCardData = {
   alt: string;
   href?: string;
   cta?: string;
+  imageClassName?: string;
 };
 
 const coreMolds: MoldCardData[] = [
@@ -110,13 +111,14 @@ const specialtyMolding: MoldCardData[] = [
     href: "/injection-molds/two-shot-2k-molds"
   },
   {
-    id: "in-mold-labeling",
-    title: "In-Mold Labeling (IML)",
-    description: "Labels or decorative films positioned in the mold and integrated with the plastic part during the injection molding cycle.",
-    image: "/images/mold-types/In-mould labelling (IML).png",
-    alt: "In-mold labeling process integrating a decorative film with a plastic part",
-    href: "/request-a-quote",
-    cta: "Discuss IML Project"
+    id: "die-casting-tooling",
+    title: "Die Casting Tooling",
+    description: "Die casting tooling and metal component support for aluminum and zinc projects, available through Arktech Group.",
+    image: "/images/case-studies/die-casting-control-housing.webp",
+    alt: "Die casting die with raw and finished metal control housing",
+    href: "/manufacturing-capabilities#supporting-capabilities",
+    cta: "Explore Die Casting Support",
+    imageClassName: "object-contain object-center"
   }
 ];
 
@@ -146,7 +148,7 @@ function SectionHeading({ eyebrow, title, body, id }: { eyebrow: string; title: 
 }
 
 function MoldCard({ mold }: { mold: MoldCardData }) {
-  const content = <><div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)]"><Image alt={mold.alt} className="object-cover object-center transition duration-300 group-hover:scale-[1.02] motion-reduce:transition-none" fill sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw" src={mold.image} /></div><div className="flex flex-1 flex-col border-t border-[var(--line)] p-5"><h3 className="text-xl font-bold leading-tight text-[var(--brand-dark)] transition group-hover:text-[var(--brand)]">{mold.title}</h3><p className="mt-3 flex-1 text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">{mold.description}</p>{mold.href ? <span className="mt-4 text-sm font-bold text-[var(--brand)]">{mold.cta ?? "Explore"} <span aria-hidden="true">→</span></span> : null}</div></>;
+  const content = <><div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-soft)]"><Image alt={mold.alt} className={`${mold.imageClassName ?? "object-cover object-center"} transition duration-300 group-hover:scale-[1.02] motion-reduce:transition-none`} fill sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw" src={mold.image} /></div><div className="flex flex-1 flex-col border-t border-[var(--line)] p-5"><h3 className="text-xl font-bold leading-tight text-[var(--brand-dark)] transition group-hover:text-[var(--brand)]">{mold.title}</h3><p className="mt-3 flex-1 text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">{mold.description}</p>{mold.href ? <span className="mt-4 text-sm font-bold text-[var(--brand)]">{mold.cta ?? "Explore"} <span aria-hidden="true">→</span></span> : null}</div></>;
   const classes = "group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-sm transition hover:border-[var(--brand)] motion-reduce:transition-none";
   return mold.href ? <Link aria-label={`${mold.cta ?? "Explore"} ${mold.title}`} className={`focus-ring ${classes}`} href={mold.href} id={mold.id}>{content}</Link> : <article className={classes} id={mold.id}>{content}</article>;
 }
@@ -168,7 +170,7 @@ export function InjectionMoldsHubPage() {
 
     <section aria-labelledby="specialized-tooling-heading" className="bg-white py-14 sm:py-16"><div className="container-page"><SectionHeading eyebrow="Specialized Tooling" id="specialized-tooling-heading" title="Specialized Tooling Capabilities" body="Special mold mechanisms, surface requirements and resin conditions are reviewed as part of the tooling concept." /><div className="mt-8 grid auto-rows-fr gap-5 md:grid-cols-3">{specializedMolds.map((mold) => <MoldCard key={mold.id} mold={mold} />)}</div></div></section>
 
-    <section aria-labelledby="specialty-molding-heading" className="bg-[var(--surface-soft)] py-14 sm:py-16"><div className="container-page"><SectionHeading eyebrow="Specialty Molding" id="specialty-molding-heading" title="Specialty Injection Molding Processes" body="These tooling approaches integrate inserts, multiple materials or decorative films into the molding sequence." /><div className="mt-8 grid auto-rows-fr gap-5 md:grid-cols-3">{specialtyMolding.map((mold) => <MoldCard key={mold.id} mold={mold} />)}</div><div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold"><Link className="focus-ring text-[var(--brand)] hover:underline" href="/injection-molds/overmolding-tools">Explore Overmolding Tools →</Link><Link className="focus-ring text-[var(--brand)] hover:underline" href="/plastic-injection-molding">Explore Plastic Injection Molding →</Link></div></div></section>
+    <section aria-labelledby="specialty-molding-heading" className="bg-[var(--surface-soft)] py-14 sm:py-16"><div className="container-page"><SectionHeading eyebrow="Specialty Molding & Group Support" id="specialty-molding-heading" title="Specialty Molding & Supporting Tooling" body="Explore insert and two-shot injection molding, plus die casting tooling and metal-component support available through Arktech Group." /><div className="mt-8 grid auto-rows-fr gap-5 md:grid-cols-3">{specialtyMolding.map((mold) => <MoldCard key={mold.id} mold={mold} />)}</div><div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold"><Link className="focus-ring text-[var(--brand)] hover:underline" href="/injection-molds/overmolding-tools">Explore Overmolding Tools →</Link><Link className="focus-ring text-[var(--brand)] hover:underline" href="/plastic-injection-molding">Explore Plastic Injection Molding →</Link></div></div></section>
 
     <InjectionMoldProjectsCarousel />
 

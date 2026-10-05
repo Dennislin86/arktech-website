@@ -30,18 +30,19 @@ export const toolingSupportPages: Record<ToolingSupportSlug, ToolingSupportPageD
     title: "Injection Mold Trial & Validation",
     seoTitle: "Injection Mold Trial & Validation | T0/T1 Testing | Arktech",
     description: "Injection mold trial and validation support including T0/T1 samples, molding parameters, dimensional inspection, engineering corrections and approval before export or production.",
-    heroCopy: "Validate mold performance, molded parts and production conditions through mold trials, sample review, process recording and dimensional inspection before export or production.",
+    heroCopy: "Review mold performance, molded samples, process parameters and critical dimensions before tooling moves to export or production.",
     heroImage: "/images/Mold trail/Mold trial video photos.png",
     heroAlt: "Injection mold installed in a molding machine for trial and validation",
     ogImage: "/images/injection-mold-manufacturing/mold-trial-report-evidence.webp",
     primaryCta: "Discuss Mold Trial Requirements",
-    secondaryCta: "Upload CAD for Tooling Review",
+    secondaryCta: "View Trial Evidence",
     faqs: [
       { question: "What is checked during an injection mold trial?", answer: "The review can cover filling, gate and runner behavior, mold opening, part release, appearance, agreed critical dimensions and recorded molding conditions." },
-      { question: "What are T0 and T1 mold trials?", answer: "T0 and T1 identify early tooling trial stages used to review mold function and samples. The number and sequence of trials remain project-specific, and re-trials are completed when required." },
-      { question: "What information is recorded during a mold trial?", answer: "Project records can include trial findings, molding parameters, sample status, open items, dimensional inspection results and engineering correction status." },
-      { question: "How are dimensional results reviewed before mold approval?", answer: "Agreed critical dimensions are compared with the customer drawing and inspection scope. Results and open items are reviewed before approval or the next correction step." },
-      { question: "Can validated tooling continue into production at Arktech?", answer: "Yes. Projects that remain with Arktech can move from tooling validation into plastic injection molding production after the agreed approval steps." }
+      { question: "What are T0 and T1 mold trials?", answer: "T0 commonly refers to an initial tool trial. T1 may refer to a subsequent trial, including after changes where required. Trial labels, scope and sequence follow the agreed project process." },
+      { question: "What samples and records can be provided?", answer: "According to the agreed project scope, records can include molded samples, trial findings, molding parameters, dimensional inspection results, correction status and open items." },
+      { question: "How are critical dimensions reviewed?", answer: "Agreed critical dimensions are compared with the customer drawing and inspection scope. Results and open items are reviewed before approval or the next correction step." },
+      { question: "When is a correction or re-trial required?", answer: "Findings against the agreed product or tooling requirements may lead to correction actions and another trial where necessary. The scope is discussed before the next validation step." },
+      { question: "What happens after tooling validation?", answer: "After the agreed confirmation, tooling can move toward export transfer or continue into plastic injection molding production at Arktech, depending on the project path." }
     ]
   },
   "tooling-documentation": {
@@ -67,21 +68,22 @@ export const toolingSupportPages: Record<ToolingSupportSlug, ToolingSupportPageD
   "mold-spare-parts": {
     slug: "mold-spare-parts",
     navLabel: "Mold Spare Parts",
-    eyebrow: "Tooling Maintenance Support",
-    title: "Injection Mold Spare Parts & Replacement Inserts",
-    seoTitle: "Injection Mold Spare Parts & Replacement Inserts | Arktech",
-    description: "Injection mold spare parts and replacement inserts for export tooling, including project-specific cores, cavities, forming inserts and wear components where required.",
-    heroCopy: "Project-specific spare inserts and replacement components can support maintenance, repair and long-term use of export tooling after delivery.",
-    heroImage: "/images/capabilities/tooling-spare-parts.jpg",
-    heroAlt: "Replacement core and cavity inserts for an injection mold",
-    ogImage: "/images/capabilities/tooling-spare-parts.jpg",
-    primaryCta: "Request Spare Part Support",
-    secondaryCta: "Upload Tooling Data",
+    eyebrow: "Custom Mold Components & Tooling Support",
+    title: "Injection Mold Components, Spare Parts & Replacement Inserts",
+    seoTitle: "Injection Mold Components, Spare Parts & Replacement Inserts | Arktech",
+    description: "Custom injection mold components manufactured from customer drawings, plus spare parts and replacement inserts for existing tooling, reviewed to project requirements.",
+    heroCopy: "Arktech manufactures custom injection mold components from customer drawings and supports project-specific spare parts and replacement inserts for existing tooling.",
+    heroImage: "/images/mold-components/mold-component-cmm-inspection-poster.webp",
+    heroAlt: "CMM probe positioned above a machined mold component",
+    ogImage: "/images/mold-components/mold-component-cmm-inspection-poster.webp",
+    primaryCta: "Request a Mold Component Quote",
+    secondaryCta: "Explore Mold Components",
     faqs: [
-      { question: "What injection mold spare parts can be supplied?", answer: "Support can include project-specific core, cavity and forming inserts, mold-action components and identified wear or replacement components where applicable." },
-      { question: "Can spare core or cavity inserts be prepared with export tooling?", answer: "Yes. Spare inserts can be planned with export tooling when required by the mold design, expected wear areas, production needs and customer requirements." },
-      { question: "How are replacement mold inserts identified?", answer: "The original tooling documentation, component drawings, BOM references and insert identification are reviewed to confirm the required replacement component." },
-      { question: "Can replacement parts be manufactured after mold delivery?", answer: "Project-specific replacement support can be reviewed after delivery using available tooling records, reference data and the confirmed condition of the required component." }
+      { question: "Can Arktech manufacture individual mold components without building the complete mold?", answer: "Yes. Standalone component requests can be reviewed from customer drawings and agreed technical requirements without requiring a complete-mold order." },
+      { question: "Can components be made for molds built by another supplier?", answer: "Requirements can be reviewed using available drawings and component information. Manufacturing feasibility and fit requirements must be confirmed for the project." },
+      { question: "What information is needed for a component quotation?", answer: "Useful information includes the applicable drawings, material and treatment requirements, critical features, quantity and delivery needs." },
+      { question: "Can spare core or cavity inserts be prepared with export tooling?", answer: "They may be planned where required by the mold design, maintenance needs and customer agreement." },
+      { question: "Can replacement components be manufactured after mold delivery?", answer: "Support can be reviewed against available tooling data, component condition and confirmed replacement requirements." }
     ]
   },
   "export-tooling-transfer": {

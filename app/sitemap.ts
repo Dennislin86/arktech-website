@@ -6,6 +6,7 @@ import { allEngineeringResources } from "@/lib/engineering-resources";
 import { industryLandingPages } from "@/lib/industry-landing-pages";
 import { toolingSupportSlugs } from "@/lib/tooling-support-pages";
 import { moldTypeSlugs } from "@/lib/mold-type-pages";
+import { injectionMoldingProcessSlugs } from "@/lib/injection-molding-process-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -14,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/request-a-quote",
     "/injection-mold-manufacturing",
     "/plastic-injection-molding",
+    "/plastic-injection-molding/production-options",
+    ...injectionMoldingProcessSlugs.map((slug) => `/plastic-injection-molding/${slug}`),
     "/injection-molding-engineering",
     "/resources/faq",
     "/seo",
@@ -26,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookie-policy"
   ];
   const detailRoutes = [
-    ...servicePages.filter((page) => !["dfm-engineering", "injection-mold-manufacturing", "mold-trial-sampling-support", "plastic-injection-molding", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
+    ...servicePages.filter((page) => !["dfm-engineering", "injection-mold-manufacturing", "injection-molding-production-options", "mold-trial-sampling-support", "plastic-injection-molding", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
     ...solutionPages.map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
     "/injection-molds/multi-cavity-molds",
