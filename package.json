@@ -2,6 +2,10 @@
   "name": "arktechmold-website",
   "version": "0.1.0",
   "private": true,
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "unrs-resolver@1.12.2": true
+  },
   "scripts": {
     "gallery:generate": "node scripts/generate-tooling-gallery.mjs",
     "dev": "node scripts/dev-with-tooling-gallery.mjs",
