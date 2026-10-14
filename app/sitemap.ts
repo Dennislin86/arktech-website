@@ -7,6 +7,7 @@ import { industryLandingPages } from "@/lib/industry-landing-pages";
 import { toolingSupportSlugs } from "@/lib/tooling-support-pages";
 import { moldTypeSlugs } from "@/lib/mold-type-pages";
 import { injectionMoldingProcessSlugs } from "@/lib/injection-molding-process-pages";
+import { isRedirectedSeoSlug, isRedirectedSolutionSlug } from "@/lib/seo-indexing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -19,7 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...injectionMoldingProcessSlugs.map((slug) => `/plastic-injection-molding/${slug}`),
     "/injection-molding-engineering",
     "/resources/faq",
-    "/seo",
     "/company/arktech-group",
     "/company/project-management",
     "/company/quality-documentation",
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const detailRoutes = [
     ...servicePages.filter((page) => !["dfm-engineering", "injection-mold-manufacturing", "injection-molding-production-options", "mold-trial-sampling-support", "plastic-injection-molding", "tooling-spare-parts"].includes(page.slug)).map((page) => `/services/${page.slug}`),
-    ...solutionPages.map((page) => `/solutions/${page.slug}`),
+    ...solutionPages.filter((page) => !isRedirectedSolutionSlug(page.slug)).map((page) => `/solutions/${page.slug}`),
     ...industryLandingPages.map((page) => `/industries/${page.slug}`),
     "/injection-molds/multi-cavity-molds",
     ...moldTypeSlugs.map((slug) => `/injection-molds/${slug}`),
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...caseStudyPages.map((page) => `/case-studies/${page.slug}`),
     ...resourcePages.map((page) => `/resources/${page.slug}`),
     ...allEngineeringResources.map((page) => page.path),
-    ...seoPages.map((page) => `/seo/${page.slug}`)
+    ...seoPages.filter((page) => !isRedirectedSeoSlug(page.slug)).map((page) => `/seo/${page.slug}`)
   ];
 
   return [...new Set([...staticRoutes, ...detailRoutes])].map((href) => ({

@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import { SeoLandingPage } from "@/components/SeoLandingPage";
 import { getSeoPage, seoPages } from "@/lib/seo-pages";
 import { site } from "@/lib/site";
+import { isRedirectedSeoSlug } from "@/lib/seo-indexing";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return seoPages.map((page) => ({ slug: page.slug }));
+  return seoPages.filter((page) => !isRedirectedSeoSlug(page.slug)).map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DetailPage } from "@/components/DetailPage";
 import { solutionPages } from "@/lib/page-data";
+import { isRedirectedSolutionSlug } from "@/lib/seo-indexing";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return solutionPages.map((page) => ({ slug: page.slug }));
+  return solutionPages.filter((page) => !isRedirectedSolutionSlug(page.slug)).map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

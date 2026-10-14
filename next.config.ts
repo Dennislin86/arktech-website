@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { seoIndexingRedirects, solutionIndexingRedirects } from "./lib/seo-indexing";
 
 const nextConfig: NextConfig = {
   output: "standalone",
@@ -23,6 +24,28 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true
+      },
+      {
+        source: "/about",
+        destination: "/company",
+        permanent: true
+      },
+      {
+        source: "/project",
+        destination: "/case-studies",
+        permanent: true
+      },
+      {
+        source: "/products/3d-printing-parts",
+        destination: "/seo/rapid-prototyping-services",
+        permanent: true
+      },
+      ...seoIndexingRedirects.map(({ source, destination }) => ({ source, destination, permanent: true })),
+      ...solutionIndexingRedirects.map(({ source, destination }) => ({ source, destination, permanent: true })),
       {
         source: "/services/injection-molding-production-options",
         destination: "/plastic-injection-molding/production-options",

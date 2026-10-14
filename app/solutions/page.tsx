@@ -5,6 +5,7 @@ import { CTA } from "@/components/CTA";
 import { PageHero } from "@/components/PageHero";
 import { seoImageAlt, seoImageForSlug } from "@/lib/images";
 import { solutionPages } from "@/lib/page-data";
+import { isRedirectedSolutionSlug } from "@/lib/seo-indexing";
 
 export const metadata: Metadata = {
   title: "Solutions for OEM Product Companies, EMS Manufacturers and Injection Molding Companies",
@@ -40,7 +41,7 @@ export default function SolutionsPage() {
       />
       <section className="py-14">
         <div className="container-page grid gap-5 lg:grid-cols-3">
-          {solutionPages.map((solution) => (
+          {solutionPages.filter((solution) => !isRedirectedSolutionSlug(solution.slug)).map((solution) => (
             <article key={solution.slug} className="overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-sm">
               <div className="relative aspect-[16/9]">
                 <Image src={seoImageForSlug(solution.slug)} alt={seoImageAlt(solution.title)} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />

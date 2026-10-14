@@ -3,6 +3,7 @@ import Link from "next/link";
 import { RfqForm } from "@/components/RfqForm";
 import { site } from "@/lib/site";
 import { getSeoPage, type SeoLandingPage as SeoLandingPageData } from "@/lib/seo-pages";
+import { seoRedirectDestinationBySlug } from "@/lib/seo-indexing";
 
 const processSteps = ["RFQ", "DFM Review", "Tool Design", "Tooling Manufacturing", "Sampling", "Mass Production"];
 
@@ -12,7 +13,13 @@ function JsonLd({ data }: { data: Record<string, unknown> | Array<Record<string,
 
 export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
   const pageUrl = `${site.url}/seo/${page.slug}`;
-  const relatedPages = page.relatedSeoSlugs.map(getSeoPage).filter((item): item is SeoLandingPageData => Boolean(item));
+  const relatedPages = page.relatedSeoSlugs
+    .map(getSeoPage)
+    .filter((item): item is SeoLandingPageData => Boolean(item))
+    .map((related) => ({
+      ...related,
+      href: seoRedirectDestinationBySlug[related.slug] ?? `/seo/${related.slug}`
+    }));
   const schemas = [
     {
       "@context": "https://schema.org",
@@ -56,7 +63,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-        { "@type": "ListItem", position: 2, name: "SEO Manufacturing Resources", item: `${site.url}/seo` },
+        { "@type": "ListItem", position: 2, name: "Manufacturing Capabilities", item: `${site.url}/manufacturing-capabilities` },
         { "@type": "ListItem", position: 3, name: page.h1, item: pageUrl }
       ]
     }
@@ -74,7 +81,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
             <ol className="flex flex-wrap items-center gap-2">
               <li><Link className="hover:text-white" href="/">Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link className="hover:text-white" href="/seo">Manufacturing Resources</Link></li>
+              <li><Link className="hover:text-white" href="/manufacturing-capabilities">Manufacturing Capabilities</Link></li>
               <li aria-hidden="true">/</li>
               <li aria-current="page" className="text-white">{page.h1}</li>
             </ol>
@@ -221,7 +228,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
             <p className="mt-4 leading-7 text-white/80">Share your project basics. For CAD uploads and detailed specifications, continue to the secure RFQ page.</p>
             <nav aria-label="Related SEO manufacturing pages" className="mt-6 grid gap-2 text-sm">
               {relatedPages.map((related) => (
-                <Link key={related.slug} className="font-bold text-white/85 hover:text-white" href={`/seo/${related.slug}`}>{related.h1} →</Link>
+                <Link key={related.slug} className="font-bold text-white/85 hover:text-white" href={related.href}>{related.h1} →</Link>
               ))}
               <Link className="font-bold text-white/85 hover:text-white" href="/contact">Contact Arktech →</Link>
             </nav>
