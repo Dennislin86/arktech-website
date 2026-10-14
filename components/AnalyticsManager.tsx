@@ -97,6 +97,7 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
   const pathname = usePathname();
   const initializedRef = useRef(false);
   const lastPageViewRef = useRef("");
+  const [googleTagReady, setGoogleTagReady] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const runtimeEligible = useSyncExternalStore(
     subscribeToStableBrowserState,
@@ -129,15 +130,15 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
 
     setAnalyticsDisabled(false);
     const gtag = ensureGtag();
-    gtag("consent", "default", {
-      analytics_storage: "granted",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied"
-    });
 
     if (!initializedRef.current) {
       initializedRef.current = true;
+      gtag("consent", "default", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
       gtag("js", new Date());
       gtag("config", GA_MEASUREMENT_ID, {
         send_page_view: false,
@@ -148,6 +149,10 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
     } else {
       gtag("consent", "update", { analytics_storage: "granted" });
     }
+
+    // Mount the external tag only after its consent and configuration queue exists.
+    const readyTimer = window.setTimeout(() => setGoogleTagReady(true), 0);
+    return () => window.clearTimeout(readyTimer);
   }, [analyticsEnabled]);
 
   useEffect(() => {
@@ -160,7 +165,8 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
     window.gtag("event", "page_view", {
       page_path: pagePath,
       page_location: `${window.location.origin}${pagePath}`,
-      page_referrer: safePageReferrer()
+      page_referrer: safePageReferrer(),
+      page_title: document.title
     });
   }, [analyticsEnabled, pathname]);
 
@@ -211,7 +217,7 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
 
   return (
     <>
-      {analyticsEnabled ? (
+      {analyticsEnabled && googleTagReady ? (
         <Script
           id="arktech-google-analytics"
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
