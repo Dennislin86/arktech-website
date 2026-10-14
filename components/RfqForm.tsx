@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
-import { trackGenerateLead } from "@/lib/analytics";
+import { normalizeAnalyticsCadFileType, trackCadUpload, trackGenerateLead } from "@/lib/analytics";
 import { rfqMaterialOptions } from "@/lib/rfq-options";
 import { site } from "@/lib/site";
 
@@ -111,6 +111,9 @@ export function RfqForm({ variant, source }: RfqFormProps) {
     try {
       const formData = new FormData(form);
       formData.set("source", source);
+      const uploadedFiles = formData
+        .getAll("cad-files")
+        .filter((entry): entry is File => entry instanceof File && entry.size > 0);
       const response = await fetch("/api/rfq", {
         method: "POST",
         body: formData,
@@ -128,7 +131,15 @@ export function RfqForm({ variant, source }: RfqFormProps) {
         kind: "success",
         message: payload?.message || "Thank you. Your RFQ has been delivered to the Arktech engineering team."
       });
-      if (payload?.delivered === true) trackGenerateLead();
+      if (payload?.delivered === true) {
+        if (uploadedFiles.length > 0) {
+          trackCadUpload({
+            fileTypes: uploadedFiles.map((file) => normalizeAnalyticsCadFileType(file.name)),
+            fileCount: uploadedFiles.length
+          });
+        }
+        trackGenerateLead({ hasCadUpload: uploadedFiles.length > 0 });
+      }
     } catch (error) {
       setState({
         kind: "error",

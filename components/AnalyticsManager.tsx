@@ -13,7 +13,8 @@ import {
   isProductionAnalyticsHost,
   sanitizedPath,
   shouldEnableAnalytics,
-  type AnalyticsConsent
+  type AnalyticsConsent,
+  type AnalyticsEventDetail
 } from "@/lib/analytics";
 
 type Gtag = (...args: unknown[]) => void;
@@ -197,9 +198,27 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
     };
 
     const handleAnalyticsEvent = (event: Event) => {
-      const detail = (event as CustomEvent<{ eventName?: string }>).detail;
-      if (detail?.eventName !== "generate_lead") return;
-      window.gtag?.("event", "generate_lead", { source_path: sanitizedPath(window.location.pathname) });
+      const detail = (event as CustomEvent<AnalyticsEventDetail>).detail;
+      const pagePath = sanitizedPath(window.location.pathname);
+
+      if (detail?.eventName === "generate_lead") {
+        window.gtag?.("event", "generate_lead", {
+          form_name: "rfq",
+          page_path: pagePath,
+          page_title: document.title,
+          has_cad_upload: detail.hasCadUpload
+        });
+        return;
+      }
+
+      if (detail?.eventName === "cad_upload") {
+        window.gtag?.("event", "cad_upload", {
+          file_type: detail.fileType,
+          file_count: detail.fileCount,
+          upload_location: "rfq_form",
+          page_path: pagePath
+        });
+      }
     };
 
     document.addEventListener("click", handleClick);

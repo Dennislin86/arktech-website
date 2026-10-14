@@ -4,8 +4,26 @@ export const ANALYTICS_EVENT_NAME = "arktech:analytics-event";
 export const ANALYTICS_SETTINGS_EVENT_NAME = "arktech:analytics-settings";
 
 export type AnalyticsConsent = "granted" | "denied" | "unknown";
+export type AnalyticsCadFileType = "step" | "stp" | "x_t" | "x_b" | "iges" | "igs" | "stl" | "pdf" | "dwg" | "dxf" | "zip" | "other";
+export type AnalyticsEventDetail =
+  | { eventName: "generate_lead"; hasCadUpload: boolean }
+  | { eventName: "cad_upload"; fileType: AnalyticsCadFileType; fileCount: number };
 
 const productionHosts = new Set(["arktechmold.com", "www.arktechmold.com"]);
+const analyticsCadFileTypes = new Set<AnalyticsCadFileType>([
+  "step",
+  "stp",
+  "x_t",
+  "x_b",
+  "iges",
+  "igs",
+  "stl",
+  "pdf",
+  "dwg",
+  "dxf",
+  "zip",
+  "other"
+]);
 
 export function isProductionAnalyticsHost(hostname: string) {
   return productionHosts.has(hostname.toLowerCase());
@@ -64,7 +82,31 @@ export function classifyAnalyticsClick(rawHref: string, currentUrl: string): Tra
   }
 }
 
-export function trackGenerateLead() {
+export function isAnalyticsCadFileType(value: string): value is AnalyticsCadFileType {
+  return analyticsCadFileTypes.has(value as AnalyticsCadFileType);
+}
+
+export function normalizeAnalyticsCadFileType(fileName: string): AnalyticsCadFileType {
+  const extension = fileName.trim().toLowerCase().split(".").pop() ?? "";
+  return isAnalyticsCadFileType(extension) ? extension : "other";
+}
+
+function dispatchAnalyticsEvent(detail: AnalyticsEventDetail) {
   if (typeof window === "undefined") return;
-  window.dispatchEvent(new CustomEvent(ANALYTICS_EVENT_NAME, { detail: { eventName: "generate_lead" } }));
+  window.dispatchEvent(new CustomEvent<AnalyticsEventDetail>(ANALYTICS_EVENT_NAME, { detail }));
+}
+
+export function trackGenerateLead({ hasCadUpload }: { hasCadUpload: boolean }) {
+  dispatchAnalyticsEvent({ eventName: "generate_lead", hasCadUpload });
+}
+
+export function trackCadUpload({ fileTypes, fileCount }: { fileTypes: AnalyticsCadFileType[]; fileCount: number }) {
+  const uniqueFileTypes = [...new Set(fileTypes)];
+  const fileType = uniqueFileTypes.length === 1 ? uniqueFileTypes[0] : "other";
+
+  dispatchAnalyticsEvent({
+    eventName: "cad_upload",
+    fileType,
+    fileCount: Math.max(1, Math.floor(fileCount))
+  });
 }
