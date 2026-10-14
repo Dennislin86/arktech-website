@@ -41,7 +41,7 @@ const exportReadyCapabilities = [
   {
     title: "Mold Trial & Validation",
     body: "Tooling is trialed, corrected and validated before shipment based on approved samples and project requirements.",
-    href: "/injection-molds/mold-trial-validation"
+    href: "/mold-trial-validation"
   },
   {
     title: "Export Preparation",
@@ -250,7 +250,7 @@ const faqs = [
     question: "How are molds trialed and approved before shipment?",
     answer: "Completed molds undergo trials and sample inspection, with required corrections and re-trials before approval. Trial records and inspection results support customer review against the agreed project requirements.",
     links: [
-      { label: "Explore Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" }
+      { label: "Explore Mold Trial & Validation", href: "/mold-trial-validation" }
     ]
   },
   {
@@ -621,7 +621,7 @@ export function InjectionMoldManufacturingPage() {
                 body="Completed molds undergo trials, sample inspection and required corrections before approval. Trial reports, dimensional results and process parameters document the validation work."
               />
               <div className="mt-6">
-                <TextLink href="/injection-molds/mold-trial-validation">Explore Mold Trial &amp; Validation</TextLink>
+                <TextLink href="/mold-trial-validation">Explore Mold Trial &amp; Validation</TextLink>
               </div>
             </div>
             <ManufacturingTrialEvidence />

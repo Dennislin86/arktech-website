@@ -18,7 +18,7 @@ const workflow = [
   { number: "01", title: "Product Co-Design & DFM", body: "Review product geometry, material intent and tooling risk before mold design release.", href: "/injection-molding-engineering" },
   { number: "02", title: "Mold Engineering", body: "Define mold structure, actions, cooling, gating and customer-machine interfaces.", href: undefined },
   { number: "03", title: "Injection Mold Manufacturing", body: "Machine, fit and assemble production tooling against the approved design.", href: "/injection-mold-manufacturing" },
-  { number: "04", title: "Mold Trial & Validation", body: "Review trial samples, process conditions, dimensions and correction actions.", href: "/injection-molds/mold-trial-validation" },
+  { number: "04", title: "Mold Trial & Validation", body: "Review trial samples, process conditions, dimensions and correction actions.", href: "/mold-trial-validation" },
   { number: "05", title: "Plastic Injection Molding", body: "Move approved tools into low-volume, repeat or mass-production molding.", href: "/plastic-injection-molding" },
   { number: "06", title: "Inspection & Delivery", body: "Confirm agreed records, packing requirements and production handover.", href: undefined }
 ] as const;

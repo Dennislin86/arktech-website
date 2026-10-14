@@ -16,7 +16,7 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
       { label: "Manufacturing Capabilities", href: "/manufacturing-capabilities" },
       { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
-      { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
+      { label: "Mold Trial & Validation", href: "/mold-trial-validation" },
       { label: "Injection Molding Engineering", href: "/injection-molding-engineering" },
       { label: "Tooling Documentation", href: "/injection-molds/tooling-documentation" },
       { label: "Mold Spare Parts", href: "/injection-molds/mold-spare-parts" },

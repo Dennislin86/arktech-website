@@ -84,7 +84,7 @@ const faqs = [
 
 const related = [
   { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
-  { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
+  { label: "Mold Trial & Validation", href: "/mold-trial-validation" },
   { label: "Quality & Documentation", href: "/quality-documentation" }
 ];
 
@@ -172,7 +172,7 @@ export function InjectionMoldingProductionOptionsPage() {
 
       <section className="bg-white py-14 sm:py-16">
         <div className="container-page grid gap-9 lg:grid-cols-[0.42fr_0.58fr] lg:gap-12">
-          <div><SectionHeading eyebrow="Production Readiness" title="From Validated Tooling to Repeat Production" body="Projects may begin at different stages. Not every customer must proceed through all production options." /><div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold text-[var(--brand)]"><Link className="focus-ring rounded-sm hover:underline" href="/injection-molds/mold-trial-validation">Mold Trial & Validation →</Link><Link className="focus-ring rounded-sm hover:underline" href="/plastic-injection-molding">Plastic Injection Molding →</Link></div></div>
+          <div><SectionHeading eyebrow="Production Readiness" title="From Validated Tooling to Repeat Production" body="Projects may begin at different stages. Not every customer must proceed through all production options." /><div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold text-[var(--brand)]"><Link className="focus-ring rounded-sm hover:underline" href="/mold-trial-validation">Mold Trial & Validation →</Link><Link className="focus-ring rounded-sm hover:underline" href="/plastic-injection-molding">Plastic Injection Molding →</Link></div></div>
           <ol className="grid gap-3 sm:grid-cols-2">{readinessSteps.map((step, index) => <li className="flex min-h-24 gap-4 border border-[var(--line)] bg-[var(--surface-soft)] p-4" key={step}><span className="font-bold text-[var(--brand)]">{String(index + 1).padStart(2, "0")}</span><span className="font-semibold leading-6 text-[var(--brand-dark)]">{step}</span></li>)}</ol>
         </div>
       </section>

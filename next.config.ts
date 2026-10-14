@@ -72,8 +72,13 @@ const nextConfig: NextConfig = {
         permanent: true
       },
       {
+        source: "/injection-molds/mold-trial-validation",
+        destination: "/mold-trial-validation",
+        permanent: true
+      },
+      {
         source: "/services/mold-trial-sampling-support",
-        destination: "/injection-molds/mold-trial-validation",
+        destination: "/mold-trial-validation",
         permanent: true
       },
       {

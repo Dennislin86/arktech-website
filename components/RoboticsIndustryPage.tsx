@@ -66,7 +66,7 @@ const coreCapabilities = [
   {
     title: "Mold Trial & Validation",
     body: "Trial coordination, sample review and documented improvement actions before tooling approval.",
-    href: "/injection-molds/mold-trial-validation"
+    href: "/mold-trial-validation"
   }
 ];
 
@@ -184,7 +184,7 @@ const relatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
   { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
-  { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
+  { label: "Mold Trial & Validation", href: "/mold-trial-validation" },
   { label: "Quality & Documentation", href: "/quality-documentation" }
 ];
 

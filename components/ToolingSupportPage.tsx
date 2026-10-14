@@ -82,7 +82,7 @@ function SparePartsPage() {
 function ExportToolingPage() {
   const checks = ["Customer Machine Compatibility", "Mold Dimensions & Interfaces", "Ejection Requirements", "Cooling / Water Connections", "Electrical Interfaces where applicable", "Hot Runner Interfaces where applicable", "Customer Tooling Standards"];
   const review = [
-    ["Mold Trial", "/injection-molds/mold-trial-validation"], ["Dimensional Validation", "/injection-molds/mold-trial-validation#trial-evidence"], ["Tooling Inspection", "/injection-mold-manufacturing"], ["Documentation", "/injection-molds/tooling-documentation"], ["Spare Parts", "/injection-molds/mold-spare-parts"], ["Packing Preparation", "#packing-preparation"]
+    ["Mold Trial", "/mold-trial-validation"], ["Dimensional Validation", "/mold-trial-validation#trial-evidence"], ["Tooling Inspection", "/injection-mold-manufacturing"], ["Documentation", "/injection-molds/tooling-documentation"], ["Spare Parts", "/injection-molds/mold-spare-parts"], ["Packing Preparation", "#packing-preparation"]
   ] as const;
   return <>
     <section className="bg-white py-14 sm:py-16" aria-labelledby="customer-production"><div className="container-page grid gap-10 lg:grid-cols-[0.9fr_1.1fr]"><Heading eyebrow="Receiving Environment" id="customer-production" title="Tooling Prepared for Customer Production" intro="Tool interfaces and customer production requirements are reviewed before handover using the available machine and tooling information." /><div className="grid gap-3 sm:grid-cols-2"><AccentList items={checks.slice(0, 4)} /><AccentList items={checks.slice(4)} /></div></div></section>
@@ -105,7 +105,7 @@ function RelatedSupport({ current }: { current: ToolingSupportSlug }) {
     { slug: "export-tooling-transfer", label: "Export Tooling & Mold Transfer", body: "Prepare tooling and the agreed handover package for customer production." }
   ] as const;
   const items = current === "mold-trial-validation" ? trialSupport : supportLinks.filter((item) => item.slug !== current);
-  return <section className="bg-white py-12" aria-labelledby="related-tooling-support"><div className="container-page"><p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Related Capabilities</p><h2 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]" id="related-tooling-support">Related Tooling Support</h2><div className="mt-6 grid gap-px overflow-hidden rounded-md border border-[var(--line)] bg-[var(--line)] md:grid-cols-3">{items.map((item) => <Link className="focus-ring group bg-white p-5 transition hover:bg-[#fff8f8]" href={`/injection-molds/${item.slug}`} key={item.slug}><h3 className="font-bold text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{item.label}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.body}</p><span className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[var(--brand)]">Explore →</span></Link>)}</div></div></section>;
+  return <section className="bg-white py-12" aria-labelledby="related-tooling-support"><div className="container-page"><p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Related Capabilities</p><h2 className="mt-3 text-2xl font-bold text-[var(--brand-dark)]" id="related-tooling-support">Related Tooling Support</h2><div className="mt-6 grid gap-px overflow-hidden rounded-md border border-[var(--line)] bg-[var(--line)] md:grid-cols-3">{items.map((item) => <Link className="focus-ring group bg-white p-5 transition hover:bg-[#fff8f8]" href={item.slug === "mold-trial-validation" ? "/mold-trial-validation" : `/injection-molds/${item.slug}`} key={item.slug}><h3 className="font-bold text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{item.label}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.body}</p><span className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[var(--brand)]">Explore →</span></Link>)}</div></div></section>;
 }
 
 function FinalCta({ slug }: { slug: ToolingSupportSlug }) {
@@ -119,7 +119,8 @@ function MoldTrialFinalCta() {
 
 export function ToolingSupportPage({ slug }: { slug: ToolingSupportSlug }) {
   const page = toolingSupportPages[slug];
-  const pageUrl = `${site.url}/injection-molds/${slug}/`;
+  const pagePath = slug === "mold-trial-validation" ? "/mold-trial-validation" : `/injection-molds/${slug}`;
+  const pageUrl = `${site.url}${pagePath}`;
   const secondaryHref = slug === "tooling-documentation" ? "#documentation-package" : "/request-a-quote";
   const schemas = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: site.url }, { "@type": "ListItem", position: 2, name: "Injection Molds", item: `${site.url}/injection-molds/` }, { "@type": "ListItem", position: 3, name: page.navLabel, item: pageUrl }] },

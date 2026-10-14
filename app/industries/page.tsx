@@ -83,7 +83,7 @@ const industries: Industry[] = [
 const capabilityBar = [
   ["DFM & Co-Design", "/injection-molding-engineering"],
   ["Injection Molds", "/injection-molds"],
-  ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
+  ["Mold Trial & Validation", "/mold-trial-validation"],
   ["Plastic Injection Molding 25–550T", "/plastic-injection-molding"]
 ] as const;
 
@@ -113,7 +113,7 @@ const capabilityLinks = [
   ["Plastic Injection Molding", "Mold validation and plastic part production from low-volume builds to mass production.", "/plastic-injection-molding"],
   ["Injection Mold Types", "Multi-cavity, family, 2K, unscrewing, high-gloss and other tooling for different product requirements.", "/injection-molds"],
   ["Engineering & DFM", "Product co-design, moldability review and Moldflow support before mold design release.", "/injection-molding-engineering"],
-  ["Mold Trial & Validation", "Trial samples, process parameters and dimensional results reviewed before approval.", "/injection-molds/mold-trial-validation"],
+  ["Mold Trial & Validation", "Trial samples, process parameters and dimensional results reviewed before approval.", "/mold-trial-validation"],
   ["Supporting Manufacturing", "Supporting processes are available through Arktech Group where the project requires them.", "/manufacturing-capabilities"]
 ] as const;
 
@@ -129,7 +129,7 @@ const faqs = [
 const resources = [
   ["Injection Molding DFM Guide", "Review product geometry and tooling risk before steel release.", "/resources/dfm-guide"],
   ["Injection Mold Types", "Compare tooling structures for different part and production requirements.", "/injection-molds"],
-  ["Mold Trial & Validation", "Understand sampling, corrections, inspection and approval before release.", "/injection-molds/mold-trial-validation"]
+  ["Mold Trial & Validation", "Understand sampling, corrections, inspection and approval before release.", "/mold-trial-validation"]
 ] as const;
 
 const pageUrl = `${site.url}/industries`;

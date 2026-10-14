@@ -22,7 +22,7 @@ export type MoldTypePageData = {
 
 const manufacturing = { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" };
 const molding = { label: "Plastic Injection Molding", href: "/plastic-injection-molding" };
-const trial = { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" };
+const trial = { label: "Mold Trial & Validation", href: "/mold-trial-validation" };
 const engineering = { label: "Injection Molding Engineering", href: "/injection-molding-engineering" };
 
 export const moldTypePages: MoldTypePageData[] = [

@@ -123,7 +123,7 @@ const specialtyMolding: MoldCardData[] = [
 ];
 
 const supportItems = [
-  { title: "Mold Trial & Validation", body: "Review mold trials, samples, molding parameters, dimensional results and correction status before release.", href: "/injection-molds/mold-trial-validation" },
+  { title: "Mold Trial & Validation", body: "Review mold trials, samples, molding parameters, dimensional results and correction status before release.", href: "/mold-trial-validation" },
   { title: "Tooling Documentation", body: "Prepare project-specific drawings, BOM references, tooling records and validation information for handover.", href: "/injection-molds/tooling-documentation" },
   { title: "Mold Spare Parts", body: "Plan replacement inserts and identified tooling components for maintenance and export-tooling support.", href: "/injection-molds/mold-spare-parts" },
   { title: "Export Tooling & Mold Transfer", body: "Coordinate validation, documentation, spare parts, packing preparation and technical handover.", href: "/injection-molds/export-tooling-transfer" }
@@ -131,7 +131,7 @@ const supportItems = [
 
 const resources = [
   { title: "Injection Mold Design Guidelines", body: "Review the design decisions that influence mold structure, release and maintainability.", href: "/resources/mold-design-guidelines" },
-  { title: "Mold Trial & Validation", body: "See how mold trials, samples, dimensional inspection and engineering corrections support approval.", href: "/injection-molds/mold-trial-validation" },
+  { title: "Mold Trial & Validation", body: "See how mold trials, samples, dimensional inspection and engineering corrections support approval.", href: "/mold-trial-validation" },
   { title: "Engineering Plastics Guide", body: "Compare material-performance and molding considerations before resin and tooling decisions are released.", href: "/resources/injection-molding/engineering-plastics-guide" }
 ] as const;
 

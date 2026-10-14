@@ -319,7 +319,7 @@ export function HomePage() {
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16" aria-labelledby="validation-heading">
         <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,43fr)_minmax(0,57fr)] lg:items-center lg:gap-12">
-          <div><SectionHeading body="Trial evidence and engineering records support correction decisions and customer approval before shipment or production release." eyebrow="Documented Validation" id="validation-heading" title="Mold Trial, Validation & Approval" /><div className="mt-6"><CheckList items={["T0 / T1 Mold Trial", "Molding Parameter Recording", "Dimensional Inspection", "Correction Tracking", "Customer Approval Support"]} /></div><Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/injection-molds/mold-trial-validation">View Mold Trial &amp; Validation <span aria-hidden="true" className="ml-2">→</span></Link></div>
+          <div><SectionHeading body="Trial evidence and engineering records support correction decisions and customer approval before shipment or production release." eyebrow="Documented Validation" id="validation-heading" title="Mold Trial, Validation & Approval" /><div className="mt-6"><CheckList items={["T0 / T1 Mold Trial", "Molding Parameter Recording", "Dimensional Inspection", "Correction Tracking", "Customer Approval Support"]} /></div><Link className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]" href="/mold-trial-validation">View Mold Trial &amp; Validation <span aria-hidden="true" className="ml-2">→</span></Link></div>
           <ValidationEvidenceGallery />
         </div>
       </section>

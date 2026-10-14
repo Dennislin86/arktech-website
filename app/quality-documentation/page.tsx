@@ -36,7 +36,7 @@ const reportFields = [
 const inspectionThemes = ["Critical dimensions", "Appearance and molding condition", "Assembly / fit where required", "Drawing-based review"];
 
 const contextualLinks = [
-  ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
+  ["Mold Trial & Validation", "/mold-trial-validation"],
   ["Tooling Documentation", "/injection-molds/tooling-documentation"],
   ["Export Tooling & Mold Transfer", "/injection-molds/export-tooling-transfer"]
 ];
@@ -113,7 +113,7 @@ export default function QualityDocumentationPage() {
           <QualityRecordPreview alt="Anonymized injection molding process parameter record from a mold trial" aspect="document" caption="Mold-trial process parameter record" height={1142} sizes="(min-width: 768px) 48vw, 100vw" src="/images/injection-mold-manufacturing/injection-molding-process-parameters.webp" width={1200} />
           <QualityRecordPreview alt="Mold trial report page showing an open injection mold installed in a molding machine" aspect="document" caption="Mold trial observation record" height={1037} sizes="(min-width: 768px) 48vw, 100vw" src="/images/injection-mold-manufacturing/mold-trial-report-evidence.webp" width={1400} />
         </div>
-        <div className="mt-7 max-w-4xl border-l-2 border-[var(--brand)] pl-5"><p className="leading-7 text-[var(--muted)]">Recorded molding conditions provide a reference for trial comparison and technical handover. They do not guarantee identical performance on every receiving machine.</p><Link className="focus-ring mt-4 inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="/injection-molds/mold-trial-validation">Explore Mold Trial &amp; Validation <span aria-hidden="true" className="ml-2">→</span></Link></div>
+        <div className="mt-7 max-w-4xl border-l-2 border-[var(--brand)] pl-5"><p className="leading-7 text-[var(--muted)]">Recorded molding conditions provide a reference for trial comparison and technical handover. They do not guarantee identical performance on every receiving machine.</p><Link className="focus-ring mt-4 inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="/mold-trial-validation">Explore Mold Trial &amp; Validation <span aria-hidden="true" className="ml-2">→</span></Link></div>
       </div></section>
 
       <section className="bg-[var(--surface-soft)] py-12 sm:py-14"><div className="container-page">

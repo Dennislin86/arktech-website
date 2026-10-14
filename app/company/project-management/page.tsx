@@ -262,7 +262,7 @@ export default function ProjectManagementPage() {
               <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">PART A</p>
               <h3 className="mt-2 text-xl font-bold text-[var(--brand-dark)]">Trial & Customer Feedback</h3>
               <p className="mt-3 leading-7 text-[var(--muted)]">Coordinate trial timing, sample submission, customer comments and correction follow-up through the agreed approval process.</p>
-              <div className="mt-5"><TextLink href="/injection-molds/mold-trial-validation">Explore Mold Trial & Validation</TextLink></div>
+              <div className="mt-5"><TextLink href="/mold-trial-validation">Explore Mold Trial & Validation</TextLink></div>
             </article>
             <article className="border-t border-[var(--line)] p-5 sm:p-7 lg:border-l lg:border-t-0">
               <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">PART B</p>
