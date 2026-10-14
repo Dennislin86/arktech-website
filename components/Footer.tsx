@@ -43,7 +43,7 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
       { label: "DFM Guide", href: "/resources/dfm-guide" },
       { label: "Material Selection Guide", href: "/resources/material-selection-guide" },
       { label: "Mold Design Guidelines", href: "/resources/mold-design-guidelines" },
-      { label: "Quality & Documentation", href: "/company/quality-documentation" },
+      { label: "Quality & Documentation", href: "/quality-documentation" },
       { label: "Project Management", href: "/company/project-management" },
       { label: "Contact Us", href: "/contact" }
     ]

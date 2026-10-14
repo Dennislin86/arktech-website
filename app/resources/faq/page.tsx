@@ -28,7 +28,7 @@ const relatedCapabilities = [
   { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
-  { label: "Quality & Documentation", href: "/company/quality-documentation" }
+  { label: "Quality & Documentation", href: "/quality-documentation" }
 ];
 
 function questionId(categoryId: string, itemIndex: number) {

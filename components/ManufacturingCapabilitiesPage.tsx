@@ -67,7 +67,7 @@ const engineeringCapabilities = [
     detail: "Dimensional Inspection · Sample Verification · Records",
     image: "/images/process/sample-validation-inspection-cmm.png",
     alt: "Dimensional inspection during injection mold trial validation",
-    href: "/company/quality-documentation"
+    href: "/quality-documentation"
   }
 ];
 

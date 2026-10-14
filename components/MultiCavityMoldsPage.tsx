@@ -93,7 +93,7 @@ const relatedCapabilities = [
   ["DFM Engineering", "/injection-molding-engineering"],
   ["Mold Flow Analysis", "/injection-molding-engineering#moldflow-analysis"],
   ["Mold Trial & Validation", "/injection-molds/mold-trial-validation"],
-  ["Quality & Documentation", "/company/quality-documentation"],
+  ["Quality & Documentation", "/quality-documentation"],
   ["Plastic Injection Molding", "/plastic-injection-molding"],
   ["Mold Spare Parts", "/injection-molds/mold-spare-parts"]
 ] as const;
@@ -466,7 +466,7 @@ export function MultiCavityMoldsPage() {
                 <li className="border-l-2 border-[var(--brand)] pl-4 font-semibold leading-7 text-[var(--brand-dark)]" key={item}>{item}</li>
               ))}
             </ul>
-            <div className="mt-7"><ArrowLink href="/company/quality-documentation">View Quality & Documentation</ArrowLink></div>
+            <div className="mt-7"><ArrowLink href="/quality-documentation">View Quality & Documentation</ArrowLink></div>
           </div>
         </div>
       </section>

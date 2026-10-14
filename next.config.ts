@@ -40,6 +40,11 @@ const nextConfig: NextConfig = {
         permanent: true
       },
       {
+        source: "/company/quality-documentation",
+        destination: "/quality-documentation",
+        permanent: true
+      },
+      {
         source: "/products/3d-printing-parts",
         destination: "/seo/rapid-prototyping-services",
         permanent: true

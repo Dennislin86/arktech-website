@@ -3,7 +3,7 @@ import Link from "next/link";
 import { QualityInspectionVideo } from "@/components/QualityInspectionVideo";
 import { QualityRecordPreview } from "@/components/QualityRecordPreview";
 
-const canonicalUrl = "https://www.arktechmold.com/company/quality-documentation";
+const canonicalUrl = "https://www.arktechmold.com/quality-documentation";
 
 export const metadata: Metadata = {
   title: { absolute: "Injection Mold Quality Documentation & Inspection Records | Arktech" },

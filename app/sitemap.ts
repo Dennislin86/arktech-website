@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/resources/faq",
     "/company/arktech-group",
     "/company/project-management",
-    "/company/quality-documentation",
+    "/quality-documentation",
     "/materials",
     "/privacy-policy",
     "/terms-of-use",

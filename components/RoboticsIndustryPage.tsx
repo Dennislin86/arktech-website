@@ -185,7 +185,7 @@ const relatedCapabilities = [
   { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
-  { label: "Quality & Documentation", href: "/company/quality-documentation" }
+  { label: "Quality & Documentation", href: "/quality-documentation" }
 ];
 
 const faqs = [
@@ -442,7 +442,7 @@ export function RoboticsIndustryPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6"><ArrowLink href="/company/quality-documentation">View Quality &amp; Documentation</ArrowLink></div>
+            <div className="mt-6"><ArrowLink href="/quality-documentation">View Quality &amp; Documentation</ArrowLink></div>
           </div>
           <figure className="relative aspect-[4/3] overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">
             <Image alt="Dimensional inspection of molded robotics components for sample validation" className="object-cover object-center" fill sizes="(min-width: 1024px) 48vw, 100vw" src="/images/process/sample-validation-inspection-cmm.png" />

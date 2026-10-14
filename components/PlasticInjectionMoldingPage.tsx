@@ -378,7 +378,7 @@ const reasons = [
     subtitle: "Review samples, dimensions and fit before production release",
     body: "T0 / T1 samples, critical dimensions, visual requirements and assembly fit can be reviewed before production approval based on project needs.",
     label: "View Quality & Documentation",
-    href: "/company/quality-documentation"
+    href: "/quality-documentation"
   },
   {
     number: "04",
@@ -410,7 +410,7 @@ const productionProofCards = [
     alt: "Dimensional inspection and validation of injection molded plastic parts",
     title: "Sample Inspection & Validation",
     body: "Critical dimensions, appearance and fit can be reviewed against drawings and approved samples before production release.",
-    href: "/company/quality-documentation"
+    href: "/quality-documentation"
   }
 ];
 
@@ -452,7 +452,7 @@ const faqRelatedCapabilities = [
   { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
   { label: "DFM Engineering", href: "/injection-molding-engineering" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
-  { label: "Quality & Documentation", href: "/company/quality-documentation" }
+  { label: "Quality & Documentation", href: "/quality-documentation" }
 ];
 
 const faqRelatedResources = [
@@ -1055,7 +1055,7 @@ export function PlasticInjectionMoldingPage() {
               <Link className="focus-ring inline-flex items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--brand-dark)]" href="/request-a-quote">
                 Upload CAD for DFM Review →
               </Link>
-              <Link className="focus-ring inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand-dark)] hover:text-[var(--brand)] hover:underline" href="/company/quality-documentation">View Quality &amp; Documentation →</Link>
+              <Link className="focus-ring inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand-dark)] hover:text-[var(--brand)] hover:underline" href="/quality-documentation">View Quality &amp; Documentation →</Link>
             </div>
           </aside>
         </div>

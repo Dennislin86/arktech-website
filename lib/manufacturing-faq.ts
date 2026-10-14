@@ -230,7 +230,7 @@ export const manufacturingFaqCategories: ManufacturingFaqCategory[] = [
     title: "Quality & Documentation FAQs",
     description: "Typical inspection and tooling records available according to project requirements.",
     relatedLabel: "Explore Quality & Documentation",
-    relatedHref: "/company/quality-documentation",
+    relatedHref: "/quality-documentation",
     items: [
       {
         question: "What dimensional inspection reports can be provided?",

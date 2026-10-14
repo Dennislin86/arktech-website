@@ -211,7 +211,7 @@ export function CompanyPage() {
             <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               {qualityItems.map((item) => <li className="flex items-start gap-3 border-b border-[var(--line)] pb-3 font-semibold leading-6 text-[var(--brand-dark)]" key={item}><span aria-hidden="true" className="mt-2 h-0.5 w-5 shrink-0 bg-[var(--brand)]" />{item}</li>)}
             </ul>
-            <div className="mt-7"><ArrowLink href="/company/quality-documentation">View Quality & Documentation</ArrowLink></div>
+            <div className="mt-7"><ArrowLink href="/quality-documentation">View Quality & Documentation</ArrowLink></div>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] sm:col-span-2">

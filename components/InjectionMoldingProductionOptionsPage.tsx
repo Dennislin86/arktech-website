@@ -85,7 +85,7 @@ const faqs = [
 const related = [
   { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
   { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
-  { label: "Quality & Documentation", href: "/company/quality-documentation" }
+  { label: "Quality & Documentation", href: "/quality-documentation" }
 ];
 
 function SectionHeading({ eyebrow, title, body }: { eyebrow: string; title: string; body?: string }) {
@@ -178,7 +178,7 @@ export function InjectionMoldingProductionOptionsPage() {
       </section>
 
       <section className="bg-[var(--surface-soft)] py-14 sm:py-16">
-        <div className="container-page"><SectionHeading eyebrow="Production Evidence" title="Production, Inspection & Finishing Evidence" body="Production planning includes the molding stage together with the agreed inspection, finishing and assembly scope." /><div className="mt-8 grid gap-5 md:grid-cols-3">{evidence.map((item) => <figure className="overflow-hidden rounded-sm border border-[var(--line)] bg-white" key={item.title}><div className="relative aspect-[16/10] overflow-hidden bg-white"><Image alt={item.alt} className="object-cover object-center" fill sizes="(min-width: 768px) 33vw, 100vw" src={item.image} /></div><figcaption className="p-5"><h3 className="text-lg font-bold text-[var(--brand-dark)]">{item.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.body}</p></figcaption></figure>)}</div><p className="mt-6 max-w-4xl text-sm leading-6 text-[var(--muted)]">Material and grade should be confirmed for the actual part and application. See the <Link className="focus-ring rounded-sm font-bold text-[var(--brand)] hover:underline" href="/resources/material-selection-guide">Material Selection Guide</Link> and review project-specific inspection records through <Link className="focus-ring rounded-sm font-bold text-[var(--brand)] hover:underline" href="/company/quality-documentation">Quality & Documentation</Link>.</p></div>
+        <div className="container-page"><SectionHeading eyebrow="Production Evidence" title="Production, Inspection & Finishing Evidence" body="Production planning includes the molding stage together with the agreed inspection, finishing and assembly scope." /><div className="mt-8 grid gap-5 md:grid-cols-3">{evidence.map((item) => <figure className="overflow-hidden rounded-sm border border-[var(--line)] bg-white" key={item.title}><div className="relative aspect-[16/10] overflow-hidden bg-white"><Image alt={item.alt} className="object-cover object-center" fill sizes="(min-width: 768px) 33vw, 100vw" src={item.image} /></div><figcaption className="p-5"><h3 className="text-lg font-bold text-[var(--brand-dark)]">{item.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.body}</p></figcaption></figure>)}</div><p className="mt-6 max-w-4xl text-sm leading-6 text-[var(--muted)]">Material and grade should be confirmed for the actual part and application. See the <Link className="focus-ring rounded-sm font-bold text-[var(--brand)] hover:underline" href="/resources/material-selection-guide">Material Selection Guide</Link> and review project-specific inspection records through <Link className="focus-ring rounded-sm font-bold text-[var(--brand)] hover:underline" href="/quality-documentation">Quality & Documentation</Link>.</p></div>
       </section>
 
       <section className="bg-white py-14 sm:py-16">

@@ -112,7 +112,7 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
 
     <section className="border-y border-[var(--line)] bg-[#F5F7FA] py-14 sm:py-16 lg:py-20">
       <div className="container-page grid gap-10 lg:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-14">
-        <div><SectionHeading eyebrow="QUALITY & VALIDATION" title={page.validationHeading} intro={page.validationIntro} /><div className="mt-6"><ArrowLink href="/company/quality-documentation">Quality & Documentation</ArrowLink></div></div>
+        <div><SectionHeading eyebrow="QUALITY & VALIDATION" title={page.validationHeading} intro={page.validationIntro} /><div className="mt-6"><ArrowLink href="/quality-documentation">Quality & Documentation</ArrowLink></div></div>
         <div className="grid gap-px overflow-hidden rounded-sm border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">
           {page.validationItems.map(([title, body]) => <article className="bg-white p-5 sm:p-6" key={title}><h3 className="font-bold text-[var(--brand-dark)]">{title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{body}</p></article>)}
         </div>

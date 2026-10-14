@@ -40,7 +40,7 @@ const navigation: NavigationItem[] = [
           { label: "Engineering & DFM", href: "/injection-molding-engineering" },
           { label: "Mold Design & Approval", href: "/injection-mold-manufacturing" },
           { label: "Mold Trial & Validation", href: "/injection-molds/mold-trial-validation" },
-          { label: "Quality & Documentation", href: "/company/quality-documentation" }
+          { label: "Quality & Documentation", href: "/quality-documentation" }
         ]
       },
       {
@@ -153,7 +153,7 @@ const navigation: NavigationItem[] = [
       {
         title: "Project Resources",
         links: [
-          { label: "Quality & Documentation", href: "/company/quality-documentation" },
+          { label: "Quality & Documentation", href: "/quality-documentation" },
           { label: "Project Management", href: "/company/project-management" },
           { label: "Tooling Transfer & Export", href: "/injection-mold-manufacturing" },
           { label: "Case Studies", href: "/case-studies" }
@@ -179,7 +179,7 @@ const navigation: NavigationItem[] = [
     href: "/company",
     groups: [
       { title: "About Arktech", links: [{ label: "About Arktech Mold", href: "/company" }, { label: "Arktech Group ↗", href: groupWebsite, external: true }] },
-      { title: "Quality & Projects", links: [{ label: "Quality & Documentation", href: "/company/quality-documentation" }, { label: "Project Management", href: "/company/project-management" }, { label: "Tooling Transfer & Export", href: "/injection-mold-manufacturing" }] },
+      { title: "Quality & Projects", links: [{ label: "Quality & Documentation", href: "/quality-documentation" }, { label: "Project Management", href: "/company/project-management" }, { label: "Tooling Transfer & Export", href: "/injection-mold-manufacturing" }] },
       { title: "Contact & Locations", links: [{ label: "Contact Us", href: "/contact" }, { label: "Shenzhen Head Office", href: "/contact" }, { label: "Dongguan Factory", href: "/contact" }, { label: "engineering@arktechmold.com", href: "mailto:engineering@arktechmold.com", secondary: true }, { label: "+86 755 2314 8996", href: "tel:+8675523148996", secondary: true }] },
       { title: "Start Your Project", links: [{ label: "Upload CAD for DFM Review →", href: "/request-a-quote", emphasis: true }] }
     ]

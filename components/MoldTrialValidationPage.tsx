@@ -138,7 +138,7 @@ const deliverables = [
 const relatedCapabilities = [
   ["Injection Mold Manufacturing", "/injection-mold-manufacturing"],
   ["DFM Engineering", "/injection-molding-engineering"],
-  ["Quality & Documentation", "/company/quality-documentation"],
+  ["Quality & Documentation", "/quality-documentation"],
   ["Plastic Injection Molding", "/plastic-injection-molding"],
   ["Project Management", "/company/project-management"]
 ] as const;
@@ -362,7 +362,7 @@ export function MoldTrialValidationPage() {
             ))}
           </div>
           <div className="mt-8 border-t border-[var(--line)] pt-6">
-            <Link className="focus-ring inline-flex font-bold text-[var(--brand)] hover:underline" href="/company/quality-documentation">View Quality &amp; Documentation →</Link>
+            <Link className="focus-ring inline-flex font-bold text-[var(--brand)] hover:underline" href="/quality-documentation">View Quality &amp; Documentation →</Link>
           </div>
         </div>
       </section>
