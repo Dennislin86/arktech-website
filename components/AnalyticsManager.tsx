@@ -36,8 +36,10 @@ function setAnalyticsDisabled(disabled: boolean) {
 
 function ensureGtag() {
   window.dataLayer ??= [];
-  window.gtag ??= (...args: unknown[]) => {
-    window.dataLayer?.push(args);
+  window.gtag ??= function gtag() {
+    // gtag.js expects its command queue entries to use the function arguments object.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer?.push(arguments);
   };
   return window.gtag;
 }
@@ -95,9 +97,12 @@ function subscribeToStableBrowserState() {
 
 export function AnalyticsManager({ vercelProduction }: { vercelProduction: boolean }) {
   const pathname = usePathname();
+  const consentDefaultInitializedRef = useRef(false);
+  const consentGrantedRef = useRef(false);
   const initializedRef = useRef(false);
   const lastPageViewRef = useRef("");
-  const [googleTagReady, setGoogleTagReady] = useState(false);
+  const [googleTagRequested, setGoogleTagRequested] = useState(false);
+  const [googleTagLoaded, setGoogleTagLoaded] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const runtimeEligible = useSyncExternalStore(
     subscribeToStableBrowserState,
@@ -126,19 +131,31 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
     && shouldEnableAnalytics(vercelProduction, runtimeHostname, consent);
 
   useEffect(() => {
+    if (!runtimeEligible || consentDefaultInitializedRef.current) return;
+
+    consentDefaultInitializedRef.current = true;
+    setAnalyticsDisabled(true);
+    ensureGtag()("consent", "default", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+  }, [runtimeEligible]);
+
+  useEffect(() => {
     if (!analyticsEnabled) return;
 
     setAnalyticsDisabled(false);
     const gtag = ensureGtag();
 
+    if (!consentGrantedRef.current) {
+      consentGrantedRef.current = true;
+      gtag("consent", "update", { analytics_storage: "granted" });
+    }
+
     if (!initializedRef.current) {
       initializedRef.current = true;
-      gtag("consent", "default", {
-        analytics_storage: "granted",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied"
-      });
       gtag("js", new Date());
       gtag("config", GA_MEASUREMENT_ID, {
         send_page_view: false,
@@ -146,17 +163,15 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
         allow_google_signals: false,
         allow_ad_personalization_signals: false
       });
-    } else {
-      gtag("consent", "update", { analytics_storage: "granted" });
     }
 
     // Mount the external tag only after its consent and configuration queue exists.
-    const readyTimer = window.setTimeout(() => setGoogleTagReady(true), 0);
-    return () => window.clearTimeout(readyTimer);
+    const requestTimer = window.setTimeout(() => setGoogleTagRequested(true), 0);
+    return () => window.clearTimeout(requestTimer);
   }, [analyticsEnabled]);
 
   useEffect(() => {
-    if (!analyticsEnabled || !window.gtag) return;
+    if (!analyticsEnabled || !googleTagLoaded || !window.gtag) return;
 
     const pagePath = sanitizedPath(pathname);
     if (lastPageViewRef.current === pagePath) return;
@@ -168,7 +183,7 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
       page_referrer: safePageReferrer(),
       page_title: document.title
     });
-  }, [analyticsEnabled, pathname]);
+  }, [analyticsEnabled, googleTagLoaded, pathname]);
 
   useEffect(() => {
     if (!analyticsEnabled || !window.gtag) return;
@@ -202,12 +217,21 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
       if (nextConsent === "denied") setAnalyticsDisabled(true);
       return;
     }
+
+    if (nextConsent === "granted" && runtimeEligible) {
+      setAnalyticsDisabled(false);
+      ensureGtag()("consent", "update", { analytics_storage: "granted" });
+      consentGrantedRef.current = true;
+    }
+
     window.dispatchEvent(new Event(consentChangeEventName));
     setSettingsOpen(false);
 
     if (nextConsent === "denied") {
       setAnalyticsDisabled(true);
       window.gtag?.("consent", "update", { analytics_storage: "denied" });
+      consentGrantedRef.current = false;
+      setGoogleTagLoaded(false);
       expireAnalyticsCookies();
       lastPageViewRef.current = "";
     }
@@ -217,9 +241,11 @@ export function AnalyticsManager({ vercelProduction }: { vercelProduction: boole
 
   return (
     <>
-      {analyticsEnabled && googleTagReady ? (
+      {analyticsEnabled && googleTagRequested ? (
         <Script
           id="arktech-google-analytics"
+          onLoad={() => setGoogleTagLoaded(true)}
+          onReady={() => setGoogleTagLoaded(true)}
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
