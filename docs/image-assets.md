@@ -589,10 +589,10 @@ The Portfolio page at `/portfolio` uses `Arktech_Portfolio_Bulk_Image_SEO_Templa
 
 | Content | Approved asset location | Source/status |
 | --- | --- | --- |
-| Portfolio hero | `/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp` | 1774 × 887 WebP derivative of the preserved user-supplied PNG; shows two polished injection molds with transparent molded enclosures and is preloaded as the single full-screen Portfolio Hero background with overlaid text |
+| Portfolio hero | `/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp` | 1774 × 887 WebP derivative of the preserved user-supplied PNG; shows two polished injection molds with transparent molded enclosures and is preloaded as the full-width Portfolio Hero background with overlaid text and Homepage-aligned responsive height |
 | Portfolio injection molds — existing web derivatives | `/images/portfolio/20261006/*.webp` | 20 existing WebP assets reused without recompression |
 | Portfolio injection molds — newly optimized derivatives | `/images/portfolio/optimized/*.webp` | 28 responsive 1200 px-long-edge WebP derivatives generated from exact Excel/source matches; originals remain unchanged under `/images/Image show/Mold/20261006/` |
-| Gallery manifest | `generated/portfolio-gallery-manifest.json` | 48 publishable Injection Molds records generated from the selected workbook; all Excel SEO fields remain in the data source |
+| Gallery manifest | `generated/portfolio-gallery-manifest.json` | 48 publishable Injection Molds source records generated from the selected workbook; 47 are displayed after the retired `Hot Runner / Multi-Cavity` presentation group is excluded, while all Excel SEO fields remain in the data source |
 | Image optimization report | `generated/portfolio-image-optimization-report.json` | Records the 28 source-to-WebP mappings, dimensions, quality settings and before/after byte sizes without changing workbook metadata |
 | Unmatched report | `generated/portfolio-unmatched-images-report.json` | Records three Excel rows without source files, three Mold files without Excel rows, three Plastic files without Excel rows, and the duplicate suggested filename retained in the workbook; no raw source asset remains published |
 

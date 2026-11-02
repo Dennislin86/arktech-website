@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 const selectedCaseStudies = caseStudies.filter((item) => item.featured).slice(0, 3);
+const portfolioGalleryItems = portfolioItems.filter((item) => item.moldTypeProcess !== "Hot Runner / Multi-Cavity");
 
 export default function PortfolioPage() {
   return (
@@ -38,7 +39,7 @@ export default function PortfolioPage() {
           src="/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp"
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,31,54,.96)_0%,rgba(7,31,54,.91)_46%,rgba(7,31,54,.58)_68%,rgba(7,31,54,.16)_100%)]" />
-        <div className="container-page flex min-h-[620px] items-center py-12 sm:min-h-[650px] sm:py-14 lg:min-h-[calc(100svh-88px)] lg:py-16">
+        <div className="container-page flex min-h-[640px] items-center py-12 sm:min-h-[650px] sm:py-14 lg:min-h-[660px] lg:py-16">
           <div className="w-full max-w-[720px] lg:w-[60%]">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-red-200">Portfolio</p>
             <h1 className="split-hero-title mt-4" id="portfolio-hero-heading">Injection Mold &amp; Plastic Parts Portfolio</h1>
@@ -69,7 +70,7 @@ export default function PortfolioPage() {
             <p className="mt-4 leading-7 text-[var(--muted)]">Browse tooling and molded part examples by industry and manufacturing process.</p>
           </div>
           <div className="mt-6">
-            <PortfolioGallery items={portfolioItems} />
+            <PortfolioGallery items={portfolioGalleryItems} />
           </div>
         </div>
       </section>
