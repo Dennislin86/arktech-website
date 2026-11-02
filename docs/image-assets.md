@@ -583,18 +583,20 @@ The seven canonical industry pages reuse approved local media and differentiated
 | Industrial Automation | `/images/industries/Industrial-parts.jpg`, `/images/industries/industrial-parts.webp` | `/images/case-studies/fan-blade-mold.webp` | Approved industrial component media plus real complex fan-blade mold evidence |
 | Medical Device Components | `/images/industries/medial-industry.webp`, `/images/industries/medical-healthcare-device-parts.webp` | `/images/case-studies/medical-education-device.webp` | Approved medical application media plus real existing medical education device project evidence; no unverified certification claim |
 
-## Portfolio Gallery (2026-10-06)
+## Portfolio Gallery (updated 2026-11-02)
 
-The Portfolio page at `/portfolio` currently publishes only the 20 injection-mold photographs with an exact Ready record in the supplied Excel SEO template. The remaining source-batch images stay unpublished until their Excel rows are completed. The original files remain unchanged. The Plastic Parts tab temporarily reuses seven approved real Arktech molded-part images already optimized for the existing Tooling Gallery.
+The Portfolio page at `/portfolio` uses `Arktech_Portfolio_Bulk_Image_SEO_Template2026102.xlsx` as its current content source. Of its 51 Ready injection-mold records, 48 have an exact, case-sensitive source-image match. Three rows remain unpublished because their `Original File Name` is not present. The workbook contains no Plastic Parts rows, so that tab intentionally has no substituted or invented records. Original source images remain unchanged.
 
 | Content | Approved asset location | Source/status |
 | --- | --- | --- |
-| Portfolio injection molds | `/images/portfolio/20261006/*.webp` | 20 optimized WebP derivatives with exact Ready Excel matches; active in the Injection Molds tab |
-| Temporary Portfolio plastic parts | `/images/tooling-gallery/optimized/arktech-plastic-part-*.webp` | Seven existing approved molded-part images reused from the Tooling Gallery until dedicated Excel rows are supplied |
-| Gallery manifest | `generated/portfolio-gallery-manifest.json` | 20 publishable injection-mold records, all matched exactly to completed Excel data |
-| Unmatched report | `generated/portfolio-unmatched-images-report.json` | Records 28 source images that remain unpublished pending completed Excel SEO rows; no fallback keywords are published |
+| Portfolio hero | `/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp` | 1774 × 887 WebP derivative of the preserved user-supplied PNG; shows two polished injection molds with transparent molded enclosures and is preloaded as the single Portfolio Hero visual |
+| Portfolio injection molds — existing web derivatives | `/images/portfolio/20261006/*.webp` | 20 existing WebP assets reused without recompression |
+| Portfolio injection molds — newly optimized derivatives | `/images/portfolio/optimized/*.webp` | 28 responsive 1200 px-long-edge WebP derivatives generated from exact Excel/source matches; originals remain unchanged under `/images/Image show/Mold/20261006/` |
+| Gallery manifest | `generated/portfolio-gallery-manifest.json` | 48 publishable Injection Molds records generated from the selected workbook; all Excel SEO fields remain in the data source |
+| Image optimization report | `generated/portfolio-image-optimization-report.json` | Records the 28 source-to-WebP mappings, dimensions, quality settings and before/after byte sizes without changing workbook metadata |
+| Unmatched report | `generated/portfolio-unmatched-images-report.json` | Records three Excel rows without source files, three Mold files without Excel rows, three Plastic files without Excel rows, and the duplicate suggested filename retained in the workbook; no raw source asset remains published |
 
-The Portfolio images are rendered with `next/image`, explicit source dimensions, responsive `sizes`, and below-fold lazy loading. Use `npm run portfolio:import` only when the approved source batch or its reviewed metadata changes; the import never overwrites the original images.
+The Portfolio images are rendered with `next/image`, explicit source dimensions, responsive `sizes`, and below-fold lazy loading. Use `npm run portfolio:import` after the approved workbook metadata has been regenerated, followed by `npm run portfolio:optimize` when new exact-match source images need production WebP derivatives. The import resolves tracked WebP assets, updates the manifest and report, and does not overwrite or delete original source images.
 
 ## Maintenance notes
 

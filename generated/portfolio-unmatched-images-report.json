@@ -1,176 +1,25 @@
 {
-  "schemaVersion": 1,
-  "scannedImageCount": 48,
-  "publishedImageCount": 20,
-  "excelMatchedImageCount": 20,
-  "imagesWithoutExcelRows": [
+  "schemaVersion": 2,
+  "selectedWorkbook": "Arktech_Portfolio_Bulk_Image_SEO_Template2026102.xlsx",
+  "workbookRecordCount": 51,
+  "publishedImageCount": 48,
+  "optimizedAssetCount": 48,
+  "originalSourceAssetCount": 0,
+  "metadataWithoutFiles": [
     {
-      "source": "Mold/DSC06552.JPG",
-      "originalFileName": "DSC06552.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+      "source": "Mold/IMG_2013.JPG",
+      "originalFileName": "IMG_2013.JPG",
+      "action": "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
     },
     {
-      "source": "Mold/DSC06559.JPG",
-      "originalFileName": "DSC06559.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+      "source": "Mold/IMG_8187.JPG",
+      "originalFileName": "IMG_8187.JPG",
+      "action": "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
     },
     {
-      "source": "Mold/DSC06562.JPG",
-      "originalFileName": "DSC06562.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_3110.JPG",
-      "originalFileName": "IMG_3110.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_3117.JPG",
-      "originalFileName": "IMG_3117.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_3857.JPG",
-      "originalFileName": "IMG_3857.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_3924.JPG",
-      "originalFileName": "IMG_3924.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_6116.JPG",
-      "originalFileName": "IMG_6116.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_6694.JPG",
-      "originalFileName": "IMG_6694.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_6780.JPG",
-      "originalFileName": "IMG_6780.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_6875.JPG",
-      "originalFileName": "IMG_6875.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_8050.JPG",
-      "originalFileName": "IMG_8050.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_8143.JPG",
-      "originalFileName": "IMG_8143.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_8767.JPG",
-      "originalFileName": "IMG_8767.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_8770.JPG",
-      "originalFileName": "IMG_8770.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_8990.JPG",
-      "originalFileName": "IMG_8990.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_9157(1).JPG",
-      "originalFileName": "IMG_9157(1).JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_9450.JPG",
-      "originalFileName": "IMG_9450.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_9484.JPG",
-      "originalFileName": "IMG_9484.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_9862.JPG",
-      "originalFileName": "IMG_9862.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_9976.JPG",
-      "originalFileName": "IMG_9976.JPG",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG_20220418_140723.jpg",
-      "originalFileName": "IMG_20220418_140723.jpg",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG20220418170707.jpg",
-      "originalFileName": "IMG20220418170707.jpg",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/IMG20220524141131.jpg",
-      "originalFileName": "IMG20220524141131.jpg",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Mold/mmexport1650537472632.jpg",
-      "originalFileName": "mmexport1650537472632.jpg",
-      "category": "Injection Molds",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Plastic/DSC_0032.JPG",
-      "originalFileName": "DSC_0032.JPG",
-      "category": "Plastic Parts",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Plastic/DSC_0293.JPG",
-      "originalFileName": "DSC_0293.JPG",
-      "category": "Plastic Parts",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-    },
-    {
-      "source": "Plastic/DSC_0321.JPG",
-      "originalFileName": "DSC_0321.JPG",
-      "category": "Plastic Parts",
-      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+      "source": "Mold/IMG_9625.JPG",
+      "originalFileName": "IMG_9625.JPG",
+      "action": "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
     }
   ],
   "filesWithoutMetadata": [
@@ -178,171 +27,287 @@
       "source": "Mold/DSC06552.JPG",
       "originalFileName": "DSC06552.JPG",
       "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+      "action": "Not published; no exact record exists in the selected Excel workbook."
     },
     {
       "source": "Mold/DSC06559.JPG",
       "originalFileName": "DSC06559.JPG",
       "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+      "action": "Not published; no exact record exists in the selected Excel workbook."
     },
     {
       "source": "Mold/DSC06562.JPG",
       "originalFileName": "DSC06562.JPG",
       "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_3110.JPG",
-      "originalFileName": "IMG_3110.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_3117.JPG",
-      "originalFileName": "IMG_3117.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_3857.JPG",
-      "originalFileName": "IMG_3857.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_3924.JPG",
-      "originalFileName": "IMG_3924.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_6116.JPG",
-      "originalFileName": "IMG_6116.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_6694.JPG",
-      "originalFileName": "IMG_6694.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_6780.JPG",
-      "originalFileName": "IMG_6780.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_6875.JPG",
-      "originalFileName": "IMG_6875.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_8050.JPG",
-      "originalFileName": "IMG_8050.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_8143.JPG",
-      "originalFileName": "IMG_8143.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_8767.JPG",
-      "originalFileName": "IMG_8767.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_8770.JPG",
-      "originalFileName": "IMG_8770.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_8990.JPG",
-      "originalFileName": "IMG_8990.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_9157(1).JPG",
-      "originalFileName": "IMG_9157(1).JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_9450.JPG",
-      "originalFileName": "IMG_9450.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_9484.JPG",
-      "originalFileName": "IMG_9484.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_9862.JPG",
-      "originalFileName": "IMG_9862.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_9976.JPG",
-      "originalFileName": "IMG_9976.JPG",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG_20220418_140723.jpg",
-      "originalFileName": "IMG_20220418_140723.jpg",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG20220418170707.jpg",
-      "originalFileName": "IMG20220418170707.jpg",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/IMG20220524141131.jpg",
-      "originalFileName": "IMG20220524141131.jpg",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
-    },
-    {
-      "source": "Mold/mmexport1650537472632.jpg",
-      "originalFileName": "mmexport1650537472632.jpg",
-      "category": "Injection Molds",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+      "action": "Not published; no exact record exists in the selected Excel workbook."
     },
     {
       "source": "Plastic/DSC_0032.JPG",
       "originalFileName": "DSC_0032.JPG",
       "category": "Plastic Parts",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+      "action": "Not published; no exact record exists in the selected Excel workbook."
     },
     {
       "source": "Plastic/DSC_0293.JPG",
       "originalFileName": "DSC_0293.JPG",
       "category": "Plastic Parts",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+      "action": "Not published; no exact record exists in the selected Excel workbook."
     },
     {
       "source": "Plastic/DSC_0321.JPG",
       "originalFileName": "DSC_0321.JPG",
       "category": "Plastic Parts",
-      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+      "action": "Not published; no exact record exists in the selected Excel workbook."
     }
   ],
-  "metadataWithoutFiles": [],
-  "staleGeneratedFilesRemoved": []
+  "duplicateWebFileNames": [
+    {
+      "webFileName": "electronic-device-enclosure-injection-mold.webp",
+      "count": 2
+    }
+  ],
+  "assetsOver300KB": [],
+  "rawSourceAssetsUsed": [],
+  "optimizedAssetsUsed": [
+    {
+      "source": "Mold/微信图片_202307071203285.jpg",
+      "image": "/images/portfolio/20261006/pet-feeder-injection-mold.webp",
+      "size": 191910
+    },
+    {
+      "source": "Mold/AT5036-01.3-6.jpg",
+      "image": "/images/portfolio/20261006/export-tooling-europe-injection-mold.webp",
+      "size": 151554
+    },
+    {
+      "source": "Mold/AT5036-01.6-3.jpg",
+      "image": "/images/portfolio/20261006/injection-mold-core-insert-machining.webp",
+      "size": 47968
+    },
+    {
+      "source": "Mold/AT5036-01.7-6.jpg",
+      "image": "/images/portfolio/20261006/injection-mold-ready-for-export.webp",
+      "size": 276718
+    },
+    {
+      "source": "Mold/AT5036-01.8 -4.jpg",
+      "image": "/images/portfolio/20261006/electronic-device-enclosure-injection-mold.webp",
+      "size": 178462
+    },
+    {
+      "source": "Mold/complex-injection-molds.JPG",
+      "image": "/images/portfolio/20261006/automotive-trim-injection-mold.webp",
+      "size": 126734
+    },
+    {
+      "source": "Mold/DSC_0064.JPG",
+      "image": "/images/portfolio/20261006/two-shot-injection-mold-2k-part.webp",
+      "size": 106744
+    },
+    {
+      "source": "Mold/DSC06560.JPG",
+      "image": "/images/portfolio/20261006/2k-injection-mold-dual-material.webp",
+      "size": 168292
+    },
+    {
+      "source": "Mold/DSC06565.JPG",
+      "image": "/images/portfolio/20261006/rotary-2k-injection-mold.webp",
+      "size": 153032
+    },
+    {
+      "source": "Mold/Hight temperature mold (1).jpg",
+      "image": "/images/portfolio/20261006/high-temperature-pps-injection-mold.webp",
+      "size": 187674
+    },
+    {
+      "source": "Mold/IMG_0125.JPG",
+      "image": "/images/portfolio/20261006/glass-fiber-reinforced-plastic-injection-mold.webp",
+      "size": 160288
+    },
+    {
+      "source": "Mold/IMG_0589.JPG",
+      "image": "/images/portfolio/20261006/robotics-plastic-housing-injection-mold.webp",
+      "size": 151958
+    },
+    {
+      "source": "Mold/IMG_0714.JPG",
+      "image": "/images/portfolio/20261006/nylon-gf-injection-mold.webp",
+      "size": 162610
+    },
+    {
+      "source": "Mold/IMG_1148.JPG",
+      "image": "/images/portfolio/20261006/slider-injection-mold-side-action.webp",
+      "size": 136834
+    },
+    {
+      "source": "Mold/IMG_1503.JPG",
+      "image": "/images/portfolio/20261006/textured-surface-injection-mold.webp",
+      "size": 134694
+    },
+    {
+      "source": "Mold/IMG_1832.JPG",
+      "image": "/images/portfolio/20261006/thin-wall-plastic-part-injection-mold.webp",
+      "size": 159046
+    },
+    {
+      "source": "Mold/IMG_1728.JPG",
+      "image": "/images/portfolio/20261006/multi-cavity-injection-mold-production.webp",
+      "size": 192082
+    },
+    {
+      "source": "Mold/IMG_2007.JPG",
+      "image": "/images/portfolio/20261006/complex-injection-mold-slider-lifter.webp",
+      "size": 107406
+    },
+    {
+      "source": "Mold/IMG_2072.JPG",
+      "image": "/images/portfolio/20261006/home-appliance-housing-injection-mold.webp",
+      "size": 116116
+    },
+    {
+      "source": "Mold/IMG_3040(1).JPG",
+      "image": "/images/portfolio/20261006/medical-device-housing-injection-mold.webp",
+      "size": 109648
+    },
+    {
+      "source": "Mold/IMG_3110.JPG",
+      "image": "/images/portfolio/optimized/ev-charger-housing-injection-mold.webp",
+      "size": 128850
+    },
+    {
+      "source": "Mold/IMG_3117.JPG",
+      "image": "/images/portfolio/optimized/automotive-control-panel-injection-mold.webp",
+      "size": 101056
+    },
+    {
+      "source": "Mold/IMG_3857.JPG",
+      "image": "/images/portfolio/optimized/electronic-device-enclosure-injection-mold-2.webp",
+      "size": 90820
+    },
+    {
+      "source": "Mold/IMG_3924.JPG",
+      "image": "/images/portfolio/optimized/automotive-interior-injection-mold.webp",
+      "size": 89570
+    },
+    {
+      "source": "Mold/IMG_6116.JPG",
+      "image": "/images/portfolio/optimized/insert-molding-injection-mold-metal-insert.webp",
+      "size": 81308
+    },
+    {
+      "source": "Mold/IMG_6694.JPG",
+      "image": "/images/portfolio/optimized/industrial-equipment-housing-injection-mold.webp",
+      "size": 114454
+    },
+    {
+      "source": "Mold/IMG_6780.JPG",
+      "image": "/images/portfolio/optimized/multiple-slider-complex-injection-mold.webp",
+      "size": 95150
+    },
+    {
+      "source": "Mold/IMG_6875.JPG",
+      "image": "/images/portfolio/optimized/custom-export-injection-mold-manufacturer.webp",
+      "size": 102170
+    },
+    {
+      "source": "Mold/IMG_8050.JPG",
+      "image": "/images/portfolio/optimized/hydraulic-core-pull-injection-mold.webp",
+      "size": 118804
+    },
+    {
+      "source": "Mold/IMG_8143.JPG",
+      "image": "/images/portfolio/optimized/mass-production-injection-mold.webp",
+      "size": 98816
+    },
+    {
+      "source": "Mold/IMG_8767.JPG",
+      "image": "/images/portfolio/optimized/pet-tech-device-housing-injection-mold.webp",
+      "size": 102712
+    },
+    {
+      "source": "Mold/IMG_8770.JPG",
+      "image": "/images/portfolio/optimized/family-injection-mold-multiple-parts.webp",
+      "size": 104292
+    },
+    {
+      "source": "Mold/IMG_8990.JPG",
+      "image": "/images/portfolio/optimized/two-plate-injection-mold-tooling.webp",
+      "size": 67052
+    },
+    {
+      "source": "Mold/IMG_9157(1).JPG",
+      "image": "/images/portfolio/optimized/export-injection-mold-overseas-production.webp",
+      "size": 71918
+    },
+    {
+      "source": "Mold/IMG_9450.JPG",
+      "image": "/images/portfolio/optimized/pbt-gf30-injection-mold.webp",
+      "size": 115938
+    },
+    {
+      "source": "Mold/IMG_9484.JPG",
+      "image": "/images/portfolio/optimized/industrial-plastic-component-injection-mold.webp",
+      "size": 99788
+    },
+    {
+      "source": "Mold/IMG_9862.JPG",
+      "image": "/images/portfolio/optimized/long-core-injection-mold-plastic-part.webp",
+      "size": 104582
+    },
+    {
+      "source": "Mold/IMG_9976.JPG",
+      "image": "/images/portfolio/optimized/outdoor-product-plastic-injection-mold.webp",
+      "size": 89844
+    },
+    {
+      "source": "Mold/IMG_20220418_140723.jpg",
+      "image": "/images/portfolio/optimized/high-cycle-injection-mold-tooling.webp",
+      "size": 123800
+    },
+    {
+      "source": "Mold/IMG20220418170707.jpg",
+      "image": "/images/portfolio/optimized/export-injection-mold-usa-production.webp",
+      "size": 164292
+    },
+    {
+      "source": "Mold/IMG20220524141131.jpg",
+      "image": "/images/portfolio/optimized/precision-injection-mold-tight-tolerance-part.webp",
+      "size": 138592
+    },
+    {
+      "source": "Mold/mmexport1650537472632.jpg",
+      "image": "/images/portfolio/optimized/humidifier-housing-injection-mold.webp",
+      "size": 158836
+    },
+    {
+      "source": "Mold/IMG_20260330_081611.jpg",
+      "image": "/images/portfolio/optimized/medical-plastic-component-precision-mold.webp",
+      "size": 203046
+    },
+    {
+      "source": "Mold/IMG_4697.JPG",
+      "image": "/images/portfolio/optimized/medical-device-case-injection-mold.webp",
+      "size": 115984
+    },
+    {
+      "source": "Mold/IMG_4603.JPG",
+      "image": "/images/portfolio/optimized/plastic-overmolding-tool-abs-material.webp",
+      "size": 106906
+    },
+    {
+      "source": "Mold/IMG_4452.JPG",
+      "image": "/images/portfolio/optimized/tpe-overmolding-injection-mold.webp",
+      "size": 114344
+    },
+    {
+      "source": "Mold/IMG_20260318_143620.jpg",
+      "image": "/images/portfolio/optimized/cold-runner-injection-mold-plastic-component.webp",
+      "size": 165860
+    },
+    {
+      "source": "Mold/微信图片_20261102150235_123_3.jpg",
+      "image": "/images/portfolio/optimized/unscrewing-injection-mold-threaded-part.webp",
+      "size": 145168
+    }
+  ]
 }

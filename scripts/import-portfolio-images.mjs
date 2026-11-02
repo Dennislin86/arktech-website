@@ -1,91 +1,143 @@
-import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const sourceBase = path.join(projectRoot, "public", "images", "Image show");
-const outputRoot = path.join(projectRoot, "public", "images", "portfolio", "20261006");
+const publicRoot = path.join(projectRoot, "public");
+const sourceBase = path.join(publicRoot, "images", "Image show");
+const outputRoot = path.join(publicRoot, "images", "portfolio", "20261006");
+const optimizedOutputRoot = path.join(publicRoot, "images", "portfolio", "optimized");
 const metadataPath = path.join(projectRoot, "source-assets", "portfolio", "metadata.json");
 const manifestPath = path.join(projectRoot, "generated", "portfolio-gallery-manifest.json");
 const unmatchedReportPath = path.join(projectRoot, "generated", "portfolio-unmatched-images-report.json");
-const publicBasePath = "/images/portfolio/20261006";
+const publicOutputParts = ["images", "portfolio", "20261006"];
+const publicOptimizedOutputParts = ["images", "portfolio", "optimized"];
 const supportedExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
+const categoryFolders = ["Mold", "Plastic"];
 
-const categories = [
-  { folder: "Mold", sourceFolder: path.join(sourceBase, "Mold", "20261006") },
-  { folder: "Plastic", sourceFolder: path.join(sourceBase, "Plastic", "20261006") }
-];
+function encodePublicPath(parts) {
+  return `/${parts.map((part) => encodeURIComponent(part)).join("/")}`;
+}
 
-async function optimizeImage(sourcePath, outputPath) {
-  const result = await sharp(sourcePath, { animated: false, failOn: "none" })
-    .rotate()
-    .resize({ width: 1600, height: 1600, fit: "inside", withoutEnlargement: true })
-    .webp({ quality: 80, effort: 5, alphaQuality: 90 })
-    .toFile(outputPath);
+function slug(value) {
+  return value
+    .replace(/\.[^.]+$/, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "portfolio-item";
+}
 
-  return { width: result.width, height: result.height, size: result.size };
+async function exists(filePath) {
+  try {
+    await access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function readPreviousManifest() {
+  try {
+    return JSON.parse(await readFile(manifestPath, "utf8"));
+  } catch {
+    return { items: [] };
+  }
+}
+
+async function imageDetails(filePath) {
+  const [metadata, file] = await Promise.all([sharp(filePath, { animated: false, failOn: "none" }).metadata(), stat(filePath)]);
+  if (!metadata.width || !metadata.height) throw new Error(`Unable to read image dimensions: ${filePath}`);
+  return { width: metadata.width, height: metadata.height, size: file.size };
 }
 
 async function main() {
   const metadata = JSON.parse(await readFile(metadataPath, "utf8"));
   const records = metadata.records ?? {};
-  await mkdir(outputRoot, { recursive: true });
+  const previousManifest = await readPreviousManifest();
+  const previousBySource = new Map((previousManifest.items ?? []).map((item) => [item.source, item]));
+  const webNameUseCount = new Map();
+
+  for (const record of Object.values(records)) {
+    webNameUseCount.set(record.webFileName, (webNameUseCount.get(record.webFileName) ?? 0) + 1);
+  }
+
   await mkdir(path.dirname(manifestPath), { recursive: true });
-
   const items = [];
-  const scannedKeys = new Set();
-  const expectedOutputs = new Set();
-  const filesWithoutMetadata = [];
-  const outputOwners = new Map();
+  const metadataWithoutFiles = [];
+  const matchedSources = new Set();
+  const rawSourceAssetsUsed = [];
+  const optimizedAssetsUsed = [];
+  const assetsOver300KB = [];
 
-  for (const category of categories) {
-    const filenames = (await readdir(category.sourceFolder))
+  for (const [source, record] of Object.entries(records)) {
+    const [folder, ...filenameParts] = source.split("/");
+    const filename = filenameParts.join("/");
+    const sourcePath = path.join(sourceBase, folder, "20261006", filename);
+    if (!(await exists(sourcePath))) {
+      metadataWithoutFiles.push({
+        source,
+        originalFileName: record.originalFileName,
+        action: "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
+      });
+      continue;
+    }
+
+    matchedSources.add(source);
+    const previous = previousBySource.get(source);
+    const previousUsesOptimizedAsset = previous?.image?.startsWith("/images/portfolio/optimized/");
+    const optimizedName = previousUsesOptimizedAsset ? path.basename(previous.image) : record.webFileName;
+    const optimizedPath = path.join(optimizedOutputRoot, optimizedName);
+    const optimizedIsOwnedByRecord = previousUsesOptimizedAsset && await exists(optimizedPath);
+    const outputPath = path.join(outputRoot, record.webFileName);
+    const outputIsOwnedByRecord = previous?.image?.startsWith("/images/portfolio/20261006/") && previous.webFileName === record.webFileName;
+    const outputNameIsUnique = webNameUseCount.get(record.webFileName) === 1;
+    const useExistingWebp = await exists(outputPath) && (outputIsOwnedByRecord || outputNameIsUnique);
+    const assetPath = optimizedIsOwnedByRecord ? optimizedPath : useExistingWebp ? outputPath : sourcePath;
+    const image = optimizedIsOwnedByRecord
+      ? encodePublicPath([...publicOptimizedOutputParts, optimizedName])
+      : useExistingWebp
+        ? encodePublicPath([...publicOutputParts, record.webFileName])
+        : encodePublicPath(["images", "Image show", folder, "20261006", filename]);
+    const details = await imageDetails(assetPath);
+
+    const item = {
+      id: `${folder.toLowerCase()}-${record.sortOrder}-${slug(record.webFileName)}`,
+      ...record,
+      webFileName: optimizedIsOwnedByRecord ? optimizedName : record.webFileName,
+      assetSource: optimizedIsOwnedByRecord || useExistingWebp ? "optimized-web" : "original-source",
+      image,
+      ...details,
+      source
+    };
+    items.push(item);
+
+    const assetRecord = { source, image, size: details.size };
+    if (optimizedIsOwnedByRecord || useExistingWebp) optimizedAssetsUsed.push(assetRecord);
+    else rawSourceAssetsUsed.push(assetRecord);
+    if (details.size > 300 * 1024) assetsOver300KB.push(assetRecord);
+  }
+
+  const filesWithoutMetadata = [];
+  for (const folder of categoryFolders) {
+    const sourceFolder = path.join(sourceBase, folder, "20261006");
+    if (!(await exists(sourceFolder))) continue;
+    const filenames = (await readdir(sourceFolder))
       .filter((filename) => supportedExtensions.has(path.extname(filename).toLowerCase()))
       .sort((left, right) => left.localeCompare(right, "en", { numeric: true, sensitivity: "base" }));
 
     for (const filename of filenames) {
-      const key = `${category.folder}/${filename}`;
-      scannedKeys.add(key);
-      const record = records[key];
-      if (!record || record.metadataSource !== "excel") {
+      const source = `${folder}/${filename}`;
+      if (!matchedSources.has(source) && !records[source]) {
         filesWithoutMetadata.push({
-          source: key,
+          source,
           originalFileName: filename,
-          category: category.folder === "Mold" ? "Injection Molds" : "Plastic Parts",
-          reason: "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+          category: folder === "Mold" ? "Injection Molds" : "Plastic Parts",
+          action: "Not published; no exact record exists in the selected Excel workbook."
         });
-        continue;
       }
-
-      const outputName = record.webFileName;
-      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*\.webp$/.test(outputName)) {
-        throw new Error(`Invalid portfolio WebP filename for ${key}: ${outputName}`);
-      }
-      if (outputOwners.has(outputName)) {
-        throw new Error(`Duplicate portfolio WebP filename ${outputName}: ${outputOwners.get(outputName)} and ${key}`);
-      }
-      outputOwners.set(outputName, key);
-      expectedOutputs.add(outputName);
-
-      const sourcePath = path.join(category.sourceFolder, filename);
-      const outputPath = path.join(outputRoot, outputName);
-      const optimized = await optimizeImage(sourcePath, outputPath);
-      items.push({
-        id: `${category.folder.toLowerCase()}-${path.parse(outputName).name}`,
-        ...record,
-        image: `${publicBasePath}/${outputName}`,
-        width: optimized.width,
-        height: optimized.height,
-        size: optimized.size,
-        source: key
-      });
     }
   }
-
-  const staleOutputs = (await readdir(outputRoot))
-    .filter((filename) => filename.endsWith(".webp") && !expectedOutputs.has(filename));
-  await Promise.all(staleOutputs.map((filename) => rm(path.join(outputRoot, filename))));
 
   items.sort((left, right) =>
     left.category.localeCompare(right.category) ||
@@ -93,38 +145,32 @@ async function main() {
     left.originalFileName.localeCompare(right.originalFileName, "en", { numeric: true })
   );
 
-  const metadataWithoutFiles = Object.keys(records)
-    .filter((key) => records[key]?.metadataSource === "excel" && !scannedKeys.has(key))
-    .map((key) => ({ source: key, reason: "Metadata record has no matching image file." }));
-  const imagesWithoutExcelRows = filesWithoutMetadata.map((item) => ({
-    source: item.source,
-    originalFileName: item.originalFileName,
-    category: item.category,
-    action: "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
-  }));
-
   const manifest = {
-    schemaVersion: 1,
-    generatedFromBatch: "BATCH-2026-10-06",
+    schemaVersion: 2,
+    generatedFromWorkbook: metadata.sourceWorkbook,
+    generatedFromSheet: metadata.sourceSheet,
     items
   };
   const report = {
-    schemaVersion: 1,
-    scannedImageCount: scannedKeys.size,
+    schemaVersion: 2,
+    selectedWorkbook: metadata.sourceWorkbook,
+    workbookRecordCount: Object.keys(records).length,
     publishedImageCount: items.length,
-    excelMatchedImageCount: items.filter((item) => item.metadataSource === "excel").length,
-    imagesWithoutExcelRows,
-    filesWithoutMetadata,
+    optimizedAssetCount: optimizedAssetsUsed.length,
+    originalSourceAssetCount: rawSourceAssetsUsed.length,
     metadataWithoutFiles,
-    staleGeneratedFilesRemoved: staleOutputs
+    filesWithoutMetadata,
+    duplicateWebFileNames: [...webNameUseCount.entries()]
+      .filter(([, count]) => count > 1)
+      .map(([webFileName, count]) => ({ webFileName, count })),
+    assetsOver300KB,
+    rawSourceAssetsUsed,
+    optimizedAssetsUsed
   };
 
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
   await writeFile(unmatchedReportPath, `${JSON.stringify(report, null, 2)}\n`);
-
-  const totalBytes = (await Promise.all(items.map((item) => stat(path.join(outputRoot, item.webFileName)))))
-    .reduce((total, entry) => total + entry.size, 0);
-  console.log(`[portfolio] ${scannedKeys.size} scanned; ${items.length} optimized; ${report.excelMatchedImageCount} Excel matches; ${imagesWithoutExcelRows.length} awaiting Excel data; ${(totalBytes / 1024 / 1024).toFixed(2)} MiB total.`);
+  console.log(`[portfolio] ${Object.keys(records).length} Excel records; ${items.length} published; ${optimizedAssetsUsed.length} existing WebP assets reused; ${rawSourceAssetsUsed.length} originals referenced without recompression; ${metadataWithoutFiles.length} missing source files.`);
 }
 
 main().catch((error) => {

@@ -8,6 +8,7 @@
   },
   "scripts": {
     "portfolio:import": "node scripts/import-portfolio-images.mjs",
+    "portfolio:optimize": "node scripts/optimize-portfolio-images.mjs",
     "gallery:generate": "node scripts/generate-tooling-gallery.mjs",
     "dev": "node scripts/dev-with-tooling-gallery.mjs",
     "prebuild": "node scripts/generate-tooling-gallery.mjs",

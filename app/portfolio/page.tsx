@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   }
 };
 
-const heroItems = portfolioItems.filter((item) => item.category === "Injection Molds").slice(0, 3);
 const selectedCaseStudies = caseStudies.filter((item) => item.featured).slice(0, 3);
 
 export default function PortfolioPage() {
@@ -38,12 +37,15 @@ export default function PortfolioPage() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Explore real Arktech injection molds and molded plastic parts across automotive, smart home, consumer electronics, medical, home appliance and industrial applications.</p>
             <Link className="focus-ring mt-8 inline-flex min-h-12 items-center rounded-sm bg-[var(--accent)] px-5 font-bold text-white hover:brightness-90" href="#portfolio-gallery">Explore the Portfolio</Link>
           </div>
-          <div aria-label="Selected Arktech injection mold portfolio images" className="grid grid-cols-2 gap-3">
-            {heroItems.map((item, index) => (
-              <div className={`relative overflow-hidden rounded-sm border border-white/20 bg-white/10 ${index === 0 ? "col-span-2 aspect-[2/1]" : "aspect-[4/3]"}`} key={item.id}>
-                <Image alt={item.altText} className="object-cover object-center" fill priority={index === 0} sizes="(min-width: 1024px) 42vw, 92vw" src={item.image} />
-              </div>
-            ))}
+          <div aria-label="Arktech injection mold and transparent molded parts" className="relative aspect-[2/1] overflow-hidden rounded-sm border border-white/20 bg-white/10">
+            <Image
+              alt="Mirror-polished injection molds with transparent molded plastic enclosures"
+              className="object-contain object-center"
+              fill
+              preload
+              sizes="(min-width: 1024px) 42vw, 92vw"
+              src="/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp"
+            />
           </div>
         </div>
       </section>

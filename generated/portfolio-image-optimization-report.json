@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 1,
+  "gallery": {
+    "convertedImageCount": 28,
+    "existingWebpReusedCount": 20,
+    "beforeBytes": 54325260,
+    "afterBytes": 3213952,
+    "mappings": [
+      {
+        "source": "Mold/IMG_3110.JPG",
+        "suggestedWebFileName": "ev-charger-housing-injection-mold.webp",
+        "outputFileName": "ev-charger-housing-injection-mold.webp",
+        "image": "/images/portfolio/optimized/ev-charger-housing-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 1016784
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 128850,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_3117.JPG",
+        "suggestedWebFileName": "automotive-control-panel-injection-mold.webp",
+        "outputFileName": "automotive-control-panel-injection-mold.webp",
+        "image": "/images/portfolio/optimized/automotive-control-panel-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 907059
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 101056,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_3857.JPG",
+        "suggestedWebFileName": "electronic-device-enclosure-injection-mold.webp",
+        "outputFileName": "electronic-device-enclosure-injection-mold-2.webp",
+        "image": "/images/portfolio/optimized/electronic-device-enclosure-injection-mold-2.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 910450
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 90820,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_3924.JPG",
+        "suggestedWebFileName": "automotive-interior-injection-mold.webp",
+        "outputFileName": "automotive-interior-injection-mold.webp",
+        "image": "/images/portfolio/optimized/automotive-interior-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 887788
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 89570,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_6116.JPG",
+        "suggestedWebFileName": "insert-molding-injection-mold-metal-insert.webp",
+        "outputFileName": "insert-molding-injection-mold-metal-insert.webp",
+        "image": "/images/portfolio/optimized/insert-molding-injection-mold-metal-insert.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 835092
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 81308,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_6694.JPG",
+        "suggestedWebFileName": "industrial-equipment-housing-injection-mold.webp",
+        "outputFileName": "industrial-equipment-housing-injection-mold.webp",
+        "image": "/images/portfolio/optimized/industrial-equipment-housing-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 932615
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 114454,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_6780.JPG",
+        "suggestedWebFileName": "multiple-slider-complex-injection-mold.webp",
+        "outputFileName": "multiple-slider-complex-injection-mold.webp",
+        "image": "/images/portfolio/optimized/multiple-slider-complex-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 815859
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 95150,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_6875.JPG",
+        "suggestedWebFileName": "custom-export-injection-mold-manufacturer.webp",
+        "outputFileName": "custom-export-injection-mold-manufacturer.webp",
+        "image": "/images/portfolio/optimized/custom-export-injection-mold-manufacturer.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 881958
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 102170,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_8050.JPG",
+        "suggestedWebFileName": "hydraulic-core-pull-injection-mold.webp",
+        "outputFileName": "hydraulic-core-pull-injection-mold.webp",
+        "image": "/images/portfolio/optimized/hydraulic-core-pull-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 960216
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 118804,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_8143.JPG",
+        "suggestedWebFileName": "mass-production-injection-mold.webp",
+        "outputFileName": "mass-production-injection-mold.webp",
+        "image": "/images/portfolio/optimized/mass-production-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 820143
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 98816,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_8767.JPG",
+        "suggestedWebFileName": "pet-tech-device-housing-injection-mold.webp",
+        "outputFileName": "pet-tech-device-housing-injection-mold.webp",
+        "image": "/images/portfolio/optimized/pet-tech-device-housing-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 877180
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 102712,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_8770.JPG",
+        "suggestedWebFileName": "family-injection-mold-multiple-parts.webp",
+        "outputFileName": "family-injection-mold-multiple-parts.webp",
+        "image": "/images/portfolio/optimized/family-injection-mold-multiple-parts.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 935383
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 104292,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_8990.JPG",
+        "suggestedWebFileName": "two-plate-injection-mold-tooling.webp",
+        "outputFileName": "two-plate-injection-mold-tooling.webp",
+        "image": "/images/portfolio/optimized/two-plate-injection-mold-tooling.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 765437
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 67052,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_9157(1).JPG",
+        "suggestedWebFileName": "export-injection-mold-overseas-production.webp",
+        "outputFileName": "export-injection-mold-overseas-production.webp",
+        "image": "/images/portfolio/optimized/export-injection-mold-overseas-production.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 772547
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 71918,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_9450.JPG",
+        "suggestedWebFileName": "pbt-gf30-injection-mold.webp",
+        "outputFileName": "pbt-gf30-injection-mold.webp",
+        "image": "/images/portfolio/optimized/pbt-gf30-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 906686
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 115938,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_9484.JPG",
+        "suggestedWebFileName": "industrial-plastic-component-injection-mold.webp",
+        "outputFileName": "industrial-plastic-component-injection-mold.webp",
+        "image": "/images/portfolio/optimized/industrial-plastic-component-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 892506
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 99788,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_9862.JPG",
+        "suggestedWebFileName": "long-core-injection-mold-plastic-part.webp",
+        "outputFileName": "long-core-injection-mold-plastic-part.webp",
+        "image": "/images/portfolio/optimized/long-core-injection-mold-plastic-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2634949
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 104582,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_9976.JPG",
+        "suggestedWebFileName": "outdoor-product-plastic-injection-mold.webp",
+        "outputFileName": "outdoor-product-plastic-injection-mold.webp",
+        "image": "/images/portfolio/optimized/outdoor-product-plastic-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 906145
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 89844,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_20220418_140723.jpg",
+        "suggestedWebFileName": "high-cycle-injection-mold-tooling.webp",
+        "outputFileName": "high-cycle-injection-mold-tooling.webp",
+        "image": "/images/portfolio/optimized/high-cycle-injection-mold-tooling.webp",
+        "before": {
+          "width": 3648,
+          "height": 2736,
+          "size": 2802186
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 123800,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG20220418170707.jpg",
+        "suggestedWebFileName": "export-injection-mold-usa-production.webp",
+        "outputFileName": "export-injection-mold-usa-production.webp",
+        "image": "/images/portfolio/optimized/export-injection-mold-usa-production.webp",
+        "before": {
+          "width": 4000,
+          "height": 3000,
+          "size": 1875931
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 164292,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG20220524141131.jpg",
+        "suggestedWebFileName": "precision-injection-mold-tight-tolerance-part.webp",
+        "outputFileName": "precision-injection-mold-tight-tolerance-part.webp",
+        "image": "/images/portfolio/optimized/precision-injection-mold-tight-tolerance-part.webp",
+        "before": {
+          "width": 4000,
+          "height": 3000,
+          "size": 2945350
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 138592,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/mmexport1650537472632.jpg",
+        "suggestedWebFileName": "humidifier-housing-injection-mold.webp",
+        "outputFileName": "humidifier-housing-injection-mold.webp",
+        "image": "/images/portfolio/optimized/humidifier-housing-injection-mold.webp",
+        "before": {
+          "width": 1706,
+          "height": 1280,
+          "size": 928477
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 158836,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_20260330_081611.jpg",
+        "suggestedWebFileName": "medical-plastic-component-precision-mold.webp",
+        "outputFileName": "medical-plastic-component-precision-mold.webp",
+        "image": "/images/portfolio/optimized/medical-plastic-component-precision-mold.webp",
+        "before": {
+          "width": 4064,
+          "height": 3048,
+          "size": 5974483
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 203046,
+          "quality": 80
+        }
+      },
+      {
+        "source": "Mold/IMG_4697.JPG",
+        "suggestedWebFileName": "medical-device-case-injection-mold.webp",
+        "outputFileName": "medical-device-case-injection-mold.webp",
+        "image": "/images/portfolio/optimized/medical-device-case-injection-mold.webp",
+        "before": {
+          "width": 5712,
+          "height": 4284,
+          "size": 4403681
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 115984,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_4603.JPG",
+        "suggestedWebFileName": "plastic-overmolding-tool-abs-material.webp",
+        "outputFileName": "plastic-overmolding-tool-abs-material.webp",
+        "image": "/images/portfolio/optimized/plastic-overmolding-tool-abs-material.webp",
+        "before": {
+          "width": 5712,
+          "height": 4284,
+          "size": 3964529
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 106906,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_4452.JPG",
+        "suggestedWebFileName": "tpe-overmolding-injection-mold.webp",
+        "outputFileName": "tpe-overmolding-injection-mold.webp",
+        "image": "/images/portfolio/optimized/tpe-overmolding-injection-mold.webp",
+        "before": {
+          "width": 5712,
+          "height": 4284,
+          "size": 4225711
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 114344,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_20260318_143620.jpg",
+        "suggestedWebFileName": "cold-runner-injection-mold-plastic-component.webp",
+        "outputFileName": "cold-runner-injection-mold-plastic-component.webp",
+        "image": "/images/portfolio/optimized/cold-runner-injection-mold-plastic-component.webp",
+        "before": {
+          "width": 4064,
+          "height": 3048,
+          "size": 4526181
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 165860,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/微信图片_20261102150235_123_3.jpg",
+        "suggestedWebFileName": "unscrewing-injection-mold-threaded-part.webp",
+        "outputFileName": "unscrewing-injection-mold-threaded-part.webp",
+        "image": "/images/portfolio/optimized/unscrewing-injection-mold-threaded-part.webp",
+        "before": {
+          "width": 5712,
+          "height": 4284,
+          "size": 5019934
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 145168,
+          "quality": 82
+        }
+      }
+    ]
+  },
+  "hero": {
+    "source": "/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.png",
+    "output": "/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp",
+    "before": {
+      "width": 1774,
+      "height": 887,
+      "size": 2394013
+    },
+    "after": {
+      "width": 1774,
+      "height": 887,
+      "size": 166954,
+      "quality": 84
+    }
+  }
+}
