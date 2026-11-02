@@ -85,7 +85,7 @@ export function DfmReportPreview() {
           aria-describedby="dfm-report-dialog-description"
           aria-labelledby="dfm-report-dialog-title"
           aria-modal="true"
-          className="fixed inset-0 z-[110] flex flex-col bg-[#071b2b]/95 p-3 sm:p-5"
+          className="fixed inset-0 z-[110] flex flex-col bg-[var(--brand-dark)]/95 p-3 sm:p-5"
           onClick={(event) => { if (event.target === event.currentTarget) closePreview(); }}
           onKeyDown={trapFocus}
           role="dialog"

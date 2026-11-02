@@ -173,7 +173,7 @@ export function ToolingGallery() {
           aria-label={activeItem.title ? undefined : `Image preview: ${activeItem.alt}`}
           aria-labelledby={activeItem.title ? "tooling-gallery-dialog-title" : undefined}
           aria-modal="true"
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#081f33]/85 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[var(--brand-dark)]/85 p-4 backdrop-blur-sm"
           onClick={(event) => { if (event.target === event.currentTarget) closeModal(); }}
           onKeyDown={trapFocus}
           role="dialog"

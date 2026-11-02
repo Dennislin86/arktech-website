@@ -207,7 +207,7 @@ function DesktopPanel({ item, open, onEnter, onLeave }: { item: NavigationItem; 
   const moldTypeColumnBreak = isInjectionMolds ? 4 : Math.ceil((item.groups[0]?.links.length ?? 0) / 2);
   const columns = isCompany ? "grid-cols-[21fr_23fr_25fr_31fr]" : isResources ? "grid-cols-[30fr_27fr_43fr]" : isCapabilities ? "grid-cols-[1.05fr_1.05fr_0.95fr_0.95fr]" : isInjectionMolds ? "grid-cols-[minmax(0,2fr)_minmax(250px,0.78fr)]" : isIndustries ? "grid-cols-1" : item.groups.length === 4 ? "grid-cols-4" : item.groups.length === 2 ? "grid-cols-2" : "grid-cols-3";
   return (
-    <div aria-hidden={!open} className={`absolute inset-x-0 top-full z-[9999] hidden border-t border-[var(--line)] bg-white shadow-[0_18px_35px_rgba(15,35,60,0.10)] transition duration-150 lg:block ${open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"}`} id={`${item.id}-mega-menu`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
+    <div aria-hidden={!open} className={`absolute inset-x-0 top-full z-[9999] hidden border-t border-[var(--line)] bg-white shadow-[0_18px_35px_rgba(15,54,35,0.10)] transition duration-150 lg:block ${open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"}`} id={`${item.id}-mega-menu`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
       <div className={`mx-auto grid w-[min(1240px,calc(100%-48px))] ${isResources || isCompany ? "gap-8 py-7" : "gap-10 py-8"} ${columns}`}>
         {isInjectionMolds ? (
           <>

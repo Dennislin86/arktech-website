@@ -22,7 +22,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-[var(--brand-dark)] text-white">
-        <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(7,31,54,.98)_0%,rgba(7,31,54,.92)_46%,rgba(7,31,54,.68)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(15,54,35,.98)_0%,rgba(15,54,35,.92)_46%,rgba(15,54,35,.68)_100%)]" />
         <div className="container-page relative grid min-h-[560px] items-center gap-10 py-14 xl:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-12 lg:py-16">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-red-200">Real Tooling Projects</p>

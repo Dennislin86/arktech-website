@@ -114,8 +114,8 @@ export function MoldTrialValidationHero() {
         ref={videoRef}
         tabIndex={-1}
       />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,25,45,0.98)_0%,rgba(5,25,45,0.91)_42%,rgba(5,25,45,0.55)_72%,rgba(5,25,45,0.28)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,25,45,0.14)_0%,rgba(5,25,45,0.04)_58%,rgba(5,25,45,0.36)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,54,35,0.98)_0%,rgba(15,54,35,0.91)_42%,rgba(15,54,35,0.55)_72%,rgba(15,54,35,0.28)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,54,35,0.14)_0%,rgba(15,54,35,0.04)_58%,rgba(15,54,35,0.36)_100%)]" />
 
       <div className="container-page flex w-full flex-col justify-center py-12 sm:py-14 lg:py-16">
         <nav aria-label="Breadcrumb" className="mb-7 text-sm text-slate-200/85 sm:text-[15px]">
@@ -145,7 +145,7 @@ export function MoldTrialValidationHero() {
       {!videoFailed ? (
         <button
           aria-label={isPlaying ? "Pause mold trial background video" : "Play mold trial background video"}
-          className="focus-ring absolute bottom-5 right-5 hidden min-h-11 items-center rounded-full border border-white/50 bg-[#071b2b]/70 px-4 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-[#071b2b] md:inline-flex"
+          className="focus-ring absolute bottom-5 right-5 hidden min-h-11 items-center rounded-full border border-white/50 bg-[var(--brand-dark)]/70 px-4 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-[var(--brand-dark)] md:inline-flex"
           onClick={togglePlayback}
           type="button"
         >

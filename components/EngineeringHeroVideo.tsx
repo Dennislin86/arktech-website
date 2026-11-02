@@ -116,7 +116,7 @@ export function EngineeringHeroVideo() {
       {canUseVideo && !failed ? (
         <button
           aria-label={isPlaying ? "Pause engineering background video" : "Play engineering background video"}
-          className="focus-ring absolute bottom-4 right-4 z-20 inline-flex min-h-11 items-center gap-2 rounded-sm border border-white/50 bg-[#08233a]/75 px-4 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-[#08233a]"
+          className="focus-ring absolute bottom-4 right-4 z-20 inline-flex min-h-11 items-center gap-2 rounded-sm border border-white/50 bg-[var(--brand-dark)]/75 px-4 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-[var(--brand-dark)]"
           onClick={togglePlayback}
           type="button"
         >

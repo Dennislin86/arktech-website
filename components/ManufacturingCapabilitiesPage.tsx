@@ -135,7 +135,7 @@ export function ManufacturingCapabilitiesPage() {
         secondaryCta={{ label: "Request a Quote", href: "/request-a-quote" }}
         title="Injection Mold & Plastic Manufacturing Capabilities"
         bottomContent={(
-          <div className="mt-8 border-t border-white/25 bg-[#071f34]/80 backdrop-blur-sm" data-capability-proof>
+          <div className="mt-8 border-t border-white/25 bg-[var(--brand-dark)]/80 backdrop-blur-sm" data-capability-proof>
             <ul className="grid grid-cols-2 text-sm leading-5 text-white/90 sm:grid-cols-3 lg:grid-cols-5" aria-label="Arktech manufacturing capability proof">
               <li className="flex min-h-16 items-center gap-2 border-b border-r border-white/15 px-3 py-3 font-medium sm:px-4 lg:border-b-0">
                 <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]" />
@@ -175,7 +175,7 @@ export function ManufacturingCapabilitiesPage() {
                     ) : (
                       <>
                         <LazyAutoplayVideo ariaLabel={capability.ariaLabel} className="absolute inset-0 h-full w-full object-cover" poster={capability.poster} preload="none" src={capability.video ?? ""} />
-                        <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08233acc] to-transparent px-5 pb-5 pt-16 text-sm font-semibold text-white sm:px-6" aria-hidden="true">{capability.mediaLabel}</div>
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#153923cc] to-transparent px-5 pb-5 pt-16 text-sm font-semibold text-white sm:px-6" aria-hidden="true">{capability.mediaLabel}</div>
                       </>
                     )}
                   </div>
@@ -248,7 +248,7 @@ export function ManufacturingCapabilitiesPage() {
         <div className="container-page">
           <SectionHeading eyebrow="SUPPORT BY ARKTECH GROUP" title="Supporting Manufacturing Capabilities" body="Complete your OEM and ODM product programs with metal parts, prototypes, finishing and assembly support from Arktech Group, alongside injection molds and molded plastic parts." />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {supportingCapabilities.map((capability) => <article className="overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(8,35,58,0.04)]" key={capability.title}><div className="relative aspect-[16/10] overflow-hidden bg-[#f5f6f7]"><Image alt={capability.alt} className={capability.imageClassName} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" src={capability.image} /></div><div className="border-t border-[var(--line)] p-5"><h3 className="text-xl font-bold leading-7 text-[var(--brand-dark)]">{capability.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-[15px]">{capability.description}</p></div></article>)}
+            {supportingCapabilities.map((capability) => <article className="overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(15,54,35,0.04)]" key={capability.title}><div className="relative aspect-[16/10] overflow-hidden bg-[#f5f6f7]"><Image alt={capability.alt} className={capability.imageClassName} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" src={capability.image} /></div><div className="border-t border-[var(--line)] p-5"><h3 className="text-xl font-bold leading-7 text-[var(--brand-dark)]">{capability.title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-[15px]">{capability.description}</p></div></article>)}
           </div>
           <a className="focus-ring mt-7 inline-flex min-h-11 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="https://arktech-group.com/" rel="noopener noreferrer" target="_blank">Explore OEM &amp; ODM Manufacturing Support at Arktech Group <span className="ml-1" aria-hidden="true">↗</span><span className="sr-only"> (opens in a new window)</span></a>
         </div>
@@ -271,7 +271,7 @@ export function ManufacturingCapabilitiesPage() {
               <h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl lg:text-[42px]">From Design to Tooling &amp; Production</h2>
               <p className="mt-4 text-base leading-7 text-slate-300 sm:text-lg">Start at the stage your project requires. Export molds can be delivered after validation; molded-part programs continue into production.</p>
             </div>
-            <div className="overflow-hidden rounded-sm border border-white/15 bg-[#0b2c48]">
+            <div className="overflow-hidden rounded-sm border border-white/15 bg-[var(--brand-dark)]">
               <Image
                 alt="Production flow chart showing DFM, mold design, machining, assembly, validation, plastic part production and delivery"
                 className="h-auto w-full object-contain"

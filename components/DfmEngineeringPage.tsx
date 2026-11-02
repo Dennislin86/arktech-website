@@ -109,7 +109,7 @@ export function DfmEngineeringPage() {
     <main>
       <section className="relative isolate min-h-[620px] overflow-hidden bg-[var(--brand-dark)] text-white sm:min-h-[650px]">
         <EngineeringHeroVideo />
-        <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,35,58,0.95)_0%,rgba(8,35,58,0.86)_42%,rgba(8,35,58,0.48)_72%,rgba(8,35,58,0.24)_100%)] md:bg-[linear-gradient(90deg,rgba(8,35,58,0.94)_0%,rgba(8,35,58,0.82)_46%,rgba(8,35,58,0.34)_75%,rgba(8,35,58,0.16)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,54,35,0.95)_0%,rgba(15,54,35,0.86)_42%,rgba(15,54,35,0.48)_72%,rgba(15,54,35,0.24)_100%)] md:bg-[linear-gradient(90deg,rgba(15,54,35,0.94)_0%,rgba(15,54,35,0.82)_46%,rgba(15,54,35,0.34)_75%,rgba(15,54,35,0.16)_100%)]" />
         <div className="container-page relative z-10 flex min-h-[620px] flex-col py-5 sm:min-h-[650px]">
           <nav aria-label="Breadcrumb" className="text-sm text-slate-200"><Link className="focus-ring hover:text-white" href="/">Home</Link><span aria-hidden="true" className="mx-2">/</span><Link className="focus-ring hover:text-white" href="/manufacturing-capabilities">Capabilities</Link><span aria-hidden="true" className="mx-2">/</span><span aria-current="page">Injection Molding Engineering</span></nav>
           <div className="flex flex-1 items-center py-12 sm:py-14">
@@ -117,7 +117,7 @@ export function DfmEngineeringPage() {
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-red-300">Engineering Before Tooling</p>
               <h1 className="mt-4 text-4xl font-bold leading-[1.06] tracking-[-0.025em] text-white sm:text-5xl lg:text-[3.45rem]">Injection Molding Engineering<br className="hidden lg:block" /> &amp; Product Co-Design</h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-slate-100 sm:text-lg sm:leading-8">Review product geometry, moldability and tooling requirements with Arktech through co-design, DFM, Moldflow when required and mold design engineering.</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row"><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">Upload CAD for Engineering Review</Link><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[#08233a]/35 px-6 text-center font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="#engineering-scope">Explore Engineering Scope</Link></div>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row"><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">Upload CAD for Engineering Review</Link><Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[var(--brand-dark)]/35 px-6 text-center font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="#engineering-scope">Explore Engineering Scope</Link></div>
             </div>
           </div>
         </div>

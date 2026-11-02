@@ -97,7 +97,7 @@ function PortfolioCard({
 
   return (
     <article
-      className={`group min-w-0 overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-[0_8px_24px_rgba(15,35,60,0.05)] ${horizontal ? "shrink-0 snap-start basis-[84%] sm:basis-[46%] lg:basis-[42%] xl:basis-[27%]" : "h-full"}`}
+      className={`group min-w-0 overflow-hidden rounded-sm border border-[var(--line)] bg-white shadow-[0_8px_24px_rgba(15,54,35,0.05)] transition hover:border-[var(--brand)] ${horizontal ? "shrink-0 snap-start basis-[84%] sm:basis-[46%] lg:basis-[42%] xl:basis-[27%]" : "h-full"}`}
     >
       <button
         aria-label={`View details for ${item.imageTitle}`}
@@ -313,7 +313,7 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
               <label className="flex min-w-0 items-center gap-3 text-sm font-bold text-[var(--brand-dark)]">
                 <span className="shrink-0">{filterLabel}</span>
                 <select
-                  className="focus-ring min-h-11 max-w-full rounded-sm border border-[var(--line)] bg-white px-3 font-normal text-[var(--foreground)]"
+                  className="focus-ring min-h-11 max-w-full rounded-sm border border-[var(--line)] bg-white px-3 font-normal text-[var(--foreground)] focus:border-[var(--brand)]"
                   onChange={(event) => updateFilter(category, event.target.value)}
                   value={selectedFilter}
                 >

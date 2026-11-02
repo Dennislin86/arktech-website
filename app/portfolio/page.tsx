@@ -38,7 +38,7 @@ export default function PortfolioPage() {
           sizes="100vw"
           src="/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp"
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,31,54,.96)_0%,rgba(7,31,54,.91)_46%,rgba(7,31,54,.58)_68%,rgba(7,31,54,.16)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,54,35,.96)_0%,rgba(15,54,35,.91)_46%,rgba(15,54,35,.58)_68%,rgba(15,54,35,.16)_100%)]" />
         <div className="container-page flex min-h-[640px] items-center py-12 sm:min-h-[650px] sm:py-14 lg:min-h-[660px] lg:py-16">
           <div className="w-full max-w-[720px] lg:w-[60%]">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-red-200">Portfolio</p>

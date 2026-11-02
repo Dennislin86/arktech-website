@@ -3,32 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --color-primary-navy: #0b1f33;
-  --color-industrial-blue: #123a5a;
-  --color-brand-red: #d71920;
-  --color-brand-red-hover: #b9151b;
-  --color-text-main: #0f172a;
-  --color-text-muted: #475569;
-  --color-bg-light: #f8fafc;
-  --color-border: #e2e8f0;
+  --brand-green: #6ab80c;
+  --brand-green-dark: #2e6e1d;
+  --brand-green-deep: #123421;
+  --brand-green-light: #e8f5dc;
+  --brand-red: #b22222;
+  --brand-red-dark: #8f1b1b;
+  --background-soft: #f6f8f5;
+  --text-primary: #202621;
+  --text-secondary: #4b5563;
+  --border-subtle: #dce4dc;
 
   --background: #ffffff;
-  --foreground: var(--color-text-main);
-  --muted: var(--color-text-muted);
-  --brand: var(--color-brand-red);
-  --brand-hover: var(--color-brand-red-hover);
-  --brand-dark: var(--color-primary-navy);
-  --industrial-blue: var(--color-industrial-blue);
-  --accent: var(--color-brand-red);
-  --accent-soft: #fff1f2;
-  --success: #6aa84f;
-  --line: var(--color-border);
+  --foreground: var(--text-primary);
+  --muted: var(--text-secondary);
+  --brand: var(--brand-green-dark);
+  --brand-hover: var(--brand-green-deep);
+  --brand-dark: var(--brand-green-deep);
+  --industrial-blue: var(--brand-green-dark);
+  --accent: var(--brand-red);
+  --accent-soft: #fbeaec;
+  --success: #2f7d32;
+  --line: var(--border-subtle);
   --surface: #ffffff;
-  --surface-soft: var(--color-bg-light);
-  --cta-bg: #f4f6f8;
-  --cta-heading: #102a43;
-  --cta-body: #536273;
-  --cta-border: #e3e8ed;
+  --surface-soft: var(--background-soft);
+  --cta-bg: #f2f6f1;
+  --cta-heading: var(--brand-green-deep);
+  --cta-body: var(--text-secondary);
+  --cta-border: #dce5db;
 }
 
 * {
@@ -56,8 +58,8 @@ a {
 }
 
 ::selection {
-  background: #f8d1d3;
-  color: #0b1f33;
+  background: var(--brand-green-light);
+  color: var(--brand-green-deep);
 }
 
 .container-page {
@@ -76,7 +78,21 @@ a {
 }
 
 .focus-ring:focus-visible {
-  outline-color: var(--accent);
+  outline-color: var(--brand-green-dark);
+}
+
+a[href="/request-a-quote"][class*="bg-[var(--brand)]"],
+a[href="/rfq"][class*="bg-[var(--brand)]"],
+button[type="submit"][class*="bg-[var(--brand)]"] {
+  border-color: var(--brand-red);
+  background-color: var(--brand-red);
+}
+
+a[href="/request-a-quote"][class*="bg-[var(--brand)]"]:hover,
+a[href="/rfq"][class*="bg-[var(--brand)]"]:hover,
+button[type="submit"][class*="bg-[var(--brand)]"]:hover {
+  border-color: var(--brand-red-dark);
+  background-color: var(--brand-red-dark);
 }
 
 .internal-page-title {

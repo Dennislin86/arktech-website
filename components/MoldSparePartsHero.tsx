@@ -100,7 +100,7 @@ export function MoldSparePartsHero() {
   };
 
   return (
-    <section className="relative isolate flex min-h-[650px] overflow-hidden bg-[#071b2b] text-white sm:min-h-[660px] lg:min-h-[680px]" ref={sectionRef}>
+    <section className="relative isolate flex min-h-[650px] overflow-hidden bg-[var(--brand-dark)] text-white sm:min-h-[660px] lg:min-h-[680px]" ref={sectionRef}>
       <div aria-hidden="true" className="absolute inset-y-0 right-0 -z-30 w-full md:w-[68%]">
         <Image alt="" className="object-cover object-center" fill priority quality={86} sizes="(min-width: 768px) 68vw, 100vw" src={posterSrc} />
       </div>
@@ -120,8 +120,8 @@ export function MoldSparePartsHero() {
           tabIndex={-1}
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,25,45,0.99)_0%,rgba(5,25,45,0.96)_43%,rgba(5,25,45,0.68)_68%,rgba(5,25,45,0.24)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,25,45,0.18)_0%,rgba(5,25,45,0.04)_56%,rgba(5,25,45,0.42)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,54,35,0.99)_0%,rgba(15,54,35,0.96)_43%,rgba(15,54,35,0.68)_68%,rgba(15,54,35,0.24)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,54,35,0.18)_0%,rgba(15,54,35,0.04)_56%,rgba(15,54,35,0.42)_100%)]" />
 
       <div className="container-page flex w-full flex-col justify-center py-12 sm:py-14 lg:py-16">
         <nav aria-label="Breadcrumb" className="mb-7 text-sm text-slate-200/85 sm:text-[15px]">
@@ -149,7 +149,7 @@ export function MoldSparePartsHero() {
       {videoEligible && !videoFailed ? (
         <button
           aria-label={isPlaying ? "Pause mold component inspection background video" : "Play mold component inspection background video"}
-          className="focus-ring absolute bottom-5 right-5 hidden min-h-11 items-center rounded-full border border-white/50 bg-[#071b2b]/70 px-4 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-[#071b2b] md:inline-flex"
+          className="focus-ring absolute bottom-5 right-5 hidden min-h-11 items-center rounded-full border border-white/50 bg-[var(--brand-dark)]/70 px-4 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-[var(--brand-dark)] md:inline-flex"
           onClick={togglePlayback}
           type="button"
         >

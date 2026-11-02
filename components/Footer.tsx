@@ -69,7 +69,7 @@ function FooterNavLink({ link }: { link: FooterLink }) {
 
 export function Footer({ showAnalyticsPreferences = false }: { showAnalyticsPreferences?: boolean }) {
   return (
-    <footer className="bg-[#102A43] text-white">
+    <footer className="bg-[var(--brand-dark)] text-white">
       <div className="container-page border-b border-white/10 py-6">
         <p className="max-w-3xl text-sm leading-6 text-[#CBD5E1]">
           Export injection mold and molding partner for global product companies and injection molding companies.
@@ -126,7 +126,7 @@ export function Footer({ showAnalyticsPreferences = false }: { showAnalyticsPref
               <div className="mt-7">
                 <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-[#f4c7ca]">Start Your Project</h3>
                 <div className="mt-3 grid gap-2 text-sm leading-5">
-                  <Link className="font-bold text-[var(--brand)] transition hover:text-white" href="/request-a-quote">
+                  <Link className="font-bold text-[#f4c7ca] transition hover:text-white" href="/request-a-quote">
                     Upload CAD for DFM Review →
                   </Link>
                   <Link className="font-semibold text-white transition hover:text-[var(--brand)]" href="/request-a-quote">

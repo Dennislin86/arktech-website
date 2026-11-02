@@ -160,7 +160,7 @@ export function HomePage() {
     <div className="overflow-x-clip">
       <section className="relative isolate overflow-hidden bg-[var(--brand-dark)] text-white" aria-labelledby="homepage-hero-heading">
         <Image alt="Export injection molds and molded plastic parts manufactured by Arktech" className="-z-20 object-cover object-[64%_center] sm:object-center" fill priority sizes="100vw" src="/images/hero/export-injection-mold-manufacturing-hero.webp" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,35,58,0.96)_0%,rgba(8,35,58,0.90)_56%,rgba(8,35,58,0.68)_100%)] sm:bg-[linear-gradient(90deg,rgba(8,35,58,0.95)_0%,rgba(8,35,58,0.87)_46%,rgba(8,35,58,0.48)_72%,rgba(8,35,58,0.18)_100%)] lg:bg-[linear-gradient(90deg,rgba(8,35,58,0.95)_0%,rgba(8,35,58,0.88)_43%,rgba(8,35,58,0.44)_65%,rgba(8,35,58,0.10)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,54,35,0.96)_0%,rgba(15,54,35,0.90)_56%,rgba(15,54,35,0.68)_100%)] sm:bg-[linear-gradient(90deg,rgba(15,54,35,0.95)_0%,rgba(15,54,35,0.87)_46%,rgba(15,54,35,0.48)_72%,rgba(15,54,35,0.18)_100%)] lg:bg-[linear-gradient(90deg,rgba(15,54,35,0.95)_0%,rgba(15,54,35,0.88)_43%,rgba(15,54,35,0.44)_65%,rgba(15,54,35,0.10)_100%)]" />
         <div className="container-page flex min-h-[640px] items-center py-12 sm:min-h-[650px] sm:py-14 lg:min-h-[660px] lg:py-16">
           <div className="w-full sm:max-w-[800px] lg:w-[65%] lg:max-w-[740px]">
             <p className="text-xs font-bold uppercase tracking-[0.11em] text-white/90 sm:text-sm">Export Tooling &amp; Plastic Part Production</p>
@@ -207,7 +207,7 @@ export function HomePage() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Request a Tooling Quote</Link>
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[rgba(8,35,58,0.28)] px-6 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white bg-white px-6 font-bold text-[var(--brand-green-dark)] transition hover:border-[var(--brand-green-light)] hover:bg-[var(--brand-green-light)] hover:text-[var(--brand-green-deep)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
             </div>
             <p className="mt-3 text-sm leading-6 text-white/85">Share your CAD files and project requirements.</p>
           </div>
@@ -264,7 +264,7 @@ export function HomePage() {
           <SectionHeading body="Complement your injection mold and plastic molding projects with CNC machining, die casting, sheet metal, prototyping, vacuum casting and assembly support provided by Arktech Group." eyebrow="Support by Arktech Group" id="supporting-capabilities-heading" title="Supporting Manufacturing Capabilities" />
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {supportingCapabilities.map((capability) => (
-              <article className="flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(8,35,58,0.04)]" key={capability.title}>
+              <article className="flex h-full flex-col overflow-hidden rounded-md border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(15,54,35,0.04)]" key={capability.title}>
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#eef2f5]">
                   <Image
                     alt={capability.alt}

@@ -293,7 +293,7 @@ export function InjectionMoldManufacturingPage() {
         supportingLine="DFM · Tooling · Mold Trial · Validation · Export Delivery"
         title="Export Injection Molds for Global Production"
         bottomContent={(
-          <div className="mt-8 border-t border-white/20 bg-[#071f34]/90" data-mold-manufacturing-proof>
+          <div className="mt-8 border-t border-white/20 bg-[var(--brand-dark)]/90" data-mold-manufacturing-proof>
             <dl className="grid grid-cols-2 md:grid-cols-3" aria-label="Injection mold manufacturing capacity">
               {manufacturingProof.map((item, index) => (
                 <div
@@ -341,7 +341,7 @@ export function InjectionMoldManufacturingPage() {
                   src="/videos/injection-mold-manufacturing/mold-manufacturing.mp4"
                   threshold={0.25}
                 />
-                <figcaption className="pointer-events-none absolute left-3 top-3 rounded-sm bg-[rgba(8,35,58,0.84)] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white sm:left-4 sm:top-4 sm:text-[13px]">
+                <figcaption className="pointer-events-none absolute left-3 top-3 rounded-sm bg-[rgba(15,54,35,0.84)] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white sm:left-4 sm:top-4 sm:text-[13px]">
                   Mold Manufacturing
                 </figcaption>
               </figure>

@@ -73,7 +73,7 @@ export default function RequestQuotePage() {
         <div className="container-page">
           <h2 className="text-3xl font-bold">Ready for an engineering review?</h2>
           <p className="mx-auto mt-3 max-w-2xl leading-7 text-[var(--muted)]">Email your project files and requirements so our team can review manufacturability, tooling scope, cost drivers and production timing.</p>
-          <a className="mt-6 inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:brightness-90" href={`mailto:${site.email}?subject=Injection%20Mold%20%2F%20Molding%20RFQ`}>Email Your RFQ</a>
+          <a className="focus-ring mt-6 inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand-red)] px-6 font-bold text-white transition hover:bg-[var(--brand-red-dark)]" href={`mailto:${site.email}?subject=Injection%20Mold%20%2F%20Molding%20RFQ`}>Email Your RFQ</a>
         </div>
       </section>
     </>

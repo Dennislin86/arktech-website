@@ -288,7 +288,7 @@ export function ManufacturingYouTubeVideo({
       {!playerRequested ? (
         <button
           aria-label="Play Arktech mold manufacturing video"
-          className="focus-ring absolute inset-0 flex min-h-11 min-w-11 items-center justify-center bg-[#071b2b]/20 transition hover:bg-[#071b2b]/35"
+          className="focus-ring absolute inset-0 flex min-h-11 min-w-11 items-center justify-center bg-[var(--brand-dark)]/20 transition hover:bg-[var(--brand-dark)]/35"
           onClick={requestManualPlay}
           type="button"
         >
@@ -297,13 +297,13 @@ export function ManufacturingYouTubeVideo({
       ) : null}
 
       {playerRequested && !playerReady && !embedError ? (
-        <div aria-live="polite" className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[#071b2b]/35 text-sm font-semibold text-white">Loading video…</div>
+        <div aria-live="polite" className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[var(--brand-dark)]/35 text-sm font-semibold text-white">Loading video…</div>
       ) : null}
 
       {autoplayBlocked && !playing && !embedError ? (
         <button
           aria-label="Play Arktech mold manufacturing video"
-          className="focus-ring absolute inset-0 flex min-h-11 items-center justify-center bg-[#071b2b]/35 font-bold text-white"
+          className="focus-ring absolute inset-0 flex min-h-11 items-center justify-center bg-[var(--brand-dark)]/35 font-bold text-white"
           onClick={requestManualPlay}
           type="button"
         >
@@ -312,7 +312,7 @@ export function ManufacturingYouTubeVideo({
       ) : null}
 
       {embedError ? (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[#071b2b]/80 p-6 text-center text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[var(--brand-dark)]/80 p-6 text-center text-white">
           <p className="font-semibold">The embedded video is currently unavailable.</p>
           <a className="focus-ring inline-flex min-h-11 items-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:bg-[var(--brand-hover)]" href={watchUrl} rel="noreferrer" target="_blank">Watch on YouTube <span aria-hidden="true" className="ml-2">↗</span></a>
         </div>

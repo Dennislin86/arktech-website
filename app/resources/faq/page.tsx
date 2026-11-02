@@ -81,7 +81,7 @@ export default function ManufacturingFaqPage() {
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">Common Questions from Tooling &amp; Molding Buyers</h2>
           <div className="mt-7 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {popularFaqLinks.map((item) => (
-              <a className="focus-ring group flex min-h-36 flex-col justify-between rounded-sm border border-[var(--line)] bg-white p-5 transition hover:-translate-y-0.5 hover:border-red-200 hover:shadow-sm" href={`#${questionId(item.categoryId, item.itemIndex)}`} key={item.question}>
+              <a className="focus-ring group flex min-h-36 flex-col justify-between rounded-sm border border-[var(--line)] bg-white p-5 transition hover:-translate-y-0.5 hover:border-[var(--brand)] hover:shadow-sm" href={`#${questionId(item.categoryId, item.itemIndex)}`} key={item.question}>
                 <span className="font-bold leading-6 text-[var(--brand-dark)]">{item.question}</span>
                 <span className="mt-4 text-sm font-bold text-[var(--brand)]">View answer →</span>
               </a>
@@ -136,7 +136,7 @@ export default function ManufacturingFaqPage() {
           <h2 className="mt-3 text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">Explore More Engineering Resources</h2>
           <div className="mt-7 grid gap-4 md:grid-cols-3">
             {relatedGuides.map((guide) => (
-              <Link className="focus-ring group rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6 transition hover:border-red-200 hover:bg-white" href={guide.href} key={guide.label}>
+              <Link className="focus-ring group rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6 transition hover:border-[var(--brand)] hover:bg-white" href={guide.href} key={guide.label}>
                 <h3 className="text-xl font-bold text-[var(--brand-dark)] group-hover:text-[var(--brand)]">{guide.label}</h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{guide.description}</p>
                 <span className="mt-5 inline-flex text-sm font-bold text-[var(--brand)]">Read guide →</span>

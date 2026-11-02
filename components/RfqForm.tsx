@@ -23,7 +23,7 @@ const markets = ["Europe", "North America", "Other"];
 const stages = ["Prototype", "Pilot", "Mass Production"];
 
 const inputClass =
-  "min-h-12 w-full rounded-sm border border-[var(--line)] bg-white px-3 font-normal text-[var(--foreground)] outline-none transition focus:border-[var(--brand)] focus:ring-2 focus:ring-red-100";
+  "min-h-12 w-full rounded-sm border border-[var(--line)] bg-white px-3 font-normal text-[var(--foreground)] outline-none transition focus:border-[var(--brand)] focus:ring-2 focus:ring-[var(--brand-green-light)]";
 
 function Honeypot() {
   return (
@@ -60,7 +60,7 @@ function FilePicker({ compact = false }: { compact?: boolean }) {
 
   return (
     <label
-      className={`relative flex cursor-pointer flex-col items-center justify-center rounded-sm border-2 border-dashed border-[var(--brand)] bg-[var(--accent-soft)] px-5 text-center transition hover:border-[var(--brand-hover)] hover:bg-red-50 ${
+      className={`relative flex cursor-pointer flex-col items-center justify-center rounded-sm border-2 border-dashed border-[var(--brand)] bg-[var(--brand-green-light)] px-5 text-center transition hover:border-[var(--brand-hover)] hover:bg-[var(--surface-soft)] ${
         compact ? "min-h-64" : "min-h-52"
       }`}
     >

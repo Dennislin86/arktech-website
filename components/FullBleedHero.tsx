@@ -49,10 +49,10 @@ const heightClasses = {
 };
 
 const overlayClasses = {
-  standard: "bg-[linear-gradient(90deg,rgba(5,25,45,0.96)_0%,rgba(5,25,45,0.88)_43%,rgba(5,25,45,0.52)_72%,rgba(5,25,45,0.32)_100%)]",
-  strong: "bg-[linear-gradient(90deg,rgba(5,25,45,0.97)_0%,rgba(5,25,45,0.91)_46%,rgba(5,25,45,0.66)_76%,rgba(5,25,45,0.48)_100%)]",
-  light: "bg-[linear-gradient(90deg,rgba(5,25,45,0.94)_0%,rgba(5,25,45,0.82)_46%,rgba(5,25,45,0.43)_76%,rgba(5,25,45,0.24)_100%)]",
-  video: "bg-[linear-gradient(90deg,rgba(8,35,58,0.88)_0%,rgba(8,35,58,0.68)_52%,rgba(8,35,58,0.30)_100%)]"
+  standard: "bg-[linear-gradient(90deg,rgba(15,54,35,0.96)_0%,rgba(15,54,35,0.88)_43%,rgba(15,54,35,0.52)_72%,rgba(15,54,35,0.32)_100%)]",
+  strong: "bg-[linear-gradient(90deg,rgba(15,54,35,0.97)_0%,rgba(15,54,35,0.91)_46%,rgba(15,54,35,0.66)_76%,rgba(15,54,35,0.48)_100%)]",
+  light: "bg-[linear-gradient(90deg,rgba(15,54,35,0.94)_0%,rgba(15,54,35,0.82)_46%,rgba(15,54,35,0.43)_76%,rgba(15,54,35,0.24)_100%)]",
+  video: "bg-[linear-gradient(90deg,rgba(15,54,35,0.88)_0%,rgba(15,54,35,0.68)_52%,rgba(15,54,35,0.30)_100%)]"
 };
 
 const positionClasses = {
@@ -107,7 +107,7 @@ export function FullBleedHero({
         </div>
       ) : null}
       <div className={`absolute inset-0 -z-10 ${overlayClasses[overlay]}`} />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,25,45,0.18)_0%,rgba(5,25,45,0.06)_58%,rgba(5,25,45,0.32)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,54,35,0.18)_0%,rgba(15,54,35,0.06)_58%,rgba(15,54,35,0.32)_100%)]" />
 
       <div className="container-page flex w-full flex-col justify-center py-12 sm:py-14 lg:py-16">
         {breadcrumbs?.length ? (
@@ -133,8 +133,8 @@ export function FullBleedHero({
           <p className="mt-5 max-w-[49rem] text-base leading-7 text-slate-100 sm:text-lg sm:leading-8">{description}</p>
           {supportingLine ? <p className="mt-5 max-w-[52rem] text-sm font-bold leading-6 tracking-[0.02em] text-white sm:text-base">{supportingLine}</p> : null}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-hover)] sm:text-base" href={primaryCta.href}>{primaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link>
-            {secondaryCta ? <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white/80 bg-white/5 px-5 py-3 text-center text-sm font-bold text-white backdrop-blur-[2px] transition hover:border-white hover:bg-white hover:text-[var(--brand-dark)] sm:text-base" href={secondaryCta.href}>{secondaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link> : null}
+            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand-red)] px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-red-dark)] sm:text-base" href={primaryCta.href}>{primaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link>
+            {secondaryCta ? <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white bg-white px-5 py-3 text-center text-sm font-bold text-[var(--brand-green-dark)] transition hover:border-[var(--brand-green-light)] hover:bg-[var(--brand-green-light)] hover:text-[var(--brand-green-deep)] sm:text-base" href={secondaryCta.href}>{secondaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link> : null}
           </div>
         </div>
         {bottomContent}

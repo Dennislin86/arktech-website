@@ -22,7 +22,7 @@ export function CompanyFactoryYouTubeVideo() {
           />
           <button
             aria-label="Play Arktech factory and toolroom video"
-            className="focus-ring group absolute inset-0 flex min-h-11 min-w-11 items-center justify-center bg-[#071b2b]/20 transition hover:bg-[#071b2b]/35"
+            className="focus-ring group absolute inset-0 flex min-h-11 min-w-11 items-center justify-center bg-[var(--brand-dark)]/20 transition hover:bg-[var(--brand-dark)]/35"
             onClick={() => setRequested(true)}
             type="button"
           >

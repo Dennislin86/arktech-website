@@ -17,7 +17,7 @@
   min-width: 0;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #08233a;
+  background: #153923;
 }
 
 .image {
@@ -29,7 +29,7 @@
 .gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 35, 58, 0) 40%, rgba(8, 35, 58, 0.3) 64%, rgba(8, 35, 58, 0.94) 100%);
+  background: linear-gradient(180deg, rgba(15, 54, 35, 0) 40%, rgba(15, 54, 35, 0.3) 64%, rgba(15, 54, 35, 0.94) 100%);
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@
   width: 32px;
   height: 3px;
   margin-bottom: 10px;
-  background: #e31e24;
+  background: var(--brand-red);
 }
 
 .title {
