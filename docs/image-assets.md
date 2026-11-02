@@ -589,7 +589,7 @@ The Portfolio page at `/portfolio` uses `Arktech_Portfolio_Bulk_Image_SEO_Templa
 
 | Content | Approved asset location | Source/status |
 | --- | --- | --- |
-| Portfolio hero | `/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp` | 1774 × 887 WebP derivative of the preserved user-supplied PNG; shows two polished injection molds with transparent molded enclosures and is preloaded as the single Portfolio Hero visual |
+| Portfolio hero | `/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp` | 1774 × 887 WebP derivative of the preserved user-supplied PNG; shows two polished injection molds with transparent molded enclosures and is preloaded as the single full-screen Portfolio Hero background with overlaid text |
 | Portfolio injection molds — existing web derivatives | `/images/portfolio/20261006/*.webp` | 20 existing WebP assets reused without recompression |
 | Portfolio injection molds — newly optimized derivatives | `/images/portfolio/optimized/*.webp` | 28 responsive 1200 px-long-edge WebP derivatives generated from exact Excel/source matches; originals remain unchanged under `/images/Image show/Mold/20261006/` |
 | Gallery manifest | `generated/portfolio-gallery-manifest.json` | 48 publishable Injection Molds records generated from the selected workbook; all Excel SEO fields remain in the data source |

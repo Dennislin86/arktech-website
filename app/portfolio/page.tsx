@@ -28,24 +28,22 @@ const selectedCaseStudies = caseStudies.filter((item) => item.featured).slice(0,
 export default function PortfolioPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[var(--brand-dark)] text-white">
-        <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(7,31,54,.98)_0%,rgba(7,31,54,.9)_55%,rgba(7,31,54,.74)_100%)]" />
-        <div className="container-page relative grid items-center gap-8 py-12 lg:min-h-[500px] lg:grid-cols-[minmax(0,1fr)_minmax(400px,.9fr)] lg:gap-10 lg:py-14">
-          <div className="max-w-3xl">
+      <section aria-labelledby="portfolio-hero-heading" className="relative isolate overflow-hidden bg-[var(--brand-dark)] text-white">
+        <Image
+          alt="Mirror-polished injection molds with transparent molded plastic enclosures"
+          className="-z-20 object-cover object-center"
+          fill
+          preload
+          sizes="100vw"
+          src="/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,31,54,.96)_0%,rgba(7,31,54,.91)_46%,rgba(7,31,54,.58)_68%,rgba(7,31,54,.16)_100%)]" />
+        <div className="container-page flex min-h-[620px] items-center py-12 sm:min-h-[650px] sm:py-14 lg:min-h-[calc(100svh-88px)] lg:py-16">
+          <div className="w-full max-w-[720px] lg:w-[60%]">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-red-200">Portfolio</p>
-            <h1 className="split-hero-title mt-4">Injection Mold &amp; Plastic Parts Portfolio</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Explore real Arktech injection molds and molded plastic parts across automotive, smart home, consumer electronics, medical, home appliance and industrial applications.</p>
+            <h1 className="split-hero-title mt-4" id="portfolio-hero-heading">Injection Mold &amp; Plastic Parts Portfolio</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100">Explore real Arktech injection molds and molded plastic parts across automotive, smart home, consumer electronics, medical, home appliance and industrial applications.</p>
             <Link className="focus-ring mt-8 inline-flex min-h-12 items-center rounded-sm bg-[var(--accent)] px-5 font-bold text-white hover:brightness-90" href="#portfolio-gallery">Explore the Portfolio</Link>
-          </div>
-          <div aria-label="Arktech injection mold and transparent molded parts" className="relative aspect-[2/1] overflow-hidden rounded-sm border border-white/20 bg-white/10">
-            <Image
-              alt="Mirror-polished injection molds with transparent molded plastic enclosures"
-              className="object-contain object-center"
-              fill
-              preload
-              sizes="(min-width: 1024px) 42vw, 92vw"
-              src="/images/portfolio/mirror-polished-injection-mold-transparent-plastic-parts.webp"
-            />
           </div>
         </div>
       </section>
