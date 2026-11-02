@@ -7,30 +7,30 @@
   --brand-green-dark: #2e6e1d;
   --brand-green-deep: #123421;
   --brand-green-light: #e8f5dc;
-  --brand-red: #b22222;
-  --brand-red-dark: #8f1b1b;
-  --brand-red-deep: #741616;
+  --brand-red: #d71920;
+  --brand-red-dark: #b9151b;
+  --brand-surface-dark: var(--brand-green-deep);
   --background-soft: #f6f8f5;
-  --text-primary: #202621;
-  --text-secondary: #4b5563;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
   --border-subtle: #dce4dc;
 
   --background: #ffffff;
   --foreground: var(--text-primary);
   --muted: var(--text-secondary);
-  --brand: var(--brand-red-dark);
-  --brand-hover: var(--brand-red-deep);
-  --brand-dark: var(--brand-red-dark);
+  --brand: var(--brand-red);
+  --brand-hover: var(--brand-red-dark);
+  --brand-dark: #0b1f33;
   --industrial-blue: var(--brand-green-dark);
-  --accent: var(--brand-red-dark);
-  --accent-soft: #fbeaec;
+  --accent: var(--brand-red);
+  --accent-soft: #fff1f2;
   --success: #2f7d32;
   --line: var(--border-subtle);
   --surface: #ffffff;
   --surface-soft: var(--background-soft);
   --cta-bg: #f2f6f1;
-  --cta-heading: var(--brand-red-dark);
-  --cta-body: var(--text-secondary);
+  --cta-heading: #102a43;
+  --cta-body: #536273;
   --cta-border: #dce5db;
 }
 
@@ -59,8 +59,8 @@ a {
 }
 
 ::selection {
-  background: var(--brand-green-light);
-  color: var(--brand-green-deep);
+  background: #f8d1d3;
+  color: var(--brand-dark);
 }
 
 .container-page {
@@ -79,21 +79,63 @@ a {
 }
 
 .focus-ring:focus-visible {
-  outline-color: var(--brand-green-dark);
+  outline-color: var(--accent);
 }
 
-a[href="/request-a-quote"][class*="bg-[var(--brand)]"],
-a[href="/rfq"][class*="bg-[var(--brand)]"],
-button[type="submit"][class*="bg-[var(--brand)]"] {
-  border-color: var(--brand-red-dark);
-  background-color: var(--brand-red-dark);
+.bg-\[var\(--brand-dark\)\] {
+  background-color: var(--brand-surface-dark);
 }
 
-a[href="/request-a-quote"][class*="bg-[var(--brand)]"]:hover,
-a[href="/rfq"][class*="bg-[var(--brand)]"]:hover,
-button[type="submit"][class*="bg-[var(--brand)]"]:hover {
-  border-color: var(--brand-red-deep);
-  background-color: var(--brand-red-deep);
+.bg-\[var\(--brand-dark\)\]\/15 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 15%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/20 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 20%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/35 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 35%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/70 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 70%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/75 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 75%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/80 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 80%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/85 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 85%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/90 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 90%, transparent);
+}
+
+.bg-\[var\(--brand-dark\)\]\/95 {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 95%, transparent);
+}
+
+.hover\:bg-\[var\(--brand-dark\)\]:hover {
+  background-color: var(--brand-surface-dark);
+}
+
+.hover\:bg-\[var\(--brand-dark\)\]\/5:hover {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 5%, transparent);
+}
+
+.hover\:bg-\[var\(--brand-dark\)\]\/10:hover {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 10%, transparent);
+}
+
+.hover\:bg-\[var\(--brand-dark\)\]\/35:hover {
+  background-color: color-mix(in srgb, var(--brand-surface-dark) 35%, transparent);
 }
 
 .internal-page-title {

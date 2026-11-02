@@ -207,7 +207,7 @@ export function HomePage() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Request a Tooling Quote</Link>
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white bg-white px-6 font-bold text-[var(--brand-red-dark)] transition hover:border-[var(--accent-soft)] hover:bg-[var(--accent-soft)] hover:text-[var(--brand-red-deep)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-white/80 bg-[rgba(18,52,33,0.32)] px-6 font-bold text-white transition hover:bg-white hover:text-[var(--brand-dark)]" href="/injection-molds">Explore Injection Molds <span aria-hidden="true" className="ml-2">→</span></Link>
             </div>
             <p className="mt-3 text-sm leading-6 text-white/85">Share your CAD files and project requirements.</p>
           </div>

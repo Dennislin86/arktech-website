@@ -33,7 +33,7 @@ export function TemporaryEmailRfq({ email }: TemporaryEmailRfqProps) {
           {email}
         </a>
         <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand-red-dark)] px-5 py-3 text-center font-bold text-white transition hover:bg-[var(--brand-red-deep)]" href={mailtoHref}>
+          <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href={mailtoHref}>
             Email Your RFQ
           </a>
           <button className="focus-ring min-h-12 rounded-sm border border-[var(--brand-dark)] bg-white px-5 py-3 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--surface-soft)]" onClick={copyEmailAddress} type="button">
