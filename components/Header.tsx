@@ -22,7 +22,7 @@ function activeMenuLinkLabel(item: NavigationItem, pathname: string) {
 }
 
 function isTopLevelActive(item: NavigationItem, pathname: string) {
-  if (item.id === "resources" && pathname.startsWith("/case-studies")) return true;
+  if (item.id === "resources" && (pathname.startsWith("/case-studies") || pathname === "/portfolio")) return true;
   if (item.id === "capabilities" && (pathname.startsWith("/services/") || pathname.startsWith("/plastic-injection-molding") || pathname === "/injection-molding-engineering" || pathname === "/injection-mold-manufacturing")) return true;
   return pathname === item.href || pathname.startsWith(`${item.href}/`);
 }
@@ -156,6 +156,7 @@ const navigation: NavigationItem[] = [
           { label: "Quality & Documentation", href: "/quality-documentation" },
           { label: "Project Management", href: "/company/project-management" },
           { label: "Tooling Transfer & Export", href: "/injection-molds/export-tooling-transfer" },
+          { label: "Portfolio", href: "/portfolio" },
           { label: "Case Studies", href: "/case-studies" }
         ]
       },

@@ -583,6 +583,19 @@ The seven canonical industry pages reuse approved local media and differentiated
 | Industrial Automation | `/images/industries/Industrial-parts.jpg`, `/images/industries/industrial-parts.webp` | `/images/case-studies/fan-blade-mold.webp` | Approved industrial component media plus real complex fan-blade mold evidence |
 | Medical Device Components | `/images/industries/medial-industry.webp`, `/images/industries/medical-healthcare-device-parts.webp` | `/images/case-studies/medical-education-device.webp` | Approved medical application media plus real existing medical education device project evidence; no unverified certification claim |
 
+## Portfolio Gallery (2026-10-06)
+
+The Portfolio page at `/portfolio` currently publishes only the 20 injection-mold photographs with an exact Ready record in the supplied Excel SEO template. The remaining source-batch images stay unpublished until their Excel rows are completed. The original files remain unchanged. The Plastic Parts tab temporarily reuses seven approved real Arktech molded-part images already optimized for the existing Tooling Gallery.
+
+| Content | Approved asset location | Source/status |
+| --- | --- | --- |
+| Portfolio injection molds | `/images/portfolio/20261006/*.webp` | 20 optimized WebP derivatives with exact Ready Excel matches; active in the Injection Molds tab |
+| Temporary Portfolio plastic parts | `/images/tooling-gallery/optimized/arktech-plastic-part-*.webp` | Seven existing approved molded-part images reused from the Tooling Gallery until dedicated Excel rows are supplied |
+| Gallery manifest | `generated/portfolio-gallery-manifest.json` | 20 publishable injection-mold records, all matched exactly to completed Excel data |
+| Unmatched report | `generated/portfolio-unmatched-images-report.json` | Records 28 source images that remain unpublished pending completed Excel SEO rows; no fallback keywords are published |
+
+The Portfolio images are rendered with `next/image`, explicit source dimensions, responsive `sizes`, and below-fold lazy loading. Use `npm run portfolio:import` only when the approved source batch or its reviewed metadata changes; the import never overwrites the original images.
+
 ## Maintenance notes
 
 - Add a row whenever a new production asset is approved.

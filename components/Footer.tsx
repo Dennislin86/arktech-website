@@ -39,6 +39,7 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
   {
     title: "Resources",
     links: [
+      { label: "Portfolio", href: "/portfolio" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "DFM Guide", href: "/resources/dfm-guide" },
       { label: "Material Selection Guide", href: "/resources/material-selection-guide" },

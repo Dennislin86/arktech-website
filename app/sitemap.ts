@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     ...site.nav.map((item) => item.href),
     "/request-a-quote",
+    "/portfolio",
     "/injection-mold-manufacturing",
     "/mold-trial-validation",
     "/plastic-injection-molding",

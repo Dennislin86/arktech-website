@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "scannedImageCount": 48,
+  "publishedImageCount": 20,
+  "excelMatchedImageCount": 20,
+  "imagesWithoutExcelRows": [
+    {
+      "source": "Mold/DSC06552.JPG",
+      "originalFileName": "DSC06552.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/DSC06559.JPG",
+      "originalFileName": "DSC06559.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/DSC06562.JPG",
+      "originalFileName": "DSC06562.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_3110.JPG",
+      "originalFileName": "IMG_3110.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_3117.JPG",
+      "originalFileName": "IMG_3117.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_3857.JPG",
+      "originalFileName": "IMG_3857.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_3924.JPG",
+      "originalFileName": "IMG_3924.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_6116.JPG",
+      "originalFileName": "IMG_6116.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_6694.JPG",
+      "originalFileName": "IMG_6694.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_6780.JPG",
+      "originalFileName": "IMG_6780.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_6875.JPG",
+      "originalFileName": "IMG_6875.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_8050.JPG",
+      "originalFileName": "IMG_8050.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_8143.JPG",
+      "originalFileName": "IMG_8143.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_8767.JPG",
+      "originalFileName": "IMG_8767.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_8770.JPG",
+      "originalFileName": "IMG_8770.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_8990.JPG",
+      "originalFileName": "IMG_8990.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_9157(1).JPG",
+      "originalFileName": "IMG_9157(1).JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_9450.JPG",
+      "originalFileName": "IMG_9450.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_9484.JPG",
+      "originalFileName": "IMG_9484.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_9862.JPG",
+      "originalFileName": "IMG_9862.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_9976.JPG",
+      "originalFileName": "IMG_9976.JPG",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG_20220418_140723.jpg",
+      "originalFileName": "IMG_20220418_140723.jpg",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG20220418170707.jpg",
+      "originalFileName": "IMG20220418170707.jpg",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/IMG20220524141131.jpg",
+      "originalFileName": "IMG20220524141131.jpg",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Mold/mmexport1650537472632.jpg",
+      "originalFileName": "mmexport1650537472632.jpg",
+      "category": "Injection Molds",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Plastic/DSC_0032.JPG",
+      "originalFileName": "DSC_0032.JPG",
+      "category": "Plastic Parts",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Plastic/DSC_0293.JPG",
+      "originalFileName": "DSC_0293.JPG",
+      "category": "Plastic Parts",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    },
+    {
+      "source": "Plastic/DSC_0321.JPG",
+      "originalFileName": "DSC_0321.JPG",
+      "category": "Plastic Parts",
+      "action": "Not published; awaiting a completed Excel SEO record with an exact Original File Name match."
+    }
+  ],
+  "filesWithoutMetadata": [
+    {
+      "source": "Mold/DSC06552.JPG",
+      "originalFileName": "DSC06552.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/DSC06559.JPG",
+      "originalFileName": "DSC06559.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/DSC06562.JPG",
+      "originalFileName": "DSC06562.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_3110.JPG",
+      "originalFileName": "IMG_3110.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_3117.JPG",
+      "originalFileName": "IMG_3117.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_3857.JPG",
+      "originalFileName": "IMG_3857.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_3924.JPG",
+      "originalFileName": "IMG_3924.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_6116.JPG",
+      "originalFileName": "IMG_6116.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_6694.JPG",
+      "originalFileName": "IMG_6694.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_6780.JPG",
+      "originalFileName": "IMG_6780.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_6875.JPG",
+      "originalFileName": "IMG_6875.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_8050.JPG",
+      "originalFileName": "IMG_8050.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_8143.JPG",
+      "originalFileName": "IMG_8143.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_8767.JPG",
+      "originalFileName": "IMG_8767.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_8770.JPG",
+      "originalFileName": "IMG_8770.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_8990.JPG",
+      "originalFileName": "IMG_8990.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_9157(1).JPG",
+      "originalFileName": "IMG_9157(1).JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_9450.JPG",
+      "originalFileName": "IMG_9450.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_9484.JPG",
+      "originalFileName": "IMG_9484.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_9862.JPG",
+      "originalFileName": "IMG_9862.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_9976.JPG",
+      "originalFileName": "IMG_9976.JPG",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG_20220418_140723.jpg",
+      "originalFileName": "IMG_20220418_140723.jpg",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG20220418170707.jpg",
+      "originalFileName": "IMG20220418170707.jpg",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/IMG20220524141131.jpg",
+      "originalFileName": "IMG20220524141131.jpg",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Mold/mmexport1650537472632.jpg",
+      "originalFileName": "mmexport1650537472632.jpg",
+      "category": "Injection Molds",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Plastic/DSC_0032.JPG",
+      "originalFileName": "DSC_0032.JPG",
+      "category": "Plastic Parts",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Plastic/DSC_0293.JPG",
+      "originalFileName": "DSC_0293.JPG",
+      "category": "Plastic Parts",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    },
+    {
+      "source": "Plastic/DSC_0321.JPG",
+      "originalFileName": "DSC_0321.JPG",
+      "category": "Plastic Parts",
+      "reason": "No exact Ready Excel record matched this Original File Name; retained for a later spreadsheet update."
+    }
+  ],
+  "metadataWithoutFiles": [],
+  "staleGeneratedFilesRemoved": []
+}
