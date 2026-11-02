@@ -32,7 +32,7 @@
 }
 
 .link:focus-visible {
-  outline: 3px solid var(--brand-red);
+  outline: 3px solid var(--brand-red-dark);
   outline-offset: -4px;
 }
 
@@ -56,7 +56,7 @@
   width: 34px;
   height: 3px;
   margin-bottom: 12px;
-  background: var(--brand-red);
+  background: var(--brand-red-dark);
 }
 
 .headingRow {

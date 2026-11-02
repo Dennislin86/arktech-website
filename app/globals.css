@@ -9,6 +9,7 @@
   --brand-green-light: #e8f5dc;
   --brand-red: #b22222;
   --brand-red-dark: #8f1b1b;
+  --brand-red-deep: #741616;
   --background-soft: #f6f8f5;
   --text-primary: #202621;
   --text-secondary: #4b5563;
@@ -17,18 +18,18 @@
   --background: #ffffff;
   --foreground: var(--text-primary);
   --muted: var(--text-secondary);
-  --brand: var(--brand-green-dark);
-  --brand-hover: var(--brand-green-deep);
-  --brand-dark: var(--brand-green-deep);
+  --brand: var(--brand-red-dark);
+  --brand-hover: var(--brand-red-deep);
+  --brand-dark: var(--brand-red-dark);
   --industrial-blue: var(--brand-green-dark);
-  --accent: var(--brand-red);
+  --accent: var(--brand-red-dark);
   --accent-soft: #fbeaec;
   --success: #2f7d32;
   --line: var(--border-subtle);
   --surface: #ffffff;
   --surface-soft: var(--background-soft);
   --cta-bg: #f2f6f1;
-  --cta-heading: var(--brand-green-deep);
+  --cta-heading: var(--brand-red-dark);
   --cta-body: var(--text-secondary);
   --cta-border: #dce5db;
 }
@@ -84,15 +85,15 @@ a {
 a[href="/request-a-quote"][class*="bg-[var(--brand)]"],
 a[href="/rfq"][class*="bg-[var(--brand)]"],
 button[type="submit"][class*="bg-[var(--brand)]"] {
-  border-color: var(--brand-red);
-  background-color: var(--brand-red);
+  border-color: var(--brand-red-dark);
+  background-color: var(--brand-red-dark);
 }
 
 a[href="/request-a-quote"][class*="bg-[var(--brand)]"]:hover,
 a[href="/rfq"][class*="bg-[var(--brand)]"]:hover,
 button[type="submit"][class*="bg-[var(--brand)]"]:hover {
-  border-color: var(--brand-red-dark);
-  background-color: var(--brand-red-dark);
+  border-color: var(--brand-red-deep);
+  background-color: var(--brand-red-deep);
 }
 
 .internal-page-title {

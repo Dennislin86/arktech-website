@@ -133,8 +133,8 @@ export function FullBleedHero({
           <p className="mt-5 max-w-[49rem] text-base leading-7 text-slate-100 sm:text-lg sm:leading-8">{description}</p>
           {supportingLine ? <p className="mt-5 max-w-[52rem] text-sm font-bold leading-6 tracking-[0.02em] text-white sm:text-base">{supportingLine}</p> : null}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand-red)] px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-red-dark)] sm:text-base" href={primaryCta.href}>{primaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link>
-            {secondaryCta ? <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white bg-white px-5 py-3 text-center text-sm font-bold text-[var(--brand-green-dark)] transition hover:border-[var(--brand-green-light)] hover:bg-[var(--brand-green-light)] hover:text-[var(--brand-green-deep)] sm:text-base" href={secondaryCta.href}>{secondaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link> : null}
+            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand-red-dark)] px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-red-deep)] sm:text-base" href={primaryCta.href}>{primaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link>
+            {secondaryCta ? <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-white bg-white px-5 py-3 text-center text-sm font-bold text-[var(--brand-red-dark)] transition hover:border-[var(--accent-soft)] hover:bg-[var(--accent-soft)] hover:text-[var(--brand-red-deep)] sm:text-base" href={secondaryCta.href}>{secondaryCta.label}<span className="ml-2" aria-hidden="true">→</span></Link> : null}
           </div>
         </div>
         {bottomContent}

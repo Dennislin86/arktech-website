@@ -279,7 +279,7 @@ export function CompanyPage() {
             {industries.map(([title, href]) => <Link className="focus-ring flex min-h-16 items-center justify-between rounded-sm border border-[var(--line)] bg-white px-4 py-4 font-bold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href={href} key={title}>{title}<span aria-hidden="true">→</span></Link>)}
           </div>
           <div className="mt-8 grid gap-4 border-t border-[var(--line)] pt-8 md:grid-cols-2">
-            <Link className="focus-ring group rounded-md bg-[var(--brand-dark)] p-6 text-white transition hover:bg-[var(--brand-green-dark)]" href="/injection-molds">
+            <Link className="focus-ring group rounded-md bg-[var(--brand-dark)] p-6 text-white transition hover:bg-[var(--brand-hover)]" href="/injection-molds">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-red-300">See Our Work</p>
               <h3 className="mt-2 text-2xl font-bold">Explore Injection Mold Projects</h3>
               <p className="mt-3 text-sm leading-6 text-slate-300">View real completed mold types and tooling projects built for different part and production requirements.</p>
