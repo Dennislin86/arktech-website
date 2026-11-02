@@ -49,6 +49,31 @@ const nextConfig: NextConfig = {
         destination: "/seo/rapid-prototyping-services",
         permanent: true
       },
+      {
+        source: "/products/mold",
+        destination: "/injection-molds",
+        statusCode: 301
+      },
+      {
+        source: "/products",
+        destination: "/manufacturing-capabilities",
+        statusCode: 301
+      },
+      {
+        source: "/images/industries/consumer-electronics-enclosures.png-1",
+        destination: "/images/industries/consumer-electronics-enclosures.png",
+        statusCode: 301
+      },
+      {
+        source: "/images/industries/Automotive-Components.png-2",
+        destination: "/images/industries/Automotive-Components.png",
+        statusCode: 301
+      },
+      {
+        source: "/images/industries/medial-industry.webp-3",
+        destination: "/images/industries/medial-industry.webp",
+        statusCode: 301
+      },
       ...seoIndexingRedirects.map(({ source, destination }) => ({ source, destination, permanent: true })),
       ...solutionIndexingRedirects.map(({ source, destination }) => ({ source, destination, permanent: true })),
       {
