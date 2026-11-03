@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RfqForm } from "@/components/RfqForm";
+import { TemporaryEmailRfq } from "@/components/TemporaryEmailRfq";
 import { site } from "@/lib/site";
 import { getSeoPage, type SeoLandingPage as SeoLandingPageData } from "@/lib/seo-pages";
 import { seoRedirectDestinationBySlug } from "@/lib/seo-indexing";
@@ -21,24 +21,6 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
       href: seoRedirectDestinationBySlug[related.slug] ?? `/seo/${related.slug}`
     }));
   const schemas = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": `${site.url}/#organization`,
-      name: site.name,
-      legalName: site.company.legalName,
-      url: site.url,
-      email: site.email,
-      telephone: site.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: site.company.headOffice,
-        addressLocality: "Shenzhen",
-        addressRegion: "Guangdong",
-        postalCode: "518107",
-        addressCountry: "CN"
-      }
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -233,7 +215,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
               <Link className="font-bold text-white/85 hover:text-white" href="/contact">Contact Arktech →</Link>
             </nav>
           </div>
-          <RfqForm source={`SEO landing page: ${page.slug}`} variant="compact" />
+          <TemporaryEmailRfq email={site.email} />
         </div>
       </section>
     </>

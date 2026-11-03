@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { RfqForm } from "@/components/RfqForm";
+import { TemporaryEmailRfq } from "@/components/TemporaryEmailRfq";
+import { site } from "@/lib/site";
 
 type CTAProps = { variant?: "default" | "homepage" };
 
@@ -10,7 +11,7 @@ export function CTA({ variant = "default" }: CTAProps) {
         <div className="container-page">
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">START YOUR RFQ</p>
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">Tell Us About Your Project</h2>
-          <RfqForm source="Contact page RFQ" variant="contact" />
+          <TemporaryEmailRfq email={site.email} />
         </div>
       </section>
     );

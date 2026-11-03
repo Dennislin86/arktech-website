@@ -45,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...new Set([...staticRoutes, ...detailRoutes])].map((href) => ({
     url: `${site.url}${href === "/" ? "" : href}`,
-    lastModified: new Date(),
     changeFrequency: href === "/" ? "weekly" : "monthly",
     priority: href === "/" ? 1 : href.split("/").length > 2 ? 0.7 : 0.8
   }));
