@@ -48,7 +48,7 @@ export function EngineeringResourcePage({ resource }: { resource: EngineeringRes
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">{resource.description}</p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white hover:bg-[var(--brand-hover)]" href="#engineering-guide">Read the guide</a>
-                  <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Upload CAD for DFM Review</Link>
+                  <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Email CAD for DFM Review</Link>
                 </div>
               </div>
               <figure className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--surface-soft)] shadow-sm">

@@ -225,7 +225,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f1c5c5]">24-Hour RFQ Response</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Get a Manufacturing Quote in 24 Hours</h2>
-            <p className="mt-4 leading-7 text-white/80">Share your project basics. For CAD uploads and detailed specifications, continue to the secure RFQ page.</p>
+            <p className="mt-4 leading-7 text-white/80">Share your project basics. For instructions on emailing CAD files and detailed specifications, continue to the RFQ page.</p>
             <nav aria-label="Related SEO manufacturing pages" className="mt-6 grid gap-2 text-sm">
               {relatedPages.map((related) => (
                 <Link key={related.slug} className="font-bold text-white/85 hover:text-white" href={related.href}>{related.h1} →</Link>

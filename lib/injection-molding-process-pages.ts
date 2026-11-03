@@ -293,7 +293,7 @@ export const injectionMoldingProcessPages: InjectionMoldingProcessPageData[] = [
       { question: "Can you manufacture molds and produce plastic parts?", answer: "Arktech supports injection mold manufacturing, mold trials and plastic part production. The exact tooling, machine, material, inspection and production scope is confirmed for each project." },
       { question: "What information is needed for an engineering plastics molding quote?", answer: "Provide 3D data, a dimensioned drawing, exact resin grade or performance requirements, critical dimensions, mating interfaces, appearance criteria, estimated volume and any inspection requirements." }
     ],
-    ctaLabel: "Upload CAD & Request a Quote"
+    ctaLabel: "Email CAD & Request a Quote"
   }
 ];
 

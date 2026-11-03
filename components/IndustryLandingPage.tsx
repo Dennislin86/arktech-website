@@ -37,7 +37,7 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
       eyebrow={page.eyebrow}
       height="standard"
       overlay="strong"
-      primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+      primaryCta={{ label: "Email CAD for DFM Review", href: "/request-a-quote" }}
       secondaryCta={{ label: page.secondaryCta, href: "/request-a-quote" }}
       supportingLine="DFM Engineering · Export Tooling · Mold Trial · Plastic Injection Molding"
       title={page.h1}
@@ -141,7 +141,7 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
     <section className="border-t border-[var(--cta-border)] bg-[var(--cta-bg)] py-12 sm:py-16 lg:py-20">
       <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,58fr)_minmax(320px,42fr)] lg:items-center lg:gap-12">
         <div><p className={eyebrowClass}>{page.ctaEyebrow}</p><h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--cta-heading)] sm:text-4xl">{page.ctaHeading}</h2><p className="mt-4 max-w-3xl text-base leading-7 text-[var(--cta-body)] sm:text-lg">{page.ctaCopy}</p></div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[440px] lg:justify-self-end"><Link className={primaryButton} href="/request-a-quote">Upload CAD</Link><Link className={secondaryButton} href="/request-a-quote">Request Tooling Quote</Link></div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[440px] lg:justify-self-end"><Link className={primaryButton} href="/request-a-quote">Email CAD</Link><Link className={secondaryButton} href="/request-a-quote">Request Tooling Quote</Link></div>
       </div>
     </section>
   </>;

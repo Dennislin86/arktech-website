@@ -129,7 +129,7 @@ export function DetailPage({ page, parentHref, parentLabel, includeSiteCta = tru
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link className="focus-ring rounded-sm bg-[var(--brand)] px-4 py-3 text-sm font-bold text-white hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-                Upload CAD for DFM Review
+                Email CAD for DFM Review
               </Link>
               <Link className="focus-ring rounded-sm border border-white/70 bg-transparent px-4 py-3 text-sm font-bold text-white hover:bg-white hover:text-[var(--brand-dark)]" href="/request-a-quote">
                 Request Manufacturing Quote

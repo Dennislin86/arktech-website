@@ -167,7 +167,7 @@ export function EngineeringPlasticsPage({ page }: { page: InjectionMoldingProces
               ))}
             </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for Engineering Review</Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for Engineering Review</Link>
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 text-center font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="#engineering-plastic-materials">Explore Materials</Link>
             </div>
           </div>
@@ -307,7 +307,7 @@ export function EngineeringPlasticsPage({ page }: { page: InjectionMoldingProces
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--cta-body)] sm:text-lg">Share your CAD files, material requirements, estimated production volume and critical specifications. Our engineering team will review the available project information and advise on tooling and molding feasibility.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD & Request a Quote</Link>
+            <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD & Request a Quote</Link>
             <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--cta-heading)] bg-white px-6 text-center font-bold text-[var(--cta-heading)] transition hover:bg-[var(--cta-heading)] hover:text-white" href="/contact">Contact Our Engineering Team</Link>
           </div>
         </div>

@@ -493,7 +493,7 @@ export const seoPages: SeoLandingPage[] = [
     serviceLinks: [
       { label: "DFM Engineering Support", href: "/injection-molding-engineering" },
       { label: "DFM Guide", href: "/resources/dfm-guide" },
-      { label: "Upload CAD for Review", href: "/request-a-quote" }
+      { label: "Email CAD for Review", href: "/request-a-quote" }
     ],
     relatedSeoSlugs: ["injection-molding-tooling", "die-casting-manufacturing", "oem-manufacturing-services"]
   }

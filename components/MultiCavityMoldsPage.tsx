@@ -241,7 +241,7 @@ export function MultiCavityMoldsPage() {
             <p className="mt-6 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">Multi-cavity tooling produces multiple identical parts in each molding cycle and requires careful cavity layout, filling balance, cooling and cavity-to-cavity validation.</p>
             <p className="mt-6 text-sm font-bold leading-6 text-[var(--brand-dark)] sm:text-base">Balanced Filling · Cooling Strategy · Cavity Identification · Trial Validation</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <PrimaryButton href="/request-a-quote">Upload CAD for Tooling Review</PrimaryButton>
+              <PrimaryButton href="/request-a-quote">Email CAD for Tooling Review</PrimaryButton>
               <SecondaryButton href="/request-a-quote">Discuss Cavity Requirements</SecondaryButton>
             </div>
           </div>
@@ -309,7 +309,7 @@ export function MultiCavityMoldsPage() {
           </ol>
           <div className="mt-10 flex flex-col gap-3 border-l-4 border-[var(--brand)] pl-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-semibold text-[var(--brand-dark)]">Not sure whether your part should move to multi-cavity tooling?</p>
-            <ArrowLink href="/request-a-quote">Upload CAD for DFM Review</ArrowLink>
+            <ArrowLink href="/request-a-quote">Email CAD for DFM Review</ArrowLink>
           </div>
         </div>
       </section>
@@ -555,7 +555,7 @@ export function MultiCavityMoldsPage() {
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/75 sm:text-lg">Send your CAD files, drawings, resin information, expected production volume and receiving-machine requirements for engineering review.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <PrimaryButton href="/request-a-quote">Upload CAD for DFM Review</PrimaryButton>
+            <PrimaryButton href="/request-a-quote">Email CAD for DFM Review</PrimaryButton>
             <SecondaryButton href="/request-a-quote" inverse>Request Tooling Quote</SecondaryButton>
           </div>
         </div>
