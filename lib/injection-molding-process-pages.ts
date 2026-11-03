@@ -241,11 +241,11 @@ export const injectionMoldingProcessPages: InjectionMoldingProcessPageData[] = [
   {
     slug: "engineering-plastics",
     navLabel: "Engineering Plastics Molding",
-    eyebrow: "ENGINEERING PLASTICS",
+    eyebrow: "ENGINEERING PLASTICS INJECTION MOLDING",
     h1: "Engineering Plastics Injection Molding",
-    seoTitle: "Engineering Plastics Injection Molding | Arktech",
-    metaDescription: "Engineering plastics injection molding planned around the exact confirmed resin grade, part function, tooling, dimensions, assembly and inspection requirements.",
-    intro: "Engineering-plastic parts should be planned around the exact confirmed resin grade and application requirements. Material family names alone do not establish processing, performance or compliance.",
+    seoTitle: "Engineering Plastics Injection Molding Services | Arktech",
+    metaDescription: "Custom engineering plastics injection molding for PC, PA, POM, PBT and PPS parts. DFM, precision tooling, mold trials and production support. Request a quote.",
+    intro: "From material and DFM review to injection mold manufacturing, mold trials, dimensional inspection and repeat production, Arktech supports OEM teams with integrated tooling and molding services.",
     heroImage: "/images/material-capabilities/engineering-plastic-parts-abs-pc-pa-pom.webp",
     heroAlt: "Assorted molded housings, brackets, gears and functional plastic components",
     requirementsTitle: "Start with the Confirmed Material & Part Requirement",
@@ -279,16 +279,21 @@ export const injectionMoldingProcessPages: InjectionMoldingProcessPageData[] = [
     related: [
       { label: "Material Selection Guide", href: "/resources/material-selection-guide" },
       { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
-      { label: "Production Options", href: "/plastic-injection-molding/production-options" },
-      { label: "Injection Molding Engineering", href: "/injection-molding-engineering" }
+      { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
+      { label: "Injection Molding Engineering", href: "/injection-molding-engineering" },
+      { label: "Mold Trial & Validation", href: "/mold-trial-validation" },
+      { label: "Quality Documentation", href: "/quality-documentation" },
+      { label: "Portfolio", href: "/portfolio" }
     ],
     faqs: [
-      { question: "Do you need the exact resin grade or TDS?", answer: "Yes. The supplier, exact grade and technical data help the team review processing, tooling, dimensions and the intended application without relying on generic material assumptions." },
-      { question: "What critical dimensions and functional requirements should be shared?", answer: "Provide drawing datums, tolerances, mating interfaces, loads and any functional checks that affect the molded part and assembly." },
-      { question: "Can customer-specified materials be reviewed?", answer: "Yes. A customer-specified grade can be reviewed against the part, tooling and proposed production requirements, subject to material availability and project confirmation." },
-      { question: "How are inspection and production requirements planned?", answer: "The scope is agreed around the drawing, material, project stage, critical characteristics, assembly and expected batch or repeat demand." }
+      { question: "What engineering plastics can Arktech support for injection molding?", answer: "Projects using PC, PA6 or PA66, POM, PBT, PC/ABS, reinforced grades and selected higher-performance polymers can be reviewed. Suitability depends on the exact supplier grade, part requirements, availability and agreed project scope." },
+      { question: "How do you select the right engineering plastic grade?", answer: "Selection starts with the mechanical, thermal, dimensional, environmental and compliance requirements. Supplier data and the exact proposed grade are then reviewed with the part geometry and tooling plan." },
+      { question: "Can Arktech support glass-filled engineering plastics?", answer: "PA-GF, PBT-GF and other reinforced grades can be reviewed for suitable projects. Fiber content, wear considerations, geometry, surface requirements and the specific supplier grade must be evaluated before approval." },
+      { question: "Do you provide DFM and injection mold design?", answer: "Yes. Project review can cover part geometry, material-related shrinkage, gate and cooling strategy, venting, ejection, dimensional risks and the agreed tooling requirements before steel release." },
+      { question: "Can you manufacture molds and produce plastic parts?", answer: "Arktech supports injection mold manufacturing, mold trials and plastic part production. The exact tooling, machine, material, inspection and production scope is confirmed for each project." },
+      { question: "What information is needed for an engineering plastics molding quote?", answer: "Provide 3D data, a dimensioned drawing, exact resin grade or performance requirements, critical dimensions, mating interfaces, appearance criteria, estimated volume and any inspection requirements." }
     ],
-    ctaLabel: "Request an Engineering Plastics Molding Quote"
+    ctaLabel: "Upload CAD & Request a Quote"
   }
 ];
 

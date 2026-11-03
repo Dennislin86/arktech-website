@@ -599,6 +599,20 @@ The Portfolio page at `/portfolio` uses `Arktech_Portfolio_Mold_Type_Classificat
 
 The Portfolio images are rendered with `next/image`, explicit source dimensions, responsive `sizes`, and below-fold lazy loading. The `IMG_6875.JPG` and `IMG_6116.JPG` derivatives were rebuilt through a clean intermediate decode as `/images/portfolio/optimized/custom-export-injection-mold-tooling.webp` and `/images/portfolio/optimized/metal-insert-injection-mold-tooling.webp` after their earlier WebP files showed visible scanline corruption; the original JPG files remain unchanged. Use `npm run portfolio:import` after the approved workbook metadata has been regenerated, followed by `npm run portfolio:optimize` when new exact-match source images need production WebP derivatives. The import resolves tracked WebP assets, updates the manifest and report, and does not overwrite or delete original source images.
 
+## Engineering Plastics Injection Molding Page (2026-11-03)
+
+The canonical `/plastic-injection-molding/engineering-plastics` page reuses approved first-party product, engineering, tooling, production, inspection and case-study assets. One optimized WebP derivative was generated from a preserved approved case-study source; all other media are reused unchanged. Material families are described in live HTML, and the photographs are not used as proof of a specific unverified resin grade.
+
+| Page use | Approved asset | Recommended alt text | Source/status |
+| --- | --- | --- | --- |
+| Hero — molded component range | `/images/material-capabilities/engineering-plastic-parts-abs-pc-pa-pom.webp` | Assorted molded housings, brackets, gears and functional plastic components | Existing approved molded-part photograph; active and priority-loaded only in the Hero |
+| DFM and process review | `/images/Engineering/injection-mold-engineering-dfm-analysis.webp` | Engineers reviewing injection molding DFM and mold analysis on CAD monitors | Existing real Arktech engineering photograph; active |
+| Application examples | `/images/tooling-gallery/optimized/arktech-plastic-part-img-6424-2c3e00f77eff.webp`, `/images/tooling-gallery/optimized/arktech-plastic-part-img-6423-61ef99147f17.webp`, `/images/tooling-gallery/optimized/arktech-plastic-part-img-6417-d62fc99aaa19.webp`, `/images/tooling-gallery/optimized/arktech-plastic-part-img-6475-934bf4875750.webp` | Describe only the visible housing, circular component, lattice panels or technical housings | Existing optimized first-party tooling-gallery photographs; active without unverified resin attribution |
+| Precision tooling | `/images/tooling-gallery/optimized/arktech-mould-precision-injection-mold-7de25512c101.webp` | Precision injection mold open on a workshop bench | Existing optimized real mold photograph; active |
+| Molding production | `/images/capabilities/plastic-injection-molding-production-video-frame.webp` | Clear molded parts beside an automated injection molding cell | Existing approved production frame; active |
+| Dimensional inspection | `/images/quality/mold-insert-cmm-inspection-poster.webp` | CMM probe measuring a metal mold insert | Existing real inspection-video poster; active as supporting inspection evidence |
+| Related projects | `/images/case-studies/automotive-multi-cavity-mold.webp`, `/images/case-studies/medical-device-cartridge-molding.webp`, `/images/case-studies/ihgs-housing.webp` | Describe the visible tooling, molded housings and assembly evidence | Existing published case-study assets linked to their canonical project pages; the medical image is an 88 KB, 1440 × 1024 WebP derivative of the preserved approved `Medical device.png` source |
+
 ## Maintenance notes
 
 - Add a row whenever a new production asset is approved.

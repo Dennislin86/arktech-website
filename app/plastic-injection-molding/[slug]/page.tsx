@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { EngineeringPlasticsPage } from "@/components/EngineeringPlasticsPage";
 import { InjectionMoldingProcessPage } from "@/components/InjectionMoldingProcessPage";
 import { injectionMoldingProcessPageMap, injectionMoldingProcessSlugs } from "@/lib/injection-molding-process-pages";
 import { site } from "@/lib/site";
@@ -35,5 +36,6 @@ export default async function InjectionMoldingProcessRoute({ params }: PageProps
   const { slug } = await params;
   const page = injectionMoldingProcessPageMap[slug];
   if (!page) notFound();
+  if (slug === "engineering-plastics") return <EngineeringPlasticsPage page={page} />;
   return <InjectionMoldingProcessPage page={page} />;
 }
