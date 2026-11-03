@@ -1,654 +1,943 @@
 {
   "schemaVersion": 1,
   "gallery": {
-    "convertedImageCount": 38,
-    "existingWebpReusedCount": 20,
-    "beforeBytes": 71404769,
-    "afterBytes": 4281298,
+    "convertedImageCount": 55,
+    "existingWebpReusedCount": 58,
+    "beforeBytes": 100518819,
+    "afterBytes": 4075266,
     "mappings": [
       {
-        "source": "Mold/IMG_3110.JPG",
-        "suggestedWebFileName": "ev-charger-housing-injection-mold.webp",
-        "outputFileName": "ev-charger-housing-injection-mold.webp",
-        "image": "/images/portfolio/optimized/ev-charger-housing-injection-mold.webp",
+        "source": "Plastic/20261103/5.JPG",
+        "suggestedWebFileName": "infusion-pump-outer-cover-injection-molded-part.webp",
+        "outputFileName": "infusion-pump-outer-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/infusion-pump-outer-cover-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 1016784
+          "width": 800,
+          "height": 600,
+          "size": 121538
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 128850,
+          "width": 800,
+          "height": 600,
+          "size": 67438,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_3117.JPG",
-        "suggestedWebFileName": "automotive-control-panel-injection-mold.webp",
-        "outputFileName": "automotive-control-panel-injection-mold.webp",
-        "image": "/images/portfolio/optimized/automotive-control-panel-injection-mold.webp",
+        "source": "Plastic/20261103/11.JPG",
+        "suggestedWebFileName": "Custom-laptop-plastic-housing-for-OEM-assembly.webp",
+        "outputFileName": "custom-laptop-plastic-housing-for-oem-assembly.webp",
+        "image": "/images/portfolio/optimized/custom-laptop-plastic-housing-for-oem-assembly.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 907059
+          "width": 800,
+          "height": 600,
+          "size": 77904
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 101056,
+          "width": 800,
+          "height": 600,
+          "size": 19700,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_3857.JPG",
-        "suggestedWebFileName": "electronic-device-enclosure-injection-mold.webp",
-        "outputFileName": "electronic-device-enclosure-injection-mold-2.webp",
-        "image": "/images/portfolio/optimized/electronic-device-enclosure-injection-mold-2.webp",
+        "source": "Plastic/20261103/109.jpg",
+        "suggestedWebFileName": "smart-meter-display-bezel-injection-molded-part.webp",
+        "outputFileName": "smart-meter-display-bezel-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/smart-meter-display-bezel-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 910450
+          "width": 640,
+          "height": 480,
+          "size": 63559
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 90820,
+          "width": 640,
+          "height": 480,
+          "size": 10642,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_3924.JPG",
-        "suggestedWebFileName": "automotive-interior-injection-mold.webp",
-        "outputFileName": "automotive-interior-injection-mold.webp",
-        "image": "/images/portfolio/optimized/automotive-interior-injection-mold.webp",
+        "source": "Plastic/20261103/2805-280599-7606673.jpg",
+        "suggestedWebFileName": "leak-detector-housing-injection-molded-part.webp",
+        "outputFileName": "leak-detector-housing-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/leak-detector-housing-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 887788
+          "width": 390,
+          "height": 390,
+          "size": 50224
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 89570,
+          "width": 390,
+          "height": 390,
+          "size": 8288,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_6116.JPG",
-        "suggestedWebFileName": "insert-molding-injection-mold-metal-insert.webp",
-        "outputFileName": "metal-insert-injection-mold-tooling.webp",
-        "image": "/images/portfolio/optimized/metal-insert-injection-mold-tooling.webp",
+        "source": "Plastic/20261103/产品主图.jpg",
+        "suggestedWebFileName": "diagnostic-instrument-housing-injection-molded-part.webp",
+        "outputFileName": "diagnostic-instrument-housing-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/diagnostic-instrument-housing-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 835092
+          "width": 750,
+          "height": 750,
+          "size": 33893
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 71650,
-          "quality": 80
-        }
-      },
-      {
-        "source": "Mold/IMG_6694.JPG",
-        "suggestedWebFileName": "industrial-equipment-housing-injection-mold.webp",
-        "outputFileName": "industrial-equipment-housing-injection-mold.webp",
-        "image": "/images/portfolio/optimized/industrial-equipment-housing-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 932615
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 114454,
+          "width": 750,
+          "height": 750,
+          "size": 13968,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_6780.JPG",
-        "suggestedWebFileName": "multiple-slider-complex-injection-mold.webp",
-        "outputFileName": "multiple-slider-complex-injection-mold.webp",
-        "image": "/images/portfolio/optimized/multiple-slider-complex-injection-mold.webp",
+        "source": "Plastic/20261103/产品主图1.jpg",
+        "suggestedWebFileName": "food-processor-lid-injection-molded-part.webp",
+        "outputFileName": "food-processor-lid-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/food-processor-lid-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 815859
+          "width": 750,
+          "height": 750,
+          "size": 40393
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 95150,
+          "width": 750,
+          "height": 750,
+          "size": 18136,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_6875.JPG",
-        "suggestedWebFileName": "custom-export-injection-mold-manufacturer.webp",
-        "outputFileName": "custom-export-injection-mold-tooling.webp",
-        "image": "/images/portfolio/optimized/custom-export-injection-mold-tooling.webp",
+        "source": "Plastic/20261103/产品主图2.jpg",
+        "suggestedWebFileName": "blender-base-cover-injection-molded-part.webp",
+        "outputFileName": "blender-base-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/blender-base-cover-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 881958
+          "width": 750,
+          "height": 750,
+          "size": 63564
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 99402,
-          "quality": 80
-        }
-      },
-      {
-        "source": "Mold/IMG_8050.JPG",
-        "suggestedWebFileName": "hydraulic-core-pull-injection-mold.webp",
-        "outputFileName": "hydraulic-core-pull-injection-mold.webp",
-        "image": "/images/portfolio/optimized/hydraulic-core-pull-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 960216
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 118804,
+          "width": 750,
+          "height": 750,
+          "size": 31970,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_8143.JPG",
-        "suggestedWebFileName": "mass-production-injection-mold.webp",
-        "outputFileName": "mass-production-injection-mold.webp",
-        "image": "/images/portfolio/optimized/mass-production-injection-mold.webp",
+        "source": "Plastic/20261103/产品主图3.jpg",
+        "suggestedWebFileName": "humidifier-water-tank-cover-injection-molded-part.webp",
+        "outputFileName": "humidifier-water-tank-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/humidifier-water-tank-cover-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 820143
+          "width": 750,
+          "height": 750,
+          "size": 38088
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 98816,
+          "width": 750,
+          "height": 750,
+          "size": 15284,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_8767.JPG",
-        "suggestedWebFileName": "pet-tech-device-housing-injection-mold.webp",
-        "outputFileName": "pet-tech-device-housing-injection-mold.webp",
-        "image": "/images/portfolio/optimized/pet-tech-device-housing-injection-mold.webp",
+        "source": "Plastic/20261103/产品主图4.jpg",
+        "suggestedWebFileName": "industrial-connector-body-injection-molded-part.webp",
+        "outputFileName": "industrial-connector-body-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/industrial-connector-body-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 877180
+          "width": 750,
+          "height": 750,
+          "size": 41287
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 102712,
+          "width": 750,
+          "height": 750,
+          "size": 19064,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_8770.JPG",
-        "suggestedWebFileName": "family-injection-mold-multiple-parts.webp",
-        "outputFileName": "family-injection-mold-multiple-parts.webp",
-        "image": "/images/portfolio/optimized/family-injection-mold-multiple-parts.webp",
+        "source": "Plastic/20261103/产品主图5.jpg",
+        "suggestedWebFileName": "cable-organizer-clip-injection-molded-part.webp",
+        "outputFileName": "cable-organizer-clip-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/cable-organizer-clip-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 935383
+          "width": 750,
+          "height": 750,
+          "size": 31680
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 104292,
+          "width": 750,
+          "height": 750,
+          "size": 12326,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_8990.JPG",
-        "suggestedWebFileName": "two-plate-injection-mold-tooling.webp",
-        "outputFileName": "two-plate-injection-mold-tooling.webp",
-        "image": "/images/portfolio/optimized/two-plate-injection-mold-tooling.webp",
+        "source": "Plastic/20261103/产品主图6.jpg",
+        "suggestedWebFileName": "pet-feeder-hopper-lid-injection-molded-part.webp",
+        "outputFileName": "pet-feeder-hopper-lid-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/pet-feeder-hopper-lid-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 765437
+          "width": 750,
+          "height": 750,
+          "size": 87644
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 67052,
+          "width": 750,
+          "height": 750,
+          "size": 11442,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_9157(1).JPG",
-        "suggestedWebFileName": "export-injection-mold-overseas-production.webp",
-        "outputFileName": "export-injection-mold-overseas-production.webp",
-        "image": "/images/portfolio/optimized/export-injection-mold-overseas-production.webp",
+        "source": "Plastic/20261103/产品主图7.jpg",
+        "suggestedWebFileName": "sensor-mounting-bracket-injection-molded-part.webp",
+        "outputFileName": "sensor-mounting-bracket-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/sensor-mounting-bracket-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 772547
+          "width": 750,
+          "height": 750,
+          "size": 63990
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 71918,
+          "width": 750,
+          "height": 750,
+          "size": 10952,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_9450.JPG",
-        "suggestedWebFileName": "pbt-gf30-injection-mold.webp",
-        "outputFileName": "pbt-gf30-injection-mold.webp",
-        "image": "/images/portfolio/optimized/pbt-gf30-injection-mold.webp",
+        "source": "Plastic/20261103/产品主图8.jpg",
+        "suggestedWebFileName": "refrigerator-door-bin-injection-molded-part.webp",
+        "outputFileName": "refrigerator-door-bin-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/refrigerator-door-bin-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 906686
+          "width": 750,
+          "height": 750,
+          "size": 77898
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 115938,
+          "width": 750,
+          "height": 750,
+          "size": 9238,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_9484.JPG",
-        "suggestedWebFileName": "industrial-plastic-component-injection-mold.webp",
-        "outputFileName": "industrial-plastic-component-injection-mold.webp",
-        "image": "/images/portfolio/optimized/industrial-plastic-component-injection-mold.webp",
+        "source": "Plastic/20261103/产品主图10.jpg",
+        "suggestedWebFileName": "pet-fountain-pump-holder-injection-molded-part.webp",
+        "outputFileName": "pet-fountain-pump-holder-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/pet-fountain-pump-holder-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 892506
+          "width": 750,
+          "height": 750,
+          "size": 111911
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 99788,
+          "width": 750,
+          "height": 750,
+          "size": 16706,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_9862.JPG",
-        "suggestedWebFileName": "long-core-injection-mold-plastic-part.webp",
-        "outputFileName": "long-core-injection-mold-plastic-part.webp",
-        "image": "/images/portfolio/optimized/long-core-injection-mold-plastic-part.webp",
+        "source": "Plastic/20261103/产品主图11.jpg",
+        "suggestedWebFileName": "electrical-coil-bobbin-injection-molded-part.webp",
+        "outputFileName": "electrical-coil-bobbin-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/electrical-coil-bobbin-injection-molded-part.webp",
+        "before": {
+          "width": 750,
+          "height": 750,
+          "size": 93239
+        },
+        "after": {
+          "width": 750,
+          "height": 750,
+          "size": 12180,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/产品主图12.jpg",
+        "suggestedWebFileName": "Motorcycle-front-fairing-headlight-bracket",
+        "outputFileName": "motorcycle-front-fairing-headlight-bracket.webp",
+        "image": "/images/portfolio/optimized/motorcycle-front-fairing-headlight-bracket.webp",
+        "before": {
+          "width": 750,
+          "height": 750,
+          "size": 143699
+        },
+        "after": {
+          "width": 750,
+          "height": 750,
+          "size": 23548,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/产品主图14.jpg",
+        "suggestedWebFileName": "Injection-molded plastic internal support bracket for a commercial coffee machine",
+        "outputFileName": "injection-molded-plastic-internal-support-bracket-for-a-commercial-coffee-machine.webp",
+        "image": "/images/portfolio/optimized/injection-molded-plastic-internal-support-bracket-for-a-commercial-coffee-machine.webp",
+        "before": {
+          "width": 750,
+          "height": 750,
+          "size": 96965
+        },
+        "after": {
+          "width": 750,
+          "height": 750,
+          "size": 12442,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/产品主图15.jpg",
+        "suggestedWebFileName": "PA66 structural bracket for the internal frame of a commercial coffee machine.",
+        "outputFileName": "pa66-structural-bracket-for-the-internal-frame-of-a-commercial-coffee-machine.webp",
+        "image": "/images/portfolio/optimized/pa66-structural-bracket-for-the-internal-frame-of-a-commercial-coffee-machine.webp",
+        "before": {
+          "width": 750,
+          "height": 750,
+          "size": 95010
+        },
+        "after": {
+          "width": 750,
+          "height": 750,
+          "size": 12140,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/微信图片_20250303221623.jpg",
+        "suggestedWebFileName": "pet-feeder-dispensing-wheel-injection-molded-part.webp",
+        "outputFileName": "pet-feeder-dispensing-wheel-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/pet-feeder-dispensing-wheel-injection-molded-part.webp",
+        "before": {
+          "width": 1280,
+          "height": 2773,
+          "size": 103825
+        },
+        "after": {
+          "width": 554,
+          "height": 1200,
+          "size": 27474,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/微信图片_20250303221632.jpg",
+        "suggestedWebFileName": "vacuum-cleaner-nozzle-injection-molded-part.webp",
+        "outputFileName": "vacuum-cleaner-nozzle-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/vacuum-cleaner-nozzle-injection-molded-part.webp",
+        "before": {
+          "width": 5712,
+          "height": 4284,
+          "size": 3132487
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 42362,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/微信图片_20250303221638.jpg",
+        "suggestedWebFileName": "Plastic dashboard panel for personal watercraft instrument assembly.webp",
+        "outputFileName": "plastic-dashboard-panel-for-personal-watercraft-instrument-assembly.webp",
+        "image": "/images/portfolio/optimized/plastic-dashboard-panel-for-personal-watercraft-instrument-assembly.webp",
+        "before": {
+          "width": 4284,
+          "height": 5712,
+          "size": 2974140
+        },
+        "after": {
+          "width": 900,
+          "height": 1200,
+          "size": 37856,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/微信图片_20250303221644.jpg",
+        "suggestedWebFileName": "machine-hmi-bezel-injection-molded-part.webp",
+        "outputFileName": "machine-hmi-bezel-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/machine-hmi-bezel-injection-molded-part.webp",
+        "before": {
+          "width": 5712,
+          "height": 4284,
+          "size": 2754105
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 147956,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0016.JPG",
+        "suggestedWebFileName": "center-console-switch-panel-injection-molded-part.webp",
+        "outputFileName": "center-console-switch-panel-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/center-console-switch-panel-injection-molded-part.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 5195073
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 20912,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0018.JPG",
+        "suggestedWebFileName": "Plastic loudspeaker inner liner for speaker assembly.webp",
+        "outputFileName": "plastic-loudspeaker-inner-liner-for-speaker-assembly.webp",
+        "image": "/images/portfolio/optimized/plastic-loudspeaker-inner-liner-for-speaker-assembly.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 4847498
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 24722,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0024.JPG",
+        "suggestedWebFileName": "Plastic automotive lamp bracket.webp",
+        "outputFileName": "plastic-automotive-lamp-bracket.webp",
+        "image": "/images/portfolio/optimized/plastic-automotive-lamp-bracket.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 5131955
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 25128,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0038.JPG",
+        "suggestedWebFileName": "optical-instrument-window-frame-injection-molded-part.webp",
+        "outputFileName": "optical-instrument-window-frame-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/optical-instrument-window-frame-injection-molded-part.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 4708422
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 18124,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0293.JPG",
+        "suggestedWebFileName": "Automotive key plastic housing.webp",
+        "outputFileName": "automotive-key-plastic-housing.webp",
+        "image": "/images/portfolio/optimized/automotive-key-plastic-housing.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 5609725
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 15856,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0313.JPG",
+        "suggestedWebFileName": "medical-connector-body-injection-molded-part.webp",
+        "outputFileName": "medical-connector-body-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/medical-connector-body-injection-molded-part.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 4346949
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 20820,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC_0314.JPG",
+        "suggestedWebFileName": "mirror-adjustment-switch-cover-injection-molded-part.webp",
+        "outputFileName": "mirror-adjustment-switch-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/mirror-adjustment-switch-cover-injection-molded-part.webp",
+        "before": {
+          "width": 6000,
+          "height": 4000,
+          "size": 5656555
+        },
+        "after": {
+          "width": 1200,
+          "height": 800,
+          "size": 28582,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/DSC09359.JPG",
+        "suggestedWebFileName": "connector-protective-cover-injection-molded-part.webp",
+        "outputFileName": "connector-protective-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/connector-protective-cover-injection-molded-part.webp",
+        "before": {
+          "width": 640,
+          "height": 480,
+          "size": 26868
+        },
+        "after": {
+          "width": 640,
+          "height": 480,
+          "size": 15708,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_0256.jpg",
+        "suggestedWebFileName": "medical-sensor-holder-injection-molded-part.webp",
+        "outputFileName": "medical-sensor-holder-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/medical-sensor-holder-injection-molded-part.webp",
+        "before": {
+          "width": 3264,
+          "height": 2448,
+          "size": 2186788
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 89666,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_1481.jpg",
+        "suggestedWebFileName": "laboratory-cartridge-housing-injection-molded-part.webp",
+        "outputFileName": "laboratory-cartridge-housing-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/laboratory-cartridge-housing-injection-molded-part.webp",
+        "before": {
+          "width": 4000,
+          "height": 3000,
+          "size": 2216884
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 20158,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_2688.jpg",
+        "suggestedWebFileName": "indoor-air-monitor-cover-injection-molded-part.webp",
+        "outputFileName": "indoor-air-monitor-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/indoor-air-monitor-cover-injection-molded-part.webp",
+        "before": {
+          "width": 3264,
+          "height": 2448,
+          "size": 1270484
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 20238,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6426.jpg",
+        "suggestedWebFileName": "Plastic water tank for coffee machine.webp",
+        "outputFileName": "plastic-water-tank-for-coffee-machine.webp",
+        "image": "/images/portfolio/optimized/plastic-water-tank-for-coffee-machine.webp",
+        "before": {
+          "width": 4284,
+          "height": 5712,
+          "size": 2758626
+        },
+        "after": {
+          "width": 900,
+          "height": 1200,
+          "size": 90110,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6427.jpg",
+        "suggestedWebFileName": "Plastic bottle screw cap.webp",
+        "outputFileName": "plastic-bottle-screw-cap.webp",
+        "image": "/images/portfolio/optimized/plastic-bottle-screw-cap.webp",
         "before": {
           "width": 4032,
           "height": 3024,
-          "size": 2634949
+          "size": 2391452
         },
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 104582,
+          "size": 188696,
+          "quality": 78
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6428.jpg",
+        "suggestedWebFileName": "wireless-earbud-charging-case-injection-molded-part.webp",
+        "outputFileName": "wireless-earbud-charging-case-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/wireless-earbud-charging-case-injection-molded-part.webp",
+        "before": {
+          "width": 4284,
+          "height": 5712,
+          "size": 2542830
+        },
+        "after": {
+          "width": 900,
+          "height": 1200,
+          "size": 139392,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_9976.JPG",
-        "suggestedWebFileName": "outdoor-product-plastic-injection-mold.webp",
-        "outputFileName": "outdoor-product-plastic-injection-mold.webp",
-        "image": "/images/portfolio/optimized/outdoor-product-plastic-injection-mold.webp",
+        "source": "Plastic/20261103/IMG_6433.jpg",
+        "suggestedWebFileName": "keyboard-injection-molded-part.webp",
+        "outputFileName": "keyboard-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/keyboard-injection-molded-part.webp",
         "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 906145
+          "width": 2000,
+          "height": 1500,
+          "size": 1160709
         },
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 89844,
+          "size": 33500,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_20220418_140723.jpg",
-        "suggestedWebFileName": "high-cycle-injection-mold-tooling.webp",
-        "outputFileName": "high-cycle-injection-mold-tooling.webp",
-        "image": "/images/portfolio/optimized/high-cycle-injection-mold-tooling.webp",
+        "source": "Plastic/20261103/IMG_6436.jpg",
+        "suggestedWebFileName": "pet-grooming-device-handle-injection-molded-part.webp",
+        "outputFileName": "pet-grooming-device-handle-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/pet-grooming-device-handle-injection-molded-part.webp",
         "before": {
-          "width": 3648,
-          "height": 2736,
-          "size": 2802186
+          "width": 4032,
+          "height": 3024,
+          "size": 3031478
         },
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 123800,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG20220418170707.jpg",
-        "suggestedWebFileName": "export-injection-mold-usa-production.webp",
-        "outputFileName": "export-injection-mold-usa-production.webp",
-        "image": "/images/portfolio/optimized/export-injection-mold-usa-production.webp",
-        "before": {
-          "width": 4000,
-          "height": 3000,
-          "size": 1875931
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 164292,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG20220524141131.jpg",
-        "suggestedWebFileName": "precision-injection-mold-tight-tolerance-part.webp",
-        "outputFileName": "precision-injection-mold-tight-tolerance-part.webp",
-        "image": "/images/portfolio/optimized/precision-injection-mold-tight-tolerance-part.webp",
-        "before": {
-          "width": 4000,
-          "height": 3000,
-          "size": 2945350
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 138592,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/mmexport1650537472632.jpg",
-        "suggestedWebFileName": "humidifier-housing-injection-mold.webp",
-        "outputFileName": "humidifier-housing-injection-mold.webp",
-        "image": "/images/portfolio/optimized/humidifier-housing-injection-mold.webp",
-        "before": {
-          "width": 1706,
-          "height": 1280,
-          "size": 928477
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 158836,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_20260330_081611.jpg",
-        "suggestedWebFileName": "medical-plastic-component-precision-mold.webp",
-        "outputFileName": "medical-plastic-component-precision-mold.webp",
-        "image": "/images/portfolio/optimized/medical-plastic-component-precision-mold.webp",
-        "before": {
-          "width": 4064,
-          "height": 3048,
-          "size": 5974483
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 203046,
+          "size": 190126,
           "quality": 80
         }
       },
       {
-        "source": "Mold/IMG_4697.JPG",
-        "suggestedWebFileName": "medical-device-case-injection-mold.webp",
-        "outputFileName": "medical-device-case-injection-mold.webp",
-        "image": "/images/portfolio/optimized/medical-device-case-injection-mold.webp",
+        "source": "Plastic/20261103/IMG_6437.jpg",
+        "suggestedWebFileName": "pet-feeder-bowl-support-injection-molded-part.webp",
+        "outputFileName": "pet-feeder-bowl-support-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/pet-feeder-bowl-support-injection-molded-part.webp",
+        "before": {
+          "width": 2000,
+          "height": 1500,
+          "size": 728849
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 19196,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6443.jpg",
+        "suggestedWebFileName": "coffee-bean-hopper-injection-molded-part.webp",
+        "outputFileName": "coffee-bean-hopper-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/coffee-bean-hopper-injection-molded-part.webp",
         "before": {
           "width": 5712,
           "height": 4284,
-          "size": 4403681
+          "size": 2328386
         },
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 115984,
+          "size": 95870,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_4603.JPG",
-        "suggestedWebFileName": "plastic-overmolding-tool-abs-material.webp",
-        "outputFileName": "plastic-overmolding-tool-abs-material.webp",
-        "image": "/images/portfolio/optimized/plastic-overmolding-tool-abs-material.webp",
+        "source": "Plastic/20261103/IMG_6444.jpeg",
+        "suggestedWebFileName": "security-camera-mount-injection-molded-part.webp",
+        "outputFileName": "security-camera-mount-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/security-camera-mount-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2929826
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 157878,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6445.jpg",
+        "suggestedWebFileName": "coffee-machine-housing-injection-molded-part.webp",
+        "outputFileName": "coffee-machine-housing-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/coffee-machine-housing-injection-molded-part.webp",
+        "before": {
+          "width": 4284,
+          "height": 5712,
+          "size": 2894389
+        },
+        "after": {
+          "width": 900,
+          "height": 1200,
+          "size": 51086,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6453.jpg",
+        "suggestedWebFileName": "webcam-housing-injection-molded-part.webp",
+        "outputFileName": "webcam-housing-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/webcam-housing-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2683239
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 205678,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6455.jpg",
+        "suggestedWebFileName": "pet-water-fountain-cover-injection-molded-part.webp",
+        "outputFileName": "pet-water-fountain-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/pet-water-fountain-cover-injection-molded-part.webp",
+        "before": {
+          "width": 3024,
+          "height": 4032,
+          "size": 2724511
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 214754,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6459.jpg",
+        "suggestedWebFileName": "door-trim-retainer-clip-injection-molded-part.webp",
+        "outputFileName": "door-trim-retainer-clip-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/door-trim-retainer-clip-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2752147
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 261550,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6460.jpg",
+        "suggestedWebFileName": "smart-thermostat-enclosure-injection-molded-part.webp",
+        "outputFileName": "smart-thermostat-enclosure-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/smart-thermostat-enclosure-injection-molded-part.webp",
+        "before": {
+          "width": 3024,
+          "height": 4032,
+          "size": 2538362
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 208512,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6462.jpg",
+        "suggestedWebFileName": "smart-hub-enclosure-injection-molded-part.webp",
+        "outputFileName": "smart-hub-enclosure-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/smart-hub-enclosure-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2254450
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 196960,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6463.jpg",
+        "suggestedWebFileName": "cable-harness-retainer-injection-molded-part.webp",
+        "outputFileName": "cable-harness-retainer-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/cable-harness-retainer-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2925781
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 250966,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6465.jpg",
+        "suggestedWebFileName": "industrial-sensor-housing-injection-molded-part.webp",
+        "outputFileName": "industrial-sensor-housing-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/industrial-sensor-housing-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2654523
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 262808,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6475.jpg",
+        "suggestedWebFileName": "laboratory-analyzer-cover-injection-molded-part.webp",
+        "outputFileName": "laboratory-analyzer-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/laboratory-analyzer-cover-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 3100667
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 204502,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/P7285434.JPG",
+        "suggestedWebFileName": "surgical-instrument-handle-injection-molded-part.webp",
+        "outputFileName": "surgical-instrument-handle-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/surgical-instrument-handle-injection-molded-part.webp",
+        "before": {
+          "width": 624,
+          "height": 416,
+          "size": 83376
+        },
+        "after": {
+          "width": 624,
+          "height": 416,
+          "size": 9290,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6480.jpg",
+        "suggestedWebFileName": "patient-monitor-bezel-injection-molded-part.webp",
+        "outputFileName": "patient-monitor-bezel-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/patient-monitor-bezel-injection-molded-part.webp",
+        "before": {
+          "width": 4032,
+          "height": 3024,
+          "size": 2825374
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 226786,
+          "quality": 72
+        }
+      },
+      {
+        "source": "Plastic/20261103/IMG_6483.jpg",
+        "suggestedWebFileName": "medical-device-battery-cover-injection-molded-part.webp",
+        "outputFileName": "medical-device-battery-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/medical-device-battery-cover-injection-molded-part.webp",
         "before": {
           "width": 5712,
           "height": 4284,
-          "size": 3964529
+          "size": 3137642
         },
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 106906,
+          "size": 146126,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_4452.JPG",
-        "suggestedWebFileName": "tpe-overmolding-injection-mold.webp",
-        "outputFileName": "tpe-overmolding-injection-mold.webp",
-        "image": "/images/portfolio/optimized/tpe-overmolding-injection-mold.webp",
+        "source": "Plastic/20261103/IMG_20131221_103855.jpg",
+        "suggestedWebFileName": "medical-handheld-device-shell-injection-molded-part.webp",
+        "outputFileName": "medical-handheld-device-shell-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/medical-handheld-device-shell-injection-molded-part.webp",
         "before": {
-          "width": 5712,
-          "height": 4284,
-          "size": 4225711
+          "width": 2592,
+          "height": 1944,
+          "size": 512297
         },
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 114344,
+          "size": 24652,
           "quality": 82
         }
       },
       {
-        "source": "Mold/IMG_20260318_143620.jpg",
-        "suggestedWebFileName": "cold-runner-injection-mold-plastic-component.webp",
-        "outputFileName": "cold-runner-injection-mold-plastic-component.webp",
-        "image": "/images/portfolio/optimized/cold-runner-injection-mold-plastic-component.webp",
+        "source": "Plastic/20261103/IML part 4.jpg",
+        "suggestedWebFileName": "smart-door-lock-cover-injection-molded-part.webp",
+        "outputFileName": "smart-door-lock-cover-injection-molded-part.webp",
+        "image": "/images/portfolio/optimized/smart-door-lock-cover-injection-molded-part.webp",
         "before": {
-          "width": 4064,
-          "height": 3048,
-          "size": 4526181
+          "width": 750,
+          "height": 750,
+          "size": 65661
         },
         "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 165860,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/微信图片_20261102150235_123_3.jpg",
-        "suggestedWebFileName": "unscrewing-injection-mold-threaded-part.webp",
-        "outputFileName": "unscrewing-injection-mold-threaded-part.webp",
-        "image": "/images/portfolio/optimized/unscrewing-injection-mold-threaded-part.webp",
-        "before": {
-          "width": 5712,
-          "height": 4284,
-          "size": 5019934
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 145168,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_2013.JPG",
-        "suggestedWebFileName": "modular-injection-mold-insert-system.webp",
-        "outputFileName": "modular-injection-mold-insert-system.webp",
-        "image": "/images/portfolio/optimized/modular-injection-mold-insert-system.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 917413
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 91174,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_8187.JPG",
-        "suggestedWebFileName": "two-color-injection-mold-plastic-part.webp",
-        "outputFileName": "two-color-injection-mold-plastic-part.webp",
-        "image": "/images/portfolio/optimized/two-color-injection-mold-plastic-part.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 829556
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 84408,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_9625.JPG",
-        "suggestedWebFileName": "kitchen-appliance-injection-mold.webp",
-        "outputFileName": "kitchen-appliance-injection-mold.webp",
-        "image": "/images/portfolio/optimized/kitchen-appliance-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 947182
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 123664,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/微信图片_20261102170736_27_66.jpg",
-        "suggestedWebFileName": "automatic-thread-unscrewing-mold.webp",
-        "outputFileName": "automatic-thread-unscrewing-mold.webp",
-        "image": "/images/portfolio/optimized/automatic-thread-unscrewing-mold.webp",
-        "before": {
-          "width": 4064,
-          "height": 3048,
-          "size": 4892619
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 115310,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/微信图片_20261102170538_19_66.jpg",
-        "suggestedWebFileName": "internal-thread-injection-mold.webp",
-        "outputFileName": "internal-thread-injection-mold.webp",
-        "image": "/images/portfolio/optimized/internal-thread-injection-mold.webp",
-        "before": {
-          "width": 4064,
-          "height": 3048,
-          "size": 4842509
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 115784,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_0778.JPG",
-        "suggestedWebFileName": "electrical-enclosure-injection-mold.webp",
-        "outputFileName": "electrical-enclosure-injection-mold.webp",
-        "image": "/images/portfolio/optimized/electrical-enclosure-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 980404
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 119766,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_1251.JPG",
-        "suggestedWebFileName": "high-polish-injection-mold.webp",
-        "outputFileName": "high-polish-injection-mold.webp",
-        "image": "/images/portfolio/optimized/high-polish-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 934926
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 105460,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_5420.JPG",
-        "suggestedWebFileName": "threaded-metal-insert-injection-mold.webp",
-        "outputFileName": "threaded-metal-insert-injection-mold.webp",
-        "image": "/images/portfolio/optimized/threaded-metal-insert-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 983766
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 128038,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_3679.JPG",
-        "suggestedWebFileName": "consumer-electronics-housing-injection-mold.webp",
-        "outputFileName": "consumer-electronics-housing-injection-mold.webp",
-        "image": "/images/portfolio/optimized/consumer-electronics-housing-injection-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 897252
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 98342,
-          "quality": 82
-        }
-      },
-      {
-        "source": "Mold/IMG_5640.JPG",
-        "suggestedWebFileName": "automation-equipment-plastic-part-mold.webp",
-        "outputFileName": "automation-equipment-plastic-part-mold.webp",
-        "image": "/images/portfolio/optimized/automation-equipment-plastic-part-mold.webp",
-        "before": {
-          "width": 2048,
-          "height": 1536,
-          "size": 853882
-        },
-        "after": {
-          "width": 1200,
-          "height": 900,
-          "size": 97826,
+          "width": 750,
+          "height": 750,
+          "size": 15802,
           "quality": 82
         }
       }

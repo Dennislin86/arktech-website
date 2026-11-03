@@ -5,7 +5,9 @@ import sharp from "sharp";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
-const sourceRoot = path.join(publicRoot, "images", "Image show");
+const sourceRoot = process.env.PORTFOLIO_SOURCE_ROOT
+  ? path.resolve(process.env.PORTFOLIO_SOURCE_ROOT)
+  : path.join(publicRoot, "images", "Image show");
 const outputRoot = path.join(publicRoot, "images", "portfolio", "optimized");
 const manifestPath = path.join(projectRoot, "generated", "portfolio-gallery-manifest.json");
 const unmatchedReportPath = path.join(projectRoot, "generated", "portfolio-unmatched-images-report.json");
@@ -16,6 +18,12 @@ const heroOutputPath = path.join(publicRoot, "images", "portfolio", "mirror-poli
 function withSuffix(filename, suffix) {
   const extension = path.extname(filename);
   return `${path.basename(filename, extension)}-${suffix}${extension}`;
+}
+
+function sourcePathFor(source) {
+  const [categoryFolder, ...sourceParts] = source.split("/");
+  const batchFolder = sourceParts.length > 1 ? sourceParts.shift() : "20261006";
+  return path.join(sourceRoot, categoryFolder, batchFolder, sourceParts.join("/"));
 }
 
 async function imageDetails(filePath) {
@@ -84,8 +92,7 @@ async function main() {
       continue;
     }
 
-    const [categoryFolder, ...filenameParts] = item.source.split("/");
-    const sourcePath = path.join(sourceRoot, categoryFolder, "20261006", filenameParts.join("/"));
+    const sourcePath = sourcePathFor(item.source);
     const outputPath = path.join(outputRoot, outputName);
     const before = await imageDetails(sourcePath);
     const after = await writeWebp({

@@ -5,7 +5,9 @@ import sharp from "sharp";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
-const sourceBase = path.join(publicRoot, "images", "Image show");
+const sourceBase = process.env.PORTFOLIO_SOURCE_ROOT
+  ? path.resolve(process.env.PORTFOLIO_SOURCE_ROOT)
+  : path.join(publicRoot, "images", "Image show");
 const outputRoot = path.join(publicRoot, "images", "portfolio", "20261006");
 const optimizedOutputRoot = path.join(publicRoot, "images", "portfolio", "optimized");
 const metadataPath = path.join(projectRoot, "source-assets", "portfolio", "metadata.json");
@@ -26,6 +28,38 @@ function slug(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "") || "portfolio-item";
+}
+
+function resolveSource(source) {
+  const [folder, ...sourceParts] = source.split("/");
+  const batchFolder = sourceParts.length > 1 ? sourceParts.shift() : "20261006";
+  const filename = sourceParts.join("/");
+  return {
+    batchFolder,
+    filename,
+    folder,
+    sourcePath: path.join(sourceBase, folder, batchFolder, filename)
+  };
+}
+
+function sourceKeyFromRelativePath(folder, relativePath) {
+  const normalized = relativePath.split(path.sep).join("/");
+  return normalized.startsWith("20261006/")
+    ? `${folder}/${normalized.slice("20261006/".length)}`
+    : `${folder}/${normalized}`;
+}
+
+async function listImagesRecursively(root) {
+  const images = [];
+  if (!(await exists(root))) return images;
+
+  for (const entry of await readdir(root, { withFileTypes: true })) {
+    const entryPath = path.join(root, entry.name);
+    if (entry.isDirectory()) images.push(...await listImagesRecursively(entryPath));
+    else if (entry.isFile() && supportedExtensions.has(path.extname(entry.name).toLowerCase())) images.push(entryPath);
+  }
+
+  return images;
 }
 
 async function exists(filePath) {
@@ -71,9 +105,7 @@ async function main() {
   const assetsOver300KB = [];
 
   for (const [source, record] of Object.entries(records)) {
-    const [folder, ...filenameParts] = source.split("/");
-    const filename = filenameParts.join("/");
-    const sourcePath = path.join(sourceBase, folder, "20261006", filename);
+    const { folder, filename, sourcePath } = resolveSource(source);
     const previous = previousBySource.get(source);
     const previousAssetPath = previous?.image
       ? path.join(publicRoot, decodeURIComponent(previous.image).replace(/^\/+/, ""))
@@ -144,14 +176,14 @@ async function main() {
 
   const filesWithoutMetadata = [];
   for (const folder of categoryFolders) {
-    const sourceFolder = path.join(sourceBase, folder, "20261006");
-    if (!(await exists(sourceFolder))) continue;
-    const filenames = (await readdir(sourceFolder))
-      .filter((filename) => supportedExtensions.has(path.extname(filename).toLowerCase()))
+    const categoryRoot = path.join(sourceBase, folder);
+    const imagePaths = (await listImagesRecursively(categoryRoot))
       .sort((left, right) => left.localeCompare(right, "en", { numeric: true, sensitivity: "base" }));
 
-    for (const filename of filenames) {
-      const source = `${folder}/${filename}`;
+    for (const imagePath of imagePaths) {
+      const relativePath = path.relative(categoryRoot, imagePath);
+      const source = sourceKeyFromRelativePath(folder, relativePath);
+      const filename = path.basename(imagePath);
       if (!matchedSources.has(source) && !records[source]) {
         filesWithoutMetadata.push({
           source,
@@ -173,11 +205,13 @@ async function main() {
     schemaVersion: 2,
     generatedFromWorkbook: metadata.sourceWorkbook,
     generatedFromSheet: metadata.sourceSheet,
+    generatedFromWorkbooks: metadata.sourceWorkbooks ?? [],
     items
   };
   const report = {
     schemaVersion: 2,
     selectedWorkbook: metadata.sourceWorkbook,
+    selectedWorkbooks: metadata.sourceWorkbooks ?? [],
     workbookRecordCount: Object.keys(records).length,
     publishedImageCount: items.length,
     optimizedAssetCount: optimizedAssetsUsed.length,
