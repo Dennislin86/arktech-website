@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "gallery": {
-    "convertedImageCount": 28,
+    "convertedImageCount": 38,
     "existingWebpReusedCount": 20,
-    "beforeBytes": 54325260,
-    "afterBytes": 3213952,
+    "beforeBytes": 71404769,
+    "afterBytes": 4281298,
     "mappings": [
       {
         "source": "Mold/IMG_3110.JPG",
@@ -77,8 +77,8 @@
       {
         "source": "Mold/IMG_6116.JPG",
         "suggestedWebFileName": "insert-molding-injection-mold-metal-insert.webp",
-        "outputFileName": "insert-molding-injection-mold-metal-insert.webp",
-        "image": "/images/portfolio/optimized/insert-molding-injection-mold-metal-insert.webp",
+        "outputFileName": "metal-insert-injection-mold-tooling.webp",
+        "image": "/images/portfolio/optimized/metal-insert-injection-mold-tooling.webp",
         "before": {
           "width": 2048,
           "height": 1536,
@@ -87,8 +87,8 @@
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 81308,
-          "quality": 82
+          "size": 71650,
+          "quality": 80
         }
       },
       {
@@ -128,8 +128,8 @@
       {
         "source": "Mold/IMG_6875.JPG",
         "suggestedWebFileName": "custom-export-injection-mold-manufacturer.webp",
-        "outputFileName": "custom-export-injection-mold-manufacturer.webp",
-        "image": "/images/portfolio/optimized/custom-export-injection-mold-manufacturer.webp",
+        "outputFileName": "custom-export-injection-mold-tooling.webp",
+        "image": "/images/portfolio/optimized/custom-export-injection-mold-tooling.webp",
         "before": {
           "width": 2048,
           "height": 1536,
@@ -138,8 +138,8 @@
         "after": {
           "width": 1200,
           "height": 900,
-          "size": 102170,
-          "quality": 82
+          "size": 99402,
+          "quality": 80
         }
       },
       {
@@ -479,6 +479,176 @@
           "width": 1200,
           "height": 900,
           "size": 145168,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_2013.JPG",
+        "suggestedWebFileName": "modular-injection-mold-insert-system.webp",
+        "outputFileName": "modular-injection-mold-insert-system.webp",
+        "image": "/images/portfolio/optimized/modular-injection-mold-insert-system.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 917413
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 91174,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_8187.JPG",
+        "suggestedWebFileName": "two-color-injection-mold-plastic-part.webp",
+        "outputFileName": "two-color-injection-mold-plastic-part.webp",
+        "image": "/images/portfolio/optimized/two-color-injection-mold-plastic-part.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 829556
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 84408,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_9625.JPG",
+        "suggestedWebFileName": "kitchen-appliance-injection-mold.webp",
+        "outputFileName": "kitchen-appliance-injection-mold.webp",
+        "image": "/images/portfolio/optimized/kitchen-appliance-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 947182
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 123664,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/微信图片_20261102170736_27_66.jpg",
+        "suggestedWebFileName": "automatic-thread-unscrewing-mold.webp",
+        "outputFileName": "automatic-thread-unscrewing-mold.webp",
+        "image": "/images/portfolio/optimized/automatic-thread-unscrewing-mold.webp",
+        "before": {
+          "width": 4064,
+          "height": 3048,
+          "size": 4892619
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 115310,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/微信图片_20261102170538_19_66.jpg",
+        "suggestedWebFileName": "internal-thread-injection-mold.webp",
+        "outputFileName": "internal-thread-injection-mold.webp",
+        "image": "/images/portfolio/optimized/internal-thread-injection-mold.webp",
+        "before": {
+          "width": 4064,
+          "height": 3048,
+          "size": 4842509
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 115784,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_0778.JPG",
+        "suggestedWebFileName": "electrical-enclosure-injection-mold.webp",
+        "outputFileName": "electrical-enclosure-injection-mold.webp",
+        "image": "/images/portfolio/optimized/electrical-enclosure-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 980404
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 119766,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_1251.JPG",
+        "suggestedWebFileName": "high-polish-injection-mold.webp",
+        "outputFileName": "high-polish-injection-mold.webp",
+        "image": "/images/portfolio/optimized/high-polish-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 934926
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 105460,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_5420.JPG",
+        "suggestedWebFileName": "threaded-metal-insert-injection-mold.webp",
+        "outputFileName": "threaded-metal-insert-injection-mold.webp",
+        "image": "/images/portfolio/optimized/threaded-metal-insert-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 983766
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 128038,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_3679.JPG",
+        "suggestedWebFileName": "consumer-electronics-housing-injection-mold.webp",
+        "outputFileName": "consumer-electronics-housing-injection-mold.webp",
+        "image": "/images/portfolio/optimized/consumer-electronics-housing-injection-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 897252
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 98342,
+          "quality": 82
+        }
+      },
+      {
+        "source": "Mold/IMG_5640.JPG",
+        "suggestedWebFileName": "automation-equipment-plastic-part-mold.webp",
+        "outputFileName": "automation-equipment-plastic-part-mold.webp",
+        "image": "/images/portfolio/optimized/automation-equipment-plastic-part-mold.webp",
+        "before": {
+          "width": 2048,
+          "height": 1536,
+          "size": 853882
+        },
+        "after": {
+          "width": 1200,
+          "height": 900,
+          "size": 97826,
           "quality": 82
         }
       }

@@ -97,6 +97,14 @@ export function IndustryLandingPage({ page }: { page: IndustryLandingPageData })
             <div className="py-4"><dt className="text-xs font-bold uppercase tracking-[0.12em] text-[#FFB8BB]">Validation</dt><dd className="mt-2 leading-7 text-slate-200">{page.evidence.validation}</dd></div>
           </dl>
           {page.evidence.href ? <div className="mt-6"><Link className="focus-ring inline-flex rounded-sm font-bold text-[#FFB8BB] hover:text-white" href={page.evidence.href}>{page.evidence.linkLabel ?? "Explore project"}<span className="ml-2" aria-hidden="true">→</span></Link></div> : null}
+          {page.relatedProject ? (
+            <div className="mt-6 border-t border-white/15 pt-5">
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#FFB8BB]">Related case study</p>
+              <Link className="focus-ring mt-2 inline-flex rounded-sm font-bold text-white hover:text-[#FFB8BB]" href={page.relatedProject.href}>
+                {page.relatedProject.linkLabel}<span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

@@ -50,9 +50,7 @@ async function main() {
   const unmatchedReport = JSON.parse(await readFile(unmatchedReportPath, "utf8"));
   await mkdir(outputRoot, { recursive: true });
 
-  const targets = manifest.items.filter((item) =>
-    item.assetSource === "original-source" || item.image.startsWith("/images/portfolio/optimized/")
-  );
+  const targets = manifest.items.filter((item) => item.assetSource === "original-source");
   const targetIds = new Set(targets.map((item) => item.id));
   const reservedNames = new Set(
     manifest.items

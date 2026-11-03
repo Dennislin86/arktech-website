@@ -74,7 +74,13 @@ async function main() {
     const [folder, ...filenameParts] = source.split("/");
     const filename = filenameParts.join("/");
     const sourcePath = path.join(sourceBase, folder, "20261006", filename);
-    if (!(await exists(sourcePath))) {
+    const previous = previousBySource.get(source);
+    const previousAssetPath = previous?.image
+      ? path.join(publicRoot, decodeURIComponent(previous.image).replace(/^\/+/, ""))
+      : null;
+    const sourceExists = await exists(sourcePath);
+    const previousAssetExists = previousAssetPath ? await exists(previousAssetPath) : false;
+    if (!sourceExists && !previousAssetExists) {
       metadataWithoutFiles.push({
         source,
         originalFileName: record.originalFileName,
@@ -84,7 +90,25 @@ async function main() {
     }
 
     matchedSources.add(source);
-    const previous = previousBySource.get(source);
+    if (previous && previousAssetExists) {
+      const details = await imageDetails(previousAssetPath);
+      const item = {
+        id: previous.id,
+        ...record,
+        webFileName: path.basename(decodeURIComponent(previous.image)),
+        assetSource: previous.assetSource,
+        image: previous.image,
+        ...details,
+        source
+      };
+      items.push(item);
+      const assetRecord = { source, image: item.image, size: details.size };
+      if (item.assetSource === "optimized-web") optimizedAssetsUsed.push(assetRecord);
+      else rawSourceAssetsUsed.push(assetRecord);
+      if (details.size > 300 * 1024) assetsOver300KB.push(assetRecord);
+      continue;
+    }
+
     const previousUsesOptimizedAsset = previous?.image?.startsWith("/images/portfolio/optimized/");
     const optimizedName = previousUsesOptimizedAsset ? path.basename(previous.image) : record.webFileName;
     const optimizedPath = path.join(optimizedOutputRoot, optimizedName);

@@ -134,15 +134,23 @@ export function ToolingGallery() {
             <h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.015em] text-[var(--brand-dark)] sm:text-4xl" id="tooling-gallery-heading">Injection Molds &amp; Molded Parts</h2>
             <p className="mt-4 text-base leading-7 text-[var(--muted)] sm:text-lg">Explore a selection of injection molds and plastic parts manufactured by Arktech for customer projects.</p>
           </div>
-          <button
-            aria-pressed={paused}
-            className="focus-ring inline-flex min-h-11 shrink-0 items-center justify-center self-start rounded-sm border border-[var(--line-strong)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)] sm:self-auto"
-            onClick={() => setPaused((value) => !value)}
-            type="button"
-          >
-            <span aria-hidden="true" className="mr-2 text-[var(--brand)]">{paused ? "▶" : "Ⅱ"}</span>
-            {paused ? "Play gallery" : "Pause gallery"}
-          </button>
+          <div className="flex flex-wrap items-center gap-3 self-start sm:justify-end sm:self-auto">
+            <Link
+              className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
+              href="/portfolio"
+            >
+              Explore Our Portfolio <span aria-hidden="true" className="ml-2">→</span>
+            </Link>
+            <button
+              aria-pressed={paused}
+              className="focus-ring inline-flex min-h-11 shrink-0 items-center justify-center rounded-sm border border-[var(--line-strong)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
+              onClick={() => setPaused((value) => !value)}
+              type="button"
+            >
+              <span aria-hidden="true" className="mr-2 text-[var(--brand)]">{paused ? "▶" : "Ⅱ"}</span>
+              {paused ? "Play gallery" : "Pause gallery"}
+            </button>
+          </div>
         </div>
 
         <div className="mt-8 space-y-7 sm:mt-9 sm:space-y-8">

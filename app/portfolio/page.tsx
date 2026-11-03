@@ -24,7 +24,6 @@ export const metadata: Metadata = {
 };
 
 const selectedCaseStudies = caseStudies.filter((item) => item.featured).slice(0, 3);
-const portfolioGalleryItems = portfolioItems.filter((item) => item.moldTypeProcess !== "Hot Runner / Multi-Cavity");
 
 export default function PortfolioPage() {
   return (
@@ -57,7 +56,7 @@ export default function PortfolioPage() {
           </div>
           <div className="space-y-4 text-base leading-7 text-[var(--muted)] sm:text-lg">
             <p>This portfolio brings together real Arktech project photography in one place. Browse completed injection molds and molded plastic parts without leaving the page.</p>
-            <p>Use the category and process filters to narrow the gallery, then follow the related capability links for engineering and manufacturing context.</p>
+            <p>Use the category and industry filters to narrow the gallery, then follow the related capability links for engineering and manufacturing context.</p>
           </div>
         </div>
       </section>
@@ -67,10 +66,10 @@ export default function PortfolioPage() {
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Project Gallery</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)] sm:text-4xl">Injection Molds &amp; Plastic Parts</h2>
-            <p className="mt-4 leading-7 text-[var(--muted)]">Browse tooling and molded part examples by industry and manufacturing process.</p>
+            <p className="mt-4 leading-7 text-[var(--muted)]">Explore injection mold and plastic part projects by industry, with tooling examples organized by mold type.</p>
           </div>
           <div className="mt-6">
-            <PortfolioGallery items={portfolioGalleryItems} />
+            <PortfolioGallery items={portfolioItems} />
           </div>
         </div>
       </section>

@@ -1,27 +1,11 @@
 {
   "schemaVersion": 2,
-  "selectedWorkbook": "Arktech_Portfolio_Bulk_Image_SEO_Template2026102.xlsx",
-  "workbookRecordCount": 51,
-  "publishedImageCount": 48,
-  "optimizedAssetCount": 48,
+  "selectedWorkbook": "Arktech_Portfolio_Mold_Type_Classification_20261103.xlsx",
+  "workbookRecordCount": 58,
+  "publishedImageCount": 58,
+  "optimizedAssetCount": 58,
   "originalSourceAssetCount": 0,
-  "metadataWithoutFiles": [
-    {
-      "source": "Mold/IMG_2013.JPG",
-      "originalFileName": "IMG_2013.JPG",
-      "action": "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
-    },
-    {
-      "source": "Mold/IMG_8187.JPG",
-      "originalFileName": "IMG_8187.JPG",
-      "action": "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
-    },
-    {
-      "source": "Mold/IMG_9625.JPG",
-      "originalFileName": "IMG_9625.JPG",
-      "action": "Skipped; the Excel Original File Name has no exact case-sensitive source-file match."
-    }
-  ],
+  "metadataWithoutFiles": [],
   "filesWithoutMetadata": [
     {
       "source": "Mold/DSC06552.JPG",
@@ -60,12 +44,7 @@
       "action": "Not published; no exact record exists in the selected Excel workbook."
     }
   ],
-  "duplicateWebFileNames": [
-    {
-      "webFileName": "electronic-device-enclosure-injection-mold.webp",
-      "count": 2
-    }
-  ],
+  "duplicateWebFileNames": [],
   "assetsOver300KB": [],
   "rawSourceAssetsUsed": [],
   "optimizedAssetsUsed": [
@@ -191,8 +170,8 @@
     },
     {
       "source": "Mold/IMG_6116.JPG",
-      "image": "/images/portfolio/optimized/insert-molding-injection-mold-metal-insert.webp",
-      "size": 81308
+      "image": "/images/portfolio/optimized/metal-insert-injection-mold-tooling.webp",
+      "size": 71650
     },
     {
       "source": "Mold/IMG_6694.JPG",
@@ -206,8 +185,8 @@
     },
     {
       "source": "Mold/IMG_6875.JPG",
-      "image": "/images/portfolio/optimized/custom-export-injection-mold-manufacturer.webp",
-      "size": 102170
+      "image": "/images/portfolio/optimized/custom-export-injection-mold-tooling.webp",
+      "size": 99402
     },
     {
       "source": "Mold/IMG_8050.JPG",
@@ -308,6 +287,56 @@
       "source": "Mold/微信图片_20261102150235_123_3.jpg",
       "image": "/images/portfolio/optimized/unscrewing-injection-mold-threaded-part.webp",
       "size": 145168
+    },
+    {
+      "source": "Mold/IMG_2013.JPG",
+      "image": "/images/portfolio/optimized/modular-injection-mold-insert-system.webp",
+      "size": 91174
+    },
+    {
+      "source": "Mold/IMG_8187.JPG",
+      "image": "/images/portfolio/optimized/two-color-injection-mold-plastic-part.webp",
+      "size": 84408
+    },
+    {
+      "source": "Mold/IMG_9625.JPG",
+      "image": "/images/portfolio/optimized/kitchen-appliance-injection-mold.webp",
+      "size": 123664
+    },
+    {
+      "source": "Mold/微信图片_20261102170736_27_66.jpg",
+      "image": "/images/portfolio/optimized/automatic-thread-unscrewing-mold.webp",
+      "size": 115310
+    },
+    {
+      "source": "Mold/微信图片_20261102170538_19_66.jpg",
+      "image": "/images/portfolio/optimized/internal-thread-injection-mold.webp",
+      "size": 115784
+    },
+    {
+      "source": "Mold/IMG_0778.JPG",
+      "image": "/images/portfolio/optimized/electrical-enclosure-injection-mold.webp",
+      "size": 119766
+    },
+    {
+      "source": "Mold/IMG_1251.JPG",
+      "image": "/images/portfolio/optimized/high-polish-injection-mold.webp",
+      "size": 105460
+    },
+    {
+      "source": "Mold/IMG_5420.JPG",
+      "image": "/images/portfolio/optimized/threaded-metal-insert-injection-mold.webp",
+      "size": 128038
+    },
+    {
+      "source": "Mold/IMG_3679.JPG",
+      "image": "/images/portfolio/optimized/consumer-electronics-housing-injection-mold.webp",
+      "size": 98342
+    },
+    {
+      "source": "Mold/IMG_5640.JPG",
+      "image": "/images/portfolio/optimized/automation-equipment-plastic-part-mold.webp",
+      "size": 97826
     }
   ]
 }

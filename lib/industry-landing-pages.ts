@@ -7,6 +7,7 @@ export type IndustryEvidence = {
   application: string; engineeringFocus: string; validation: string;
   href?: string; linkLabel?: string;
 };
+export type IndustryRelatedProject = { href: string; linkLabel: string };
 export type IndustryLandingPageData = {
   slug: string; navTitle: string; eyebrow: string; seoTitle: string; metaDescription: string;
   h1: string; heroCopy: string; heroImage: string; heroAlt: string;
@@ -19,6 +20,7 @@ export type IndustryLandingPageData = {
   processIntro: string; validationHeading: string; validationIntro: string;
   validationItems: IndustryItem[]; resources: IndustryLinkItem[];
   relatedCapabilities: IndustryLinkItem[]; faqs: IndustryFaq[];
+  relatedProject?: IndustryRelatedProject;
   ctaEyebrow: string; ctaHeading: string; ctaCopy: string;
   needsAssetReplacement?: boolean; assetReplacementNote?: string;
 };
@@ -219,6 +221,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
     validationHeading: "Documented Validation for Medical Components", validationIntro: "Inspection is based on customer drawings and agreed requirements; it does not imply regulatory approval of the finished device.",
     validationItems: [["Critical-dimension report", "Record nominal, tolerance and actual results."], ["Visual inspection", "Review defined cosmetic and transparent surfaces."], ["Assembly fit", "Check mating parts, inserts and fasteners where available."], ["Cavity traceability", "Identify sample results by cavity when applicable."], ["Trial documentation", "Retain parameters, observations and correction actions."]],
     resources: [resource.material, resource.transparent, resource.dfm], relatedCapabilities: caps("medical device component"),
+    relatedProject: { href: "/case-studies/medical-device-cartridge-molding", linkLabel: "View Medical Molding Case Study" },
     faqs: [["Which medical-related components can Arktech support?", "Typical scopes include housings, covers, panels, cartridges, transparent parts and internal carriers."], ["Does Arktech claim ISO 13485, cleanroom or FDA approval?", "No. This page makes no unverified ISO 13485, cleanroom or FDA claim."], ["Can dimensional reports be provided?", "Critical dimensions can be reported against customer drawings and an agreed scope."], ["Can transparent components be reviewed?", "Yes. Review covers exact resin, polish, flow path, handling and customer visual criteria."]],
     ctaEyebrow: "MEDICAL COMPONENT RFQ", ctaHeading: "Discuss Your Medical Device Component Application", ctaCopy: "Upload CAD, drawings, exact material requirements, critical dimensions and validation expectations."
   }

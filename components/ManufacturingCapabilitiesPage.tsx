@@ -197,7 +197,10 @@ export function ManufacturingCapabilitiesPage() {
                         <h3 className="text-sm font-bold uppercase tracking-[0.11em] text-[var(--brand)]" id="injection-mold-types-navigation">Injection Mold Types</h3>
                         <p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:text-base">Explore tooling options for part geometry, cavity layout and production requirements.</p>
                       </div>
-                      <Link className="focus-ring inline-flex min-h-11 shrink-0 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/injection-molds">Explore All Injection Mold Types <span className="ml-1" aria-hidden="true">→</span></Link>
+                      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 sm:justify-end">
+                        <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm border border-[var(--line)] bg-white px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]" href="/portfolio">View Injection Mold Projects <span className="ml-1" aria-hidden="true">→</span></Link>
+                        <Link className="focus-ring inline-flex min-h-11 shrink-0 items-center font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/injection-molds">Explore All Injection Mold Types <span className="ml-1" aria-hidden="true">→</span></Link>
+                      </div>
                     </div>
                     <ul aria-label="Injection mold type pages" className="mt-4 flex flex-wrap gap-2">
                       {injectionMoldTypeLinks.map((moldType) => (

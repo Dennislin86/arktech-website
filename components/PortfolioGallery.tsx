@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { PortfolioCategory, PortfolioItem } from "@/lib/portfolio";
+import { portfolioMoldTypes } from "@/lib/portfolio-mold-types";
 
 const categories: PortfolioCategory[] = ["Injection Molds", "Plastic Parts"];
 const acronymMap: Record<string, string> = {
@@ -30,6 +31,8 @@ type PortfolioGroup = {
   items: PortfolioItem[];
 };
 
+const trailingOtherMoldIds = new Set(["mold-30-injection-mold-core-insert-machining"]);
+
 function formatDisplayTitle(value: string) {
   return value
     .replace(/\bhigh temperature\b/gi, "high-temperature")
@@ -43,14 +46,34 @@ function formatDisplayTitle(value: string) {
 }
 
 function groupItems(items: PortfolioItem[], category: PortfolioCategory, filter: string): PortfolioGroup[] {
-  const grouped = new Map<string, PortfolioItem[]>();
-
-  for (const item of items.filter((entry) => {
+  const filteredItems = items.filter((entry) => {
     if (entry.category !== category) return false;
     if (filter === "All") return true;
     return category === "Injection Molds" ? entry.industry === filter : entry.moldTypeProcess === filter;
-  })) {
-    const groupName = category === "Injection Molds" ? item.moldTypeProcess : item.industry;
+  });
+
+  if (category === "Injection Molds") {
+    return portfolioMoldTypes
+      .map((name) => ({
+        name,
+        items: [...new Map(
+          filteredItems
+            .filter((item) => item.moldTypes.includes(name))
+            .map((item) => [item.id, item] as const)
+        ).values()].sort((left, right) => {
+          if (name === "Other Molds") {
+            const trailingDifference = Number(trailingOtherMoldIds.has(left.id)) - Number(trailingOtherMoldIds.has(right.id));
+            if (trailingDifference) return trailingDifference;
+          }
+          return left.sortOrder - right.sortOrder;
+        })
+      }))
+      .filter((group) => group.items.length > 0);
+  }
+
+  const grouped = new Map<string, PortfolioItem[]>();
+  for (const item of filteredItems) {
+    const groupName = item.industry;
     const current = grouped.get(groupName) ?? [];
     current.push(item);
     grouped.set(groupName, current);
@@ -65,14 +88,6 @@ function groupItems(items: PortfolioItem[], category: PortfolioCategory, filter:
       const orderDifference = Math.min(...left.items.map((item) => item.sortOrder)) - Math.min(...right.items.map((item) => item.sortOrder));
       return orderDifference || left.name.localeCompare(right.name);
     });
-}
-
-function groupDescription(category: PortfolioCategory, group: PortfolioGroup) {
-  if (category === "Injection Molds") {
-    return `${group.items.length} ${group.name} tooling ${group.items.length === 1 ? "example" : "examples"} from the published Portfolio data.`;
-  }
-
-  return `${group.items.length} molded-part ${group.items.length === 1 ? "example" : "examples"} for ${group.name} applications.`;
 }
 
 function displayTags(item: PortfolioItem) {
@@ -141,6 +156,8 @@ function HorizontalPortfolioRow({
 }) {
   const rowRef = useRef<HTMLDivElement>(null);
   const [scrollState, setScrollState] = useState({ canScroll: false, atStart: true, atEnd: false });
+  const [autoPaused, setAutoPaused] = useState(false);
+  const [inViewport, setInViewport] = useState(false);
 
   const updateScrollState = useCallback(() => {
     const row = rowRef.current;
@@ -169,6 +186,30 @@ function HorizontalPortfolioRow({
     };
   }, [active, group.items.length, updateScrollState]);
 
+  useEffect(() => {
+    const row = rowRef.current;
+    if (!row) return;
+
+    const observer = new IntersectionObserver(([entry]) => setInViewport(entry.isIntersecting), { threshold: 0.35 });
+    observer.observe(row);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const row = rowRef.current;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!row || !active || !inViewport || autoPaused || !scrollState.canScroll || reducedMotion.matches) return;
+
+    const timer = window.setInterval(() => {
+      const maximum = Math.max(0, row.scrollWidth - row.clientWidth);
+      if (maximum <= 4) return;
+      if (row.scrollLeft >= maximum - 4) row.scrollTo({ left: 0, behavior: "smooth" });
+      else row.scrollBy({ left: Math.max(row.clientWidth * 0.82, 280), behavior: "smooth" });
+    }, 3500);
+
+    return () => window.clearInterval(timer);
+  }, [active, autoPaused, inViewport, scrollState.canScroll]);
+
   function scroll(direction: -1 | 1) {
     const row = rowRef.current;
     if (!row) return;
@@ -176,7 +217,15 @@ function HorizontalPortfolioRow({
   }
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setAutoPaused(false);
+      }}
+      onFocusCapture={() => setAutoPaused(true)}
+      onMouseEnter={() => setAutoPaused(true)}
+      onMouseLeave={() => setAutoPaused(false)}
+    >
       {scrollState.canScroll ? (
         <div className="absolute -top-13 right-0 hidden items-center gap-2 sm:flex">
           <button
@@ -217,6 +266,7 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
     "Plastic Parts": "All"
   });
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(() => new Set());
+  const [showCompleteMoldList, setShowCompleteMoldList] = useState(false);
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const openerRef = useRef<HTMLElement | null>(null);
@@ -235,6 +285,10 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
     "Injection Molds": groupItems(items, "Injection Molds", filters["Injection Molds"]),
     "Plastic Parts": groupItems(items, "Plastic Parts", filters["Plastic Parts"])
   }), [filters, items]);
+
+  const completeMoldList = useMemo(() => categoryItems["Injection Molds"].filter((item) => (
+    filters["Injection Molds"] === "All" || item.industry === filters["Injection Molds"]
+  )), [categoryItems, filters]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -274,7 +328,6 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
       <div aria-label="Portfolio categories" className="grid grid-cols-2 border-b border-[var(--line)]" role="tablist">
         {categories.map((category) => {
           const selected = activeCategory === category;
-          const count = categoryItems[category].length;
           return (
             <button
               aria-controls={`portfolio-gallery-panel-${category === "Injection Molds" ? "molds" : "parts"}`}
@@ -287,7 +340,7 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
               tabIndex={selected ? 0 : -1}
               type="button"
             >
-              {category} <span className="ml-1 font-medium text-current/70">({count})</span>
+              {category}
             </button>
           );
         })}
@@ -298,7 +351,6 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
         const visibleGroups = groupsByCategory[category];
         const selectedFilter = filters[category];
         const filterLabel = category === "Injection Molds" ? "Industry" : "Process";
-        const visibleCount = visibleGroups.reduce((total, group) => total + group.items.length, 0);
 
         return (
           <div
@@ -323,32 +375,48 @@ export function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
                   ))}
                 </select>
               </label>
-              <p aria-live="polite" className="text-sm text-[var(--muted)]">
-                {visibleGroups.length} {visibleGroups.length === 1 ? "category" : "categories"} · {visibleCount} projects
-              </p>
+              {category === "Injection Molds" ? (
+                <button
+                  aria-pressed={showCompleteMoldList}
+                  className="focus-ring min-h-11 rounded-sm px-2 font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]"
+                  onClick={() => setShowCompleteMoldList((current) => !current)}
+                  type="button"
+                >
+                  {showCompleteMoldList ? "Browse by Mold Type" : "View All Injection Molds"}
+                </button>
+              ) : null}
             </div>
 
-            {visibleGroups.length ? (
+            {category === "Injection Molds" && showCompleteMoldList ? (
+              <section className="py-8 sm:py-10">
+                <div className="mb-4 min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Complete Project List</p>
+                  <h3 className="mt-2 break-words text-2xl font-bold text-[var(--brand-dark)]">All Injection Mold Projects</h3>
+                </div>
+                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {completeMoldList.map((item) => <PortfolioCard horizontal={false} item={item} key={item.id} onOpen={openDetails} />)}
+                </div>
+              </section>
+            ) : visibleGroups.length ? (
               <div className="divide-y divide-[var(--line)]">
                 {visibleGroups.map((group) => {
                   const groupKey = `${category}:${group.name}`;
                   const expanded = expandedGroups.has(groupKey);
                   return (
                     <section className="py-8 sm:py-10" key={group.name}>
-                      <div className="mb-5 flex items-start justify-between gap-5 pr-0 sm:pr-24">
+                      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:pr-24">
                         <div className="min-w-0">
                           <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand)]">
-                            {category === "Injection Molds" ? "Mold Process" : "Application Industry"}
+                            {category === "Injection Molds" ? "Mold Type" : "Application Industry"}
                           </p>
-                          <h3 className="mt-2 text-2xl font-bold text-[var(--brand-dark)]">
-                            {formatDisplayTitle(group.name)} <span className="text-base font-medium text-[var(--muted)]">({group.items.length})</span>
+                          <h3 className="mt-2 break-words text-2xl font-bold text-[var(--brand-dark)]">
+                            {formatDisplayTitle(group.name)}
                           </h3>
-                          <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--muted)]">{groupDescription(category, group)}</p>
                         </div>
                         {group.items.length > 4 ? (
                           <button
                             aria-expanded={expanded}
-                            className="focus-ring min-h-11 shrink-0 rounded-sm px-2 font-bold text-[var(--brand)] hover:text-[var(--brand-dark)]"
+                            className="focus-ring min-h-11 shrink-0 self-start rounded-sm px-2 font-bold text-[var(--brand)] hover:text-[var(--brand-dark)] sm:self-auto"
                             onClick={() => toggleExpanded(category, group.name)}
                             type="button"
                           >

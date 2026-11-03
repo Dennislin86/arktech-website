@@ -1179,9 +1179,12 @@ export function PlasticInjectionMoldingPage() {
               );
             })}
           </div>
-          <div className="mt-7 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-3xl text-sm leading-6 text-[var(--muted)]">Explore industry-specific tooling, materials, engineering considerations and molding applications for your product category.</p>
-            <Link className="focus-ring inline-flex w-fit shrink-0 rounded-sm font-bold text-[var(--brand)] hover:underline" href="/industries">Explore All Industries →</Link>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 sm:justify-end">
+              <Link className="focus-ring inline-flex w-fit shrink-0 rounded-sm font-bold text-[var(--brand)] hover:underline" href="/case-studies">Explore Injection Molding Case Studies →</Link>
+              <Link className="focus-ring inline-flex w-fit shrink-0 rounded-sm font-bold text-[var(--brand-dark)] hover:text-[var(--brand)] hover:underline" href="/industries">Explore All Industries →</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -1341,16 +1344,6 @@ export function PlasticInjectionMoldingPage() {
             </div>
           </div>
 
-          <aside className="mt-10 flex flex-col gap-5 rounded-sm border border-[var(--line)] bg-[var(--surface-soft)] p-6 sm:flex-row sm:items-center sm:justify-between" aria-label="Injection molding project review">
-            <div>
-              <h3 className="text-xl font-bold text-[var(--brand-dark)]">Ready to review a plastic injection molding project?</h3>
-              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Share your CAD files, material requirements and expected volume for engineering review.</p>
-            </div>
-            <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-              <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
-              <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Injection Molding Quote</Link>
-            </div>
-          </aside>
         </div>
       </section>
 

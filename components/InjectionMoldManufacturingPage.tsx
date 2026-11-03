@@ -428,7 +428,8 @@ export function InjectionMoldManufacturingPage() {
             </div>
           </div>
 
-          <div className="mt-7 flex lg:justify-end">
+          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 lg:justify-end">
+            <TextLink href="/portfolio">View Injection Mold Projects</TextLink>
             <TextLink href="#mold-manufacturing-process">Explore the Mold Manufacturing Process</TextLink>
           </div>
         </div>

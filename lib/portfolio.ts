@@ -1,4 +1,5 @@
 import manifest from "@/generated/portfolio-gallery-manifest.json";
+import { portfolioMoldTypeAssignments, type PortfolioMoldType } from "@/lib/portfolio-mold-types";
 
 export type PortfolioCategory = "Injection Molds" | "Plastic Parts";
 
@@ -18,6 +19,7 @@ export type PortfolioItem = {
   relatedExistingPage: string;
   industry: string;
   moldTypeProcess: string;
+  moldTypes: PortfolioMoldType[];
   tags: string[];
   sortOrder: number;
   publishStatus: string;
@@ -33,8 +35,16 @@ export type PortfolioItem = {
 
 const publishedStatuses = new Set(["active", "publish", "published", "ready", "yes"]);
 
-export const portfolioItems = (manifest.items as PortfolioItem[])
+type PortfolioManifestItem = Omit<PortfolioItem, "moldTypes">;
+
+export const portfolioItems = (manifest.items as PortfolioManifestItem[])
   .filter((item) => publishedStatuses.has(item.publishStatus.trim().toLowerCase()))
+  .map((item): PortfolioItem => ({
+    ...item,
+    moldTypes: item.category === "Injection Molds"
+      ? [...(portfolioMoldTypeAssignments[item.id] ?? ["Other Molds"])]
+      : []
+  }))
   .sort((left, right) =>
     left.category.localeCompare(right.category) ||
     left.sortOrder - right.sortOrder ||
