@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = caseStudyBySlug.get(slug);
-  if (!project) return {};
+  if (!project) return { title: { absolute: "Page Not Found | Arktech Mold" }, robots: null };
   return {
     title: { absolute: `${project.projectName} Case Study | Arktech Mold` },
     description: project.description,
