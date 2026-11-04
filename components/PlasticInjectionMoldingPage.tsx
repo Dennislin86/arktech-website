@@ -534,7 +534,7 @@ export function PlasticInjectionMoldingPage() {
         eyebrow="Plastic Injection Molding"
         height="standard"
         overlay="video"
-        primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        primaryCta={{ label: "Email CAD for DFM Review", href: "/request-a-quote" }}
         secondaryCta={{ label: "Request Injection Molding Quote", href: "/request-a-quote" }}
         supportingLine="Prototype · Low Volume · Mass Production · Secondary Operations"
         title="Custom Plastic Injection Molding from Prototype to Production"
@@ -600,7 +600,7 @@ export function PlasticInjectionMoldingPage() {
             <p className="text-lg font-bold text-[var(--brand-dark)]">Have a part ready for molding?</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-dark)]" href="/request-a-quote">
-                Upload CAD for DFM Review →
+                Email CAD for DFM Review →
               </Link>
               <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="#production-options">
                 View Production Options →
@@ -635,7 +635,7 @@ export function PlasticInjectionMoldingPage() {
                 <p className="text-lg font-bold leading-7 text-[var(--brand-dark)]">Not sure whether your part or material is ready for tooling?</p>
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-                    Upload CAD for DFM Review →
+                    Email CAD for DFM Review →
                   </Link>
                   <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/resources/material-selection-guide">
                     View Material Selection Guide →
@@ -711,7 +711,7 @@ export function PlasticInjectionMoldingPage() {
                     Compare Production Options →
                   </Link>
                   <Link className="focus-ring inline-flex min-h-10 items-center rounded-sm text-sm font-bold text-[var(--brand)] transition hover:text-[var(--brand-dark)]" href="/request-a-quote">
-                    Upload CAD for DFM Review →
+                    Email CAD for DFM Review →
                   </Link>
                 </div>
               </div>
@@ -794,7 +794,7 @@ export function PlasticInjectionMoldingPage() {
                 View Material Selection Guide →
               </Link>
               <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
-                Upload CAD for DFM Review →
+                Email CAD for DFM Review →
               </Link>
             </div>
           </div>
@@ -854,7 +854,7 @@ export function PlasticInjectionMoldingPage() {
               <aside className="mt-6 border-l-2 border-[var(--brand)] bg-[var(--surface-soft)] p-4 sm:p-5" aria-label="Complex undercut DFM review">
                 <h4 className="text-lg font-bold text-[var(--brand-dark)]">Have a complex undercut or side-action part?</h4>
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review →</Link>
+                  <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-4 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review →</Link>
                   <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-4 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/injection-molding-engineering">Explore DFM Engineering →</Link>
                 </div>
               </aside>
@@ -909,10 +909,10 @@ export function PlasticInjectionMoldingPage() {
           <div className="mt-10 flex flex-col gap-5 rounded-sm border border-[var(--line)] bg-white px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <div>
               <h3 className="text-lg font-bold text-[var(--brand-dark)]">Have a part ready for molding?</h3>
-              <p className="mt-1 text-sm leading-6 text-[var(--muted)]">Upload your CAD files for DFM review and production planning.</p>
+              <p className="mt-1 text-sm leading-6 text-[var(--muted)]">Email your CAD files for DFM review and production planning.</p>
             </div>
             <Link className="focus-ring inline-flex shrink-0 items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--brand-dark)]" href="/request-a-quote">
-              Upload CAD for DFM Review →
+              Email CAD for DFM Review →
             </Link>
           </div>
         </div>
@@ -986,7 +986,7 @@ export function PlasticInjectionMoldingPage() {
             </div>
             <div className="flex shrink-0 flex-col gap-2 sm:items-end">
               <Link className="focus-ring inline-flex items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--brand-dark)]" href="/request-a-quote">
-                Upload CAD for DFM Review →
+                Email CAD for DFM Review →
               </Link>
               <Link className="focus-ring inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">
                 Request Injection Molding Quote →
@@ -1053,7 +1053,7 @@ export function PlasticInjectionMoldingPage() {
             </div>
             <div className="flex shrink-0 flex-col gap-2 sm:items-end">
               <Link className="focus-ring inline-flex items-center justify-center rounded-sm bg-[var(--brand)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--brand-dark)]" href="/request-a-quote">
-                Upload CAD for DFM Review →
+                Email CAD for DFM Review →
               </Link>
               <Link className="focus-ring inline-flex w-fit rounded-sm text-sm font-bold text-[var(--brand-dark)] hover:text-[var(--brand)] hover:underline" href="/quality-documentation">View Quality &amp; Documentation →</Link>
             </div>
@@ -1134,7 +1134,7 @@ export function PlasticInjectionMoldingPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Request Manufacturing Quote →</Link>
-              <Link className="focus-ring inline-flex w-fit rounded-sm font-bold text-[var(--brand-dark)] transition hover:text-[var(--brand)] hover:underline" href="/request-a-quote">Upload CAD for DFM Review →</Link>
+              <Link className="focus-ring inline-flex w-fit rounded-sm font-bold text-[var(--brand-dark)] transition hover:text-[var(--brand)] hover:underline" href="/request-a-quote">Email CAD for DFM Review →</Link>
             </div>
           </aside>
         </div>
@@ -1231,7 +1231,7 @@ export function PlasticInjectionMoldingPage() {
               <p className="mt-1 text-sm leading-6 text-[var(--muted)]">Send us your CAD files and project requirements for engineering review.</p>
             </div>
             <Link className="focus-ring inline-flex w-fit shrink-0 rounded-sm text-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">
-              Upload CAD for DFM Review →
+              Email CAD for DFM Review →
             </Link>
           </aside>
 
@@ -1300,7 +1300,7 @@ export function PlasticInjectionMoldingPage() {
               </div>
               <div className="mt-5 flex flex-col gap-3 sm:mt-0 sm:min-w-fit sm:flex-row">
                 <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-                  Upload CAD for DFM Review →
+                  Email CAD for DFM Review →
                 </Link>
                 <Link className="focus-ring inline-flex min-h-11 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
                   Request Injection Molding Quote →
@@ -1323,7 +1323,7 @@ export function PlasticInjectionMoldingPage() {
                       {faq.question}<span aria-hidden="true" className="text-xl text-[var(--brand)] group-open:rotate-45">+</span>
                     </summary>
                     <p className="max-w-3xl pb-4 leading-7 text-[var(--muted)]">{faq.answer}</p>
-                    {index === 0 ? <Link className="focus-ring mb-5 inline-flex rounded-sm text-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">Upload CAD for DFM Review →</Link> : null}
+                    {index === 0 ? <Link className="focus-ring mb-5 inline-flex rounded-sm text-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">Email CAD for DFM Review →</Link> : null}
                   </details>
                 ))}
               </div>
@@ -1355,7 +1355,7 @@ export function PlasticInjectionMoldingPage() {
             <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">Send CAD files, drawings, material requirements, expected volumes and any assembly or finish specifications for an engineering review.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
+            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link>
             <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 font-bold text-[var(--brand-dark)] hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Injection Molding Quote</Link>
           </div>
         </div>

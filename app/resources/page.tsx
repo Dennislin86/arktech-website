@@ -222,7 +222,7 @@ export default function ResourcesPage() {
               <p className="mt-4 max-w-3xl leading-7 text-slate-200">Share your CAD files, drawings and project requirements for a practical DFM review, tooling recommendation and production discussion.</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white transition hover:bg-red-700" href="/request-a-quote">Upload CAD for DFM Review</Link>
+              <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white transition hover:bg-red-700" href="/request-a-quote">Email CAD for DFM Review</Link>
               <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-slate-400 px-6 py-3 font-bold text-white transition hover:border-white hover:bg-white/10" href="/manufacturing-capabilities">Explore Manufacturing Capabilities</Link>
             </div>
           </div>

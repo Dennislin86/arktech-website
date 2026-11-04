@@ -137,7 +137,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
     validationItems: [["Cosmetic inspection", "Review visible surfaces under agreed conditions."], ["Enclosure fit", "Check gaps, flushness, snaps and fasteners."], ["Electronic package check", "Confirm ports, mounts, battery space and connector access."], ["Transparent-part review", "Inspect flow features, gate vestige and clarity as required."], ["Cavity comparison", "Compare repeated parts by cavity where applicable."]],
     resources: [resource.transparent, resource.draft, resource.ribs], relatedCapabilities: caps("consumer electronics"),
     faqs: [["Which electronics components can Arktech support?", "Scopes include enclosures, bezels, controls, router housings, internal carriers and transparent features."], ["Can you support 2K or overmolded controls?", "Concepts can be reviewed against the real material pair, geometry and production requirements."], ["How are PCB interfaces validated?", "Representative hardware supports review of bosses, ports, clearances and datums."], ["Can clear components be molded?", "Transparent parts can be assessed around resin, polish, gate vestige, visual criteria and handling."]],
-    ctaEyebrow: "CONSUMER ELECTRONICS RFQ", ctaHeading: "Discuss Your Consumer Electronics Application", ctaCopy: "Upload enclosure CAD, electronic-package data, material and finish requirements for review."
+    ctaEyebrow: "CONSUMER ELECTRONICS RFQ", ctaHeading: "Discuss Your Consumer Electronics Application", ctaCopy: "Email enclosure CAD, electronic-package data, material and finish requirements for review."
   },
   {
     slug: "pet-tech", navTitle: "Pet Tech Products", eyebrow: "PET TECH PRODUCTS",
@@ -223,7 +223,7 @@ export const industryLandingPages: IndustryLandingPageData[] = [
     resources: [resource.material, resource.transparent, resource.dfm], relatedCapabilities: caps("medical device component"),
     relatedProject: { href: "/case-studies/medical-device-cartridge-molding", linkLabel: "View Medical Molding Case Study" },
     faqs: [["Which medical-related components can Arktech support?", "Typical scopes include housings, covers, panels, cartridges, transparent parts and internal carriers."], ["Does Arktech claim ISO 13485, cleanroom or FDA approval?", "No. This page makes no unverified ISO 13485, cleanroom or FDA claim."], ["Can dimensional reports be provided?", "Critical dimensions can be reported against customer drawings and an agreed scope."], ["Can transparent components be reviewed?", "Yes. Review covers exact resin, polish, flow path, handling and customer visual criteria."]],
-    ctaEyebrow: "MEDICAL COMPONENT RFQ", ctaHeading: "Discuss Your Medical Device Component Application", ctaCopy: "Upload CAD, drawings, exact material requirements, critical dimensions and validation expectations."
+    ctaEyebrow: "MEDICAL COMPONENT RFQ", ctaHeading: "Discuss Your Medical Device Component Application", ctaCopy: "Email CAD, drawings, exact material requirements, critical dimensions and validation expectations."
   }
 ];
 

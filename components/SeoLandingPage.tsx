@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RfqForm } from "@/components/RfqForm";
+import { TemporaryEmailRfq } from "@/components/TemporaryEmailRfq";
 import { site } from "@/lib/site";
 import { getSeoPage, type SeoLandingPage as SeoLandingPageData } from "@/lib/seo-pages";
 import { seoRedirectDestinationBySlug } from "@/lib/seo-indexing";
@@ -21,24 +21,6 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
       href: seoRedirectDestinationBySlug[related.slug] ?? `/seo/${related.slug}`
     }));
   const schemas = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": `${site.url}/#organization`,
-      name: site.name,
-      legalName: site.company.legalName,
-      url: site.url,
-      email: site.email,
-      telephone: site.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: site.company.headOffice,
-        addressLocality: "Shenzhen",
-        addressRegion: "Guangdong",
-        postalCode: "518107",
-        addressCountry: "CN"
-      }
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -225,7 +207,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#f1c5c5]">24-Hour RFQ Response</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Get a Manufacturing Quote in 24 Hours</h2>
-            <p className="mt-4 leading-7 text-white/80">Share your project basics. For CAD uploads and detailed specifications, continue to the secure RFQ page.</p>
+            <p className="mt-4 leading-7 text-white/80">Share your project basics. For instructions on emailing CAD files and detailed specifications, continue to the RFQ page.</p>
             <nav aria-label="Related SEO manufacturing pages" className="mt-6 grid gap-2 text-sm">
               {relatedPages.map((related) => (
                 <Link key={related.slug} className="font-bold text-white/85 hover:text-white" href={related.href}>{related.h1} →</Link>
@@ -233,7 +215,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageData }) {
               <Link className="font-bold text-white/85 hover:text-white" href="/contact">Contact Arktech →</Link>
             </nav>
           </div>
-          <RfqForm source={`SEO landing page: ${page.slug}`} variant="compact" />
+          <TemporaryEmailRfq email={site.email} />
         </div>
       </section>
     </>

@@ -232,7 +232,7 @@ export function MoldTrialValidationPage() {
                 Trial Setup · Process Parameters · Sample Review · Dimensional Inspection · Correction · Approval
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
+                <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-5 text-center text-sm font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link>
                 <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-5 text-center text-sm font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link>
               </div>
             </div>
@@ -444,7 +444,7 @@ export function MoldTrialValidationPage() {
             <p className="mt-4 text-sm font-semibold leading-6 text-[var(--brand-dark)]">Particularly useful for export molds, customer-machine tooling and projects requiring documented approval before shipment.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
+            <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link>
             <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 text-center font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link>
           </div>
         </div>

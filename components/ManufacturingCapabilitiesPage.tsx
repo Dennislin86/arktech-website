@@ -131,7 +131,7 @@ export function ManufacturingCapabilitiesPage() {
         description="From DFM and export tooling to mold trials, plastic injection production and supporting manufacturing processes, Arktech provides an integrated path from product development to production."
         eyebrow="Manufacturing Capabilities"
         height="standard"
-        primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        primaryCta={{ label: "Email CAD for DFM Review", href: "/request-a-quote" }}
         secondaryCta={{ label: "Request a Quote", href: "/request-a-quote" }}
         title="Injection Mold & Plastic Manufacturing Capabilities"
         bottomContent={(
@@ -304,8 +304,8 @@ export function ManufacturingCapabilitiesPage() {
 
       <section className="border-t border-[var(--cta-border)] bg-[var(--cta-bg)] py-14 sm:py-16 lg:py-20">
         <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12">
-          <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Start Your Project</p><h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--cta-heading)] sm:text-4xl">Discuss Your Manufacturing Project</h2><p className="mt-4 text-base leading-7 text-[var(--cta-body)] sm:text-lg">Upload your CAD data and project requirements for DFM review, tooling discussion and production quotation.</p></div>
-          <div className="grid gap-3 sm:grid-cols-2"><Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link><Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--cta-heading)] bg-white px-6 font-bold text-[var(--cta-heading)] transition hover:bg-[var(--cta-heading)] hover:text-white" href="/request-a-quote">Request a Quote</Link></div>
+          <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--brand)]">Start Your Project</p><h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--cta-heading)] sm:text-4xl">Discuss Your Manufacturing Project</h2><p className="mt-4 text-base leading-7 text-[var(--cta-body)] sm:text-lg">Email your CAD data and project requirements for DFM review, tooling discussion and production quotation.</p></div>
+          <div className="grid gap-3 sm:grid-cols-2"><Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm bg-[var(--brand)] px-6 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link><Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--cta-heading)] bg-white px-6 font-bold text-[var(--cta-heading)] transition hover:bg-[var(--cta-heading)] hover:text-white" href="/request-a-quote">Request a Quote</Link></div>
         </div>
       </section>
     </>

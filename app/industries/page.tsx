@@ -201,7 +201,7 @@ export default function IndustriesPage() {
         eyebrow="Industries & Applications"
         height="standard"
         overlay="strong"
-        primaryCta={{ label: "Upload CAD for DFM Review", href: "/request-a-quote" }}
+        primaryCta={{ label: "Email CAD for DFM Review", href: "/request-a-quote" }}
         secondaryCta={{ label: "Explore Applications", href: "#industries" }}
         title="Injection Molding & Tooling for Product Industries"
       />
@@ -327,7 +327,7 @@ export default function IndustriesPage() {
             <p className="mt-4 text-base leading-7 text-[var(--muted)] sm:text-lg">Share your CAD data, material, application and production requirements for DFM, tooling and injection molding review.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
+            <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 text-center font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link>
             <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 text-center font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link>
           </div>
         </div>

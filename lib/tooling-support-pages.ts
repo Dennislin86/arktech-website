@@ -98,7 +98,7 @@ export const toolingSupportPages: Record<ToolingSupportSlug, ToolingSupportPageD
     heroAlt: "Completed export injection mold with molded part and tooling packing preparation",
     ogImage: "/images/hero/export-injection-mold-manufacturing-hero.webp",
     primaryCta: "Discuss an Export Tooling Project",
-    secondaryCta: "Upload CAD for Tooling Review",
+    secondaryCta: "Email CAD for Tooling Review",
     faqs: [
       { question: "What is included before an injection mold is exported?", answer: "The agreed preparation can include mold trials, dimensional validation, tooling inspection, documentation, spare parts and packing preparation." },
       { question: "How is a mold prepared for production at the customer factory?", answer: "Machine compatibility, mold interfaces, ejection, cooling connections, electrical or hot-runner interfaces where applicable, and customer tooling standards are reviewed against project requirements." },

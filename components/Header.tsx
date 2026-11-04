@@ -167,7 +167,7 @@ const navigation: NavigationItem[] = [
       {
         title: "Start a Project",
         links: [
-          { label: "Upload CAD for DFM Review →", href: "/request-a-quote", emphasis: true },
+          { label: "Email CAD for DFM Review →", href: "/request-a-quote", emphasis: true },
           { label: "Request Tooling Quote →", href: "/request-a-quote" }
         ]
       }
@@ -182,7 +182,7 @@ const navigation: NavigationItem[] = [
       { title: "About Arktech", links: [{ label: "About Arktech Mold", href: "/company" }, { label: "Arktech Group ↗", href: groupWebsite, external: true }] },
       { title: "Quality & Projects", links: [{ label: "Quality & Documentation", href: "/quality-documentation" }, { label: "Project Management", href: "/company/project-management" }, { label: "Tooling Transfer & Export", href: "/injection-molds/export-tooling-transfer" }] },
       { title: "Contact & Locations", links: [{ label: "Contact Us", href: "/contact" }, { label: "Shenzhen Head Office", href: "/contact" }, { label: "Dongguan Factory", href: "/contact" }, { label: "engineering@arktechmold.com", href: "mailto:engineering@arktechmold.com", secondary: true }, { label: "+86 755 2314 8996", href: "tel:+8675523148996", secondary: true }] },
-      { title: "Start Your Project", links: [{ label: "Upload CAD for DFM Review →", href: "/request-a-quote", emphasis: true }] }
+      { title: "Start Your Project", links: [{ label: "Email CAD for DFM Review →", href: "/request-a-quote", emphasis: true }] }
     ]
   }
 ];
@@ -260,7 +260,7 @@ function DesktopPanel({ item, open, onEnter, onLeave }: { item: NavigationItem; 
                 <div className="mt-7 border-t border-[var(--line)] pt-6">
                   <h2 className={megaMenuSectionHeading}>Start a Project</h2>
                   <div className="mt-5 grid gap-1">
-                    <MenuLinkItem item={{ label: "Upload CAD for DFM Review →", href: "/request-a-quote", emphasis: true }} tabIndex={open ? undefined : -1} />
+                    <MenuLinkItem item={{ label: "Email CAD for DFM Review →", href: "/request-a-quote", emphasis: true }} tabIndex={open ? undefined : -1} />
                     <MenuLinkItem item={{ label: "Request Tooling Quote →", href: "/request-a-quote" }} tabIndex={open ? undefined : -1} />
                   </div>
                 </div>
@@ -293,7 +293,7 @@ function DesktopPanel({ item, open, onEnter, onLeave }: { item: NavigationItem; 
             <div className="mt-4">
               <p className="text-[18px] font-bold leading-snug text-[var(--brand-dark)]">Start Your Next Tooling Project</p>
               <p className="mt-1.5 text-[16px] leading-6 text-[var(--muted)]">Engineering review before quotation.</p>
-              <Link className="focus-ring mt-3 inline-flex text-[16px] font-bold text-[var(--brand)] transition-colors duration-200 hover:text-[var(--brand-dark)]" href="/request-a-quote" tabIndex={open ? undefined : -1}>Upload CAD for DFM Review →</Link>
+              <Link className="focus-ring mt-3 inline-flex text-[16px] font-bold text-[var(--brand)] transition-colors duration-200 hover:text-[var(--brand-dark)]" href="/request-a-quote" tabIndex={open ? undefined : -1}>Email CAD for DFM Review →</Link>
             </div>
           </aside>
         ) : null}

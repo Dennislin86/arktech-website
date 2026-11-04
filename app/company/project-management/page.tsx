@@ -302,7 +302,7 @@ export default function ProjectManagementPage() {
           </div>
           <div className="flex flex-col items-start gap-3 lg:items-end">
             <Link className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-sm border border-[var(--brand)] bg-[var(--brand)] px-6 font-bold text-white transition hover:border-[var(--brand-hover)] hover:bg-[var(--brand-hover)] sm:w-auto" href="/request-a-quote">Request Tooling Quote</Link>
-            <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">Upload CAD for DFM Review<span aria-hidden="true" className="ml-2">→</span></Link>
+            <Link className="focus-ring inline-flex min-h-11 items-center rounded-sm font-bold text-[var(--brand)] hover:underline" href="/request-a-quote">Email CAD for DFM Review<span aria-hidden="true" className="ml-2">→</span></Link>
           </div>
         </div>
       </section>

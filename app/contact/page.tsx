@@ -56,14 +56,14 @@ export default function ContactPage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">Export Injection Mold RFQ</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--brand-dark)]">
-              Upload Your CAD Files for an Injection Mold Quote
+              Email Your CAD Files for an Injection Mold Quote
             </h2>
             <p className="mt-4 leading-7 text-[var(--muted)]">
               Contact Arktech Mold when you need an injection mold company China partner for export tooling, DFM engineering, mold trial support, sampling support, tooling spare parts or related production support.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-                Upload CAD for DFM Review
+                Email CAD for DFM Review
               </Link>
               <Link className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] px-5 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
                 Request Manufacturing Quote
@@ -125,7 +125,7 @@ export default function ContactPage() {
               Why Product Companies Choose Arktech Mold
             </h2>
             <p className="mt-4 leading-7 text-[var(--muted)]">
-              Our team reviews upload CAD files and project requirements with practical engineering focus before preparing an export injection mold RFQ or manufacturing quote.
+              Our team reviews emailed CAD files and project requirements with practical engineering focus before preparing an export injection mold RFQ or manufacturing quote.
             </p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">

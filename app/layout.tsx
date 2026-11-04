@@ -15,14 +15,8 @@ export const metadata: Metadata = {
     template: "%s | Arktech Mold"
   },
   description: site.description,
-  robots: {
-    index: isProduction,
-    follow: isProduction,
-    googleBot: {
-      index: isProduction,
-      follow: isProduction
-    }
-  },
+  // Production uses the default indexable policy; errors receive Next.js noindex.
+  robots: isProduction ? undefined : { index: false, follow: false },
   icons: {
     icon: "/favicon-arktech.png",
     apple: "/apple-touch-icon.png"

@@ -304,7 +304,7 @@ export function RoboticsIndustryPage() {
                 Arktech supports robotics product teams with DFM engineering, export injection molds and plastic injection molding for robot housings, sensor enclosures, control components, AMR / AGV applications and precision molded parts.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
+                <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link>
                 <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 py-3 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link>
               </div>
             </div>
@@ -521,7 +521,7 @@ export function RoboticsIndustryPage() {
             <p className="mt-4 text-base leading-7 text-[var(--cta-body)] sm:text-lg">Send us your CAD files, drawings, material requirements, expected volumes and assembly requirements. Our engineering team will review DFM, tooling and production options for your robotics project.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col lg:justify-self-end">
-            <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand)] bg-[var(--brand)] px-6 font-bold text-white transition hover:border-[var(--brand-hover)] hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review</Link>
+            <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand)] bg-[var(--brand)] px-6 font-bold text-white transition hover:border-[var(--brand-hover)] hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review</Link>
             <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--cta-heading)] bg-white px-6 font-bold text-[var(--cta-heading)] transition hover:bg-[var(--cta-heading)] hover:text-white" href="/request-a-quote">Request Tooling Quote</Link>
           </div>
         </div>

@@ -317,7 +317,7 @@ export function CompanyPage() {
             <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--cta-heading)] sm:text-4xl lg:text-[2.75rem]">Start a Project with Arktech</h2>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--cta-body)] sm:text-lg">Share your CAD data and project requirements to discuss engineering, tooling or injection molding support.</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Upload CAD for DFM Review →</Link>
+              <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm bg-[var(--brand)] px-6 py-3 font-bold text-white transition hover:bg-[var(--brand-hover)]" href="/request-a-quote">Email CAD for DFM Review →</Link>
               <Link className="focus-ring inline-flex min-h-13 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 py-3 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/contact">Contact Arktech →</Link>
             </div>
           </div>

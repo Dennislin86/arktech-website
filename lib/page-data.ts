@@ -635,7 +635,7 @@ export const industryPages: DetailPageData[] = [
       { label: "Injection Mold Manufacturing", href: "/injection-mold-manufacturing" },
       { label: "Plastic Injection Molding", href: "/plastic-injection-molding" },
       { label: "CNC Metal Parts", href: "/services/cnc-metal-parts" },
-      { label: "Upload CAD for RFQ", href: "/request-a-quote" }
+      { label: "Email CAD for RFQ", href: "/request-a-quote" }
     ],
     faqs: [
       {

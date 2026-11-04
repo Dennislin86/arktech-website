@@ -69,7 +69,7 @@ export default function ManufacturingFaqPage() {
               Browse Popular Questions
             </a>
             <Link className="focus-ring inline-flex min-h-12 items-center justify-center rounded-sm border border-[var(--brand-dark)] bg-white px-6 font-bold text-[var(--brand-dark)] transition hover:bg-[var(--brand-dark)] hover:text-white" href="/request-a-quote">
-              Upload CAD for DFM Review
+              Email CAD for DFM Review
             </Link>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function ManufacturingFaqPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:min-w-[320px] lg:flex-col lg:justify-self-end">
             <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--brand)] bg-[var(--brand)] px-6 font-bold text-white transition hover:border-[var(--brand-hover)] hover:bg-[var(--brand-hover)]" href="/request-a-quote">
-              Upload CAD for DFM Review
+              Email CAD for DFM Review
             </Link>
             <Link className="focus-ring inline-flex min-h-14 items-center justify-center rounded-sm border border-[var(--cta-heading)] bg-white px-6 font-bold text-[var(--cta-heading)] transition hover:bg-[var(--cta-heading)] hover:text-white" href="/request-a-quote">
               Request Tooling Quote

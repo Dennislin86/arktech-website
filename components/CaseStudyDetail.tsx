@@ -79,7 +79,7 @@ export function CaseStudyDetail({ project, relatedProjects }: { project: CaseStu
       <section className="border-t border-[var(--line)] bg-[var(--surface-soft)] py-14">
         <div className="container-page flex flex-col justify-between gap-6 md:flex-row md:items-center">
           <div><p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand)]">Start Your Tooling Review</p><h2 className="mt-2 text-3xl font-bold">Have a similar injection mold project?</h2><p className="mt-3 max-w-2xl leading-7 text-[var(--muted)]">Send your CAD files and project requirements for engineering review and practical tooling feedback.</p></div>
-          <div className="flex flex-wrap gap-3"><Link href="/request-a-quote" className="focus-ring rounded-sm bg-[var(--accent)] px-5 py-3 font-bold text-white hover:brightness-90">Upload CAD for DFM Review</Link><Link href="/contact" className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-white">Request Tooling Quote</Link></div>
+          <div className="flex flex-wrap gap-3"><Link href="/request-a-quote" className="focus-ring rounded-sm bg-[var(--accent)] px-5 py-3 font-bold text-white hover:brightness-90">Email CAD for DFM Review</Link><Link href="/contact" className="focus-ring rounded-sm border border-[var(--brand-dark)] px-5 py-3 font-bold text-[var(--brand-dark)] hover:bg-white">Request Tooling Quote</Link></div>
         </div>
       </section>
     </div>

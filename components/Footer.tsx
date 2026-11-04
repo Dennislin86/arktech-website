@@ -127,7 +127,7 @@ export function Footer({ showAnalyticsPreferences = false }: { showAnalyticsPref
                 <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-[#f4c7ca]">Start Your Project</h3>
                 <div className="mt-3 grid gap-2 text-sm leading-5">
                   <Link className="font-bold text-[#f4c7ca] transition hover:text-white" href="/request-a-quote">
-                    Upload CAD for DFM Review →
+                    Email CAD for DFM Review →
                   </Link>
                   <Link className="font-semibold text-white transition hover:text-[var(--brand)]" href="/request-a-quote">
                     Request Tooling Quote →
